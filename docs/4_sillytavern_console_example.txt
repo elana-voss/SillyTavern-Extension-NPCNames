@@ -1,0 +1,38 @@
+   tools: [
+    {
+      type: 'function',
+      function: {
+        name: 'suggest_npc_name',
+        description: 'Use for every new NPC you introduce. Returns a curated first+last name with classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself.',
+        parameters: {
+          '$schema': 'http://json-schema.org/draft-04/schema#',
+          type: 'object',
+          properties: [Object]
+        }
+      }
+    }
+  ],
+  tool_choice: 'auto'
+
+ ---
+
+    {
+      role: 'user',
+      content: '[Introduce a new NPC walking into the scene right now.]'
+    },
+    {
+      role: 'assistant',
+      tool_calls: [
+        {
+          id: 'call-5653e637-f36e-4fd3-9f9e-02afc0c72161-0',
+          type: 'function',
+          function: [Object]
+        }
+      ],
+      content: ''
+    },
+    {
+      role: 'tool',
+      content: '{"first_name":"Dorita","last_name":"Panila","gender":"female","language_ethnicity":"english","race":"human","age":["adult"],"era":["midcentury"],"role":["sidekick"],"intelligence":"plain","allure":"pleasant","commonness":"uncommon","genre":["sliceOfLife"],"themes":[],"last_name_role":["bystander"],"last_name_allure":"pleasant","last_name_commonness":"uncommon","last_name_genre":["sliceOfLife"],"last_name_themes":[],"relaxed_filters":["themes","allure","intelligence","commonness","role","age","genre","era","mythology"]}',
+      tool_call_id: 'call-5653e637-f36e-4fd3-9f9e-02afc0c72161-0'
+    },
