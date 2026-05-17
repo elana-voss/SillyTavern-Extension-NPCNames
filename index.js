@@ -152,7 +152,17 @@ globalThis.NPCNamesInjectAdvertisement = function (chat, _contextSize, _abort, t
     if (!advertisement) return;
     if (!ToolManager.isToolCallingSupported()) return;
     if (SKIP_INTERCEPTOR_TYPES.has(type)) return;
-    chat.unshift({ role: 'system', content: advertisement });
+    // ST's internal chat shape uses `mes` (not `content`) and `is_user` +
+    // `extra.type === 'narrator'` to mark a system message. setOpenAIMessages
+    // (openai.js) reads `.mes` and crashes with "can't access property
+    // 'replace', content is undefined" if we use the OpenAI wire shape.
+    chat.unshift({
+        is_user: false,
+        is_system: false,
+        name: 'NPC Name Suggester',
+        mes: advertisement,
+        extra: { type: 'narrator' },
+    });
 };
 
 function bindSettingCheckbox(selector, key, sideEffect) {
