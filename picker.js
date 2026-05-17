@@ -1,5 +1,3 @@
-// Pure picker logic. No DOM, no ST imports. Tests import this directly.
-
 export const DROP_ORDER = [
     'themes',
     'allure',
@@ -14,8 +12,6 @@ export const DROP_ORDER = [
     'language_ethnicity',
     'gender',
 ];
-
-const MULTI_VALUE_FIELDS = new Set(['age', 'era', 'role']);
 
 export function filterFirstNames(pool, f) {
     return pool.filter(e => {
@@ -66,7 +62,7 @@ export function pickName(firstNames, lastNames, filters, usedFirst, usedLast, rn
     let firstCandidates = filterFirstNames(firstNames, current);
     if (firstCandidates.length === 0) {
         for (const field of DROP_ORDER) {
-            if (!(field in current) && !(field === 'themes' && current.themes)) continue;
+            if (!(field in current)) continue;
             delete current[field];
             relaxed.push(field);
             firstCandidates = filterFirstNames(firstNames, current);
@@ -101,8 +97,8 @@ function buildResponse(first, last, relaxed) {
         commonness: first.commonness,
         genre: first.genre,
         themes: first.themes,
-        last_name_role: last.role ?? [],
-        last_name_allure: last.allure ?? 'pleasant',
+        last_name_role: last.role,
+        last_name_allure: last.allure,
         last_name_commonness: last.commonness,
         last_name_genre: last.genre,
         last_name_themes: last.themes,
@@ -112,8 +108,6 @@ function buildResponse(first, last, relaxed) {
     return out;
 }
 
-/// Scans the loaded dataset and returns a map of enum field name → sorted
-/// array of unique values. Used to build the tool's JSON schema.
 export function deriveEnumValues(firstNames) {
     const collect = (field) => {
         const s = new Set();

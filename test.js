@@ -1,9 +1,4 @@
-// Unit tests mirroring app/packages/cardwave_names/test/name_database_test.dart
 // Run via: node test.js
-//
-// The picker is pure JS with no ST or DOM dependencies. Tests build small
-// in-memory fixtures and verify filter / degradation / used-set / culture
-// coherence / multi-era / intelligence-filter semantics.
 
 import { filterFirstNames, pickAndMarkUsed, pickName, DROP_ORDER } from './picker.js';
 import assert from 'node:assert/strict';

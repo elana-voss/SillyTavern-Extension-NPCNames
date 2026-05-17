@@ -1,14 +1,9 @@
-// SillyTavern wiring for the NPC Name Suggester.
-// Settings panel, tool registration, dataset load, status badge.
-// Pure picker logic lives in picker.js so it can be unit-tested.
-
 import {
     extension_settings,
     renderExtensionTemplateAsync,
     saveMetadataDebounced,
 } from '../../../extensions.js';
-import { saveSettingsDebounced } from '../../../../script.js';
-import { chat_metadata } from '../../../../script.js';
+import { chat_metadata, saveSettingsDebounced } from '../../../../script.js';
 import { eventSource, event_types } from '../../../events.js';
 import { ToolManager } from '../../../tool-calling.js';
 import { pickName, deriveEnumValues } from './picker.js';
@@ -129,15 +124,25 @@ function unregisterTool() {
     ToolManager.unregisterFunctionTool(TOOL_NAME);
 }
 
+function bindSettingCheckbox(selector, key, sideEffect) {
+    $(selector)
+        .prop('checked', extension_settings[MODULE][key])
+        .on('change', function () {
+            extension_settings[MODULE][key] = !!$(this).prop('checked');
+            saveSettingsDebounced();
+            sideEffect?.();
+        });
+}
+
 function updateStatusBadge() {
     const el = document.getElementById('npc_names_status');
     if (!el) return;
     if (ToolManager.isToolCallingSupported()) {
-        el.textContent = 'Tool calling supported — extension active';
+        el.textContent = 'Tool calling supported. Extension active.';
         el.classList.remove('warn');
         el.classList.add('ok');
     } else {
-        el.textContent = 'Current backend does not support tool calling — extension inactive';
+        el.textContent = 'Current backend does not support tool calling. Extension inactive.';
         el.classList.remove('ok');
         el.classList.add('warn');
     }
@@ -155,20 +160,11 @@ jQuery(async () => {
     const html = await renderExtensionTemplateAsync(EXT_DIR, 'settings');
     $('#extensions_settings2').append(html);
 
-    $('#npc_names_enabled')
-        .prop('checked', extension_settings[MODULE].enabled)
-        .on('change', function () {
-            extension_settings[MODULE].enabled = !!$(this).prop('checked');
-            saveSettingsDebounced();
-            if (extension_settings[MODULE].enabled) registerTool();
-            else unregisterTool();
-        });
-    $('#npc_names_debug')
-        .prop('checked', extension_settings[MODULE].debugLog)
-        .on('change', function () {
-            extension_settings[MODULE].debugLog = !!$(this).prop('checked');
-            saveSettingsDebounced();
-        });
+    bindSettingCheckbox('#npc_names_enabled', 'enabled', () => {
+        if (extension_settings[MODULE].enabled) registerTool();
+        else unregisterTool();
+    });
+    bindSettingCheckbox('#npc_names_debug', 'debugLog');
 
     updateStatusBadge();
     eventSource.on(event_types.CHATCOMPLETION_SOURCE_CHANGED, updateStatusBadge);
