@@ -13,47 +13,45 @@ never repeat within a single story.
 
 ## Install
 
-**System-wide only.** Drop or clone this folder at:
+In SillyTavern's **Extensions** panel, click **"Install Extension"** at
+the top, paste this URL, and confirm:
 
 ```
-<SillyTavern>/public/scripts/extensions/third-party/SillyTavern-Extension-NPCNames/
+https://github.com/elana-voss/SillyTavern-Extension-NPCNames
 ```
 
-The per-user install location (`data/<user>/extensions/`) is NOT
-supported: this extension uses relative imports of ST's internal modules
-that only resolve from the system-wide path.
-
-After installing, restart SillyTavern.
+ST clones the repo into its third-party extensions folder for you. No
+manual file copying.
 
 ## Setup walkthrough
 
-Three SillyTavern panels need to be configured. All three are needed before
-the extension's status badge flips green.
+After install, three panels need configuration. The screenshot file
+numbers below match the step numbers — work through them in order.
 
-### 1. Enable function calling
+### Step 1 — Enable function calling
 
-In the AI Response Configuration panel (slider icon), tick **"Enable
-function calling"**. The blue check next to the label means the current
+![Step 1 — Enable function calling](docs/1_sillytavern_get_name_enable_function_calling.png)
+
+In the **Chat Completion Presets** panel, tick **"Enable function
+calling"**. The blue check icon next to the label means the current
 model is on ST's supported-tool-calling list.
 
-![Enable function calling](docs/1_sillytavern_get_name_enable_function_calling.png)
+### Step 2 — Pick a tool-aware Prompt Post-Processing preset
 
-### 2. Pick a tool-aware Prompt Post-Processing preset
+![Step 2 — Tool-aware Prompt Post-Processing](docs/2_sillytavern_get_name_preset_enable_use_tools.png)
 
-In the API panel, set **Prompt Post-Processing** to either *"Semi-strict
-(alternating roles; with tools)"* or *"Strict (user first, alternating
-roles; with tools)"*. Anything labelled "no tools" disables tool calling
-even if step 1 is on.
+In the **API** panel, set **Prompt Post-Processing** to either
+*"Semi-strict (alternating roles; with tools)"* or *"Strict (user first,
+alternating roles; with tools)"*. Anything labelled "no tools" disables
+tool calling even if Step 1 is on.
 
-![Pick a tool-aware preset](docs/2_sillytavern_get_name_preset_enable_use_tools.png)
+### Step 3 — Enable the extension
 
-### 3. Enable the extension
+![Step 3 — Enable the extension](docs/3_sillytavern_get_name_enable_extension.png)
 
-Open the Extensions panel, find **"NPC Name Suggester"**, and tick
-*"Enable suggest_npc_name tool"*. The status badge should show
-*"Tool calling supported. Extension active."* in green.
-
-![Enable the extension](docs/3_sillytavern_get_name_enable_extension.png)
+Open the **Extensions** panel, find **"NPC Name Suggester"**, and tick
+*"Enable suggest_npc_name tool"*. The status badge should read *"Tool
+calling supported. Extension active."* in green.
 
 ## Smoke test
 
