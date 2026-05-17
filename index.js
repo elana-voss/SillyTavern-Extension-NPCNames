@@ -3,7 +3,13 @@ import {
     renderExtensionTemplateAsync,
     saveMetadataDebounced,
 } from '../../../extensions.js';
-import { chat_metadata, saveSettingsDebounced } from '../../../../script.js';
+import {
+    chat_metadata,
+    extension_prompt_roles,
+    extension_prompt_types,
+    saveSettingsDebounced,
+    setExtensionPrompt,
+} from '../../../../script.js';
 import { eventSource, event_types } from '../../../events.js';
 import { ToolManager } from '../../../tool-calling.js';
 import { pickName, deriveEnumValues } from './picker.js';
@@ -11,11 +17,14 @@ import { pickName, deriveEnumValues } from './picker.js';
 const MODULE = 'npcNames';
 const EXT_DIR = 'third-party/SillyTavern-Extension-NPCNames';
 const TOOL_NAME = 'suggest_npc_name';
+const ADVERTISEMENT_KEY = 'NPCNames_Advertisement';
+const LOG_TAG = '[NPCNames]';
 const DEFAULT_SETTINGS = { enabled: true, debugLog: false };
 
 let firstNames = [];
 let lastNames = [];
 let enumValues = {};
+let advertisement = '';
 
 function loadSettings() {
     extension_settings[MODULE] = Object.assign(
@@ -33,6 +42,13 @@ async function loadDataset() {
     firstNames = data.first_names;
     lastNames = data.last_names;
     enumValues = deriveEnumValues(firstNames);
+}
+
+async function loadAdvertisement() {
+    const url = new URL('./assets/advertisement.txt', import.meta.url);
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    advertisement = await res.text();
 }
 
 function buildToolParameters() {
@@ -103,15 +119,15 @@ function registerTool() {
         action: async (args) => {
             try {
                 if (extension_settings[MODULE].debugLog) {
-                    console.log('[NPCNames] args:', args);
+                    console.log(LOG_TAG, 'args:', args);
                 }
                 const pick = callPicker(args);
                 if (extension_settings[MODULE].debugLog) {
-                    console.log('[NPCNames] pick:', pick);
+                    console.log(LOG_TAG, 'pick:', pick);
                 }
                 return JSON.stringify(pick);
             } catch (e) {
-                console.error('[NPCNames] action error:', e);
+                console.error(LOG_TAG, 'action error:', e);
                 return JSON.stringify({ error: e.message });
             }
         },
@@ -122,6 +138,26 @@ function registerTool() {
 
 function unregisterTool() {
     ToolManager.unregisterFunctionTool(TOOL_NAME);
+}
+
+function setAdvertisement(active) {
+    // Empty string is ST's documented removal contract for extension
+    // prompts; no separate unset API.
+    setExtensionPrompt(
+        ADVERTISEMENT_KEY,
+        active ? advertisement : '',
+        extension_prompt_types.IN_PROMPT,
+        0,
+        false,
+        extension_prompt_roles.SYSTEM,
+    );
+}
+
+function applyEnabled(active) {
+    if (active) registerTool();
+    else unregisterTool();
+    setAdvertisement(active);
+    updateStatusBadge();
 }
 
 function bindSettingCheckbox(selector, key, sideEffect) {
@@ -153,21 +189,23 @@ jQuery(async () => {
     try {
         await loadDataset();
     } catch (e) {
-        console.error('[NPCNames] dataset load failed; tool will not register:', e);
+        console.error(LOG_TAG, 'dataset load failed; tool will not register:', e);
         return;
     }
+    // Advertisement is nice-to-have flavour; don't let its failure block
+    // tool registration. Reload-on-toggle picks up a delayed success.
+    loadAdvertisement().catch(e =>
+        console.warn(LOG_TAG, 'advertisement load failed; tool registers without it:', e),
+    );
 
     const html = await renderExtensionTemplateAsync(EXT_DIR, 'settings');
     $('#extensions_settings2').append(html);
 
-    bindSettingCheckbox('#npc_names_enabled', 'enabled', () => {
-        if (extension_settings[MODULE].enabled) registerTool();
-        else unregisterTool();
-        updateStatusBadge();
-    });
+    bindSettingCheckbox('#npc_names_enabled', 'enabled', () =>
+        applyEnabled(extension_settings[MODULE].enabled),
+    );
     bindSettingCheckbox('#npc_names_debug', 'debugLog');
 
-    updateStatusBadge();
     // Source / model change events don't fire when the user toggles the
     // standalone `Enable function calling` checkbox or loads an OAI preset
     // that flips it, so also re-poll on the broader settings-change events.
@@ -180,5 +218,5 @@ jQuery(async () => {
         eventSource.on(evt, updateStatusBadge);
     }
 
-    if (extension_settings[MODULE].enabled) registerTool();
+    applyEnabled(extension_settings[MODULE].enabled);
 });
