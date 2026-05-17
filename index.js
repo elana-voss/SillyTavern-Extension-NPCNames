@@ -193,10 +193,16 @@ jQuery(async () => {
         return;
     }
     // Advertisement is nice-to-have flavour; don't let its failure block
-    // tool registration. Reload-on-toggle picks up a delayed success.
-    loadAdvertisement().catch(e =>
-        console.warn(LOG_TAG, 'advertisement load failed; tool registers without it:', e),
-    );
+    // tool registration. Re-inject once the text lands so the very first
+    // chat call after boot includes it (without this, `applyEnabled` below
+    // runs while `advertisement` is still empty).
+    loadAdvertisement()
+        .then(() => {
+            if (extension_settings[MODULE].enabled) setAdvertisement(true);
+        })
+        .catch(e =>
+            console.warn(LOG_TAG, 'advertisement load failed; tool registers without it:', e),
+        );
 
     const html = await renderExtensionTemplateAsync(EXT_DIR, 'settings');
     $('#extensions_settings2').append(html);
