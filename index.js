@@ -163,12 +163,22 @@ jQuery(async () => {
     bindSettingCheckbox('#npc_names_enabled', 'enabled', () => {
         if (extension_settings[MODULE].enabled) registerTool();
         else unregisterTool();
+        updateStatusBadge();
     });
     bindSettingCheckbox('#npc_names_debug', 'debugLog');
 
     updateStatusBadge();
-    eventSource.on(event_types.CHATCOMPLETION_SOURCE_CHANGED, updateStatusBadge);
-    eventSource.on(event_types.CHATCOMPLETION_MODEL_CHANGED, updateStatusBadge);
+    // Source / model change events don't fire when the user toggles the
+    // standalone `Enable function calling` checkbox or loads an OAI preset
+    // that flips it, so also re-poll on the broader settings-change events.
+    for (const evt of [
+        event_types.CHATCOMPLETION_SOURCE_CHANGED,
+        event_types.CHATCOMPLETION_MODEL_CHANGED,
+        event_types.OAI_PRESET_CHANGED_AFTER,
+        event_types.SETTINGS_UPDATED,
+    ]) {
+        eventSource.on(evt, updateStatusBadge);
+    }
 
     if (extension_settings[MODULE].enabled) registerTool();
 });
