@@ -1,0 +1,23 @@
+.npc-names-settings small {
+    display: block;
+    margin-top: 0.5em;
+    opacity: 0.7;
+}
+
+.npc-names-status {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.npc-names-status.ok {
+    background-color: #2a4d2a;
+    color: #c8e6c9;
+}
+
+.npc-names-status.warn {
+    background-color: #5c4400;
+    color: #ffe082;
+}

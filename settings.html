@@ -1,0 +1,25 @@
+<div class="npc-names-settings">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>NPC Name Suggester</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <label class="checkbox_label" for="npc_names_enabled">
+                <input id="npc_names_enabled" type="checkbox" />
+                <span>Enable <code>suggest_npc_name</code> tool</span>
+            </label>
+            <label class="checkbox_label" for="npc_names_debug">
+                <input id="npc_names_debug" type="checkbox" />
+                <span>Log tool calls to console (debug)</span>
+            </label>
+            <div id="npc_names_status" class="npc-names-status">…</div>
+            <small>
+                Works on tool-calling Chat Completion backends (OpenAI, Claude,
+                Mistral, Gemini, Groq, DeepSeek, OpenRouter, etc). On other
+                backends the tool is silently inactive — the status above will
+                say so.
+            </small>
+        </div>
+    </div>
+</div>

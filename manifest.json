@@ -1,0 +1,11 @@
+{
+    "display_name": "NPC Name Suggester",
+    "loading_order": 100,
+    "requires": [],
+    "optional": [],
+    "js": "index.js",
+    "css": "style.css",
+    "author": "Elana Voss",
+    "version": "0.1.0",
+    "homePage": "https://github.com/elana-voss/SillyTavern-Extension-NPCNames"
+}
