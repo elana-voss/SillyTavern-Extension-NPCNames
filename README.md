@@ -72,7 +72,7 @@ Two checkboxes:
 
 The extension also adds a chunk of text to the system prompt explaining the tool to the AI. See [assets/advertisement.txt](assets/advertisement.txt) for the wording.
 
-## Where the data comes from
+## Data Source
 
 The name database was built by the cardwave project: https://github.com/elana-voss/cardwave. This extension ships a copy of the data and a small JavaScript port of the name picker.
 
