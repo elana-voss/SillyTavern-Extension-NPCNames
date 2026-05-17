@@ -3,13 +3,7 @@ import {
     renderExtensionTemplateAsync,
     saveMetadataDebounced,
 } from '../../../extensions.js';
-import {
-    chat_metadata,
-    extension_prompt_roles,
-    extension_prompt_types,
-    saveSettingsDebounced,
-    setExtensionPrompt,
-} from '../../../../script.js';
+import { chat_metadata, saveSettingsDebounced } from '../../../../script.js';
 import { eventSource, event_types } from '../../../events.js';
 import { ToolManager } from '../../../tool-calling.js';
 import { pickName, deriveEnumValues } from './picker.js';
@@ -17,9 +11,12 @@ import { pickName, deriveEnumValues } from './picker.js';
 const MODULE = 'npcNames';
 const EXT_DIR = 'third-party/SillyTavern-Extension-NPCNames';
 const TOOL_NAME = 'suggest_npc_name';
-const ADVERTISEMENT_KEY = 'NPCNames_Advertisement';
 const LOG_TAG = '[NPCNames]';
 const DEFAULT_SETTINGS = { enabled: true, debugLog: false };
+// Matches ST's own noToolCallTypes in tool-calling.js: generation types
+// where tool calls are blocked, so injecting the advertisement on these
+// would just be wasted context.
+const SKIP_INTERCEPTOR_TYPES = new Set(['quiet', 'impersonate', 'continue']);
 
 let firstNames = [];
 let lastNames = [];
@@ -140,25 +137,23 @@ function unregisterTool() {
     ToolManager.unregisterFunctionTool(TOOL_NAME);
 }
 
-function setAdvertisement(active) {
-    // Empty string is ST's documented removal contract for extension
-    // prompts; no separate unset API.
-    setExtensionPrompt(
-        ADVERTISEMENT_KEY,
-        active ? advertisement : '',
-        extension_prompt_types.IN_PROMPT,
-        0,
-        false,
-        extension_prompt_roles.SYSTEM,
-    );
-}
-
 function applyEnabled(active) {
     if (active) registerTool();
     else unregisterTool();
-    setAdvertisement(active);
     updateStatusBadge();
 }
+
+// ST's documented generate_interceptor hook. Runs just before each
+// generation request with the chat array mutable. Pre-pending a system
+// message here is race-free (the advertisement text is guaranteed to be
+// loaded by the time any chat turn fires after boot).
+globalThis.NPCNamesInjectAdvertisement = function (chat, _contextSize, _abort, type) {
+    if (!extension_settings[MODULE]?.enabled) return;
+    if (!advertisement) return;
+    if (!ToolManager.isToolCallingSupported()) return;
+    if (SKIP_INTERCEPTOR_TYPES.has(type)) return;
+    chat.unshift({ role: 'system', content: advertisement });
+};
 
 function bindSettingCheckbox(selector, key, sideEffect) {
     $(selector)
@@ -193,16 +188,12 @@ jQuery(async () => {
         return;
     }
     // Advertisement is nice-to-have flavour; don't let its failure block
-    // tool registration. Re-inject once the text lands so the very first
-    // chat call after boot includes it (without this, `applyEnabled` below
-    // runs while `advertisement` is still empty).
-    loadAdvertisement()
-        .then(() => {
-            if (extension_settings[MODULE].enabled) setAdvertisement(true);
-        })
-        .catch(e =>
-            console.warn(LOG_TAG, 'advertisement load failed; tool registers without it:', e),
-        );
+    // tool registration. The generate_interceptor reads the cached text
+    // at call time, so a late-arriving load just means the first request
+    // (if it fires before the load resolves) ships without the ad.
+    loadAdvertisement().catch(e =>
+        console.warn(LOG_TAG, 'advertisement load failed; tool registers without it:', e),
+    );
 
     const html = await renderExtensionTemplateAsync(EXT_DIR, 'settings');
     $('#extensions_settings2').append(html);
