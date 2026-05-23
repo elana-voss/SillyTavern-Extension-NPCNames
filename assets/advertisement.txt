@@ -3,17 +3,17 @@ Use the `suggest_npc_name` tool whenever you are about to introduce a new NPC in
 Pass the filters that matter for this character. Every filter is optional. You may pass none, some, or all. The richer the filter set, the more on-tone the result.
 
 - `gender`: male, female, ambiguous.
-- `language_ethnicity`: the cultural root of the name (e.g. english, japanese, slavicRussian, arabic, fantasyElvish). Real-world buckets for human characters. Fantasy buckets for non-human races. If you want an elf, pass `race: elf` and the tool will pick a fantasyElvish first name automatically.
-- `mythology`: tag from a named pantheon (greek, norse, hindu, ...) if the character should evoke it.
-- `race`: human, elf, dwarf, vampire, angel, demon, dragon, and many more.
+- `language_ethnicity`: the cultural root of the name. Real-world buckets for human characters (e.g. english, japanese, slavicRussian, arabic, finnish, yoruba). Fantasy buckets for non-human races: fantasyElvish, fantasyDwarven, fantasyDragon. If you want an elf, pass `race: elf` and the tool will pick a fantasyElvish first name automatically.
+- `mythology`: tag from a named pantheon if the character should evoke it: celtic, egyptian, greek, hindu, japanese, lovecraft, mesopotamian, nativeAmerican, norse, roman, slavic.
+- `race`: human, elf, dwarf, dragon.
 - `age`: the lifestage the name fits: child, youngAdult, adult, elder.
-- `era`: the period the name evokes: ancient, medieval, renaissance, victorian, nineteenTwenties, midcentury, modern, contemporary, nearFuture, farFuture, timeless.
+- `era`: the period the name evokes: ancient, victorian, nineteenTwenties, midcentury, modern, contemporary, nearFuture, timeless.
 - `role`: narrative function: hero, villain, mentor, sidekick, comicRelief, loveInterest, antihero, neutral, bystander.
 - `intelligence`: how cerebral the name sounds: blunt, plain, average, thoughtful, bookish.
 - `allure`: how attractive the name sounds: harsh, unremarkable, pleasant, pretty, striking.
 - `commonness`: common, uncommon, rare.
-- `genre`: the story's flavour: fantasy, sciFi, cyberpunk, steampunk, western, noirDetective, horror, smut, sliceOfLife, postApocalyptic.
-- `themes`: zero or more decorative tags: celestial, floral, gemstone, military, regal, nautical, and others.
+- `genre`: the story's flavour: fantasy, cyberpunk, steampunk, western, noirDetective, horror, sliceOfLife, postApocalyptic.
+- `themes`: zero or more decorative tags: airy, brutish, celestial, earthy, exotic, fiery, floral, gemstone, icy, literary, lunar, military, mystical, regal, religious, rustic, scholarly, solar, watery.
 
 The response is a flat JSON object with snake_case keys. Weave `first_name` and `last_name` into your narration naturally. The other fields describe how the database classified the name. Treat them as soft prompts to colour the character's voice, demeanor, and feel:
 

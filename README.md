@@ -6,14 +6,31 @@ The AI calls the tool whenever it introduces a new character. It can pass filter
 
 The AI is supposed to call the tool on its own whenever it introduces a new NPC. 
 
-Pseudo-signature of `suggest_npc_name`:
+Pseudo-signature of `suggest_npc_name` (every argument is optional, pass any subset):
 ```
 suggest_npc_name(
-  gender, language_ethnicity, mythology, race,
-  age, era, role, intelligence, allure,
-  commonness, genre, themes
+  gender?, language_ethnicity?, mythology?, race?,
+  age?, era?, role?, intelligence?, allure?,
+  commonness?, genre?, themes?
 )
 ```
+
+The values currently in the database:
+
+- **gender**: `male`, `female`, `ambiguous`
+- **language_ethnicity** (43): `arabic`, `chinese`, `dutch`, `english`, `estonian`, `fantasyDragon`, `fantasyDwarven`, `fantasyElvish`, `finnish`, `french`, `german`, `greek`, `hawaiian`, `hebrew`, `hindi`, `icelandic`, `indonesian`, `irishGaelic`, `italian`, `japanese`, `korean`, `latin`, `maori`, `mayan`, `mongolian`, `nativeAmerican`, `nepalese`, `nigerian`, `norwegian`, `persian`, `portuguese`, `scandinavian`, `serbian`, `slavicOther`, `slavicPolish`, `slavicRussian`, `spanish`, `swahili`, `swedish`, `thai`, `turkish`, `ukrainian`, `yoruba`
+- **mythology**: `celtic`, `egyptian`, `greek`, `hindu`, `japanese`, `lovecraft`, `mesopotamian`, `nativeAmerican`, `norse`, `roman`, `slavic`
+- **race**: `human`, `elf`, `dwarf`, `dragon`
+- **age**: `child`, `youngAdult`, `adult`, `elder`
+- **era**: `ancient`, `victorian`, `nineteenTwenties`, `midcentury`, `modern`, `contemporary`, `nearFuture`, `timeless`
+- **role**: `hero`, `villain`, `mentor`, `sidekick`, `comicRelief`, `loveInterest`, `antihero`, `neutral`, `bystander`
+- **intelligence**: `blunt`, `plain`, `average`, `thoughtful`, `bookish`
+- **allure**: `harsh`, `unremarkable`, `pleasant`, `pretty`, `striking`
+- **commonness**: `common`, `uncommon`, `rare`
+- **genre**: `fantasy`, `cyberpunk`, `steampunk`, `western`, `noirDetective`, `horror`, `sliceOfLife`, `postApocalyptic`
+- **themes**: `airy`, `brutish`, `celestial`, `earthy`, `exotic`, `fiery`, `floral`, `gemstone`, `icy`, `literary`, `lunar`, `military`, `mystical`, `regal`, `religious`, `rustic`, `scholarly`, `solar`, `watery`
+
+Unknown values are tolerated, the picker will relax filters until something matches and report which ones it dropped.
 
 ## Install
 
