@@ -4,6 +4,7 @@ import { deriveEnumValues, filterFirstNames, pickAndMarkUsed, pickName, DROP_ORD
 import { injectBeforeLatest } from './advertisement.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { foldName, loadOverused } from './tools/overused.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -400,6 +401,56 @@ test('database holds neither the country Fiji as a first name nor the broken for
     assert.deepEqual(named('Fiji'), []);
     assert.deepEqual(named('Rosi Ni'), []);
     assert.deepEqual(named('Rosi'), ['maori']);
+});
+
+test('overused check folds case and accents, and no name of the new batch is on the list', () => {
+    assert.equal(foldName('Élára'), foldName('elara'));
+    const overused = loadOverused();
+    assert.ok(overused.has('elara') && overused.size > 100, 'the list holds what models keep inventing');
+    const batch = readFileSync(new URL('./tools/m5-names.txt', import.meta.url), 'utf8').split(/\r?\n/)
+        .filter(l => l.startsWith('first | ') || l.startsWith('last | '))
+        .map(l => l.split(' | ')[2]);
+    assert.ok(batch.length > 1000, 'the batch is read');
+    assert.deepEqual(batch.filter(n => overused.has(foldName(n))), []);
+});
+
+test('every culture listed before milestone 4 is offered again, plus the new ones, for both sexes', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const nonHuman = ['cyberpunkHandle', 'fantasyDragon', 'fantasyDwarven', 'fantasyElvish'];
+    const noSurnames = ['mongolian', 'nativeAmerican']; // Mongolian has none since milestone 3; see the plan.
+    const cultures = ['arabic', 'chinese', 'dutch', 'english', 'estonian', 'finnish', 'french', 'german', 'greek',
+        'hawaiian', 'hebrew', 'hindi', 'icelandic', 'indonesian', 'irishGaelic', 'italian', 'japanese', 'korean', 'latin',
+        'maori', 'mayan', 'mongolian', 'nativeAmerican', 'nepalese', 'nigerian', 'norwegian', 'persian', 'portuguese',
+        'scandinavian', 'serbian', 'slavicOther', 'slavicPolish', 'slavicRussian', 'spanish', 'swahili', 'swedish', 'thai',
+        'turkish', 'ukrainian', 'yoruba', 'vietnamese', 'ghanaian', 'ethiopian', 'romanian', 'baltic', 'albanian',
+        'azerbaijani', 'hungarian', 'fijian'];
+    const offered = deriveEnumValues(data.first_names).language_ethnicity;
+    assert.deepEqual([...cultures, ...nonHuman].filter(c => !offered.includes(c)), []);
+    const short = [];
+    for (const c of cultures) {
+        const firsts = data.first_names.filter(e => e.language_ethnicity === c && e.race === 'human');
+        const lasts = data.last_names.filter(e => e.language_ethnicity === c);
+        for (const g of ['male', 'female']) {
+            if (firsts.filter(e => e.gender === g).length < 10) short.push(`${c} first ${g}`);
+            if (!noSurnames.includes(c) && lasts.filter(e => !e.gender || e.gender === g).length < 10) short.push(`${c} last ${g}`);
+        }
+    }
+    assert.deepEqual(short, []);
+});
+
+test('no name twice in a culture', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    for (const list of [data.first_names, data.last_names]) {
+        const keys = list.map(e => `${e.language_ethnicity}/${e.name}`);
+        assert.deepEqual(keys.filter((k, i) => keys.indexOf(k) !== i), []);
+    }
+});
+
+test('franchise dragons have left; the dragons that replace them are there', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const dragons = data.first_names.filter(e => e.race === 'dragon').map(e => e.name);
+    assert.deepEqual(['Smaug', 'Mushu', 'Maleficent', 'Saphira', 'Spike', 'Puff'].filter(n => dragons.includes(n)), []);
+    assert.ok(dragons.length >= 30, `${dragons.length} dragons`);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);
