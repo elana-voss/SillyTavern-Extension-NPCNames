@@ -207,6 +207,14 @@ test('culture without surnames returns the first name alone', () => {
     assert.equal('last_name_role' in pick, false);
 });
 
+test('a god gets no surname even when its culture has surnames', () => {
+    const firsts = [makeEntry({ name: 'Shiva', language_ethnicity: 'hindi', race: 'mythical' })];
+    const lasts = [makeSurname({ name: 'Sharma', language_ethnicity: 'hindi' })];
+    const pick = pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng);
+    assert.equal(pick.first_name, 'Shiva');
+    assert.equal('last_name' in pick, false);
+});
+
 test('surname never repeats the first name', () => {
     const firsts = [makeEntry({ name: 'Agus' })];
     const lasts = [makeSurname({ name: 'Agus' }), makeSurname({ name: 'Wijaya' })];
@@ -277,6 +285,21 @@ test('database holds no malformed names', () => {
         || /[/()]|\.$/.test(n)                              // "A/B", "Anu (2)", initials
         || (/[A-Za-z]/.test(n) && /\p{Script=Cyrillic}/u.test(n))); // look-alike letters
     assert.deepEqual(bad, []);
+});
+
+test('database files gods, handles and non-names as the readings say', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const byName = new Map(data.first_names.map(e => [e.name, e]));
+    assert.deepEqual(data.first_names.filter(e => e.mythology && e.race !== 'mythical').map(e => e.name), []);
+    assert.equal(byName.get('Chaac').race, 'mythical');
+    assert.equal(byName.get('Noah').race, 'human');
+    const handles = data.first_names.filter(e => e.genre.includes('cyberpunk'));
+    assert.equal(handles.length, 100);
+    assert.deepEqual(handles.filter(e => e.language_ethnicity !== 'cyberpunkHandle').map(e => e.name), []);
+    assert.deepEqual(data.last_names.filter(e => e.language_ethnicity === 'cyberpunkHandle'), []);
+    const names = new Set([...data.first_names, ...data.last_names].map(e => e.name));
+    const gone = ['Unnamed', 'Trnsfer', 'Qkr', 'Korea', 'Feng Shui', 'Kalevala', 'Abominable Snowmen', 'Accuser', 'Palladium', 'Wild Hunt'];
+    assert.deepEqual(gone.filter(n => names.has(n)), []);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

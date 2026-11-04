@@ -1,0 +1,284 @@
+# Readings for milestone 2: list | culture | name | group | Claude | second reader | why not a name
+# Verdicts: god (a god, spirit or monster), person, not (names nothing).
+first | english | Abominable Snowmen | english-ancient | not | not | a group
+first | english | Achimi | english-ancient | god | god
+first | english | Adroa | english-ancient | god | god
+first | english | Amaná | english-ancient | god | god
+first | english | Ananta Boga | english-ancient | god | god
+first | english | Ao-Kanapanapa | english-ancient | god | god
+first | english | Apu Illapu | english-ancient | god | god
+first | english | Candit | english-ancient | god | person
+first | english | Chujo-Hime | english-ancient | person | person
+first | english | Coca Lady | english-ancient | god | god
+first | english | Copacati | english-ancient | god | god
+first | english | Daibutsu | english-ancient | not | not | a statue
+first | english | Darana | english-ancient | god | god
+first | english | Dream Time | english-ancient | not | not | a concept
+first | english | Ekako | english-ancient | god | god
+first | english | Emma-Ō | english-ancient | god | god
+first | english | Erathipa | english-ancient | god | not
+first | english | Erzulie Freda | english-ancient | god | god
+first | english | Fardu | english-ancient | god | person
+first | english | Fugen | english-ancient | god | god
+first | english | Ganga-Bois | english-ancient | god | god
+first | english | Gaunab | english-ancient | god | god
+first | english | Great Woman | english-ancient | god | not
+first | english | Guldana | english-ancient | god | person
+first | english | Hukere | english-ancient | god | god
+first | english | Hyel | english-ancient | god | god
+first | english | Iae | english-ancient | god | god
+first | english | Indrachit | english-ancient | god | god
+first | english | Junkgowa Sisters | english-ancient | not | not | a group
+first | english | Jurupari | english-ancient | god | god
+first | english | Jū-Ō | english-ancient | god | not
+first | english | Kakamora | english-ancient | god | not
+first | english | Kiliakai | english-ancient | god | god
+first | english | Kuiam | english-ancient | god | person
+first | english | Lugeilan | english-ancient | god | god
+first | english | Lungkata | english-ancient | god | god
+first | english | Ndjambi | english-ancient | god | god
+first | english | Nyokon | english-ancient | god | god
+first | english | Ofo | english-ancient | god | not
+first | english | Oko | english-ancient | god | god
+first | english | Olokun | english-ancient | god | god
+first | english | Oro | english-ancient | god | god
+first | english | To-Karvuvu | english-ancient | god | god
+first | english | To-Toro-Potaa | english-ancient | god | god
+first | english | Waang | english-ancient | god | god
+first | english | Yurugu | english-ancient | god | god
+first | mayan | Akbal | other-ancient | person | not
+first | slavicOther | Alka | other-ancient | person | not
+first | hebrew | Ashima | other-ancient | god | god
+first | mayan | Cacoch | other-ancient | god | god
+first | english | Chia | other-ancient | god | person
+first | greek | Daedalus | other-ancient | person | person
+first | hebrew | Dagan | other-ancient | god | god
+first | chinese | Dao | other-ancient | person | not
+first | mayan | Ixquic | other-ancient | god | god
+first | mayan | Ixtab | other-ancient | god | god
+first | mayan | Kedo | other-ancient | god | person
+first | english | Killa | other-ancient | god | god
+first | finnish | Kun | other-ancient | person | not
+first | slavicOther | Laima | other-ancient | god | god
+first | arabic | Lilith | other-ancient | god | god
+first | chinese | Long | other-ancient | person | person
+first | mayan | Nana | other-ancient | person | person
+first | english | Nirvana | other-ancient | not | not | a concept
+first | arabic | Noah | other-ancient | person | person
+first | english | Oya | other-ancient | god | god
+first | slavicOther | Rasa | other-ancient | person | person
+first | turkish | Taru | other-ancient | god | god
+first | mayan | Yaluk | other-ancient | god | god
+first | mayan | Zipacna | other-ancient | god | god
+first | english | Ah | english-ambiguous | not | not | a syllable
+first | english | Ainsley | english-ambiguous | person | person
+first | english | Albie | english-ambiguous | person | person
+first | english | Ara | english-ambiguous | person | person
+first | english | Arlie | english-ambiguous | person | person
+first | english | Arlis | english-ambiguous | person | person
+first | english | Asuka | english-ambiguous | person | person
+first | english | August | english-ambiguous | person | person
+first | english | Aytaç | english-ambiguous | person | person
+first | english | Berlie | english-ambiguous | person | person
+first | english | Bille | english-ambiguous | person | person
+first | english | Bird | english-ambiguous | person | person
+first | english | Bronnie | english-ambiguous | person | person
+first | english | Cantrell | english-ambiguous | person | person
+first | english | Carel | english-ambiguous | person | person
+first | english | Carmin | english-ambiguous | person | person
+first | english | Carmo | english-ambiguous | person | person
+first | english | Carmon | english-ambiguous | person | person
+first | english | Chadi | english-ambiguous | person | person
+first | english | Charl | english-ambiguous | person | person
+first | english | Charley | english-ambiguous | person | person
+first | english | Chaun | english-ambiguous | person | person
+first | english | Chawn | english-ambiguous | person | person
+first | english | Clemmie | english-ambiguous | person | person
+first | english | Clevie | english-ambiguous | person | person
+first | english | Conny | english-ambiguous | person | person
+first | english | Dashawn | english-ambiguous | person | person
+first | english | Dayan | english-ambiguous | person | person
+first | english | Dosie | english-ambiguous | person | person
+first | english | Flores | english-ambiguous | person | person
+first | english | Gaylin | english-ambiguous | person | person
+first | english | Gillie | english-ambiguous | person | person
+first | english | Golden | english-ambiguous | person | person
+first | english | Hillary | english-ambiguous | person | person
+first | english | Idris | english-ambiguous | person | person
+first | english | Ivey | english-ambiguous | person | person
+first | english | Jacque | english-ambiguous | person | person
+first | english | Jimi | english-ambiguous | person | person
+first | english | Jissie | english-ambiguous | person | person
+first | english | Joddie | english-ambiguous | person | person
+first | english | Jule | english-ambiguous | person | person
+first | english | Kelcey | english-ambiguous | person | person
+first | english | Lesly | english-ambiguous | person | person
+first | english | Lish | english-ambiguous | person | person
+first | english | Love | english-ambiguous | person | person
+first | english | Lummie | english-ambiguous | person | person
+first | english | Mannie | english-ambiguous | person | person
+first | english | Marzell | english-ambiguous | person | person
+first | english | Mearl | english-ambiguous | person | person
+first | english | Mell | english-ambiguous | person | person
+first | english | Merlyn | english-ambiguous | person | person
+first | english | Montez | english-ambiguous | person | person
+first | english | Narvell | english-ambiguous | person | person
+first | english | Ocie | english-ambiguous | person | person
+first | english | Odie | english-ambiguous | person | person
+first | english | Olis | english-ambiguous | person | person
+first | english | Ordie | english-ambiguous | person | person
+first | english | Orrie | english-ambiguous | person | person
+first | english | Otie | english-ambiguous | person | person
+first | english | Ottie | english-ambiguous | person | person
+first | english | Ova | english-ambiguous | person | person
+first | english | Oza | english-ambiguous | person | person
+first | english | Perl | english-ambiguous | person | person
+first | english | Perle | english-ambiguous | person | person
+first | english | Quinnie | english-ambiguous | person | person
+first | english | Rami | english-ambiguous | person | person
+first | english | Sammie | english-ambiguous | person | person
+first | english | Sylvesta | english-ambiguous | person | person
+first | english | Tai | english-ambiguous | person | person
+first | english | Taj | english-ambiguous | person | person
+first | english | Tellie | english-ambiguous | person | person
+first | english | Tinker | english-ambiguous | person | person
+first | english | Tirrell | english-ambiguous | person | person
+first | english | Toy | english-ambiguous | person | person
+first | english | Varnell | english-ambiguous | person | person
+first | english | Vernie | english-ambiguous | person | person
+first | english | Wallis | english-ambiguous | person | person
+first | english | Willie | english-ambiguous | person | person
+first | english | Zell | english-ambiguous | person | person
+first | mayan | Acoatl | mayan | god | person
+first | mayan | Ah puch | mayan | god | god
+first | mayan | Ahtziri | mayan | person | person
+first | mayan | Akna | mayan | person | god
+first | mayan | Akyaabil | mayan | person | person
+first | mayan | Alitzel | mayan | person | person
+first | mayan | Alom | mayan | god | god
+first | mayan | Amankaya | mayan | person | person
+first | mayan | Anayansi | mayan | person | person
+first | mayan | Aruma | mayan | person | person
+first | mayan | Atahualpa | mayan | person | person
+first | mayan | Athziri | mayan | person | person
+first | mayan | Atziri | mayan | person | person
+first | mayan | Awilix | mayan | god | god
+first | mayan | Axochitl | mayan | person | person
+first | mayan | Balanca | mayan | person | person
+first | mayan | Bamoa | mayan | person | not
+first | mayan | Bej | mayan | person | person
+first | mayan | Bolon Dzacab | mayan | god | god
+first | mayan | Bolontiku | mayan | god | not
+first | mayan | Boneci | mayan | person | person
+first | mayan | Canek | mayan | person | person
+first | mayan | Chaac | mayan | god | god
+first | mayan | Chacnicte | mayan | person | person
+first | mayan | Chacte | mayan | person | person
+first | mayan | Chichén Itzá | mayan | not | not | a place
+first | mayan | Chiquinquirá | mayan | person | not
+first | mayan | Colel Cab | mayan | god | god
+first | mayan | Cozumel | mayan | not | not | a place
+first | mayan | Ek balam | mayan | not | not | a place
+first | mayan | Etzeme | mayan | person | person
+first | mayan | Ex chauah | mayan | god | god
+first | mayan | Hunab kú | mayan | god | god
+first | mayan | Huracan | mayan | god | god
+first | mayan | Ichcanzihó | mayan | not | not | a place
+first | mayan | Imox | mayan | person | not
+first | mayan | Itayetzi | mayan | person | person
+first | mayan | Itzae | mayan | person | person
+first | mayan | Itzam-ná | mayan | god | god
+first | mayan | Itzamara | mayan | person | person
+first | mayan | Itzamma | mayan | god | person
+first | mayan | Itzanami | mayan | person | person
+first | mayan | Itzia | mayan | person | person
+first | mayan | Ix Chebel Ya’ax | mayan | god | god
+first | mayan | Ixbalanqué | mayan | god | god
+first | mayan | Ixmucané | mayan | god | god
+first | mayan | Izamal | mayan | not | not | a place
+first | mayan | Kabah | mayan | not | not | a place
+first | mayan | Kabil | mayan | person | person
+first | mayan | Kaknab | mayan | person | person
+first | mayan | Kante | mayan | person | person
+first | mayan | Kantunil | mayan | not | not | a place
+first | mayan | Kinich | mayan | god | god
+first | mayan | Kukulkan | mayan | god | god
+first | mayan | K’awiil | mayan | god | god
+first | mayan | K’ay nicté | mayan | person | person
+first | mayan | Litza | mayan | person | person
+first | mayan | Lool beh | mayan | person | person
+first | mayan | Léets | mayan | person | person
+first | mayan | Mactzil | mayan | person | person
+first | mayan | Muyal | mayan | person | person
+first | mayan | Nahil | mayan | person | person
+first | mayan | Nicancil | mayan | person | person
+first | mayan | Nicte | mayan | person | person
+first | mayan | Nicte ha | mayan | person | person
+first | mayan | Nicteel | mayan | person | person
+first | mayan | Nohek | mayan | person | person
+first | mayan | Noíl | mayan | person | person
+first | mayan | Nuscaa | mayan | person | person
+first | mayan | Quecholli | mayan | person | not
+first | mayan | Temoatzin | mayan | person | person
+first | mayan | Uxmal | mayan | not | not | a place
+first | mayan | Vatanchu | mayan | person | person
+first | mayan | Xacin | mayan | person | person
+first | mayan | Xaman | mayan | person | person
+first | mayan | Yaayan | mayan | person | person
+first | mayan | Yalit | mayan | person | person
+first | mayan | Yatzil | mayan | person | person
+first | mayan | Yatziri | mayan | person | person
+first | mayan | Yaxchee | mayan | person | person
+first | mayan | Yaxcol | mayan | person | person
+first | mayan | Yexalen | mayan | person | person
+first | mayan | Yum Kaax | mayan | god | god
+first | mayan | Yum kax | mayan | god | god
+first | mayan | Yumil | mayan | person | person
+first | mayan | Yunuen | mayan | person | person
+first | mayan | Yuritzi | mayan | person | person
+first | mayan | Zacnité | mayan | person | person
+first | mayan | Zamná | mayan | person | god
+first | mayan | Zazil ha | mayan | person | person
+first | mayan | Zulia | mayan | person | not
+first | mayan | Óotsil | mayan | person | not
+first | latin | Palladium | deletion-candidate | not | not | an object
+first | scandinavian | Wild Hunt | deletion-candidate | not | not | an event
+first | arabic | Pelican | deletion-candidate | not | not | a common word
+first | latin | Pleasure | deletion-candidate | not | not | a common word
+first | hindi | Vedas | deletion-candidate | not | not | books
+first | hindi | Meru | deletion-candidate | not | not | a mountain
+first | hindi | Brahman | deletion-candidate | not | not | a concept
+first | greek | Harpies | deletion-candidate | not | not | a group
+first | greek | Stymphalian Birds | deletion-candidate | not | not | a group
+first | latin | Lemures | deletion-candidate | not | not | a group
+first | greek | Mousai | deletion-candidate | not | not | a group
+first | japanese | Seven-Gods-Of-Luck | deletion-candidate | not | not | a group
+first | japanese | Kunitsu-Kami | deletion-candidate | not | not | a group
+first | english | Other God | deletion-candidate | not | not | a class of beings
+first | english | Outer God | deletion-candidate | not | not | a class of beings
+first | irishGaelic | Tír Na Nog | deletion-candidate | not | not | a place
+first | arabic | Accuser | deletion-candidate | not | not | a title
+first | finnish | Kalevala | deletion-candidate | not | not | a book
+first | chinese | Feng Shui | deletion-candidate | not | not | a practice
+first | arabic | God | deletion-candidate | not | not | a common word
+first | mayan | God-D | deletion-candidate | not | god | a scholar's label
+first | mayan | God-E | deletion-candidate | not | god | a scholar's label
+first | mayan | God-L | deletion-candidate | not | god | a scholar's label
+first | arabic | Amesha Spenta | deletion-candidate | not | not | a group
+first | arabic | Amahraspand | deletion-candidate | not | not | a group
+first | mayan | Palenque Triad | deletion-candidate | not | not | a group
+first | mayan | Tzitzimime | deletion-candidate | not | not | a group
+first | chinese | Dragon-Kings | deletion-candidate | not | not | a group
+first | chinese | Ba Xian | deletion-candidate | not | not | a group
+first | chinese | San Qing | deletion-candidate | not | not | a group
+first | chinese | Di Yu | deletion-candidate | not | not | a place
+first | finnish | Manala | deletion-candidate | not | not | a place
+first | finnish | Sampo | deletion-candidate | not | person | an object
+first | slavicOther | Laumės | deletion-candidate | not | not | a group
+first | slavicOther | Kaukai | deletion-candidate | not | not | a group
+first | slavicOther | Žvaigždės | deletion-candidate | not | not | a common word
+first | slavicOther | Ašvieniai | deletion-candidate | not | not | a group
+first | fantasyDragon | Unnamed | deletion-candidate | not | not | a placeholder
+first | nepalese | Trnsfer | deletion-candidate | not | not | a typo of a word
+last | korean | Qkr | deletion-candidate | not | not | a fragment
+last | korean | Korea | deletion-candidate | not | not | a place

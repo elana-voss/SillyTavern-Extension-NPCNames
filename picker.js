@@ -72,9 +72,9 @@ export function pickName(firstNames, lastNames, filters, usedFirst, usedLast, rn
     const firstPick = pickAndMarkUsed(firstCandidates, usedFirst, e => e.name, rng);
     if (current.genre && !firstPick.genre.includes(current.genre)) relaxed.push('genre');
 
-    // A culture without surnames (dragons, Native American figures) gets no
-    // surname rather than one from an unrelated culture.
-    const lastCandidates = lastNames.filter(
+    // A god gets no surname. Nor does a culture without surnames (dragons, handles,
+    // Native American figures) rather than one from an unrelated culture.
+    const lastCandidates = firstPick.race === 'mythical' ? [] : lastNames.filter(
         s => s.language_ethnicity === firstPick.language_ethnicity && s.name !== firstPick.name,
     );
     const lastPick = lastCandidates.length > 0

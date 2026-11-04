@@ -3,9 +3,9 @@ Use the `suggest_npc_name` tool whenever you are about to introduce a new NPC in
 Pass the filters that matter for this character. Every filter is optional. You may pass none, some, or all. The richer the filter set, the more on-tone the result.
 
 - `gender`: male, female, ambiguous.
-- `language_ethnicity`: the cultural root of the name. Real-world buckets for human characters (e.g. english, japanese, slavicRussian, arabic, finnish, yoruba). Fantasy buckets for non-human races: fantasyElvish, fantasyDwarven, fantasyDragon. If you want an elf, pass `race: elf` and the tool will pick a fantasyElvish first name automatically.
-- `mythology`: tag from a named pantheon if the character should evoke it: celtic, egyptian, greek, hindu, japanese, lovecraft, mesopotamian, nativeAmerican, norse, roman, slavic.
-- `race`: human, elf, dwarf, dragon.
+- `language_ethnicity`: the cultural root of the name. Real-world buckets for human characters (e.g. english, japanese, slavicRussian, arabic, finnish, yoruba). Fantasy buckets for non-human races: fantasyElvish, fantasyDwarven, fantasyDragon. If you want an elf, pass `race: elf` and the tool will pick a fantasyElvish first name automatically. `cyberpunkHandle` holds online handles (GhostRunner, Nova404), not names.
+- `mythology`: tag from a named pantheon if the character is a god, spirit or monster of it: celtic, egyptian, greek, hindu, japanese, lovecraft, mesopotamian, nativeAmerican, norse, roman, slavic. Pass it with `race: mythical`, never with `race: human`: when nothing matches, `mythology` is dropped before `race` and the pantheon is lost.
+- `race`: `human` for every person; `mythical` only for a god, spirit or monster; elf, dwarf, dragon.
 - `age`: the lifestage the name fits: child, youngAdult, adult, elder.
 - `era`: the period the name evokes: ancient, victorian, nineteenTwenties, midcentury, modern, contemporary, nearFuture, timeless.
 - `role`: narrative function: hero, villain, mentor, sidekick, comicRelief, loveInterest, antihero, neutral, bystander.
@@ -15,7 +15,7 @@ Pass the filters that matter for this character. Every filter is optional. You m
 - `genre`: the story's flavour: fantasy, cyberpunk, steampunk, western, noirDetective, horror, sliceOfLife, postApocalyptic.
 - `themes`: zero or more decorative tags: airy, brutish, celestial, earthy, exotic, fiery, floral, gemstone, icy, literary, lunar, military, mystical, regal, religious, rustic, scholarly, solar, watery.
 
-The response is a flat JSON object with snake_case keys. Weave `first_name` and `last_name` into your narration naturally. Dragons and Native American figures come with no `last_name`: use the single name as it is. The other fields describe how the database classified the name. Treat them as soft prompts to colour the character's voice, demeanor, and feel:
+The response is a flat JSON object with snake_case keys. Weave `first_name` and `last_name` into your narration naturally. Gods, spirits and monsters (`race: mythical`), dragons, `cyberpunkHandle` handles and Native American figures come with no `last_name`: use the single name as it is. The other fields describe how the database classified the name. Treat them as soft prompts to colour the character's voice, demeanor, and feel:
 
 - `age` (array), `era` (array), `role` (array) often hold multiple values because the same name plausibly fits multiple lifestages, periods, or archetypes.
 - `intelligence` and `allure` describe how the name itself sounds (phonetics and cultural connotation), not the bearer's actual traits.

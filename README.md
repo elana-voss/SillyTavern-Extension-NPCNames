@@ -2,7 +2,7 @@
 
 A SillyTavern extension that picks NPC names from a curated database, so the AI stops inventing yet another Elara or Marcus.
 
-The AI calls the tool whenever it introduces a new character. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; dragons and Native American figures get a single name, because the database has no surnames for them. Names already used in the chat will not show up again until every name fitting the request has been used.
+The AI calls the tool whenever it introduces a new character. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; gods, dragons, cyberpunk handles and Native American figures get a single name: gods take no surname and the database has none for the others. Names already used in the chat will not show up again until every name fitting the request has been used.
 
 The AI is supposed to call the tool on its own whenever it introduces a new NPC. 
 
@@ -18,9 +18,9 @@ suggest_npc_name(
 The values currently in the database:
 
 - **gender**: `male`, `female`, `ambiguous`
-- **language_ethnicity** (43): `arabic`, `chinese`, `dutch`, `english`, `estonian`, `fantasyDragon`, `fantasyDwarven`, `fantasyElvish`, `finnish`, `french`, `german`, `greek`, `hawaiian`, `hebrew`, `hindi`, `icelandic`, `indonesian`, `irishGaelic`, `italian`, `japanese`, `korean`, `latin`, `maori`, `mayan`, `mongolian`, `nativeAmerican`, `nepalese`, `nigerian`, `norwegian`, `persian`, `portuguese`, `scandinavian`, `serbian`, `slavicOther`, `slavicPolish`, `slavicRussian`, `spanish`, `swahili`, `swedish`, `thai`, `turkish`, `ukrainian`, `yoruba`
+- **language_ethnicity** (44): `arabic`, `chinese`, `cyberpunkHandle`, `dutch`, `english`, `estonian`, `fantasyDragon`, `fantasyDwarven`, `fantasyElvish`, `finnish`, `french`, `german`, `greek`, `hawaiian`, `hebrew`, `hindi`, `icelandic`, `indonesian`, `irishGaelic`, `italian`, `japanese`, `korean`, `latin`, `maori`, `mayan`, `mongolian`, `nativeAmerican`, `nepalese`, `nigerian`, `norwegian`, `persian`, `portuguese`, `scandinavian`, `serbian`, `slavicOther`, `slavicPolish`, `slavicRussian`, `spanish`, `swahili`, `swedish`, `thai`, `turkish`, `ukrainian`, `yoruba`
 - **mythology**: `celtic`, `egyptian`, `greek`, `hindu`, `japanese`, `lovecraft`, `mesopotamian`, `nativeAmerican`, `norse`, `roman`, `slavic`
-- **race**: `human`, `elf`, `dwarf`, `dragon`
+- **race**: `human`, `mythical`, `elf`, `dwarf`, `dragon`
 - **age**: `child`, `youngAdult`, `adult`, `elder`
 - **era**: `ancient`, `victorian`, `nineteenTwenties`, `midcentury`, `modern`, `contemporary`, `nearFuture`, `timeless`
 - **role**: `hero`, `villain`, `mentor`, `sidekick`, `comicRelief`, `loveInterest`, `antihero`, `neutral`, `bystander`
@@ -29,6 +29,8 @@ The values currently in the database:
 - **commonness**: `common`, `uncommon`, `rare`
 - **genre**: `fantasy`, `cyberpunk`, `steampunk`, `western`, `noirDetective`, `horror`, `sliceOfLife`, `postApocalyptic`
 - **themes**: `airy`, `brutish`, `celestial`, `earthy`, `exotic`, `fiery`, `floral`, `gemstone`, `icy`, `literary`, `lunar`, `military`, `mystical`, `regal`, `religious`, `rustic`, `scholarly`, `solar`, `watery`
+
+`race: human` is for every person; `mythical` only for a god, spirit or monster. A `mythology` filter goes with `race: mythical`, never `human`: when nothing matches, `mythology` is dropped before `race` and the pantheon is lost. `cyberpunkHandle` holds online handles (GhostRunner, Nova404), not names.
 
 Unknown values are tolerated: the picker drops only the filters that stop a name from matching and reports them. A `genre` filter picks names tagged with that genre first, then untagged names, which it reports as relaxed; some genres hold very few tagged names (`steampunk` and `postApocalyptic` one each).
 

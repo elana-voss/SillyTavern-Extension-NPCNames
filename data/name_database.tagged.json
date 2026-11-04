@@ -265,32 +265,6 @@
       "themes": []
     },
     {
-      "name": "Abominable Snowmen",
-      "gender": "ambiguous",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "villain"
-      ],
-      "intelligence": "blunt",
-      "allure": "harsh",
-      "commonness": "rare",
-      "genre": [
-        "horror"
-      ],
-      "themes": [
-        "brutish",
-        "icy"
-      ]
-    },
-    {
       "name": "Abrahán",
       "gender": "ambiguous",
       "language_ethnicity": "spanish",
@@ -438,29 +412,6 @@
       ]
     },
     {
-      "name": "Accuser",
-      "gender": "ambiguous",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "villain"
-      ],
-      "intelligence": "blunt",
-      "allure": "harsh",
-      "commonness": "rare",
-      "genre": [],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
       "name": "Acele",
       "gender": "female",
       "language_ethnicity": "english",
@@ -488,7 +439,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -534,7 +485,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -954,7 +905,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1073,7 +1024,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1240,7 +1191,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1288,7 +1239,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1409,7 +1360,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1577,35 +1528,11 @@
       ]
     },
     {
-      "name": "Ah",
-      "gender": "ambiguous",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "victorian",
-        "nineteenTwenties"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ah Bolom Tzacab",
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1630,7 +1557,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1656,7 +1583,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1679,7 +1606,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1704,7 +1631,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1752,7 +1679,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1778,7 +1705,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1828,7 +1755,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1854,7 +1781,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -1878,7 +1805,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -2071,7 +1998,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -2167,7 +2094,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -2190,7 +2117,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -2519,7 +2446,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -2770,7 +2697,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -2791,7 +2718,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -2812,7 +2739,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -2906,7 +2833,7 @@
       "gender": "female",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -3090,7 +3017,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -3249,7 +3176,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -3687,7 +3614,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -3710,7 +3637,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -3959,27 +3886,6 @@
       "themes": []
     },
     {
-      "name": "Amahraspand",
-      "gender": "ambiguous",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Amalie",
       "gender": "female",
       "language_ethnicity": "norwegian",
@@ -4054,7 +3960,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -4282,28 +4188,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Amesha Spenta",
-      "gender": "ambiguous",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -4577,7 +4462,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -4692,7 +4577,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -4972,7 +4857,7 @@
       "gender": "female",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "youngAdult"
       ],
@@ -5597,7 +5482,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -5945,7 +5830,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -5970,7 +5855,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -6175,7 +6060,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -6219,7 +6104,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -6565,7 +6450,7 @@
       "gender": "male",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -6612,7 +6497,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -6656,7 +6541,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -6957,7 +6842,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -6983,7 +6868,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7031,7 +6916,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7075,7 +6960,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7299,7 +7184,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7324,7 +7209,7 @@
       "gender": "female",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7412,7 +7297,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7437,7 +7322,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7569,7 +7454,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7636,7 +7521,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7810,7 +7695,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7877,7 +7762,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7902,7 +7787,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -7928,7 +7813,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8035,7 +7920,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8152,7 +8037,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8173,7 +8058,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8238,7 +8123,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8303,7 +8188,7 @@
       "gender": "female",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8743,7 +8628,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8808,57 +8693,11 @@
       "themes": []
     },
     {
-      "name": "Ašvieniai",
-      "gender": "ambiguous",
-      "language_ethnicity": "slavicOther",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Ba Xian",
-      "gender": "ambiguous",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "bookish",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Ba'al",
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8883,7 +8722,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -8931,7 +8770,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -9017,7 +8856,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -9277,7 +9116,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -9300,7 +9139,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -9323,7 +9162,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -9575,7 +9414,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -9684,7 +9523,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -10128,7 +9967,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -10620,7 +10459,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -10685,7 +10524,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -10706,7 +10545,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -11300,7 +11139,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -11366,7 +11205,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -11456,7 +11295,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -11546,7 +11385,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -11894,32 +11733,6 @@
       "themes": []
     },
     {
-      "name": "Brahman",
-      "gender": "ambiguous",
-      "language_ethnicity": "hindi",
-      "mythology": "hindu",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "bookish",
-      "allure": "striking",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "religious",
-        "mystical"
-      ]
-    },
-    {
       "name": "Brakdern",
       "gender": "male",
       "language_ethnicity": "english",
@@ -12184,7 +11997,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -12505,7 +12318,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -12610,7 +12423,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -12878,7 +12691,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -12903,7 +12716,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -12926,7 +12739,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -12949,7 +12762,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -13061,7 +12874,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -13154,7 +12967,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -13305,7 +13118,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -13372,7 +13185,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -13595,7 +13408,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -13767,7 +13580,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -13862,7 +13675,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -13985,7 +13798,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14035,7 +13848,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14202,7 +14015,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14250,7 +14063,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14325,7 +14138,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -14350,7 +14163,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14375,7 +14188,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14400,7 +14213,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14425,7 +14238,7 @@
       "gender": "female",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14450,7 +14263,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14475,7 +14288,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14573,7 +14386,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14598,7 +14411,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14623,7 +14436,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14723,7 +14536,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -14748,7 +14561,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -14942,7 +14755,7 @@
       "gender": "female",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -15065,7 +14878,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -15113,7 +14926,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -15138,7 +14951,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -15353,7 +15166,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -15466,36 +15279,11 @@
       "themes": []
     },
     {
-      "name": "Chichén Itzá",
-      "gender": "male",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "watery"
-      ]
-    },
-    {
       "name": "Chiconahuiehecatl",
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -15685,7 +15473,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -16086,7 +15874,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -16184,7 +15972,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -16209,7 +15997,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -16330,7 +16118,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -16353,7 +16141,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -16765,7 +16553,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -16866,7 +16654,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -16912,7 +16700,7 @@
     {
       "name": "CipherDrone",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -16935,7 +16723,7 @@
     {
       "name": "CipherGhost",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -16958,7 +16746,7 @@
     {
       "name": "CipherNomad",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -16981,7 +16769,7 @@
     {
       "name": "CipherOracle",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -17004,7 +16792,7 @@
     {
       "name": "CipherShard",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -17027,7 +16815,7 @@
     {
       "name": "CircuitGhost",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -17050,7 +16838,7 @@
     {
       "name": "CircuitX",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -17075,7 +16863,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17316,7 +17104,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17339,7 +17127,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17387,7 +17175,7 @@
       "gender": "female",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -17509,7 +17297,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17673,7 +17461,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17746,7 +17534,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17765,31 +17553,6 @@
       "themes": [
         "mystical",
         "celestial"
-      ]
-    },
-    {
-      "name": "Cozumel",
-      "gender": "female",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "watery"
       ]
     },
     {
@@ -17866,7 +17629,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17891,7 +17654,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17916,7 +17679,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -17941,7 +17704,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -17965,7 +17728,7 @@
     {
       "name": "CyberHavoc",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -17988,7 +17751,7 @@
     {
       "name": "CyberMonarch",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -18011,7 +17774,7 @@
     {
       "name": "CyberNomad",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -18034,7 +17797,7 @@
     {
       "name": "CyberOracle",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -18057,7 +17820,7 @@
     {
       "name": "CyberShard",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -18080,7 +17843,7 @@
     {
       "name": "CyberShroud",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -18103,7 +17866,7 @@
     {
       "name": "CyberZen",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -18226,7 +17989,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -18411,7 +18174,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -18453,7 +18216,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -18545,7 +18308,7 @@
       "gender": "male",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -18586,32 +18349,11 @@
       "themes": []
     },
     {
-      "name": "Daibutsu",
-      "gender": "ambiguous",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Daikoku",
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -18976,7 +18718,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -19024,7 +18766,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -19130,7 +18872,7 @@
     {
       "name": "DataPhantom",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -19260,7 +19002,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -19367,7 +19109,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -19390,7 +19132,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -19800,7 +19542,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -19982,28 +19724,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Di Yu",
-      "gender": "ambiguous",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -20068,7 +19789,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -20243,7 +19964,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -20836,29 +20557,6 @@
       ]
     },
     {
-      "name": "Dragon-Kings",
-      "gender": "ambiguous",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "hero"
-      ],
-      "intelligence": "bookish",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": []
-    },
-    {
       "name": "Dragutin",
       "gender": "male",
       "language_ethnicity": "serbian",
@@ -20901,29 +20599,6 @@
       "commonness": "rare",
       "genre": [
         "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Dream Time",
-      "gender": "ambiguous",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "pretty",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
       ],
       "themes": []
     },
@@ -21001,7 +20676,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -21091,7 +20766,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -21250,7 +20925,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -21271,7 +20946,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -21430,7 +21105,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -21451,7 +21126,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -21495,7 +21170,7 @@
       "gender": "female",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -21563,7 +21238,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -21582,7 +21257,7 @@
     {
       "name": "EchoGhost",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -21605,7 +21280,7 @@
     {
       "name": "EchoSentry",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -21628,7 +21303,7 @@
     {
       "name": "EchoStorm",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -21651,7 +21326,7 @@
     {
       "name": "EchoVoid",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -21908,7 +21583,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -22136,7 +21811,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -22176,34 +21851,11 @@
       "themes": []
     },
     {
-      "name": "Ek balam",
-      "gender": "male",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ekako",
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -22224,7 +21876,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -22569,7 +22221,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -22988,7 +22640,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -23364,7 +23016,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -23437,7 +23089,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -23535,7 +23187,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -24068,7 +23720,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -24163,7 +23815,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -24258,7 +23910,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -24353,7 +24005,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -24378,7 +24030,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -24728,7 +24380,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -24797,7 +24449,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -24844,7 +24496,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -25171,7 +24823,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -25384,31 +25036,6 @@
       "themes": []
     },
     {
-      "name": "Feng Shui",
-      "gender": "ambiguous",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "striking",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Fernandes",
       "gender": "male",
       "language_ethnicity": "french",
@@ -25556,7 +25183,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -25796,7 +25423,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -25868,7 +25495,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -25893,7 +25520,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -26205,7 +25832,7 @@
       "gender": "female",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -26537,7 +26164,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -26748,7 +26375,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -26773,7 +26400,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -27178,7 +26805,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -27227,7 +26854,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -27252,7 +26879,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -27346,7 +26973,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -27416,7 +27043,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -27534,7 +27161,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -27858,7 +27485,7 @@
       "gender": "female",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -28022,7 +27649,7 @@
     {
       "name": "GhostRunner",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -28045,7 +27672,7 @@
     {
       "name": "GhostZen",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -28532,7 +28159,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -28718,7 +28345,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -28854,7 +28481,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -28875,7 +28502,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -28990,7 +28617,7 @@
     {
       "name": "GlitchCipher",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -29013,7 +28640,7 @@
     {
       "name": "GlitchNomad",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -29036,7 +28663,7 @@
     {
       "name": "GlitchReaper",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -29059,7 +28686,7 @@
     {
       "name": "GlitchX",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -29082,7 +28709,7 @@
     {
       "name": "GlitchZen",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -29172,34 +28799,11 @@
       "themes": []
     },
     {
-      "name": "God",
-      "gender": "ambiguous",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "bookish",
-      "allure": "striking",
-      "commonness": "common",
-      "genre": [],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
       "name": "God-D",
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -29220,7 +28824,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -29241,7 +28845,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -29262,7 +28866,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -29469,7 +29073,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -29835,7 +29439,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -30433,7 +30037,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -30454,7 +30058,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -30630,7 +30234,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -30758,7 +30362,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -30779,7 +30383,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -30989,7 +30593,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -31207,7 +30811,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -31291,7 +30895,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -31355,7 +30959,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -31461,7 +31065,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -31518,27 +31122,6 @@
       "intelligence": "plain",
       "allure": "pretty",
       "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Harpies",
-      "gender": "ambiguous",
-      "language_ethnicity": "greek",
-      "mythology": "greek",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "harsh",
-      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -31863,7 +31446,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -31926,7 +31509,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -32395,7 +31978,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -32557,7 +32140,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -32694,7 +32277,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -32761,7 +32344,7 @@
     {
       "name": "HexNomad",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -32785,7 +32368,7 @@
     {
       "name": "HexQuanta",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -32834,7 +32417,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -32948,7 +32531,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -33323,7 +32906,7 @@
     {
       "name": "HoloDrone",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33347,7 +32930,7 @@
     {
       "name": "HoloEcho",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33371,7 +32954,7 @@
     {
       "name": "HoloHavoc",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33395,7 +32978,7 @@
     {
       "name": "HoloHorizon",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33419,7 +33002,7 @@
     {
       "name": "HoloReaper",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33443,7 +33026,7 @@
     {
       "name": "HoloShard",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33467,7 +33050,7 @@
     {
       "name": "HoloVortex",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33491,7 +33074,7 @@
     {
       "name": "HoloX",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33611,7 +33194,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -33705,7 +33288,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -33726,7 +33309,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -33795,7 +33378,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -33911,7 +33494,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -33978,7 +33561,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -33999,7 +33582,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34044,7 +33627,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34160,7 +33743,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34181,7 +33764,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34202,7 +33785,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34223,7 +33806,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34270,7 +33853,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34340,7 +33923,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -34405,7 +33988,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34466,7 +34049,7 @@
     {
       "name": "HyperCipher",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -34489,7 +34072,7 @@
     {
       "name": "HyperEcho",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -34512,7 +34095,7 @@
     {
       "name": "HyperRunner",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -34535,7 +34118,7 @@
     {
       "name": "HyperX",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -34560,7 +34143,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -34581,7 +34164,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34730,7 +34313,7 @@
       "gender": "male",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34774,7 +34357,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -34795,7 +34378,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -35036,27 +34619,6 @@
       "themes": [
         "literary"
       ]
-    },
-    {
-      "name": "Ichcanzihó",
-      "gender": "male",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
     },
     {
       "name": "Ichika",
@@ -35536,7 +35098,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -35580,7 +35142,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -35601,7 +35163,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -35712,7 +35274,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -35733,7 +35295,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -35838,7 +35400,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -36090,7 +35652,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -36178,7 +35740,7 @@
       "gender": "male",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -36739,7 +36301,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -37028,7 +36590,7 @@
       "gender": "female",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -37053,7 +36615,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -37078,7 +36640,7 @@
       "gender": "female",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -37103,7 +36665,7 @@
       "gender": "female",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -37128,7 +36690,7 @@
       "gender": "female",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -37193,31 +36755,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Izamal",
-      "gender": "male",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
     },
     {
       "name": "Iziah",
@@ -37599,7 +37136,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -39427,7 +38964,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -39452,7 +38989,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -39569,7 +39106,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -39617,7 +39154,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -39876,7 +39413,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -39943,36 +39480,11 @@
       "themes": []
     },
     {
-      "name": "Junkgowa Sisters",
-      "gender": "ambiguous",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Juntas",
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -39997,7 +39509,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -40023,7 +39535,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -40072,7 +39584,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -40492,7 +40004,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -40512,29 +40024,6 @@
         "celestial",
         "mystical"
       ]
-    },
-    {
-      "name": "Kabah",
-      "gender": "female",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "Kabil",
@@ -41392,29 +40881,6 @@
       ]
     },
     {
-      "name": "Kalevala",
-      "gender": "ambiguous",
-      "language_ethnicity": "finnish",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "bookish",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [],
-      "themes": [
-        "literary"
-      ]
-    },
-    {
       "name": "Kalikesh",
       "gender": "male",
       "language_ethnicity": "hindi",
@@ -41461,7 +40927,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -41753,27 +41219,6 @@
       "themes": []
     },
     {
-      "name": "Kantunil",
-      "gender": "female",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Kareena",
       "gender": "female",
       "language_ethnicity": "hindi",
@@ -41929,7 +41374,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -42319,32 +41764,11 @@
       ]
     },
     {
-      "name": "Kaukai",
-      "gender": "ambiguous",
-      "language_ethnicity": "slavicOther",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "harsh",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Kauko",
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -42386,7 +41810,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -42472,7 +41896,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -42875,7 +42299,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -43237,7 +42661,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -43351,7 +42775,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -43399,7 +42823,7 @@
       "gender": "female",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -43493,7 +42917,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -43520,7 +42944,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -43570,7 +42994,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -43666,7 +43090,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -43737,7 +43161,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -44286,7 +43710,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -44357,7 +43781,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -44382,7 +43806,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -44687,7 +44111,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -44785,7 +44209,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -44834,7 +44258,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -44859,7 +44283,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -44901,31 +44325,6 @@
         "fantasy"
       ],
       "themes": []
-    },
-    {
-      "name": "Kunitsu-Kami",
-      "gender": "ambiguous",
-      "language_ethnicity": "japanese",
-      "mythology": "japanese",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
     },
     {
       "name": "Kuno",
@@ -45003,7 +44402,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -45220,7 +44619,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -45337,7 +44736,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -45721,7 +45120,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -45828,7 +45227,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -45853,7 +45252,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -45878,7 +45277,7 @@
       "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -45904,7 +45303,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -45971,7 +45370,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -46039,7 +45438,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46085,7 +45484,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46154,7 +45553,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46280,31 +45679,6 @@
       "commonness": "uncommon",
       "genre": [],
       "themes": []
-    },
-    {
-      "name": "Laumės",
-      "gender": "ambiguous",
-      "language_ethnicity": "slavicOther",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "bookish",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
     },
     {
       "name": "Laura Viviana",
@@ -46443,7 +45817,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46598,7 +45972,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46623,7 +45997,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46690,7 +46064,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46702,31 +46076,6 @@
       ],
       "intelligence": "bookish",
       "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
-      "name": "Lemures",
-      "gender": "ambiguous",
-      "language_ethnicity": "latin",
-      "mythology": "roman",
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "bookish",
-      "allure": "harsh",
       "commonness": "rare",
       "genre": [
         "fantasy"
@@ -46891,7 +46240,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46960,7 +46309,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -46983,7 +46332,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -47029,7 +46378,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -47054,7 +46403,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -47425,7 +46774,7 @@
       "gender": "female",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -48253,7 +47602,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -48460,7 +47809,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -48715,7 +48064,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -48988,7 +48337,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -49342,7 +48691,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -50004,7 +49353,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -50119,7 +49468,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -50179,27 +49528,6 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
-    },
-    {
-      "name": "Manala",
-      "gender": "ambiguous",
-      "language_ethnicity": "finnish",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
       "themes": []
     },
     {
@@ -50324,7 +49652,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -50460,7 +49788,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -51081,7 +50409,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -51980,7 +51308,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52139,7 +51467,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52255,7 +51583,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52487,7 +51815,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52554,7 +51882,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52650,7 +51978,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52699,7 +52027,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52771,7 +52099,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52797,7 +52125,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -52934,31 +52262,6 @@
       "themes": []
     },
     {
-      "name": "Meru",
-      "gender": "ambiguous",
-      "language_ethnicity": "hindi",
-      "mythology": "hindu",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Mesah",
       "gender": "male",
       "language_ethnicity": "english",
@@ -53032,7 +52335,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -53956,7 +53259,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -54027,7 +53330,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -54473,7 +53776,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -54828,7 +54131,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -54877,7 +54180,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -54902,7 +54205,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -54921,31 +54224,6 @@
       "themes": [
         "mystical",
         "religious"
-      ]
-    },
-    {
-      "name": "Mousai",
-      "gender": "ambiguous",
-      "language_ethnicity": "greek",
-      "mythology": "greek",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "pretty",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "literary"
       ]
     },
     {
@@ -54976,7 +54254,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -54999,7 +54277,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -55696,7 +54974,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -55860,7 +55138,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -55908,7 +55186,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -56191,7 +55469,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -56936,7 +56214,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -56959,7 +56237,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -57214,7 +56492,7 @@
     {
       "name": "NeonEcho",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -57237,7 +56515,7 @@
     {
       "name": "NeonMonarch",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -57283,7 +56561,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -57306,7 +56584,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -57768,7 +57046,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -57792,7 +57070,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -57815,7 +57093,7 @@
       "gender": "female",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -57859,7 +57137,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -57915,27 +57193,6 @@
       ],
       "intelligence": "plain",
       "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Nirvana",
-      "gender": "female",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "striking",
       "commonness": "uncommon",
       "genre": [],
       "themes": []
@@ -58315,7 +57572,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -58355,7 +57612,7 @@
     {
       "name": "Nova404",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -58378,7 +57635,7 @@
     {
       "name": "NovaHavoc",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -58401,7 +57658,7 @@
     {
       "name": "NovaStorm",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -58424,7 +57681,7 @@
     {
       "name": "NovaTrace",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -58659,7 +57916,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -58766,7 +58023,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -58791,7 +58048,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -58812,7 +58069,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -58902,7 +58159,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -58987,7 +58244,7 @@
     {
       "name": "OblivionCipher",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59010,7 +58267,7 @@
     {
       "name": "OblivionMonarch",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59033,7 +58290,7 @@
     {
       "name": "OblivionNomad",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59056,7 +58313,7 @@
     {
       "name": "OblivionReaper",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59079,7 +58336,7 @@
     {
       "name": "OblivionRunner",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59102,7 +58359,7 @@
     {
       "name": "OblivionStorm",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59125,7 +58382,7 @@
     {
       "name": "OblivionTrace",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59148,7 +58405,7 @@
     {
       "name": "OblivionVoid",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59171,7 +58428,7 @@
     {
       "name": "OblivionZen",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59440,7 +58697,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -59508,7 +58765,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -59626,7 +58883,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -59882,7 +59139,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -59976,7 +59233,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -60324,7 +59581,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -60343,7 +59600,7 @@
     {
       "name": "OmegaCipher",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60366,7 +59623,7 @@
     {
       "name": "OmegaDrone",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60389,7 +59646,7 @@
     {
       "name": "OmegaEcho",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60412,7 +59669,7 @@
     {
       "name": "OmegaGhost",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60435,7 +59692,7 @@
     {
       "name": "OmegaReaper",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60458,7 +59715,7 @@
     {
       "name": "OmegaShard",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60481,7 +59738,7 @@
     {
       "name": "OmegaShroud",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60504,7 +59761,7 @@
     {
       "name": "OmegaX",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60575,7 +59832,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -60600,7 +59857,7 @@
       "gender": "female",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -60953,7 +60210,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61087,29 +60344,6 @@
       "themes": []
     },
     {
-      "name": "Other God",
-      "gender": "ambiguous",
-      "language_ethnicity": "english",
-      "mythology": "lovecraft",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "modern"
-      ],
-      "role": [
-        "villain"
-      ],
-      "intelligence": "bookish",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [
-        "horror"
-      ],
-      "themes": []
-    },
-    {
       "name": "Otie",
       "gender": "ambiguous",
       "language_ethnicity": "english",
@@ -61235,7 +60469,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61249,29 +60483,6 @@
       "allure": "unremarkable",
       "commonness": "rare",
       "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Outer God",
-      "gender": "ambiguous",
-      "language_ethnicity": "english",
-      "mythology": "lovecraft",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "modern"
-      ],
-      "role": [
-        "villain"
-      ],
-      "intelligence": "bookish",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [
-        "horror"
-      ],
       "themes": []
     },
     {
@@ -61303,7 +60514,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61347,7 +60558,7 @@
       "gender": "female",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61465,7 +60676,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61513,7 +60724,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61534,7 +60745,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61602,7 +60813,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61619,32 +60830,11 @@
       "themes": []
     },
     {
-      "name": "Palenque Triad",
-      "gender": "ambiguous",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "bookish",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Palhik Mana",
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61660,29 +60850,6 @@
       "genre": [],
       "themes": [
         "mystical"
-      ]
-    },
-    {
-      "name": "Palladium",
-      "gender": "ambiguous",
-      "language_ethnicity": "latin",
-      "mythology": "roman",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "hero"
-      ],
-      "intelligence": "bookish",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [],
-      "themes": [
-        "regal"
       ]
     },
     {
@@ -61805,7 +60972,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -61876,7 +61043,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -62200,7 +61367,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -62242,32 +61409,11 @@
       "themes": []
     },
     {
-      "name": "Pelican",
-      "gender": "ambiguous",
-      "language_ethnicity": "arabic",
-      "mythology": "egyptian",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Pellervo",
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -62382,7 +61528,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -62405,7 +61551,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -62856,7 +62002,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -62950,7 +62096,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -62973,7 +62119,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63088,7 +62234,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63180,7 +62326,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63203,7 +62349,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63272,7 +62418,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63314,32 +62460,11 @@
       "themes": []
     },
     {
-      "name": "Pleasure",
-      "gender": "ambiguous",
-      "language_ethnicity": "latin",
-      "mythology": "roman",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Pomona",
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63388,7 +62513,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63461,7 +62586,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63810,7 +62935,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -63927,7 +63052,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -64367,7 +63492,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -64415,7 +63540,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -64486,7 +63611,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -64511,7 +63636,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -64605,7 +63730,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -64860,7 +63985,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -65021,7 +64146,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -65463,7 +64588,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -65555,7 +64680,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -65787,7 +64912,7 @@
       "gender": "male",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -65860,7 +64985,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hebrew",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -66806,7 +65931,7 @@
     {
       "name": "RogueFlux",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -67022,7 +66147,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -67739,7 +66864,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -67823,7 +66948,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -67840,32 +66965,11 @@
       "themes": []
     },
     {
-      "name": "San Qing",
-      "gender": "ambiguous",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "San-Yan-Dadi",
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -67993,7 +67097,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -68182,7 +67286,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -68540,7 +67644,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -68911,7 +68015,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -68934,7 +68038,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -69162,7 +68266,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -69225,31 +68329,6 @@
       "themes": []
     },
     {
-      "name": "Seven-Gods-Of-Luck",
-      "gender": "ambiguous",
-      "language_ethnicity": "japanese",
-      "mythology": "japanese",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Seweryn",
       "gender": "male",
       "language_ethnicity": "slavicPolish",
@@ -69298,7 +68377,7 @@
     {
       "name": "Shadow404",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -69321,7 +68400,7 @@
     {
       "name": "ShadowDrone",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -69344,7 +68423,7 @@
     {
       "name": "ShadowHorizon",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -69367,7 +68446,7 @@
     {
       "name": "ShadowRunner",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -69390,7 +68469,7 @@
     {
       "name": "ShadowShroud",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -69413,7 +68492,7 @@
     {
       "name": "ShadowVoid",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -69580,7 +68659,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "mesopotamian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -69998,7 +69077,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -70021,7 +69100,7 @@
       "gender": "female",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -70394,7 +69473,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -70938,7 +70017,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "nativeAmerican",
       "mythology": "nativeAmerican",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -71171,7 +70250,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -71811,7 +70890,7 @@
     {
       "name": "SpectreVoid",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -71903,7 +70982,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -72327,7 +71406,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "latin",
       "mythology": "roman",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -72367,27 +71446,6 @@
       "themes": [
         "mystical"
       ]
-    },
-    {
-      "name": "Stymphalian Birds",
-      "gender": "ambiguous",
-      "language_ethnicity": "greek",
-      "mythology": "greek",
-      "race": "human",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "villain"
-      ],
-      "intelligence": "bookish",
-      "allure": "harsh",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
     },
     {
       "name": "Stéphane",
@@ -72499,7 +71557,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -72688,7 +71746,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -72730,7 +71788,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -72772,7 +71830,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -72856,7 +71914,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -73082,7 +72140,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -73333,7 +72391,7 @@
     {
       "name": "Synth404",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -73356,7 +72414,7 @@
     {
       "name": "SynthHorizon",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -73450,7 +72508,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -73703,7 +72761,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -73864,7 +72922,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -73908,7 +72966,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74044,7 +73102,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74295,7 +73353,7 @@
       "gender": "female",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74408,7 +73466,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74475,7 +73533,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74544,7 +73602,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74635,7 +73693,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74796,7 +73854,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74840,7 +73898,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74976,7 +74034,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -74999,7 +74057,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -75020,7 +74078,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "greek",
       "mythology": "greek",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -75066,7 +74124,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -75185,7 +74243,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -75447,7 +74505,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -75635,7 +74693,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -75844,7 +74902,7 @@
     {
       "name": "Titan404",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -75869,7 +74927,7 @@
     {
       "name": "TitanHavoc",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -75894,7 +74952,7 @@
     {
       "name": "TitanReaper",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -75919,7 +74977,7 @@
     {
       "name": "TitanShard",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -75944,7 +75002,7 @@
     {
       "name": "TitanVoid",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -75969,7 +75027,7 @@
     {
       "name": "TitanZero",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -76042,7 +75100,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -76088,7 +75146,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -76111,7 +75169,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -76227,7 +75285,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -76414,7 +75472,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -76696,7 +75754,7 @@
     {
       "name": "Trace404",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -76788,29 +75846,6 @@
       "themes": []
     },
     {
-      "name": "Trnsfer",
-      "gender": "male",
-      "language_ethnicity": "nepalese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Trogdor",
       "gender": "ambiguous",
       "language_ethnicity": "fantasyDragon",
@@ -76886,7 +75921,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77141,7 +76176,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77283,7 +76318,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77309,7 +76344,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77381,7 +76416,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77404,7 +76439,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77523,7 +76558,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77567,31 +76602,6 @@
       "themes": []
     },
     {
-      "name": "Tzitzimime",
-      "gender": "ambiguous",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "villain"
-      ],
-      "intelligence": "bookish",
-      "allure": "harsh",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Tími",
       "gender": "ambiguous",
       "language_ethnicity": "icelandic",
@@ -77613,31 +76623,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Tír Na Nog",
-      "gender": "ambiguous",
-      "language_ethnicity": "irishGaelic",
-      "mythology": "celtic",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "hero"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
     },
     {
       "name": "Uasal",
@@ -77669,7 +76654,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "turkish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77740,7 +76725,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77765,7 +76750,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -77813,7 +76798,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -77861,7 +76846,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -78001,7 +76986,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "japanese",
       "mythology": "japanese",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -78112,29 +77097,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Unnamed",
-      "gender": "male",
-      "language_ethnicity": "fantasyDragon",
-      "mythology": null,
-      "race": "dragon",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "timeless"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
-      "themes": [
-        "literary"
-      ]
     },
     {
       "name": "Unnur",
@@ -78371,7 +77333,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -78390,29 +77352,6 @@
       "themes": [
         "mystical"
       ]
-    },
-    {
-      "name": "Uxmal",
-      "gender": "male",
-      "language_ethnicity": "mayan",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "Vagelis",
@@ -78557,7 +77496,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -78582,7 +77521,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -78654,7 +77593,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -78790,36 +77729,11 @@
       "themes": []
     },
     {
-      "name": "Vedas",
-      "gender": "ambiguous",
-      "language_ethnicity": "hindi",
-      "mythology": "hindu",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "bookish",
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Veden-Haltia",
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -78867,7 +77781,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -78892,7 +77806,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -78940,7 +77854,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -78965,7 +77879,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -79640,7 +78554,7 @@
       "gender": "male",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -79757,7 +78671,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -79780,7 +78694,7 @@
     {
       "name": "VoidFlux",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -79803,7 +78717,7 @@
     {
       "name": "VoidHorizon",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -79826,7 +78740,7 @@
     {
       "name": "VoidOracle",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -79849,7 +78763,7 @@
     {
       "name": "VoidShard",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -79921,7 +78835,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "scandinavian",
       "mythology": "norse",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -79947,7 +78861,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -79970,7 +78884,7 @@
     {
       "name": "VortexGhost",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -79995,7 +78909,7 @@
     {
       "name": "VortexOracle",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -80020,7 +78934,7 @@
     {
       "name": "VortexReaper",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -80045,7 +78959,7 @@
     {
       "name": "VortexVoid",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -80070,7 +78984,7 @@
     {
       "name": "VortexVortex",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -80095,7 +79009,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -80167,7 +79081,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "finnish",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -80194,7 +79108,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -80495,7 +79409,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -80774,31 +79688,6 @@
       "themes": []
     },
     {
-      "name": "Wild Hunt",
-      "gender": "ambiguous",
-      "language_ethnicity": "scandinavian",
-      "mythology": "norse",
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "villain"
-      ],
-      "intelligence": "blunt",
-      "allure": "harsh",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Wilfrido",
       "gender": "male",
       "language_ethnicity": "spanish",
@@ -81058,7 +79947,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
       "mythology": "egyptian",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -81659,7 +80548,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -81685,7 +80574,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -81710,7 +80599,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -81735,7 +80624,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -81832,7 +80721,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "irishGaelic",
       "mythology": "celtic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -82018,7 +80907,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -82294,7 +81183,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "hindi",
       "mythology": "hindu",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -83239,7 +82128,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -83262,7 +82151,7 @@
       "gender": "male",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -83377,7 +82266,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -84138,7 +83027,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "elder"
       ],
@@ -84159,7 +83048,7 @@
     {
       "name": "ZenRunner",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84182,7 +83071,7 @@
     {
       "name": "ZenSentry",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84205,7 +83094,7 @@
     {
       "name": "ZenShroud",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84228,7 +83117,7 @@
     {
       "name": "ZenX",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84251,7 +83140,7 @@
     {
       "name": "ZenithDrone",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84274,7 +83163,7 @@
     {
       "name": "ZenithEcho",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84297,7 +83186,7 @@
     {
       "name": "ZenithGhost",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84370,7 +83259,7 @@
     {
       "name": "ZeroDrone",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84393,7 +83282,7 @@
     {
       "name": "ZeroHavoc",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84416,7 +83305,7 @@
     {
       "name": "ZeroMonarch",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84439,7 +83328,7 @@
     {
       "name": "ZeroTrace",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "cyberpunkHandle",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84671,7 +83560,7 @@
       "gender": "female",
       "language_ethnicity": "mayan",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -84811,7 +83700,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": "slavic",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -84883,7 +83772,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": "lovecraft",
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -88137,7 +87026,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "italian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -88298,7 +87187,7 @@
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -88340,31 +87229,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Žvaigždės",
-      "gender": "ambiguous",
-      "language_ethnicity": "slavicOther",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "celestial"
-      ]
     },
     {
       "name": "ʻAikake",
@@ -112484,24 +111348,6 @@
       "themes": []
     },
     {
-      "name": "Korea",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Kori",
       "language_ethnicity": "nepalese",
       "mythology": null,
@@ -119270,24 +118116,6 @@
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Qkr",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],

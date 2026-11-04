@@ -62,10 +62,10 @@ function buildToolParameters() {
             gender: enumField(enumValues.gender, 'Gender of the new NPC.'),
             language_ethnicity: enumField(
                 enumValues.language_ethnicity,
-                'Cultural root. Real-world for humans; fantasyElvish, fantasyDwarven, fantasyDragon for non-human races.',
+                'Cultural root. Real-world for humans; fantasyElvish, fantasyDwarven, fantasyDragon for non-human races; cyberpunkHandle for online handles.',
             ),
-            mythology: enumField(enumValues.mythology, 'Pantheon the name should evoke.'),
-            race: enumField(enumValues.race, 'Species / race of the NPC.'),
+            mythology: enumField(enumValues.mythology, 'Pantheon of a god, spirit or monster; pass with race: mythical, never human.'),
+            race: enumField(enumValues.race, 'human for every person; mythical only for a god, spirit or monster; else the species.'),
             age: enumField(enumValues.age, 'Lifestage the name fits.'),
             era: enumField(enumValues.era, 'Period the name evokes.'),
             role: enumField(enumValues.role, 'Narrative function (hero, villain, mentor, ...).'),
@@ -109,7 +109,7 @@ function registerTool() {
         name: TOOL_NAME,
         displayName: 'Suggest NPC Name',
         description:
-            'Use for every new NPC you introduce. Returns a curated first+last name with classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself.',
+            'Use for every new NPC you introduce. Returns a curated first+last name with classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; a mythology filter goes with race: mythical, never human.',
         parameters: buildToolParameters(),
         shouldRegister: async () =>
             extension_settings[MODULE].enabled
