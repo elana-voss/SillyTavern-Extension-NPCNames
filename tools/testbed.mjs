@@ -353,6 +353,9 @@ async function main() {
     const st = await startSillyTavern();
     const browser = await chromium.launch({ headless: true });
     const { page, errors } = await openPage(browser);
+    // The status badge scenario turns the extension off and on; a run can end before SillyTavern's
+    // debounce saves the on, and the next run would start with it off.
+    await page.evaluate(() => $('#npc_names_enabled').prop('checked', true).trigger('change'));
     try {
         for (const name of names) {
             scenarioName = name;
