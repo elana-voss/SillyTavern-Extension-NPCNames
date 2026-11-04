@@ -58,6 +58,10 @@ const whyCommon = f => {
     return '';
 };
 
+// A person looked and these are real names; the mark in the list keeps them off when it is remade.
+const notSlop = readFileSync(target, 'utf8').split(/?
+/).filter(l => l.startsWith('#not-slop ')).map(l => l.split(' ')[1]);
+
 const listed = new Set(), table = [];
 for (const [k, s] of stats) {
     // A culture's own prompts show nothing: they repeat real names of cultures without a source (Iryna, Nataliia).
@@ -65,7 +69,7 @@ for (const [k, s] of stats) {
     const rows = [...new Set([...s.spellings].map(foldName))].map(f => ({ f, why: whyCommon(f) }));
     for (const { f, why } of rows) {
         table.push(`${f}\t${why || 'LISTED'}\tgeneric ${s.generic.size} own ${s.own.size} cultures ${s.cultures.size}`);
-        if (!why) listed.add(f);
+        if (!why && !notSlop.includes(f)) listed.add(f);
     }
 }
 writeFileSync(tablePath, table.sort().join('\n') + '\n');
@@ -78,6 +82,8 @@ const text = [
     ...[...listed].sort(),
     '# Listed by hand: named by the owner or of that kind, though the counts do not reach them.',
     ...HAND,
+    '# Real names, not slop, though the counts reach them: never listed.',
+    ...notSlop.map(f => `#not-slop ${f}`),
     '',
 ].join('\n');
 writeFileSync(target, text);

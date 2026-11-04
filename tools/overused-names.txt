@@ -14,7 +14,6 @@ emberclaw
 fairfax
 grimshaw
 ironside
-jese
 juniper
 kael
 kaelen
@@ -29,7 +28,6 @@ rooke
 stormscale
 sylas
 vesper
-xaviere
 ysolde
 zephyr
 # Listed by hand: named by the owner or of that kind, though the counts do not reach them.
@@ -37,3 +35,6 @@ lyra
 seraphina
 thorn
 thorne
+# Real names, not slop, though the counts reach them: never listed.
+#not-slop jese
+#not-slop xaviere

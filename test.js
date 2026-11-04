@@ -418,6 +418,14 @@ test('overused check folds case and accents, and no name of the new batch is on 
     assert.deepEqual(batch.filter(n => overused.has(foldName(n))), []);
 });
 
+test('a real name marked not slop stays off the overused list, and the making tool keeps the mark', () => {
+    const overused = loadOverused();
+    assert.deepEqual(['jese', 'xaviere'].filter(n => overused.has(n)), []);
+    const marked = readFileSync(new URL('./tools/overused-names.txt', import.meta.url), 'utf8').split(/\r?\n/).filter(l => l.startsWith('#not-slop '));
+    assert.deepEqual(marked.map(l => l.split(' ')[1]), ['jese', 'xaviere']);
+    assert.match(readFileSync(new URL('./tools/m5-make-overused.mjs', import.meta.url), 'utf8'), /#not-slop /);
+});
+
 test('every culture listed before milestone 4 is offered again, plus the new ones, for both sexes', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
     const nonHuman = ['cyberpunkHandle', 'fantasyDragon', 'fantasyDwarven', 'fantasyElvish'];
