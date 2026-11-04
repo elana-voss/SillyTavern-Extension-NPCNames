@@ -25,7 +25,7 @@ const REMOVERS = new Set(['given', 'word', 'place', 'fragment']);
 const LAST_VERDICTS = new Set([...REMOVERS, 'surname', 'unsure']);
 const FIRST_VERDICTS = new Set(['given', 'surname', 'unsure']);
 const lines = readFileSync(new URL('tools/m3-readings.txt', root), 'utf8')
-    .split('\n')
+    .split(/\r?\n/)
     .filter(l => l && !l.startsWith('#'))
     .map(l => l.split(' | '));
 
