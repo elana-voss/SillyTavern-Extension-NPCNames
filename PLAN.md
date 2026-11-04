@@ -22,8 +22,8 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 3 | Surnames: gender and non-surnames | R1, R7 | Done | | 3M | 0.2M | 4.4M, 0; code review Fable 5.1 medium |
 | 4 | Cultures: labels and misfiled names | R1, R5, R6 | Done | | 4M | 0.5M | 3.1M, 0.09M; code review Fable 5.1 medium |
 | 5 | New names | R1, R2, R5 | Done | | 6M | 1.5M | 9.9M, 0.37M at the last count; code review Fable 5.1 medium |
-| 6 | Tags and spelling | R1, R7 | In progress | Must | 3M | 0.2M | |
-| 7 | Code, documents and tests | R1, R7 | To do | Must | 2M | 0 | |
+| 6 | Tags and spelling | R1, R7 | Done | | 3M | 0.2M | 4.2M, 0.14M; code review Fable 5.1 medium |
+| 7 | Code, documents and tests | R1, R7 | In progress | Must | 2M | 0 | |
 | 8 | Live run and release | R1 | To do | Must | 1M | 0.1M | |
 | | Total | | | | 28M | 2.8M | |
 
