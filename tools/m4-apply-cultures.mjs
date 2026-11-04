@@ -7,16 +7,9 @@
 // Run on the database as it stood before the milestone (main's): node tools/m4-apply-cultures.mjs
 // Its count asserts refuse a database already changed.
 import assert from 'node:assert/strict';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { loadDb, readLines, saveWithChanges } from './db.mjs';
 
-const root = new URL('../', import.meta.url);
-const dbUrl = new URL('data/name_database.tagged.json', root);
-const raw = readFileSync(dbUrl, 'utf8');
-const db = JSON.parse(raw);
-const serialise = d => JSON.stringify(d, null, 2).replace(/\n/g, '\r\n');
-assert.equal(serialise(db), raw, 'the database format would not survive a rewrite');
+const db = loadDb();
 assert.equal(db.first_names.length, 4283, 'first names');
 assert.equal(db.last_names.length, 1794, 'surnames');
 
@@ -39,10 +32,7 @@ const lasts = new Map(db.last_names.map(e => [key(e.language_ethnicity, e.name),
 assert.equal(firsts.size, db.first_names.length, 'a first name twice in its culture');
 assert.equal(lasts.size, db.last_names.length, 'a surname twice in its culture');
 
-const lines = readFileSync(new URL('tools/m4-readings.txt', root), 'utf8')
-    .split(/\r?\n/)
-    .filter(l => l && !l.startsWith('#'))
-    .map(l => l.split(' | '));
+const lines = readLines('m4-readings.txt');
 
 // Where a line sends its name: a key, key+surname, or null when it stays.
 // The third reader, where it read the name ('-' elsewhere), answers a plain culture or `unknown`:
@@ -118,7 +108,6 @@ for (const { kind, entry, from, culture, toLast, gender, claude, second, third }
 }
 db.first_names = db.first_names.filter(e => !removeFirst.has(e));
 db.last_names = [...db.last_names.filter(e => !removeLast.has(e)), ...addLast];
-writeFileSync(dbUrl, serialise(db));
 
 const changed = new Set(moves.flatMap(m => [m.from, m.culture]));
 const count = (list, values) => values.map(v => list.filter(e => (e.gender ?? 'none') === v).length).join('/');
@@ -137,14 +126,11 @@ const summary = [
     `New cultures lacking first names or surnames: ${short.join(', ') || 'none'}`,
     `First names now: ${db.first_names.length}; surnames now: ${db.last_names.length}`,
 ];
-const dir = join(tmpdir(), 'SillyTavern-Extension-NPCNames');
-mkdirSync(dir, { recursive: true });
-const out = join(dir, '4-changes.txt');
-writeFileSync(out, [
+const out = saveWithChanges(db, 4, [
     '== Moved', ...changes.sort(),
     '', '== Readers disagreed', ...disagreed.sort(),
     '', '== Per changed culture', ...table,
-    '', '== Summary', ...summary, '',
-].join('\n'));
+    '', '== Summary', ...summary,
+]);
 console.log(summary.join('\n'));
 console.log(out);

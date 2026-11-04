@@ -149,6 +149,9 @@ One live model through nano-gpt on the test bed with the finished work: an ordin
 
 - Audit after milestone 5 (Fable 5.1 medium): on track. Accepted: one shared module for the data tools with the debug loop removed; one test load and one invariants test, so tests are smaller than the product; its data defects go to milestone 6. Not taken: gating by spelling variant, since the two variants in the data (Lira, Silas) are real names and milestone 6 adds no names; dropping `mythology: null`, since no requirement asks for a smaller file.
 - Open estimates not scaled: milestones 1 to 5 cost 22.1M against 22M.
+- `tools/db.mjs`, where the four apply tools differed: lists split on either line end (milestone 2 split on LF alone, so it kept the CR in a line's last field and refused its list in a Windows checkout, where git's `autocrlf` gives the lists CRLF; pinned by a test).
+- `tools/db.mjs`: the change list is written before the database (milestone 5's order; 2 to 4 wrote the database first, and a failure between the two would lose the list while the count asserts refuse a second run). Not tested: a failed disk write is worth no test here.
+- `tools/db.mjs`: every apply tool prints the change list's path (milestone 5 did not, 2 to 4 did). Not tested: output only.
 
 ## Trials
 

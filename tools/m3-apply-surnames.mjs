@@ -6,16 +6,9 @@
 // Run on the database as it stood before the milestone (main's): node tools/m3-apply-surnames.mjs
 // Its count asserts refuse a database already changed.
 import assert from 'node:assert/strict';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { loadDb, readLines, saveWithChanges } from './db.mjs';
 
-const root = new URL('../', import.meta.url);
-const dbUrl = new URL('data/name_database.tagged.json', root);
-const raw = readFileSync(dbUrl, 'utf8');
-const db = JSON.parse(raw);
-const serialise = d => JSON.stringify(d, null, 2).replace(/\n/g, '\r\n');
-assert.equal(serialise(db), raw, 'the database format would not survive a rewrite');
+const db = loadDb();
 assert.equal(db.first_names.length, 4290, 'first names');
 assert.equal(db.last_names.length, 1948, 'surnames');
 assert.ok(db.last_names.every(e => !('gender' in e)), 'a surname already has a gender');
@@ -24,10 +17,7 @@ const GENDERED = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', '
 const REMOVERS = new Set(['given', 'word', 'place', 'fragment']);
 const LAST_VERDICTS = new Set([...REMOVERS, 'surname', 'unsure']);
 const FIRST_VERDICTS = new Set(['given', 'surname', 'unsure']);
-const lines = readFileSync(new URL('tools/m3-readings.txt', root), 'utf8')
-    .split(/\r?\n/)
-    .filter(l => l && !l.startsWith('#'))
-    .map(l => l.split(' | '));
+const lines = readLines('m3-readings.txt');
 
 const key = (culture, name) => `${culture}|${name}`;
 const surnames = new Map(db.last_names.map(e => [key(e.language_ethnicity, e.name), e]));
@@ -80,7 +70,6 @@ db.last_names = db.last_names.filter(e => !removeLast.has(e)).map(e => {
     return { name, gender, ...rest };
 });
 db.first_names = db.first_names.filter(e => !removeFirst.has(e));
-writeFileSync(dbUrl, serialise(db));
 
 const deleted = [
     ...[...removeLast].map(([e, why]) => `${e.name} [surname, ${e.language_ethnicity}]: deleted; ${why}`),
@@ -97,14 +86,11 @@ const summary = [
     `Readers disagreed: ${undecided.length}`,
     `First names now: ${db.first_names.length}; surnames now: ${db.last_names.length}`,
 ];
-const dir = join(tmpdir(), 'SillyTavern-Extension-NPCNames');
-mkdirSync(dir, { recursive: true });
-const out = join(dir, '3-changes.txt');
-writeFileSync(out, [
+const out = saveWithChanges(db, 3, [
     '== Gender', ...changes.sort(),
     '', '== Deleted', ...deleted.sort(),
     '', '== Readers disagreed', ...undecided.sort(),
-    '', '== Summary', ...summary, '',
-].join('\n'));
+    '', '== Summary', ...summary,
+]);
 console.log(summary.join('\n'));
 console.log(out);

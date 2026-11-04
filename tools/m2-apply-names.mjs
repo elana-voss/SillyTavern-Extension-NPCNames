@@ -7,16 +7,9 @@
 // Run once on the database as it stood before the milestone: node tools/m2-apply-names.mjs
 // Its count asserts refuse a database already changed.
 import assert from 'node:assert/strict';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { loadDb, readLines, saveWithChanges } from './db.mjs';
 
-const root = new URL('../', import.meta.url);
-const dbUrl = new URL('data/name_database.tagged.json', root);
-const raw = readFileSync(dbUrl, 'utf8');
-const db = JSON.parse(raw);
-const serialise = d => JSON.stringify(d, null, 2).replace(/\n/g, '\r\n');
-assert.equal(serialise(db), raw, 'the database format would not survive a rewrite');
+const db = loadDb();
 
 const first = db.first_names;
 const lastCount = db.last_names.length;
@@ -48,14 +41,11 @@ count(groups['english-ambiguous'], 79, 'English ambiguous');
 count(groups.mayan, 92, 'Mayan not ancient');
 
 const VERDICTS = new Set(['god', 'person', 'not']);
-const readings = readFileSync(new URL('tools/m2-readings.txt', root), 'utf8')
-    .split('\n')
-    .filter(l => l && !l.startsWith('#'))
-    .map(l => {
-        const [list, culture, name, group, claude, second, why = 'names nothing'] = l.split(' | ');
-        assert.ok(VERDICTS.has(claude) && VERDICTS.has(second), `verdict in: ${l}`);
-        return { list, culture, name, group, claude, second, why };
-    });
+const readings = readLines('m2-readings.txt').map(fields => {
+    const [list, culture, name, group, claude, second, why = 'names nothing'] = fields;
+    assert.ok(VERDICTS.has(claude) && VERDICTS.has(second), `verdict in: ${fields.join(' | ')}`);
+    return { list, culture, name, group, claude, second, why };
+});
 for (const [group, entries] of Object.entries(groups)) {
     const read = readings.filter(r => r.group === group).map(r => r.name).sort();
     assert.deepEqual(read, entries.map(e => e.name).sort(), `reading list of ${group}`);
@@ -101,7 +91,6 @@ for (const e of handles) {
 }
 db.first_names = first.filter(e => !toDelete.has(e));
 db.last_names = db.last_names.filter(e => !toDelete.has(e));
-writeFileSync(dbUrl, serialise(db));
 
 const summary = [
     `Became race mythical: ${toGod.size}`,
@@ -110,14 +99,11 @@ const summary = [
     `Readers disagreed: ${undecided.length}`,
     `First names now: ${db.first_names.length}; surnames now: ${db.last_names.length}`,
 ];
-const dir = join(tmpdir(), 'SillyTavern-Extension-NPCNames');
-mkdirSync(dir, { recursive: true });
-const out = join(dir, '2-changes.txt');
-writeFileSync(out, [
+const out = saveWithChanges(db, 2, [
     '== Changed', ...changes.sort(),
     '', '== Deleted', ...deleted.sort(),
     '', '== Readers disagreed', ...undecided.sort(),
-    '', '== Summary', ...summary, '',
-].join('\n'));
+    '', '== Summary', ...summary,
+]);
 console.log(summary.join('\n'));
 console.log(out);

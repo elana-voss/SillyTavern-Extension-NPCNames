@@ -87,6 +87,3 @@ const text = [
 ].join('\n');
 writeFileSync(target, text);
 console.log(`counted ${stats.size} variant groups, listed ${listed.size}, by hand ${HAND.length}: ${HAND.join(' ')}`);
-for (const f of ['elara', 'kael', 'lyra', 'seraphina', 'thorn', 'maria', 'anna', 'thomas', 'smith', 'murphy', 'ivan', 'elena', 'mihai', 'popescu', 'chen', 'kim', 'nguyen', 'tanaka', 'kofi']) {
-    console.log(`${f} rank ${best.get(f) ?? '-'} us ${ssa[f] ?? 0} pop ${popular.has(f)} ${listed.has(f) ? 'LISTED' : ''}`);
-}

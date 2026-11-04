@@ -5,6 +5,7 @@ import { injectBeforeLatest } from './advertisement.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { foldName, loadOverused } from './tools/overused.mjs';
+import { parseLines } from './tools/db.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -526,6 +527,10 @@ test('Native American by-names: one man\'s fame stays out, the others are of the
     assert.deepEqual(['Sitting Bull', 'Crazy Horse', 'Rain-in-the-Face', 'Black Elk', 'Cornplanter', 'Poundmaker', 'Cornstalk'].filter(n => of.some(e => e.name === n)), []);
     assert.deepEqual(of.find(e => e.name === 'Big Elk').era, ['victorian']);
     assert.deepEqual(of.find(e => e.name === 'Winona').era, ['contemporary']);
+});
+
+test('a data tool\'s list reads the same with either line end', () => {
+    assert.deepEqual(parseLines('# note\r\na | b\r\n\r\nc | d\n'), [['a', 'b'], ['c', 'd']]);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

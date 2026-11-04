@@ -12,17 +12,10 @@
 //   tag | culture | name | field | value
 //   remove | culture | name | why
 import assert from 'node:assert/strict';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { loadDb, readLines, saveWithChanges } from './db.mjs';
 import { foldName, loadOverused } from './overused.mjs';
 
-const root = new URL('../', import.meta.url);
-const dbUrl = new URL('data/name_database.tagged.json', root);
-const raw = readFileSync(dbUrl, 'utf8');
-const db = JSON.parse(raw);
-const serialise = d => JSON.stringify(d, null, 2).replace(/\n/g, '\r\n');
-assert.equal(serialise(db), raw, 'the database format would not survive a rewrite');
+const db = loadDb();
 assert.equal(db.first_names.length, 4266, 'first names');
 assert.equal(db.last_names.length, 1809, 'surnames');
 
@@ -32,10 +25,7 @@ const TAG_FIELDS = new Set(['age', 'era', 'genre', 'themes']);
 const list = s => (s === '-' ? [] : s.split(','));
 const key = (culture, name) => `${culture}|${foldName(name)}`;
 
-const lines = readFileSync(new URL('tools/m5-names.txt', root), 'utf8')
-    .split(/\r?\n/)
-    .filter(l => l && !l.startsWith('#'))
-    .map(l => l.split(' | '));
+const lines = readLines('m5-names.txt');
 
 // Removals first, so that a replacement of the same name may enter.
 for (const [kind, culture, name] of lines) {
@@ -90,14 +80,11 @@ for (const [kind, culture, name, field, value] of lines) {
 }
 
 const onList = list_ => list_.filter(e => overused.has(foldName(e.name))).length;
-const dir = join(tmpdir(), 'SillyTavern-Extension-NPCNames');
-mkdirSync(dir, { recursive: true });
-const report = [...lines.map(l => l.join(' | '))];
-writeFileSync(join(dir, '5-changes.txt'), report.join('\n') + '\n');
-writeFileSync(dbUrl, serialise(db));
+const out = saveWithChanges(db, 5, lines.map(l => l.join(' | ')));
 
 const firstAdded = [...added.first.values()].reduce((n, m) => n + Object.values(m).reduce((a, b) => a + b, 0), 0);
 const lastAdded = [...added.last.values()].reduce((n, m) => n + Object.values(m).reduce((a, b) => a + b, 0), 0);
 console.log(`first names ${db.first_names.length} (+${firstAdded}), surnames ${db.last_names.length} (+${lastAdded})`);
 console.log(`removed ${lines.filter(l => l[0] === 'remove').length}, tags ${JSON.stringify(tagged)}`);
 console.log(`present names on the overused list, kept: ${onList(db.first_names)} first, ${onList(db.last_names)} surnames`);
+console.log(out);
