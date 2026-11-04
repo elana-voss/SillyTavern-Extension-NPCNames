@@ -57,35 +57,64 @@ export function pickName(firstNames, lastNames, filters, usedFirst, usedLast, rn
     if (firstNames.length === 0 || lastNames.length === 0) {
         throw new Error('Name database is empty');
     }
-    const relaxed = [];
-    let current = { ...filters };
+    const { current, relaxed } = relaxFilters(firstNames, normalizeFilters(filters));
     let firstCandidates = filterFirstNames(firstNames, current);
-    if (firstCandidates.length === 0) {
-        for (const field of DROP_ORDER) {
-            if (!(field in current)) continue;
-            delete current[field];
-            relaxed.push(field);
-            firstCandidates = filterFirstNames(firstNames, current);
-            if (firstCandidates.length > 0) break;
-        }
-    }
     if (firstCandidates.length === 0) {
         throw new Error('No first-name candidates after full degradation');
     }
+    // Untagged names only stand in once no unused name carries the genre.
+    if (current.genre) {
+        const tagged = firstCandidates.filter(
+            e => e.genre.includes(current.genre) && !usedFirst.has(e.name),
+        );
+        if (tagged.length > 0) firstCandidates = tagged;
+    }
     const firstPick = pickAndMarkUsed(firstCandidates, usedFirst, e => e.name, rng);
+    if (current.genre && !firstPick.genre.includes(current.genre)) relaxed.push('genre');
 
-    const culture = firstPick.language_ethnicity;
-    let lastCandidates = lastNames.filter(s => s.language_ethnicity === culture);
-    if (lastCandidates.length === 0) lastCandidates = lastNames;
-    const lastPick = pickAndMarkUsed(lastCandidates, usedLast, s => s.name, rng);
+    // A culture without surnames (dragons, Native American figures) gets no
+    // surname rather than one from an unrelated culture.
+    const lastCandidates = lastNames.filter(
+        s => s.language_ethnicity === firstPick.language_ethnicity && s.name !== firstPick.name,
+    );
+    const lastPick = lastCandidates.length > 0
+        ? pickAndMarkUsed(lastCandidates, usedLast, s => s.name, rng)
+        : null;
 
     return buildResponse(firstPick, lastPick, relaxed);
+}
+
+function normalizeFilters(filters) {
+    const out = Object.fromEntries(
+        Object.entries(filters).filter(([, v]) => v !== null && v !== undefined && v !== ''),
+    );
+    if ('themes' in out) out.themes = [].concat(out.themes);
+    return out;
+}
+
+// Drops filters in DROP_ORDER until a name matches, then puts back every
+// dropped filter that was not part of the conflict, most important first.
+function relaxFilters(firstNames, filters) {
+    const current = { ...filters };
+    const dropped = [];
+    for (const field of DROP_ORDER) {
+        if (filterFirstNames(firstNames, current).length > 0) break;
+        if (!(field in current)) continue;
+        delete current[field];
+        dropped.push(field);
+    }
+    for (const field of [...dropped].reverse()) {
+        const trial = { ...current, [field]: filters[field] };
+        if (filterFirstNames(firstNames, trial).length === 0) continue;
+        current[field] = filters[field];
+        dropped.splice(dropped.indexOf(field), 1);
+    }
+    return { current, relaxed: dropped };
 }
 
 function buildResponse(first, last, relaxed) {
     const out = {
         first_name: first.name,
-        last_name: last.name,
         gender: first.gender,
         language_ethnicity: first.language_ethnicity,
         race: first.race,
@@ -97,12 +126,15 @@ function buildResponse(first, last, relaxed) {
         commonness: first.commonness,
         genre: first.genre,
         themes: first.themes,
-        last_name_role: last.role,
-        last_name_allure: last.allure,
-        last_name_commonness: last.commonness,
-        last_name_genre: last.genre,
-        last_name_themes: last.themes,
     };
+    if (last) {
+        out.last_name = last.name;
+        out.last_name_role = last.role;
+        out.last_name_allure = last.allure;
+        out.last_name_commonness = last.commonness;
+        out.last_name_genre = last.genre;
+        out.last_name_themes = last.themes;
+    }
     if (first.mythology) out.mythology = first.mythology;
     if (relaxed.length > 0) out.relaxed_filters = relaxed;
     return out;

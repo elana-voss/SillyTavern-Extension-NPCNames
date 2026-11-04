@@ -310,7 +310,9 @@ const SCENARIOS = {
         check('badge: active', b.text.includes('Extension active') && b.cls.includes('ok'), JSON.stringify(b));
 
         await page.evaluate(() => $('#openai_function_calling').prop('checked', false).trigger('input'));
-        await page.waitForTimeout(300);
+        // ST reports this only through SETTINGS_UPDATED, after its 1 s save debounce and the save request.
+        // A timeout is not handled here: the check below reports the badge as it stands.
+        await page.waitForFunction(() => document.getElementById('npc_names_status')?.textContent.includes('does not support'), null, { timeout: 5000 }).catch(() => {});
         b = await badge(page);
         check('badge: function calling off says inactive', b.text.includes('does not support') && b.cls.includes('warn'), JSON.stringify(b));
         await newChat(page);

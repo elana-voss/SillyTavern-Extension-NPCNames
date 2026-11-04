@@ -7,6 +7,7 @@ import { chat_metadata, saveSettingsDebounced } from '../../../../script.js';
 import { eventSource, event_types } from '../../../events.js';
 import { ToolManager } from '../../../tool-calling.js';
 import { pickName, deriveEnumValues } from './picker.js';
+import { injectBeforeLatest } from './advertisement.js';
 
 const MODULE = 'npcNames';
 const EXT_DIR = 'third-party/SillyTavern-Extension-NPCNames';
@@ -61,7 +62,7 @@ function buildToolParameters() {
             gender: enumField(enumValues.gender, 'Gender of the new NPC.'),
             language_ethnicity: enumField(
                 enumValues.language_ethnicity,
-                'Cultural root. Real-world for humans; fantasy_* buckets for non-human races.',
+                'Cultural root. Real-world for humans; fantasyElvish, fantasyDwarven, fantasyDragon for non-human races.',
             ),
             mythology: enumField(enumValues.mythology, 'Pantheon the name should evoke.'),
             race: enumField(enumValues.race, 'Species / race of the NPC.'),
@@ -144,25 +145,14 @@ function applyEnabled(active) {
 }
 
 // ST's documented generate_interceptor hook. Runs just before each
-// generation request with the chat array mutable. Pre-pending a system
-// message here is race-free (the advertisement text is guaranteed to be
-// loaded by the time any chat turn fires after boot).
+// generation request with the chat array mutable. A request that fires
+// before the advertisement has loaded ships without it.
 globalThis.NPCNamesInjectAdvertisement = function (chat, _contextSize, _abort, type) {
     if (!extension_settings[MODULE]?.enabled) return;
     if (!advertisement) return;
     if (!ToolManager.isToolCallingSupported()) return;
     if (SKIP_INTERCEPTOR_TYPES.has(type)) return;
-    // ST's internal chat shape uses `mes` (not `content`) and `is_user` +
-    // `extra.type === 'narrator'` to mark a system message. setOpenAIMessages
-    // (openai.js) reads `.mes` and crashes with "can't access property
-    // 'replace', content is undefined" if we use the OpenAI wire shape.
-    chat.unshift({
-        is_user: false,
-        is_system: false,
-        name: 'NPC Name Suggester',
-        mes: advertisement,
-        extra: { type: 'narrator' },
-    });
+    injectBeforeLatest(chat, advertisement);
 };
 
 function bindSettingCheckbox(selector, key, sideEffect) {
@@ -178,7 +168,10 @@ function bindSettingCheckbox(selector, key, sideEffect) {
 function updateStatusBadge() {
     const el = document.getElementById('npc_names_status');
     if (!el) return;
-    if (ToolManager.isToolCallingSupported()) {
+    if (!extension_settings[MODULE].enabled) {
+        el.textContent = 'Extension turned off.';
+        el.classList.remove('ok', 'warn');
+    } else if (ToolManager.isToolCallingSupported()) {
         el.textContent = 'Tool calling supported. Extension active.';
         el.classList.remove('warn');
         el.classList.add('ok');
@@ -217,6 +210,7 @@ jQuery(async () => {
     // standalone `Enable function calling` checkbox or loads an OAI preset
     // that flips it, so also re-poll on the broader settings-change events.
     for (const evt of [
+        event_types.MAIN_API_CHANGED,
         event_types.CHATCOMPLETION_SOURCE_CHANGED,
         event_types.CHATCOMPLETION_MODEL_CHANGED,
         event_types.OAI_PRESET_CHANGED_AFTER,

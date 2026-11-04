@@ -1,7 +1,9 @@
 // Run via: node test.js
 
 import { filterFirstNames, pickAndMarkUsed, pickName, DROP_ORDER } from './picker.js';
+import { injectBeforeLatest } from './advertisement.js';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 let passed = 0;
 let failed = 0;
@@ -194,6 +196,87 @@ test('multi-era entry matches each of its eras', () => {
     assert.equal(victorian.first_name, 'Eleanor');
     assert.equal(midcentury.first_name, 'Eleanor');
     assert.equal(ancient.first_name, 'Beatrice');
+});
+
+test('culture without surnames returns the first name alone', () => {
+    const firsts = [makeEntry({ name: 'Paarthurnax', language_ethnicity: 'fantasyDragon', race: 'dragon' })];
+    const lasts = [makeSurname({ name: 'Smith', language_ethnicity: 'english' })];
+    const pick = pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng);
+    assert.equal(pick.first_name, 'Paarthurnax');
+    assert.equal('last_name' in pick, false);
+    assert.equal('last_name_role' in pick, false);
+});
+
+test('surname never repeats the first name', () => {
+    const firsts = [makeEntry({ name: 'Agus' })];
+    const lasts = [makeSurname({ name: 'Agus' }), makeSurname({ name: 'Wijaya' })];
+    const pick = pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng);
+    assert.equal(pick.last_name, 'Wijaya');
+});
+
+test('genre filter prefers tagged names, then reports an untagged one as relaxed', () => {
+    const firsts = [makeEntry({ name: 'Plain', genre: [] }), makeEntry({ name: 'Watt', genre: ['steampunk'] })];
+    const lasts = [makeSurname()];
+    const usedFirst = new Set();
+    const one = pickName(firsts, lasts, { genre: 'steampunk' }, usedFirst, new Set(), fixedRng);
+    assert.equal(one.first_name, 'Watt');
+    assert.equal(one.relaxed_filters, undefined);
+    const two = pickName(firsts, lasts, { genre: 'steampunk' }, usedFirst, new Set(), fixedRng);
+    assert.equal(two.first_name, 'Plain');
+    assert.deepEqual(two.relaxed_filters, ['genre']);
+});
+
+test('relaxing keeps every filter that was not part of the conflict', () => {
+    const firsts = [
+        makeEntry({ name: 'Hana', gender: 'female', language_ethnicity: 'japanese', commonness: 'rare' }),
+        makeEntry({ name: 'Alice', gender: 'female', language_ethnicity: 'english', commonness: 'common' }),
+    ];
+    const lasts = [makeSurname({ language_ethnicity: 'japanese' }), makeSurname({ name: 'Smith' })];
+    const pick = pickName(
+        firsts,
+        lasts,
+        { gender: 'nonbinary', language_ethnicity: 'japanese', commonness: 'rare' },
+        new Set(),
+        new Set(),
+        fixedRng,
+    );
+    assert.equal(pick.first_name, 'Hana');
+    assert.deepEqual(pick.relaxed_filters, ['gender']);
+});
+
+test('tolerates themes sent as a single string and null filters', () => {
+    const firsts = [makeEntry({ name: 'Rex', themes: ['regal'] }), makeEntry({ name: 'Bob' })];
+    const pick = pickName(
+        firsts,
+        [makeSurname()],
+        { themes: 'regal', gender: null, language_ethnicity: 'nope' },
+        new Set(),
+        new Set(),
+        fixedRng,
+    );
+    assert.equal(pick.first_name, 'Rex');
+    assert.deepEqual(pick.relaxed_filters, ['language_ethnicity']);
+});
+
+test('advertisement goes right before the latest message, so long chats keep it', () => {
+    const chat = [{ mes: 'old' }, { mes: 'latest' }];
+    injectBeforeLatest(chat, 'ad');
+    assert.equal(chat.length, 3);
+    assert.equal(chat[1].mes, 'ad');
+    assert.equal(chat[1].extra.type, 'narrator');
+    assert.equal(chat[2].mes, 'latest');
+    const empty = [];
+    injectBeforeLatest(empty, 'ad');
+    assert.equal(empty[0].mes, 'ad');
+});
+
+test('database holds no malformed names', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const bad = [...data.first_names, ...data.last_names].map(e => e.name).filter(n =>
+        /^\p{Ll}/u.test(n)                                  // uncapitalised
+        || /[/()]|\.$/.test(n)                              // "A/B", "Anu (2)", initials
+        || (/[A-Za-z]/.test(n) && /\p{Script=Cyrillic}/u.test(n))); // look-alike letters
+    assert.deepEqual(bad, []);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

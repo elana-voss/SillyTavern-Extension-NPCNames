@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Agent", "hooks": [{ "type": "command", "command": "python \"$USERPROFILE/.claude/skills/software-project/hooks/agent_gate.py\"" }] },
+      { "matcher": "Edit|Write", "hooks": [{ "type": "command", "command": "python \"$USERPROFILE/.claude/skills/software-project/hooks/agent_context.py\"" }] },
+      { "matcher": "Bash", "hooks": [{ "type": "command", "command": "python \"$USERPROFILE/.claude/skills/software-project/hooks/one_run.py\"", "timeout": 20 }] },
+      { "matcher": "Bash|Read|Grep", "hooks": [{ "type": "command", "command": "python \"$USERPROFILE/.claude/skills/software-project/hooks/review_reads.py\"" }] },
+      { "matcher": "Read", "hooks": [{ "type": "command", "command": "python \"$USERPROFILE/.claude/skills/software-project/hooks/read_size.py\"" }] }
+    ],
+    "PostToolUse": [
+      { "hooks": [{ "type": "command", "command": "python \"$USERPROFILE/.claude/skills/software-project/hooks/agent_context.py\"" }] }
+    ]
+  }
+}

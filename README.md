@@ -2,7 +2,7 @@
 
 A SillyTavern extension that picks NPC names from a curated database, so the AI stops inventing yet another Elara or Marcus.
 
-The AI calls the tool whenever it introduces a new character. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration. Names already used in the chat will not show up again.
+The AI calls the tool whenever it introduces a new character. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; dragons and Native American figures get a single name, because the database has no surnames for them. Names already used in the chat will not show up again until every name fitting the request has been used.
 
 The AI is supposed to call the tool on its own whenever it introduces a new NPC. 
 
@@ -30,7 +30,7 @@ The values currently in the database:
 - **genre**: `fantasy`, `cyberpunk`, `steampunk`, `western`, `noirDetective`, `horror`, `sliceOfLife`, `postApocalyptic`
 - **themes**: `airy`, `brutish`, `celestial`, `earthy`, `exotic`, `fiery`, `floral`, `gemstone`, `icy`, `literary`, `lunar`, `military`, `mystical`, `regal`, `religious`, `rustic`, `scholarly`, `solar`, `watery`
 
-Unknown values are tolerated, the picker will relax filters until something matches and report which ones it dropped.
+Unknown values are tolerated: the picker drops only the filters that stop a name from matching and reports them. A `genre` filter picks names tagged with that genre first, then untagged names, which it reports as relaxed; some genres hold very few tagged names (`steampunk` and `postApocalyptic` one each).
 
 ## Install
 
@@ -87,11 +87,11 @@ Two checkboxes:
 - **Enable suggest_npc_name tool**: on by default.
 - **Log tool calls to console (debug)**: off by default.
 
-The extension also adds a chunk of text to the system prompt explaining the tool to the AI. See [assets/advertisement.txt](assets/advertisement.txt) for the wording.
+The extension also adds a chunk of text just before the latest chat message, explaining the tool to the AI. See [assets/advertisement.txt](assets/advertisement.txt) for the wording.
 
 ## Data Source
 
-The name database was built by the cardwave project: https://github.com/elana-voss/cardwave. This extension ships a copy of the data and a small JavaScript port of the name picker.
+The name database was built by the cardwave project: https://github.com/elana-voss/cardwave. This extension ships a copy of the data, with malformed names corrected, and a small JavaScript port of the name picker.
 
 ## License
 
