@@ -96,6 +96,7 @@ What stays thin, for the owner: postApocalyptic 1 (both readers found no name), 
 - A filter sent as a list works (`picker.js:22`). Used names are told apart by culture (`index.js:95`) because milestone 5 brought names shared across cultures (159 first names and 7 surnames, measured by the audit). A reset leaves tagged names first (`picker.js:42`). Names are not used up by a discarded swipe, if SillyTavern lets the code tell. The prefix on the instructions in group chats (openai.js line 599 of SillyTavern) is avoided. A wrong install folder (`index.js:13`, `index.js:201`) shows an error.
 - `index.js:112` no longer promises a first and last name; README step 2 names `None`; `docs/4_sillytavern_console_example.txt` current; the hackerb9 licence checked at its source.
 - Tests: list filters, surname gender, used names across cultures, surname cultures that can be reached, data checks; the unused imports removed.
+- Measured: `node test.js` 24 of 24, `node tools/testbed.mjs` 90 of 90. The test bed's three new scenarios (old used list, group chat, wrong folder) failed 4 checks on main's code first.
 
 ### 8. Live run and release
 
@@ -164,6 +165,13 @@ None open.
 - Milestone 6, spellings both readers fixed that stay, as real forms: swedish `Lias`, ghanaian `Yeboaa` (Akan feminine), portuguese `Jhonatan`, chinese `Joeng` (Cantonese romanisation), nepalese `Shreesti`, finnish `Cavander`; spanish `Yent` stays, its fix `Yente` being a woman's name on a man's entry. Taken with only one reader's spelling, the other agreeing it is a typo or the spelling plainly right: Stephn, Bryân, Dainella, Lukus, Kateya, Printess.
 - Milestone 6, the review: eight gender changes that had passed the readers were wrong and stay as on main: Borka, Mileta, Gerti, Haruna, Didière, Friðlín, Viglín, Folorunsho.
 - Milestone 6, `arabic` `أم`, `ام`, `Um` and `ابومحمد` left with the audit's kunyas: parts or another spelling of the same.
+- Milestone 7, discarded swipe: SillyTavern does not let the code tell. A swipe is never discarded, it stays selectable, and no event says otherwise; the tool's message stays in the chat before the swiped reply and still goes in the prompt, so the next swipe sees that name. Left as it is.
+- Milestone 7, the hackerb9 licence: checked at its source on 2026-11-05, the repo's LICENSE on main is LGPL 2.1 (GitHub's spdx_id LGPL-2.1). `THIRD_PARTY_LICENSES.md` is right; no change.
+- Milestone 7, used names stored by an earlier version keep working: a used list holds `culture/name`; a bare name from an older chat counts as used in every culture holding it, a name gone from the data drops out, and anything but a list of strings is ignored. The list is stored in the new form at the next pick.
+- Milestone 7, the group prefix: only in a group chat the instructions bear the user's name, which SillyTavern does not prefix; a solo chat keeps `NPC Name Suggester`, because the name field is sent in Completion mode.
+- Milestone 7, the instructions list all 53 cultures after "one of:", so a test checks them and the README against the data.
+- Milestone 7, wrong install folder: an error on screen that stays until closed, and the extension does not start.
+- Milestone 7, code review: not due, 131 lines of product code changed.
 
 ## Trials
 
