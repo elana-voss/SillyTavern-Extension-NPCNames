@@ -21,7 +21,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 2 | Gods, handles and non-names | R1, R2, R7 | Done | | 4M | 0.3M | 1.7M, 0; code review Fable 5.1 medium |
 | 3 | Surnames: gender and non-surnames | R1, R7 | Done | | 3M | 0.2M | 4.4M, 0; code review Fable 5.1 medium |
 | 4 | Cultures: labels and misfiled names | R1, R5, R6 | Done | | 4M | 0.5M | 3.1M, 0.09M; code review Fable 5.1 medium |
-| 5 | New names | R1, R2, R5 | In progress | Must | 6M | 1.5M | |
+| 5 | New names | R1, R2, R5 | Done | | 6M | 1.5M | 9.9M, 0.37M at the last count; code review Fable 5.1 medium |
 | 6 | Tags and spelling | R1, R7 | To do | Must | 3M | 0.2M | |
 | 7 | Code, documents and tests | R1, R7 | To do | Must | 2M | 0 | |
 | 8 | Live run and release | R1 | To do | Must | 1M | 0.1M | |
@@ -150,3 +150,4 @@ One live model through nano-gpt on the test bed with the finished work: an ordin
 
 - Closed, reverted: a milestone agent reads only its section of the plan. Figure, context at an agent's end: 97,274, then 94,485, 97,467, 94,038; the hand-over limit sets it, and the plan was still read six times.
 - Milestone 3 cost 4.4M against 3M: the gender work widened to five more cultures and one round of corrections to genders. The estimate is not raised; the audit after milestone 5 scales the open ones.
+- Open: an agent's brief after a hand-over is its work order only, and its background jobs are watched by a Monitor that speaks only on failure or at the end. Figure: Claude tokens per data milestone; before: milestone 5 cost 9.9M over seven agents, three of which put no name in.
