@@ -2,7 +2,7 @@
 
 A SillyTavern extension that picks NPC names from a curated database, so the AI stops inventing yet another Elara or Marcus.
 
-The AI calls the tool whenever it introduces a new character. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; gods, dragons, cyberpunk handles and Native American figures get a single name: gods take no surname and the database has none for the others. Names already used in the chat will not show up again until every name fitting the request has been used.
+The AI calls the tool whenever it introduces a new character. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; gods, dragons, cyberpunk handles, Native American and Mongolian figures get a single name: gods take no surname and the database has none for the others. A name already used in the chat will not come back from the same culture until every name fitting the request has been used.
 
 The AI is supposed to call the tool on its own whenever it introduces a new NPC. 
 
@@ -18,7 +18,7 @@ suggest_npc_name(
 The values currently in the database:
 
 - **gender**: `male`, `female`, `ambiguous`
-- **language_ethnicity** (49): `albanian`, `arabic`, `azerbaijani`, `baltic`, `chinese`, `cyberpunkHandle`, `dutch`, `english`, `estonian`, `ethiopian`, `fantasyDragon`, `fantasyDwarven`, `fantasyElvish`, `finnish`, `french`, `german`, `ghanaian`, `greek`, `hawaiian`, `hebrew`, `hindi`, `hungarian`, `icelandic`, `indonesian`, `irishGaelic`, `italian`, `japanese`, `korean`, `latin`, `maori`, `mayan`, `mongolian`, `nativeAmerican`, `nepalese`, `nigerian`, `norwegian`, `persian`, `portuguese`, `romanian`, `scandinavian`, `serbian`, `slavicOther`, `slavicPolish`, `slavicRussian`, `spanish`, `swedish`, `thai`, `turkish`, `ukrainian`
+- **language_ethnicity**: `albanian`, `arabic`, `azerbaijani`, `baltic`, `chinese`, `cyberpunkHandle`, `dutch`, `english`, `estonian`, `ethiopian`, `fantasyDragon`, `fantasyDwarven`, `fantasyElvish`, `fijian`, `finnish`, `french`, `german`, `ghanaian`, `greek`, `hawaiian`, `hebrew`, `hindi`, `hungarian`, `icelandic`, `indonesian`, `irishGaelic`, `italian`, `japanese`, `korean`, `latin`, `maori`, `mayan`, `mongolian`, `nativeAmerican`, `nepalese`, `nigerian`, `norwegian`, `persian`, `portuguese`, `romanian`, `scandinavian`, `serbian`, `slavicOther`, `slavicPolish`, `slavicRussian`, `spanish`, `swahili`, `swedish`, `thai`, `turkish`, `ukrainian`, `vietnamese`, `yoruba`
 - **mythology**: `celtic`, `egyptian`, `greek`, `hindu`, `japanese`, `lovecraft`, `mesopotamian`, `nativeAmerican`, `norse`, `roman`, `slavic`
 - **race**: `human`, `mythical`, `elf`, `dwarf`, `dragon`
 - **age**: `child`, `youngAdult`, `adult`, `elder`
@@ -32,7 +32,7 @@ The values currently in the database:
 
 `race: human` is for every person; `mythical` only for a god, spirit or monster. A `mythology` filter goes with `race: mythical`, never `human`: when nothing matches, `mythology` is dropped before `race` and the pantheon is lost. `cyberpunkHandle` holds online handles (GhostRunner, Nova404), not names.
 
-Unknown values are tolerated: the picker drops only the filters that stop a name from matching and reports them. A `genre` filter picks names tagged with that genre first, then untagged names, which it reports as relaxed; some genres hold very few tagged names (`steampunk` and `postApocalyptic` one each).
+A filter sent as a list matches any of its values. Unknown values are tolerated: the picker drops only the filters that stop a name from matching and reports them. A `genre` filter picks names tagged with that genre first, then untagged names, which it reports as relaxed; some genres hold very few tagged names (`postApocalyptic` one, `horror` 26).
 
 ## Install
 
@@ -52,11 +52,11 @@ Three settings need flipping on after install.
 
 In the Chat Completion Presets panel, tick **Enable function calling**.
 
-### Step 2: Pick a Prompt Post-Processing preset that includes tools
+### Step 2: Set Prompt Post-Processing to `None` or a "with tools" option
 
 ![Step 2](docs/2_sillytavern_get_name_preset_enable_use_tools.png)
 
-In the API panel, set Prompt Post-Processing to one of the "with tools" options. The ones without `with tools` in the name will not let the AI call any tools.
+In the API panel, set Prompt Post-Processing to `None` or to one of the "with tools" options. The others will not let the AI call any tools.
 
 ### Step 3: Turn on the extension
 

@@ -13,37 +13,52 @@ export const DROP_ORDER = [
     'gender',
 ];
 
-export function filterFirstNames(pool, f) {
-    return pool.filter(e => {
-        if (f.gender && e.gender !== f.gender) return false;
-        if (f.language_ethnicity && e.language_ethnicity !== f.language_ethnicity) return false;
-        if (f.mythology && e.mythology !== f.mythology) return false;
-        if (f.race && e.race !== f.race) return false;
-        if (f.age && !e.age.includes(f.age)) return false;
-        if (f.era && !e.era.includes(f.era)) return false;
-        if (f.role && !e.role.includes(f.role)) return false;
-        if (f.intelligence && e.intelligence !== f.intelligence) return false;
-        if (f.allure && e.allure !== f.allure) return false;
-        if (f.commonness && e.commonness !== f.commonness) return false;
-        // Empty entry-genre = compatible with any genre filter (escape hatch).
-        if (f.genre && e.genre.length > 0 && !e.genre.includes(f.genre)) return false;
-        if (f.themes && f.themes.length > 0 &&
-            !f.themes.some(t => e.themes.includes(t))) return false;
-        return true;
-    });
+// The value is a list after normalizeFilters; an entry's field is one value or a list.
+function matches(entryValue, wanted) {
+    return Array.isArray(entryValue)
+        ? wanted.some(v => entryValue.includes(v))
+        : wanted.includes(entryValue);
 }
 
-export function pickAndMarkUsed(candidates, usedSet, nameOf, rng = secureRandom) {
+export function filterFirstNames(pool, f) {
+    return pool.filter(e => DROP_ORDER.every(field => {
+        if (!f[field] || matches(e[field], f[field])) return true;
+        // Empty entry-genre = compatible with any genre filter (escape hatch).
+        return field === 'genre' && e.genre.length === 0;
+    }));
+}
+
+// The same name in two cultures counts as two names.
+const usedKey = e => `${e.language_ethnicity}/${e.name}`;
+
+// A used list as a chat stored it. An earlier version stored bare names, which
+// count as used in every culture holding them; a name gone from the data drops out.
+export function readUsed(stored, pool) {
+    if (!Array.isArray(stored)) return new Set();
+    const used = new Set();
+    const bare = new Set();
+    for (const item of stored) {
+        if (typeof item !== 'string') continue;
+        if (item.includes('/')) used.add(item);
+        else bare.add(item);
+    }
+    if (bare.size > 0) {
+        for (const e of pool) if (bare.has(e.name)) used.add(usedKey(e));
+    }
+    return used;
+}
+
+export function pickAndMarkUsed(candidates, usedSet, rng = secureRandom) {
     // Empty used-set is the common first-pick case — skip the filter+copy.
     let unused = usedSet.size === 0
         ? candidates
-        : candidates.filter(e => !usedSet.has(nameOf(e)));
+        : candidates.filter(e => !usedSet.has(usedKey(e)));
     if (unused.length === 0) {
-        for (const e of candidates) usedSet.delete(nameOf(e));
+        for (const e of candidates) usedSet.delete(usedKey(e));
         unused = candidates;
     }
     const pick = unused[rng(unused.length)];
-    usedSet.add(nameOf(pick));
+    usedSet.add(usedKey(pick));
     return pick;
 }
 
@@ -62,15 +77,9 @@ export function pickName(firstNames, lastNames, filters, usedFirst, usedLast, rn
     if (firstCandidates.length === 0) {
         throw new Error('No first-name candidates after full degradation');
     }
-    // Untagged names only stand in once no unused name carries the genre.
-    if (current.genre) {
-        const tagged = firstCandidates.filter(
-            e => e.genre.includes(current.genre) && !usedFirst.has(e.name),
-        );
-        if (tagged.length > 0) firstCandidates = tagged;
-    }
-    const firstPick = pickAndMarkUsed(firstCandidates, usedFirst, e => e.name, rng);
-    if (current.genre && !firstPick.genre.includes(current.genre)) relaxed.push('genre');
+    if (current.genre) firstCandidates = preferTagged(firstCandidates, current.genre, usedFirst);
+    const firstPick = pickAndMarkUsed(firstCandidates, usedFirst, rng);
+    if (current.genre && !matches(firstPick.genre, current.genre)) relaxed.push('genre');
 
     // A god gets no surname. Nor does a culture without surnames (dragons, handles,
     // Native American figures, Mongolian) rather than one from an unrelated culture.
@@ -80,17 +89,31 @@ export function pickName(firstNames, lastNames, filters, usedFirst, usedLast, rn
             && (!s.gender || firstPick.gender === 'ambiguous' || s.gender === firstPick.gender),
     );
     const lastPick = lastCandidates.length > 0
-        ? pickAndMarkUsed(lastCandidates, usedLast, s => s.name, rng)
+        ? pickAndMarkUsed(lastCandidates, usedLast, rng)
         : null;
 
     return buildResponse(firstPick, lastPick, relaxed);
 }
 
+// Untagged names only stand in once no unused name carries the genre. When every
+// candidate is used, the reset falls on them all and the tagged ones go first.
+function preferTagged(candidates, genre, usedSet) {
+    const tagged = candidates.filter(e => matches(e.genre, genre));
+    if (tagged.length === 0) return candidates;
+    if (tagged.some(e => !usedSet.has(usedKey(e)))) return tagged;
+    if (candidates.some(e => !usedSet.has(usedKey(e)))) return candidates;
+    for (const e of candidates) usedSet.delete(usedKey(e));
+    return tagged;
+}
+
+// Every filter becomes a list of its wanted values; an empty value or list is no filter.
 function normalizeFilters(filters) {
-    const out = Object.fromEntries(
-        Object.entries(filters).filter(([, v]) => v !== null && v !== undefined && v !== ''),
-    );
-    if ('themes' in out) out.themes = [].concat(out.themes);
+    const isValue = v => v !== null && v !== undefined && v !== '';
+    const out = {};
+    for (const [field, value] of Object.entries(filters)) {
+        const wanted = [].concat(value).filter(isValue);
+        if (wanted.length > 0) out[field] = wanted;
+    }
     return out;
 }
 

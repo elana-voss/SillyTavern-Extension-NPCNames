@@ -3,11 +3,12 @@ import {
     renderExtensionTemplateAsync,
     saveMetadataDebounced,
 } from '../../../extensions.js';
-import { chat_metadata, saveSettingsDebounced } from '../../../../script.js';
+import { chat_metadata, name1, saveSettingsDebounced } from '../../../../script.js';
 import { eventSource, event_types } from '../../../events.js';
+import { selected_group } from '../../../group-chats.js';
 import { ToolManager } from '../../../tool-calling.js';
-import { pickName, deriveEnumValues } from './picker.js';
-import { injectBeforeLatest } from './advertisement.js';
+import { pickName, deriveEnumValues, readUsed } from './picker.js';
+import { injectBeforeLatest, isInstalledIn } from './advertisement.js';
 
 const MODULE = 'npcNames';
 const EXT_DIR = 'third-party/SillyTavern-Extension-NPCNames';
@@ -92,9 +93,9 @@ function buildToolParameters() {
 }
 
 function callPicker(args) {
-    const meta = chat_metadata[MODULE] ?? { usedFirst: [], usedLast: [] };
-    const usedFirst = new Set(meta.usedFirst ?? []);
-    const usedLast = new Set(meta.usedLast ?? []);
+    const meta = chat_metadata[MODULE] ?? {};
+    const usedFirst = readUsed(meta.usedFirst, firstNames);
+    const usedLast = readUsed(meta.usedLast, lastNames);
     const result = pickName(firstNames, lastNames, args ?? {}, usedFirst, usedLast);
     chat_metadata[MODULE] = {
         usedFirst: [...usedFirst],
@@ -109,7 +110,7 @@ function registerTool() {
         name: TOOL_NAME,
         displayName: 'Suggest NPC Name',
         description:
-            'Use for every new NPC you introduce. Returns a curated first+last name with classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; a mythology filter goes with race: mythical, never human.',
+            'Use for every new NPC you introduce. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; a mythology filter goes with race: mythical, never human.',
         parameters: buildToolParameters(),
         shouldRegister: async () =>
             extension_settings[MODULE].enabled
@@ -152,7 +153,7 @@ globalThis.NPCNamesInjectAdvertisement = function (chat, _contextSize, _abort, t
     if (!advertisement) return;
     if (!ToolManager.isToolCallingSupported()) return;
     if (SKIP_INTERCEPTOR_TYPES.has(type)) return;
-    injectBeforeLatest(chat, advertisement);
+    injectBeforeLatest(chat, advertisement, selected_group ? name1 : null);
 };
 
 function bindSettingCheckbox(selector, key, sideEffect) {
@@ -184,6 +185,12 @@ function updateStatusBadge() {
 
 jQuery(async () => {
     loadSettings();
+    if (!isInstalledIn(import.meta.url, EXT_DIR)) {
+        const text = `Installed in the wrong folder. Rename its folder to ${EXT_DIR.split('/').pop()} and reload.`;
+        console.error(LOG_TAG, text);
+        toastr.error(text, 'NPC Name Suggester', { timeOut: 0, extendedTimeOut: 0 });
+        return;
+    }
     try {
         await loadDataset();
     } catch (e) {

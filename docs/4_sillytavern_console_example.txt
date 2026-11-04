@@ -3,7 +3,7 @@
       type: 'function',
       function: {
         name: 'suggest_npc_name',
-        description: 'Use for every new NPC you introduce. Returns a curated first+last name with classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself.',
+        description: 'Use for every new NPC you introduce. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; a mythology filter goes with race: mythical, never human.',
         parameters: {
           '$schema': 'http://json-schema.org/draft-04/schema#',
           type: 'object',
@@ -33,6 +33,6 @@
     },
     {
       role: 'tool',
-      content: '{"first_name":"Dorita","last_name":"Panila","gender":"female","language_ethnicity":"english","race":"human","age":["adult"],"era":["midcentury"],"role":["sidekick"],"intelligence":"plain","allure":"pleasant","commonness":"uncommon","genre":["sliceOfLife"],"themes":[],"last_name_role":["bystander"],"last_name_allure":"pleasant","last_name_commonness":"uncommon","last_name_genre":["sliceOfLife"],"last_name_themes":[],"relaxed_filters":["themes","allure","intelligence","commonness","role","age","genre","era","mythology"]}',
+      content: '{"first_name":"Zynoa","gender":"female","language_ethnicity":"english","race":"human","age":["youngAdult"],"era":["contemporary"],"role":["neutral"],"intelligence":"average","allure":"pleasant","commonness":"uncommon","genre":["sliceOfLife"],"themes":[],"last_name":"Preuett","last_name_role":["bystander"],"last_name_allure":"pleasant","last_name_commonness":"uncommon","last_name_genre":["sliceOfLife"],"last_name_themes":[]}',
       tool_call_id: 'call-5653e637-f36e-4fd3-9f9e-02afc0c72161-0'
     },

@@ -1,7 +1,7 @@
 // Run via: node test.js
 
-import { deriveEnumValues, pickName } from './picker.js';
-import { injectBeforeLatest } from './advertisement.js';
+import { deriveEnumValues, pickName, readUsed } from './picker.js';
+import { injectBeforeLatest, isInstalledIn } from './advertisement.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { foldName, loadOverused } from './tools/overused.mjs';
@@ -90,7 +90,7 @@ test('resets the used set within the active slice when exhausted', () => {
     const third = pickName(firsts, lasts, { language_ethnicity: 'japanese' }, usedFirst, usedLast, fixedRng);
     assert.ok(['Hana', 'Yuki'].includes(third.first_name));
     assert.equal(usedFirst.size, 1);
-    assert.ok(usedFirst.has(third.first_name));
+    assert.ok(usedFirst.has(`japanese/${third.first_name}`));
 });
 
 test('surname culture always matches the first name even without a culture filter', () => {
@@ -103,21 +103,6 @@ test('surname culture always matches the first name even without a culture filte
     const pick = pickFresh(firsts, lasts);
     assert.equal(pick.first_name, 'Hana');
     assert.equal(pick.last_name, 'Tanaka');
-});
-
-test('intelligence filter matches the exact 5-level enum value', () => {
-    const firsts = [
-        makeEntry({ name: 'Dim', intelligence: 'blunt' }),
-        makeEntry({ name: 'Mid', intelligence: 'average' }),
-        makeEntry({ name: 'Sharp', intelligence: 'bookish' }),
-    ];
-    const lasts = [makeSurname()];
-    const blunt = pickFresh(firsts, lasts, { intelligence: 'blunt' });
-    const avg = pickFresh(firsts, lasts, { intelligence: 'average' });
-    const book = pickFresh(firsts, lasts, { intelligence: 'bookish' });
-    assert.equal(blunt.first_name, 'Dim');
-    assert.equal(avg.first_name, 'Mid');
-    assert.equal(book.first_name, 'Sharp');
 });
 
 test('fantasy race pairs with fantasy ethnicity (database invariant)', () => {
@@ -196,6 +181,62 @@ test('tolerates themes sent as a single string and null filters', () => {
     const pick = pickFresh(firsts, [makeSurname()], { themes: 'regal', gender: null, language_ethnicity: 'nope' });
     assert.equal(pick.first_name, 'Rex');
     assert.deepEqual(pick.relaxed_filters, ['language_ethnicity']);
+});
+
+test('a filter sent as a list matches any of its values, in every kind of field', () => {
+    const firsts = [
+        makeEntry({ name: 'Ann', gender: 'female', age: ['child'], intelligence: 'plain', genre: ['horror'] }),
+        makeEntry({ name: 'Bob', gender: 'male', age: ['elder'], intelligence: 'bookish', genre: ['western'] }),
+    ];
+    for (const [filters, name] of [
+        [{ gender: ['male'] }, 'Bob'], [{ age: ['elder', 'nope'] }, 'Bob'], [{ intelligence: ['bookish'] }, 'Bob'],
+        [{ genre: ['western', 'nope'] }, 'Bob'], [{ themes: [], age: [] }, 'Ann'],
+    ]) {
+        const pick = pickFresh(firsts, [makeSurname()], filters);
+        assert.equal(pick.first_name, name, JSON.stringify(filters));
+        assert.equal(pick.relaxed_filters, undefined, JSON.stringify(filters));
+    }
+});
+
+const sharedFirsts = [makeEntry({ name: 'Noah', language_ethnicity: 'hebrew' }), makeEntry({ name: 'Noah' }), makeEntry({ name: 'Eli' })];
+
+test('a first name and a surname used in one culture stay free in another', () => {
+    const lasts = [makeSurname({ name: 'Cohen', language_ethnicity: 'hebrew' }), makeSurname({ name: 'Cohen' }), makeSurname({ name: 'Smith' })];
+    const usedFirst = new Set();
+    const usedLast = new Set();
+    pickName(sharedFirsts, lasts, { language_ethnicity: 'hebrew' }, usedFirst, usedLast, fixedRng);
+    const other = pickName(sharedFirsts, lasts, { language_ethnicity: 'english' }, usedFirst, usedLast, fixedRng);
+    assert.equal(other.first_name, 'Noah');
+    assert.equal(other.last_name, 'Cohen');
+});
+
+test('a used list from an earlier version counts its names in every culture and survives anything else', () => {
+    assert.deepEqual([...readUsed(['Noah', 'Gone', 5, null], sharedFirsts)].sort(), ['english/Noah', 'hebrew/Noah']);
+    assert.deepEqual([...readUsed(['hebrew/Noah'], sharedFirsts)], ['hebrew/Noah']);
+    for (const stored of [undefined, null, 'Noah', {}]) assert.equal(readUsed(stored, sharedFirsts).size, 0);
+});
+
+test('a reset of the used names leaves tagged names first', () => {
+    const firsts = [makeEntry({ name: 'Plain', genre: [] }), makeEntry({ name: 'Watt', genre: ['steampunk'] })];
+    const usedFirst = new Set(['english/Plain', 'english/Watt']);
+    const pick = pickName(firsts, [makeSurname()], { genre: 'steampunk' }, usedFirst, new Set(), fixedRng);
+    assert.equal(pick.first_name, 'Watt');
+    assert.equal(pick.relaxed_filters, undefined);
+    assert.deepEqual([...usedFirst], ['english/Watt']);
+});
+
+test('in a group chat the advertisement bears the user\'s name, which SillyTavern does not prefix', () => {
+    const chat = [{ mes: 'latest' }];
+    injectBeforeLatest(chat, 'ad', 'Me');
+    assert.equal(chat[0].name, 'Me');
+    injectBeforeLatest(chat, 'ad');
+    assert.equal(chat[1].name, 'NPC Name Suggester');
+});
+
+test('the install folder is told from the module\'s address', () => {
+    const at = folder => `http://host:1/scripts/extensions/third-party/${folder}/index.js?v=1`;
+    assert.ok(isInstalledIn(at('Right'), 'third-party/Right'));
+    assert.ok(!isInstalledIn(at('Right-main'), 'third-party/Right'));
 });
 
 test('advertisement goes right before the latest message, so long chats keep it', () => {
@@ -349,6 +390,28 @@ function checkCultures(data) {
     assert.deepEqual(['age', 'intelligence', 'gender'].filter(k => k in ferreira), [], 'a first name made a surname keeps no first name\'s fields');
 }
 
+// A surname nobody can draw is dead data: each needs a first name of its culture
+// that takes surnames and fits its gender.
+function checkSurnamesReachable(data) {
+    const takers = data.first_names.filter(e => e.race !== 'mythical');
+    const reachable = s => takers.some(e => e.language_ethnicity === s.language_ethnicity && e.name !== s.name
+        && (!s.gender || e.gender === 'ambiguous' || e.gender === s.gender));
+    assert.deepEqual(data.last_names.filter(s => !reachable(s)).map(s => `${s.language_ethnicity}/${s.name}`), []);
+}
+
+// The README's lists and the instructions' cultures say what the data offers, no more and no less.
+function checkDocuments(data) {
+    const enums = deriveEnumValues(data.first_names);
+    const read = file => readFileSync(new URL(file, import.meta.url), 'utf8');
+    const readme = read('./README.md');
+    for (const [field, values] of Object.entries(enums)) {
+        const line = readme.match(new RegExp(`^- \\*\\*${field}\\*\\*:(.*)$`, 'm'))?.[1] ?? '';
+        assert.deepEqual([...line.matchAll(/`([^`]+)`/g)].map(m => m[1]).sort(), values, `README ${field}`);
+    }
+    const cultures = read('./assets/advertisement.txt').match(/the cultural root of the name, one of: ([^.]+)\./)?.[1] ?? '';
+    assert.deepEqual(cultures.split(', ').sort(), enums.language_ethnicity, 'advertisement');
+}
+
 function checkPinnedNames(data) {
     const firsts = keysOf(data.first_names);
     const lasts = keysOf(data.last_names);
@@ -399,7 +462,7 @@ function checkPinnedNames(data) {
 
 test('database invariants', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames]) check(data);
+    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames, checkSurnamesReachable, checkDocuments]) check(data);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);
