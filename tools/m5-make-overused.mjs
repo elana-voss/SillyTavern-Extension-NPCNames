@@ -59,8 +59,7 @@ const whyCommon = f => {
 };
 
 // A person looked and these are real names; the mark in the list keeps them off when it is remade.
-const notSlop = readFileSync(target, 'utf8').split(/?
-/).filter(l => l.startsWith('#not-slop ')).map(l => l.split(' ')[1]);
+const notSlop = readFileSync(target, 'utf8').split(/\r?\n/).filter(l => l.startsWith('#not-slop ')).map(l => l.split(' ')[1]);
 
 const listed = new Set(), table = [];
 for (const [k, s] of stats) {
