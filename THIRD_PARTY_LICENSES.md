@@ -32,12 +32,12 @@ in line with the underlying licenses.
 ### kraihn/dragon-names
 - **URL**: https://github.com/kraihn/dragon-names
 - **License**: MIT — Copyright © 2015 Jared Dickson. See the MIT notice at the bottom of this file.
-- **Used for**: dragon names grouped by source (game / film / literature / etc.).
+- **Used for**: the dragon names of the first release. These were mostly franchise characters and left the database; none remains.
 
 ### repushko/mythology_names_dataset
 - **URL**: https://github.com/repushko/mythology_names_dataset
 - **License**: CC0 1.0 Universal (public domain) — see https://creativecommons.org/publicdomain/zero/1.0/
-- **Used for**: 4096 names by pantheon (Greek / Norse / Egyptian / Hindu / Slavic / etc.).
+- **Used for**: 4096 names by pantheon (Greek / Norse / Egyptian / Hindu / Slavic / etc.). Also the source of the mythological dragon names.
 
 ### ironarachne/namegen
 - **URL**: https://github.com/ironarachne/namegen
@@ -48,6 +48,11 @@ in line with the underlying licenses.
 - **URL**: https://github.com/dariusk/corpora
 - **License**: CC0 1.0 Universal (public domain) — see https://creativecommons.org/publicdomain/zero/1.0/
 - **Used for**: public-domain humans (firstNames, neutralNames, country-specific name lists) + mythology entries (greek_gods, greek_titans, greek_monsters, norse_gods, egyptian_gods, roman_deities, hebrew_god, lovecraft).
+
+### Wikidata
+- **URL**: https://www.wikidata.org/
+- **License**: CC0 1.0 Universal (public domain) — see https://creativecommons.org/publicdomain/zero/1.0/
+- **Used for**: given names and family names by language, names of people of a country or people, mythological dragons. Queried through its public query service.
 
 ## MIT License notice (applies to all MIT-licensed corpora above)
 
