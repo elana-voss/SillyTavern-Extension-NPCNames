@@ -1,6 +1,7 @@
 // Milestone 4's one data change and its measurement: yoruba and swahili relabelled whole,
-// misfiled names moved by tools/m4-readings.txt where both readers gave the same answer; a
-// surname's gender moves with it, gods are not read. Writes the change list and the table
+// misfiled names moved by tools/m4-readings.txt where two readers gave the same answer (the third
+// reader settles what the first two disagreed on); a surname's gender moves with it, gods are not
+// read. Also deletes Fiji, a country, and corrects Rosi Ni to Rosi. Writes the change list and the table
 // per changed culture to <tmp>/SillyTavern-Extension-NPCNames/4-changes.txt.
 //
 // Run on the database as it stood before the milestone (main's): node tools/m4-apply-cultures.mjs
@@ -19,6 +20,15 @@ assert.equal(serialise(db), raw, 'the database format would not survive a rewrit
 assert.equal(db.first_names.length, 4283, 'first names');
 assert.equal(db.last_names.length, 1794, 'surnames');
 
+const onlyEntry = name => {
+    const found = db.first_names.filter(e => e.language_ethnicity === 'maori' && e.name === name);
+    assert.equal(found.length, 1, name);
+    return found[0];
+};
+const fiji = onlyEntry('Fiji');
+db.first_names = db.first_names.filter(e => e !== fiji);
+onlyEntry('Rosi Ni').name = 'Rosi';
+
 const RELABEL = { yoruba: 'ghanaian', swahili: 'ethiopian' };
 const NEW_KEYS = ['ghanaian', 'ethiopian', 'romanian', 'baltic', 'albanian', 'azerbaijani', 'hungarian', 'fijian'];
 const culturesOf = l => l.map(e => e.language_ethnicity);
@@ -35,9 +45,15 @@ const lines = readFileSync(new URL('tools/m4-readings.txt', root), 'utf8')
     .map(l => l.split(' | '));
 
 // Where a line sends its name: a key, key+surname, or null when it stays.
-function destination(from, claude, second) {
+// The third reader, where it read the name ('-' elsewhere), answers a plain culture or `unknown`:
+// it can equal X but never X+surname, so a first name is not made a surname on one reader's word.
+function destination(from, claude, second, third) {
     const label = RELABEL[from];
     const agreed = claude === second && claude !== 'stays' ? claude : null;
+    if (third !== '-') {
+        assert.equal(agreed, null, `a third reading of an agreed name in ${from}`);
+        return third !== from && (third === claude || third === second) ? third : null;
+    }
     if (!label) return agreed;
     assert.equal(claude, label, `Claude's answer on a name of ${from}`);
     return agreed ?? label;
@@ -46,20 +62,20 @@ function destination(from, claude, second) {
 const asFirstOrLast = kind => (kind === 'first' ? firsts : lasts);
 const moves = [];
 const disagreed = [];
-for (const [kind, from, name, claude, second, gender] of lines) {
+for (const [kind, from, name, claude, second, third, gender] of lines) {
     assert.ok(kind === 'first' || kind === 'last', `kind ${kind}`);
     const entry = asFirstOrLast(kind).get(key(from, name));
     assert.ok(entry, `${kind} name ${name} in ${from}`);
     assert.equal(entry.race, 'human', `${name} is read only if human`);
-    const to = destination(from, claude, second);
+    const to = destination(from, claude, second, third);
     if (!to) {
-        disagreed.push(`${name} [${kind}, ${from}]: Claude ${claude}, second reader ${second}; stays`);
+        disagreed.push(`${name} [${kind}, ${from}]: Claude ${claude}, second reader ${second}, third reader ${third}; stays`);
         continue;
     }
     const [culture, surnamed] = to.split('+');
     assert.ok(allowed.has(culture), `destination ${culture} of ${name}`);
     assert.ok(!surnamed || (surnamed === 'surname' && kind === 'first'), `answer ${to} of ${name}`);
-    moves.push({ kind, entry, from, culture, toLast: kind === 'last' || !!surnamed, gender, claude, second });
+    moves.push({ kind, entry, from, culture, toLast: kind === 'last' || !!surnamed, gender: gender || undefined, claude, second, third });
 }
 for (const [from] of Object.entries(RELABEL)) {
     for (const [kind, list] of [['first', db.first_names], ['last', db.last_names]]) {
@@ -72,9 +88,9 @@ const removeFirst = new Set();
 const removeLast = new Set();
 const addLast = [];
 const changes = [];
-for (const { kind, entry, from, culture, toLast, gender, claude, second } of moves) {
+for (const { kind, entry, from, culture, toLast, gender, claude, second, third } of moves) {
     const target = toLast ? lasts : firsts;
-    const listed = `${entry.name} [${kind === 'first' && toLast ? 'first name to surname' : kind}]: ${from} -> ${culture}; Claude ${claude}, second reader ${second}`;
+    const listed = `${entry.name} [${kind === 'first' && toLast ? 'first name to surname' : kind}]: ${from} -> ${culture}; Claude ${claude}, second reader ${second}${third === '-' ? '' : `, third reader ${third}`}`;
     if (target.has(key(culture, entry.name))) {
         (kind === 'first' ? removeFirst : removeLast).add(entry);
         changes.push(`${listed}; already there, merged`);
@@ -116,6 +132,7 @@ const short = NEW_KEYS.filter(c => !db.first_names.some(e => e.language_ethnicit
 const merged = changes.filter(c => c.endsWith('merged')).length;
 const summary = [
     `Moved: ${moves.length - merged}; merged into an existing entry: ${merged}; first names made surnames: ${addLast.length}`,
+    `Moved by the third reader: ${moves.filter(m => m.third !== '-').length}`,
     `Readers disagreed, stayed: ${disagreed.length}`,
     `New cultures lacking first names or surnames: ${short.join(', ') || 'none'}`,
     `First names now: ${db.first_names.length}; surnames now: ${db.last_names.length}`,

@@ -327,13 +327,14 @@ test('database genders surnames by their endings and keeps no men with women\'s 
         // -son follows the person's sex in Icelandic; in Swedish it is a family name of both sexes.
         || (/son$/.test(e.name) && e.gender !== (e.language_ethnicity === 'icelandic' ? 'male' : undefined)));
     assert.deepEqual(wrong.map(e => e.name), []);
-    assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity)).map(e => e.name), []);
+    // Devi and Yadavani are women's surnames wherever they are filed; Hindi's others have no gender.
+    assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity)).map(e => e.name).sort(), ['Devi', 'Yadavani']);
     const genderOf = (culture, name) => data.last_names.find(e => e.language_ethnicity === culture && e.name === name).gender;
     assert.equal(genderOf('greek', 'Nikolaou'), undefined, 'Greek -ou is used by both sexes');
     assert.equal(genderOf('irishGaelic', "O'Byrne"), undefined, 'women bear anglicised forms too');
     for (const name of ['Papadaki', 'Tassi', 'Zika']) assert.equal(genderOf('greek', name), 'female', name);
     for (const name of ['Mundis', 'Rubis']) assert.equal(genderOf('greek', name), 'male', name);
-    assert.equal(genderOf('nepalese', 'Devi'), 'female');
+    assert.equal(genderOf('hindi', 'Devi'), 'female');
     const firsts = [makeEntry({ name: 'Piotr', gender: 'male', language_ethnicity: 'slavicPolish' })];
     for (let i = 0; i < 40; i++) {
         const pick = pickName(firsts, data.last_names, {}, new Set(), new Set(), max => i % max);
@@ -367,16 +368,19 @@ test('database files Ghanaian, Ethiopian and misfiled names under their cultures
     assert.ok(offered.includes('ghanaian') && offered.includes('ethiopian') && !offered.includes('yoruba'));
     assert.equal(offered.includes('danish'), false);
 
-    // Latin: Romanians out, its gods in place with their mythology; a disagreement stays.
+    // Latin: Romanians out, its gods in place with their mythology; two readers can bring a name in.
     assert.ok(firstIn('romanian', 'Alexandru') && lastIn('romanian', 'Ciobanu') && firstIn('romanian', 'Luminita'));
-    assert.deepEqual(of(data.first_names, 'latin').filter(e => e.race !== 'mythical').map(e => e.name), ['Artiom']);
+    assert.deepEqual(of(data.first_names, 'latin').filter(e => e.race !== 'mythical').map(e => e.name).sort(), ['Agripa', 'Cicero']);
     assert.equal(of(data.first_names, 'latin').filter(e => e.race === 'mythical' && e.mythology).length, 12);
     assert.equal(of(data.last_names, 'latin').length, 0);
 
-    // Danes and Norse gods stay under scandinavian; Fijian first names the second reader kept stay.
+    // Danes and Norse gods stay under scandinavian; the third reader settles a disagreement.
     assert.ok(firstIn('scandinavian', 'Søren') && lastIn('scandinavian', 'Østergaard'));
     assert.equal(of(data.first_names, 'scandinavian').filter(e => e.race === 'mythical').length, 14);
-    assert.ok(firstIn('maori', 'Viliame') && lastIn('fijian', 'Tabua'));
+    assert.ok(firstIn('fijian', 'Viliame') && !firstIn('maori', 'Viliame') && lastIn('fijian', 'Tabua') && lastIn('fijian', 'Rabici'));
+    assert.ok(offered.includes('fijian'));
+    assert.ok(firstIn('maori', 'Shafraz'), 'a third answer equal to neither reader moves nothing');
+    assert.ok(firstIn('english', 'Flores') && !firstIn('spanish', 'Flores') && !lastIn('spanish', 'Flores'), 'one reader alone makes no first name a surname');
 
     // A surname's gender moves with it; a first name made a surname keeps no first name's fields.
     assert.equal(lastIn('baltic', 'Žukauskienė').gender, 'female');
@@ -388,6 +392,14 @@ test('database files Ghanaian, Ethiopian and misfiled names under their cultures
     assert.ok(ferreira && !firstIn('french', 'Ferreira'));
     assert.deepEqual(['age', 'intelligence', 'gender'].filter(k => k in ferreira), []);
     assert.ok(firstIn('hungarian', 'András') && lastIn('albanian', 'Hoxhaj') && firstIn('azerbaijani', 'Yusif'));
+});
+
+test('database holds neither the country Fiji as a first name nor the broken form Rosi Ni', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const named = name => data.first_names.filter(e => e.name === name).map(e => e.language_ethnicity);
+    assert.deepEqual(named('Fiji'), []);
+    assert.deepEqual(named('Rosi Ni'), []);
+    assert.deepEqual(named('Rosi'), ['maori']);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

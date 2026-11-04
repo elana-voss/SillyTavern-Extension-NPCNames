@@ -1,791 +1,791 @@
 # Milestone 4's reading list, read by tools/m4-apply-cultures.mjs.
-# kind | filed under | name | Claude | second reader | gender on arrival (only where the name enters a gendered culture without one)
-# Only lines where a reader moves the name; every other name of race human was answered "stays" by both.
+# kind | filed under | name | Claude | second reader | third reader | gender on arrival (only where the name enters a gendered culture without one)
+# Only lines where a reader moves the name; every other name of race human was answered "stays" by both first readers. Fiji is deleted and Rosi Ni is read as Rosi.
 # Claude's reading was written before the second reader (moonshotai/kimi-k2.6, through nano-gpt) was called; the second reader saw lists of 100, blind.
+# The third reader (z-ai/glm-5.3, through nano-gpt) read only what the first two disagreed on, blind, in mixed lists of 30, without the present culture or a "stays": one key or unknown; "-" where it did not read. A name moves where its answer equals another reader's and is not the present culture.
 # Gods (race mythical) and the fantasy, handle and Native American cultures were not read.
 # X+surname: a first name that is a family name of X. "danish" is no key: such an answer moves nothing.
 # yoruba and swahili are relabelled whole: Claude's answer is the new label, the second reader's is kept as given.
-first | arabic | Praveen | hindi | hindi
-first | arabic | Santhosh | hindi | hindi
-first | arabic | أخنوخ | stays | hebrew
-first | arabic | أماليا | stays | german
-first | arabic | أندراوس | stays | greek
-first | arabic | بَرثُولَماوُس | stays | greek
-first | arabic | جلال | stays | persian
-first | arabic | سامينا | stays | hindi
-first | arabic | سايرا | stays | hindi
-first | arabic | شوميلا | stays | hindi
-first | arabic | عُزَيْرٌ | stays | hebrew
-first | arabic | قريبا | stays | hindi
-first | arabic | قورح | stays | turkish
-first | arabic | ماي | stays | chinese
-first | arabic | مَتُّوشَلَخَ | stays | hebrew
-first | chinese | Cahaya | indonesian | indonesian
-first | chinese | Dao | stays | vietnamese
-first | chinese | Mawar | indonesian | indonesian
-first | chinese | Paijem | indonesian | indonesian
-first | chinese | Putry | indonesian | indonesian
-first | dutch | Petunia | stays | english
-first | english | Adamaris | stays | spanish
-first | english | Akara | stays | thai
-first | english | Albertine | french | french
-first | english | Aleyda | stays | spanish
-first | english | Alize | stays | french
-first | english | Alwine | stays | german
-first | english | Amira | stays | arabic
-first | english | Amirah | stays | arabic
-first | english | Amiya | stays | hindi
-first | english | Amiyah | stays | hindi
-first | english | Anatol | stays | french
-first | english | Asuka | japanese | japanese
-first | english | August | stays | german
-first | english | Aysen | turkish | turkish
-first | english | Aytaç | turkish | turkish
-first | english | Banele | stays | swahili
-first | english | Bernette | stays | french
-first | english | Berten | stays | german
-first | english | Bertin | stays | french
-first | english | Bille | stays | danish
-first | english | Brielle | stays | french
-first | english | Cardon | stays | french
-first | english | Carel | stays | dutch
-first | english | Carmo | stays | portuguese
-first | english | Carmon | stays | spanish
-first | english | Cathrin | stays | german
-first | english | Chadi | arabic | arabic
-first | english | Chia | stays | chinese
-first | english | Chin | stays | chinese
-first | english | Christino | stays | italian
-first | english | Chujo-Hime | japanese | japanese
-first | english | Cicero | stays | latin
-first | english | Conny | stays | german
-first | english | Corona | stays | latin
-first | english | Dayan | stays | hebrew
-first | english | Delmar | stays | spanish
-first | english | Delmor | stays | spanish
-first | english | Dochrohan | stays | irishGaelic
-first | english | Dorita | stays | spanish
-first | english | Dosia | stays | polish
-first | english | Elihue | stays | hebrew
-first | english | Epifania | stays | spanish
-first | english | Erathipa | stays | maori
-first | english | Ermilo | stays | italian
-first | english | Erminia | italian | italian
-first | english | Everardo | spanish | spanish
-first | english | Fedelina | stays | italian
-first | english | Felicie | french | french
-first | english | Florent | french | french
-first | english | Flores | stays | spanish+surname
-first | english | Fox | stays | english+surname
-first | english | Fraderk | stays | german
-first | english | Freddrick | stays | german
-first | english | Giovani | stays | italian
-first | english | Guldana | stays | turkish
-first | english | Gustave | french | french
-first | english | Hartman | stays | german+surname
-first | english | Hermenze | stays | german
-first | english | Hildagard | stays | german
-first | english | Hobson | stays | english+surname
-first | english | Ian | stays | scottish
-first | english | Idris | stays | arabic
-first | english | Ike | stays | hebrew
-first | english | Iveliz | stays | spanish
-first | english | Iza | stays | polish
-first | english | Iziah | stays | hebrew
-first | english | Jacque | stays | french
-first | english | Jadwiga | slavicPolish | slavicPolish
-first | english | Jalon | stays | hebrew
-first | english | Jesco | stays | german
-first | english | Jule | stays | french
-first | english | Julianita | stays | spanish
-first | english | Jū-Ō | japanese | japanese
-first | english | Kakamora | stays | maori
-first | english | Lauana | stays | hawaiian
-first | english | Lauriano | stays | italian
-first | english | Leonid | slavicRussian | slavicRussian
-first | english | Leonie | stays | french
-first | english | Lerato | stays | swahili
-first | english | Lish | stays | chinese
-first | english | Mardin | stays | turkish
-first | english | Margueritta | stays | french
-first | english | Marzell | stays | german
-first | english | Mesah | stays | hebrew
-first | english | Misae | japanese | japanese
-first | english | Monserrat | spanish | spanish
-first | english | Montez | stays | spanish
-first | english | Moroni | stays | italian
-first | english | Natalya | slavicRussian | slavicRussian
-first | english | Nazareth | stays | hebrew
-first | english | Netra | stays | hindi
-first | english | Oca | stays | spanish
-first | english | Oce | stays | italian
-first | english | Ofentse | stays | nigerian
-first | english | Ofo | stays | nigerian
-first | english | Olaf | stays | scandinavian
-first | english | Ornella | italian | italian
-first | english | Osvaldo | stays | spanish
-first | english | Ott | stays | german
-first | english | Perle | stays | french
-first | english | Phemedes | stays | greek
-first | english | Rami | stays | arabic
-first | english | Rebecka | stays | swedish
-first | english | Redden | stays | english+surname
-first | english | Rethabile | stays | nigerian
-first | english | Rethik | stays | hindi
-first | english | Rogeir | stays | norwegian
-first | english | Rogers | stays | english+surname
-first | english | Salvator | stays | italian
-first | english | Sanai | stays | hebrew
-first | english | Sbusiso | stays | nigerian
-first | english | Shakira | stays | arabic
-first | english | Soderman | stays | swedish+surname
-first | english | Szene | stays | hungarian
-first | english | Tai | stays | chinese
-first | english | Taj | stays | arabic
-first | english | Tsutako | japanese | japanese
-first | english | Urijah | stays | hebrew
-first | english | Valentino | italian | italian
-first | english | Visente | stays | spanish
-first | english | Wiltmar | stays | german
-first | english | Zaria | stays | arabic
-first | english | Zinhle | stays | swahili
-first | estonian | András | hungarian | hungarian
-first | estonian | Balázs | hungarian | hungarian
-first | estonian | Bence | hungarian | hungarian
-first | estonian | Eldur | stays | icelandic
-first | estonian | Enikő | hungarian | hungarian
-first | estonian | Gergely | hungarian | hungarian
-first | estonian | Ibolya | hungarian | hungarian
-first | estonian | Juho | stays | finnish
-first | estonian | József | hungarian | hungarian
-first | estonian | Jürgen | stays | german
-first | estonian | Kirill | stays | slavicRussian
-first | estonian | Márton | hungarian | hungarian
-first | estonian | Nagy | hungarian+surname | hungarian+surname
-first | estonian | Zalán | hungarian | hungarian
-first | estonian | Zsuzsa | hungarian | hungarian
-first | finnish | Aliki | greek | greek
-first | finnish | Amandine | french | french
-first | finnish | Anielka | slavicPolish | slavicPolish
-first | finnish | Benedikta | stays | german
-first | finnish | Bintou | stays | swahili
-first | finnish | Cemile | turkish | turkish
-first | finnish | Françoise | french | french
-first | finnish | Hajrije | albanian | albanian
-first | finnish | Hamad | arabic | arabic
-first | finnish | Hanife | turkish | turkish
-first | finnish | Henriet | stays | french
-first | finnish | Hristova | slavicOther+surname | slavicOther+surname
-first | finnish | Ildikó | hungarian | hungarian
-first | finnish | Jadelle | stays | english
-first | finnish | Kun | stays | chinese
-first | finnish | Lotti | stays | german
-first | finnish | Luminita | romanian | romanian
-first | finnish | Maj-Britt | swedish | scandinavian
-first | finnish | Michaëla | french | french
-first | finnish | Montaha | arabic | arabic
-first | finnish | Raida | arabic | arabic
-first | finnish | Sabiriin | stays | arabic
-first | finnish | Sattar | arabic | persian
-first | finnish | Sofya | slavicRussian | slavicRussian
-first | finnish | Zahara | stays | arabic
-first | finnish | Zar | stays | persian
-first | finnish | Zekiye | turkish | turkish
-first | french | Agostinho | portuguese | portuguese
-first | french | António | portuguese | portuguese
-first | french | Da Silva | portuguese+surname | portuguese+surname
-first | french | Dinis | portuguese | portuguese
-first | french | Diogo | portuguese | portuguese
-first | french | Fernandes | portuguese+surname | portuguese+surname
-first | french | Ferreira | portuguese+surname | portuguese+surname
-first | french | Filipe | portuguese | portuguese
-first | french | Fränk | stays | german
-first | french | Fränz | stays | german
-first | french | Gomes | portuguese+surname | portuguese+surname
-first | french | Goncalves | portuguese+surname | portuguese+surname
-first | french | Gonçalo | portuguese | portuguese
-first | french | Lopes | portuguese+surname | portuguese+surname
-first | french | Malala | stays | pashto
-first | french | Martins | portuguese+surname | portuguese+surname
-first | french | Monteiro | portuguese+surname | portuguese+surname
-first | french | Nawel | arabic | arabic
-first | french | Nuno | portuguese | portuguese
-first | french | Pereira | portuguese+surname | portuguese+surname
-first | french | Pit | stays | dutch
-first | french | Ribeiro | portuguese+surname | portuguese+surname
-first | french | Rodrigues | portuguese+surname | portuguese+surname
-first | french | Satomi | japanese | japanese
-first | french | Schmit | stays | german+surname
-first | french | Sousa | portuguese+surname | portuguese+surname
-first | french | Teixeira | portuguese+surname | portuguese+surname
-first | french | Tiago | portuguese | portuguese
-first | french | Tun | stays | vietnamese
-first | german | Cédric | french | french
-first | german | Elyas | stays | arabic
-first | german | Stéphane | french | french
-first | german | Sébastien | french | french
-first | german | Yannick | french | french
-first | greek | Cate | stays | english
-first | greek | Cyrano | stays | french
-first | greek | Hyacinthe | stays | french
-first | greek | Liliah | stays | hebrew
-first | greek | Peta | stays | english
-first | greek | Petrini | stays | italian
-first | greek | Zelena | stays | slavicOther
-first | greek | Zelenia | stays | slavicOther
-first | hebrew | Charbel | arabic | stays
-first | hebrew | Malek | arabic | arabic
-first | hebrew | Taim | arabic | stays
-first | hebrew | אחמד | stays | arabic
-first | hebrew | מוחמד | stays | arabic
-first | hebrew | מחמד | stays | arabic
-first | hindi | Badriya | stays | arabic
-first | hindi | Farha | stays | arabic
-first | hindi | Harsh joy | stays | english
-first | hindi | Lord Shiva | stays | english
-first | hindi | Sohel | stays | arabic
-first | icelandic | André | stays | french
-first | icelandic | Damjan | stays | slavicOther
-first | icelandic | Enok | stays | hebrew
-first | icelandic | Evfemía | stays | greek
-first | icelandic | Garibaldi | stays | italian
-first | icelandic | Hartmann | stays | german+surname
-first | icelandic | Jafet | stays | hebrew
-first | icelandic | Jesper | stays | danish
-first | icelandic | Jörgen | stays | danish
-first | icelandic | Sigmar | stays | german
-first | icelandic | Vilmar | stays | german
-first | icelandic | Úna | stays | irishGaelic
-first | indonesian | Agustinus | stays | latin
-first | indonesian | Akhmad | stays | arabic
-first | indonesian | Arifin | stays | arabic
-first | indonesian | Dewa | stays | hindi
-first | indonesian | Efendi | stays | arabic
-first | indonesian | Effendi | stays | arabic
-first | indonesian | Fadli | stays | arabic
-first | indonesian | Fitrah | stays | arabic
-first | indonesian | Gibran | stays | arabic
-first | indonesian | Hendi | stays | dutch
-first | indonesian | Hendy | stays | dutch
-first | indonesian | Iskandar | stays | arabic
-first | indonesian | Krisna | stays | hindi
-first | indonesian | Nurina | stays | arabic
-first | indonesian | Nurmala | stays | arabic
-first | indonesian | Rahadian | stays | arabic
-first | indonesian | Risky | stays | english
-first | indonesian | Rizal | stays | arabic
-first | indonesian | Rizka | stays | arabic
-first | indonesian | Rizki | stays | arabic
-first | indonesian | Rizky | stays | arabic
-first | indonesian | Sapta | stays | hindi
-first | indonesian | Savitri | stays | hindi
-first | indonesian | Slamet | stays | arabic
-first | indonesian | Syaiful | stays | arabic
-first | italian | Housain | arabic | arabic
-first | italian | Mamadou | stays | nigerian
-first | italian | Mary Anne | english | english
-first | italian | Moretti | stays | italian+surname
-first | italian | Pandelis | greek | greek
-first | italian | Parsifal | stays | german
-first | italian | Rocca | stays | italian+surname
-first | italian | Vladir | stays | slavicRussian
-first | japanese | Ría | stays | spanish
-first | latin | Alexandru | romanian | romanian
-first | latin | Artiom | romanian | slavicRussian
-first | latin | Matei | romanian | romanian
-first | maori | Aisea | fijian | stays
-first | maori | Akosita | fijian | stays
-first | maori | Anaseini | fijian | stays
-first | maori | Ashneel | hindi | hindi
-first | maori | Ashnil | hindi | hindi
-first | maori | Asinate | fijian | stays
-first | maori | Avneel | hindi | hindi
-first | maori | Elenoa | fijian | stays
-first | maori | Emori | fijian | stays
-first | maori | Epineri | fijian | stays
-first | maori | Esita | fijian | stays
-first | maori | Fiji | fijian | stays
-first | maori | Ifereimi | fijian | stays
-first | maori | Isei | fijian | stays
-first | maori | Isikeli | fijian | stays
-first | maori | Isoa | fijian | stays
-first | maori | Jope | fijian | stays
-first | maori | Josese | fijian | stays
-first | maori | Joseva | fijian | stays
-first | maori | Kelera | fijian | stays
-first | maori | Laisiasa | fijian | stays
-first | maori | Ledua | fijian | stays
-first | maori | Litiana | fijian | stays
-first | maori | Loata | fijian | stays
-first | maori | Maciu | fijian | stays
-first | maori | Marcellin | stays | french
-first | maori | Melaia | fijian | stays
-first | maori | Mereani | fijian | stays
-first | maori | Mereoni | fijian | stays
-first | maori | Mesake | fijian | stays
-first | maori | Petero | fijian | stays
-first | maori | Rosi Ni | fijian | stays
-first | maori | Sakiusa | fijian | stays
-first | maori | Salanieta | fijian | stays
-first | maori | Seini | fijian | stays
-first | maori | Sereana | fijian | stays
-first | maori | Shafraz | stays | persian
-first | maori | Shayal | hindi | hindi
-first | maori | Siteri | fijian | stays
-first | maori | Taniela | fijian | stays
-first | maori | Tomasi | fijian | stays
-first | maori | Viliame | fijian | stays
-first | maori | Waqa | fijian | stays
-first | nepalese | Mohmmad | stays | arabic
-first | nigerian | Peace | stays | english
-first | persian | Abubakr | stays | arabic
-first | persian | Ajmal | stays | arabic
-first | persian | Anohito | stays | japanese
-first | persian | Asadullah | stays | arabic
-first | persian | Fawad | stays | arabic
-first | persian | Habibullah | stays | arabic
-first | persian | Hamidullah | stays | arabic
-first | persian | Haroon | stays | arabic
-first | persian | Jawed | stays | arabic
-first | persian | Khadije | stays | arabic
-first | persian | Mujtaba | stays | arabic
-first | persian | Najeeb | stays | arabic
-first | persian | Najib | stays | arabic
-first | persian | Najibullah | stays | arabic
-first | persian | Naqibullah | stays | arabic
-first | persian | Qais | stays | arabic
-first | persian | Sayed | stays | arabic
-first | persian | Shafiq | stays | arabic
-first | persian | Sumayah | stays | arabic
-first | persian | اسدالله | stays | arabic
-first | persian | امان الله | stays | arabic
-first | persian | بسم الله | stays | arabic
-first | persian | حاجی | stays | arabic
-first | persian | حکمت الله | stays | arabic
-first | persian | رحمت الله | stays | arabic
-first | persian | سمیع الله | stays | arabic
-first | persian | صفی الله | stays | arabic
-first | persian | عزت الله | stays | arabic
-first | persian | نجیب الله | stays | arabic
-first | persian | نورالله | stays | arabic
-first | portuguese | Agripa | stays | latin
-first | portuguese | Aguilara | stays | spanish
-first | portuguese | Aidil | stays | indonesian
-first | portuguese | Althaia | stays | greek
-first | portuguese | Anael | stays | hebrew
-first | portuguese | Antonin | stays | french
-first | portuguese | Anárcase | stays | greek
-first | portuguese | Arrais | stays | portuguese+surname
-first | portuguese | Atreu | stays | greek
-first | portuguese | Badin | stays | italian
-first | portuguese | Brites | stays | portuguese+surname
-first | portuguese | Cinara | stays | greek
-first | portuguese | Demétria | stays | greek
-first | portuguese | Eleakim | stays | hebrew
-first | portuguese | Epimênides | stays | greek
-first | portuguese | Eucles | stays | greek
-first | portuguese | Eufrásia | stays | greek
-first | portuguese | Eumênis | stays | greek
-first | portuguese | Filareto | stays | greek
-first | portuguese | Goulart | stays | portuguese+surname
-first | portuguese | Hekewika | hawaiian | hawaiian
-first | portuguese | Ibraim | stays | arabic
-first | portuguese | Isabelly | stays | english
-first | portuguese | Jano | stays | latin
-first | portuguese | Jhonatan | stays | english
-first | portuguese | Kailina | hawaiian | stays
-first | portuguese | Labda | stays | greek
-first | portuguese | Lopeka | hawaiian | hawaiian
-first | portuguese | Matuzalém | stays | hebrew
-first | portuguese | Maximilienne | french | french
-first | portuguese | Nabucodonosor | stays | hebrew
-first | portuguese | Nanã | stays | yoruba
-first | portuguese | Pandoro | stays | greek
-first | portuguese | Policasta | stays | greek
-first | portuguese | Waltrode | stays | german
-first | portuguese | Xafic | stays | arabic
-first | portuguese | Xanthus | stays | greek
-first | portuguese | Yachne | stays | hebrew
-first | portuguese | Árcade | stays | greek
-first | slavicOther | Adomas | baltic | baltic
-first | slavicOther | Adrians | baltic | baltic
-first | slavicOther | Agon | albanian | albanian
-first | slavicOther | Aistė | baltic | baltic
-first | slavicOther | Aurelija | baltic | stays
-first | slavicOther | Aušra | baltic | baltic
-first | slavicOther | Bajram | albanian | albanian
-first | slavicOther | Bashkim | albanian | albanian
-first | slavicOther | Benas | baltic | baltic
-first | slavicOther | Besnik | albanian | albanian
-first | slavicOther | Bujar | albanian | albanian
-first | slavicOther | Eglė | baltic | baltic
-first | slavicOther | Egzon | albanian | albanian
-first | slavicOther | Endrit | albanian | albanian
-first | slavicOther | Erald | albanian | albanian
-first | slavicOther | Erjon | albanian | albanian
-first | slavicOther | Flamur | albanian | albanian
-first | slavicOther | Gerti | albanian | stays
-first | slavicOther | Justas | baltic | baltic
-first | slavicOther | Jūratė | baltic | baltic
-first | slavicOther | Kamilė | baltic | baltic
-first | slavicOther | Kujtim | albanian | albanian
-first | slavicOther | Liepa | baltic | baltic
-first | slavicOther | Liridon | albanian | albanian
-first | slavicOther | Luknė | baltic | baltic
-first | slavicOther | Neringa | baltic | baltic
-first | slavicOther | Olsi | albanian | albanian
-first | slavicOther | Petrit | albanian | albanian
-first | slavicOther | Rasa | baltic | baltic
-first | slavicOther | Remigijus | baltic | baltic
-first | slavicOther | Rinor | albanian | albanian
-first | slavicOther | Rūta | baltic | baltic
-first | slavicOther | Tadas | baltic | baltic
-first | slavicOther | Virginija | baltic | stays
-first | slavicOther | Ylli | albanian | albanian
-first | slavicPolish | Cezar | stays | latin
-first | slavicRussian | Maryja | stays | slavicOther
-first | spanish | Hatsuki | japanese | japanese
-first | spanish | Mejía | stays | spanish+surname
-first | swahili | Abdii | ethiopian | ethiopian
-first | swahili | Abdisa | ethiopian | ethiopian
-first | swahili | Abebaw | ethiopian | ethiopian
-first | swahili | Abush | ethiopian | ethiopian
-first | swahili | Addisu | ethiopian | ethiopian
-first | swahili | Adisu | ethiopian | ethiopian
-first | swahili | Alemu | ethiopian | ethiopian
-first | swahili | Andualem | ethiopian | ethiopian
-first | swahili | Asfaw | ethiopian | ethiopian
-first | swahili | Belachew | ethiopian | ethiopian
-first | swahili | Belay | ethiopian | ethiopian
-first | swahili | Belete | ethiopian | ethiopian
-first | swahili | Bezawit | ethiopian | ethiopian
-first | swahili | Biniyam | ethiopian | ethiopian
-first | swahili | Birhanu | ethiopian | ethiopian
-first | swahili | Biruk | ethiopian | ethiopian
-first | swahili | Bizuayehu | ethiopian | ethiopian
-first | swahili | Dereje | ethiopian | ethiopian
-first | swahili | Derese | ethiopian | ethiopian
-first | swahili | Desalegn | ethiopian | ethiopian
-first | swahili | Endale | ethiopian | ethiopian
-first | swahili | Endris | ethiopian | ethiopian
-first | swahili | Eshetu | ethiopian | ethiopian
-first | swahili | Fayisa | ethiopian | ethiopian
-first | swahili | Feyisa | ethiopian | ethiopian
-first | swahili | Fikadu | ethiopian | ethiopian
-first | swahili | Fikru | ethiopian | ethiopian
-first | swahili | Gadisa | ethiopian | ethiopian
-first | swahili | Getnet | ethiopian | ethiopian
-first | swahili | Girma | ethiopian | ethiopian
-first | swahili | Girum | ethiopian | ethiopian
-first | swahili | Habtamu | ethiopian | ethiopian
-first | swahili | Hailu | ethiopian | ethiopian
-first | swahili | Kidus | ethiopian | ethiopian
-first | swahili | Legese | ethiopian | ethiopian
-first | swahili | Melkamu | ethiopian | ethiopian
-first | swahili | Mengistu | ethiopian | ethiopian
-first | swahili | Misgana | ethiopian | ethiopian
-first | swahili | Negash | ethiopian | ethiopian
-first | swahili | Sanyii | ethiopian | ethiopian
-first | swahili | Shambel | ethiopian | ethiopian
-first | swahili | Shemsu | ethiopian | ethiopian
-first | swahili | Tadesse | ethiopian | ethiopian
-first | swahili | Tamirat | ethiopian | ethiopian
-first | swahili | Tarekegn | ethiopian | ethiopian
-first | swahili | Tesfahun | ethiopian | ethiopian
-first | swahili | Tilahun | ethiopian | ethiopian
-first | swahili | Yimam | ethiopian | ethiopian
-first | swahili | Yimer | ethiopian | ethiopian
-first | swahili | ሙሀመድ | ethiopian | ethiopian
-first | swahili | ማሜ | ethiopian | ethiopian
-first | swahili | ሰይድ | ethiopian | ethiopian
-first | swahili | አህመድ | ethiopian | ethiopian
-first | swedish | Matheo | stays | spanish
-first | swedish | Müller | german+surname | german+surname
-first | turkish | Araz | azerbaijani | persian
-first | turkish | Aygun | azerbaijani | stays
-first | turkish | Elcin | azerbaijani | stays
-first | turkish | Elmir | azerbaijani | stays
-first | turkish | Elsad | azerbaijani | azerbaijani
-first | turkish | Elsen | azerbaijani | azerbaijani
-first | turkish | Elxan | azerbaijani | azerbaijani
-first | turkish | Etibar | azerbaijani | azerbaijani
-first | turkish | Fariz | azerbaijani | arabic
-first | turkish | Gulnar | azerbaijani | persian
-first | turkish | Gunay | azerbaijani | stays
-first | turkish | Gunel | azerbaijani | azerbaijani
-first | turkish | Haleh | persian | persian
-first | turkish | Handan | stays | persian
-first | turkish | Hesen | azerbaijani | azerbaijani
-first | turkish | Ilgar | azerbaijani | azerbaijani
-first | turkish | Ismayil | azerbaijani | azerbaijani
-first | turkish | Jale | stays | persian
-first | turkish | Latif | stays | arabic
-first | turkish | Nazan | stays | persian
-first | turkish | Qadir | azerbaijani | arabic
-first | turkish | Rauf | azerbaijani | arabic
-first | turkish | Resad | azerbaijani | azerbaijani
-first | turkish | Resul | azerbaijani | stays
-first | turkish | Seymur | azerbaijani | azerbaijani
-first | turkish | Tarana | azerbaijani | azerbaijani
-first | turkish | Vaqif | azerbaijani | azerbaijani
-first | turkish | Vusala | azerbaijani | azerbaijani
-first | turkish | Xeyal | azerbaijani | azerbaijani
-first | turkish | Yusif | azerbaijani | azerbaijani
-first | ukrainian | Владлен | stays | slavicRussian
-first | ukrainian | Наріман | stays | turkish
-first | ukrainian | Рустем | stays | turkish
-first | yoruba | Abdulai | ghanaian | arabic
-first | yoruba | Adu | ghanaian | ghanaian
-first | yoruba | Akwasi | ghanaian | ghanaian
-first | yoruba | Alhassan | ghanaian | arabic
-first | yoruba | Appiah | ghanaian | ghanaian
-first | yoruba | Asare | ghanaian | ghanaian
-first | yoruba | Bra | ghanaian | ghanaian
-first | yoruba | Godfred | ghanaian | english
-first | yoruba | Hajia | ghanaian | arabic
-first | yoruba | Issah | ghanaian | arabic
-first | yoruba | Kofi | ghanaian | ghanaian
-first | yoruba | Kojo | ghanaian | ghanaian
-first | yoruba | Kwabena | ghanaian | ghanaian
-first | yoruba | Kwadwo | ghanaian | ghanaian
-first | yoruba | Kwaku | ghanaian | ghanaian
-first | yoruba | Kwasi | ghanaian | ghanaian
-first | yoruba | Kwesi | ghanaian | ghanaian
-first | yoruba | Mensah | ghanaian | ghanaian
-first | yoruba | Musah | ghanaian | arabic
-first | yoruba | Obaapa | ghanaian | ghanaian
-first | yoruba | Ohemaa | ghanaian | ghanaian
-first | yoruba | Opoku | ghanaian | ghanaian
-first | yoruba | Owusu | ghanaian | ghanaian
-first | yoruba | Seidu | ghanaian | arabic
-first | yoruba | Tetteh | ghanaian | ghanaian
-first | yoruba | Yakubu | ghanaian | arabic
-first | yoruba | Yaw | ghanaian | ghanaian
-first | yoruba | Yeboah | ghanaian | ghanaian
-last | chinese | Tân | stays | vietnamese
-last | dutch | Benali | arabic | arabic
-last | english | Anetsberger | german | german
-last | english | Arendse | stays | dutch
-last | english | Benedek | hungarian | hungarian
-last | english | Bitzenhofer | german | german
-last | english | Busitzky | stays | slavicOther
-last | english | Doepner | stays | german
-last | english | Fredricksen | stays | scandinavian
-last | english | Freeburger | stays | german
-last | english | Gerg | stays | german
-last | english | Halcon | spanish | spanish
-last | english | Holmquest | stays | scandinavian
-last | english | Janicke | stays | german
-last | english | Lagrave | french | french
-last | english | Lenza | italian | italian
-last | english | Makarezos | greek | greek | male
-last | english | Polydorou | greek | greek
-last | english | Preuett | stays | german
-last | english | Schnake | stays | german
-last | english | Szabat | stays | slavicPolish
-last | english | Tavarez | spanish | spanish
-last | english | Unterburger | german | german
-last | english | Ushijima | japanese | japanese
-last | english | Vojta | slavicOther | slavicOther
-last | english | Weigart | stays | german
-last | english | Zwack | stays | german
-last | finnish | Gåsman | stays | swedish
-last | finnish | Hjelmman | stays | swedish
-last | finnish | Sahlstén | stays | swedish
-last | french | Adrovic | serbian | serbian
-last | french | Agovic | serbian | serbian
-last | french | Bertemes | stays | german
-last | french | Da Cruz | portuguese | portuguese
-last | french | Da Luz | portuguese | portuguese
-last | french | Dostert | stays | german
-last | french | Goedert | stays | german
-last | french | Licina | serbian | serbian
-last | french | Muratovic | serbian | serbian
-last | french | Raach | stays | german
-last | french | Rastoder | serbian | serbian
-last | french | Sabotic | serbian | serbian
-last | french | Schintgen | stays | german
-last | german | Djordjevic | serbian | serbian
-last | greek | Barlas | stays | turkish
-last | hebrew | Khateeb | arabic | arabic
-last | hindi | Ahamed | stays | arabic
-last | latin | Ciobanu | romanian | romanian
-last | latin | Dumitru | romanian | romanian
-last | latin | Gheorghe | romanian | romanian
-last | latin | Matei | romanian | romanian
-last | maori | Cafter | stays | english
-last | maori | De Har | stays | english
-last | maori | Mardon | stays | english
-last | maori | Rabici | fijian | stays
-last | maori | Rackstraw | stays | english
-last | maori | Raluve | fijian | stays
-last | maori | Subritsky | stays | slavicRussian
-last | maori | Tabua | fijian | fijian
-last | maori | Tibble | stays | english
-last | maori | Vonotabua | fijian | fijian
-last | maori | Waqa | fijian | fijian
-last | mayan | Chuan | stays | chinese
-last | nepalese | Devi | stays | hindi
-last | nepalese | Hajar | stays | arabic
-last | nepalese | Yadab | stays | hindi
-last | nepalese | Yadavani | stays | hindi
-last | scandinavian | Bjerregaard | stays | danish
-last | scandinavian | Bundgaard | stays | danish
-last | scandinavian | Damgaard | stays | danish
-last | scandinavian | Nørgaard | stays | danish
-last | scandinavian | Søndergaard | stays | danish
-last | scandinavian | Vestergaard | stays | danish
-last | scandinavian | Østergaard | stays | danish
-last | slavicOther | Bytyqi | albanian | albanian
-last | slavicOther | Bytyçi | albanian | albanian
-last | slavicOther | Cani | albanian | albanian
-last | slavicOther | Deda | albanian | albanian
-last | slavicOther | Elshani | albanian | albanian
-last | slavicOther | Ferizi | albanian | albanian
-last | slavicOther | Gega | albanian | albanian
-last | slavicOther | Gjergji | albanian | albanian
-last | slavicOther | Gjoka | albanian | albanian
-last | slavicOther | Hidri | albanian | albanian
-last | slavicOther | Hoxhaj | albanian | albanian
-last | slavicOther | Hysa | albanian | albanian
-last | slavicOther | Kalniņš | baltic | baltic
-last | slavicOther | Kārkliņš | baltic | baltic
-last | slavicOther | Mema | albanian | albanian
-last | slavicOther | Mucaj | albanian | albanian
-last | slavicOther | Stafa | albanian | albanian
-last | slavicOther | Sulaj | albanian | albanian
-last | slavicOther | Tabaku | albanian | albanian
-last | slavicOther | Ukaj | albanian | albanian
-last | slavicOther | Vanags | baltic | baltic
-last | slavicOther | Zariņš | baltic | baltic
-last | slavicOther | Zefi | albanian | albanian
-last | slavicOther | Žukauskienė | baltic | baltic
-last | slavicOther | Иванова | stays | slavicRussian
-last | slavicOther | Маринов | stays | slavicRussian
-last | slavicOther | Петров | stays | slavicRussian
-last | slavicOther | Стефанова | stays | slavicRussian
-last | slavicOther | Стоянова | stays | slavicRussian
-last | slavicOther | Христов | stays | slavicRussian
-last | slavicRussian | Kavalioŭ | stays | ukrainian
-last | slavicRussian | Коваленко | ukrainian | ukrainian
-last | slavicRussian | Шевченко | ukrainian | ukrainian
-last | spanish | Britos | stays | portuguese
-last | spanish | Choc | stays | mayan
-last | swahili | Adugna | ethiopian | ethiopian
-last | swahili | Aliyi | ethiopian | ethiopian
-last | swahili | Bedru | ethiopian | ethiopian
-last | swahili | Birhanu | ethiopian | ethiopian
-last | swahili | Bizuneh | ethiopian | ethiopian
-last | swahili | Chanie | ethiopian | ethiopian
-last | swahili | Degefa | ethiopian | ethiopian
-last | swahili | Demise | ethiopian | ethiopian
-last | swahili | Demse | ethiopian | ethiopian
-last | swahili | Dessie | ethiopian | ethiopian
-last | swahili | Detamo | ethiopian | ethiopian
-last | swahili | Dinku | ethiopian | ethiopian
-last | swahili | Ejigu | ethiopian | ethiopian
-last | swahili | Esayas | ethiopian | ethiopian
-last | swahili | Eshetu | ethiopian | ethiopian
-last | swahili | Fenta | ethiopian | ethiopian
-last | swahili | Feyisa | ethiopian | ethiopian
-last | swahili | Fsha | ethiopian | ethiopian
-last | swahili | Gadisa | ethiopian | ethiopian
-last | swahili | Gemechu | ethiopian | ethiopian
-last | swahili | Gemeda | ethiopian | ethiopian
-last | swahili | Gobena | ethiopian | ethiopian
-last | swahili | Gosaye | ethiopian | ethiopian
-last | swahili | Gugsa | ethiopian | ethiopian
-last | swahili | Hordofa | ethiopian | ethiopian
-last | swahili | Kadiir | ethiopian | ethiopian
-last | swahili | Kibret | ethiopian | ethiopian
-last | swahili | Kumsa | ethiopian | ethiopian
-last | swahili | Muhe | ethiopian | ethiopian
-last | swahili | Nigusse | ethiopian | ethiopian
-last | swahili | Regasa | ethiopian | ethiopian
-last | swahili | Shemsu | ethiopian | ethiopian
-last | swahili | Tadesa | ethiopian | ethiopian
-last | swahili | Tamene | ethiopian | ethiopian
-last | swahili | Wondimu | ethiopian | ethiopian
-last | swahili | Yimam | ethiopian | ethiopian
-last | swahili | Yimer | ethiopian | ethiopian
-last | swahili | ሁሴን | ethiopian | ethiopian
-last | swahili | መሀመድ | ethiopian | ethiopian
-last | swahili | ሙሀመድ | ethiopian | ethiopian
-last | swahili | ሰይድ | ethiopian | ethiopian
-last | swahili | አህመድ | ethiopian | ethiopian
-last | swahili | አሰን | ethiopian | ethiopian
-last | swahili | አበበ | ethiopian | ethiopian
-last | swahili | አደም | ethiopian | ethiopian
-last | swahili | እንድሪስ | ethiopian | ethiopian
-last | swahili | ከድር | ethiopian | ethiopian
-last | swahili | ይመር | ethiopian | ethiopian
-last | swedish | Wuopio | stays | finnish
-last | thai | ทาค่อ | stays | chinese
-last | thai | หวังพิชิต | stays | chinese
-last | thai | เส็งกำปัง | stays | chinese
-last | thai | เหมจันทึก | stays | chinese
-last | thai | เหล่ารังสีรัตน์ | stays | chinese
-last | thai | แซ่หมง | stays | chinese
-last | turkish | Abbasova | azerbaijani | azerbaijani
-last | turkish | Ahmadov | azerbaijani | azerbaijani
-last | turkish | Axmedov | azerbaijani | azerbaijani
-last | turkish | Ceferov | azerbaijani | azerbaijani
-last | turkish | Ehmedov | azerbaijani | azerbaijani
-last | turkish | Hesenova | azerbaijani | azerbaijani
-last | turkish | Isgenderov | azerbaijani | azerbaijani
-last | turkish | Ismayilova | azerbaijani | azerbaijani
-last | turkish | Memmedli | azerbaijani | azerbaijani
-last | turkish | Muradov | azerbaijani | azerbaijani
-last | turkish | Məmmədov | azerbaijani | azerbaijani
-last | turkish | Nuriyev | azerbaijani | azerbaijani
-last | turkish | Qasimova | azerbaijani | azerbaijani
-last | turkish | Quliyeva | azerbaijani | azerbaijani
-last | turkish | Rehimov | azerbaijani | azerbaijani
-last | turkish | Rustemov | azerbaijani | azerbaijani
-last | turkish | Veliyev | azerbaijani | azerbaijani
-last | turkish | Zeynalova | azerbaijani | azerbaijani
-last | turkish | Əliyev | azerbaijani | azerbaijani
-last | yoruba | Abdulai | ghanaian | ghanaian
-last | yoruba | Aboagye | ghanaian | ghanaian
-last | yoruba | Abubakar | ghanaian | nigerian
-last | yoruba | Acquah | ghanaian | ghanaian
-last | yoruba | Afful | ghanaian | ghanaian
-last | yoruba | Afriyie | ghanaian | ghanaian
-last | yoruba | Agyei | ghanaian | ghanaian
-last | yoruba | Agyemang | ghanaian | ghanaian
-last | yoruba | Aidoo | ghanaian | ghanaian
-last | yoruba | Alhassan | ghanaian | ghanaian
-last | yoruba | Amponsah | ghanaian | ghanaian
-last | yoruba | Ansah | ghanaian | ghanaian
-last | yoruba | Arhin | ghanaian | ghanaian
-last | yoruba | Asare | ghanaian | ghanaian
-last | yoruba | Baah | ghanaian | ghanaian
-last | yoruba | Baidoo | ghanaian | ghanaian
-last | yoruba | Dadzie | ghanaian | ghanaian
-last | yoruba | Danso | ghanaian | ghanaian
-last | yoruba | Darko | ghanaian | ghanaian
-last | yoruba | Eshun | ghanaian | ghanaian
-last | yoruba | Frimpong | ghanaian | ghanaian
-last | yoruba | Gyamfi | ghanaian | ghanaian
-last | yoruba | Iddrisu | ghanaian | ghanaian
-last | yoruba | Issah | ghanaian | ghanaian
-last | yoruba | Konadu | ghanaian | ghanaian
-last | yoruba | Koomson | ghanaian | ghanaian
-last | yoruba | Lamptey | ghanaian | ghanaian
-last | yoruba | Musah | ghanaian | ghanaian
-last | yoruba | Nartey | ghanaian | ghanaian
-last | yoruba | Nkrumah | ghanaian | ghanaian
-last | yoruba | Nyarko | ghanaian | ghanaian
-last | yoruba | Oduro | ghanaian | ghanaian
-last | yoruba | Ofori | ghanaian | ghanaian
-last | yoruba | Okyere | ghanaian | ghanaian
-last | yoruba | Opoku | ghanaian | ghanaian
-last | yoruba | Oppong | ghanaian | ghanaian
-last | yoruba | Otoo | ghanaian | ghanaian
-last | yoruba | Quansah | ghanaian | ghanaian
-last | yoruba | Salifu | ghanaian | ghanaian
-last | yoruba | Sarpong | ghanaian | ghanaian
-last | yoruba | Seidu | ghanaian | ghanaian
-last | yoruba | Tawiah | ghanaian | ghanaian
-last | yoruba | Yakubu | ghanaian | nigerian
-last | yoruba | Yussif | ghanaian | ghanaian
+first | arabic | Praveen | hindi | hindi | -
+first | arabic | Santhosh | hindi | hindi | -
+first | arabic | أخنوخ | stays | hebrew | arabic
+first | arabic | أماليا | stays | german | arabic
+first | arabic | أندراوس | stays | greek | arabic
+first | arabic | بَرثُولَماوُس | stays | greek | arabic
+first | arabic | جلال | stays | persian | arabic
+first | arabic | سامينا | stays | hindi | arabic
+first | arabic | سايرا | stays | hindi | arabic
+first | arabic | شوميلا | stays | hindi | unknown
+first | arabic | عُزَيْرٌ | stays | hebrew | arabic
+first | arabic | قريبا | stays | hindi | unknown
+first | arabic | قورح | stays | turkish | hebrew
+first | arabic | ماي | stays | chinese | arabic
+first | arabic | مَتُّوشَلَخَ | stays | hebrew | hebrew
+first | chinese | Cahaya | indonesian | indonesian | -
+first | chinese | Dao | stays | vietnamese | chinese
+first | chinese | Mawar | indonesian | indonesian | -
+first | chinese | Paijem | indonesian | indonesian | -
+first | chinese | Putry | indonesian | indonesian | -
+first | dutch | Petunia | stays | english | english
+first | english | Adamaris | stays | spanish | spanish
+first | english | Akara | stays | thai | nigerian
+first | english | Albertine | french | french | -
+first | english | Aleyda | stays | spanish | spanish
+first | english | Alize | stays | french | french
+first | english | Alwine | stays | german | german
+first | english | Amira | stays | arabic | arabic
+first | english | Amirah | stays | arabic | arabic
+first | english | Amiya | stays | hindi | hindi
+first | english | Amiyah | stays | hindi | english
+first | english | Anatol | stays | french | german
+first | english | Asuka | japanese | japanese | -
+first | english | August | stays | german | german
+first | english | Aysen | turkish | turkish | -
+first | english | Aytaç | turkish | turkish | -
+first | english | Banele | stays | swahili | unknown
+first | english | Bernette | stays | french | english
+first | english | Berten | stays | german | dutch
+first | english | Bertin | stays | french | french
+first | english | Bille | stays | danish | scandinavian
+first | english | Brielle | stays | french | english
+first | english | Cardon | stays | french | french
+first | english | Carel | stays | dutch | dutch
+first | english | Carmo | stays | portuguese | portuguese
+first | english | Carmon | stays | spanish | spanish
+first | english | Cathrin | stays | german | german
+first | english | Chadi | arabic | arabic | -
+first | english | Chia | stays | chinese | spanish
+first | english | Chin | stays | chinese | chinese
+first | english | Christino | stays | italian | spanish
+first | english | Chujo-Hime | japanese | japanese | -
+first | english | Cicero | stays | latin | latin
+first | english | Conny | stays | german | german
+first | english | Corona | stays | latin | spanish
+first | english | Dayan | stays | hebrew | hebrew
+first | english | Delmar | stays | spanish | english
+first | english | Delmor | stays | spanish | unknown
+first | english | Dochrohan | stays | irishGaelic | unknown
+first | english | Dorita | stays | spanish | spanish
+first | english | Dosia | stays | polish | slavicPolish
+first | english | Elihue | stays | hebrew | english
+first | english | Epifania | stays | spanish | italian
+first | english | Erathipa | stays | maori | unknown
+first | english | Ermilo | stays | italian | spanish
+first | english | Erminia | italian | italian | -
+first | english | Everardo | spanish | spanish | -
+first | english | Fedelina | stays | italian | italian
+first | english | Felicie | french | french | -
+first | english | Florent | french | french | -
+first | english | Flores | stays | spanish+surname | spanish
+first | english | Fox | stays | english+surname | english
+first | english | Fraderk | stays | german | unknown
+first | english | Freddrick | stays | german | english
+first | english | Giovani | stays | italian | portuguese
+first | english | Guldana | stays | turkish | azerbaijani
+first | english | Gustave | french | french | -
+first | english | Hartman | stays | german+surname | german
+first | english | Hermenze | stays | german | unknown
+first | english | Hildagard | stays | german | german
+first | english | Hobson | stays | english+surname | english
+first | english | Ian | stays | scottish | english
+first | english | Idris | stays | arabic | arabic
+first | english | Ike | stays | hebrew | english
+first | english | Iveliz | stays | spanish | spanish
+first | english | Iza | stays | polish | unknown
+first | english | Iziah | stays | hebrew | english
+first | english | Jacque | stays | french | french
+first | english | Jadwiga | slavicPolish | slavicPolish | -
+first | english | Jalon | stays | hebrew | english
+first | english | Jesco | stays | german | german
+first | english | Jule | stays | french | german
+first | english | Julianita | stays | spanish | spanish
+first | english | Jū-Ō | japanese | japanese | -
+first | english | Kakamora | stays | maori | unknown
+first | english | Lauana | stays | hawaiian | unknown
+first | english | Lauriano | stays | italian | spanish
+first | english | Leonid | slavicRussian | slavicRussian | -
+first | english | Leonie | stays | french | french
+first | english | Lerato | stays | swahili | unknown
+first | english | Lish | stays | chinese | unknown
+first | english | Mardin | stays | turkish | turkish
+first | english | Margueritta | stays | french | unknown
+first | english | Marzell | stays | german | german
+first | english | Mesah | stays | hebrew | unknown
+first | english | Misae | japanese | japanese | -
+first | english | Monserrat | spanish | spanish | -
+first | english | Montez | stays | spanish | spanish
+first | english | Moroni | stays | italian | italian
+first | english | Natalya | slavicRussian | slavicRussian | -
+first | english | Nazareth | stays | hebrew | ethiopian
+first | english | Netra | stays | hindi | hindi
+first | english | Oca | stays | spanish | unknown
+first | english | Oce | stays | italian | unknown
+first | english | Ofentse | stays | nigerian | unknown
+first | english | Ofo | stays | nigerian | unknown
+first | english | Olaf | stays | scandinavian | scandinavian
+first | english | Ornella | italian | italian | -
+first | english | Osvaldo | stays | spanish | spanish
+first | english | Ott | stays | german | estonian
+first | english | Perle | stays | french | french
+first | english | Phemedes | stays | greek | greek
+first | english | Rami | stays | arabic | arabic
+first | english | Rebecka | stays | swedish | swedish
+first | english | Redden | stays | english+surname | english
+first | english | Rethabile | stays | nigerian | unknown
+first | english | Rethik | stays | hindi | unknown
+first | english | Rogeir | stays | norwegian | dutch
+first | english | Rogers | stays | english+surname | english
+first | english | Salvator | stays | italian | latin
+first | english | Sanai | stays | hebrew | persian
+first | english | Sbusiso | stays | nigerian | unknown
+first | english | Shakira | stays | arabic | arabic
+first | english | Soderman | stays | swedish+surname | swedish
+first | english | Szene | stays | hungarian | unknown
+first | english | Tai | stays | chinese | maori
+first | english | Taj | stays | arabic | hindi
+first | english | Tsutako | japanese | japanese | -
+first | english | Urijah | stays | hebrew | hebrew
+first | english | Valentino | italian | italian | -
+first | english | Visente | stays | spanish | spanish
+first | english | Wiltmar | stays | german | unknown
+first | english | Zaria | stays | arabic | english
+first | english | Zinhle | stays | swahili | unknown
+first | estonian | András | hungarian | hungarian | -
+first | estonian | Balázs | hungarian | hungarian | -
+first | estonian | Bence | hungarian | hungarian | -
+first | estonian | Eldur | stays | icelandic | icelandic
+first | estonian | Enikő | hungarian | hungarian | -
+first | estonian | Gergely | hungarian | hungarian | -
+first | estonian | Ibolya | hungarian | hungarian | -
+first | estonian | Juho | stays | finnish | finnish
+first | estonian | József | hungarian | hungarian | -
+first | estonian | Jürgen | stays | german | german
+first | estonian | Kirill | stays | slavicRussian | slavicRussian
+first | estonian | Márton | hungarian | hungarian | -
+first | estonian | Nagy | hungarian+surname | hungarian+surname | -
+first | estonian | Zalán | hungarian | hungarian | -
+first | estonian | Zsuzsa | hungarian | hungarian | -
+first | finnish | Aliki | greek | greek | -
+first | finnish | Amandine | french | french | -
+first | finnish | Anielka | slavicPolish | slavicPolish | -
+first | finnish | Benedikta | stays | german | icelandic
+first | finnish | Bintou | stays | swahili | unknown
+first | finnish | Cemile | turkish | turkish | -
+first | finnish | Françoise | french | french | -
+first | finnish | Hajrije | albanian | albanian | -
+first | finnish | Hamad | arabic | arabic | -
+first | finnish | Hanife | turkish | turkish | -
+first | finnish | Henriet | stays | french | french
+first | finnish | Hristova | slavicOther+surname | slavicOther+surname | -
+first | finnish | Ildikó | hungarian | hungarian | -
+first | finnish | Jadelle | stays | english | english
+first | finnish | Kun | stays | chinese | chinese
+first | finnish | Lotti | stays | german | italian
+first | finnish | Luminita | romanian | romanian | -
+first | finnish | Maj-Britt | swedish | scandinavian | swedish
+first | finnish | Michaëla | french | french | -
+first | finnish | Montaha | arabic | arabic | -
+first | finnish | Raida | arabic | arabic | -
+first | finnish | Sabiriin | stays | arabic | unknown
+first | finnish | Sattar | arabic | persian | persian
+first | finnish | Sofya | slavicRussian | slavicRussian | -
+first | finnish | Zahara | stays | arabic | arabic
+first | finnish | Zar | stays | persian | unknown
+first | finnish | Zekiye | turkish | turkish | -
+first | french | Agostinho | portuguese | portuguese | -
+first | french | António | portuguese | portuguese | -
+first | french | Da Silva | portuguese+surname | portuguese+surname | -
+first | french | Dinis | portuguese | portuguese | -
+first | french | Diogo | portuguese | portuguese | -
+first | french | Fernandes | portuguese+surname | portuguese+surname | -
+first | french | Ferreira | portuguese+surname | portuguese+surname | -
+first | french | Filipe | portuguese | portuguese | -
+first | french | Fränk | stays | german | german
+first | french | Fränz | stays | german | german
+first | french | Gomes | portuguese+surname | portuguese+surname | -
+first | french | Goncalves | portuguese+surname | portuguese+surname | -
+first | french | Gonçalo | portuguese | portuguese | -
+first | french | Lopes | portuguese+surname | portuguese+surname | -
+first | french | Malala | stays | pashto | persian
+first | french | Martins | portuguese+surname | portuguese+surname | -
+first | french | Monteiro | portuguese+surname | portuguese+surname | -
+first | french | Nawel | arabic | arabic | -
+first | french | Nuno | portuguese | portuguese | -
+first | french | Pereira | portuguese+surname | portuguese+surname | -
+first | french | Pit | stays | dutch | thai
+first | french | Ribeiro | portuguese+surname | portuguese+surname | -
+first | french | Rodrigues | portuguese+surname | portuguese+surname | -
+first | french | Satomi | japanese | japanese | -
+first | french | Schmit | stays | german+surname | german
+first | french | Sousa | portuguese+surname | portuguese+surname | -
+first | french | Teixeira | portuguese+surname | portuguese+surname | -
+first | french | Tiago | portuguese | portuguese | -
+first | french | Tun | stays | vietnamese | unknown
+first | german | Cédric | french | french | -
+first | german | Elyas | stays | arabic | arabic
+first | german | Stéphane | french | french | -
+first | german | Sébastien | french | french | -
+first | german | Yannick | french | french | -
+first | greek | Cate | stays | english | english
+first | greek | Cyrano | stays | french | french
+first | greek | Hyacinthe | stays | french | french
+first | greek | Liliah | stays | hebrew | unknown
+first | greek | Peta | stays | english | english
+first | greek | Petrini | stays | italian | italian
+first | greek | Zelena | stays | slavicOther | slavicOther
+first | greek | Zelenia | stays | slavicOther | slavicOther
+first | hebrew | Charbel | arabic | stays | arabic
+first | hebrew | Malek | arabic | arabic | -
+first | hebrew | Taim | arabic | stays | arabic
+first | hebrew | אחמד | stays | arabic | hebrew
+first | hebrew | מוחמד | stays | arabic | hebrew
+first | hebrew | מחמד | stays | arabic | hebrew
+first | hindi | Badriya | stays | arabic | arabic
+first | hindi | Farha | stays | arabic | arabic
+first | hindi | Harsh joy | stays | english | hindi
+first | hindi | Lord Shiva | stays | english | hindi
+first | hindi | Sohel | stays | arabic | hindi
+first | icelandic | André | stays | french | french
+first | icelandic | Damjan | stays | slavicOther | serbian
+first | icelandic | Enok | stays | hebrew | scandinavian
+first | icelandic | Evfemía | stays | greek | icelandic
+first | icelandic | Garibaldi | stays | italian | italian
+first | icelandic | Hartmann | stays | german+surname | german
+first | icelandic | Jafet | stays | hebrew | spanish
+first | icelandic | Jesper | stays | danish | scandinavian
+first | icelandic | Jörgen | stays | danish | swedish
+first | icelandic | Sigmar | stays | german | german
+first | icelandic | Vilmar | stays | german | german
+first | icelandic | Úna | stays | irishGaelic | irishGaelic
+first | indonesian | Agustinus | stays | latin | indonesian
+first | indonesian | Akhmad | stays | arabic | unknown
+first | indonesian | Arifin | stays | arabic | indonesian
+first | indonesian | Dewa | stays | hindi | indonesian
+first | indonesian | Efendi | stays | arabic | turkish
+first | indonesian | Effendi | stays | arabic | turkish
+first | indonesian | Fadli | stays | arabic | indonesian
+first | indonesian | Fitrah | stays | arabic | indonesian
+first | indonesian | Gibran | stays | arabic | arabic
+first | indonesian | Hendi | stays | dutch | indonesian
+first | indonesian | Hendy | stays | dutch | indonesian
+first | indonesian | Iskandar | stays | arabic | arabic
+first | indonesian | Krisna | stays | hindi | indonesian
+first | indonesian | Nurina | stays | arabic | unknown
+first | indonesian | Nurmala | stays | arabic | indonesian
+first | indonesian | Rahadian | stays | arabic | indonesian
+first | indonesian | Risky | stays | english | indonesian
+first | indonesian | Rizal | stays | arabic | indonesian
+first | indonesian | Rizka | stays | arabic | indonesian
+first | indonesian | Rizki | stays | arabic | indonesian
+first | indonesian | Rizky | stays | arabic | indonesian
+first | indonesian | Sapta | stays | hindi | indonesian
+first | indonesian | Savitri | stays | hindi | hindi
+first | indonesian | Slamet | stays | arabic | indonesian
+first | indonesian | Syaiful | stays | arabic | indonesian
+first | italian | Housain | arabic | arabic | -
+first | italian | Mamadou | stays | nigerian | unknown
+first | italian | Mary Anne | english | english | -
+first | italian | Moretti | stays | italian+surname | italian
+first | italian | Pandelis | greek | greek | -
+first | italian | Parsifal | stays | german | german
+first | italian | Rocca | stays | italian+surname | italian
+first | italian | Vladir | stays | slavicRussian | slavicRussian
+first | japanese | Ría | stays | spanish | spanish
+first | latin | Alexandru | romanian | romanian | -
+first | latin | Artiom | romanian | slavicRussian | romanian
+first | latin | Matei | romanian | romanian | -
+first | maori | Aisea | fijian | stays | fijian
+first | maori | Akosita | fijian | stays | fijian
+first | maori | Anaseini | fijian | stays | fijian
+first | maori | Ashneel | hindi | hindi | -
+first | maori | Ashnil | hindi | hindi | -
+first | maori | Asinate | fijian | stays | fijian
+first | maori | Avneel | hindi | hindi | -
+first | maori | Elenoa | fijian | stays | fijian
+first | maori | Emori | fijian | stays | fijian
+first | maori | Epineri | fijian | stays | fijian
+first | maori | Esita | fijian | stays | fijian
+first | maori | Ifereimi | fijian | stays | fijian
+first | maori | Isei | fijian | stays | fijian
+first | maori | Isikeli | fijian | stays | fijian
+first | maori | Isoa | fijian | stays | fijian
+first | maori | Jope | fijian | stays | fijian
+first | maori | Josese | fijian | stays | fijian
+first | maori | Joseva | fijian | stays | fijian
+first | maori | Kelera | fijian | stays | fijian
+first | maori | Laisiasa | fijian | stays | fijian
+first | maori | Ledua | fijian | stays | fijian
+first | maori | Litiana | fijian | stays | fijian
+first | maori | Loata | fijian | stays | fijian
+first | maori | Maciu | fijian | stays | fijian
+first | maori | Marcellin | stays | french | french
+first | maori | Melaia | fijian | stays | fijian
+first | maori | Mereani | fijian | stays | fijian
+first | maori | Mereoni | fijian | stays | fijian
+first | maori | Mesake | fijian | stays | fijian
+first | maori | Petero | fijian | stays | fijian
+first | maori | Rosi | fijian | stays | italian
+first | maori | Sakiusa | fijian | stays | fijian
+first | maori | Salanieta | fijian | stays | fijian
+first | maori | Seini | fijian | stays | fijian
+first | maori | Sereana | fijian | stays | fijian
+first | maori | Shafraz | stays | persian | unknown
+first | maori | Shayal | hindi | hindi | -
+first | maori | Siteri | fijian | stays | fijian
+first | maori | Taniela | fijian | stays | fijian
+first | maori | Tomasi | fijian | stays | fijian
+first | maori | Viliame | fijian | stays | fijian
+first | maori | Waqa | fijian | stays | fijian
+first | nepalese | Mohmmad | stays | arabic | arabic
+first | nigerian | Peace | stays | english | english
+first | persian | Abubakr | stays | arabic | arabic
+first | persian | Ajmal | stays | arabic | arabic
+first | persian | Anohito | stays | japanese | unknown
+first | persian | Asadullah | stays | arabic | persian
+first | persian | Fawad | stays | arabic | persian
+first | persian | Habibullah | stays | arabic | persian
+first | persian | Hamidullah | stays | arabic | persian
+first | persian | Haroon | stays | arabic | arabic
+first | persian | Jawed | stays | arabic | persian
+first | persian | Khadije | stays | arabic | albanian
+first | persian | Mujtaba | stays | arabic | arabic
+first | persian | Najeeb | stays | arabic | arabic
+first | persian | Najib | stays | arabic | arabic
+first | persian | Najibullah | stays | arabic | persian
+first | persian | Naqibullah | stays | arabic | persian
+first | persian | Qais | stays | arabic | persian
+first | persian | Sayed | stays | arabic | arabic
+first | persian | Shafiq | stays | arabic | arabic
+first | persian | Sumayah | stays | arabic | arabic
+first | persian | اسدالله | stays | arabic | persian
+first | persian | امان الله | stays | arabic | persian
+first | persian | بسم الله | stays | arabic | arabic
+first | persian | حاجی | stays | arabic | arabic
+first | persian | حکمت الله | stays | arabic | persian
+first | persian | رحمت الله | stays | arabic | persian
+first | persian | سمیع الله | stays | arabic | persian
+first | persian | صفی الله | stays | arabic | persian
+first | persian | عزت الله | stays | arabic | persian
+first | persian | نجیب الله | stays | arabic | persian
+first | persian | نورالله | stays | arabic | persian
+first | portuguese | Agripa | stays | latin | latin
+first | portuguese | Aguilara | stays | spanish | spanish
+first | portuguese | Aidil | stays | indonesian | indonesian
+first | portuguese | Althaia | stays | greek | greek
+first | portuguese | Anael | stays | hebrew | french
+first | portuguese | Antonin | stays | french | french
+first | portuguese | Anárcase | stays | greek | unknown
+first | portuguese | Arrais | stays | portuguese+surname | portuguese
+first | portuguese | Atreu | stays | greek | portuguese
+first | portuguese | Badin | stays | italian | serbian
+first | portuguese | Brites | stays | portuguese+surname | portuguese
+first | portuguese | Cinara | stays | greek | portuguese
+first | portuguese | Demétria | stays | greek | portuguese
+first | portuguese | Eleakim | stays | hebrew | hebrew
+first | portuguese | Epimênides | stays | greek | greek
+first | portuguese | Eucles | stays | greek | greek
+first | portuguese | Eufrásia | stays | greek | portuguese
+first | portuguese | Eumênis | stays | greek | greek
+first | portuguese | Filareto | stays | greek | italian
+first | portuguese | Goulart | stays | portuguese+surname | portuguese
+first | portuguese | Hekewika | hawaiian | hawaiian | -
+first | portuguese | Ibraim | stays | arabic | romanian
+first | portuguese | Isabelly | stays | english | portuguese
+first | portuguese | Jano | stays | latin | hungarian
+first | portuguese | Jhonatan | stays | english | spanish
+first | portuguese | Kailina | hawaiian | stays | hawaiian
+first | portuguese | Labda | stays | greek | unknown
+first | portuguese | Lopeka | hawaiian | hawaiian | -
+first | portuguese | Matuzalém | stays | hebrew | portuguese
+first | portuguese | Maximilienne | french | french | -
+first | portuguese | Nabucodonosor | stays | hebrew | italian
+first | portuguese | Nanã | stays | yoruba | portuguese
+first | portuguese | Pandoro | stays | greek | unknown
+first | portuguese | Policasta | stays | greek | greek
+first | portuguese | Waltrode | stays | german | unknown
+first | portuguese | Xafic | stays | arabic | unknown
+first | portuguese | Xanthus | stays | greek | greek
+first | portuguese | Yachne | stays | hebrew | unknown
+first | portuguese | Árcade | stays | greek | portuguese
+first | slavicOther | Adomas | baltic | baltic | -
+first | slavicOther | Adrians | baltic | baltic | -
+first | slavicOther | Agon | albanian | albanian | -
+first | slavicOther | Aistė | baltic | baltic | -
+first | slavicOther | Aurelija | baltic | stays | baltic
+first | slavicOther | Aušra | baltic | baltic | -
+first | slavicOther | Bajram | albanian | albanian | -
+first | slavicOther | Bashkim | albanian | albanian | -
+first | slavicOther | Benas | baltic | baltic | -
+first | slavicOther | Besnik | albanian | albanian | -
+first | slavicOther | Bujar | albanian | albanian | -
+first | slavicOther | Eglė | baltic | baltic | -
+first | slavicOther | Egzon | albanian | albanian | -
+first | slavicOther | Endrit | albanian | albanian | -
+first | slavicOther | Erald | albanian | albanian | -
+first | slavicOther | Erjon | albanian | albanian | -
+first | slavicOther | Flamur | albanian | albanian | -
+first | slavicOther | Gerti | albanian | stays | albanian
+first | slavicOther | Justas | baltic | baltic | -
+first | slavicOther | Jūratė | baltic | baltic | -
+first | slavicOther | Kamilė | baltic | baltic | -
+first | slavicOther | Kujtim | albanian | albanian | -
+first | slavicOther | Liepa | baltic | baltic | -
+first | slavicOther | Liridon | albanian | albanian | -
+first | slavicOther | Luknė | baltic | baltic | -
+first | slavicOther | Neringa | baltic | baltic | -
+first | slavicOther | Olsi | albanian | albanian | -
+first | slavicOther | Petrit | albanian | albanian | -
+first | slavicOther | Rasa | baltic | baltic | -
+first | slavicOther | Remigijus | baltic | baltic | -
+first | slavicOther | Rinor | albanian | albanian | -
+first | slavicOther | Rūta | baltic | baltic | -
+first | slavicOther | Tadas | baltic | baltic | -
+first | slavicOther | Virginija | baltic | stays | baltic
+first | slavicOther | Ylli | albanian | albanian | -
+first | slavicPolish | Cezar | stays | latin | romanian
+first | slavicRussian | Maryja | stays | slavicOther | slavicPolish
+first | spanish | Hatsuki | japanese | japanese | -
+first | spanish | Mejía | stays | spanish+surname | spanish
+first | swahili | Abdii | ethiopian | ethiopian | -
+first | swahili | Abdisa | ethiopian | ethiopian | -
+first | swahili | Abebaw | ethiopian | ethiopian | -
+first | swahili | Abush | ethiopian | ethiopian | -
+first | swahili | Addisu | ethiopian | ethiopian | -
+first | swahili | Adisu | ethiopian | ethiopian | -
+first | swahili | Alemu | ethiopian | ethiopian | -
+first | swahili | Andualem | ethiopian | ethiopian | -
+first | swahili | Asfaw | ethiopian | ethiopian | -
+first | swahili | Belachew | ethiopian | ethiopian | -
+first | swahili | Belay | ethiopian | ethiopian | -
+first | swahili | Belete | ethiopian | ethiopian | -
+first | swahili | Bezawit | ethiopian | ethiopian | -
+first | swahili | Biniyam | ethiopian | ethiopian | -
+first | swahili | Birhanu | ethiopian | ethiopian | -
+first | swahili | Biruk | ethiopian | ethiopian | -
+first | swahili | Bizuayehu | ethiopian | ethiopian | -
+first | swahili | Dereje | ethiopian | ethiopian | -
+first | swahili | Derese | ethiopian | ethiopian | -
+first | swahili | Desalegn | ethiopian | ethiopian | -
+first | swahili | Endale | ethiopian | ethiopian | -
+first | swahili | Endris | ethiopian | ethiopian | -
+first | swahili | Eshetu | ethiopian | ethiopian | -
+first | swahili | Fayisa | ethiopian | ethiopian | -
+first | swahili | Feyisa | ethiopian | ethiopian | -
+first | swahili | Fikadu | ethiopian | ethiopian | -
+first | swahili | Fikru | ethiopian | ethiopian | -
+first | swahili | Gadisa | ethiopian | ethiopian | -
+first | swahili | Getnet | ethiopian | ethiopian | -
+first | swahili | Girma | ethiopian | ethiopian | -
+first | swahili | Girum | ethiopian | ethiopian | -
+first | swahili | Habtamu | ethiopian | ethiopian | -
+first | swahili | Hailu | ethiopian | ethiopian | -
+first | swahili | Kidus | ethiopian | ethiopian | -
+first | swahili | Legese | ethiopian | ethiopian | -
+first | swahili | Melkamu | ethiopian | ethiopian | -
+first | swahili | Mengistu | ethiopian | ethiopian | -
+first | swahili | Misgana | ethiopian | ethiopian | -
+first | swahili | Negash | ethiopian | ethiopian | -
+first | swahili | Sanyii | ethiopian | ethiopian | -
+first | swahili | Shambel | ethiopian | ethiopian | -
+first | swahili | Shemsu | ethiopian | ethiopian | -
+first | swahili | Tadesse | ethiopian | ethiopian | -
+first | swahili | Tamirat | ethiopian | ethiopian | -
+first | swahili | Tarekegn | ethiopian | ethiopian | -
+first | swahili | Tesfahun | ethiopian | ethiopian | -
+first | swahili | Tilahun | ethiopian | ethiopian | -
+first | swahili | Yimam | ethiopian | ethiopian | -
+first | swahili | Yimer | ethiopian | ethiopian | -
+first | swahili | ሙሀመድ | ethiopian | ethiopian | -
+first | swahili | ማሜ | ethiopian | ethiopian | -
+first | swahili | ሰይድ | ethiopian | ethiopian | -
+first | swahili | አህመድ | ethiopian | ethiopian | -
+first | swedish | Matheo | stays | spanish | spanish
+first | swedish | Müller | german+surname | german+surname | -
+first | turkish | Araz | azerbaijani | persian | azerbaijani
+first | turkish | Aygun | azerbaijani | stays | turkish
+first | turkish | Elcin | azerbaijani | stays | azerbaijani
+first | turkish | Elmir | azerbaijani | stays | serbian
+first | turkish | Elsad | azerbaijani | azerbaijani | -
+first | turkish | Elsen | azerbaijani | azerbaijani | -
+first | turkish | Elxan | azerbaijani | azerbaijani | -
+first | turkish | Etibar | azerbaijani | azerbaijani | -
+first | turkish | Fariz | azerbaijani | arabic | azerbaijani
+first | turkish | Gulnar | azerbaijani | persian | persian
+first | turkish | Gunay | azerbaijani | stays | azerbaijani
+first | turkish | Gunel | azerbaijani | azerbaijani | -
+first | turkish | Haleh | persian | persian | -
+first | turkish | Handan | stays | persian | turkish
+first | turkish | Hesen | azerbaijani | azerbaijani | -
+first | turkish | Ilgar | azerbaijani | azerbaijani | -
+first | turkish | Ismayil | azerbaijani | azerbaijani | -
+first | turkish | Jale | stays | persian | turkish
+first | turkish | Latif | stays | arabic | arabic
+first | turkish | Nazan | stays | persian | turkish
+first | turkish | Qadir | azerbaijani | arabic | arabic
+first | turkish | Rauf | azerbaijani | arabic | arabic
+first | turkish | Resad | azerbaijani | azerbaijani | -
+first | turkish | Resul | azerbaijani | stays | turkish
+first | turkish | Seymur | azerbaijani | azerbaijani | -
+first | turkish | Tarana | azerbaijani | azerbaijani | -
+first | turkish | Vaqif | azerbaijani | azerbaijani | -
+first | turkish | Vusala | azerbaijani | azerbaijani | -
+first | turkish | Xeyal | azerbaijani | azerbaijani | -
+first | turkish | Yusif | azerbaijani | azerbaijani | -
+first | ukrainian | Владлен | stays | slavicRussian | slavicRussian
+first | ukrainian | Наріман | stays | turkish | ukrainian
+first | ukrainian | Рустем | stays | turkish | turkish
+first | yoruba | Abdulai | ghanaian | arabic | -
+first | yoruba | Adu | ghanaian | ghanaian | -
+first | yoruba | Akwasi | ghanaian | ghanaian | -
+first | yoruba | Alhassan | ghanaian | arabic | -
+first | yoruba | Appiah | ghanaian | ghanaian | -
+first | yoruba | Asare | ghanaian | ghanaian | -
+first | yoruba | Bra | ghanaian | ghanaian | -
+first | yoruba | Godfred | ghanaian | english | -
+first | yoruba | Hajia | ghanaian | arabic | -
+first | yoruba | Issah | ghanaian | arabic | -
+first | yoruba | Kofi | ghanaian | ghanaian | -
+first | yoruba | Kojo | ghanaian | ghanaian | -
+first | yoruba | Kwabena | ghanaian | ghanaian | -
+first | yoruba | Kwadwo | ghanaian | ghanaian | -
+first | yoruba | Kwaku | ghanaian | ghanaian | -
+first | yoruba | Kwasi | ghanaian | ghanaian | -
+first | yoruba | Kwesi | ghanaian | ghanaian | -
+first | yoruba | Mensah | ghanaian | ghanaian | -
+first | yoruba | Musah | ghanaian | arabic | -
+first | yoruba | Obaapa | ghanaian | ghanaian | -
+first | yoruba | Ohemaa | ghanaian | ghanaian | -
+first | yoruba | Opoku | ghanaian | ghanaian | -
+first | yoruba | Owusu | ghanaian | ghanaian | -
+first | yoruba | Seidu | ghanaian | arabic | -
+first | yoruba | Tetteh | ghanaian | ghanaian | -
+first | yoruba | Yakubu | ghanaian | arabic | -
+first | yoruba | Yaw | ghanaian | ghanaian | -
+first | yoruba | Yeboah | ghanaian | ghanaian | -
+last | chinese | Tân | stays | vietnamese | unknown
+last | dutch | Benali | arabic | arabic | -
+last | english | Anetsberger | german | german | -
+last | english | Arendse | stays | dutch | dutch
+last | english | Benedek | hungarian | hungarian | -
+last | english | Bitzenhofer | german | german | -
+last | english | Busitzky | stays | slavicOther | german
+last | english | Doepner | stays | german | german
+last | english | Fredricksen | stays | scandinavian | scandinavian
+last | english | Freeburger | stays | german | english
+last | english | Gerg | stays | german | german
+last | english | Halcon | spanish | spanish | -
+last | english | Holmquest | stays | scandinavian | unknown
+last | english | Janicke | stays | german | german
+last | english | Lagrave | french | french | -
+last | english | Lenza | italian | italian | -
+last | english | Makarezos | greek | greek | - | male
+last | english | Polydorou | greek | greek | -
+last | english | Preuett | stays | german | english
+last | english | Schnake | stays | german | german
+last | english | Szabat | stays | slavicPolish | slavicPolish
+last | english | Tavarez | spanish | spanish | -
+last | english | Unterburger | german | german | -
+last | english | Ushijima | japanese | japanese | -
+last | english | Vojta | slavicOther | slavicOther | -
+last | english | Weigart | stays | german | german
+last | english | Zwack | stays | german | german
+last | finnish | Gåsman | stays | swedish | swedish
+last | finnish | Hjelmman | stays | swedish | swedish
+last | finnish | Sahlstén | stays | swedish | finnish
+last | french | Adrovic | serbian | serbian | -
+last | french | Agovic | serbian | serbian | -
+last | french | Bertemes | stays | german | german
+last | french | Da Cruz | portuguese | portuguese | -
+last | french | Da Luz | portuguese | portuguese | -
+last | french | Dostert | stays | german | german
+last | french | Goedert | stays | german | german
+last | french | Licina | serbian | serbian | -
+last | french | Muratovic | serbian | serbian | -
+last | french | Raach | stays | german | german
+last | french | Rastoder | serbian | serbian | -
+last | french | Sabotic | serbian | serbian | -
+last | french | Schintgen | stays | german | german
+last | german | Djordjevic | serbian | serbian | -
+last | greek | Barlas | stays | turkish | persian
+last | hebrew | Khateeb | arabic | arabic | -
+last | hindi | Ahamed | stays | arabic | arabic
+last | latin | Ciobanu | romanian | romanian | -
+last | latin | Dumitru | romanian | romanian | -
+last | latin | Gheorghe | romanian | romanian | -
+last | latin | Matei | romanian | romanian | -
+last | maori | Cafter | stays | english | unknown
+last | maori | De Har | stays | english | dutch
+last | maori | Mardon | stays | english | persian
+last | maori | Rabici | fijian | stays | fijian
+last | maori | Rackstraw | stays | english | english
+last | maori | Raluve | fijian | stays | fijian
+last | maori | Subritsky | stays | slavicRussian | unknown
+last | maori | Tabua | fijian | fijian | -
+last | maori | Tibble | stays | english | english
+last | maori | Vonotabua | fijian | fijian | -
+last | maori | Waqa | fijian | fijian | -
+last | mayan | Chuan | stays | chinese | chinese
+last | nepalese | Devi | stays | hindi | hindi
+last | nepalese | Hajar | stays | arabic | arabic
+last | nepalese | Yadab | stays | hindi | hindi
+last | nepalese | Yadavani | stays | hindi | hindi
+last | scandinavian | Bjerregaard | stays | danish | scandinavian
+last | scandinavian | Bundgaard | stays | danish | scandinavian
+last | scandinavian | Damgaard | stays | danish | scandinavian
+last | scandinavian | Nørgaard | stays | danish | scandinavian
+last | scandinavian | Søndergaard | stays | danish | scandinavian
+last | scandinavian | Vestergaard | stays | danish | scandinavian
+last | scandinavian | Østergaard | stays | danish | norwegian
+last | slavicOther | Bytyqi | albanian | albanian | -
+last | slavicOther | Bytyçi | albanian | albanian | -
+last | slavicOther | Cani | albanian | albanian | -
+last | slavicOther | Deda | albanian | albanian | -
+last | slavicOther | Elshani | albanian | albanian | -
+last | slavicOther | Ferizi | albanian | albanian | -
+last | slavicOther | Gega | albanian | albanian | -
+last | slavicOther | Gjergji | albanian | albanian | -
+last | slavicOther | Gjoka | albanian | albanian | -
+last | slavicOther | Hidri | albanian | albanian | -
+last | slavicOther | Hoxhaj | albanian | albanian | -
+last | slavicOther | Hysa | albanian | albanian | -
+last | slavicOther | Kalniņš | baltic | baltic | -
+last | slavicOther | Kārkliņš | baltic | baltic | -
+last | slavicOther | Mema | albanian | albanian | -
+last | slavicOther | Mucaj | albanian | albanian | -
+last | slavicOther | Stafa | albanian | albanian | -
+last | slavicOther | Sulaj | albanian | albanian | -
+last | slavicOther | Tabaku | albanian | albanian | -
+last | slavicOther | Ukaj | albanian | albanian | -
+last | slavicOther | Vanags | baltic | baltic | -
+last | slavicOther | Zariņš | baltic | baltic | -
+last | slavicOther | Zefi | albanian | albanian | -
+last | slavicOther | Žukauskienė | baltic | baltic | -
+last | slavicOther | Иванова | stays | slavicRussian | slavicRussian
+last | slavicOther | Маринов | stays | slavicRussian | slavicOther
+last | slavicOther | Петров | stays | slavicRussian | slavicRussian
+last | slavicOther | Стефанова | stays | slavicRussian | slavicOther
+last | slavicOther | Стоянова | stays | slavicRussian | slavicOther
+last | slavicOther | Христов | stays | slavicRussian | slavicOther
+last | slavicRussian | Kavalioŭ | stays | ukrainian | slavicOther
+last | slavicRussian | Коваленко | ukrainian | ukrainian | -
+last | slavicRussian | Шевченко | ukrainian | ukrainian | -
+last | spanish | Britos | stays | portuguese | spanish
+last | spanish | Choc | stays | mayan | mayan
+last | swahili | Adugna | ethiopian | ethiopian | -
+last | swahili | Aliyi | ethiopian | ethiopian | -
+last | swahili | Bedru | ethiopian | ethiopian | -
+last | swahili | Birhanu | ethiopian | ethiopian | -
+last | swahili | Bizuneh | ethiopian | ethiopian | -
+last | swahili | Chanie | ethiopian | ethiopian | -
+last | swahili | Degefa | ethiopian | ethiopian | -
+last | swahili | Demise | ethiopian | ethiopian | -
+last | swahili | Demse | ethiopian | ethiopian | -
+last | swahili | Dessie | ethiopian | ethiopian | -
+last | swahili | Detamo | ethiopian | ethiopian | -
+last | swahili | Dinku | ethiopian | ethiopian | -
+last | swahili | Ejigu | ethiopian | ethiopian | -
+last | swahili | Esayas | ethiopian | ethiopian | -
+last | swahili | Eshetu | ethiopian | ethiopian | -
+last | swahili | Fenta | ethiopian | ethiopian | -
+last | swahili | Feyisa | ethiopian | ethiopian | -
+last | swahili | Fsha | ethiopian | ethiopian | -
+last | swahili | Gadisa | ethiopian | ethiopian | -
+last | swahili | Gemechu | ethiopian | ethiopian | -
+last | swahili | Gemeda | ethiopian | ethiopian | -
+last | swahili | Gobena | ethiopian | ethiopian | -
+last | swahili | Gosaye | ethiopian | ethiopian | -
+last | swahili | Gugsa | ethiopian | ethiopian | -
+last | swahili | Hordofa | ethiopian | ethiopian | -
+last | swahili | Kadiir | ethiopian | ethiopian | -
+last | swahili | Kibret | ethiopian | ethiopian | -
+last | swahili | Kumsa | ethiopian | ethiopian | -
+last | swahili | Muhe | ethiopian | ethiopian | -
+last | swahili | Nigusse | ethiopian | ethiopian | -
+last | swahili | Regasa | ethiopian | ethiopian | -
+last | swahili | Shemsu | ethiopian | ethiopian | -
+last | swahili | Tadesa | ethiopian | ethiopian | -
+last | swahili | Tamene | ethiopian | ethiopian | -
+last | swahili | Wondimu | ethiopian | ethiopian | -
+last | swahili | Yimam | ethiopian | ethiopian | -
+last | swahili | Yimer | ethiopian | ethiopian | -
+last | swahili | ሁሴን | ethiopian | ethiopian | -
+last | swahili | መሀመድ | ethiopian | ethiopian | -
+last | swahili | ሙሀመድ | ethiopian | ethiopian | -
+last | swahili | ሰይድ | ethiopian | ethiopian | -
+last | swahili | አህመድ | ethiopian | ethiopian | -
+last | swahili | አሰን | ethiopian | ethiopian | -
+last | swahili | አበበ | ethiopian | ethiopian | -
+last | swahili | አደም | ethiopian | ethiopian | -
+last | swahili | እንድሪስ | ethiopian | ethiopian | -
+last | swahili | ከድር | ethiopian | ethiopian | -
+last | swahili | ይመር | ethiopian | ethiopian | -
+last | swedish | Wuopio | stays | finnish | finnish
+last | thai | ทาค่อ | stays | chinese | thai
+last | thai | หวังพิชิต | stays | chinese | thai
+last | thai | เส็งกำปัง | stays | chinese | thai
+last | thai | เหมจันทึก | stays | chinese | thai
+last | thai | เหล่ารังสีรัตน์ | stays | chinese | thai
+last | thai | แซ่หมง | stays | chinese | chinese
+last | turkish | Abbasova | azerbaijani | azerbaijani | -
+last | turkish | Ahmadov | azerbaijani | azerbaijani | -
+last | turkish | Axmedov | azerbaijani | azerbaijani | -
+last | turkish | Ceferov | azerbaijani | azerbaijani | -
+last | turkish | Ehmedov | azerbaijani | azerbaijani | -
+last | turkish | Hesenova | azerbaijani | azerbaijani | -
+last | turkish | Isgenderov | azerbaijani | azerbaijani | -
+last | turkish | Ismayilova | azerbaijani | azerbaijani | -
+last | turkish | Memmedli | azerbaijani | azerbaijani | -
+last | turkish | Muradov | azerbaijani | azerbaijani | -
+last | turkish | Məmmədov | azerbaijani | azerbaijani | -
+last | turkish | Nuriyev | azerbaijani | azerbaijani | -
+last | turkish | Qasimova | azerbaijani | azerbaijani | -
+last | turkish | Quliyeva | azerbaijani | azerbaijani | -
+last | turkish | Rehimov | azerbaijani | azerbaijani | -
+last | turkish | Rustemov | azerbaijani | azerbaijani | -
+last | turkish | Veliyev | azerbaijani | azerbaijani | -
+last | turkish | Zeynalova | azerbaijani | azerbaijani | -
+last | turkish | Əliyev | azerbaijani | azerbaijani | -
+last | yoruba | Abdulai | ghanaian | ghanaian | -
+last | yoruba | Aboagye | ghanaian | ghanaian | -
+last | yoruba | Abubakar | ghanaian | nigerian | -
+last | yoruba | Acquah | ghanaian | ghanaian | -
+last | yoruba | Afful | ghanaian | ghanaian | -
+last | yoruba | Afriyie | ghanaian | ghanaian | -
+last | yoruba | Agyei | ghanaian | ghanaian | -
+last | yoruba | Agyemang | ghanaian | ghanaian | -
+last | yoruba | Aidoo | ghanaian | ghanaian | -
+last | yoruba | Alhassan | ghanaian | ghanaian | -
+last | yoruba | Amponsah | ghanaian | ghanaian | -
+last | yoruba | Ansah | ghanaian | ghanaian | -
+last | yoruba | Arhin | ghanaian | ghanaian | -
+last | yoruba | Asare | ghanaian | ghanaian | -
+last | yoruba | Baah | ghanaian | ghanaian | -
+last | yoruba | Baidoo | ghanaian | ghanaian | -
+last | yoruba | Dadzie | ghanaian | ghanaian | -
+last | yoruba | Danso | ghanaian | ghanaian | -
+last | yoruba | Darko | ghanaian | ghanaian | -
+last | yoruba | Eshun | ghanaian | ghanaian | -
+last | yoruba | Frimpong | ghanaian | ghanaian | -
+last | yoruba | Gyamfi | ghanaian | ghanaian | -
+last | yoruba | Iddrisu | ghanaian | ghanaian | -
+last | yoruba | Issah | ghanaian | ghanaian | -
+last | yoruba | Konadu | ghanaian | ghanaian | -
+last | yoruba | Koomson | ghanaian | ghanaian | -
+last | yoruba | Lamptey | ghanaian | ghanaian | -
+last | yoruba | Musah | ghanaian | ghanaian | -
+last | yoruba | Nartey | ghanaian | ghanaian | -
+last | yoruba | Nkrumah | ghanaian | ghanaian | -
+last | yoruba | Nyarko | ghanaian | ghanaian | -
+last | yoruba | Oduro | ghanaian | ghanaian | -
+last | yoruba | Ofori | ghanaian | ghanaian | -
+last | yoruba | Okyere | ghanaian | ghanaian | -
+last | yoruba | Opoku | ghanaian | ghanaian | -
+last | yoruba | Oppong | ghanaian | ghanaian | -
+last | yoruba | Otoo | ghanaian | ghanaian | -
+last | yoruba | Quansah | ghanaian | ghanaian | -
+last | yoruba | Salifu | ghanaian | ghanaian | -
+last | yoruba | Sarpong | ghanaian | ghanaian | -
+last | yoruba | Seidu | ghanaian | ghanaian | -
+last | yoruba | Tawiah | ghanaian | ghanaian | -
+last | yoruba | Yakubu | ghanaian | nigerian | -
+last | yoruba | Yussif | ghanaian | ghanaian | -
