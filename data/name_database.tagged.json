@@ -110442,7 +110442,7 @@
     {
       "name": "Yakubu",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -111021,7 +111021,7 @@
     {
       "name": "Bilkisu",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132172,7 +132172,7 @@
     {
       "name": "Amina",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132193,6 +132193,29 @@
       "themes": [
         "religious"
       ]
+    },
+    {
+      "name": "Kayode",
+      "gender": "male",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "adult"
+      ],
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "thoughtful",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
     },
     {
       "name": "Obinna",

@@ -909,7 +909,7 @@ first | yoruba | Abayomi | male | Wikidata; name-dataset NG | adult | contempora
 first | yoruba | Temilade | female | Wikidata; name-dataset NG | adult | contemporary | neutral | thoughtful | pleasant | common | sliceOfLife | -
 first | yoruba | Kemi | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Olajumoke | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | earthy
-first | yoruba | Yakubu | male | Wikidata; name-dataset NG | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | religious
+first | nigerian | Yakubu | male | Wikidata; name-dataset NG | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | religious
 first | yoruba | Oluwafemi | male | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Niyi | male | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Muyiwa | male | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
@@ -934,7 +934,7 @@ first | yoruba | Olufunke | female | Wikidata; name-dataset NG | adult | contemp
 first | yoruba | Folasade | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Abisola | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Titilope | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Bilkisu | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | religious
+first | nigerian | Bilkisu | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | religious
 first | yoruba | Kikelomo | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Folakemi | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Omolara | female | Wikidata; name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
@@ -2098,7 +2098,8 @@ first | nigerian | Chinedu | male | name-dataset NG | adult | contemporary | neu
 first | nigerian | Amaka | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | nigerian | Ifeoma | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | nigerian | Ijeoma | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Amina | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | religious
+first | nigerian | Amina | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | religious
+first | yoruba | Kayode | male | name-dataset NG | adult | contemporary | neutral | thoughtful | pleasant | common | sliceOfLife | -
 first | nigerian | Obinna | male | name-dataset NG | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
 first | nigerian | Chinenye | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | nigerian | Amarachi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -

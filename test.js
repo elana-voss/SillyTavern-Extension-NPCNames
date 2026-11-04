@@ -471,6 +471,13 @@ test('Igbo names are filed as Nigerian, not Yoruba', () => {
     assert.deepEqual(cultureOf, ['nigerian']);
 });
 
+test('Hausa names are filed as Nigerian, not Yoruba', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const underYoruba = data.first_names.filter(e => e.language_ethnicity === 'yoruba' && ['Yakubu', 'Bilkisu', 'Amina'].includes(e.name));
+    assert.deepEqual(underYoruba.map(e => e.name), []);
+    for (const name of ['Yakubu', 'Bilkisu', 'Amina']) assert.ok(data.first_names.some(e => e.language_ethnicity === 'nigerian' && e.name === name), name);
+});
+
 test('a Nepalese man can draw the ordinary surnames of his country', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
     const forMen = data.last_names.filter(e => e.language_ethnicity === 'nepalese' && e.gender !== 'female').map(e => e.name);
