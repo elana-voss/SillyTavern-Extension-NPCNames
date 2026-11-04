@@ -153,6 +153,8 @@ None open.
 - `tools/db.mjs`, where the four apply tools differed: lists split on either line end (milestone 2 split on LF alone, so it kept the CR in a line's last field and refused its list in a Windows checkout, where git's `autocrlf` gives the lists CRLF; pinned by a test).
 - `tools/db.mjs`: the change list is written before the database (milestone 5's order; 2 to 4 wrote the database first, and a failure between the two would lose the list while the count asserts refuse a second run). Not tested: a failed disk write is worth no test here.
 - `tools/db.mjs`: every apply tool prints the change list's path (milestone 5 did not, 2 to 4 did). Not tested: output only.
+- `test.js`, where the data tests differed: a surname looked up by name must exist (the surname test's lookup failed on a missing name, the Lithuanian test's `?.` passed on one). Kept the failing way; the six Lithuanian man's forms left at milestone 5's review, so they stand as "no female entry of these". A first name looked up by culture (the gods test's lookup by name alone saw only the last of a name's cultures; Noah is now checked in both of his). The load stays a plain parse, not `loadDb`, whose byte check would fail a checkout with other line ends.
+- `test.js`, the audit's merge: no assert of a single name dropped. The apply tools' asserts check their input once, on the database before them, and none looks at the data as it is now; the audit's ~80 lines rested on that, so the invariants test holds every assert in about 150 lines. Four culture checks went that the every-culture assert already holds (ghanaian, ethiopian, yoruba, fijian offered).
 
 ## Trials
 

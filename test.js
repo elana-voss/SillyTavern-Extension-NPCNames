@@ -1,6 +1,6 @@
 // Run via: node test.js
 
-import { deriveEnumValues, filterFirstNames, pickAndMarkUsed, pickName, DROP_ORDER } from './picker.js';
+import { deriveEnumValues, pickName } from './picker.js';
 import { injectBeforeLatest } from './advertisement.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -24,41 +24,22 @@ function test(name, fn) {
 
 function makeEntry(overrides = {}) {
     return {
-        name: 'Test',
-        gender: 'female',
-        language_ethnicity: 'english',
-        mythology: null,
-        race: 'human',
-        age: ['adult'],
-        era: ['contemporary'],
-        role: ['neutral'],
-        intelligence: 'average',
-        allure: 'pleasant',
-        commonness: 'uncommon',
-        genre: ['sliceOfLife'],
-        themes: [],
-        ...overrides,
+        name: 'Test', gender: 'female', language_ethnicity: 'english', mythology: null, race: 'human', age: ['adult'],
+        era: ['contemporary'], role: ['neutral'], intelligence: 'average', allure: 'pleasant', commonness: 'uncommon',
+        genre: ['sliceOfLife'], themes: [], ...overrides,
     };
 }
 
 function makeSurname(overrides = {}) {
     return {
-        name: 'Generic',
-        language_ethnicity: 'english',
-        mythology: null,
-        race: 'human',
-        era: ['contemporary'],
-        role: ['neutral'],
-        allure: 'pleasant',
-        commonness: 'uncommon',
-        genre: ['sliceOfLife'],
-        themes: [],
-        ...overrides,
+        name: 'Generic', language_ethnicity: 'english', mythology: null, race: 'human', era: ['contemporary'],
+        role: ['neutral'], allure: 'pleasant', commonness: 'uncommon', genre: ['sliceOfLife'], themes: [], ...overrides,
     };
 }
 
 // Deterministic RNG for predictable test outcomes.
 const fixedRng = (max) => 0;
+const pickFresh = (firsts, lasts, filters = {}) => pickName(firsts, lasts, filters, new Set(), new Set(), fixedRng);
 
 console.log('NPCNames picker tests:');
 
@@ -72,14 +53,7 @@ test('matches gender + culture filter exactly', () => {
         makeSurname({ name: 'Tanaka', language_ethnicity: 'japanese' }),
         makeSurname({ name: 'Smith', language_ethnicity: 'english' }),
     ];
-    const pick = pickName(
-        firsts,
-        lasts,
-        { gender: 'female', language_ethnicity: 'japanese' },
-        new Set(),
-        new Set(),
-        fixedRng,
-    );
+    const pick = pickFresh(firsts, lasts, { gender: 'female', language_ethnicity: 'japanese' });
     assert.equal(pick.gender, 'female');
     assert.equal(pick.language_ethnicity, 'japanese');
     assert.ok(['Hana', 'Yuki'].includes(pick.first_name));
@@ -87,42 +61,19 @@ test('matches gender + culture filter exactly', () => {
 });
 
 test('drops filters in priority order when intersection is empty', () => {
-    const mira = makeEntry({
-        name: 'Mira',
-        gender: 'female',
-        language_ethnicity: 'slavicRussian',
-        role: ['villain'],
-        intelligence: 'bookish',
-        allure: 'pretty',
-        genre: ['horror', 'sliceOfLife'],
-        themes: ['regal'],
-    });
-    const firsts = [mira];
+    const firsts = [makeEntry({
+        name: 'Mira', gender: 'female', language_ethnicity: 'slavicRussian', role: ['villain'], intelligence: 'bookish',
+        allure: 'pretty', genre: ['horror', 'sliceOfLife'], themes: ['regal'],
+    })];
     const lasts = [makeSurname({ name: 'Volkov', language_ethnicity: 'slavicRussian' })];
-    const pick = pickName(
-        firsts,
-        lasts,
-        {
-            gender: 'female',
-            language_ethnicity: 'slavicRussian',
-            age: 'child',
-            era: 'nineteenTwenties',
-            role: 'villain',
-            intelligence: 'bookish',
-            themes: ['celestial'],
-        },
-        new Set(),
-        new Set(),
-        fixedRng,
-    );
+    const pick = pickFresh(firsts, lasts, { gender: 'female', language_ethnicity: 'slavicRussian', age: 'child',
+        era: 'nineteenTwenties', role: 'villain', intelligence: 'bookish', themes: ['celestial'] });
     assert.equal(pick.first_name, 'Mira');
     assert.ok(pick.relaxed_filters.includes('themes'));
     assert.ok(pick.relaxed_filters.includes('age'));
     assert.ok(pick.relaxed_filters.includes('era'));
     // themes drops before age per DROP_ORDER.
-    assert.ok(
-        pick.relaxed_filters.indexOf('themes') < pick.relaxed_filters.indexOf('age'),
-    );
+    assert.ok(pick.relaxed_filters.indexOf('themes') < pick.relaxed_filters.indexOf('age'));
 });
 
 test('resets the used set within the active slice when exhausted', () => {
@@ -136,14 +87,7 @@ test('resets the used set within the active slice when exhausted', () => {
     pickName(firsts, lasts, { language_ethnicity: 'japanese' }, usedFirst, usedLast, fixedRng);
     pickName(firsts, lasts, { language_ethnicity: 'japanese' }, usedFirst, usedLast, fixedRng);
     assert.equal(usedFirst.size, 2);
-    const third = pickName(
-        firsts,
-        lasts,
-        { language_ethnicity: 'japanese' },
-        usedFirst,
-        usedLast,
-        fixedRng,
-    );
+    const third = pickName(firsts, lasts, { language_ethnicity: 'japanese' }, usedFirst, usedLast, fixedRng);
     assert.ok(['Hana', 'Yuki'].includes(third.first_name));
     assert.equal(usedFirst.size, 1);
     assert.ok(usedFirst.has(third.first_name));
@@ -156,7 +100,7 @@ test('surname culture always matches the first name even without a culture filte
         makeSurname({ name: 'Smith', language_ethnicity: 'english' }),
         makeSurname({ name: 'Volkov', language_ethnicity: 'slavicRussian' }),
     ];
-    const pick = pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng);
+    const pick = pickFresh(firsts, lasts);
     assert.equal(pick.first_name, 'Hana');
     assert.equal(pick.last_name, 'Tanaka');
 });
@@ -168,9 +112,9 @@ test('intelligence filter matches the exact 5-level enum value', () => {
         makeEntry({ name: 'Sharp', intelligence: 'bookish' }),
     ];
     const lasts = [makeSurname()];
-    const blunt = pickName(firsts, lasts, { intelligence: 'blunt' }, new Set(), new Set(), fixedRng);
-    const avg = pickName(firsts, lasts, { intelligence: 'average' }, new Set(), new Set(), fixedRng);
-    const book = pickName(firsts, lasts, { intelligence: 'bookish' }, new Set(), new Set(), fixedRng);
+    const blunt = pickFresh(firsts, lasts, { intelligence: 'blunt' });
+    const avg = pickFresh(firsts, lasts, { intelligence: 'average' });
+    const book = pickFresh(firsts, lasts, { intelligence: 'bookish' });
     assert.equal(blunt.first_name, 'Dim');
     assert.equal(avg.first_name, 'Mid');
     assert.equal(book.first_name, 'Sharp');
@@ -183,7 +127,7 @@ test('fantasy race pairs with fantasy ethnicity (database invariant)', () => {
     const lasts = [
         makeSurname({ name: 'Silverleaf', language_ethnicity: 'fantasyElvish', race: 'elf' }),
     ];
-    const pick = pickName(firsts, lasts, { race: 'elf' }, new Set(), new Set(), fixedRng);
+    const pick = pickFresh(firsts, lasts, { race: 'elf' });
     assert.ok(pick.language_ethnicity.startsWith('fantasy'));
 });
 
@@ -192,9 +136,9 @@ test('multi-era entry matches each of its eras', () => {
     const beatrice = makeEntry({ name: 'Beatrice', era: ['ancient'] });
     const firsts = [eleanor, beatrice];
     const lasts = [makeSurname()];
-    const victorian = pickName(firsts, lasts, { era: 'victorian' }, new Set(), new Set(), fixedRng);
-    const midcentury = pickName(firsts, lasts, { era: 'midcentury' }, new Set(), new Set(), fixedRng);
-    const ancient = pickName(firsts, lasts, { era: 'ancient' }, new Set(), new Set(), fixedRng);
+    const victorian = pickFresh(firsts, lasts, { era: 'victorian' });
+    const midcentury = pickFresh(firsts, lasts, { era: 'midcentury' });
+    const ancient = pickFresh(firsts, lasts, { era: 'ancient' });
     assert.equal(victorian.first_name, 'Eleanor');
     assert.equal(midcentury.first_name, 'Eleanor');
     assert.equal(ancient.first_name, 'Beatrice');
@@ -203,7 +147,7 @@ test('multi-era entry matches each of its eras', () => {
 test('culture without surnames returns the first name alone', () => {
     const firsts = [makeEntry({ name: 'Paarthurnax', language_ethnicity: 'fantasyDragon', race: 'dragon' })];
     const lasts = [makeSurname({ name: 'Smith', language_ethnicity: 'english' })];
-    const pick = pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng);
+    const pick = pickFresh(firsts, lasts);
     assert.equal(pick.first_name, 'Paarthurnax');
     assert.equal('last_name' in pick, false);
     assert.equal('last_name_role' in pick, false);
@@ -212,7 +156,7 @@ test('culture without surnames returns the first name alone', () => {
 test('a god gets no surname even when its culture has surnames', () => {
     const firsts = [makeEntry({ name: 'Shiva', language_ethnicity: 'hindi', race: 'mythical' })];
     const lasts = [makeSurname({ name: 'Sharma', language_ethnicity: 'hindi' })];
-    const pick = pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng);
+    const pick = pickFresh(firsts, lasts);
     assert.equal(pick.first_name, 'Shiva');
     assert.equal('last_name' in pick, false);
 });
@@ -220,7 +164,7 @@ test('a god gets no surname even when its culture has surnames', () => {
 test('surname never repeats the first name', () => {
     const firsts = [makeEntry({ name: 'Agus' })];
     const lasts = [makeSurname({ name: 'Agus' }), makeSurname({ name: 'Wijaya' })];
-    const pick = pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng);
+    const pick = pickFresh(firsts, lasts);
     assert.equal(pick.last_name, 'Wijaya');
 });
 
@@ -242,28 +186,14 @@ test('relaxing keeps every filter that was not part of the conflict', () => {
         makeEntry({ name: 'Alice', gender: 'female', language_ethnicity: 'english', commonness: 'common' }),
     ];
     const lasts = [makeSurname({ language_ethnicity: 'japanese' }), makeSurname({ name: 'Smith' })];
-    const pick = pickName(
-        firsts,
-        lasts,
-        { gender: 'nonbinary', language_ethnicity: 'japanese', commonness: 'rare' },
-        new Set(),
-        new Set(),
-        fixedRng,
-    );
+    const pick = pickFresh(firsts, lasts, { gender: 'nonbinary', language_ethnicity: 'japanese', commonness: 'rare' });
     assert.equal(pick.first_name, 'Hana');
     assert.deepEqual(pick.relaxed_filters, ['gender']);
 });
 
 test('tolerates themes sent as a single string and null filters', () => {
     const firsts = [makeEntry({ name: 'Rex', themes: ['regal'] }), makeEntry({ name: 'Bob' })];
-    const pick = pickName(
-        firsts,
-        [makeSurname()],
-        { themes: 'regal', gender: null, language_ethnicity: 'nope' },
-        new Set(),
-        new Set(),
-        fixedRng,
-    );
+    const pick = pickFresh(firsts, [makeSurname()], { themes: 'regal', gender: null, language_ethnicity: 'nope' });
     assert.equal(pick.first_name, 'Rex');
     assert.deepEqual(pick.relaxed_filters, ['language_ethnicity']);
 });
@@ -280,128 +210,18 @@ test('advertisement goes right before the latest message, so long chats keep it'
     assert.equal(empty[0].mes, 'ad');
 });
 
-test('database holds no malformed names', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const bad = [...data.first_names, ...data.last_names].map(e => e.name).filter(n =>
-        /^\p{Ll}/u.test(n)                                  // uncapitalised
-        || /[/()]|\.$/.test(n)                              // "A/B", "Anu (2)", initials
-        || (/[A-Za-z]/.test(n) && /\p{Script=Cyrillic}/u.test(n))); // look-alike letters
-    assert.deepEqual(bad, []);
-});
-
-test('database files gods, handles and non-names as the readings say', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const byName = new Map(data.first_names.map(e => [e.name, e]));
-    assert.deepEqual(data.first_names.filter(e => e.mythology && e.race !== 'mythical').map(e => e.name), []);
-    assert.equal(byName.get('Chaac').race, 'mythical');
-    assert.equal(byName.get('Noah').race, 'human');
-    const handles = data.first_names.filter(e => e.genre.includes('cyberpunk'));
-    assert.equal(handles.length, 100);
-    assert.deepEqual(handles.filter(e => e.language_ethnicity !== 'cyberpunkHandle').map(e => e.name), []);
-    assert.deepEqual(data.last_names.filter(e => e.language_ethnicity === 'cyberpunkHandle'), []);
-    const names = new Set([...data.first_names, ...data.last_names].map(e => e.name));
-    const gone = ['Unnamed', 'Trnsfer', 'Qkr', 'Korea', 'Feng Shui', 'Kalevala', 'Abominable Snowmen', 'Accuser', 'Palladium', 'Wild Hunt'];
-    assert.deepEqual(gone.filter(n => names.has(n)), []);
-});
-
 test('a surname of the other gender is never given; one without a gender is', () => {
     const firsts = [makeEntry({ name: 'Piotr', gender: 'male' })];
     const kowalska = makeSurname({ name: 'Kowalska', gender: 'female' });
     const wojcik = makeSurname({ name: 'Wojcik' });
-    assert.equal(pickName(firsts, [kowalska, wojcik], {}, new Set(), new Set(), fixedRng).last_name, 'Wojcik');
-    assert.equal('last_name' in pickName(firsts, [kowalska], {}, new Set(), new Set(), fixedRng), false);
+    assert.equal(pickFresh(firsts, [kowalska, wojcik]).last_name, 'Wojcik');
+    assert.equal('last_name' in pickFresh(firsts, [kowalska]), false);
 });
 
 test('an ambiguous character takes a surname of any gender', () => {
     const firsts = [makeEntry({ name: 'Sasha', gender: 'ambiguous' })];
     const lasts = [makeSurname({ name: 'Kowalska', gender: 'female' })];
-    assert.equal(pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng).last_name, 'Kowalska');
-});
-
-test('database genders surnames by their endings and keeps no men with women\'s surnames', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const cultures = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese', 'irishGaelic', 'baltic', 'azerbaijani'];
-    const FEMALE = /(sk|ck)a$|dóttir$|dottir$|dotter$|ová$|ienė$|(ов|ев|ск)а$|(ов|ев)ая$|(ov|yev)a$|(idou|opoulou)$/u;
-    // Not -шин: the Ukrainian -ишин stays the same for a woman.
-    const MALE = /(sk|ck)i$|ński$|(ов|ев|ий)$|[^ш]ин$|(ov|ev|yov)$|ņš$|(opoulos|idis|ides)$|^(Ó|Mac) /u;
-    const wrong = data.last_names.filter(e => cultures.includes(e.language_ethnicity)).filter(e =>
-        (FEMALE.test(e.name) && e.gender !== 'female') || (MALE.test(e.name) && e.gender !== 'male')
-        // -son follows the person's sex in Icelandic; in Swedish it is a family name of both sexes.
-        || (/son$/.test(e.name) && e.gender !== (e.language_ethnicity === 'icelandic' ? 'male' : undefined)));
-    assert.deepEqual(wrong.map(e => e.name), []);
-    // Devi and Yadavani are women's surnames wherever they are filed; Hindi's others have no gender. Latin has its feminine forms.
-    assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity) && e.language_ethnicity !== 'latin').map(e => e.name).sort(), ['Devi', 'Yadavani']);
-    const genderOf = (culture, name) => data.last_names.find(e => e.language_ethnicity === culture && e.name === name).gender;
-    assert.equal(genderOf('greek', 'Nikolaou'), undefined, 'Greek -ou is used by both sexes');
-    assert.equal(genderOf('irishGaelic', "O'Byrne"), undefined, 'women bear anglicised forms too');
-    for (const name of ['Papadaki', 'Tassi', 'Zika']) assert.equal(genderOf('greek', name), 'female', name);
-    for (const name of ['Mundis', 'Rubis']) assert.equal(genderOf('greek', name), 'male', name);
-    assert.equal(genderOf('hindi', 'Devi'), 'female');
-    assert.equal(genderOf('latin', 'Messalina'), 'female');
-    const firsts = [makeEntry({ name: 'Piotr', gender: 'male', language_ethnicity: 'slavicPolish' })];
-    for (let i = 0; i < 40; i++) {
-        const pick = pickName(firsts, data.last_names, {}, new Set(), new Set(), max => i % max);
-        assert.doesNotMatch(pick.last_name, /(sk|ck)a$/);
-    }
-});
-
-test('database holds no non-surnames, no Mongolian surnames, no surnames as Chinese first names', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const lasts = new Set(data.last_names.map(e => `${e.language_ethnicity}/${e.name}`));
-    const firsts = new Set(data.first_names.map(e => `${e.language_ethnicity}/${e.name}`));
-    const gone = ['arabic/يناير', 'arabic/مارس', 'slavicPolish/Sz', 'hebrew/Sh', 'yoruba/Gh', 'chinese/Mawar', 'korean/남자'];
-    assert.deepEqual(gone.filter(n => lasts.has(n)), []);
-    assert.deepEqual(data.last_names.filter(e => e.language_ethnicity === 'mongolian').map(e => e.name), []);
-    assert.ok(lasts.has('korean/남궁') && lasts.has('hebrew/דוד'), 'real surnames in both lists stay');
-    assert.ok(!firsts.has('chinese/Zhang') && firsts.has('chinese/Hao'));
-});
-
-test('database files Ghanaian, Ethiopian and misfiled names under their cultures; gods and disagreed names stay', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const of = (list, culture) => list.filter(e => e.language_ethnicity === culture);
-    const firstIn = (culture, name) => of(data.first_names, culture).find(e => e.name === name);
-    const lastIn = (culture, name) => of(data.last_names, culture).find(e => e.name === name);
-    for (const [label, first, last] of [['ghanaian', 28, 44], ['ethiopian', 53, 48]]) {
-        assert.ok(of(data.first_names, label).length >= first, label);
-        assert.ok(of(data.last_names, label).length >= last, label);
-    }
-    assert.ok(firstIn('ghanaian', 'Alhassan') && lastIn('ghanaian', 'Abubakar'), 'an origin elsewhere holds no name back');
-    const offered = deriveEnumValues(data.first_names).language_ethnicity;
-    assert.ok(offered.includes('ghanaian') && offered.includes('ethiopian') && offered.includes('yoruba'));
-    assert.equal(offered.includes('danish'), false);
-
-    // Latin: Romanians out, its gods in place with their mythology; two readers can bring a name in.
-    assert.ok(firstIn('romanian', 'Alexandru') && lastIn('romanian', 'Ciobanu') && firstIn('romanian', 'Luminita'));
-    assert.ok(firstIn('latin', 'Agripa') && firstIn('latin', 'Cicero'));
-    assert.equal(of(data.first_names, 'latin').filter(e => e.race === 'mythical' && e.mythology).length, 12);
-    assert.ok(of(data.last_names, 'latin').length >= 30, 'milestone 5 gives Latin its surnames');
-
-    // Danes and Norse gods stay under scandinavian; the third reader settles a disagreement.
-    assert.ok(firstIn('scandinavian', 'Søren') && lastIn('scandinavian', 'Østergaard'));
-    assert.equal(of(data.first_names, 'scandinavian').filter(e => e.race === 'mythical').length, 14);
-    assert.ok(firstIn('fijian', 'Viliame') && !firstIn('maori', 'Viliame') && lastIn('fijian', 'Tabua') && lastIn('fijian', 'Rabici'));
-    assert.ok(offered.includes('fijian'));
-    assert.ok(firstIn('maori', 'Shafraz'), 'a third answer equal to neither reader moves nothing');
-    assert.ok(firstIn('english', 'Flores') && !firstIn('spanish', 'Flores') && !lastIn('spanish', 'Flores'), 'one reader alone makes no first name a surname');
-
-    // A surname's gender moves with it; a first name made a surname keeps no first name's fields.
-    assert.equal(lastIn('baltic', 'Žukauskienė').gender, 'female');
-    assert.equal(lastIn('azerbaijani', 'Ahmadov').gender, 'male');
-    assert.equal(lastIn('slavicOther', 'Hristova').gender, 'female');
-    assert.equal(lastIn('greek', 'Makarezos').gender, 'male');
-    assert.equal(firstIn('finnish', 'Hristova'), undefined);
-    const ferreira = lastIn('portuguese', 'Ferreira');
-    assert.ok(ferreira && !firstIn('french', 'Ferreira'));
-    assert.deepEqual(['age', 'intelligence', 'gender'].filter(k => k in ferreira), []);
-    assert.ok(firstIn('hungarian', 'András') && lastIn('albanian', 'Hoxhaj') && firstIn('azerbaijani', 'Yusif'));
-});
-
-test('database holds neither the country Fiji as a first name nor the broken form Rosi Ni', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const named = name => data.first_names.filter(e => e.name === name).map(e => e.language_ethnicity);
-    assert.deepEqual(named('Fiji'), []);
-    assert.deepEqual(named('Rosi Ni'), []);
-    assert.ok(named('Rosi').includes('maori'));
+    assert.equal(pickFresh(firsts, lasts).last_name, 'Kowalska');
 });
 
 test('overused check folds case and accents, and no name of the new batch is on the list', () => {
@@ -427,8 +247,72 @@ test('a real name marked not slop stays off the overused list, and the making to
     assert.match(readFileSync(new URL('./tools/m5-make-overused.mjs', import.meta.url), 'utf8'), /#not-slop /);
 });
 
-test('every culture listed before milestone 4 is offered again, plus the new ones, for both sexes', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+test('a data tool\'s list reads the same with either line end', () => {
+    assert.deepEqual(parseLines('# note\r\na | b\r\n\r\nc | d\n'), [['a', 'b'], ['c', 'd']]);
+});
+
+// What must stay true of the data. An apply tool's asserts check its input, once, on the database as
+// it stood before: none of them looks at the database as it is now, so each pinned name stays here.
+const inCulture = (list, culture) => list.filter(e => e.language_ethnicity === culture);
+const keysOf = list => new Set(list.map(e => `${e.language_ethnicity}/${e.name}`));
+const missing = (keys, wanted) => wanted.filter(k => !keys.has(k));
+const present = (keys, unwanted) => unwanted.filter(k => keys.has(k));
+
+function checkNamesAndHandles(data) {
+    const all = [...data.first_names, ...data.last_names];
+    assert.deepEqual(all.map(e => e.name).filter(n =>
+        /^\p{Ll}/u.test(n)                                  // uncapitalised
+        || /[/()]|\.$/.test(n)                              // "A/B", "Anu (2)", initials
+        || (/[A-Za-z]/.test(n) && /\p{Script=Cyrillic}/u.test(n))), []); // look-alike letters
+    const handles = data.first_names.filter(e => e.genre.includes('cyberpunk'));
+    assert.equal(handles.length, 100);
+    assert.deepEqual(handles.filter(e => e.language_ethnicity !== 'cyberpunkHandle').map(e => e.name), []);
+    assert.deepEqual(inCulture(data.last_names, 'cyberpunkHandle'), []);
+    const names = new Set(all.map(e => e.name));
+    const gone = ['Unnamed', 'Trnsfer', 'Qkr', 'Korea', 'Feng Shui', 'Kalevala', 'Abominable Snowmen', 'Accuser', 'Palladium', 'Wild Hunt'];
+    assert.deepEqual(gone.filter(n => names.has(n)), []);
+    for (const list of [data.first_names, data.last_names]) {
+        const keys = list.map(e => `${e.language_ethnicity}/${e.name}`);
+        assert.deepEqual(keys.filter((k, i) => keys.indexOf(k) !== i), [], 'no name twice in a culture');
+    }
+}
+
+function checkSurnameGenders(data) {
+    const cultures = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese', 'irishGaelic', 'baltic', 'azerbaijani'];
+    const FEMALE = /(sk|ck)a$|dóttir$|dottir$|dotter$|ová$|ienė$|(ов|ев|ск)а$|(ов|ев)ая$|(ov|yev)a$|(idou|opoulou)$/u;
+    // Not -шин: the Ukrainian -ишин stays the same for a woman.
+    const MALE = /(sk|ck)i$|ński$|(ов|ев|ий)$|[^ш]ин$|(ov|ev|yov)$|ņš$|(opoulos|idis|ides)$|^(Ó|Mac) /u;
+    const wrong = data.last_names.filter(e => cultures.includes(e.language_ethnicity)).filter(e =>
+        (FEMALE.test(e.name) && e.gender !== 'female') || (MALE.test(e.name) && e.gender !== 'male')
+        // -son follows the person's sex in Icelandic; in Swedish it is a family name of both sexes.
+        || (/son$/.test(e.name) && e.gender !== (e.language_ethnicity === 'icelandic' ? 'male' : undefined)));
+    assert.deepEqual(wrong.map(e => e.name), []);
+    // Devi and Yadavani are women's surnames wherever they are filed; Hindi's others have no gender. Latin has its feminine forms.
+    assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity) && e.language_ethnicity !== 'latin').map(e => e.name).sort(), ['Devi', 'Yadavani']);
+    // A missing name fails here. Greek -ou is used by both sexes; Irish women bear anglicised forms too.
+    for (const [culture, name, gender] of [['greek', 'Nikolaou'], ['irishGaelic', "O'Byrne"], ['greek', 'Papadaki', 'female'],
+        ['greek', 'Tassi', 'female'], ['greek', 'Zika', 'female'], ['greek', 'Mundis', 'male'], ['greek', 'Rubis', 'male'],
+        ['hindi', 'Devi', 'female'], ['latin', 'Messalina', 'female'], ['baltic', 'Andrejeva', 'female'],
+        // A surname's gender moves with it.
+        ['baltic', 'Žukauskienė', 'female'], ['azerbaijani', 'Ahmadov', 'male'], ['slavicOther', 'Hristova', 'female'], ['greek', 'Makarezos', 'male']]) {
+        const entry = inCulture(data.last_names, culture).find(e => e.name === name);
+        assert.ok(entry, `no surname ${culture}/${name}`);
+        assert.equal(entry.gender, gender, `${culture}/${name}`);
+    }
+    // Lithuanian -a is the man's form. These six left with the men's cut, so "not female" must also hold of their absence.
+    const manForms = ['Noreika', 'Alekna', 'Mazeika', 'Rimša', 'Songaila', 'Čėsna'];
+    assert.deepEqual(inCulture(data.last_names, 'baltic').filter(e => manForms.includes(e.name) && e.gender === 'female').map(e => e.name), []);
+    const piotr = [makeEntry({ name: 'Piotr', gender: 'male', language_ethnicity: 'slavicPolish' })];
+    for (let i = 0; i < 40; i++) {
+        const pick = pickName(piotr, data.last_names, {}, new Set(), new Set(), max => i % max);
+        assert.doesNotMatch(pick.last_name, /(sk|ck)a$/);
+    }
+    const forMen = inCulture(data.last_names, 'nepalese').filter(e => e.gender !== 'female').map(e => e.name);
+    const ordinary = ['Magar', 'Yadav', 'Thapa', 'Gurung', 'Shrestha', 'Rai', 'Tamang', 'Karki', 'Adhikari', 'Bhandari'];
+    assert.deepEqual(ordinary.filter(n => !forMen.includes(n)), [], 'a Nepalese man can draw the ordinary surnames of his country');
+}
+
+function checkCultures(data) {
     const nonHuman = ['cyberpunkHandle', 'fantasyDragon', 'fantasyDwarven', 'fantasyElvish'];
     const noSurnames = ['mongolian', 'nativeAmerican']; // Mongolian has none since milestone 3; see the plan.
     const cultures = ['arabic', 'chinese', 'dutch', 'english', 'estonian', 'finnish', 'french', 'german', 'greek',
@@ -439,98 +323,80 @@ test('every culture listed before milestone 4 is offered again, plus the new one
         'azerbaijani', 'hungarian', 'fijian'];
     const offered = deriveEnumValues(data.first_names).language_ethnicity;
     assert.deepEqual([...cultures, ...nonHuman].filter(c => !offered.includes(c)), []);
+    assert.equal(offered.includes('danish'), false);
     const short = [];
     for (const c of cultures) {
-        const firsts = data.first_names.filter(e => e.language_ethnicity === c && e.race === 'human');
-        const lasts = data.last_names.filter(e => e.language_ethnicity === c);
+        const firsts = inCulture(data.first_names, c).filter(e => e.race === 'human');
+        const lasts = inCulture(data.last_names, c);
         for (const g of ['male', 'female']) {
             if (firsts.filter(e => e.gender === g).length < 10) short.push(`${c} first ${g}`);
             if (!noSurnames.includes(c) && lasts.filter(e => !e.gender || e.gender === g).length < 10) short.push(`${c} last ${g}`);
         }
     }
     assert.deepEqual(short, []);
-});
-
-test('no name twice in a culture', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    for (const list of [data.first_names, data.last_names]) {
-        const keys = list.map(e => `${e.language_ethnicity}/${e.name}`);
-        assert.deepEqual(keys.filter((k, i) => keys.indexOf(k) !== i), []);
+    for (const [label, first, last] of [['ghanaian', 28, 44], ['ethiopian', 53, 48]]) {
+        assert.ok(inCulture(data.first_names, label).length >= first, label);
+        assert.ok(inCulture(data.last_names, label).length >= last, label);
     }
-});
+    assert.deepEqual(inCulture(data.last_names, 'mongolian').map(e => e.name), []);
+    assert.equal(inCulture(data.first_names, 'latin').filter(e => e.race === 'mythical' && e.mythology).length, 12);
+    assert.ok(inCulture(data.last_names, 'latin').length >= 30, 'milestone 5 gives Latin its surnames');
+    assert.equal(inCulture(data.first_names, 'scandinavian').filter(e => e.race === 'mythical').length, 14);
+    const ferreira = inCulture(data.last_names, 'portuguese').find(e => e.name === 'Ferreira');
+    assert.deepEqual(['age', 'intelligence', 'gender'].filter(k => k in ferreira), [], 'a first name made a surname keeps no first name\'s fields');
+}
 
-test('franchise dragons have left; the dragons that replace them are there', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+function checkPinnedNames(data) {
+    const firsts = keysOf(data.first_names);
+    const lasts = keysOf(data.last_names);
+    assert.deepEqual(missing(firsts, [
+        'ghanaian/Alhassan', // an origin elsewhere holds no name back
+        'romanian/Alexandru', 'romanian/Luminita', 'latin/Agripa', 'latin/Cicero', // Romanians out of Latin; two readers can bring a name in
+        'scandinavian/Søren', 'fijian/Viliame', // Danes stay under scandinavian; the third reader settles a disagreement
+        'maori/Shafraz', // a third answer equal to neither reader moves nothing
+        'english/Flores', // one reader alone makes no first name a surname
+        'hungarian/András', 'azerbaijani/Yusif', 'chinese/Hao', 'maori/Rosi',
+        'nigerian/Yakubu', 'nigerian/Bilkisu', 'nigerian/Amina', // Hausa, not Yoruba
+    ]), []);
+    assert.deepEqual(present(firsts, ['maori/Viliame', 'spanish/Flores', 'finnish/Hristova', 'french/Ferreira', 'chinese/Zhang',
+        'yoruba/Yakubu', 'yoruba/Bilkisu', 'yoruba/Amina', 'persian/Pixodarus', // Pixodarus is a Carian
+        // One man's fame stays out.
+        ...['Sitting Bull', 'Crazy Horse', 'Rain-in-the-Face', 'Black Elk', 'Cornplanter', 'Poundmaker', 'Cornstalk'].map(n => `nativeAmerican/${n}`),
+    ]), []);
+    assert.deepEqual(missing(lasts, ['ghanaian/Abubakar', 'romanian/Ciobanu', 'scandinavian/Østergaard', 'fijian/Tabua', 'fijian/Rabici',
+        'portuguese/Ferreira', 'albanian/Hoxhaj',
+        'korean/남궁', 'hebrew/דוד', // real surnames in both lists stay
+    ]), []);
+    assert.deepEqual(present(lasts, ['spanish/Flores', 'arabic/يناير', 'arabic/مارس', 'slavicPolish/Sz', 'hebrew/Sh', 'yoruba/Gh', 'chinese/Mawar', 'korean/남자',
+        'latin/Gothicus', // a title
+        // A woman's given name is no Yoruba surname.
+        ...['Abosede', 'Ajoke', 'Atinuke', 'Aderonke', 'Adebimpe', 'Adejoke'].map(n => `yoruba/${n}`),
+    ]), []);
+    const culturesOf = name => data.first_names.filter(e => e.name === name).map(e => e.language_ethnicity);
+    assert.deepEqual(culturesOf('Fiji'), [], 'a country');
+    assert.deepEqual(culturesOf('Rosi Ni'), [], 'a broken form');
+    assert.deepEqual(culturesOf('Ijeoma'), ['nigerian'], 'Igbo, not Yoruba');
+    const first = (culture, name) => inCulture(data.first_names, culture).find(e => e.name === name);
+    assert.deepEqual(data.first_names.filter(e => e.mythology && e.race !== 'mythical').map(e => e.name), []);
+    assert.equal(first('mayan', 'Chaac').race, 'mythical');
+    assert.equal(first('english', 'Noah').race, 'human');
+    assert.equal(first('arabic', 'Noah').race, 'human');
     const dragons = data.first_names.filter(e => e.race === 'dragon').map(e => e.name);
-    assert.deepEqual(['Smaug', 'Mushu', 'Maleficent', 'Saphira', 'Spike', 'Puff'].filter(n => dragons.includes(n)), []);
+    assert.deepEqual(['Smaug', 'Mushu', 'Maleficent', 'Saphira', 'Spike', 'Puff', 'Kingu', 'Samebito', 'Otohime', 'Lamia', 'Mishibijiw'].filter(n => dragons.includes(n)), []);
     assert.ok(dragons.length >= 30, `${dragons.length} dragons`);
-});
+    assert.deepEqual(first('nativeAmerican', 'Big Elk').era, ['victorian']);
+    assert.deepEqual(first('nativeAmerican', 'Winona').era, ['contemporary']);
+    // The meaning-based classes tag real names by what they mean, not by how they sound.
+    assert.ok(first('hawaiian', 'Mahina').themes.includes('lunar'), 'Mahina means moon');
+    assert.ok(first('english', 'Georgia').themes.includes('rustic'), 'Georgia means farmer');
+    assert.ok(first('greek', 'Desdemona').genre.includes('horror'), 'Desdemona means ill-fated');
+    assert.ok(!first('mongolian', 'Sarnai').themes.includes('lunar'), 'Sarnai means rose');
+    assert.ok(!first('yoruba', 'Babatunde').genre.includes('horror'), 'Babatunde means the father has returned');
+}
 
-test('Igbo names are filed as Nigerian, not Yoruba', () => {
+test('database invariants', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const cultureOf = data.first_names.filter(e => e.name === 'Ijeoma').map(e => e.language_ethnicity);
-    assert.deepEqual(cultureOf, ['nigerian']);
-});
-
-test('Hausa names are filed as Nigerian, not Yoruba', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const underYoruba = data.first_names.filter(e => e.language_ethnicity === 'yoruba' && ['Yakubu', 'Bilkisu', 'Amina'].includes(e.name));
-    assert.deepEqual(underYoruba.map(e => e.name), []);
-    for (const name of ['Yakubu', 'Bilkisu', 'Amina']) assert.ok(data.first_names.some(e => e.language_ethnicity === 'nigerian' && e.name === name), name);
-});
-
-test('a Nepalese man can draw the ordinary surnames of his country', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const forMen = data.last_names.filter(e => e.language_ethnicity === 'nepalese' && e.gender !== 'female').map(e => e.name);
-    const ordinary = ['Magar', 'Yadav', 'Thapa', 'Gurung', 'Shrestha', 'Rai', 'Tamang', 'Karki', 'Adhikari', 'Bhandari'];
-    assert.deepEqual(ordinary.filter(n => !forMen.includes(n)), []);
-});
-
-test('the meaning-based classes tag real names by what they mean, not by how they sound', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const tagged = (culture, name, field, value) => data.first_names.find(e => e.language_ethnicity === culture && e.name === name)[field].includes(value);
-    assert.ok(tagged('hawaiian', 'Mahina', 'themes', 'lunar'), 'Mahina means moon');
-    assert.ok(tagged('english', 'Georgia', 'themes', 'rustic'), 'Georgia means farmer');
-    assert.ok(tagged('greek', 'Desdemona', 'genre', 'horror'), 'Desdemona means ill-fated');
-    assert.ok(!tagged('mongolian', 'Sarnai', 'themes', 'lunar'), 'Sarnai means rose');
-    assert.ok(!tagged('yoruba', 'Babatunde', 'genre', 'horror'), 'Babatunde means the father has returned');
-});
-
-test('Lithuanian surnames in -a are the man\'s form', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const gender = name => data.last_names.find(e => e.language_ethnicity === 'baltic' && e.name === name)?.gender;
-    for (const name of ['Noreika', 'Alekna', 'Mazeika', 'Rimša', 'Songaila', 'Čėsna']) assert.notEqual(gender(name), 'female', name);
-    assert.equal(gender('Andrejeva'), 'female');
-});
-
-test('a woman\'s given name is no Yoruba surname', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const surnames = data.last_names.filter(e => e.language_ethnicity === 'yoruba').map(e => e.name);
-    assert.deepEqual(['Abosede', 'Ajoke', 'Atinuke', 'Aderonke', 'Adebimpe', 'Adejoke'].filter(n => surnames.includes(n)), []);
-});
-
-test('what is no dragon is not filed as one', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const dragons = data.first_names.filter(e => e.race === 'dragon').map(e => e.name);
-    assert.deepEqual(['Kingu', 'Samebito', 'Otohime', 'Lamia', 'Mishibijiw'].filter(n => dragons.includes(n)), []);
-});
-
-test('a title and a Carian are not filed as Latin surname and Persian name', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    assert.ok(!data.last_names.some(e => e.language_ethnicity === 'latin' && e.name === 'Gothicus'));
-    assert.ok(!data.first_names.some(e => e.language_ethnicity === 'persian' && e.name === 'Pixodarus'));
-});
-
-test('Native American by-names: one man\'s fame stays out, the others are of their time', () => {
-    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const of = data.first_names.filter(e => e.language_ethnicity === 'nativeAmerican');
-    assert.deepEqual(['Sitting Bull', 'Crazy Horse', 'Rain-in-the-Face', 'Black Elk', 'Cornplanter', 'Poundmaker', 'Cornstalk'].filter(n => of.some(e => e.name === n)), []);
-    assert.deepEqual(of.find(e => e.name === 'Big Elk').era, ['victorian']);
-    assert.deepEqual(of.find(e => e.name === 'Winona').era, ['contemporary']);
-});
-
-test('a data tool\'s list reads the same with either line end', () => {
-    assert.deepEqual(parseLines('# note\r\na | b\r\n\r\nc | d\n'), [['a', 'b'], ['c', 'd']]);
+    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames]) check(data);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);
