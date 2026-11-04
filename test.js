@@ -406,7 +406,11 @@ test('database holds neither the country Fiji as a first name nor the broken for
 test('overused check folds case and accents, and no name of the new batch is on the list', () => {
     assert.equal(foldName('Élára'), foldName('elara'));
     const overused = loadOverused();
-    assert.ok(overused.has('elara') && overused.size > 100, 'the list holds what models keep inventing');
+    const on = names => names.filter(n => overused.has(foldName(n)));
+    const slop = ['Elara', 'Kael', 'Lyra', 'Seraphina', 'Thorn'];
+    assert.deepEqual(on(slop), slop, 'the list holds names models keep inventing that are rare among real people');
+    assert.deepEqual(on(['Maria', 'Anna', 'Thomas', 'Smith', 'Murphy', 'Ivan', 'Elena', 'Mihai', 'Popescu', 'Chen', 'Kim', 'Nguyen', 'Tanaka', 'Kofi']), [],
+        'a name common among real people is no AI slop, whatever the models do');
     const batch = readFileSync(new URL('./tools/m5-names.txt', import.meta.url), 'utf8').split(/\r?\n/)
         .filter(l => l.startsWith('first | ') || l.startsWith('last | '))
         .map(l => l.split(' | ')[2]);

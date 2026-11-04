@@ -1,0 +1,36 @@
+# Names models of several vendors keep inventing and few real people bear. A new name on this list does not enter, in any culture.
+# Counted from stored answers of five vendors by tools/m5-make-overused.mjs: 3 vendors under generic fantasy and style prompts;
+# common in real life (rank 1500 in a country, popular-names, 500 US births before 2000) stays off.
+aldric
+ashford
+blackthorn
+bramble
+calloway
+cinder
+cogsworth
+dust
+elara
+emberclaw
+fairfax
+grimshaw
+ironside
+jese
+juniper
+kael
+kaelen
+kensington
+larkspur
+nyx
+obsidian
+obsydian
+onyx
+riven
+rooke
+stormscale
+sylas
+vesper
+xaviere
+ysolde
+zephyr
+# Listed by hand: named by the owner or of that kind, though the counts do not reach them.
+seraphina
