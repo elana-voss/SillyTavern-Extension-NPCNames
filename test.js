@@ -328,14 +328,15 @@ test('database genders surnames by their endings and keeps no men with women\'s 
         // -son follows the person's sex in Icelandic; in Swedish it is a family name of both sexes.
         || (/son$/.test(e.name) && e.gender !== (e.language_ethnicity === 'icelandic' ? 'male' : undefined)));
     assert.deepEqual(wrong.map(e => e.name), []);
-    // Devi and Yadavani are women's surnames wherever they are filed; Hindi's others have no gender.
-    assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity)).map(e => e.name).sort(), ['Devi', 'Yadavani']);
+    // Devi and Yadavani are women's surnames wherever they are filed; Hindi's others have no gender. Latin has its feminine forms.
+    assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity) && e.language_ethnicity !== 'latin').map(e => e.name).sort(), ['Devi', 'Yadavani']);
     const genderOf = (culture, name) => data.last_names.find(e => e.language_ethnicity === culture && e.name === name).gender;
     assert.equal(genderOf('greek', 'Nikolaou'), undefined, 'Greek -ou is used by both sexes');
     assert.equal(genderOf('irishGaelic', "O'Byrne"), undefined, 'women bear anglicised forms too');
     for (const name of ['Papadaki', 'Tassi', 'Zika']) assert.equal(genderOf('greek', name), 'female', name);
     for (const name of ['Mundis', 'Rubis']) assert.equal(genderOf('greek', name), 'male', name);
     assert.equal(genderOf('hindi', 'Devi'), 'female');
+    assert.equal(genderOf('latin', 'Messalina'), 'female');
     const firsts = [makeEntry({ name: 'Piotr', gender: 'male', language_ethnicity: 'slavicPolish' })];
     for (let i = 0; i < 40; i++) {
         const pick = pickName(firsts, data.last_names, {}, new Set(), new Set(), max => i % max);
