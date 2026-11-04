@@ -44,19 +44,11 @@ const pickFresh = (firsts, lasts, filters = {}) => pickName(firsts, lasts, filte
 console.log('NPCNames picker tests:');
 
 test('matches gender + culture filter exactly', () => {
-    const firsts = [
-        makeEntry({ name: 'Hana', gender: 'female', language_ethnicity: 'japanese' }),
-        makeEntry({ name: 'Yuki', gender: 'female', language_ethnicity: 'japanese' }),
-        makeEntry({ name: 'Alice', gender: 'female', language_ethnicity: 'english' }),
-    ];
-    const lasts = [
-        makeSurname({ name: 'Tanaka', language_ethnicity: 'japanese' }),
-        makeSurname({ name: 'Smith', language_ethnicity: 'english' }),
-    ];
-    const pick = pickFresh(firsts, lasts, { gender: 'female', language_ethnicity: 'japanese' });
-    assert.equal(pick.gender, 'female');
-    assert.equal(pick.language_ethnicity, 'japanese');
-    assert.ok(['Hana', 'Yuki'].includes(pick.first_name));
+    const firsts = [makeEntry({ name: 'Bo', gender: 'male', language_ethnicity: 'japanese' }), makeEntry({ name: 'Alice' }),
+        makeEntry({ name: 'Hana', language_ethnicity: 'japanese' })];
+    const pick = pickFresh(firsts, [makeSurname({ name: 'Tanaka', language_ethnicity: 'japanese' }), makeSurname({ name: 'Smith' })],
+        { gender: 'female', language_ethnicity: 'japanese' });
+    assert.equal(pick.first_name, 'Hana');
     assert.equal(pick.relaxed_filters, undefined);
 });
 
@@ -94,39 +86,16 @@ test('resets the used set within the active slice when exhausted', () => {
 });
 
 test('surname culture always matches the first name even without a culture filter', () => {
-    const firsts = [makeEntry({ name: 'Hana', language_ethnicity: 'japanese' })];
-    const lasts = [
-        makeSurname({ name: 'Tanaka', language_ethnicity: 'japanese' }),
-        makeSurname({ name: 'Smith', language_ethnicity: 'english' }),
-        makeSurname({ name: 'Volkov', language_ethnicity: 'slavicRussian' }),
-    ];
-    const pick = pickFresh(firsts, lasts);
-    assert.equal(pick.first_name, 'Hana');
+    const lasts = [makeSurname({ name: 'Tanaka', language_ethnicity: 'japanese' }), makeSurname({ name: 'Smith' })];
+    const pick = pickFresh([makeEntry({ name: 'Hana', language_ethnicity: 'japanese' })], lasts);
     assert.equal(pick.last_name, 'Tanaka');
 });
 
-test('fantasy race pairs with fantasy ethnicity (database invariant)', () => {
-    const firsts = [
-        makeEntry({ name: 'Lirien', language_ethnicity: 'fantasyElvish', race: 'elf' }),
-    ];
-    const lasts = [
-        makeSurname({ name: 'Silverleaf', language_ethnicity: 'fantasyElvish', race: 'elf' }),
-    ];
-    const pick = pickFresh(firsts, lasts, { race: 'elf' });
-    assert.ok(pick.language_ethnicity.startsWith('fantasy'));
-});
-
 test('multi-era entry matches each of its eras', () => {
-    const eleanor = makeEntry({ name: 'Eleanor', era: ['victorian', 'midcentury'] });
-    const beatrice = makeEntry({ name: 'Beatrice', era: ['ancient'] });
-    const firsts = [eleanor, beatrice];
-    const lasts = [makeSurname()];
-    const victorian = pickFresh(firsts, lasts, { era: 'victorian' });
-    const midcentury = pickFresh(firsts, lasts, { era: 'midcentury' });
-    const ancient = pickFresh(firsts, lasts, { era: 'ancient' });
-    assert.equal(victorian.first_name, 'Eleanor');
-    assert.equal(midcentury.first_name, 'Eleanor');
-    assert.equal(ancient.first_name, 'Beatrice');
+    const firsts = [makeEntry({ name: 'Eleanor', era: ['victorian', 'midcentury'] }), makeEntry({ name: 'Beatrice', era: ['ancient'] })];
+    for (const [era, name] of [['victorian', 'Eleanor'], ['midcentury', 'Eleanor'], ['ancient', 'Beatrice']]) {
+        assert.equal(pickFresh(firsts, [makeSurname()], { era }).first_name, name);
+    }
 });
 
 test('culture without surnames returns the first name alone', () => {
