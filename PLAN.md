@@ -11,13 +11,13 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 - R5 Thin classes get names ("agreed"); Vietnamese first names ("yes"); male and female Native American names ("yes"); "add missing cultures" (Romanian, Ethiopian, Ghanaian).
 - R6 Names under the wrong culture move "only if you are sure".
 - R7 "then write a plan to fix all of this", meaning every finding below; `race: human` is the tag for ordinary human names.
-- R8 No name from a project other than this one is referenced; provider access stays outside the repo.
+- R8 About the project that shows how nano-gpt is reached: "do NOT reference that project from here, just look how it access nano-gpt."
 
 ## Milestones
 
 | # | Milestone | Requirement | Status | Priority | Claude tokens | nano-gpt input | Actual |
 |---|---|---|---|---|---|---|---|
-| 1 | Test bed and the unpublished fixes | R1 | Done | Must | 5M | 0 | |
+| 1 | Test bed and the unpublished fixes | R1 | Done | | 5M | 0 | 3.0M, 0; code review Fable 5.1 medium |
 | 2 | Gods, handles and non-names | R1, R2, R7 | To do | Must | 4M | 0.3M | |
 | 3 | Surnames: gender and non-surnames | R1, R7 | To do | Must | 3M | 0.2M | |
 | 4 | Cultures: labels and misfiled names | R1, R5, R6 | To do | Must | 4M | 0.5M | |
@@ -99,4 +99,4 @@ None open.
 
 ## Trials
 
-None open.
+- Open: a milestone agent gets only its own section of the plan to read, not the plan whole, and is told to read CLAUDE.md once. Figure: context at an agent's end; before: 97,274 at milestone 1's hand-over.
