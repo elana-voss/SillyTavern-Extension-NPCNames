@@ -101,10 +101,11 @@ One live model through nano-gpt on the test bed with the finished work: an ordin
 
 ## Questions for the owner
 
-- Where some of the names come from. When a user asks for a name, the extension can draw one that reached the database through the public list name-dataset, whose own page says it was made from the Facebook leak of 533 million accounts. The list holds names alone, no account or person, and its licence allows the use. 666 of this milestone's new names rest on it alone, most of them Fijian (151), Azerbaijani (137), Ghanaian (129), Ethiopian and other Slavic (74 each); the first release already used it too. Keep: nothing changes, and the licence file says where it comes from. Remove: those 666 go, those cultures get much thinner, and the older names would need tracing too. Claude recommends keeping them. They stay in until he answers.
+None open.
 
 ## Decisions
 
+- The names from name-dataset, built from the Facebook leak, stay; the licence file says where it comes from. The owner: "keep, it is just general names, there is no conflict in using them".
 - Nothing is pushed before milestone 8's word from the owner: extension users update from the repo's main branch.
 - No new filter: `race: human` does it, with one new value. Filters stay the remote LLM's; if it passes none, a god can still come back.
 - The order filters are dropped in does not change (`picker.js:1`).
