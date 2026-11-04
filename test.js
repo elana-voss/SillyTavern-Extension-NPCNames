@@ -302,5 +302,46 @@ test('database files gods, handles and non-names as the readings say', () => {
     assert.deepEqual(gone.filter(n => names.has(n)), []);
 });
 
+test('a surname of the other gender is never given; one without a gender is', () => {
+    const firsts = [makeEntry({ name: 'Piotr', gender: 'male' })];
+    const kowalska = makeSurname({ name: 'Kowalska', gender: 'female' });
+    const wojcik = makeSurname({ name: 'Wojcik' });
+    assert.equal(pickName(firsts, [kowalska, wojcik], {}, new Set(), new Set(), fixedRng).last_name, 'Wojcik');
+    assert.equal('last_name' in pickName(firsts, [kowalska], {}, new Set(), new Set(), fixedRng), false);
+});
+
+test('an ambiguous character takes a surname of any gender', () => {
+    const firsts = [makeEntry({ name: 'Sasha', gender: 'ambiguous' })];
+    const lasts = [makeSurname({ name: 'Kowalska', gender: 'female' })];
+    assert.equal(pickName(firsts, lasts, {}, new Set(), new Set(), fixedRng).last_name, 'Kowalska');
+});
+
+test('database genders surnames by their endings and keeps no men with women\'s surnames', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const cultures = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic'];
+    const FEMALE = /(sk|ck)a$|dóttir$|dottir$|ová$|ienė$|(ов|ев|ск)а$|(ов|ев)ая$/u;
+    const MALE = /(sk|ck)i$|ński$|(s|a)son$|(ов|ев|ий|ин)$|(ov|ev|yov)$|ņš$/u;
+    const wrong = data.last_names.filter(e => cultures.includes(e.language_ethnicity)).filter(e =>
+        (FEMALE.test(e.name) && e.gender !== 'female') || (MALE.test(e.name) && e.gender !== 'male'));
+    assert.deepEqual(wrong.map(e => e.name), []);
+    assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity)).map(e => e.name), []);
+    const firsts = [makeEntry({ name: 'Piotr', gender: 'male', language_ethnicity: 'slavicPolish' })];
+    for (let i = 0; i < 40; i++) {
+        const pick = pickName(firsts, data.last_names, {}, new Set(), new Set(), max => i % max);
+        assert.doesNotMatch(pick.last_name, /(sk|ck)a$/);
+    }
+});
+
+test('database holds no non-surnames, no Mongolian surnames, no surnames as Chinese first names', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const lasts = new Set(data.last_names.map(e => `${e.language_ethnicity}/${e.name}`));
+    const firsts = new Set(data.first_names.map(e => `${e.language_ethnicity}/${e.name}`));
+    const gone = ['arabic/يناير', 'arabic/مارس', 'slavicPolish/Sz', 'hebrew/Sh', 'yoruba/Gh', 'chinese/Mawar', 'korean/남자'];
+    assert.deepEqual(gone.filter(n => lasts.has(n)), []);
+    assert.deepEqual(data.last_names.filter(e => e.language_ethnicity === 'mongolian').map(e => e.name), []);
+    assert.ok(lasts.has('korean/남궁') && lasts.has('hebrew/דוד'), 'real surnames in both lists stay');
+    assert.ok(!firsts.has('chinese/Zhang') && firsts.has('chinese/Hao'));
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed > 0 ? 1 : 0);

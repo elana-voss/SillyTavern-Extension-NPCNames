@@ -38154,29 +38154,6 @@
       "themes": []
     },
     {
-      "name": "Jiang",
-      "gender": "male",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Jiayi",
       "gender": "female",
       "language_ethnicity": "chinese",
@@ -44755,29 +44732,6 @@
       "themes": [
         "mystical"
       ]
-    },
-    {
-      "name": "Kwok",
-      "gender": "male",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "Kyaron",
@@ -68912,29 +68866,6 @@
       "themes": []
     },
     {
-      "name": "Shi",
-      "gender": "male",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Shik",
       "gender": "male",
       "language_ethnicity": "korean",
@@ -79969,29 +79900,6 @@
       ]
     },
     {
-      "name": "Wu",
-      "gender": "male",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Wulan",
       "gender": "female",
       "language_ethnicity": "indonesian",
@@ -81483,29 +81391,6 @@
       "name": "Yent",
       "gender": "male",
       "language_ethnicity": "spanish",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Yeung",
-      "gender": "male",
-      "language_ethnicity": "chinese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -83372,29 +83257,6 @@
       "themes": []
     },
     {
-      "name": "Zhang",
-      "gender": "male",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Zhe",
       "gender": "male",
       "language_ethnicity": "chinese",
@@ -83466,29 +83328,6 @@
     {
       "name": "Zhong",
       "gender": "male",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Zhu",
-      "gender": "female",
       "language_ethnicity": "chinese",
       "mythology": null,
       "race": "human",
@@ -98200,24 +98039,6 @@
       "themes": []
     },
     {
-      "name": "Aare",
-      "language_ethnicity": "estonian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Abbasova",
       "language_ethnicity": "turkish",
       "mythology": null,
@@ -98620,26 +98441,6 @@
       "themes": []
     },
     {
-      "name": "Agni",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "fiery"
-      ]
-    },
-    {
       "name": "Agostinho",
       "language_ethnicity": "portuguese",
       "mythology": null,
@@ -98660,24 +98461,6 @@
     {
       "name": "Agovic",
       "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Agung",
-      "language_ethnicity": "indonesian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98721,42 +98504,6 @@
       ],
       "role": [
         "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Agus",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Agustinus",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "mentor"
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
@@ -99278,24 +99025,6 @@
       "themes": []
     },
     {
-      "name": "Alana",
-      "language_ethnicity": "hawaiian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Albarrán",
       "language_ethnicity": "spanish",
       "mythology": null,
@@ -99674,42 +99403,6 @@
       "themes": []
     },
     {
-      "name": "Altanbaatar",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Altangerel",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Alvarsson",
       "language_ethnicity": "swedish",
       "mythology": null,
@@ -99728,24 +99421,6 @@
       "themes": []
     },
     {
-      "name": "Ama",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Amaechi",
       "language_ethnicity": "nigerian",
       "mythology": null,
@@ -99755,24 +99430,6 @@
       ],
       "role": [
         "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Amarbayar",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
@@ -99893,6 +99550,7 @@
     },
     {
       "name": "Angelov",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -100018,24 +99676,6 @@
       "themes": []
     },
     {
-      "name": "Ardian",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Arendse",
       "language_ethnicity": "english",
       "mythology": null,
@@ -100126,80 +99766,8 @@
       "themes": []
     },
     {
-      "name": "Aria",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Arifin",
       "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Ario",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Ariunbold",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Ariunzul",
-      "language_ethnicity": "mongolian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100675,6 +100243,7 @@
     },
     {
       "name": "Baldursson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -100934,24 +100503,6 @@
       "themes": []
     },
     {
-      "name": "Bat-Erdene",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Batalha",
       "language_ethnicity": "portuguese",
       "mythology": null,
@@ -100974,42 +100525,6 @@
     {
       "name": "Battistelli",
       "language_ethnicity": "italian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Bayanmunkh",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Bayasgalan",
-      "language_ethnicity": "mongolian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -101250,24 +100765,6 @@
       "themes": []
     },
     {
-      "name": "Berty",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "comicRelief"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Berylhelm",
       "language_ethnicity": "fantasyDwarven",
       "mythology": null,
@@ -101379,6 +100876,7 @@
     },
     {
       "name": "Bielska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -101396,43 +100894,8 @@
       "themes": []
     },
     {
-      "name": "Bilegt",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Bilguun",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Birgisdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -101451,6 +100914,7 @@
     },
     {
       "name": "Birgisson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -101577,6 +101041,7 @@
     },
     {
       "name": "Bjarnadóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -101595,6 +101060,7 @@
     },
     {
       "name": "Bjarnason",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -101631,6 +101097,7 @@
     },
     {
       "name": "Björgvinsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -101649,6 +101116,7 @@
     },
     {
       "name": "Björnsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -101742,78 +101210,6 @@
       "themes": [
         "earthy"
       ]
-    },
-    {
-      "name": "Bold-Erdene",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Boldbaatar",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Boldmaa",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Bolor",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "Bonegrog",
@@ -102151,6 +101547,7 @@
     },
     {
       "name": "Brzezińska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -102169,6 +101566,7 @@
     },
     {
       "name": "Brzeziński",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -102314,24 +101712,6 @@
     {
       "name": "Buttigieg",
       "language_ethnicity": "italian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Byambajav",
-      "language_ethnicity": "mongolian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -102582,24 +101962,6 @@
       "themes": []
     },
     {
-      "name": "Cahyo",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Camsal",
       "language_ethnicity": "mayan",
       "mythology": null,
@@ -102638,24 +102000,6 @@
     {
       "name": "Candeias",
       "language_ethnicity": "portuguese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Candra",
-      "language_ethnicity": "indonesian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103150,24 +102494,6 @@
       "themes": []
     },
     {
-      "name": "Chinbat",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Choa",
       "language_ethnicity": "chinese",
       "mythology": null,
@@ -103330,44 +102656,6 @@
       "themes": []
     },
     {
-      "name": "Chuluun",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Chuluunbaatar",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "hero"
-      ],
-      "allure": "striking",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "military"
-      ]
-    },
-    {
       "name": "Chén",
       "language_ethnicity": "chinese",
       "mythology": null,
@@ -103516,26 +102804,6 @@
       "themes": []
     },
     {
-      "name": "Cosmos",
-      "language_ethnicity": "greek",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "allure": "striking",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "celestial"
-      ]
-    },
-    {
       "name": "Crespo",
       "language_ethnicity": "spanish",
       "mythology": null,
@@ -103681,6 +102949,7 @@
     },
     {
       "name": "Czarnecka",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -103723,22 +102992,6 @@
         "loveInterest"
       ],
       "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Dadang",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "sidekick"
-      ],
-      "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [],
       "themes": []
@@ -103972,22 +103225,6 @@
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Davaajav",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -104349,22 +103586,6 @@
       "themes": []
     },
     {
-      "name": "Delgermaa",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Delis",
       "language_ethnicity": "greek",
       "mythology": null,
@@ -104431,22 +103652,6 @@
     {
       "name": "Detamo",
       "language_ethnicity": "swahili",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Devakot",
-      "language_ethnicity": "nepalese",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104735,22 +103940,6 @@
       "themes": []
     },
     {
-      "name": "Djamel",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Djordjevic",
       "language_ethnicity": "german",
       "mythology": null,
@@ -104925,6 +104114,7 @@
     },
     {
       "name": "Dvořáková",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -105189,6 +104379,7 @@
     },
     {
       "name": "Egilsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -105221,6 +104412,7 @@
     },
     {
       "name": "Einarsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -105237,6 +104429,7 @@
     },
     {
       "name": "Eiríksson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -105338,96 +104531,6 @@
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Enkhbayar",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Enkhjargal",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Enkhtaiwan",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Erdenechuluun",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Erdenetulga",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -105542,26 +104645,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Espírito",
-      "language_ethnicity": "portuguese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "religious"
-      ]
     },
     {
       "name": "Estelda",
@@ -105856,24 +104939,6 @@
       "themes": []
     },
     {
-      "name": "Filipa",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Filipe",
       "language_ethnicity": "portuguese",
       "mythology": null,
@@ -106009,24 +105074,6 @@
       ]
     },
     {
-      "name": "Formoza",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Frade",
       "language_ethnicity": "portuguese",
       "mythology": null,
@@ -106136,6 +105183,7 @@
     },
     {
       "name": "Friðriksson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -106356,24 +105404,6 @@
       "themes": []
     },
     {
-      "name": "Gbemisola",
-      "language_ethnicity": "nigerian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Gbenga-Mustapha",
       "language_ethnicity": "nigerian",
       "mythology": null,
@@ -106554,24 +105584,6 @@
       "themes": []
     },
     {
-      "name": "Gh",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ghang",
       "language_ethnicity": "korean",
       "mythology": null,
@@ -106662,24 +105674,6 @@
       "themes": []
     },
     {
-      "name": "Giannis",
-      "language_ethnicity": "greek",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Gikas",
       "language_ethnicity": "greek",
       "mythology": null,
@@ -106691,24 +105685,6 @@
         "neutral"
       ],
       "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Gilang",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
@@ -106897,6 +105873,7 @@
     },
     {
       "name": "Golubev",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -107005,6 +105982,7 @@
     },
     {
       "name": "Grabowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -107195,6 +106173,7 @@
     },
     {
       "name": "Gudmundsdottir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -107231,6 +106210,7 @@
     },
     {
       "name": "Gunnlaugsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -107249,6 +106229,7 @@
     },
     {
       "name": "Guðmundsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -107323,6 +106304,7 @@
     },
     {
       "name": "Gíslason",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -107359,6 +106341,7 @@
     },
     {
       "name": "Górska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -107395,6 +106378,7 @@
     },
     {
       "name": "Głowacka",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -107413,6 +106397,7 @@
     },
     {
       "name": "Głowacki",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -107543,6 +106528,7 @@
     },
     {
       "name": "Halldórsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -107633,6 +106619,7 @@
     },
     {
       "name": "Haraldsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -107746,26 +106733,6 @@
       ]
     },
     {
-      "name": "Hati",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "antihero"
-      ],
-      "allure": "harsh",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "fiery"
-      ]
-    },
-    {
       "name": "Haugnes",
       "language_ethnicity": "norwegian",
       "mythology": null,
@@ -107861,6 +106828,7 @@
     },
     {
       "name": "Helgadóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -107890,24 +106858,6 @@
       ],
       "allure": "unremarkable",
       "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Hendi",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -108405,6 +107355,7 @@
     },
     {
       "name": "Hristova",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -108988,46 +107939,6 @@
       ]
     },
     {
-      "name": "Iosua",
-      "language_ethnicity": "hawaiian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
-      "name": "Irfan",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "scholarly"
-      ]
-    },
-    {
       "name": "Irian",
       "language_ethnicity": "fantasyElvish",
       "mythology": null,
@@ -109259,6 +108170,7 @@
     },
     {
       "name": "Jabłońska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -109279,6 +108191,7 @@
     },
     {
       "name": "Jabłoński",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -109317,6 +108230,7 @@
     },
     {
       "name": "Jankowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -109337,6 +108251,7 @@
     },
     {
       "name": "Janowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -109377,6 +108292,7 @@
     },
     {
       "name": "Jaworska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -109540,60 +108456,6 @@
       "themes": []
     },
     {
-      "name": "Jjang",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Jnr",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Joao",
-      "language_ethnicity": "portuguese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Joeng",
       "language_ethnicity": "chinese",
       "mythology": null,
@@ -109631,6 +108493,7 @@
     },
     {
       "name": "Jonsdottir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -109667,6 +108530,7 @@
     },
     {
       "name": "Jóhannesson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -109687,6 +108551,7 @@
     },
     {
       "name": "Jóhannsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -109705,6 +108570,7 @@
     },
     {
       "name": "Jóhannsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -109725,6 +108591,7 @@
     },
     {
       "name": "Jónasdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -109743,6 +108610,7 @@
     },
     {
       "name": "Jónasson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -109763,6 +108631,7 @@
     },
     {
       "name": "Jónsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -109837,6 +108706,7 @@
     },
     {
       "name": "Kadlecová",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -109993,6 +108863,7 @@
     },
     {
       "name": "Kalinowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -110049,6 +108920,7 @@
     },
     {
       "name": "Kalniņš",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -110089,6 +108961,7 @@
     },
     {
       "name": "Kamińska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -110109,6 +108982,7 @@
     },
     {
       "name": "Kamiński",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -110331,6 +109205,7 @@
     },
     {
       "name": "Kavalioŭ",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -110367,26 +109242,6 @@
     },
     {
       "name": "Kawana",
-      "language_ethnicity": "maori",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "watery"
-      ]
-    },
-    {
-      "name": "Kawhia",
       "language_ethnicity": "maori",
       "mythology": null,
       "race": "human",
@@ -110736,42 +109591,6 @@
       "themes": []
     },
     {
-      "name": "Khishigjargal",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Khuder",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Khúc",
       "language_ethnicity": "vietnamese",
       "mythology": null,
@@ -110887,6 +109706,7 @@
     },
     {
       "name": "Kjartansdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -110905,6 +109725,7 @@
     },
     {
       "name": "Kjartansson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -111046,24 +109867,6 @@
       ],
       "allure": "pleasant",
       "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Kofi",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -111272,26 +110075,6 @@
       ]
     },
     {
-      "name": "Konstantinos",
-      "language_ethnicity": "greek",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "scholarly"
-      ]
-    },
-    {
       "name": "Konstantinou",
       "language_ethnicity": "greek",
       "mythology": null,
@@ -111420,26 +110203,6 @@
       "themes": []
     },
     {
-      "name": "Kostas",
-      "language_ethnicity": "greek",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "scholarly"
-      ]
-    },
-    {
       "name": "Kovalchuk",
       "language_ethnicity": "ukrainian",
       "mythology": null,
@@ -111495,6 +110258,7 @@
     },
     {
       "name": "Kozłowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -111513,6 +110277,7 @@
     },
     {
       "name": "Kozłowski",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -111643,6 +110408,7 @@
     },
     {
       "name": "Kristjánsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -111994,42 +110760,6 @@
       "themes": []
     },
     {
-      "name": "Kwaku",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Kwame",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Kweon",
       "language_ethnicity": "korean",
       "mythology": null,
@@ -112105,6 +110835,7 @@
     },
     {
       "name": "Kārkliņš",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -112315,6 +111046,7 @@
     },
     {
       "name": "Laskowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -112461,6 +111193,7 @@
     },
     {
       "name": "Lebedev",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -113029,42 +111762,6 @@
     {
       "name": "Lunjevica",
       "language_ethnicity": "serbian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Luís",
-      "language_ethnicity": "portuguese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Luíz",
-      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113754,6 +112451,7 @@
     },
     {
       "name": "Majewska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -113844,6 +112542,7 @@
     },
     {
       "name": "Malinowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -113988,6 +112687,7 @@
     },
     {
       "name": "Markoski",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -114169,24 +112869,6 @@
       "themes": []
     },
     {
-      "name": "Mawar",
-      "language_ethnicity": "chinese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Mayerhofer",
       "language_ethnicity": "german",
       "mythology": null,
@@ -114349,24 +113031,6 @@
       "themes": []
     },
     {
-      "name": "Mend-Ochir",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Menelaou",
       "language_ethnicity": "greek",
       "mythology": null,
@@ -114405,27 +113069,8 @@
       ]
     },
     {
-      "name": "Mhamad",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
       "name": "Michalska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -114554,6 +113199,7 @@
     },
     {
       "name": "Mitev",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -114988,26 +113634,6 @@
       ]
     },
     {
-      "name": "Mungunzul",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "earthy"
-      ]
-    },
-    {
       "name": "Muradi",
       "language_ethnicity": "persian",
       "mythology": null,
@@ -115333,24 +113959,6 @@
         "bystander"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Nathalie",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
       "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
@@ -115773,26 +114381,6 @@
       ]
     },
     {
-      "name": "Nomindalai",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "celestial"
-      ]
-    },
-    {
       "name": "Noronha",
       "language_ethnicity": "portuguese",
       "mythology": null,
@@ -115853,6 +114441,7 @@
     },
     {
       "name": "Nowicka",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -116037,46 +114626,6 @@
       ],
       "themes": [
         "regal"
-      ]
-    },
-    {
-      "name": "Ochir",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "earthy"
-      ]
-    },
-    {
-      "name": "Ochirbat",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "earthy"
       ]
     },
     {
@@ -116281,6 +114830,7 @@
     },
     {
       "name": "Olafsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -116373,6 +114923,7 @@
     },
     {
       "name": "Olszewska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -116644,24 +115195,6 @@
       "themes": []
     },
     {
-      "name": "Osvaldo",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Otoo",
       "language_ethnicity": "yoruba",
       "mythology": null,
@@ -116736,42 +115269,6 @@
     {
       "name": "Oyegun",
       "language_ethnicity": "nigerian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Oyun",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Oyunchimeg",
-      "language_ethnicity": "mongolian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -117041,6 +115538,7 @@
     },
     {
       "name": "Pavlovski",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -117059,6 +115557,7 @@
     },
     {
       "name": "Pawłowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -117077,6 +115576,7 @@
     },
     {
       "name": "Pawłowski",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -117142,24 +115642,6 @@
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Pepi",
-      "language_ethnicity": "greek",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -117347,6 +115829,7 @@
     },
     {
       "name": "Piotrowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -117457,6 +115940,7 @@
     },
     {
       "name": "Pokorná",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -117942,24 +116426,6 @@
       "themes": []
     },
     {
-      "name": "Purev",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Purnomo",
       "language_ethnicity": "indonesian",
       "mythology": null,
@@ -117997,6 +116463,7 @@
     },
     {
       "name": "Pálsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -118015,6 +116482,7 @@
     },
     {
       "name": "Pétursdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -118033,6 +116501,7 @@
     },
     {
       "name": "Pétursson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -118359,6 +116828,7 @@
     },
     {
       "name": "Ragnarsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -118379,6 +116849,7 @@
     },
     {
       "name": "Ragnarsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -118420,24 +116891,6 @@
     {
       "name": "Rahadian",
       "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Raimond",
-      "language_ethnicity": "estonian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -119051,60 +117504,6 @@
       "themes": []
     },
     {
-      "name": "Rizki",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Rizky",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Rla",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Rolfsnes",
       "language_ethnicity": "norwegian",
       "mythology": null,
@@ -119430,6 +117829,7 @@
     },
     {
       "name": "Růžička",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -119519,46 +117919,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Sagor",
-      "language_ethnicity": "hindi",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "literary"
-      ]
-    },
-    {
-      "name": "Sahil",
-      "language_ethnicity": "persian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "watery"
-      ]
     },
     {
       "name": "Sahlstén",
@@ -119727,24 +118087,6 @@
       "themes": []
     },
     {
-      "name": "Salma",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Saltos",
       "language_ethnicity": "spanish",
       "mythology": null,
@@ -119799,24 +118141,6 @@
       "themes": []
     },
     {
-      "name": "Sanjeewa",
-      "language_ethnicity": "hindi",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Saphi",
       "language_ethnicity": "nepalese",
       "mythology": null,
@@ -119835,26 +118159,6 @@
       "themes": []
     },
     {
-      "name": "Saran-Uyanga",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "celestial"
-      ]
-    },
-    {
       "name": "Sarantos",
       "language_ethnicity": "greek",
       "mythology": null,
@@ -119871,46 +118175,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Sarantuya",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "celestial"
-      ]
-    },
-    {
-      "name": "Sarnai",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "floral"
-      ]
     },
     {
       "name": "Sarpong",
@@ -120191,24 +118455,6 @@
       "themes": []
     },
     {
-      "name": "Ser-Od",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Setia",
       "language_ethnicity": "indonesian",
       "mythology": null,
@@ -120224,22 +118470,6 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
-    },
-    {
-      "name": "Sh",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
       "themes": []
     },
     {
@@ -120420,6 +118650,7 @@
     },
     {
       "name": "Sigurdardottir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -120456,6 +118687,7 @@
     },
     {
       "name": "Sigurjónsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -120474,6 +118706,7 @@
     },
     {
       "name": "Sigurðsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -120651,6 +118884,7 @@
     },
     {
       "name": "Skúladóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -120765,22 +118999,6 @@
       ]
     },
     {
-      "name": "Sohel",
-      "language_ethnicity": "hindi",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Soleye",
       "language_ethnicity": "nigerian",
       "mythology": null,
@@ -120799,25 +119017,8 @@
       ]
     },
     {
-      "name": "Solongo",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pretty",
-      "commonness": "rare",
-      "genre": [],
-      "themes": [
-        "solar"
-      ]
-    },
-    {
       "name": "Solovyov",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -120854,6 +119055,7 @@
     },
     {
       "name": "Soukupová",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -120905,24 +119107,6 @@
       ]
     },
     {
-      "name": "Spiros",
-      "language_ethnicity": "greek",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
       "name": "Srisa",
       "language_ethnicity": "nepalese",
       "mythology": null,
@@ -120971,24 +119155,6 @@
       "themes": [
         "earthy"
       ]
-    },
-    {
-      "name": "Standard",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "Stanikzai",
@@ -121058,6 +119224,7 @@
     },
     {
       "name": "Stefánsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -121410,6 +119577,7 @@
     },
     {
       "name": "Sveinsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -121441,40 +119609,6 @@
       "themes": []
     },
     {
-      "name": "Syaiful",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
-      "name": "Sz",
-      "language_ethnicity": "slavicPolish",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Szabat",
       "language_ethnicity": "english",
       "mythology": null,
@@ -121492,6 +119626,7 @@
     },
     {
       "name": "Szymańska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -121508,6 +119643,7 @@
     },
     {
       "name": "Szymański",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -122135,24 +120271,6 @@
       ]
     },
     {
-      "name": "Temitope",
-      "language_ethnicity": "nigerian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Texier",
       "language_ethnicity": "french",
       "mythology": null,
@@ -122183,24 +120301,6 @@
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Thapaliy",
-      "language_ethnicity": "nepalese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -122623,24 +120723,6 @@
       "themes": []
     },
     {
-      "name": "Tonye",
-      "language_ethnicity": "nigerian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Tormonen",
       "language_ethnicity": "finnish",
       "mythology": null,
@@ -122714,6 +120796,7 @@
     },
     {
       "name": "Trajanoski",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -122725,24 +120808,6 @@
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Tramp",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -122779,24 +120844,6 @@
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Trowel",
-      "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -122893,96 +120940,6 @@
       "themes": []
     },
     {
-      "name": "Tsend",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Tserendolgor",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Tserenmaa",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Tsetsegmaa",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Tseveendorj",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Tuau",
       "language_ethnicity": "maori",
       "mythology": null,
@@ -123021,24 +120978,6 @@
     {
       "name": "Tudman",
       "language_ethnicity": "english",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Tuguldur",
-      "language_ethnicity": "mongolian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -123417,42 +121356,6 @@
       "themes": []
     },
     {
-      "name": "Ulziibayar",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Ulziikhishig",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Uman",
       "language_ethnicity": "mayan",
       "mythology": null,
@@ -123464,24 +121367,6 @@
         "neutral"
       ],
       "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Undral",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
       "commonness": "rare",
       "genre": [
         "sliceOfLife"
@@ -123537,24 +121422,6 @@
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Urangoo",
-      "language_ethnicity": "mongolian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -123646,6 +121513,7 @@
     },
     {
       "name": "Valdimarsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -123798,6 +121666,7 @@
     },
     {
       "name": "Vanags",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -123834,27 +121703,8 @@
       ]
     },
     {
-      "name": "Vasco",
-      "language_ethnicity": "greek",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "hero"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "western"
-      ],
-      "themes": [
-        "nautical"
-      ]
-    },
-    {
       "name": "Vasilyev",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -123989,6 +121839,7 @@
     },
     {
       "name": "Vinogradov",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -124021,6 +121872,7 @@
     },
     {
       "name": "Vlček",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -124037,6 +121889,7 @@
     },
     {
       "name": "Vlčková",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -124403,22 +122256,6 @@
       ]
     },
     {
-      "name": "Wati",
-      "language_ethnicity": "indonesian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "Weigart",
       "language_ethnicity": "english",
       "mythology": null,
@@ -124622,6 +122459,7 @@
     },
     {
       "name": "Witkowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -124638,6 +122476,7 @@
     },
     {
       "name": "Wiśniewska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -124654,6 +122493,7 @@
     },
     {
       "name": "Wiśniewski",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -124670,6 +122510,7 @@
     },
     {
       "name": "Wojciechowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -125252,6 +123093,7 @@
     },
     {
       "name": "Zalewska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -125300,6 +123142,7 @@
     },
     {
       "name": "Zariņš",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -125332,6 +123175,7 @@
     },
     {
       "name": "Zaytsev",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -125476,6 +123320,7 @@
     },
     {
       "name": "Zielińska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -125492,6 +123337,7 @@
     },
     {
       "name": "Zieliński",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -125614,38 +123460,6 @@
         "bystander"
       ],
       "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Anandi",
-      "language_ethnicity": "hindi",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Arjun",
-      "language_ethnicity": "hindi",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [],
       "themes": []
@@ -126836,6 +124650,7 @@
     },
     {
       "name": "Árnason",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -126852,6 +124667,7 @@
     },
     {
       "name": "Ásgeirsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -127652,6 +125468,7 @@
     },
     {
       "name": "Ólafsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -127672,6 +125489,7 @@
     },
     {
       "name": "Óskarsson",
+      "gender": "male",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -127772,6 +125590,7 @@
     },
     {
       "name": "Þorsteinsdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -127792,6 +125611,7 @@
     },
     {
       "name": "Þórisdóttir",
+      "gender": "female",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -127832,6 +125652,7 @@
     },
     {
       "name": "Čermák",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -127852,6 +125673,7 @@
     },
     {
       "name": "Černá",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -128132,6 +125954,7 @@
     },
     {
       "name": "Żukowska",
+      "gender": "female",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -128152,6 +125975,7 @@
     },
     {
       "name": "Żukowski",
+      "gender": "male",
       "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
@@ -128172,6 +125996,7 @@
     },
     {
       "name": "Žukauskienė",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -128375,47 +126200,8 @@
       ]
     },
     {
-      "name": "Александр",
-      "language_ethnicity": "slavicRussian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "rustic"
-      ]
-    },
-    {
-      "name": "Александровна",
-      "language_ethnicity": "slavicRussian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "rustic"
-      ]
-    },
-    {
       "name": "Алексеев",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128436,6 +126222,7 @@
     },
     {
       "name": "Алексеева",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128456,6 +126243,7 @@
     },
     {
       "name": "Андреев",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128476,6 +126264,7 @@
     },
     {
       "name": "Андреева",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128536,6 +126325,7 @@
     },
     {
       "name": "Белов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128616,6 +126406,7 @@
     },
     {
       "name": "Гончаров",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128676,6 +126467,7 @@
     },
     {
       "name": "Григорьев",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128696,6 +126488,7 @@
     },
     {
       "name": "Григорьева",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128756,26 +126549,7 @@
     },
     {
       "name": "Егоров",
-      "language_ethnicity": "slavicRussian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "rustic"
-      ]
-    },
-    {
-      "name": "Елена",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128856,6 +126630,7 @@
     },
     {
       "name": "Захарова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128892,6 +126667,7 @@
     },
     {
       "name": "Иванов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -128910,6 +126686,7 @@
     },
     {
       "name": "Иванова",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -128928,6 +126705,7 @@
     },
     {
       "name": "Илиев",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -128946,6 +126724,7 @@
     },
     {
       "name": "Исаев",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129036,6 +126815,7 @@
     },
     {
       "name": "Котова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129072,6 +126852,7 @@
     },
     {
       "name": "Кузнецов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129090,6 +126871,7 @@
     },
     {
       "name": "Кузнецова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129126,6 +126908,7 @@
     },
     {
       "name": "Лебедев",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129146,6 +126929,7 @@
     },
     {
       "name": "Лебедева",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129202,6 +126986,7 @@
     },
     {
       "name": "Магомедов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129220,6 +127005,7 @@
     },
     {
       "name": "Магомедова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129238,6 +127024,7 @@
     },
     {
       "name": "Максимова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129256,6 +127043,7 @@
     },
     {
       "name": "Маринов",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -129274,6 +127062,7 @@
     },
     {
       "name": "Матвеева",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129292,6 +127081,7 @@
     },
     {
       "name": "Миронова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129366,6 +127156,7 @@
     },
     {
       "name": "Никитин",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129384,6 +127175,7 @@
     },
     {
       "name": "Новиков",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129402,6 +127194,7 @@
     },
     {
       "name": "Облонский",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129438,6 +127231,7 @@
     },
     {
       "name": "Орлов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129456,6 +127250,7 @@
     },
     {
       "name": "Орлова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129474,6 +127269,7 @@
     },
     {
       "name": "Павлов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129492,6 +127288,7 @@
     },
     {
       "name": "Павлова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129546,6 +127343,7 @@
     },
     {
       "name": "Петров",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -129564,6 +127362,7 @@
     },
     {
       "name": "Романов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129602,6 +127401,7 @@
     },
     {
       "name": "Семенов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129620,6 +127420,7 @@
     },
     {
       "name": "Сергеев",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129638,6 +127439,7 @@
     },
     {
       "name": "Смирнова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129656,6 +127458,7 @@
     },
     {
       "name": "Соколова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129674,6 +127477,7 @@
     },
     {
       "name": "Соловьева",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129694,6 +127498,7 @@
     },
     {
       "name": "Стефанова",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -129712,6 +127517,7 @@
     },
     {
       "name": "Стоянова",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -129748,6 +127554,7 @@
     },
     {
       "name": "Тарасова",
+      "gender": "female",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129838,6 +127645,7 @@
     },
     {
       "name": "Фролов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -129874,6 +127682,7 @@
     },
     {
       "name": "Христов",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -130002,6 +127811,7 @@
     },
     {
       "name": "Яхонтов",
+      "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
@@ -130615,26 +128425,6 @@
       ]
     },
     {
-      "name": "ابو محمد",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
       "name": "احمدزی",
       "language_ethnicity": "persian",
       "mythology": null,
@@ -131114,42 +128904,6 @@
       "themes": []
     },
     {
-      "name": "تنها",
-      "language_ethnicity": "persian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "جان",
-      "language_ethnicity": "persian",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "جعفر",
       "language_ethnicity": "arabic",
       "mythology": null,
@@ -131168,24 +128922,6 @@
       "themes": [
         "religious"
       ]
-    },
-    {
-      "name": "حلب",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "داود",
@@ -131493,24 +129229,6 @@
       ]
     },
     {
-      "name": "فلسطين",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "كمال",
       "language_ethnicity": "arabic",
       "mythology": null,
@@ -131529,24 +129247,6 @@
       "themes": [
         "scholarly"
       ]
-    },
-    {
-      "name": "مارس",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "مختار",
@@ -131699,24 +129399,6 @@
       "themes": []
     },
     {
-      "name": "يناير",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "یوسفی",
       "language_ethnicity": "persian",
       "mythology": null,
@@ -131734,44 +129416,6 @@
       ],
       "themes": [
         "religious"
-      ]
-    },
-    {
-      "name": "মন",
-      "language_ethnicity": "hindi",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "กล้วยไม้",
-      "language_ethnicity": "thai",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "floral"
       ]
     },
     {
@@ -131823,24 +129467,6 @@
       ],
       "allure": "pleasant",
       "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "ชัยวัฒน์",
-      "language_ethnicity": "thai",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "hero"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -131901,24 +129527,6 @@
       "themes": []
     },
     {
-      "name": "นิยม",
-      "language_ethnicity": "thai",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "บรรหารทัณฑกิจ",
       "language_ethnicity": "thai",
       "mythology": null,
@@ -131949,24 +129557,6 @@
       ],
       "allure": "pleasant",
       "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "ประวิตร",
-      "language_ethnicity": "thai",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -132325,24 +129915,6 @@
       "themes": []
     },
     {
-      "name": "เก็บไว้",
-      "language_ethnicity": "thai",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "เจียรประดิษฐ์",
       "language_ethnicity": "thai",
       "mythology": null,
@@ -132629,24 +130201,6 @@
       "themes": []
     },
     {
-      "name": "โกเมน",
-      "language_ethnicity": "thai",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": [
-        "gemstone"
-      ]
-    },
-    {
       "name": "โรจน์ฉิมพลี",
       "language_ethnicity": "thai",
       "mythology": null,
@@ -132679,22 +130233,6 @@
       "themes": [
         "religious"
       ]
-    },
-    {
-      "name": "ልጅ",
-      "language_ethnicity": "swahili",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [],
-      "themes": []
     },
     {
       "name": "መሀመድ",
@@ -132869,22 +130407,6 @@
       "themes": []
     },
     {
-      "name": "ፍቅር",
-      "language_ethnicity": "swahili",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "loveInterest"
-      ],
-      "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
       "name": "中村",
       "language_ethnicity": "japanese",
       "mythology": null,
@@ -133047,60 +130569,6 @@
       "themes": []
     },
     {
-      "name": "금자",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "기영",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "김김",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "남궁",
       "language_ethnicity": "korean",
       "mythology": null,
@@ -133113,78 +130581,6 @@
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "남자",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "명규",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "명희",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "미경",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
       "genre": [
         "sliceOfLife"
       ],
@@ -133229,132 +130625,6 @@
       "themes": []
     },
     {
-      "name": "성수",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "성식",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "성일",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "성호",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "수진",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "여성",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "인수",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "제갈",
       "language_ethnicity": "korean",
       "mythology": null,
@@ -133367,78 +130637,6 @@
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "제이",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "지원",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "진영",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "현주",
-      "language_ethnicity": "korean",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
       "genre": [
         "sliceOfLife"
       ],

@@ -1,0 +1,507 @@
+# Readings for milestone 3.
+# last | culture | name | Claude | second reader: read as a surname. Verdicts: surname, given, word,
+# place, fragment, unsure. Removed only where neither says surname or unsure.
+# first | chinese | name | Claude | second reader: read as a Chinese first name. Removed only where
+# both say surname. Names read: all in both lists but Mongolian, Claude's candidates, some at random.
+# gender | culture | name | male, female or none: Claude's reading of every surname of the four cultures.
+last | arabic | Djamel | given | given
+last | arabic | Jbeli | surname | surname
+last | arabic | Mhamad | given | given
+last | arabic | Salma | given | given
+last | arabic | ابو محمد | given | given
+last | arabic | الصديق | surname | surname
+last | arabic | الطيب | surname | surname
+last | arabic | بابكر | surname | surname
+last | arabic | جعفر | surname | surname
+last | arabic | حلب | place | place
+last | arabic | سيد | surname | surname
+last | arabic | علوش | surname | surname
+last | arabic | كمال | surname | surname
+last | arabic | مارس | word | word
+last | arabic | مختار | surname | surname
+last | arabic | مفتاح | surname | surname
+last | arabic | يناير | word | word
+last | chinese | Chen | surname | surname
+last | chinese | Cheng | surname | surname
+last | chinese | Feng | surname | surname
+last | chinese | Formoza | place | place
+last | chinese | Hao | surname | surname
+last | chinese | Hati | word | word
+last | chinese | Hua | surname | surname
+last | chinese | Jiang | surname | surname
+last | chinese | Liang | surname | surname
+last | chinese | Mawar | word | word
+last | chinese | Peng | surname | surname
+last | chinese | Shi | surname | surname
+last | chinese | Tao | surname | surname
+last | chinese | Wu | surname | surname
+last | chinese | Xiong | surname | surname
+last | chinese | Xu | surname | surname
+last | chinese | Zhang | surname | surname
+last | chinese | Zhu | surname | surname
+last | dutch | Van Veen | surname | surname
+last | english | Agni | given | given
+last | english | Ainsley | surname | surname
+last | english | Berty | given | given
+last | english | Harland | surname | surname
+last | english | Knavel | surname | unsure
+last | english | Lash | surname | surname
+last | english | Osvaldo | given | given
+last | english | Rownd | surname | surname
+last | english | Standard | word | word
+last | english | Tinker | surname | surname
+last | english | Tramp | word | word
+last | english | Trowel | word | word
+last | english | Vojta | surname | surname
+last | estonian | Aare | given | given
+last | estonian | Iin | surname | fragment
+last | estonian | Lääne | surname | surname
+last | estonian | Raimond | given | given
+last | fantasyElvish | Ievos | surname | unsure
+last | finnish | Ahomäki | surname | surname
+last | finnish | Aunala | surname | surname
+last | french | Bertemes | surname | surname
+last | french | Filipa | given | given
+last | french | Herve | given | surname
+last | french | Nathalie | given | given
+last | french | Texier | surname | surname
+last | german | Höller | surname | surname
+last | german | Schachinger | surname | surname
+last | german | Weiß | surname | surname
+last | greek | Barlas | surname | surname
+last | greek | Cosmos | word | word
+last | greek | Giannis | given | given
+last | greek | Konstantinos | given | given
+last | greek | Kostas | given | given
+last | greek | Pepi | fragment | given
+last | greek | Spiros | given | given
+last | greek | Vasco | given | given
+last | hawaiian | Alana | given | given
+last | hawaiian | Iosua | given | given
+last | hawaiian | Kahale | surname | surname
+last | hawaiian | Kahananui | surname | surname
+last | hawaiian | Kapule | surname | surname
+last | hawaiian | Kaʻanāʻanā | surname | surname
+last | hawaiian | Kaʻuhane | surname | surname
+last | hawaiian | Keahi | surname | surname
+last | hawaiian | Kelekolio | surname | surname
+last | hawaiian | Māhoe | surname | surname
+last | hawaiian | ʻAukai | surname | surname
+last | hawaiian | ʻŌpūnui | surname | surname
+last | hebrew | Alon | surname | surname
+last | hebrew | Sh | fragment | fragment
+last | hebrew | Yosef | surname | surname
+last | hebrew | אברהם | surname | surname
+last | hebrew | אלבז | surname | surname
+last | hebrew | דוד | surname | surname
+last | hebrew | חיים | surname | surname
+last | hebrew | יוסף | surname | surname
+last | hebrew | יעקב | surname | surname
+last | hebrew | משה | surname | surname
+last | hebrew | فلسطين | place | place
+last | hindi | Anandi | given | given
+last | hindi | Arjun | given | given
+last | hindi | Banjan | surname | unsure
+last | hindi | Nandigam | surname | surname
+last | hindi | Sagor | given | given
+last | hindi | Sanjeewa | given | given
+last | hindi | Sohel | given | given
+last | hindi | মন | word | word
+last | indonesian | Agung | given | given
+last | indonesian | Agus | given | given
+last | indonesian | Agustinus | given | given
+last | indonesian | Anggoro | surname | surname
+last | indonesian | Ardian | given | given
+last | indonesian | Aria | given | given
+last | indonesian | Arifin | surname | surname
+last | indonesian | Ario | given | given
+last | indonesian | Baskoro | surname | surname
+last | indonesian | Budiman | surname | surname
+last | indonesian | Cahyo | given | given
+last | indonesian | Candra | given | given
+last | indonesian | Dadang | given | given
+last | indonesian | Darmawan | surname | surname
+last | indonesian | Efendi | surname | surname
+last | indonesian | Effendi | surname | surname
+last | indonesian | Febrianto | given | surname
+last | indonesian | Gilang | given | given
+last | indonesian | Ginanjar | given | surname
+last | indonesian | Ginting | surname | surname
+last | indonesian | Hendi | given | given
+last | indonesian | Irfan | given | given
+last | indonesian | Iskandar | surname | surname
+last | indonesian | Mulia | word | surname
+last | indonesian | Pradana | surname | surname
+last | indonesian | Prasetya | surname | surname
+last | indonesian | Prasetyo | surname | surname
+last | indonesian | Pratama | surname | surname
+last | indonesian | Purba | surname | surname
+last | indonesian | Purnomo | surname | surname
+last | indonesian | Purwanto | surname | surname
+last | indonesian | Rahadian | surname | surname
+last | indonesian | Rizki | given | given
+last | indonesian | Rizky | given | given
+last | indonesian | Setia | word | surname
+last | indonesian | Susanti | given | surname
+last | indonesian | Susanto | surname | surname
+last | indonesian | Susilo | surname | surname
+last | indonesian | Syahputra | surname | surname
+last | indonesian | Syaiful | given | given
+last | indonesian | Wati | given | given
+last | irishGaelic | Ó Cuill | surname | surname
+last | italian | Gerbasi | surname | surname
+last | japanese | Kudō | surname | surname
+last | korean | Gi | surname | surname
+last | korean | Jjang | word | word
+last | korean | Rla | fragment | fragment
+last | korean | 금자 | given | given
+last | korean | 기영 | given | given
+last | korean | 김김 | fragment | fragment
+last | korean | 남궁 | surname | surname
+last | korean | 남자 | word | word
+last | korean | 명규 | given | given
+last | korean | 명희 | given | given
+last | korean | 미경 | given | given
+last | korean | 성수 | given | given
+last | korean | 성식 | given | given
+last | korean | 성일 | given | given
+last | korean | 성호 | given | given
+last | korean | 수진 | given | given
+last | korean | 여성 | word | word
+last | korean | 인수 | given | given
+last | korean | 제이 | fragment | given
+last | korean | 지원 | given | given
+last | korean | 진영 | given | given
+last | korean | 현주 | given | given
+last | latin | Matei | surname | surname
+last | maori | Kawhia | place | place
+last | maori | Koni | surname | unsure
+last | maori | Kupe | given | unsure
+last | maori | Lata | surname | unsure
+last | maori | Maaka | surname | surname
+last | maori | Ngakuru | surname | surname
+last | maori | Waqa | surname | surname
+last | mayan | Bacab | surname | word
+last | mayan | Chuan | surname | unsure
+last | mayan | Chul | surname | unsure
+last | mayan | Culua | surname | unsure
+last | mayan | Dzahe | surname | unsure
+last | mayan | Eb | fragment | unsure
+last | nepalese | Devakot | fragment | fragment
+last | nepalese | Thapaliy | fragment | fragment
+last | nigerian | Adeniyi | surname | surname
+last | nigerian | Adeyemi | surname | surname
+last | nigerian | Aliyu | surname | surname
+last | nigerian | Babatunde | surname | surname
+last | nigerian | Gbemisola | given | given
+last | nigerian | Okosun | surname | surname
+last | nigerian | Olumide | surname | surname
+last | nigerian | Raji | surname | surname
+last | nigerian | Salisu | surname | surname
+last | nigerian | Temitope | given | given
+last | nigerian | Tonye | given | given
+last | nigerian | Yahaya | surname | surname
+last | norwegian | Berg | surname | surname
+last | norwegian | Hepsø | surname | surname
+last | norwegian | Molnes | surname | surname
+last | persian | Sahil | given | given
+last | persian | تنها | word | word
+last | persian | جان | word | word
+last | persian | همدرد | surname | word
+last | portuguese | Agostinho | surname | surname
+last | portuguese | André | surname | surname
+last | portuguese | António | surname | given
+last | portuguese | Brites | surname | surname
+last | portuguese | Carmo | surname | surname
+last | portuguese | Espírito | fragment | fragment
+last | portuguese | Filipe | surname | surname
+last | portuguese | Joao | given | given
+last | portuguese | Luís | given | given
+last | portuguese | Luíz | given | given
+last | portuguese | Sobral | surname | surname
+last | serbian | Čupić | surname | surname
+last | slavicOther | Hristova | surname | surname
+last | slavicPolish | Sz | fragment | fragment
+last | slavicRussian | Lebedev | surname | surname
+last | slavicRussian | Александр | given | given
+last | slavicRussian | Александровна | given | fragment
+last | slavicRussian | Григорьев | surname | surname
+last | slavicRussian | Елена | given | given
+last | spanish | Cano | surname | surname
+last | spanish | Ceceña | surname | surname
+last | spanish | Mejía | surname | surname
+last | swahili | Birhanu | surname | surname
+last | swahili | Degefa | surname | surname
+last | swahili | Eshetu | surname | surname
+last | swahili | Fenta | surname | surname
+last | swahili | Feyisa | surname | surname
+last | swahili | Gadisa | surname | surname
+last | swahili | Gugsa | surname | surname
+last | swahili | Shemsu | surname | surname
+last | swahili | Yimam | surname | surname
+last | swahili | Yimer | surname | surname
+last | swahili | ልጅ | word | word
+last | swahili | ሙሀመድ | surname | surname
+last | swahili | ሰይድ | surname | surname
+last | swahili | አህመድ | surname | surname
+last | swahili | ፍቅር | word | word
+last | swedish | Patriksson | surname | surname
+last | thai | กล้วยไม้ | word | word
+last | thai | ชัยวัฒน์ | given | given
+last | thai | นิยม | word | given
+last | thai | ประวิตร | given | given
+last | thai | เก็บไว้ | word | word
+last | thai | เมฆขุนทด | surname | surname
+last | thai | โกเมน | given | given
+last | turkish | Akbal | surname | surname
+last | turkish | Akgül | surname | surname
+last | turkish | Erdoğan | surname | surname
+last | turkish | Yılmaz | surname | surname
+last | ukrainian | Marchenko | surname | surname
+last | ukrainian | Олійник | surname | surname
+last | vietnamese | Trịnh | surname | surname
+last | yoruba | Abdulai | surname | surname
+last | yoruba | Alhassan | surname | surname
+last | yoruba | Ama | given | given
+last | yoruba | Asare | surname | surname
+last | yoruba | Gh | fragment | fragment
+last | yoruba | Issah | surname | surname
+last | yoruba | Jnr | fragment | fragment
+last | yoruba | Kofi | given | given
+last | yoruba | Kwaku | given | given
+last | yoruba | Kwame | given | given
+last | yoruba | Musah | surname | surname
+last | yoruba | Opoku | surname | surname
+last | yoruba | Seidu | surname | surname
+last | yoruba | Yakubu | surname | surname
+first | chinese | Chao | given | given
+first | chinese | Chen | surname | given
+first | chinese | Cheng | given | given
+first | chinese | Chuan | given | given
+first | chinese | Fai | given | given
+first | chinese | Feng | given | given
+first | chinese | Hao | given | given
+first | chinese | Hua | given | given
+first | chinese | Hui | given | given
+first | chinese | Jian | given | given
+first | chinese | Jiang | surname | surname
+first | chinese | Jie | given | given
+first | chinese | Jing | given | given
+first | chinese | Kwok | surname | surname
+first | chinese | Liang | given | given
+first | chinese | Long | given | given
+first | chinese | Mawar | given | unsure
+first | chinese | Peng | surname | given
+first | chinese | Shi | surname | surname
+first | chinese | Tao | given | given
+first | chinese | Wu | surname | surname
+first | chinese | Xia | surname | given
+first | chinese | Xin | given | given
+first | chinese | Xiong | surname | given
+first | chinese | Xiu | given | given
+first | chinese | Xu | surname | unsure
+first | chinese | Xue | surname | given
+first | chinese | Yeung | surname | surname
+first | chinese | Ying | given | given
+first | chinese | Zhang | surname | surname
+first | chinese | Zhe | given | given
+first | chinese | Zheng | surname | unsure
+first | chinese | Zhi | given | given
+first | chinese | Zhong | given | given
+first | chinese | Zhu | surname | surname
+gender | slavicPolish | Bielska | female
+gender | slavicPolish | Brzezińska | female
+gender | slavicPolish | Czarnecka | female
+gender | slavicPolish | Grabowska | female
+gender | slavicPolish | Górska | female
+gender | slavicPolish | Głowacka | female
+gender | slavicPolish | Jabłońska | female
+gender | slavicPolish | Jankowska | female
+gender | slavicPolish | Janowska | female
+gender | slavicPolish | Jaworska | female
+gender | slavicPolish | Kalinowska | female
+gender | slavicPolish | Kamińska | female
+gender | slavicPolish | Kozłowska | female
+gender | slavicPolish | Laskowska | female
+gender | slavicPolish | Majewska | female
+gender | slavicPolish | Malinowska | female
+gender | slavicPolish | Michalska | female
+gender | slavicPolish | Nowicka | female
+gender | slavicPolish | Olszewska | female
+gender | slavicPolish | Pawłowska | female
+gender | slavicPolish | Piotrowska | female
+gender | slavicPolish | Szymańska | female
+gender | slavicPolish | Witkowska | female
+gender | slavicPolish | Wiśniewska | female
+gender | slavicPolish | Wojciechowska | female
+gender | slavicPolish | Zalewska | female
+gender | slavicPolish | Zielińska | female
+gender | slavicPolish | Żukowska | female
+gender | slavicPolish | Brzeziński | male
+gender | slavicPolish | Głowacki | male
+gender | slavicPolish | Jabłoński | male
+gender | slavicPolish | Kamiński | male
+gender | slavicPolish | Kozłowski | male
+gender | slavicPolish | Pawłowski | male
+gender | slavicPolish | Szymański | male
+gender | slavicPolish | Wiśniewski | male
+gender | slavicPolish | Zieliński | male
+gender | slavicPolish | Żukowski | male
+gender | slavicPolish | Białas | none
+gender | slavicPolish | Błaszczyk | none
+gender | slavicPolish | Gajos | none
+gender | slavicPolish | Górka | none
+gender | slavicPolish | Kaźmierczak | none
+gender | slavicPolish | Kołodziej | none
+gender | slavicPolish | Król | none
+gender | slavicPolish | Stępień | none
+gender | slavicPolish | Wójcik | none
+gender | slavicPolish | Zawisza | none
+gender | slavicPolish | Żuk | none
+gender | slavicRussian | Алексеева | female
+gender | slavicRussian | Андреева | female
+gender | slavicRussian | Григорьева | female
+gender | slavicRussian | Захарова | female
+gender | slavicRussian | Котова | female
+gender | slavicRussian | Кузнецова | female
+gender | slavicRussian | Лебедева | female
+gender | slavicRussian | Магомедова | female
+gender | slavicRussian | Максимова | female
+gender | slavicRussian | Матвеева | female
+gender | slavicRussian | Миронова | female
+gender | slavicRussian | Орлова | female
+gender | slavicRussian | Павлова | female
+gender | slavicRussian | Смирнова | female
+gender | slavicRussian | Соколова | female
+gender | slavicRussian | Соловьева | female
+gender | slavicRussian | Тарасова | female
+gender | slavicRussian | Golubev | male
+gender | slavicRussian | Kavalioŭ | male
+gender | slavicRussian | Lebedev | male
+gender | slavicRussian | Solovyov | male
+gender | slavicRussian | Vasilyev | male
+gender | slavicRussian | Vinogradov | male
+gender | slavicRussian | Zaytsev | male
+gender | slavicRussian | Алексеев | male
+gender | slavicRussian | Андреев | male
+gender | slavicRussian | Белов | male
+gender | slavicRussian | Гончаров | male
+gender | slavicRussian | Григорьев | male
+gender | slavicRussian | Егоров | male
+gender | slavicRussian | Иванов | male
+gender | slavicRussian | Исаев | male
+gender | slavicRussian | Кузнецов | male
+gender | slavicRussian | Лебедев | male
+gender | slavicRussian | Магомедов | male
+gender | slavicRussian | Никитин | male
+gender | slavicRussian | Новиков | male
+gender | slavicRussian | Облонский | male
+gender | slavicRussian | Орлов | male
+gender | slavicRussian | Павлов | male
+gender | slavicRussian | Романов | male
+gender | slavicRussian | Семенов | male
+gender | slavicRussian | Сергеев | male
+gender | slavicRussian | Фролов | male
+gender | slavicRussian | Яхонтов | male
+gender | slavicRussian | Коваленко | none
+gender | slavicRussian | Шевченко | none
+gender | slavicOther | Dvořáková | female
+gender | slavicOther | Hristova | female
+gender | slavicOther | Kadlecová | female
+gender | slavicOther | Pokorná | female
+gender | slavicOther | Soukupová | female
+gender | slavicOther | Vlčková | female
+gender | slavicOther | Černá | female
+gender | slavicOther | Žukauskienė | female
+gender | slavicOther | Иванова | female
+gender | slavicOther | Стефанова | female
+gender | slavicOther | Стоянова | female
+gender | slavicOther | Angelov | male
+gender | slavicOther | Kalniņš | male
+gender | slavicOther | Kārkliņš | male
+gender | slavicOther | Markoski | male
+gender | slavicOther | Mitev | male
+gender | slavicOther | Pavlovski | male
+gender | slavicOther | Růžička | male
+gender | slavicOther | Trajanoski | male
+gender | slavicOther | Vanags | male
+gender | slavicOther | Vlček | male
+gender | slavicOther | Zariņš | male
+gender | slavicOther | Čermák | male
+gender | slavicOther | Илиев | male
+gender | slavicOther | Маринов | male
+gender | slavicOther | Петров | male
+gender | slavicOther | Христов | male
+gender | slavicOther | Bytyqi | none
+gender | slavicOther | Bytyçi | none
+gender | slavicOther | Cani | none
+gender | slavicOther | Deda | none
+gender | slavicOther | Elshani | none
+gender | slavicOther | Ferizi | none
+gender | slavicOther | Gega | none
+gender | slavicOther | Gjergji | none
+gender | slavicOther | Gjoka | none
+gender | slavicOther | Hidri | none
+gender | slavicOther | Hoxhaj | none
+gender | slavicOther | Hysa | none
+gender | slavicOther | Kovačič | none
+gender | slavicOther | Mema | none
+gender | slavicOther | Mucaj | none
+gender | slavicOther | Salihović | none
+gender | slavicOther | Stafa | none
+gender | slavicOther | Stankevic | none
+gender | slavicOther | Sulaj | none
+gender | slavicOther | Tabaku | none
+gender | slavicOther | Ukaj | none
+gender | slavicOther | Zefi | none
+gender | slavicOther | Zukić | none
+gender | icelandic | Birgisdóttir | female
+gender | icelandic | Bjarnadóttir | female
+gender | icelandic | Björnsdóttir | female
+gender | icelandic | Einarsdóttir | female
+gender | icelandic | Gudmundsdottir | female
+gender | icelandic | Haraldsdóttir | female
+gender | icelandic | Helgadóttir | female
+gender | icelandic | Jonsdottir | female
+gender | icelandic | Jóhannsdóttir | female
+gender | icelandic | Jónasdóttir | female
+gender | icelandic | Jónsdóttir | female
+gender | icelandic | Kjartansdóttir | female
+gender | icelandic | Kristjánsdóttir | female
+gender | icelandic | Pétursdóttir | female
+gender | icelandic | Ragnarsdóttir | female
+gender | icelandic | Sigurdardottir | female
+gender | icelandic | Sigurjónsdóttir | female
+gender | icelandic | Skúladóttir | female
+gender | icelandic | Stefánsdóttir | female
+gender | icelandic | Sveinsdóttir | female
+gender | icelandic | Ólafsdóttir | female
+gender | icelandic | Þorsteinsdóttir | female
+gender | icelandic | Þórisdóttir | female
+gender | icelandic | Baldursson | male
+gender | icelandic | Birgisson | male
+gender | icelandic | Bjarnason | male
+gender | icelandic | Björgvinsson | male
+gender | icelandic | Egilsson | male
+gender | icelandic | Eiríksson | male
+gender | icelandic | Friðriksson | male
+gender | icelandic | Gunnlaugsson | male
+gender | icelandic | Guðmundsson | male
+gender | icelandic | Gíslason | male
+gender | icelandic | Halldórsson | male
+gender | icelandic | Jóhannesson | male
+gender | icelandic | Jóhannsson | male
+gender | icelandic | Jónasson | male
+gender | icelandic | Kjartansson | male
+gender | icelandic | Olafsson | male
+gender | icelandic | Pálsson | male
+gender | icelandic | Pétursson | male
+gender | icelandic | Ragnarsson | male
+gender | icelandic | Sigurðsson | male
+gender | icelandic | Valdimarsson | male
+gender | icelandic | Árnason | male
+gender | icelandic | Ásgeirsson | male
+gender | icelandic | Óskarsson | male
+gender | icelandic | Hjaltalín | none
+gender | icelandic | Kvaran | none
+gender | icelandic | Thorarensen | none
