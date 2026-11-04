@@ -24,7 +24,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 5 | New names | R1, R2, R5 | Done | | 6M | 1.5M | 9.9M, 0.37M at the last count; code review Fable 5.1 medium |
 | 6 | Tags and spelling | R1, R7 | Done | | 3M | 0.2M | 4.2M, 0.14M; code review Fable 5.1 medium |
 | 7 | Code, documents and tests | R1, R7 | Done | | 2M | 0 | 2.4M, 0; code review none (not due) |
-| 8 | Live run and release | R1 | In progress | Must | 1M | 0.1M | |
+| 8 | Live run and release | R1 | In progress | Must | 1M | 0.1M | live run 1.6M, 0.06M; release waits for the owner |
 | | Total | | | | 28M | 2.8M | |
 
 Each milestone ends with `node test.js` passing and the extension working on the test bed.
