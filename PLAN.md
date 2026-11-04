@@ -48,7 +48,7 @@ Tests: `node test.js` 16 of 16; `node tools/testbed.mjs` 76 of 76. Measured: myt
 
 ### 3. Surnames: gender and non-surnames
 
-- Surnames in `slavicPolish`, `slavicRussian`, `slavicOther` and `icelandic` get a gender by ending, read over before going in; `picker.js:77` takes those of the character's gender and those without one. An ambiguous character takes any. "Piotr Kowalska" no longer occurs.
+- Surnames with a clearly gendered form, in every culture holding them (see Decisions), get a gender by ending, read over before going in; `picker.js:77` takes those of the character's gender and those without one. An ambiguous character takes any. "Piotr Kowalska" no longer occurs.
 - Surnames that are not surnames (words, months, places, two-letter fragments; about 178-195 names are in both lists) leave the list by a written list; a name in both lists stays where it is really a surname in that culture.
 - Mongolian gets no surname (41 of its 50 are also given names). The 17 Chinese names in both lists are read; surnames filed as first names leave the first names.
 
@@ -102,6 +102,13 @@ None open.
 - Second reader's lists: every name read once, blind; candidates from the 297 and 165 mixed in. Places, groups, titles, books and common words count as naming nothing.
 - Deletion disagreed (God-D, God-E, God-L, Sampo): stays, race mythical by the rule.
 - The tool's mythology, race and language_ethnicity field descriptions in `index.js` say the same as its description, since the AI reads them.
+- Gendered surnames everywhere (main session's decision, since "a man gets a woman's surname" must not remain anywhere): `slavicPolish`, `slavicRussian`, `slavicOther`, `icelandic`, `ukrainian`, `turkish`, `swedish`, `greek` and `nepalese` (Devi, Magarni, Yadavani) get a gender, by the same tool. Greek -ou is used by both sexes: none, -idou and -opoulou too. Not clearly gendered gets none (-енко, -чук, -ишин, -oğlu, Serbian -ić, Norwegian and Danish -sen).
+- Counts male/female/no gender: Polish 10/28/11, Russian 28/17/2, Other 16/11/23, Icelandic 24/23/3, Ukrainian 5/0/45, Turkish 12/6/32, Swedish 40/2/8, Greek 20/3/20, Nepalese 0/3/45. Ukrainian holds no female form and Nepalese no male one; the ungendered serve those characters. Every other culture has no gender on any surname. Irish `Ó` and `Mac` are male forms but the list holds no `Ní` or `Nic`, so no gender there.
+- Removal needs both readers non-surname, category may differ; unsure keeps. 104 removed + 50 Mongolian; 29 disagreements unchanged.
+- Chinese names in both lists are 16, not 17. First names removed by both readers: Jiang, Kwok, Shi, Wu, Yeung, Zhang, Zhu (Kwok, Yeung are not in both lists; asked because the line says surnames filed as first names leave).
+- Second reader's list: 270 surname entries, 35 Chinese first names; numbered answers merged in `tools/m3-readings.txt`.
+- The milestone's tool runs on main's database, not on its own result; its count asserts refuse any other.
+- The review's one finding: Greek Tassi and Zika (female) and Mundis and Rubis (male) read none against the same endings elsewhere; given those genders. Paraskeva stays none, also used by both sexes.
 
 ## Trials
 

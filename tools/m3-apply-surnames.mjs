@@ -1,9 +1,9 @@
-// Milestone 3's one data change: a gender on the surnames of four cultures, non-surnames out
+// Milestone 3's one data change: a gender on the surnames of GENDERED, non-surnames out
 // of the surnames by tools/m3-readings.txt, Mongolian surnames gone, surnames out of the
 // Chinese first names. Writes the change list to
 // <tmp>/SillyTavern-Extension-NPCNames/3-changes.txt.
 //
-// Run once on the database as it stood before the milestone: node tools/m3-apply-surnames.mjs
+// Run on the database as it stood before the milestone (main's): node tools/m3-apply-surnames.mjs
 // Its count asserts refuse a database already changed.
 import assert from 'node:assert/strict';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -20,7 +20,7 @@ assert.equal(db.first_names.length, 4290, 'first names');
 assert.equal(db.last_names.length, 1948, 'surnames');
 assert.ok(db.last_names.every(e => !('gender' in e)), 'a surname already has a gender');
 
-const GENDERED = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic'];
+const GENDERED = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese'];
 const REMOVERS = new Set(['given', 'word', 'place', 'fragment']);
 const LAST_VERDICTS = new Set([...REMOVERS, 'surname', 'unsure']);
 const FIRST_VERDICTS = new Set(['given', 'surname', 'unsure']);
@@ -63,7 +63,7 @@ const mongolian = db.last_names.filter(e => e.language_ethnicity === 'mongolian'
 assert.equal(mongolian.length, 50, 'Mongolian surnames');
 for (const e of mongolian) removeLast.set(e, 'Mongolian gets no surname');
 
-// Every surname of the four cultures that stays is read for gender, and only those.
+// Every surname of GENDERED that stays is read for gender, and only those.
 const staying = db.last_names.filter(e => GENDERED.includes(e.language_ethnicity) && !removeLast.has(e));
 assert.deepEqual(
     [...genders.keys()].sort(),
