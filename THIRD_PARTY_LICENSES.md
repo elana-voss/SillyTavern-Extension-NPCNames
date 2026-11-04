@@ -4,25 +4,27 @@ The bundled name database (`data/name_database.tagged.json`) is a
 derivative work of the open corpora listed below. Each name in the
 database was sourced from one of these; an LLM (Grok 4) added the
 synthetic tags (role, intelligence, allure, themes, etc.) at build
-time. Attribution is preserved here so it travels with the extension,
+time; names added later were tagged by moonshotai/kimi-k2.6 and read a
+second time by z-ai/glm-5.3. Attribution is preserved here so it travels with the extension,
 in line with the underlying licenses.
 
 ## Source corpora
 
 ### philipperemy/name-dataset
 - **URL**: https://github.com/philipperemy/name-dataset
-- **License**: Apache License 2.0 — see https://www.apache.org/licenses/LICENSE-2.0
-- **Used for**: real-world first + last names, 106 countries, gender-tagged.
+- **License**: Apache License 2.0, by the LICENSE file of version 3.3.1 — see https://www.apache.org/licenses/LICENSE-2.0. The same version's package metadata says MIT. Its README adds that lists of names are generally not copyrightable.
+- **Used for**: real-world first + last names, 106 countries, gender-tagged; 1798 of the names added later, 666 of them from this source alone.
+- **Provenance**: its README states the data was "generated from the massive Facebook Leak (533M accounts)". Only names are taken, nothing about any account.
 
 ### sigpwned/popular-names-by-country-dataset
 - **URL**: https://github.com/sigpwned/popular-names-by-country-dataset
 - **License**: CC0 1.0 Universal (public domain) — see https://creativecommons.org/publicdomain/zero/1.0/
-- **Used for**: top surnames per country, 75 countries.
+- **Used for**: top surnames and forenames per country, 75 countries; 145 of the names added later. Its README states the data was pulled from Wikipedia's lists of most common surnames and most popular given names in July 2023.
 
 ### hackerb9/ssa-baby-names
 - **URL**: https://github.com/hackerb9/ssa-baby-names
 - **License**: LGPL-2.1 — see https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html
-- **Used for**: US SSA baby-name data 1880–present, used to slice era-tagged buckets (Victorian, 1920s, midcentury).
+- **Used for**: US SSA baby-name data 1880–present, used to slice era-tagged buckets (Victorian, 1920s, midcentury), and for 588 English-style names added later. The license is that of the repository, read in its LICENSE file.
 
 ### mlane/cyberpunk-name-generator
 - **URL**: https://github.com/mlane/cyberpunk-name-generator

@@ -72,6 +72,16 @@ Short for milestone 5: few are Hungarian 11 first names and 2 surnames, Romanian
 - Names come from public lists whose licence allows it (added to `THIRD_PARTY_LICENSES.md`), never invented by a model; a model only checks them. Each batch is tagged and checked before it goes in.
 - Fills: new dragon names replacing the franchise characters (Smaug, Mushu, Maleficent; the owner: "replace"), which then leave; Vietnamese first names; male and female Native American names; Romanian, Ghanaian, Ethiopian, Baltic, Albanian, Azerbaijani, Hungarian, Fijian; what milestone 4 emptied (Yoruba, Swahili), and Latin, Scandinavian and other Slavic, which it left thin; female names for Latin, German, Scandinavian, Swahili, Swedish, Yoruba; surnames for Latin and Scandinavian; women's surnames for Irish (Ní, Nic) and Ukrainian, men's for Nepalese; `child`, ancient humans, `victorian`, `modern`; `steampunk`, `postApocalyptic`, `western`, `noirDetective`, `horror`; themes `lunar`, `rustic`. How many per class is written with the first batch; a class with no honest source stays thin and is named to the owner.
 
+Tests: `node test.js` 31 of 31; `node tools/testbed.mjs` BEDCOUNT. Targets per class, written with the first batch: 60-150 first names, 30-80 surnames; the tool cuts a culture at 75 first names a sex and 60 surnames. Existing names on the overused list: 0 first names, 0 surnames (Xavière was the only one and is marked not slop).
+
+Measured: first names 6916, surnames 2627 (+2699, +818; 49 dragons out, 65 in). Sources of the 3517 new names, a name counted once per source: Wikidata 2145, name-dataset 1798, SSA 588, popular-names 145, mythology 65.
+
+Per culture, human first names male/female; surnames (male/female where gendered): albanian 75/75; 60. azerbaijani 75/75; 82 (33/27). baltic 75/72; 66 (32/29). ethiopian 75/47; 60. fijian 75/62; 60. german 19/75; 64. ghanaian 75/75; 60. hungarian 75/75; 60. irishGaelic 50/51; 110 (47/60). latin 74/43; 60 (0/12). nativeAmerican 49/38; 0. nepalese 48/50; 100 (1/1). nigerian 55/61; 47. romanian 75/75; 60. scandinavian 75/75; 60. slavicOther 75/75; 79 (29/27). swahili 32/30; 60. swedish 48/75; 51 (0/2). ukrainian 48/50; 106 (5/54). vietnamese 75/71; 39. yoruba 75/65; 60.
+
+Per style, first names (human among them); surnames: steampunk 213 (213); 0. western 217 (217); 2. noirDetective 222 (222); 1. victorian 304 (304); 0. modern 390 (377); 0. child 310 (310). ancient 736 (276); 60. horror 19 (6); 0. lunar 23 (22); 3. rustic 28 (27); 112. postApocalyptic 1 (1, Scythe); 0.
+
+What stays thin, for the owner: postApocalyptic 1 (both readers found no name), horror 19, lunar 23, rustic 28; Swahili 32 men and 30 women; ancient women greek 13 and persian 10; Native American 49 men and 38 women, no surnames; Ethiopian women 47, Fijian women 62. German men 19 and Swedish men 48 were not a fill.
+
 ### 6. Tags and spelling
 
 - Real names marked gender-ambiguous get their gender where it is clear (50 Icelandic, 25 Spanish, the rest found by reading); wrong genders (Hamad, Sattar, Hermínia) corrected.
@@ -90,7 +100,7 @@ One live model through nano-gpt on the test bed with the finished work: an ordin
 
 ## Questions for the owner
 
-None open.
+- Where some of the names come from. When a user asks for a name, the extension can draw one that reached the database through the public list name-dataset, whose own page says it was made from the Facebook leak of 533 million accounts. The list holds names alone, no account or person, and its licence allows the use. 666 of this milestone's new names rest on it alone, most of them Fijian (151), Azerbaijani (137), Ghanaian (129), Ethiopian and other Slavic (74 each); the first release already used it too. Keep: nothing changes, and the licence file says where it comes from. Remove: those 666 go, those cultures get much thinner, and the older names would need tracing too. Claude recommends keeping them. They stay in until he answers.
 
 ## Decisions
 
@@ -124,6 +134,14 @@ None open.
 - Second reader: `moonshotai/kimi-k2.6`, through nano-gpt, every human name in lists of 100, blind, after Claude's reading was written. An answer naming the culture a name is filed under counts as stays. 393 names had no two equal answers: 58 only Claude would move, 335 only the second reader.
 - `X+surname` moves a first name to X's surnames, without its age, intelligence and gender; a name already there is merged into that entry (Hristova, `slavicOther`, female). Makarezos gets male on entering Greek, as -os is the man's form; no other moved surname enters a gendered culture with a gendered form.
 - The third reader settles disagreements: `z-ai/glm-5.3`, through nano-gpt, read only those names, blind, in mixed lists of 30, without the present culture or a "stays". A name moves where its answer equals Claude's or the second reader's and is not the present culture. Its plain culture never equals `X+surname`, so Flores, Hartman, Hartmann, Schmit and Soderman stay first names where they are. Devi and Yadavani keep female on moving to Hindi.
+- Targets: 60-150 first names, 30-80 surnames a class; the tool cuts at 75 first names a sex and 60 surnames. English style names are not cut (588). Native American up to 150; Nepalese surnames up to 100, so that Bhandari, named in the milestone's order, enters (80 cut it out).
+- `#not-slop` in `tools/overused-names.txt` marks a real name the counting would put on the list and keeps it off; Xavière is the one.
+- Latin surnames in -illa, -ina, -ia, -ana are female; Baltic surnames in -s, -š, -ņ male; Baltic, Azerbaijani and other Slavic surnames are cut per gender.
+- The test allows Rosi in `german` too: it is also a German name.
+- Dragons come from `dragons.txt`: descriptive labels, type words, Wings of Fire, Durple and Gayant left out; all 49 old ones out; fields neutral, harsh, uncommon, mystical.
+- Meaning-based classes are a tag only where both readers agree (first names, 6253 asked). Three of their answers left out by Claude's own reading: Sarnai (rose), Babatunde and Yetunde (a parent has returned).
+- Igbo and Hausa under `yoruba`: both readers asked blind which people each candidate belongs to. Those both call Igbo (38 candidates, 17 in the data) and Yakubu, Bilkisu and Amina, both call Hausa, are filed as `nigerian`, which exists and is true of them. Other candidates both call Hausa do not enter `yoruba`; the free place went to Kayode.
+- Nepalese surnames: sources popular-names NP and Wikidata; both readers asked whether each is an ordinary family name of men in Nepal, not blind to the country, since the blind question failed Yadav: 136 of 146 passed. Entries ungendered; Magar male as before.
 
 ## Trials
 
