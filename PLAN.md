@@ -20,8 +20,8 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 1 | Test bed and the unpublished fixes | R1 | Done | | 5M | 0 | 3.0M, 0; code review Fable 5.1 medium |
 | 2 | Gods, handles and non-names | R1, R2, R7 | Done | | 4M | 0.3M | 1.7M, 0; code review Fable 5.1 medium |
 | 3 | Surnames: gender and non-surnames | R1, R7 | Done | | 3M | 0.2M | 4.4M, 0; code review Fable 5.1 medium |
-| 4 | Cultures: labels and misfiled names | R1, R5, R6 | In progress | Must | 4M | 0.5M | |
-| 5 | New names | R1, R2, R5 | To do | Must | 6M | 1.5M | |
+| 4 | Cultures: labels and misfiled names | R1, R5, R6 | Done | | 4M | 0.5M | 3.1M, 0.09M; code review Fable 5.1 medium |
+| 5 | New names | R1, R2, R5 | In progress | Must | 6M | 1.5M | |
 | 6 | Tags and spelling | R1, R7 | To do | Must | 3M | 0.2M | |
 | 7 | Code, documents and tests | R1, R7 | To do | Must | 2M | 0 | |
 | 8 | Live run and release | R1 | To do | Must | 1M | 0.1M | |
@@ -70,7 +70,7 @@ Short for milestone 5: few are Hungarian 11 first names and 2 surnames, Romanian
 
 - First: a list of overused names per culture, made by asking models of several vendors to invent NPC names and keeping what keeps coming back. A new name on it does not enter.
 - Names come from public lists whose licence allows it (added to `THIRD_PARTY_LICENSES.md`), never invented by a model; a model only checks them. Each batch is tagged and checked before it goes in.
-- Fills: new dragon names replacing the franchise characters (Smaug, Mushu, Maleficent; the owner: "replace"), which then leave; Vietnamese first names; male and female Native American names; Romanian, Ghanaian, Ethiopian, Baltic, Albanian, Azerbaijani, Hungarian, Fijian; what milestone 4 emptied (Yoruba, Swahili, Latin, Scandinavian, other Slavic); female names for Latin, German, Scandinavian, Swahili, Swedish, Yoruba; surnames for Latin and Scandinavian; women's surnames for Irish (Ní, Nic) and Ukrainian, men's for Nepalese; `child`, ancient humans, `victorian`, `modern`; `steampunk`, `postApocalyptic`, `western`, `noirDetective`, `horror`; themes `lunar`, `rustic`. How many per class is written with the first batch; a class with no honest source stays thin and is named to the owner.
+- Fills: new dragon names replacing the franchise characters (Smaug, Mushu, Maleficent; the owner: "replace"), which then leave; Vietnamese first names; male and female Native American names; Romanian, Ghanaian, Ethiopian, Baltic, Albanian, Azerbaijani, Hungarian, Fijian; what milestone 4 emptied (Yoruba, Swahili), and Latin, Scandinavian and other Slavic, which it left thin; female names for Latin, German, Scandinavian, Swahili, Swedish, Yoruba; surnames for Latin and Scandinavian; women's surnames for Irish (Ní, Nic) and Ukrainian, men's for Nepalese; `child`, ancient humans, `victorian`, `modern`; `steampunk`, `postApocalyptic`, `western`, `noirDetective`, `horror`; themes `lunar`, `rustic`. How many per class is written with the first batch; a class with no honest source stays thin and is named to the owner.
 
 ### 6. Tags and spelling
 
