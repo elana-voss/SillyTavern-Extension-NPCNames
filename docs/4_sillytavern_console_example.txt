@@ -3,7 +3,7 @@
       type: 'function',
       function: {
         name: 'suggest_npc_name',
-        description: 'Use for every new NPC you introduce. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; a mythology filter goes with race: mythical, never human.',
+        description: 'Use for every new NPC you introduce. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human.',
         parameters: {
           '$schema': 'http://json-schema.org/draft-04/schema#',
           type: 'object',

@@ -208,6 +208,13 @@ test('the install folder is told from the module\'s address', () => {
     assert.ok(!isInstalledIn(at('Right-main'), 'third-party/Right'));
 });
 
+test('the AI is told how to ask for an elf, a dwarf or a dragon', () => {
+    for (const file of ['./assets/advertisement.txt', './index.js']) {
+        const text = readFileSync(new URL(file, import.meta.url), 'utf8');
+        for (const race of ['elf', 'dwarf', 'dragon']) assert.ok(text.includes(`race: ${race}`), `${file} ${race}`);
+    }
+});
+
 test('advertisement goes right before the latest message, so long chats keep it', () => {
     const chat = [{ mes: 'old' }, { mes: 'latest' }];
     injectBeforeLatest(chat, 'ad');
