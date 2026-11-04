@@ -18,7 +18,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | # | Milestone | Requirement | Status | Priority | Claude tokens | nano-gpt input | Actual |
 |---|---|---|---|---|---|---|---|
 | 1 | Test bed and the unpublished fixes | R1 | Done | | 5M | 0 | 3.0M, 0; code review Fable 5.1 medium |
-| 2 | Gods, handles and non-names | R1, R2, R7 | To do | Must | 4M | 0.3M | |
+| 2 | Gods, handles and non-names | R1, R2, R7 | In progress | Must | 4M | 0.3M | code review Fable 5.1 medium: no findings |
 | 3 | Surnames: gender and non-surnames | R1, R7 | To do | Must | 3M | 0.2M | |
 | 4 | Cultures: labels and misfiled names | R1, R5, R6 | To do | Must | 4M | 0.5M | |
 | 5 | New names | R1, R2, R5 | To do | Must | 6M | 1.5M | |
@@ -43,6 +43,8 @@ Tests: `node test.js` 14 of 14; `node tools/testbed.mjs` 76 of 76. Next: milesto
 - Gods get no surname. `picker.js:77` already gives none when a culture has none; this adds race.
 - Entries that name nothing (Unnamed, Trnsfer, Qkr, Korea, Feng Shui, Kalevala, Abominable Snowmen, Accuser, Palladium, Wild Hunt) are deleted, by a written list made from the same reading; how many is measured then.
 - `assets/advertisement.txt:6-8`, `index.js:112` and the README: `race: human` for every person; `mythical` only for a god, spirit or monster; a `mythology` filter goes with `race: mythical`, never `human`, because `mythology` is dropped before `race` (`picker.js:1`) and the pantheon would be lost; `cyberpunkHandle` named among the cultures.
+
+Tests: `node test.js` 16 of 16; `node tools/testbed.mjs` 76 of 76. Measured: mythical 491, handles moved 100, deleted 51 (49 first names, 2 surnames), disagreed 30 unchanged; first names 4290, surnames 1948. Waits for the owner's word on merging, after he has seen the change list.
 
 ### 3. Surnames: gender and non-surnames
 
@@ -96,6 +98,10 @@ None open.
 - The extension is copied into the test bed, not linked, so removing the bed cannot touch the repo; Playwright lives in the temporary folder too.
 - The status badge changes only after SillyTavern's settings save (its 1 s debounce and the request) when function calling is unticked; the extension stays as it is and the test waits for it.
 - The review's one finding, a genre preference lost for one pick after the used names reset (`picker.js:66-72`), is milestone 7's "A reset leaves tagged names first"; it is fixed there.
+- Qkr and Korea are surnames (korean), Unnamed a dragon: deleted though surnames and dragons are later milestones, because this milestone's line names them.
+- Second reader's lists: every name read once, blind; candidates from the 297 and 165 mixed in. Places, groups, titles, books and common words count as naming nothing.
+- Deletion disagreed (God-D, God-E, God-L, Sampo): stays, race mythical by the rule.
+- The tool's mythology, race and language_ethnicity field descriptions in `index.js` say the same as its description, since the AI reads them.
 
 ## Trials
 
