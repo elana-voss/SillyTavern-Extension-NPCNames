@@ -370,7 +370,7 @@ function checkPinnedNames(data) {
         'portuguese/Ferreira', 'albanian/Hoxhaj',
         'korean/남궁', 'hebrew/דוד', // real surnames in both lists stay
     ]), []);
-    assert.deepEqual(present(lasts, ['spanish/Flores', 'arabic/يناير', 'arabic/مارس', 'slavicPolish/Sz', 'hebrew/Sh', 'yoruba/Gh', 'chinese/Mawar', 'korean/남자',
+    assert.deepEqual(present(lasts, ['spanish/Flores', 'arabic/يناير', 'arabic/مارس', 'slavicPolish/Sz', 'hebrew/Sh', 'yoruba/Gh', 'chinese/Mawar', 'korean/남자', 'azerbaijani/Memmedova', 'azerbaijani/Aliyeva',
         'latin/Gothicus', // a title
         // A woman's given name is no Yoruba surname.
         ...['Abosede', 'Ajoke', 'Atinuke', 'Aderonke', 'Adebimpe', 'Adejoke'].map(n => `yoruba/${n}`),
@@ -392,7 +392,7 @@ function checkPinnedNames(data) {
     // The meaning-based classes tag real names by what they mean, not by how they sound.
     assert.ok(first('hawaiian', 'Mahina').themes.includes('lunar'), 'Mahina means moon');
     assert.ok(first('english', 'Georgia').themes.includes('rustic'), 'Georgia means farmer');
-    assert.ok(first('greek', 'Desdemona').genre.includes('horror'), 'Desdemona means ill-fated');
+    for (const [c, n] of [['greek', 'Desdemona'], ['english', 'Carrie'], ['romanian', 'Vlad']]) assert.ok(first(c, n).genre.includes('horror'), n);
     assert.ok(!first('mongolian', 'Sarnai').themes.includes('lunar'), 'Sarnai means rose');
     assert.ok(!first('yoruba', 'Babatunde').genre.includes('horror'), 'Babatunde means the father has returned');
 }

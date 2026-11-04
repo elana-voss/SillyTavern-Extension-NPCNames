@@ -151,6 +151,69 @@ gender | arabic | أزهر | male
 gender | arabic | صفورة | female
 gender | nativeAmerican | Witka | female
 gender | hindi | Shiva | ambiguous
+gender | english | Chaun | male
+gender | french | Abélarde | male
+gender | nigerian | Adetokunbo | male
+gender | hindi | Agniprava | male
+gender | mongolian | Amarzaya | female
+gender | indonesian | Anggit | male
+gender | persian | Anohito | male
+gender | icelandic | Aspar | male
+gender | icelandic | Berg | male
+gender | mongolian | Bilguun | male
+gender | serbian | Borka | male
+gender | turkish | Cansever | male
+gender | spanish | Carmon | female
+gender | nigerian | Chinonye | female
+gender | nigerian | Chinyelu | female
+gender | hebrew | Dayan | male
+gender | french | Didière | male
+gender | albanian | Gerti | female
+gender | english | Gith | female
+gender | english | Guldana | female
+gender | maori | Harata | female
+gender | maori | Haumiatiketike | male
+gender | spanish | Helenpaola | female
+gender | arabic | Hur | male
+gender | nepalese | Jyotir | male
+gender | hindi | Karnapriya | female
+gender | hawaiian | Kauʻilani | female
+gender | spanish | Lloya | female
+gender | greek | Mago | male
+gender | maori | Makareta | female
+gender | serbian | Mileta | female
+gender | icelandic | Mjöllnir | male
+gender | spanish | Montez | male
+gender | mayan | Nahil | female
+gender | hindi | Naishadha | male
+gender | hawaiian | Nāmaka | female
+gender | maori | Tino Aroha | male
+gender | mongolian | Tsolmon | female
+gender | korean | Whan | male
+gender | chinese | Xue | female
+gender | mayan | Yaxcol | male
+gender | nepalese | Yusna | female
+gender | finnish | Zar | male
+gender | portuguese | Avati | female
+gender | portuguese | Yachne | female
+gender | thai | กมลภพ | male
+gender | thai | กรองขวัญ | female
+gender | thai | ชนิตพล | male
+gender | thai | ชวนากร | male
+gender | thai | ปัญญาพล | male
+gender | thai | ภุมรินรัตน์ | female
+gender | thai | มานี | female
+gender | thai | อิทธิมนต์ | male
+gender | ethiopian | ማሜ | female
+gender | ghanaian | Haruna | female
+gender | fijian | Takayawa | male
+gender | fijian | Salayavi | male
+gender | yoruba | Folorunsho | male
+gender | vietnamese | Phúc | male
+gender | vietnamese | Khê | female
+gender | nativeAmerican | Wungnema | male
+gender | nativeAmerican | Morning Star | female
+gender | english | Candit | female
 gender | mayan | Chaac | male
 gender | greek | Charon | male
 gender | arabic | Ea | male
@@ -220,6 +283,13 @@ tag | dutch | Koen | commonness | common
 tag | indonesian | Slamet | commonness | common
 tag | arabic | Abubakr | commonness | common
 tag | estonian | Peep | age | adult
+tag | romanian | Vlad | genre | sliceOfLife,horror
+tag | english | Carrie | genre | steampunk,western,horror
+tag | english | Norman | genre | noirDetective,horror
+tag | english | Damian | genre | sliceOfLife,horror
+tag | english | Annabelle | genre | sliceOfLife,horror
+tag | english | Malachi | genre | sliceOfLife,horror
+tag | english | Silas | genre | sliceOfLife,horror
 rename | first | german | Algelika | Angelika
 rename | first | italian | Allessandra | Alessandra
 rename | first | italian | Bennarda | Bernarda
@@ -268,6 +338,38 @@ merge | first | azerbaijani | Ayten | Aytən
 merge | first | azerbaijani | Ilahe | Ilaha
 merge | first | azerbaijani | Nurane | Nurana
 merge | first | azerbaijani | Irade | Irada
+rename | first | english | Walkar | Walker
+merge | first | english | Freddrick | Frederick
+rename | first | english | Tempist | Tempest
+merge | first | english | Margreat | Margaret
+rename | first | greek | Thesally | Thessaly
+merge | first | portuguese | Antítio | António
+rename | first | italian | Vittora | Vittoria
+rename | first | english | Culleen | Colleen
+rename | first | portuguese | Letice | Letícia
+rename | first | english | Candit | Candice
+rename | first | english | Rhyanon | Rhiannon
+rename | first | norwegian | Fillip | Filip
+rename | first | italian | Giampero | Gianpiero
+rename | first | spanish | Oswall | Oswald
+rename | first | italian | Teresalor | Teresa
+rename | first | spanish | Aguilara | Aguilera
+rename | first | spanish | Audely | Audley
+rename | first | english | Tobitha | Tabitha
+rename | first | italian | Giampalmo | Giampaolo
+rename | first | slavicRussian | Vladir | Vladimir
+rename | first | icelandic | Rikharð | Rikharður
+rename | first | icelandic | Karolína | Karólína
+rename | first | english | Dewy | Dewey
+merge | first | yoruba | Fumilayo | Funmilayo
+merge | first | spanish | Carmon | Carmen
+rename | first | english | Stephn | Stephen
+rename | first | spanish | Basileo | Basilio
+rename | first | spanish | Bryân | Bryan
+rename | first | italian | Dainella | Daniella
+rename | first | greek | Lukus | Loukas
+rename | first | spanish | Kateya | Katya
+rename | first | english | Printess | Princess
 rename | first | mayan | Ah puch | Ah Puch
 rename | first | mayan | Ex chauah | Ex Chauah
 rename | first | mayan | Hunab kú | Hunab Kú
@@ -284,6 +386,13 @@ merge | last | portuguese | Goncalves | Gonçalves
 merge | last | icelandic | Jonsdottir | Jónsdóttir
 rename | last | icelandic | Gudmundsdottir | Guðmundsdóttir
 rename | last | portuguese | Magalhes | Magalhães
+rename | last | spanish | Portiyo | Portillo
+rename | last | nepalese | Timsin | Timilsina
+merge | last | nepalese | Kumvar | Kunwar
+rename | last | hindi | Dashmunshi | Dasmunshi
+rename | last | spanish | Estupinian | Estupiñán
+merge | last | azerbaijani | Memmedova | Mamedova
+merge | last | azerbaijani | Aliyeva | Əliyeva
 remove | first | hindi | Lord Shiva | a god under race human; hindi Shiva stays
 remove | first | english | Great Woman | a phrase
 remove | first | hindi | Harsh joy | a phrase
