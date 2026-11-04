@@ -102,6 +102,14 @@ What stays thin, for the owner: postApocalyptic 1 (both readers found no name), 
 
 One live model through nano-gpt on the test bed with the finished work: an ordinary NPC, a Thai NPC, an elf, a dragon, a long chat. Test bed removed. The owner tries it; on his word: version 0.1.5, commit and push.
 
+- Live run: `z-ai/glm-5.3-flash` through nano-gpt, SillyTavern's custom source, character Seraphina, each scenario asked for in chat. The model called `suggest_npc_name` in all five; the instructions reached every request once.
+- Ordinary NPC: `race: human`, returned Julia Labeo (latin), used as returned. Thai NPC: `language_ethnicity: thai`, returned a first name and surname in Thai script, which the model wrote in Latin letters as Phopniphot Kasemsan. Elf: `race: elf`, returned Kythaela Earcorn. Long chat: 120 old messages, the oldest cut, 8,537 tokens sent, instructions present, tool called, returned Ian Tudman.
+- Dragon, first run: the model passed no race, so the extension returned Xmulzencab, a Mayan god; the model used it for the dragon, and added a stray "Garcia" nobody in the chat bears. Cause measured against the data: the 60 dragons come back whenever `race: dragon` is passed; the instructions spelled that out for an elf only. Fixed in `assets/advertisement.txt`, `index.js` and the console example.
+- Dragon, second run after the fix: `race: dragon`, `language_ethnicity: fantasyDragon`, returned Quetzalcoatl, from the mythological dragon list, no franchise character.
+- No Elara, Thorn or other overused name as a character in any reply. The model named places itself: Thornfield, Hartmoor Cross.
+- Tests: one new, the AI is told how to ask for an elf, a dwarf or a dragon, seen failing first. Measured: `node test.js` 25 of 25, `node tools/testbed.mjs` 90 of 90.
+- Input tokens: 60,816 of the 100,000 allowed, read from the usage figure before and after (19,562,009 to 19,622,825), the six scenario runs included.
+
 ## Questions for the owner
 
 None open.
@@ -172,6 +180,10 @@ None open.
 - Milestone 7, the instructions list all 53 cultures after "one of:", so a test checks them and the README against the data.
 - Milestone 7, wrong install folder: an error on screen that stays until closed, and the extension does not start.
 - Milestone 7, code review: not due, 131 lines of product code changed.
+- Milestone 8, live run: not streaming, so each response could be read whole; the key sat in the test bed's secrets file only during a run and no file there held it afterwards.
+- Milestone 8, the dragon: the instructions and the tool now name `race: elf`, `race: dwarf` and `race: dragon`, and say that with no race any race can come back. One run before and one after; that is what shows the change helped.
+- Milestone 8, Thai names stay in Thai script as the requirement says; the model wrote them in Latin letters by itself.
+- Milestone 8, code review: not due, under 20 lines of product code changed.
 
 ## Trials
 
