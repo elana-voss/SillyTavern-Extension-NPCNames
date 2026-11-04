@@ -86,11 +86,12 @@ What stays thin, for the owner: postApocalyptic 1 (both readers found no name), 
 
 - Real names marked gender-ambiguous get their gender where it is clear (50 Icelandic, 25 Spanish, the rest found by reading); wrong genders (Hamad, Sattar, Hermínia) corrected.
 - Misspellings (Gioavanni, Mohmmad) and near-duplicates (Βασίλης and Βασιλης, Chen and Chén) corrected; the leaked `sentinel_fields` key removed.
+- From the audit: `Lord Shiva` (a god, under race human), `Great Woman`, `Harsh joy`, the phrase `بسم الله` and the kunyas `ابو علي`, `ابو محمد`, `ام محمد` leave or are corrected; the malformed-name test also checks later words; the near-spellings `Mamedova`/`Memmedova` and `Leordo` are read.
 - `horror` and `modern`, today only Lovecraft entities, and common-name tags such as `Brown` as a common first name, corrected. A sample of `role`, `intelligence`, `allure`, `age` and `commonness` is checked; only clear errors change.
 
 ### 7. Code, documents and tests
 
-- A filter sent as a list works (`picker.js:22`). Used names are told apart by culture (`index.js:95`) only if milestone 5 brought a name shared across cultures; today none is. A reset leaves tagged names first (`picker.js:42`). Names are not used up by a discarded swipe, if SillyTavern lets the code tell. The prefix on the instructions in group chats (openai.js line 599 of SillyTavern) is avoided. A wrong install folder (`index.js:13`, `index.js:201`) shows an error.
+- A filter sent as a list works (`picker.js:22`). Used names are told apart by culture (`index.js:95`) because milestone 5 brought names shared across cultures (159 first names and 7 surnames, measured by the audit). A reset leaves tagged names first (`picker.js:42`). Names are not used up by a discarded swipe, if SillyTavern lets the code tell. The prefix on the instructions in group chats (openai.js line 599 of SillyTavern) is avoided. A wrong install folder (`index.js:13`, `index.js:201`) shows an error.
 - `index.js:112` no longer promises a first and last name; README step 2 names `None`; `docs/4_sillytavern_console_example.txt` current; the hackerb9 licence checked at its source.
 - Tests: list filters, surname gender, used names across cultures, surname cultures that can be reached, data checks; the unused imports removed.
 
@@ -146,8 +147,12 @@ One live model through nano-gpt on the test bed with the finished work: an ordin
 - The review of milestone 5: fixed are Lithuanian surnames in -a filed female (now -a but -eva, -ova, -iņa, -ina, -ska is the man's form; the six fell to the men's cut), six women's given names as Yoruba surnames, five non-dragons, Gothicus, Pixodarus, seven by-names of one famous man (Sitting Bull, Crazy Horse, Rain-in-the-Face, Black Elk, Cornplanter, Poundmaker, Cornstalk); Native American by-names in English are era victorian; Latin -ella is female (Metella).
 - Same review, Claude's verdict, left as they are: Ghanaian men's names that are also surnames (Akan names serve as both; Mahama, Iddrisu, Salifu are given names); Tanzanian politicians' surnames under `swahili` (real surnames); Bambalio and Gaumata (a cognomen, a real name); Mamedova and Memmedova, and the old Leordo (spelling, milestone 6).
 
+- Audit after milestone 5 (Fable 5.1 medium): on track. Accepted: one shared module for the data tools with the debug loop removed; one test load and one invariants test, so tests are smaller than the product; its data defects go to milestone 6. Not taken: gating by spelling variant, since the two variants in the data (Lira, Silas) are real names and milestone 6 adds no names; dropping `mythology: null`, since no requirement asks for a smaller file.
+- Open estimates not scaled: milestones 1 to 5 cost 22.1M against 22M.
+
 ## Trials
 
 - Closed, reverted: a milestone agent reads only its section of the plan. Figure, context at an agent's end: 97,274, then 94,485, 97,467, 94,038; the hand-over limit sets it, and the plan was still read six times.
 - Milestone 3 cost 4.4M against 3M: the gender work widened to five more cultures and one round of corrections to genders. The estimate is not raised; the audit after milestone 5 scales the open ones.
 - Open: an agent's brief after a hand-over is its work order only, and its background jobs are watched by a Monitor that speaks only on failure or at the end. Figure: Claude tokens per data milestone; before: milestone 5 cost 9.9M over seven agents, three of which put no name in.
+- Open: briefs quote the plan's section and name the tools needed; scripts are written with the Write tool, not a Bash heredoc; name lists go to the model reader by script, never into the agent's context. Figures, milestones 2 to 5 by the audit: PLAN.md read 4 to 6 times per agent; 7 failed heredocs; 36,546 tokens on one list.
