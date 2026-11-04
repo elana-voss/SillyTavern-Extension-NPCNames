@@ -18,8 +18,8 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | # | Milestone | Requirement | Status | Priority | Claude tokens | nano-gpt input | Actual |
 |---|---|---|---|---|---|---|---|
 | 1 | Test bed and the unpublished fixes | R1 | Done | | 5M | 0 | 3.0M, 0; code review Fable 5.1 medium |
-| 2 | Gods, handles and non-names | R1, R2, R7 | In progress | Must | 4M | 0.3M | code review Fable 5.1 medium: no findings |
-| 3 | Surnames: gender and non-surnames | R1, R7 | To do | Must | 3M | 0.2M | |
+| 2 | Gods, handles and non-names | R1, R2, R7 | Done | | 4M | 0.3M | 1.7M, 0; code review Fable 5.1 medium |
+| 3 | Surnames: gender and non-surnames | R1, R7 | In progress | Must | 3M | 0.2M | |
 | 4 | Cultures: labels and misfiled names | R1, R5, R6 | To do | Must | 4M | 0.5M | |
 | 5 | New names | R1, R2, R5 | To do | Must | 6M | 1.5M | |
 | 6 | Tags and spelling | R1, R7 | To do | Must | 3M | 0.2M | |
@@ -105,4 +105,4 @@ None open.
 
 ## Trials
 
-- Open: a milestone agent gets only its own section of the plan to read, not the plan whole, and is told to read CLAUDE.md once. Figure: context at an agent's end; before: 97,274 at milestone 1's hand-over.
+- Open: a milestone agent gets only its own section of the plan to read, not the plan whole, and is told to read CLAUDE.md once. Figure: context at an agent's end; before: 97,274 at milestone 1's hand-over; 94,485 at milestone 2's, no real change yet, open.
