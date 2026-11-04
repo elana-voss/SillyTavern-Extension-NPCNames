@@ -101,7 +101,7 @@
     {
       "name": "Abdii",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -124,7 +124,7 @@
     {
       "name": "Abdisa",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -147,7 +147,7 @@
     {
       "name": "Abdulai",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -195,7 +195,7 @@
     {
       "name": "Abebaw",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -342,7 +342,7 @@
     {
       "name": "Abush",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -578,7 +578,7 @@
     {
       "name": "Addisu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -857,7 +857,7 @@
     {
       "name": "Adisu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -880,7 +880,7 @@
     {
       "name": "Adomas",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -975,7 +975,7 @@
     {
       "name": "Adrians",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -1043,7 +1043,7 @@
     {
       "name": "Adu",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -1409,7 +1409,7 @@
     {
       "name": "Agon",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -1432,7 +1432,7 @@
     {
       "name": "Agostinho",
       "gender": "male",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -2069,7 +2069,7 @@
     {
       "name": "Aistė",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -2649,7 +2649,7 @@
     {
       "name": "Akwasi",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -2758,7 +2758,7 @@
     {
       "name": "Albertine",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -2923,7 +2923,7 @@
     {
       "name": "Alemu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -2969,7 +2969,7 @@
     {
       "name": "Alexandru",
       "gender": "male",
-      "language_ethnicity": "latin",
+      "language_ethnicity": "romanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -3128,7 +3128,7 @@
     {
       "name": "Alhassan",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -3220,7 +3220,7 @@
     {
       "name": "Aliki",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "greek",
       "mythology": null,
       "race": "human",
       "age": [
@@ -3912,7 +3912,7 @@
     {
       "name": "Amandine",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -4928,7 +4928,7 @@
     {
       "name": "András",
       "gender": "male",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -4997,7 +4997,7 @@
     {
       "name": "Andualem",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -5158,7 +5158,7 @@
     {
       "name": "Anielka",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -5621,7 +5621,7 @@
     {
       "name": "António",
       "gender": "male",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -6079,7 +6079,7 @@
     {
       "name": "Appiah",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -7092,7 +7092,7 @@
     {
       "name": "Asare",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -7161,7 +7161,7 @@
     {
       "name": "Asfaw",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -7232,7 +7232,7 @@
     {
       "name": "Ashneel",
       "gender": "male",
-      "language_ethnicity": "maori",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -7253,7 +7253,7 @@
     {
       "name": "Ashnil",
       "gender": "male",
-      "language_ethnicity": "maori",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -7563,7 +7563,7 @@
     {
       "name": "Asuka",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "japanese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -8098,7 +8098,7 @@
     {
       "name": "Aušra",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -8144,7 +8144,7 @@
     {
       "name": "Avneel",
       "gender": "male",
-      "language_ethnicity": "maori",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -8475,7 +8475,7 @@
     {
       "name": "Aysen",
       "gender": "male",
-      "language_ethnicity": "english",
+      "language_ethnicity": "turkish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -8496,7 +8496,7 @@
     {
       "name": "Aytaç",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "turkish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -8896,7 +8896,7 @@
     {
       "name": "Bajram",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -9030,7 +9030,7 @@
     {
       "name": "Balázs",
       "gender": "male",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -9265,7 +9265,7 @@
     {
       "name": "Bashkim",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -9671,7 +9671,7 @@
     {
       "name": "Belachew",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -9692,7 +9692,7 @@
     {
       "name": "Belay",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -9713,7 +9713,7 @@
     {
       "name": "Belete",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -9755,7 +9755,7 @@
     {
       "name": "Benas",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -9776,7 +9776,7 @@
     {
       "name": "Bence",
       "gender": "male",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -10201,7 +10201,7 @@
     {
       "name": "Besnik",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -10306,7 +10306,7 @@
     {
       "name": "Bezawit",
       "gender": "female",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -10691,7 +10691,7 @@
     {
       "name": "Biniyam",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -10842,7 +10842,7 @@
     {
       "name": "Birhanu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -10927,7 +10927,7 @@
     {
       "name": "Biruk",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -11032,7 +11032,7 @@
     {
       "name": "Bizuayehu",
       "gender": "female",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -11714,7 +11714,7 @@
     {
       "name": "Bra",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -12379,7 +12379,7 @@
     {
       "name": "Bujar",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -12786,7 +12786,7 @@
     {
       "name": "Cahaya",
       "gender": "female",
-      "language_ethnicity": "chinese",
+      "language_ethnicity": "indonesian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -13967,7 +13967,7 @@
     {
       "name": "Cemile",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "turkish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -14361,7 +14361,7 @@
     {
       "name": "Chadi",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -16185,7 +16185,7 @@
     {
       "name": "Chujo-Hime",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "japanese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -18082,7 +18082,7 @@
     {
       "name": "Cédric",
       "gender": "male",
-      "language_ethnicity": "german",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -18146,27 +18146,6 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
-    },
-    {
-      "name": "Da Silva",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
       "themes": []
     },
     {
@@ -19347,7 +19326,7 @@
     {
       "name": "Dereje",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -19368,7 +19347,7 @@
     {
       "name": "Derese",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -19410,7 +19389,7 @@
     {
       "name": "Desalegn",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -20004,7 +19983,7 @@
     {
       "name": "Dinis",
       "gender": "male",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -20025,7 +20004,7 @@
     {
       "name": "Diogo",
       "gender": "male",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -21671,7 +21650,7 @@
     {
       "name": "Eglė",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -21694,7 +21673,7 @@
     {
       "name": "Egzon",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -22332,7 +22311,7 @@
     {
       "name": "Elsad",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -22379,7 +22358,7 @@
     {
       "name": "Elsen",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -22449,7 +22428,7 @@
     {
       "name": "Elxan",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -22781,7 +22760,7 @@
     {
       "name": "Endale",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -22804,7 +22783,7 @@
     {
       "name": "Endris",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -22827,7 +22806,7 @@
     {
       "name": "Endrit",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -22898,7 +22877,7 @@
     {
       "name": "Enikő",
       "gender": "female",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -23254,7 +23233,7 @@
     {
       "name": "Erald",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -23555,7 +23534,7 @@
     {
       "name": "Erjon",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -23648,7 +23627,7 @@
     {
       "name": "Erminia",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "italian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -23766,7 +23745,7 @@
     {
       "name": "Eshetu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -24122,7 +24101,7 @@
     {
       "name": "Etibar",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -24285,7 +24264,7 @@
     {
       "name": "Everardo",
       "gender": "male",
-      "language_ethnicity": "english",
+      "language_ethnicity": "spanish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -24728,7 +24707,7 @@
     {
       "name": "Fayisa",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -24895,7 +24874,7 @@
     {
       "name": "Felicie",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -25036,55 +25015,9 @@
       "themes": []
     },
     {
-      "name": "Fernandes",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Ferreira",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Feyisa",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -25254,7 +25187,7 @@
     {
       "name": "Fikadu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -25277,7 +25210,7 @@
     {
       "name": "Fikru",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -25300,7 +25233,7 @@
     {
       "name": "Filipe",
       "gender": "male",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -25543,7 +25476,7 @@
     {
       "name": "Flamur",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -25638,7 +25571,7 @@
     {
       "name": "Florent",
       "gender": "male",
-      "language_ethnicity": "english",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -26068,7 +26001,7 @@
     {
       "name": "Françoise",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -26660,7 +26593,7 @@
     {
       "name": "Gadisa",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -27322,7 +27255,7 @@
     {
       "name": "Gergely",
       "gender": "male",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -27578,7 +27511,7 @@
     {
       "name": "Getnet",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -28364,7 +28297,7 @@
     {
       "name": "Girma",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -28387,7 +28320,7 @@
     {
       "name": "Girum",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -28908,7 +28841,7 @@
     {
       "name": "Godfred",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -29023,52 +28956,6 @@
       "themes": []
     },
     {
-      "name": "Gomes",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Goncalves",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Gong Gong",
       "gender": "ambiguous",
       "language_ethnicity": "chinese",
@@ -29092,7 +28979,7 @@
     {
       "name": "Gonçalo",
       "gender": "male",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -29565,7 +29452,7 @@
     {
       "name": "Gunel",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -29670,7 +29557,7 @@
     {
       "name": "Gustave",
       "gender": "male",
-      "language_ethnicity": "english",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -30190,7 +30077,7 @@
     {
       "name": "Habtamu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -30402,7 +30289,7 @@
     {
       "name": "Hailu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -30423,7 +30310,7 @@
     {
       "name": "Hajia",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -30444,7 +30331,7 @@
     {
       "name": "Hajrije",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -30465,7 +30352,7 @@
     {
       "name": "Haleh",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "persian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -30635,7 +30522,7 @@
     {
       "name": "Hamad",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -30788,7 +30675,7 @@
     {
       "name": "Hanife",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "turkish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -31381,7 +31268,7 @@
     {
       "name": "Hatsuki",
       "gender": "female",
-      "language_ethnicity": "spanish",
+      "language_ethnicity": "japanese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -32252,7 +32139,7 @@
     {
       "name": "Hesen",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33397,7 +33284,7 @@
     {
       "name": "Housain",
       "gender": "male",
-      "language_ethnicity": "italian",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -33527,29 +33414,6 @@
       ],
       "intelligence": "plain",
       "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Hristova",
-      "gender": "female",
-      "language_ethnicity": "finnish",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
@@ -34552,7 +34416,7 @@
     {
       "name": "Ibolya",
       "gender": "female",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -35012,7 +34876,7 @@
     {
       "name": "Ildikó",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -35033,7 +34897,7 @@
     {
       "name": "Ilgar",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -35998,7 +35862,7 @@
     {
       "name": "Ismayil",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -36134,7 +35998,7 @@
     {
       "name": "Issah",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -36946,7 +36810,7 @@
     {
       "name": "Jadwiga",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "slavicPolish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -39607,7 +39471,7 @@
     {
       "name": "Justas",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -39793,7 +39657,7 @@
     {
       "name": "József",
       "gender": "male",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -39931,7 +39795,7 @@
     {
       "name": "Jū-Ō",
       "gender": "ambiguous",
-      "language_ethnicity": "english",
+      "language_ethnicity": "japanese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -39956,7 +39820,7 @@
     {
       "name": "Jūratė",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -41049,7 +40913,7 @@
     {
       "name": "Kamilė",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -42681,7 +42545,7 @@
     {
       "name": "Kidus",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -43207,7 +43071,7 @@
     {
       "name": "Kofi",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -43278,7 +43142,7 @@
     {
       "name": "Kojo",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -44161,7 +44025,7 @@
     {
       "name": "Kujtim",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -44548,7 +44412,7 @@
     {
       "name": "Kwabena",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -44571,7 +44435,7 @@
     {
       "name": "Kwadwo",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -44619,7 +44483,7 @@
     {
       "name": "Kwaku",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -44665,7 +44529,7 @@
     {
       "name": "Kwasi",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -44688,7 +44552,7 @@
     {
       "name": "Kwesi",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -45903,7 +45767,7 @@
     {
       "name": "Legese",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -46062,7 +45926,7 @@
     {
       "name": "Leonid",
       "gender": "male",
-      "language_ethnicity": "english",
+      "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -46464,7 +46328,7 @@
     {
       "name": "Liepa",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -46987,7 +46851,7 @@
     {
       "name": "Liridon",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -47573,29 +47437,6 @@
       "themes": []
     },
     {
-      "name": "Lopes",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Lord Shiva",
       "gender": "male",
       "language_ethnicity": "hindi",
@@ -48129,7 +47970,7 @@
     {
       "name": "Luknė",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -48219,7 +48060,7 @@
     {
       "name": "Luminita",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "romanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -49351,7 +49192,7 @@
     {
       "name": "Malek",
       "gender": "female",
-      "language_ethnicity": "hebrew",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -50495,29 +50336,6 @@
       "themes": []
     },
     {
-      "name": "Martins",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Martinus",
       "gender": "male",
       "language_ethnicity": "dutch",
@@ -50543,7 +50361,7 @@
     {
       "name": "Mary Anne",
       "gender": "female",
-      "language_ethnicity": "italian",
+      "language_ethnicity": "english",
       "mythology": null,
       "race": "human",
       "age": [
@@ -50843,7 +50661,7 @@
     {
       "name": "Matei",
       "gender": "male",
-      "language_ethnicity": "latin",
+      "language_ethnicity": "romanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -51211,7 +51029,7 @@
     {
       "name": "Mawar",
       "gender": "female",
-      "language_ethnicity": "chinese",
+      "language_ethnicity": "indonesian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -51811,7 +51629,7 @@
     {
       "name": "Melkamu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -52005,7 +51823,7 @@
     {
       "name": "Mengistu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -52028,7 +51846,7 @@
     {
       "name": "Mensah",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -52450,7 +52268,7 @@
     {
       "name": "Michaëla",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -53096,7 +52914,7 @@
     {
       "name": "Misae",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "japanese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -53142,7 +52960,7 @@
     {
       "name": "Misgana",
       "gender": "female",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -53753,7 +53571,7 @@
     {
       "name": "Monserrat",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "spanish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -53826,7 +53644,7 @@
     {
       "name": "Montaha",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -53850,29 +53668,6 @@
       "name": "Montano",
       "gender": "male",
       "language_ethnicity": "italian",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Monteiro",
-      "gender": "male",
-      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -54556,7 +54351,7 @@
     {
       "name": "Musah",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -54765,7 +54560,7 @@
     {
       "name": "Márton",
       "gender": "male",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -55019,29 +54814,6 @@
       "themes": []
     },
     {
-      "name": "Müller",
-      "gender": "male",
-      "language_ethnicity": "swedish",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Māhoe",
       "gender": "male",
       "language_ethnicity": "hawaiian",
@@ -55190,29 +54962,6 @@
       "name": "Nagehan",
       "gender": "female",
       "language_ethnicity": "turkish",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Nagy",
-      "gender": "male",
-      "language_ethnicity": "estonian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -55817,7 +55566,7 @@
     {
       "name": "Natalya",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -55978,7 +55727,7 @@
     {
       "name": "Nawel",
       "gender": "female",
-      "language_ethnicity": "french",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -56402,7 +56151,7 @@
     {
       "name": "Negash",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -56492,7 +56241,7 @@
     {
       "name": "Neringa",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -57763,7 +57512,7 @@
     {
       "name": "Nuno",
       "gender": "male",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -58156,7 +57905,7 @@
     {
       "name": "Obaapa",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -58789,7 +58538,7 @@
     {
       "name": "Ohemaa",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59234,7 +58983,7 @@
     {
       "name": "Olsi",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -59972,7 +59721,7 @@
     {
       "name": "Opoku",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60139,7 +59888,7 @@
     {
       "name": "Ornella",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "italian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60487,7 +60236,7 @@
     {
       "name": "Owusu",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60718,7 +60467,7 @@
     {
       "name": "Paijem",
       "gender": "female",
-      "language_ethnicity": "chinese",
+      "language_ethnicity": "indonesian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -60809,7 +60558,7 @@
     {
       "name": "Pandelis",
       "gender": "male",
-      "language_ethnicity": "italian",
+      "language_ethnicity": "greek",
       "mythology": null,
       "race": "human",
       "age": [
@@ -61455,29 +61204,6 @@
       "themes": []
     },
     {
-      "name": "Pereira",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Perkonis",
       "gender": "ambiguous",
       "language_ethnicity": "slavicOther",
@@ -61718,7 +61444,7 @@
     {
       "name": "Petrit",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -62770,7 +62496,7 @@
     {
       "name": "Praveen",
       "gender": "male",
-      "language_ethnicity": "arabic",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -63258,7 +62984,7 @@
     {
       "name": "Putry",
       "gender": "female",
-      "language_ethnicity": "chinese",
+      "language_ethnicity": "indonesian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -64029,7 +63755,7 @@
     {
       "name": "Raida",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -64516,7 +64242,7 @@
     {
       "name": "Rasa",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -64818,7 +64544,7 @@
     {
       "name": "Remigijus",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -64914,7 +64640,7 @@
     {
       "name": "Resad",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -65211,29 +64937,6 @@
       "themes": []
     },
     {
-      "name": "Ribeiro",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "plain",
-      "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Rie",
       "gender": "female",
       "language_ethnicity": "dutch",
@@ -65420,7 +65123,7 @@
     {
       "name": "Rinor",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -65753,27 +65456,6 @@
       "intelligence": "average",
       "allure": "unremarkable",
       "commonness": "rare",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Rodrigues",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
       "genre": [],
       "themes": []
     },
@@ -66395,7 +66077,7 @@
     {
       "name": "Rūta",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -67154,7 +66836,7 @@
     {
       "name": "Santhosh",
       "gender": "male",
-      "language_ethnicity": "arabic",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -67217,7 +66899,7 @@
     {
       "name": "Sanyii",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -67573,7 +67255,7 @@
     {
       "name": "Satomi",
       "gender": "female",
-      "language_ethnicity": "french",
+      "language_ethnicity": "japanese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -67921,7 +67603,7 @@
     {
       "name": "Seidu",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -68308,7 +67990,7 @@
     {
       "name": "Seymur",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -68634,7 +68316,7 @@
     {
       "name": "Shambel",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -68749,7 +68431,7 @@
     {
       "name": "Shayal",
       "gender": "male",
-      "language_ethnicity": "maori",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -68795,7 +68477,7 @@
     {
       "name": "Shemsu",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -70502,7 +70184,7 @@
     {
       "name": "Sofya",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "slavicRussian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -70793,27 +70475,6 @@
       ],
       "intelligence": "plain",
       "allure": "pretty",
-      "commonness": "uncommon",
-      "genre": [],
-      "themes": []
-    },
-    {
-      "name": "Sousa",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "bystander"
-      ],
-      "intelligence": "plain",
-      "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [],
       "themes": []
@@ -71381,7 +71042,7 @@
     {
       "name": "Stéphane",
       "gender": "male",
-      "language_ethnicity": "german",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -72460,7 +72121,7 @@
     {
       "name": "Sébastien",
       "gender": "male",
-      "language_ethnicity": "german",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -72759,7 +72420,7 @@
     {
       "name": "Tadas",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "age": [
@@ -72805,7 +72466,7 @@
     {
       "name": "Tadesse",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -73075,7 +72736,7 @@
     {
       "name": "Tamirat",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -73213,7 +72874,7 @@
     {
       "name": "Tarana",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -73236,7 +72897,7 @@
     {
       "name": "Tarekegn",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -73506,29 +73167,6 @@
       "themes": []
     },
     {
-      "name": "Teixeira",
-      "gender": "male",
-      "language_ethnicity": "french",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Teišeba",
       "gender": "ambiguous",
       "language_ethnicity": "arabic",
@@ -73760,7 +73398,7 @@
     {
       "name": "Tesfahun",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -73871,7 +73509,7 @@
     {
       "name": "Tetteh",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -74459,7 +74097,7 @@
     {
       "name": "Tiago",
       "gender": "male",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -74530,7 +74168,7 @@
     {
       "name": "Tilahun",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -76059,7 +75697,7 @@
     {
       "name": "Tsutako",
       "gender": "female",
-      "language_ethnicity": "english",
+      "language_ethnicity": "japanese",
       "mythology": null,
       "race": "human",
       "age": [
@@ -77356,7 +76994,7 @@
     {
       "name": "Valentino",
       "gender": "male",
-      "language_ethnicity": "english",
+      "language_ethnicity": "italian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -77475,7 +77113,7 @@
     {
       "name": "Vaqif",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -78963,7 +78601,7 @@
     {
       "name": "Vusala",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -80017,7 +79655,7 @@
     {
       "name": "Xeyal",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -80744,7 +80382,7 @@
     {
       "name": "Yakubu",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -81020,7 +80658,7 @@
     {
       "name": "Yannick",
       "gender": "male",
-      "language_ethnicity": "german",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -81183,7 +80821,7 @@
     {
       "name": "Yaw",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -81321,7 +80959,7 @@
     {
       "name": "Yeboah",
       "gender": "male",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -81505,7 +81143,7 @@
     {
       "name": "Yimam",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -81528,7 +81166,7 @@
     {
       "name": "Yimer",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -81620,7 +81258,7 @@
     {
       "name": "Ylli",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -82195,7 +81833,7 @@
     {
       "name": "Yusif",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "age": [
@@ -82563,7 +82201,7 @@
     {
       "name": "Zalán",
       "gender": "male",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -82818,7 +82456,7 @@
     {
       "name": "Zekiye",
       "gender": "female",
-      "language_ethnicity": "finnish",
+      "language_ethnicity": "turkish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -83563,7 +83201,7 @@
     {
       "name": "Zsuzsa",
       "gender": "female",
-      "language_ethnicity": "estonian",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -84842,7 +84480,7 @@
     {
       "name": "Hekewika",
       "gender": "female",
-      "language_ethnicity": "portuguese",
+      "language_ethnicity": "hawaiian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -85256,7 +84894,7 @@
     {
       "name": "Lopeka",
       "gender": "female",
-      "language_ethnicity": "portuguese",
+      "language_ethnicity": "hawaiian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -85373,7 +85011,7 @@
     {
       "name": "Maximilienne",
       "gender": "female",
-      "language_ethnicity": "portuguese",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "age": [
@@ -97050,7 +96688,7 @@
     {
       "name": "ሙሀመድ",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -97073,7 +96711,7 @@
     {
       "name": "ማሜ",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -97096,7 +96734,7 @@
     {
       "name": "ሰይድ",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -97119,7 +96757,7 @@
     {
       "name": "አህመድ",
       "gender": "male",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -98041,7 +97679,7 @@
     {
       "name": "Abbasova",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98059,7 +97697,7 @@
     },
     {
       "name": "Abdulai",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98077,7 +97715,7 @@
     },
     {
       "name": "Aboagye",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98113,7 +97751,7 @@
     },
     {
       "name": "Abubakar",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98167,7 +97805,7 @@
     },
     {
       "name": "Acquah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98293,7 +97931,7 @@
     },
     {
       "name": "Adrovic",
-      "language_ethnicity": "french",
+      "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98311,7 +97949,7 @@
     },
     {
       "name": "Adugna",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98389,7 +98027,7 @@
     },
     {
       "name": "Afful",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98407,7 +98045,7 @@
     },
     {
       "name": "Afriyie",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98461,7 +98099,7 @@
     },
     {
       "name": "Agovic",
-      "language_ethnicity": "french",
+      "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98533,7 +98171,7 @@
     },
     {
       "name": "Agyei",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98551,7 +98189,7 @@
     },
     {
       "name": "Agyemang",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98588,7 +98226,7 @@
     {
       "name": "Ahmadov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -98678,7 +98316,7 @@
     },
     {
       "name": "Aidoo",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -99244,7 +98882,7 @@
     },
     {
       "name": "Alhassan",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -99280,7 +98918,7 @@
     },
     {
       "name": "Aliyi",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -99442,7 +99080,7 @@
     },
     {
       "name": "Amponsah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -99534,7 +99172,7 @@
     },
     {
       "name": "Anetsberger",
-      "language_ethnicity": "english",
+      "language_ethnicity": "german",
       "mythology": null,
       "race": "human",
       "era": [
@@ -99607,7 +99245,7 @@
     },
     {
       "name": "Ansah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -99752,7 +99390,7 @@
     },
     {
       "name": "Arhin",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -99860,7 +99498,7 @@
     },
     {
       "name": "Asare",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100045,7 +99683,7 @@
     {
       "name": "Axmedov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100135,7 +99773,7 @@
     },
     {
       "name": "Baah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100229,7 +99867,7 @@
     },
     {
       "name": "Baidoo",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100548,7 +100186,7 @@
     },
     {
       "name": "Bedru",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100604,7 +100242,7 @@
     },
     {
       "name": "Benali",
-      "language_ethnicity": "dutch",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100622,7 +100260,7 @@
     },
     {
       "name": "Benedek",
-      "language_ethnicity": "english",
+      "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100940,7 +100578,7 @@
     },
     {
       "name": "Birhanu",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -100994,7 +100632,7 @@
     },
     {
       "name": "Bitzenhofer",
-      "language_ethnicity": "english",
+      "language_ethnicity": "german",
       "mythology": null,
       "race": "human",
       "era": [
@@ -101030,7 +100668,7 @@
     },
     {
       "name": "Bizuneh",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -101790,7 +101428,7 @@
     },
     {
       "name": "Bytyqi",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -101808,7 +101446,7 @@
     },
     {
       "name": "Bytyçi",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -102024,7 +101662,7 @@
     },
     {
       "name": "Cani",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -102189,7 +101827,7 @@
     {
       "name": "Ceferov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -102301,7 +101939,7 @@
     },
     {
       "name": "Chanie",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -102685,7 +102323,7 @@
     },
     {
       "name": "Ciobanu",
-      "language_ethnicity": "latin",
+      "language_ethnicity": "romanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -102977,7 +102615,7 @@
     },
     {
       "name": "Da Cruz",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "era": [
@@ -102993,7 +102631,7 @@
     },
     {
       "name": "Da Luz",
-      "language_ethnicity": "french",
+      "language_ethnicity": "portuguese",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103009,7 +102647,7 @@
     },
     {
       "name": "Dadzie",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103105,7 +102743,7 @@
     },
     {
       "name": "Danso",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103193,7 +102831,7 @@
     },
     {
       "name": "Darko",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103481,7 +103119,7 @@
     },
     {
       "name": "Deda",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103534,7 +103172,7 @@
     },
     {
       "name": "Degefa",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103615,7 +103253,7 @@
     },
     {
       "name": "Demise",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103631,7 +103269,7 @@
     },
     {
       "name": "Demse",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103647,7 +103285,7 @@
     },
     {
       "name": "Dessie",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103663,7 +103301,7 @@
     },
     {
       "name": "Detamo",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103922,7 +103560,7 @@
     },
     {
       "name": "Dinku",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -103954,7 +103592,7 @@
     },
     {
       "name": "Djordjevic",
-      "language_ethnicity": "german",
+      "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104111,7 +103749,7 @@
     },
     {
       "name": "Dumitru",
-      "language_ethnicity": "latin",
+      "language_ethnicity": "romanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104410,7 +104048,7 @@
     {
       "name": "Ehmedov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104460,7 +104098,7 @@
     },
     {
       "name": "Ejigu",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104516,7 +104154,7 @@
     },
     {
       "name": "Elshani",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104590,7 +104228,7 @@
     },
     {
       "name": "Esayas",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104608,7 +104246,7 @@
     },
     {
       "name": "Eshetu",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104626,7 +104264,7 @@
     },
     {
       "name": "Eshun",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104846,7 +104484,7 @@
     },
     {
       "name": "Fenta",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104882,7 +104520,7 @@
     },
     {
       "name": "Ferizi",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -104900,7 +104538,7 @@
     },
     {
       "name": "Feyisa",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105179,7 +104817,7 @@
     },
     {
       "name": "Frimpong",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105255,7 +104893,7 @@
     },
     {
       "name": "Fsha",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105309,7 +104947,7 @@
     },
     {
       "name": "Gadisa",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105455,7 +105093,7 @@
     },
     {
       "name": "Gega",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105473,7 +105111,7 @@
     },
     {
       "name": "Gemechu",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105491,7 +105129,7 @@
     },
     {
       "name": "Gemeda",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105618,7 +105256,7 @@
     },
     {
       "name": "Gheorghe",
-      "language_ethnicity": "latin",
+      "language_ethnicity": "romanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105781,7 +105419,7 @@
     },
     {
       "name": "Gjergji",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105817,7 +105455,7 @@
     },
     {
       "name": "Gjoka",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105854,7 +105492,7 @@
     },
     {
       "name": "Gobena",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -105963,7 +105601,7 @@
     },
     {
       "name": "Gosaye",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -106209,7 +105847,7 @@
     },
     {
       "name": "Gugsa",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -106285,7 +105923,7 @@
     },
     {
       "name": "Gyamfi",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -106525,7 +106163,7 @@
     },
     {
       "name": "Halcon",
-      "language_ethnicity": "english",
+      "language_ethnicity": "spanish",
       "mythology": null,
       "race": "human",
       "era": [
@@ -106991,7 +106629,7 @@
     {
       "name": "Hesenova",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -107063,7 +106701,7 @@
     },
     {
       "name": "Hidri",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -107283,7 +106921,7 @@
     },
     {
       "name": "Hordofa",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -107355,7 +106993,7 @@
     },
     {
       "name": "Hoxhaj",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -107536,7 +107174,7 @@
     },
     {
       "name": "Hysa",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -107752,7 +107390,7 @@
     },
     {
       "name": "Iddrisu",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -108039,7 +107677,7 @@
     {
       "name": "Isgenderov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -108078,7 +107716,7 @@
     {
       "name": "Ismayilova",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -108096,7 +107734,7 @@
     },
     {
       "name": "Issah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -108706,7 +108344,7 @@
     },
     {
       "name": "Kadiir",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -108941,7 +108579,7 @@
     {
       "name": "Kalniņš",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "era": [
@@ -109575,7 +109213,7 @@
     },
     {
       "name": "Khateeb",
-      "language_ethnicity": "hebrew",
+      "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
       "era": [
@@ -109631,7 +109269,7 @@
     },
     {
       "name": "Kibret",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -110003,7 +109641,7 @@
     },
     {
       "name": "Konadu",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -110119,7 +109757,7 @@
     },
     {
       "name": "Koomson",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -110582,7 +110220,7 @@
     },
     {
       "name": "Kumsa",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -110859,7 +110497,7 @@
     {
       "name": "Kārkliņš",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "era": [
@@ -110955,7 +110593,7 @@
     },
     {
       "name": "Lagrave",
-      "language_ethnicity": "english",
+      "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
       "era": [
@@ -110991,7 +110629,7 @@
     },
     {
       "name": "Lamptey",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -111416,7 +111054,7 @@
     },
     {
       "name": "Lenza",
-      "language_ethnicity": "english",
+      "language_ethnicity": "italian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -111524,7 +111162,7 @@
     },
     {
       "name": "Licina",
-      "language_ethnicity": "french",
+      "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -112523,7 +112161,8 @@
     },
     {
       "name": "Makarezos",
-      "language_ethnicity": "english",
+      "gender": "male",
+      "language_ethnicity": "greek",
       "mythology": null,
       "race": "human",
       "era": [
@@ -112795,7 +112434,7 @@
     },
     {
       "name": "Matei",
-      "language_ethnicity": "latin",
+      "language_ethnicity": "romanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113031,7 +112670,7 @@
     },
     {
       "name": "Mema",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113049,7 +112688,7 @@
     },
     {
       "name": "Memmedli",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113578,7 +113217,7 @@
     },
     {
       "name": "Mucaj",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113614,7 +113253,7 @@
     },
     {
       "name": "Muhe",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113690,7 +113329,7 @@
     {
       "name": "Muradov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113708,7 +113347,7 @@
     },
     {
       "name": "Muratovic",
-      "language_ethnicity": "french",
+      "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113726,7 +113365,7 @@
     },
     {
       "name": "Musah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113841,7 +113480,7 @@
     {
       "name": "Məmmədov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -113951,7 +113590,7 @@
     },
     {
       "name": "Nartey",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -114212,7 +113851,7 @@
     },
     {
       "name": "Nigusse",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -114362,7 +114001,7 @@
     },
     {
       "name": "Nkrumah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -114555,7 +114194,7 @@
     {
       "name": "Nuriyev",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -114593,7 +114232,7 @@
     },
     {
       "name": "Nyarko",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -114671,7 +114310,7 @@
     },
     {
       "name": "Oduro",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -114689,7 +114328,7 @@
     },
     {
       "name": "Ofori",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -114853,7 +114492,7 @@
     },
     {
       "name": "Okyere",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -115074,7 +114713,7 @@
     },
     {
       "name": "Opoku",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -115092,7 +114731,7 @@
     },
     {
       "name": "Oppong",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -115238,7 +114877,7 @@
     },
     {
       "name": "Otoo",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -116039,7 +115678,7 @@
     },
     {
       "name": "Polydorou",
-      "language_ethnicity": "english",
+      "language_ethnicity": "greek",
       "mythology": null,
       "race": "human",
       "era": [
@@ -116601,7 +116240,7 @@
     {
       "name": "Qasimova",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -116637,7 +116276,7 @@
     },
     {
       "name": "Quansah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -116730,7 +116369,7 @@
     {
       "name": "Quliyeva",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -117084,7 +116723,7 @@
     },
     {
       "name": "Rastoder",
-      "language_ethnicity": "french",
+      "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -117253,7 +116892,7 @@
     },
     {
       "name": "Regasa",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -117272,7 +116911,7 @@
     {
       "name": "Rehimov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -117784,7 +117423,7 @@
     {
       "name": "Rustemov",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -117935,7 +117574,7 @@
     },
     {
       "name": "Sabotic",
-      "language_ethnicity": "french",
+      "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -118065,7 +117704,7 @@
     },
     {
       "name": "Salifu",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -118228,7 +117867,7 @@
     },
     {
       "name": "Sarpong",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -118458,7 +118097,7 @@
     },
     {
       "name": "Seidu",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -118597,7 +118236,7 @@
     },
     {
       "name": "Shemsu",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -119175,7 +118814,7 @@
     },
     {
       "name": "Stafa",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -119469,7 +119108,7 @@
     },
     {
       "name": "Sulaj",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -119797,7 +119436,7 @@
     },
     {
       "name": "Tabaku",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -119813,7 +119452,7 @@
     },
     {
       "name": "Tabua",
-      "language_ethnicity": "maori",
+      "language_ethnicity": "fijian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -119829,7 +119468,7 @@
     },
     {
       "name": "Tadesa",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -119909,7 +119548,7 @@
     },
     {
       "name": "Tamene",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -120124,7 +119763,7 @@
     },
     {
       "name": "Tavarez",
-      "language_ethnicity": "english",
+      "language_ethnicity": "spanish",
       "mythology": null,
       "race": "human",
       "era": [
@@ -120142,7 +119781,7 @@
     },
     {
       "name": "Tawiah",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -121337,7 +120976,7 @@
     },
     {
       "name": "Ukaj",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -121445,7 +121084,7 @@
     },
     {
       "name": "Unterburger",
-      "language_ethnicity": "english",
+      "language_ethnicity": "german",
       "mythology": null,
       "race": "human",
       "era": [
@@ -121481,7 +121120,7 @@
     },
     {
       "name": "Ushijima",
-      "language_ethnicity": "english",
+      "language_ethnicity": "japanese",
       "mythology": null,
       "race": "human",
       "era": [
@@ -121719,7 +121358,7 @@
     {
       "name": "Vanags",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "era": [
@@ -121795,7 +121434,7 @@
     {
       "name": "Veliyev",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -121960,7 +121599,7 @@
     },
     {
       "name": "Vojta",
-      "language_ethnicity": "english",
+      "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
       "era": [
@@ -121976,7 +121615,7 @@
     },
     {
       "name": "Vonotabua",
-      "language_ethnicity": "maori",
+      "language_ethnicity": "fijian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -122243,7 +121882,7 @@
     },
     {
       "name": "Waqa",
-      "language_ethnicity": "maori",
+      "language_ethnicity": "fijian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -122601,7 +122240,7 @@
     },
     {
       "name": "Wondimu",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -122863,7 +122502,7 @@
     },
     {
       "name": "Yakubu",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -122927,7 +122566,7 @@
     },
     {
       "name": "Yimam",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -122943,7 +122582,7 @@
     },
     {
       "name": "Yimer",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -123064,7 +122703,7 @@
     },
     {
       "name": "Yussif",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -123198,7 +122837,7 @@
     {
       "name": "Zariņš",
       "gender": "male",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "era": [
@@ -123263,7 +122902,7 @@
     },
     {
       "name": "Zefi",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -123296,7 +122935,7 @@
     {
       "name": "Zeynalova",
       "gender": "female",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -126091,7 +125730,7 @@
     {
       "name": "Žukauskienė",
       "gender": "female",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "era": [
@@ -126112,7 +125751,7 @@
     {
       "name": "Əliyev",
       "gender": "male",
-      "language_ethnicity": "turkish",
+      "language_ethnicity": "azerbaijani",
       "mythology": null,
       "race": "human",
       "era": [
@@ -126878,7 +126517,7 @@
     },
     {
       "name": "Коваленко",
-      "language_ethnicity": "slavicRussian",
+      "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -127839,7 +127478,7 @@
     },
     {
       "name": "Шевченко",
-      "language_ethnicity": "slavicRussian",
+      "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130318,7 +129957,7 @@
     },
     {
       "name": "ሁሴን",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130336,7 +129975,7 @@
     },
     {
       "name": "መሀመድ",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130354,7 +129993,7 @@
     },
     {
       "name": "ሙሀመድ",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130372,7 +130011,7 @@
     },
     {
       "name": "ሰይድ",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130390,7 +130029,7 @@
     },
     {
       "name": "አህመድ",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130408,7 +130047,7 @@
     },
     {
       "name": "አሰን",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130424,7 +130063,7 @@
     },
     {
       "name": "አበበ",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130442,7 +130081,7 @@
     },
     {
       "name": "አደም",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130460,7 +130099,7 @@
     },
     {
       "name": "እንድሪስ",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130476,7 +130115,7 @@
     },
     {
       "name": "ከድር",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130492,7 +130131,7 @@
     },
     {
       "name": "ይመር",
-      "language_ethnicity": "swahili",
+      "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
       "era": [
@@ -130727,6 +130366,270 @@
     {
       "name": "제갈",
       "language_ethnicity": "korean",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Nagy",
+      "language_ethnicity": "hungarian",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Da Silva",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "uncommon",
+      "genre": [],
+      "themes": []
+    },
+    {
+      "name": "Fernandes",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Ferreira",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Gomes",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Goncalves",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Lopes",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Martins",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Monteiro",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Pereira",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Ribeiro",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Rodrigues",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [],
+      "themes": []
+    },
+    {
+      "name": "Sousa",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "bystander"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [],
+      "themes": []
+    },
+    {
+      "name": "Teixeira",
+      "language_ethnicity": "portuguese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Müller",
+      "language_ethnicity": "german",
       "mythology": null,
       "race": "human",
       "era": [

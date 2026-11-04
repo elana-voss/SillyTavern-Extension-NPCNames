@@ -1,6 +1,6 @@
 // Run via: node test.js
 
-import { filterFirstNames, pickAndMarkUsed, pickName, DROP_ORDER } from './picker.js';
+import { deriveEnumValues, filterFirstNames, pickAndMarkUsed, pickName, DROP_ORDER } from './picker.js';
 import { injectBeforeLatest } from './advertisement.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -318,7 +318,7 @@ test('an ambiguous character takes a surname of any gender', () => {
 
 test('database genders surnames by their endings and keeps no men with women\'s surnames', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const cultures = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese', 'irishGaelic'];
+    const cultures = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese', 'irishGaelic', 'baltic', 'azerbaijani'];
     const FEMALE = /(sk|ck)a$|dóttir$|dottir$|dotter$|ová$|ienė$|(ов|ев|ск)а$|(ов|ев)ая$|(ov|yev)a$|(idou|opoulou)$/u;
     // Not -шин: the Ukrainian -ишин stays the same for a woman.
     const MALE = /(sk|ck)i$|ński$|(ов|ев|ий)$|[^ш]ин$|(ov|ev|yov)$|ņš$|(opoulos|idis|ides)$|^(Ó|Mac) /u;
@@ -350,6 +350,44 @@ test('database holds no non-surnames, no Mongolian surnames, no surnames as Chin
     assert.deepEqual(data.last_names.filter(e => e.language_ethnicity === 'mongolian').map(e => e.name), []);
     assert.ok(lasts.has('korean/남궁') && lasts.has('hebrew/דוד'), 'real surnames in both lists stay');
     assert.ok(!firsts.has('chinese/Zhang') && firsts.has('chinese/Hao'));
+});
+
+test('database files Ghanaian, Ethiopian and misfiled names under their cultures; gods and disagreed names stay', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const of = (list, culture) => list.filter(e => e.language_ethnicity === culture);
+    const firstIn = (culture, name) => of(data.first_names, culture).find(e => e.name === name);
+    const lastIn = (culture, name) => of(data.last_names, culture).find(e => e.name === name);
+    for (const [gone, label, first, last] of [['yoruba', 'ghanaian', 28, 44], ['swahili', 'ethiopian', 53, 48]]) {
+        assert.equal(of(data.first_names, gone).length + of(data.last_names, gone).length, 0, gone);
+        assert.equal(of(data.first_names, label).length, first, label);
+        assert.equal(of(data.last_names, label).length, last, label);
+    }
+    assert.ok(firstIn('ghanaian', 'Alhassan') && lastIn('ghanaian', 'Abubakar'), 'an origin elsewhere holds no name back');
+    const offered = deriveEnumValues(data.first_names).language_ethnicity;
+    assert.ok(offered.includes('ghanaian') && offered.includes('ethiopian') && !offered.includes('yoruba'));
+    assert.equal(offered.includes('danish'), false);
+
+    // Latin: Romanians out, its gods in place with their mythology; a disagreement stays.
+    assert.ok(firstIn('romanian', 'Alexandru') && lastIn('romanian', 'Ciobanu') && firstIn('romanian', 'Luminita'));
+    assert.deepEqual(of(data.first_names, 'latin').filter(e => e.race !== 'mythical').map(e => e.name), ['Artiom']);
+    assert.equal(of(data.first_names, 'latin').filter(e => e.race === 'mythical' && e.mythology).length, 12);
+    assert.equal(of(data.last_names, 'latin').length, 0);
+
+    // Danes and Norse gods stay under scandinavian; Fijian first names the second reader kept stay.
+    assert.ok(firstIn('scandinavian', 'Søren') && lastIn('scandinavian', 'Østergaard'));
+    assert.equal(of(data.first_names, 'scandinavian').filter(e => e.race === 'mythical').length, 14);
+    assert.ok(firstIn('maori', 'Viliame') && lastIn('fijian', 'Tabua'));
+
+    // A surname's gender moves with it; a first name made a surname keeps no first name's fields.
+    assert.equal(lastIn('baltic', 'Žukauskienė').gender, 'female');
+    assert.equal(lastIn('azerbaijani', 'Ahmadov').gender, 'male');
+    assert.equal(lastIn('slavicOther', 'Hristova').gender, 'female');
+    assert.equal(lastIn('greek', 'Makarezos').gender, 'male');
+    assert.equal(firstIn('finnish', 'Hristova'), undefined);
+    const ferreira = lastIn('portuguese', 'Ferreira');
+    assert.ok(ferreira && !firstIn('french', 'Ferreira'));
+    assert.deepEqual(['age', 'intelligence', 'gender'].filter(k => k in ferreira), []);
+    assert.ok(firstIn('hungarian', 'András') && lastIn('albanian', 'Hoxhaj') && firstIn('azerbaijani', 'Yusif'));
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

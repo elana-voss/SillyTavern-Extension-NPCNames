@@ -18,7 +18,7 @@ suggest_npc_name(
 The values currently in the database:
 
 - **gender**: `male`, `female`, `ambiguous`
-- **language_ethnicity** (44): `arabic`, `chinese`, `cyberpunkHandle`, `dutch`, `english`, `estonian`, `fantasyDragon`, `fantasyDwarven`, `fantasyElvish`, `finnish`, `french`, `german`, `greek`, `hawaiian`, `hebrew`, `hindi`, `icelandic`, `indonesian`, `irishGaelic`, `italian`, `japanese`, `korean`, `latin`, `maori`, `mayan`, `mongolian`, `nativeAmerican`, `nepalese`, `nigerian`, `norwegian`, `persian`, `portuguese`, `scandinavian`, `serbian`, `slavicOther`, `slavicPolish`, `slavicRussian`, `spanish`, `swahili`, `swedish`, `thai`, `turkish`, `ukrainian`, `yoruba`
+- **language_ethnicity** (49): `albanian`, `arabic`, `azerbaijani`, `baltic`, `chinese`, `cyberpunkHandle`, `dutch`, `english`, `estonian`, `ethiopian`, `fantasyDragon`, `fantasyDwarven`, `fantasyElvish`, `finnish`, `french`, `german`, `ghanaian`, `greek`, `hawaiian`, `hebrew`, `hindi`, `hungarian`, `icelandic`, `indonesian`, `irishGaelic`, `italian`, `japanese`, `korean`, `latin`, `maori`, `mayan`, `mongolian`, `nativeAmerican`, `nepalese`, `nigerian`, `norwegian`, `persian`, `portuguese`, `romanian`, `scandinavian`, `serbian`, `slavicOther`, `slavicPolish`, `slavicRussian`, `spanish`, `swedish`, `thai`, `turkish`, `ukrainian`
 - **mythology**: `celtic`, `egyptian`, `greek`, `hindu`, `japanese`, `lovecraft`, `mesopotamian`, `nativeAmerican`, `norse`, `roman`, `slavic`
 - **race**: `human`, `mythical`, `elf`, `dwarf`, `dragon`
 - **age**: `child`, `youngAdult`, `adult`, `elder`
