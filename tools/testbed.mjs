@@ -39,8 +39,8 @@ function check(what, ok, detail = '') {
     checks.push({ scenario: scenarioName, what, ok: !!ok, detail: String(detail).slice(0, 500) });
 }
 
-function installExtension() {
-    const target = join(ROOT, 'data', 'default-user', 'extensions', EXT_NAME);
+function installExtension(folder = EXT_NAME) {
+    const target = join(ROOT, 'data', 'default-user', 'extensions', folder);
     rmSync(target, { recursive: true, force: true });
     mkdirSync(target, { recursive: true });
     for (const file of EXT_FILES) cpSync(join(REPO, file), join(target, file), { recursive: true });
@@ -343,6 +343,78 @@ const SCENARIOS = {
         await page.evaluate(() => $('#main_api').val('openai').trigger('change'));
         await page.waitForTimeout(300);
     },
+    async oldUsedList({ page, fake }) {
+        await configure(page, fake.port, {});
+        await newChat(page);
+        await page.evaluate(async () => {
+            const { chat_metadata } = await import('/script.js');
+            chat_metadata.npcNames = { usedFirst: ['Noah', 'Gone-From-The-Data'], usedLast: ['Smith'] };
+        });
+        const requests = await send(page, fake);
+        const chat = await chatState(page);
+        checkToolTurn(requests, chat, 'old used list');
+        const stored = await page.evaluate(async () => (await import('/script.js')).chat_metadata.npcNames);
+        check('old used list: stored again as culture and name', stored.usedFirst.length > 1 && stored.usedLast.length > 0
+            && [...stored.usedFirst, ...stored.usedLast].every(k => k.includes('/')), JSON.stringify(stored));
+    },
+    async group({ page, fake }) {
+        await configure(page, fake.port, {});
+        const id = await page.evaluate(async () => {
+            const script = await import('/script.js');
+            const { openGroupById } = await import('/scripts/group-chats.js');
+            const chatName = `testbed-${Date.now()}`;
+            const response = await fetch('/api/groups/create', {
+                method: 'POST',
+                headers: script.getRequestHeaders(),
+                body: JSON.stringify({
+                    name: 'Testbed group', members: [script.characters.find(c => c).avatar], avatar_url: '',
+                    allow_self_responses: false, hideMutedSprites: false, activation_strategy: 0, generation_mode: 0,
+                    disabled_members: [], fav: false, chat_id: chatName, chats: [chatName], auto_mode_delay: 5,
+                }),
+            });
+            const group = await response.json();
+            await script.getCharacters();
+            await openGroupById(group.id);
+            return group.id;
+        });
+        try {
+            const requests = await send(page, fake);
+            recorded.group = requests;
+            const messages = requests[0]?.body.messages ?? [];
+            const ad = messages.find(m => JSON.stringify(m).includes(AD_START));
+            check('group: instructions carry no name in front', String(ad?.content).startsWith(AD_START), String(ad?.content).slice(0, 60));
+            checkAd(JSON.stringify(messages), 'group');
+            const chat = await chatState(page);
+            check('group: the tool ran', chat.flatMap(m => m.tools ?? []).some(t => t.name === TOOL), chat.length);
+            check('group: the instructions are not stored in the chat', !chat.some(m => m.mes.includes(AD_START)));
+        } finally {
+            await page.evaluate(async id => {
+                const { getRequestHeaders } = await import('/script.js');
+                await fetch('/api/groups/delete', { method: 'POST', headers: getRequestHeaders(), body: JSON.stringify({ id }) });
+            }, id);
+        }
+    },
+    // Last: the second copy takes over the page's interceptor.
+    async wrongFolder({ page, errors }) {
+        const folder = 'NPCNames-wrong';
+        installExtension(folder);
+        try {
+            const toast = await page.evaluate(async folder => {
+                await import(`/scripts/extensions/third-party/${folder}/index.js`);
+                for (let i = 0; i < 20 && !document.querySelector('#toast-container .toast-error'); i++) {
+                    await new Promise(done => setTimeout(done, 250));
+                }
+                return document.querySelector('#toast-container .toast-error')?.textContent ?? '';
+            }, folder);
+            check('wrong folder: an error stays on screen', toast.includes('wrong folder'), toast);
+            const settings = await page.locator('#npc_names_enabled').count();
+            check('wrong folder: no second settings block', settings === 1, settings);
+            const expected = errors.findIndex(e => e.includes('wrong folder'));
+            if (expected >= 0) errors.splice(expected, 1);
+        } finally {
+            rmSync(join(ROOT, 'data', 'default-user', 'extensions', folder), { recursive: true, force: true });
+        }
+    },
 };
 
 async function main() {
@@ -361,7 +433,7 @@ async function main() {
             scenarioName = name;
             fake.requests.length = 0;
             try {
-                await SCENARIOS[name]({ page, fake });
+                await SCENARIOS[name]({ page, fake, errors });
             } catch (e) {
                 check('scenario ran to its end', false, `${e.message.slice(0, 200)} ${await pageState(page)}`);
             }
