@@ -48,7 +48,6 @@ gender | icelandic | Dóris | female
 gender | icelandic | Dúnn | male
 gender | mongolian | Enkhjargal | female
 gender | icelandic | Evfemía | female
-gender | icelandic | Friðlín | male
 gender | icelandic | Geirlöð | female
 gender | icelandic | Gellir | male
 gender | icelandic | Gneisti | male
@@ -129,7 +128,6 @@ gender | fijian | Tomasi | male
 gender | mongolian | Tsetsegmaa | female
 gender | icelandic | Tími | male
 gender | english | Varnell | male
-gender | icelandic | Viglín | male
 gender | english | Willie | male
 gender | chinese | Xiaoliang | male
 gender | icelandic | Ylja | female
@@ -161,14 +159,11 @@ gender | persian | Anohito | male
 gender | icelandic | Aspar | male
 gender | icelandic | Berg | male
 gender | mongolian | Bilguun | male
-gender | serbian | Borka | male
 gender | turkish | Cansever | male
 gender | spanish | Carmon | female
 gender | nigerian | Chinonye | female
 gender | nigerian | Chinyelu | female
 gender | hebrew | Dayan | male
-gender | french | Didière | male
-gender | albanian | Gerti | female
 gender | english | Gith | female
 gender | english | Guldana | female
 gender | maori | Harata | female
@@ -181,7 +176,6 @@ gender | hawaiian | Kauʻilani | female
 gender | spanish | Lloya | female
 gender | greek | Mago | male
 gender | maori | Makareta | female
-gender | serbian | Mileta | female
 gender | icelandic | Mjöllnir | male
 gender | spanish | Montez | male
 gender | mayan | Nahil | female
@@ -205,10 +199,8 @@ gender | thai | ภุมรินรัตน์ | female
 gender | thai | มานี | female
 gender | thai | อิทธิมนต์ | male
 gender | ethiopian | ማሜ | female
-gender | ghanaian | Haruna | female
 gender | fijian | Takayawa | male
 gender | fijian | Salayavi | male
-gender | yoruba | Folorunsho | male
 gender | vietnamese | Phúc | male
 gender | vietnamese | Khê | female
 gender | nativeAmerican | Wungnema | male

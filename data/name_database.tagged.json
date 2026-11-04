@@ -11587,7 +11587,7 @@
     },
     {
       "name": "Borka",
-      "gender": "male",
+      "gender": "female",
       "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
@@ -19754,7 +19754,7 @@
     },
     {
       "name": "Didière",
-      "gender": "male",
+      "gender": "female",
       "language_ethnicity": "french",
       "mythology": null,
       "race": "human",
@@ -25965,7 +25965,7 @@
     },
     {
       "name": "Friðlín",
-      "gender": "male",
+      "gender": "ambiguous",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -27191,7 +27191,7 @@
     },
     {
       "name": "Gerti",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
@@ -51968,7 +51968,7 @@
     },
     {
       "name": "Mileta",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "serbian",
       "mythology": null,
       "race": "human",
@@ -76257,7 +76257,7 @@
     },
     {
       "name": "Viglín",
-      "gender": "male",
+      "gender": "ambiguous",
       "language_ethnicity": "icelandic",
       "mythology": null,
       "race": "human",
@@ -123090,7 +123090,7 @@
     },
     {
       "name": "Haruna",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "ghanaian",
       "mythology": null,
       "race": "human",
@@ -130080,7 +130080,7 @@
     },
     {
       "name": "Folorunsho",
-      "gender": "male",
+      "gender": "female",
       "language_ethnicity": "yoruba",
       "mythology": null,
       "race": "human",

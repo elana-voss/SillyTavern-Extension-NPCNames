@@ -385,7 +385,7 @@ function checkPinnedNames(data) {
     const dragons = data.first_names.filter(e => e.race === 'dragon').map(e => e.name);
     assert.deepEqual(['Smaug', 'Mushu', 'Maleficent', 'Saphira', 'Spike', 'Puff', 'Kingu', 'Samebito', 'Otohime', 'Lamia', 'Mishibijiw'].filter(n => dragons.includes(n)), []);
     assert.ok(dragons.length >= 30, `${dragons.length} dragons`);
-    for (const [c, n, g] of [['arabic', 'Hamad', 'male'], ['persian', 'Sattar', 'male'], ['portuguese', 'Hermínia', 'female'], ['hindi', 'Shiva', 'ambiguous'], ['icelandic', 'Óliver', 'male'], ['italian', 'Giovanni', 'male'], ['arabic', 'Mohammad', 'male']]) assert.equal(first(c, n).gender, g, n);
+    for (const [c, n, g] of [['arabic', 'Hamad', 'male'], ['persian', 'Sattar', 'male'], ['portuguese', 'Hermínia', 'female'], ['hindi', 'Shiva', 'ambiguous'], ['icelandic', 'Óliver', 'male'], ['italian', 'Giovanni', 'male'], ['arabic', 'Mohammad', 'male'], ['serbian', 'Borka', 'female'], ['ghanaian', 'Haruna', 'male']]) assert.equal(first(c, n).gender, g, n);
     assert.notEqual(first('english', 'Brown').commonness, 'common', 'a surname');
     assert.deepEqual(first('nativeAmerican', 'Big Elk').era, ['victorian']);
     assert.deepEqual(first('nativeAmerican', 'Winona').era, ['contemporary']);

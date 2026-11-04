@@ -88,6 +88,8 @@ What stays thin, for the owner: postApocalyptic 1 (both readers found no name), 
 - Misspellings (Gioavanni, Mohmmad) and near-duplicates (Βασίλης and Βασιλης, Chen and Chén) corrected; the leaked `sentinel_fields` key removed.
 - From the audit: `Lord Shiva` (a god, under race human), `Great Woman`, `Harsh joy`, the phrase `بسم الله` and the kunyas `ابو علي`, `ابو محمد`, `ام محمد` leave or are corrected; the malformed-name test also checks later words; the near-spellings `Mamedova`/`Memmedova` and `Leordo` are read.
 - `horror` and `modern`, today only Lovecraft entities, and common-name tags such as `Brown` as a common first name, corrected. A sample of `role`, `intelligence`, `allure`, `age` and `commonness` is checked; only clear errors change.
+- Measured: `node test.js` 20 of 20, `node tools/testbed.mjs` 76 of 76 (before the review's eight gender lines went back to main's values, data only). `tools/m6-apply-tags.mjs` with `tools/m6-tags.txt`, run on main's database: 213 genders, 71 tags, 66 renames, 37 merges, 11 removed, `sentinel_fields` off 5 entries. First names 6903 to 6864, surnames 2627 to 2618.
+- Read and left unchanged: of 312 spellings sent to the second reader, 275; of 158 genders sent to it, 97 (it differed or did not know).
 
 ### 7. Code, documents and tests
 
@@ -155,6 +157,13 @@ None open.
 - `tools/db.mjs`: every apply tool prints the change list's path (milestone 5 did not, 2 to 4 did). Not tested: output only.
 - `test.js`, where the data tests differed: a surname looked up by name must exist (the surname test's lookup failed on a missing name, the Lithuanian test's `?.` passed on one). Kept the failing way; the six Lithuanian man's forms left at milestone 5's review, so they stand as "no female entry of these". A first name looked up by culture (the gods test's lookup by name alone saw only the last of a name's cultures; Noah is now checked in both of his). The load stays a plain parse, not `loadDb`, whose byte check would fail a checkout with other line ends.
 - `test.js`, the audit's merge: no assert of a single name dropped. The apply tools' asserts check their input once, on the database before them, and none looks at the data as it is now; the audit's ~80 lines rested on that, so the invariants test holds every assert in about 150 lines. Four culture checks went that the every-culture assert already holds (ghanaian, ethiopian, yoruba, fijian offered).
+
+- Milestone 6, `modern`: the era holds 377 real names, so it is right as it stands; no change. `horror`: Lovecraft entries stay; Vlad, Carrie, Norman, Damian, Annabelle, Malachi and Silas gain it, where the reader and the builder both hold the name dark. Reader's yes without the builder's stays out: Mircea, Ileana, Lucian, Lucius, Ezekiel; Sabrina, reader's no.
+- Milestone 6, `hindi/Shiva`: filed female, the reader said either; set to ambiguous. `english/Fardu` and `english/Golden` stay ambiguous, the builder could not confirm the reader.
+- Milestone 6, near-spellings: `Memmedova` merged into `Mamedova` and `Aliyeva` into `Əliyeva`, both readers calling them one name. `Leordo` stays: both call it a typo, of different names (Leonardo, Leopoldo).
+- Milestone 6, spellings both readers fixed that stay, as real forms: swedish `Lias`, ghanaian `Yeboaa` (Akan feminine), portuguese `Jhonatan`, chinese `Joeng` (Cantonese romanisation), nepalese `Shreesti`, finnish `Cavander`; spanish `Yent` stays, its fix `Yente` being a woman's name on a man's entry. Taken with only one reader's spelling, the other agreeing it is a typo or the spelling plainly right: Stephn, Bryân, Dainella, Lukus, Kateya, Printess.
+- Milestone 6, the review: eight gender changes both readers had agreed were wrong and stay as on main: Borka, Mileta, Gerti, Haruna, Didière, Friðlín, Viglín, Folorunsho.
+- Milestone 6, `arabic` `أم`, `ام`, `Um` and `ابومحمد` left with the audit's kunyas: parts or another spelling of the same.
 
 ## Trials
 
