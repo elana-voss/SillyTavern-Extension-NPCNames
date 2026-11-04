@@ -67,7 +67,6 @@ first | fantasyDragon | Python | ambiguous | mythology | elder | timeless | neut
 first | fantasyDragon | Ladon | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Cychreides | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Graoully | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
-first | fantasyDragon | Lamia | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Bida | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Cuca de la Mola | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Blue Ben | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
@@ -87,7 +86,6 @@ first | fantasyDragon | Kuraokami | ambiguous | mythology | elder | timeless | n
 first | fantasyDragon | Vāsuki | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Takṣaka | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Śeṣa | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
-first | fantasyDragon | Mishibijiw | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Alicha | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Typhoeus | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Mehen | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
@@ -106,10 +104,7 @@ first | fantasyDragon | Ao Guang | ambiguous | mythology | elder | timeless | ne
 first | fantasyDragon | Ao Jun | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Ao Shun | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Chu-Lung | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
-first | fantasyDragon | Samebito | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
-first | fantasyDragon | Otohime | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Ddraig Goch | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
-first | fantasyDragon | Kingu | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Aiatar | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Almudj | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
 first | fantasyDragon | Dhakhan | ambiguous | mythology | elder | timeless | neutral | average | harsh | uncommon | fantasy | mystical
@@ -747,7 +742,6 @@ last | baltic | Stankevičienė | female | name-dataset LT; popular-names LT | c
 last | baltic | Paulauskienė | female | name-dataset LT; popular-names LT | contemporary | neutral | unremarkable | common | sliceOfLife | religious
 last | baltic | Urboniene | female | name-dataset LT; popular-names LT | contemporary | neutral | unremarkable | common | sliceOfLife | earthy
 last | baltic | Balčiūnaitė | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
-last | baltic | Noreika | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | baltic | Kavaliauskiene | female | name-dataset LT; popular-names LT | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | baltic | Vasiliauskiene | female | name-dataset LT; popular-names LT | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | baltic | Kavaliauskaitė | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
@@ -755,19 +749,20 @@ last | baltic | Mikalauskienė | female | name-dataset LT; Wikidata | contempora
 last | baltic | Balčiūnienė | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | baltic | Butkienė | female | name-dataset LT; popular-names LT | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | baltic | Bagdoniene | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
-last | baltic | Alekna | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | baltic | Adomaitiene | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | religious
 last | baltic | Černiauskaitė | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | earthy
-last | baltic | Mazeika | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | baltic | Adomaitytė | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | religious
 last | baltic | Andrejeva | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | religious
 last | baltic | Dambrauskiene | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | earthy
 last | baltic | Kučinskaitė | female | name-dataset LT; Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | baltic | Mikalauskaite | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
 last | baltic | Adomavičiūtė | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
-last | baltic | Rimša | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
-last | baltic | Songaila | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
-last | baltic | Čėsna | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | uncommon | sliceOfLife | -
+last | baltic | Andrijauskienė | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | baltic | Barauskiene | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | baltic | Misiūnaitė | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | uncommon | sliceOfLife | -
+last | baltic | Dambrauskaitė | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | baltic | Daugėlienė | female | name-dataset LT; Wikidata | contemporary | neutral | pleasant | uncommon | sliceOfLife | -
+last | baltic | Karaliene | female | name-dataset LT; Wikidata | contemporary | neutral | striking | rare | sliceOfLife | regal
 first | romanian | Gheorghe | male | Wikidata; name-dataset MD | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
 first | romanian | Nicolae | male | Wikidata; name-dataset MD | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
 first | romanian | Vasile | male | Wikidata; name-dataset MD | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
@@ -989,15 +984,15 @@ last | yoruba | Daramola | - | Wikidata; name-dataset NG | contemporary | neutra
 last | yoruba | Kolade | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
 last | yoruba | Animashaun | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
 last | yoruba | Adepoju | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
-last | yoruba | Aderonke | - | Wikidata; name-dataset NG | contemporary | neutral | pleasant | common | sliceOfLife | regal
-last | yoruba | Atinuke | - | Wikidata; name-dataset NG | contemporary | neutral | pleasant | common | sliceOfLife | -
-last | yoruba | Abosede | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | religious
-last | yoruba | Adebimpe | - | Wikidata; name-dataset NG | contemporary | neutral | pleasant | common | sliceOfLife | -
-last | yoruba | Adejoke | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
-last | yoruba | Ajoke | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
 last | yoruba | Akorede | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
 last | yoruba | Ayomide | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
 last | yoruba | Olanipekun | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | yoruba | Lamidi | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | yoruba | Oriyomi | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | yoruba | Opeyemi | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | religious
+last | yoruba | Olayemi | - | Wikidata; name-dataset NG | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | yoruba | Akinwande | - | Wikidata; name-dataset NG | contemporary | neutral | pleasant | common | sliceOfLife | military
+last | yoruba | Akindele | - | Wikidata; name-dataset NG | contemporary | neutral | pleasant | common | sliceOfLife | -
 first | scandinavian | Torben | male | Wikidata; name-dataset DK | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | earthy
 first | scandinavian | Kåre | male | Wikidata; name-dataset DK | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | scandinavian | Aase | female | Wikidata; name-dataset DK | adult | contemporary | neutral | average | pleasant | uncommon | sliceOfLife | -
@@ -2396,52 +2391,49 @@ first | nativeAmerican | Jimalee | female | Wikidata | adult | contemporary | ne
 first | nativeAmerican | Tsianina | female | Wikidata | adult | contemporary | neutral | average | striking | rare | sliceOfLife | celestial
 first | nativeAmerican | Waáno-Gano | male | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | mystical,earthy
 first | nativeAmerican | Nampeyo | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | rare | sliceOfLife | mystical,earthy
-first | nativeAmerican | Yellow Horse | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | earthy,military,solar
+first | nativeAmerican | Yellow Horse | male | Wikidata | adult | victorian | neutral | average | striking | uncommon | sliceOfLife | earthy,military,solar
 first | nativeAmerican | Klah | male | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | mystical,earthy
 first | nativeAmerican | Paqua | female | Wikidata | adult | contemporary | neutral | average | unremarkable | uncommon | sliceOfLife | -
 first | nativeAmerican | Wungnema | female | Wikidata | adult | contemporary | neutral | average | pleasant | rare | sliceOfLife | -
 first | nativeAmerican | Polingaysi | female | Wikidata | adult | contemporary | neutral | thoughtful | pleasant | rare | sliceOfLife | -
-first | nativeAmerican | Big Elk | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | earthy,military
-first | nativeAmerican | Morning Star | male | Wikidata | adult | contemporary | neutral | thoughtful | striking | uncommon | sliceOfLife | celestial,mystical,solar
+first | nativeAmerican | Big Elk | male | Wikidata | adult | victorian | neutral | average | striking | uncommon | sliceOfLife | earthy,military
+first | nativeAmerican | Morning Star | male | Wikidata | adult | victorian | neutral | thoughtful | striking | uncommon | sliceOfLife | celestial,mystical,solar
 first | nativeAmerican | Manuelito | male | Wikidata | adult | contemporary | hero | thoughtful | striking | uncommon | sliceOfLife | military,regal
 first | nativeAmerican | Wenona | female | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | watery
-first | nativeAmerican | Standing Leaf | male | Wikidata | adult | contemporary | neutral | thoughtful | striking | uncommon | sliceOfLife | earthy,military
-first | nativeAmerican | Stone Man | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | earthy,mystical
-first | nativeAmerican | Shave Head | male | Wikidata | adult | contemporary | neutral | average | harsh | uncommon | sliceOfLife | military,earthy
-first | nativeAmerican | Owl Woman | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | uncommon | sliceOfLife | earthy,mystical
+first | nativeAmerican | Standing Leaf | male | Wikidata | adult | victorian | neutral | thoughtful | striking | uncommon | sliceOfLife | earthy,military
+first | nativeAmerican | Stone Man | male | Wikidata | adult | victorian | neutral | average | striking | uncommon | sliceOfLife | earthy,mystical
+first | nativeAmerican | Shave Head | male | Wikidata | adult | victorian | neutral | average | harsh | uncommon | sliceOfLife | military,earthy
+first | nativeAmerican | Owl Woman | female | Wikidata | adult | victorian | neutral | thoughtful | striking | uncommon | sliceOfLife | earthy,mystical
 first | nativeAmerican | Wahleah | female | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | watery
 first | nativeAmerican | Tazbah | female | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | -
 first | nativeAmerican | Owanah | female | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | -
-first | nativeAmerican | Red Bird | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | celestial,earthy
+first | nativeAmerican | Red Bird | male | Wikidata | adult | victorian | neutral | average | striking | uncommon | sliceOfLife | celestial,earthy
 first | nativeAmerican | Tewaquaptewa | male | Wikidata | adult | contemporary | neutral | thoughtful | unremarkable | rare | sliceOfLife | -
-first | nativeAmerican | Yellow Nose | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | earthy
+first | nativeAmerican | Yellow Nose | male | Wikidata | adult | victorian | neutral | average | striking | uncommon | sliceOfLife | earthy
 first | nativeAmerican | Chipeta | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | uncommon | sliceOfLife | earthy
-first | nativeAmerican | Standing Bear | male | Wikidata | adult | contemporary | hero | thoughtful | striking | uncommon | sliceOfLife | earthy
-first | nativeAmerican | Running Eagle | female | Wikidata | adult | contemporary | hero | thoughtful | striking | uncommon | sliceOfLife | earthy,military
+first | nativeAmerican | Standing Bear | male | Wikidata | adult | victorian | hero | thoughtful | striking | uncommon | sliceOfLife | earthy
+first | nativeAmerican | Running Eagle | female | Wikidata | adult | victorian | hero | thoughtful | striking | uncommon | sliceOfLife | earthy,military
 first | nativeAmerican | Beatien | male | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | -
-first | nativeAmerican | White Bear | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | earthy
+first | nativeAmerican | White Bear | male | Wikidata | adult | victorian | neutral | average | striking | uncommon | sliceOfLife | earthy
 first | nativeAmerican | Natawista | female | Wikidata | adult | contemporary | neutral | average | striking | rare | sliceOfLife | -
-first | nativeAmerican | Standing Buffalo | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | military,earthy
+first | nativeAmerican | Standing Buffalo | male | Wikidata | adult | victorian | neutral | average | striking | uncommon | sliceOfLife | military,earthy
 first | nativeAmerican | Quannah | female | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | -
 first | nativeAmerican | Kateri | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | uncommon | sliceOfLife | mystical,religious
 first | nativeAmerican | Canassatego | male | Wikidata | adult | contemporary | mentor | thoughtful | unremarkable | rare | sliceOfLife | -
 first | nativeAmerican | Elsatsoosu | male | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | -
-first | nativeAmerican | Crazy Horse | male | Wikidata | adult | contemporary | hero | thoughtful | striking | common | sliceOfLife | military,earthy
 first | nativeAmerican | Lozen | female | Wikidata | adult | contemporary | hero | thoughtful | striking | rare | sliceOfLife | military,mystical
 first | nativeAmerican | Iskwé | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | rare | sliceOfLife | mystical,earthy
 first | nativeAmerican | Zitkala-Sa | female | Wikidata | adult | contemporary | neutral | bookish | striking | rare | sliceOfLife | literary
 first | nativeAmerican | Ahtahkakoop | male | Wikidata | adult | contemporary | neutral | average | unremarkable | uncommon | sliceOfLife | celestial
 first | nativeAmerican | Tantoo | female | Wikidata | adult | contemporary | neutral | average | striking | rare | sliceOfLife | -
-first | nativeAmerican | Wolf Face | male | Wikidata | adult | contemporary | neutral | average | harsh | uncommon | sliceOfLife | earthy,brutish
+first | nativeAmerican | Wolf Face | male | Wikidata | adult | victorian | neutral | average | harsh | uncommon | sliceOfLife | earthy,brutish
 first | nativeAmerican | Dahteste | female | Wikidata | adult | contemporary | hero | thoughtful | striking | rare | sliceOfLife | military
 first | nativeAmerican | Blackbear | male | Wikidata | adult | contemporary | neutral | average | harsh | uncommon | sliceOfLife | earthy
 first | nativeAmerican | Anahareo | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | rare | sliceOfLife | earthy
-first | nativeAmerican | Poundmaker | male | Wikidata | adult | contemporary | neutral | thoughtful | unremarkable | uncommon | sliceOfLife | -
-first | nativeAmerican | Big Bear | male | Wikidata | adult | contemporary | neutral | average | striking | common | sliceOfLife | earthy
-first | nativeAmerican | Cornplanter | male | Wikidata | adult | contemporary | neutral | thoughtful | unremarkable | uncommon | sliceOfLife | earthy,rustic
-first | nativeAmerican | Black Crow | male | Wikidata | adult | contemporary | neutral | average | harsh | uncommon | sliceOfLife | earthy
-first | nativeAmerican | Black Horse | male | Wikidata | adult | contemporary | neutral | average | harsh | uncommon | sliceOfLife | earthy
-first | nativeAmerican | Black Thunder | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | earthy,military
+first | nativeAmerican | Big Bear | male | Wikidata | adult | victorian | neutral | average | striking | common | sliceOfLife | earthy
+first | nativeAmerican | Black Crow | male | Wikidata | adult | victorian | neutral | average | harsh | uncommon | sliceOfLife | earthy
+first | nativeAmerican | Black Horse | male | Wikidata | adult | victorian | neutral | average | harsh | uncommon | sliceOfLife | earthy
+first | nativeAmerican | Black Thunder | male | Wikidata | adult | victorian | neutral | average | striking | uncommon | sliceOfLife | earthy,military
 first | nativeAmerican | Cikwes | female | Wikidata | adult | contemporary | neutral | average | striking | rare | sliceOfLife | -
 first | nativeAmerican | Kimowan | male | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | watery
 first | nativeAmerican | Kahn-Tineta | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | rare | sliceOfLife | -
@@ -2449,37 +2441,33 @@ first | nativeAmerican | Waneek | female | Wikidata | adult | contemporary | neu
 first | nativeAmerican | Ots-Toch | female | Wikidata | adult | contemporary | neutral | average | striking | rare | sliceOfLife | -
 first | nativeAmerican | Tasunka | male | Wikidata | adult | contemporary | neutral | average | unremarkable | uncommon | sliceOfLife | earthy
 first | nativeAmerican | Mato | male | Wikidata | adult | contemporary | neutral | average | striking | uncommon | sliceOfLife | earthy
-first | nativeAmerican | Old Buffalo | male | Wikidata | adult | contemporary | mentor | thoughtful | harsh | uncommon | sliceOfLife | earthy,regal
-first | nativeAmerican | Old Dog | male | Wikidata | adult | contemporary | neutral | average | harsh | uncommon | sliceOfLife | earthy
+first | nativeAmerican | Old Buffalo | male | Wikidata | adult | victorian | mentor | thoughtful | harsh | uncommon | sliceOfLife | earthy,regal
+first | nativeAmerican | Old Dog | male | Wikidata | adult | victorian | neutral | average | harsh | uncommon | sliceOfLife | earthy
 first | nativeAmerican | Kahsennenhawe | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | rare | sliceOfLife | -
 first | nativeAmerican | Kiawentiio | female | Wikidata | adult | contemporary | neutral | average | pleasant | rare | sliceOfLife | -
 first | nativeAmerican | Skawennati | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | rare | sliceOfLife | -
 first | nativeAmerican | Coocoochee | female | Wikidata | adult | contemporary | comicRelief | average | unremarkable | rare | sliceOfLife | -
-first | nativeAmerican | Red Hawk | male | Wikidata | adult | contemporary | hero | average | striking | uncommon | sliceOfLife | fiery,celestial,military
-first | nativeAmerican | Sitting Hawk | male | Wikidata | adult | contemporary | neutral | thoughtful | striking | uncommon | sliceOfLife | celestial,military
+first | nativeAmerican | Red Hawk | male | Wikidata | adult | victorian | hero | average | striking | uncommon | sliceOfLife | fiery,celestial,military
+first | nativeAmerican | Sitting Hawk | male | Wikidata | adult | victorian | neutral | thoughtful | striking | uncommon | sliceOfLife | celestial,military
 first | nativeAmerican | Witka | ambiguous | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | -
 first | nativeAmerican | Tahcawin | female | Wikidata | adult | contemporary | neutral | plain | pleasant | rare | sliceOfLife | watery
 first | nativeAmerican | Ozhaguscodaywayquay | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | rare | sliceOfLife | -
-first | nativeAmerican | Sitting Bull | male | Wikidata | adult | contemporary | hero | thoughtful | striking | common | sliceOfLife | military,earthy
 first | nativeAmerican | Karoniaktajeh | male | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | -
-first | nativeAmerican | Black Buffalo | male | Wikidata | adult | contemporary | neutral | average | harsh | uncommon | sliceOfLife | earthy
+first | nativeAmerican | Black Buffalo | male | Wikidata | adult | victorian | neutral | average | harsh | uncommon | sliceOfLife | earthy
 first | nativeAmerican | Mangeshig | male | Wikidata | adult | contemporary | neutral | average | unremarkable | uncommon | sliceOfLife | -
-first | nativeAmerican | White-Cow | female | Wikidata | adult | contemporary | neutral | average | pleasant | rare | sliceOfLife | earthy,rustic
+first | nativeAmerican | White-Cow | female | Wikidata | adult | victorian | neutral | average | pleasant | rare | sliceOfLife | earthy,rustic
 first | nativeAmerican | Skenandoa | male | Wikidata | adult | contemporary | neutral | thoughtful | unremarkable | uncommon | sliceOfLife | watery
 first | nativeAmerican | Winona | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | uncommon | sliceOfLife | -
 first | nativeAmerican | Chaske | male | Wikidata | adult | contemporary | neutral | average | unremarkable | uncommon | sliceOfLife | -
 first | nativeAmerican | Dyani | female | Wikidata | adult | contemporary | neutral | plain | pleasant | uncommon | sliceOfLife | -
-first | nativeAmerican | Eagle Woman | female | Wikidata | adult | contemporary | hero | thoughtful | striking | rare | sliceOfLife | earthy
+first | nativeAmerican | Eagle Woman | female | Wikidata | adult | victorian | hero | thoughtful | striking | rare | sliceOfLife | earthy
 first | nativeAmerican | Keewaydinoquay | female | Wikidata | adult | contemporary | mentor | thoughtful | striking | rare | sliceOfLife | -
 first | nativeAmerican | Nahnebahwequa | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | rare | sliceOfLife | -
 first | nativeAmerican | Tecumseh | male | Wikidata | adult | contemporary | hero | thoughtful | striking | common | sliceOfLife | military,fiery,celestial
-first | nativeAmerican | Rain-in-the-Face | male | Wikidata | adult | contemporary | antihero | average | striking | uncommon | sliceOfLife | watery
-first | nativeAmerican | Cornstalk | male | Wikidata | adult | contemporary | neutral | average | unremarkable | uncommon | sliceOfLife | earthy
 first | nativeAmerican | Shingoose | male | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | -
 first | nativeAmerican | Walamottinin | male | Wikidata | adult | contemporary | neutral | average | unremarkable | rare | sliceOfLife | -
-first | nativeAmerican | Big Eagle | male | Wikidata | adult | contemporary | hero | average | striking | uncommon | sliceOfLife | military
+first | nativeAmerican | Big Eagle | male | Wikidata | adult | victorian | hero | average | striking | uncommon | sliceOfLife | military
 first | nativeAmerican | Thaóyate | male | Wikidata | adult | contemporary | neutral | average | striking | rare | sliceOfLife | -
-first | nativeAmerican | Black Elk | male | Wikidata | adult | contemporary | mentor | thoughtful | striking | common | sliceOfLife | mystical,earthy
 first | latin | Gaius | male | Wikidata | adult | ancient | neutral | average | unremarkable | common | - | -
 first | latin | Aegidius | male | Wikidata | adult | ancient | neutral | average | unremarkable | uncommon | - | -
 first | latin | Sergius | male | Wikidata | adult | ancient | neutral | average | unremarkable | common | - | -
@@ -2615,7 +2603,6 @@ last | latin | Vulso | - | Wikidata | ancient | neutral | harsh | rare | - | -
 last | latin | Nobilior | - | Wikidata | ancient | neutral | striking | rare | - | regal
 last | latin | Clepsina | female | Wikidata | ancient | neutral | unremarkable | rare | - | -
 last | latin | Longinus | - | Wikidata | ancient | neutral | pleasant | uncommon | - | -
-last | latin | Gothicus | - | Wikidata | ancient | hero | striking | rare | - | military
 last | latin | Plotina | female | Wikidata | ancient | neutral | pleasant | uncommon | - | -
 last | latin | Salonina | female | Wikidata | ancient | neutral | pleasant | uncommon | - | -
 last | latin | Flavia | female | Wikidata | ancient | neutral | pleasant | common | - | -
@@ -2655,6 +2642,7 @@ last | latin | Gracchus | - | Wikidata | ancient | neutral | unremarkable | unco
 last | latin | Spinther | - | Wikidata | ancient | neutral | unremarkable | rare | - | -
 last | latin | Lentulus | - | Wikidata | ancient | neutral | unremarkable | uncommon | - | -
 last | latin | Bambalio | - | Wikidata | ancient | comicRelief | unremarkable | rare | - | -
+last | latin | Metella | female | Wikidata | ancient | neutral | pleasant | uncommon | - | -
 first | scandinavian | Alexander | male | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | regal
 first | scandinavian | Astrid | female | Wikidata | adult | contemporary | neutral | thoughtful | striking | common | sliceOfLife | celestial
 first | scandinavian | Olivia | female | Wikidata | adult | contemporary | neutral | average | pretty | common | sliceOfLife | -
@@ -2962,7 +2950,6 @@ first | persian | Hystaspes | male | Wikidata | adult | ancient | mentor | thoug
 first | persian | Gobrias | male | Wikidata | adult | ancient | neutral | average | unremarkable | rare | - | -
 first | persian | Nabarzanes | male | Wikidata | adult | ancient | antihero | thoughtful | striking | rare | - | mystical,military
 first | persian | Ostanes | male | Wikidata | adult | ancient | mentor | bookish | unremarkable | uncommon | - | mystical,religious
-first | persian | Pixodarus | male | Wikidata | adult | ancient | neutral | average | unremarkable | rare | - | -
 first | persian | Drypetis | female | Wikidata | adult | ancient | neutral | average | pleasant | rare | - | -
 first | persian | Histaspes | male | Wikidata | adult | ancient | mentor | thoughtful | unremarkable | uncommon | - | regal,religious
 first | persian | Damaspia | female | Wikidata | adult | ancient | neutral | average | unremarkable | rare | - | -

@@ -495,5 +495,38 @@ test('the meaning-based classes tag real names by what they mean, not by how the
     assert.ok(!tagged('yoruba', 'Babatunde', 'genre', 'horror'), 'Babatunde means the father has returned');
 });
 
+test('Lithuanian surnames in -a are the man\'s form', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const gender = name => data.last_names.find(e => e.language_ethnicity === 'baltic' && e.name === name)?.gender;
+    for (const name of ['Noreika', 'Alekna', 'Mazeika', 'Rimša', 'Songaila', 'Čėsna']) assert.notEqual(gender(name), 'female', name);
+    assert.equal(gender('Andrejeva'), 'female');
+});
+
+test('a woman\'s given name is no Yoruba surname', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const surnames = data.last_names.filter(e => e.language_ethnicity === 'yoruba').map(e => e.name);
+    assert.deepEqual(['Abosede', 'Ajoke', 'Atinuke', 'Aderonke', 'Adebimpe', 'Adejoke'].filter(n => surnames.includes(n)), []);
+});
+
+test('what is no dragon is not filed as one', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const dragons = data.first_names.filter(e => e.race === 'dragon').map(e => e.name);
+    assert.deepEqual(['Kingu', 'Samebito', 'Otohime', 'Lamia', 'Mishibijiw'].filter(n => dragons.includes(n)), []);
+});
+
+test('a title and a Carian are not filed as Latin surname and Persian name', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    assert.ok(!data.last_names.some(e => e.language_ethnicity === 'latin' && e.name === 'Gothicus'));
+    assert.ok(!data.first_names.some(e => e.language_ethnicity === 'persian' && e.name === 'Pixodarus'));
+});
+
+test('Native American by-names: one man\'s fame stays out, the others are of their time', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const of = data.first_names.filter(e => e.language_ethnicity === 'nativeAmerican');
+    assert.deepEqual(['Sitting Bull', 'Crazy Horse', 'Rain-in-the-Face', 'Black Elk', 'Cornplanter', 'Poundmaker', 'Cornstalk'].filter(n => of.some(e => e.name === n)), []);
+    assert.deepEqual(of.find(e => e.name === 'Big Elk').era, ['victorian']);
+    assert.deepEqual(of.find(e => e.name === 'Winona').era, ['contemporary']);
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed > 0 ? 1 : 0);

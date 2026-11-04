@@ -97158,31 +97158,6 @@
       ]
     },
     {
-      "name": "Lamia",
-      "gender": "ambiguous",
-      "language_ethnicity": "fantasyDragon",
-      "mythology": null,
-      "race": "dragon",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "timeless"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "harsh",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Bida",
       "gender": "ambiguous",
       "language_ethnicity": "fantasyDragon",
@@ -97658,31 +97633,6 @@
       ]
     },
     {
-      "name": "Mishibijiw",
-      "gender": "ambiguous",
-      "language_ethnicity": "fantasyDragon",
-      "mythology": null,
-      "race": "dragon",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "timeless"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "harsh",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Alicha",
       "gender": "ambiguous",
       "language_ethnicity": "fantasyDragon",
@@ -98133,82 +98083,7 @@
       ]
     },
     {
-      "name": "Samebito",
-      "gender": "ambiguous",
-      "language_ethnicity": "fantasyDragon",
-      "mythology": null,
-      "race": "dragon",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "timeless"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "harsh",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
-      "name": "Otohime",
-      "gender": "ambiguous",
-      "language_ethnicity": "fantasyDragon",
-      "mythology": null,
-      "race": "dragon",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "timeless"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "harsh",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
       "name": "Ddraig Goch",
-      "gender": "ambiguous",
-      "language_ethnicity": "fantasyDragon",
-      "mythology": null,
-      "race": "dragon",
-      "age": [
-        "elder"
-      ],
-      "era": [
-        "timeless"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "harsh",
-      "commonness": "uncommon",
-      "genre": [
-        "fantasy"
-      ],
-      "themes": [
-        "mystical"
-      ]
-    },
-    {
-      "name": "Kingu",
       "gender": "ambiguous",
       "language_ethnicity": "fantasyDragon",
       "mythology": null,
@@ -137852,7 +137727,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -137974,7 +137849,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138000,7 +137875,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138078,7 +137953,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138104,7 +137979,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138130,7 +138005,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138156,7 +138031,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138253,7 +138128,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138302,7 +138177,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138352,7 +138227,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "hero"
@@ -138377,7 +138252,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "hero"
@@ -138426,7 +138301,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138474,7 +138349,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138584,32 +138459,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Crazy Horse",
-      "gender": "male",
-      "language_ethnicity": "nativeAmerican",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "hero"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "striking",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "military",
-        "earthy"
-      ]
     },
     {
       "name": "Lozen",
@@ -138746,7 +138595,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138838,29 +138687,6 @@
       ]
     },
     {
-      "name": "Poundmaker",
-      "gender": "male",
-      "language_ethnicity": "nativeAmerican",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Big Bear",
       "gender": "male",
       "language_ethnicity": "nativeAmerican",
@@ -138870,7 +138696,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138886,32 +138712,6 @@
       ]
     },
     {
-      "name": "Cornplanter",
-      "gender": "male",
-      "language_ethnicity": "nativeAmerican",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "earthy",
-        "rustic"
-      ]
-    },
-    {
       "name": "Black Crow",
       "gender": "male",
       "language_ethnicity": "nativeAmerican",
@@ -138921,7 +138721,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138946,7 +138746,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -138971,7 +138771,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -139166,7 +138966,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "mentor"
@@ -139192,7 +138992,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -139309,7 +139109,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "hero"
@@ -139336,7 +139136,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -139424,32 +139224,6 @@
       "themes": []
     },
     {
-      "name": "Sitting Bull",
-      "gender": "male",
-      "language_ethnicity": "nativeAmerican",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "hero"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "striking",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "military",
-        "earthy"
-      ]
-    },
-    {
       "name": "Karoniaktajeh",
       "gender": "male",
       "language_ethnicity": "nativeAmerican",
@@ -139482,7 +139256,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -139530,7 +139304,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -139650,7 +139424,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "hero"
@@ -139739,56 +139513,6 @@
       ]
     },
     {
-      "name": "Rain-in-the-Face",
-      "gender": "male",
-      "language_ethnicity": "nativeAmerican",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "antihero"
-      ],
-      "intelligence": "average",
-      "allure": "striking",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "watery"
-      ]
-    },
-    {
-      "name": "Cornstalk",
-      "gender": "male",
-      "language_ethnicity": "nativeAmerican",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "earthy"
-      ]
-    },
-    {
       "name": "Shingoose",
       "gender": "male",
       "language_ethnicity": "nativeAmerican",
@@ -139844,7 +139568,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "hero"
@@ -139881,32 +139605,6 @@
         "sliceOfLife"
       ],
       "themes": []
-    },
-    {
-      "name": "Black Elk",
-      "gender": "male",
-      "language_ethnicity": "nativeAmerican",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "mentor"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "striking",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "mystical",
-        "earthy"
-      ]
     },
     {
       "name": "Gaius",
@@ -146070,27 +145768,6 @@
         "mystical",
         "religious"
       ]
-    },
-    {
-      "name": "Pixodarus",
-      "gender": "male",
-      "language_ethnicity": "persian",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
-      "themes": []
     },
     {
       "name": "Drypetis",
@@ -197983,25 +197660,6 @@
       "themes": []
     },
     {
-      "name": "Noreika",
-      "gender": "female",
-      "language_ethnicity": "baltic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Kavaliauskiene",
       "gender": "female",
       "language_ethnicity": "baltic",
@@ -198135,25 +197793,6 @@
       "themes": []
     },
     {
-      "name": "Alekna",
-      "gender": "female",
-      "language_ethnicity": "baltic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Adomaitiene",
       "gender": "female",
       "language_ethnicity": "baltic",
@@ -198194,25 +197833,6 @@
       "themes": [
         "earthy"
       ]
-    },
-    {
-      "name": "Mazeika",
-      "gender": "female",
-      "language_ethnicity": "baltic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "Adomaitytė",
@@ -198335,7 +197955,7 @@
       "themes": []
     },
     {
-      "name": "Rimša",
+      "name": "Andrijauskienė",
       "gender": "female",
       "language_ethnicity": "baltic",
       "mythology": null,
@@ -198354,7 +197974,7 @@
       "themes": []
     },
     {
-      "name": "Songaila",
+      "name": "Barauskiene",
       "gender": "female",
       "language_ethnicity": "baltic",
       "mythology": null,
@@ -198373,7 +197993,7 @@
       "themes": []
     },
     {
-      "name": "Čėsna",
+      "name": "Misiūnaitė",
       "gender": "female",
       "language_ethnicity": "baltic",
       "mythology": null,
@@ -198390,6 +198010,65 @@
         "sliceOfLife"
       ],
       "themes": []
+    },
+    {
+      "name": "Dambrauskaitė",
+      "gender": "female",
+      "language_ethnicity": "baltic",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Daugėlienė",
+      "gender": "female",
+      "language_ethnicity": "baltic",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Karaliene",
+      "gender": "female",
+      "language_ethnicity": "baltic",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "striking",
+      "commonness": "rare",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "regal"
+      ]
     },
     {
       "name": "Popescu",
@@ -200436,118 +200115,6 @@
       "themes": []
     },
     {
-      "name": "Aderonke",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "regal"
-      ]
-    },
-    {
-      "name": "Atinuke",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Abosede",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
-      "name": "Adebimpe",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Adejoke",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Ajoke",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Akorede",
       "language_ethnicity": "yoruba",
       "mythology": null,
@@ -200595,6 +200162,118 @@
         "neutral"
       ],
       "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Lamidi",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Oriyomi",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Opeyemi",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "religious"
+      ]
+    },
+    {
+      "name": "Olayemi",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Akinwande",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "military"
+      ]
+    },
+    {
+      "name": "Akindele",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
@@ -205924,24 +205603,6 @@
       "themes": []
     },
     {
-      "name": "Gothicus",
-      "language_ethnicity": "latin",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "ancient"
-      ],
-      "role": [
-        "hero"
-      ],
-      "allure": "striking",
-      "commonness": "rare",
-      "genre": [],
-      "themes": [
-        "military"
-      ]
-    },
-    {
       "name": "Plotina",
       "gender": "female",
       "language_ethnicity": "latin",
@@ -206577,6 +206238,23 @@
       ],
       "allure": "unremarkable",
       "commonness": "rare",
+      "genre": [],
+      "themes": []
+    },
+    {
+      "name": "Metella",
+      "gender": "female",
+      "language_ethnicity": "latin",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "ancient"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "uncommon",
       "genre": [],
       "themes": []
     },
