@@ -22,7 +22,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 3 | Surnames: gender and non-surnames | R1, R7 | Done | | 3M | 0.2M | 4.4M, 0; code review Fable 5.1 medium |
 | 4 | Cultures: labels and misfiled names | R1, R5, R6 | Done | | 4M | 0.5M | 3.1M, 0.09M; code review Fable 5.1 medium |
 | 5 | New names | R1, R2, R5 | Done | | 6M | 1.5M | 9.9M, 0.37M at the last count; code review Fable 5.1 medium |
-| 6 | Tags and spelling | R1, R7 | To do | Must | 3M | 0.2M | |
+| 6 | Tags and spelling | R1, R7 | In progress | Must | 3M | 0.2M | |
 | 7 | Code, documents and tests | R1, R7 | To do | Must | 2M | 0 | |
 | 8 | Live run and release | R1 | To do | Must | 1M | 0.1M | |
 | | Total | | | | 28M | 2.8M | |
@@ -148,7 +148,7 @@ None open.
 - The review of milestone 5: fixed are Lithuanian surnames in -a filed female (now -a but -eva, -ova, -iņa, -ina, -ska is the man's form; the six fell to the men's cut), six women's given names as Yoruba surnames, five non-dragons, Gothicus, Pixodarus, seven by-names of one famous man (Sitting Bull, Crazy Horse, Rain-in-the-Face, Black Elk, Cornplanter, Poundmaker, Cornstalk); Native American by-names in English are era victorian; Latin -ella is female (Metella).
 - Same review, Claude's verdict, left as they are: Ghanaian men's names that are also surnames (Akan names serve as both; Mahama, Iddrisu, Salifu are given names); Tanzanian politicians' surnames under `swahili` (real surnames); Bambalio and Gaumata (a cognomen, a real name); Mamedova and Memmedova, and the old Leordo (spelling, milestone 6).
 
-- Audit after milestone 5 (Fable 5.1 medium): on track. Accepted: one shared module for the data tools with the debug loop removed; one test load and one invariants test, so tests are smaller than the product; its data defects go to milestone 6. Not taken: gating by spelling variant, since the two variants in the data (Lira, Silas) are real names and milestone 6 adds no names; dropping `mythology: null`, since no requirement asks for a smaller file.
+- Audit after milestone 5 (Fable 5.1 medium): on track. The audit and its two fixes cost 2.5M. Accepted: one shared module for the data tools with the debug loop removed; one test load and one invariants test, so tests are smaller than the product; its data defects go to milestone 6. Not taken: gating by spelling variant, since the two variants in the data (Lira, Silas) are real names and milestone 6 adds no names; dropping `mythology: null`, since no requirement asks for a smaller file.
 - Open estimates not scaled: milestones 1 to 5 cost 22.1M against 22M.
 - `tools/db.mjs`, where the four apply tools differed: lists split on either line end (milestone 2 split on LF alone, so it kept the CR in a line's last field and refused its list in a Windows checkout, where git's `autocrlf` gives the lists CRLF; pinned by a test).
 - `tools/db.mjs`: the change list is written before the database (milestone 5's order; 2 to 4 wrote the database first, and a failure between the two would lose the list while the count asserts refuse a second run). Not tested: a failed disk write is worth no test here.
