@@ -1,0 +1,297 @@
+gender | spanish | Aarón | male
+gender | spanish | Abdón | male
+gender | spanish | Abrahán | male
+gender | spanish | Absalón | male
+gender | spanish | Adán | male
+gender | spanish | Adón | male
+gender | mayan | Ahtziri | female
+gender | english | Albie | male
+gender | spanish | Almudena | female
+gender | spanish | Amaro | male
+gender | mongolian | Amarsaikhan | male
+gender | icelandic | Amilía | female
+gender | spanish | Ananías | male
+gender | spanish | Anatolio | male
+gender | spanish | Aniano | male
+gender | english | Arlis | male
+gender | icelandic | Arnfríður | female
+gender | spanish | Aránzazu | female
+gender | spanish | Ascensión | female
+gender | japanese | Asuka | female
+gender | german | August | male
+gender | turkish | Aysen | female
+gender | turkish | Aytaç | male
+gender | icelandic | Aðalbert | male
+gender | spanish | Baltasar | male
+gender | mongolian | Batkhuyag | male
+gender | spanish | Beltrán | male
+gender | spanish | Bernabé | male
+gender | english | Bille | male
+gender | english | Bronnie | female
+gender | spanish | Bárbara | female
+gender | english | Cantrell | male
+gender | dutch | Carel | male
+gender | arabic | Chadi | male
+gender | english | Charl | male
+gender | nigerian | Chinwendu | female
+gender | japanese | Chujo-Hime | female
+gender | korean | ChungAe | female
+gender | english | Clemmie | female
+gender | english | Clevie | male
+gender | spanish | Cándida | female
+gender | icelandic | Dagrún | female
+gender | english | Dashawn | male
+gender | english | Dosie | female
+gender | icelandic | Droplaug | female
+gender | icelandic | Dórey | female
+gender | icelandic | Dóris | female
+gender | icelandic | Dúnn | male
+gender | mongolian | Enkhjargal | female
+gender | icelandic | Evfemía | female
+gender | icelandic | Friðlín | male
+gender | icelandic | Geirlöð | female
+gender | icelandic | Gellir | male
+gender | icelandic | Gneisti | male
+gender | english | Great Woman | female
+gender | arabic | Hamad | male
+gender | icelandic | Herfinnur | male
+gender | icelandic | Hávar | male
+gender | icelandic | Hólmsteinn | male
+gender | arabic | Idris | male
+gender | english | Ivey | female
+gender | french | Jacque | male
+gender | english | Jimi | male
+gender | english | Jissie | female
+gender | icelandic | Jonný | male
+gender | spanish | José Bladímir | male
+gender | icelandic | Jórunn | female
+gender | icelandic | Kamma | female
+gender | english | Kelcey | female
+gender | mongolian | Khishigjargal | female
+gender | icelandic | Kristbjörn | male
+gender | english | Lesly | female
+gender | icelandic | Liljá | female
+gender | icelandic | Lilý | female
+gender | english | Lish | female
+gender | english | Lummie | female
+gender | icelandic | Magnheiður | female
+gender | arabic | Malek | male
+gender | icelandic | Manasína | female
+gender | english | Mannie | male
+gender | german | Marzell | male
+gender | english | Mell | female
+gender | mongolian | Munkhzul | female
+gender | icelandic | Múli | male
+gender | irishGaelic | Naoise | male
+gender | english | Narvell | male
+gender | nepalese | Nitisha | female
+gender | english | Ocie | female
+gender | english | Odie | male
+gender | nigerian | Olabisi | female
+gender | english | Olis | male
+gender | nigerian | Olufunke | female
+gender | nigerian | Oluwafunmilayo | female
+gender | english | Orrie | male
+gender | english | Ottie | female
+gender | english | Perl | female
+gender | french | Perle | female
+gender | greek | Philadelphia | female
+gender | english | Printess | female
+gender | english | Purl | female
+gender | english | Quinnie | female
+gender | arabic | Rami | male
+gender | icelandic | Rikharð | male
+gender | indonesian | Risky | male
+gender | indonesian | Rizki | male
+gender | indonesian | Rizky | male
+gender | icelandic | Rósinkransa | female
+gender | icelandic | Róslaug | female
+gender | icelandic | Rúbý | female
+gender | persian | Sattar | male
+gender | fijian | Seini | female
+gender | icelandic | Sesselja | female
+gender | icelandic | Sigurmundur | male
+gender | icelandic | Sigþrúður | female
+gender | icelandic | Snót | female
+gender | icelandic | Stapi | male
+gender | icelandic | Starkaður | male
+gender | italian | Stephi | female
+gender | icelandic | Svanbergur | male
+gender | english | Sylvesta | female
+gender | icelandic | Sólbrún | female
+gender | english | Taj | male
+gender | spanish | Tanchito | male
+gender | english | Tellie | female
+gender | english | Tempist | female
+gender | icelandic | Tindur | male
+gender | english | Tirrell | male
+gender | fijian | Tomasi | male
+gender | mongolian | Tsetsegmaa | female
+gender | icelandic | Tími | male
+gender | english | Varnell | male
+gender | icelandic | Viglín | male
+gender | english | Willie | male
+gender | chinese | Xiaoliang | male
+gender | icelandic | Ylja | female
+gender | mayan | Yunuen | female
+gender | chinese | Ziyi | female
+gender | mayan | Zulia | female
+gender | latin | Agripa | male
+gender | portuguese | Anárcase | male
+gender | portuguese | Dejanir | male
+gender | portuguese | Hermínia | female
+gender | portuguese | Mirthes | female
+gender | portuguese | Waltrode | female
+gender | icelandic | Ástrós | female
+gender | spanish | Áurea | female
+gender | icelandic | Ólíver | male
+gender | icelandic | Ónar | male
+gender | icelandic | Ósklín | female
+gender | arabic | أزهر | male
+gender | arabic | صفورة | female
+gender | nativeAmerican | Witka | female
+gender | hindi | Shiva | ambiguous
+gender | mayan | Chaac | male
+gender | greek | Charon | male
+gender | arabic | Ea | male
+gender | turkish | Taru | male
+gender | mayan | Zipacna | male
+tag | english | Brown | commonness | rare
+tag | english | Butler | commonness | rare
+tag | english | Flores | commonness | rare
+tag | english | Rogers | commonness | rare
+tag | english | Brittnee | commonness | rare
+tag | english | Brittnie | commonness | rare
+tag | english | Toy | commonness | rare
+tag | english | Shep | commonness | rare
+tag | spanish | Carlos Ovidio | commonness | rare
+tag | french | Malala | commonness | rare
+tag | vietnamese | Lý | commonness | rare
+tag | vietnamese | Huỳnh | commonness | rare
+tag | vietnamese | Trần | commonness | rare
+tag | vietnamese | Lưu | commonness | rare
+tag | vietnamese | Phan | commonness | rare
+tag | arabic | حاجی | commonness | rare
+tag | persian | Mardonius | commonness | rare
+tag | persian | Cambyses | commonness | rare
+tag | persian | Artaxerxes | commonness | rare
+tag | persian | Atossa | commonness | rare
+tag | greek | Diodorus | commonness | rare
+tag | greek | Callias | commonness | rare
+tag | nativeAmerican | Tecumseh | commonness | rare
+tag | english | Fox | commonness | uncommon
+tag | english | Tinker | commonness | uncommon
+tag | greek | Icarus | commonness | uncommon
+tag | greek | Plato | commonness | uncommon
+tag | latin | Sulpicius | commonness | uncommon
+tag | mongolian | Altangerel | commonness | common
+tag | mongolian | Altantsetseg | commonness | common
+tag | mongolian | Ganbat | commonness | common
+tag | mongolian | Oyun-Erdene | commonness | common
+tag | mongolian | Anujin | commonness | common
+tag | icelandic | Auður | commonness | common
+tag | icelandic | Gísli | commonness | common
+tag | icelandic | Þórdís | commonness | common
+tag | ethiopian | Habtamu | commonness | common
+tag | ethiopian | Getnet | commonness | common
+tag | ethiopian | Tilahun | commonness | common
+tag | ethiopian | Eshetu | commonness | common
+tag | ethiopian | Addisu | commonness | common
+tag | arabic | Hamad | commonness | common
+tag | nigerian | Olumide | commonness | common
+tag | nigerian | Toyin | commonness | common
+tag | nigerian | Ogochukwu | commonness | common
+tag | estonian | Liis | commonness | common
+tag | estonian | Liisi | commonness | common
+tag | baltic | Aistė | commonness | common
+tag | baltic | Adomas | commonness | common
+tag | albanian | Bajram | commonness | common
+tag | turkish | Aslıhan | commonness | common
+tag | persian | Ma'soumeh | commonness | common
+tag | english | Roy | commonness | common
+tag | english | Bert | commonness | common
+tag | english | Archie | commonness | common
+tag | english | Lewis | commonness | common
+tag | english | Alfred | commonness | common
+tag | english | Mila | commonness | common
+tag | english | Grayson | commonness | common
+tag | english | Parker | commonness | common
+tag | dutch | Koen | commonness | common
+tag | indonesian | Slamet | commonness | common
+tag | arabic | Abubakr | commonness | common
+tag | estonian | Peep | age | adult
+rename | first | german | Algelika | Angelika
+rename | first | italian | Allessandra | Alessandra
+rename | first | italian | Bennarda | Bernarda
+rename | first | italian | Gateano | Gaetano
+rename | first | italian | Giafranco | Gianfranco
+rename | first | italian | Gioavanni | Giovanni
+merge | first | italian | Giovann | Giovanni
+rename | first | italian | Innoccenza | Innocenza
+rename | first | italian | Robeto | Roberto
+rename | first | spanish | Juequin | Joaquín
+rename | first | spanish | Visente | Vicente
+rename | first | spanish | Francisca De | Francisca
+merge | first | english | Earic | Eric
+merge | first | english | Rogeir | Roger
+merge | first | german | Hildagard | Hildegard
+merge | first | greek | Matthaiso | Matthaios
+rename | first | arabic | Mohmmad | Mohammad
+merge | first | icelandic | Sigurdur | Sigurður
+rename | first | icelandic | Gudmundur | Guðmundur
+rename | first | slavicOther | Jiri | Jiří
+rename | first | slavicOther | Zdenek | Zdeněk
+rename | first | slavicPolish | Lucja | Łucja
+rename | first | french | Felicie | Félicie
+rename | first | greek | Κατερινα | Κατερίνα
+rename | first | korean | ChinHwa | Chin-hwa
+rename | first | korean | DuHo | Du-ho
+rename | first | korean | HeiRyung | Hei-ryung
+rename | first | korean | HyoSonn | Hyo-sonn
+rename | first | korean | SooMin | Soo-min
+rename | first | korean | ChungAe | Chung-ae
+rename | first | korean | KyungHu | Kyung-hu
+merge | first | hawaiian | Koleka | Kōleka
+merge | first | spanish | Maria Jose | María José
+merge | first | french | Sebastien | Sébastien
+merge | first | greek | Βασιλης | Βασίλης
+merge | first | icelandic | Ólíver | Óliver
+merge | first | french | Noliwé | Noliwè
+merge | first | slavicOther | Zdenka | Zdeňka
+merge | first | azerbaijani | Elcin | Elchin
+merge | first | azerbaijani | Ilgar | Ilqar
+merge | first | azerbaijani | Vagif | Vaqif
+merge | first | azerbaijani | Vusale | Vusala
+merge | first | azerbaijani | Elnare | Elnara
+merge | first | azerbaijani | Nijat | Nicat
+merge | first | azerbaijani | Ayten | Aytən
+merge | first | azerbaijani | Ilahe | Ilaha
+merge | first | azerbaijani | Nurane | Nurana
+merge | first | azerbaijani | Irade | Irada
+rename | first | mayan | Ah puch | Ah Puch
+rename | first | mayan | Ex chauah | Ex Chauah
+rename | first | mayan | Hunab kú | Hunab Kú
+rename | first | mayan | K’ay nicté | K’ay Nicté
+rename | first | mayan | Lool beh | Lool Beh
+rename | first | mayan | Nicte ha | Nicte Ha
+rename | first | mayan | Yum kax | Yum Kax
+rename | first | mayan | Zazil ha | Zazil Ha
+merge | last | chinese | Chén | Chen
+merge | last | chinese | Sūn | Sun
+merge | last | chinese | Zhū | Zhu
+merge | last | portuguese | De Olíveira | De Oliveira
+merge | last | portuguese | Goncalves | Gonçalves
+merge | last | icelandic | Jonsdottir | Jónsdóttir
+rename | last | icelandic | Gudmundsdottir | Guðmundsdóttir
+rename | last | portuguese | Magalhes | Magalhães
+remove | first | hindi | Lord Shiva | a god under race human; hindi Shiva stays
+remove | first | english | Great Woman | a phrase
+remove | first | hindi | Harsh joy | a phrase
+remove | first | arabic | بسم الله | a phrase
+remove | first | arabic | ابو علي | a kunya
+remove | first | arabic | ابو محمد | a kunya
+remove | first | arabic | ابومحمد | a kunya
+remove | first | arabic | ام محمد | a kunya
+remove | first | arabic | أم | a kunya part
+remove | first | arabic | ام | a kunya part
+remove | first | arabic | Um | a kunya part

@@ -263,17 +263,20 @@ function checkNamesAndHandles(data) {
     assert.deepEqual(all.map(e => e.name).filter(n =>
         /^\p{Ll}/u.test(n)                                  // uncapitalised
         || /[/()]|\.$/.test(n)                              // "A/B", "Anu (2)", initials
+        || /\s(?!(?:de|del|la|no|in|an)\s|h\p{Lu})\p{Ll}/u.test(n)   // a later word uncapitalised, but for particles
         || (/[A-Za-z]/.test(n) && /\p{Script=Cyrillic}/u.test(n))), []); // look-alike letters
     const handles = data.first_names.filter(e => e.genre.includes('cyberpunk'));
     assert.equal(handles.length, 100);
     assert.deepEqual(handles.filter(e => e.language_ethnicity !== 'cyberpunkHandle').map(e => e.name), []);
     assert.deepEqual(inCulture(data.last_names, 'cyberpunkHandle'), []);
     const names = new Set(all.map(e => e.name));
-    const gone = ['Unnamed', 'Trnsfer', 'Qkr', 'Korea', 'Feng Shui', 'Kalevala', 'Abominable Snowmen', 'Accuser', 'Palladium', 'Wild Hunt'];
+    const gone = ['Unnamed', 'Trnsfer', 'Qkr', 'Korea', 'Feng Shui', 'Kalevala', 'Abominable Snowmen', 'Accuser', 'Palladium', 'Wild Hunt',
+        'Lord Shiva', 'Great Woman', 'Harsh joy', 'بسم الله', 'ابو علي', 'ابو محمد', 'ام محمد', 'Gioavanni', 'Mohmmad'];
     assert.deepEqual(gone.filter(n => names.has(n)), []);
     for (const list of [data.first_names, data.last_names]) {
-        const keys = list.map(e => `${e.language_ethnicity}/${e.name}`);
-        assert.deepEqual(keys.filter((k, i) => keys.indexOf(k) !== i), [], 'no name twice in a culture');
+        const keys = list.map(e => `${e.language_ethnicity}/${foldName(e.name)}`);
+        assert.deepEqual(keys.filter((k, i) => keys.indexOf(k) !== i && k !== 'vietnamese/ngo'), [], 'no name twice in a culture, accents aside'); // Ngô, Ngọ are two names
+        assert.deepEqual(list.filter(e => 'sentinel_fields' in e).map(e => e.name), []);
     }
 }
 
@@ -373,17 +376,17 @@ function checkPinnedNames(data) {
         ...['Abosede', 'Ajoke', 'Atinuke', 'Aderonke', 'Adebimpe', 'Adejoke'].map(n => `yoruba/${n}`),
     ]), []);
     const culturesOf = name => data.first_names.filter(e => e.name === name).map(e => e.language_ethnicity);
-    assert.deepEqual(culturesOf('Fiji'), [], 'a country');
-    assert.deepEqual(culturesOf('Rosi Ni'), [], 'a broken form');
+    assert.deepEqual([...culturesOf('Fiji'), ...culturesOf('Rosi Ni')], [], 'a country, a broken form');
     assert.deepEqual(culturesOf('Ijeoma'), ['nigerian'], 'Igbo, not Yoruba');
     const first = (culture, name) => inCulture(data.first_names, culture).find(e => e.name === name);
     assert.deepEqual(data.first_names.filter(e => e.mythology && e.race !== 'mythical').map(e => e.name), []);
     assert.equal(first('mayan', 'Chaac').race, 'mythical');
-    assert.equal(first('english', 'Noah').race, 'human');
-    assert.equal(first('arabic', 'Noah').race, 'human');
+    for (const c of ['english', 'arabic']) assert.equal(first(c, 'Noah').race, 'human');
     const dragons = data.first_names.filter(e => e.race === 'dragon').map(e => e.name);
     assert.deepEqual(['Smaug', 'Mushu', 'Maleficent', 'Saphira', 'Spike', 'Puff', 'Kingu', 'Samebito', 'Otohime', 'Lamia', 'Mishibijiw'].filter(n => dragons.includes(n)), []);
     assert.ok(dragons.length >= 30, `${dragons.length} dragons`);
+    for (const [c, n, g] of [['arabic', 'Hamad', 'male'], ['persian', 'Sattar', 'male'], ['portuguese', 'Hermínia', 'female'], ['hindi', 'Shiva', 'ambiguous'], ['icelandic', 'Óliver', 'male'], ['italian', 'Giovanni', 'male'], ['arabic', 'Mohammad', 'male']]) assert.equal(first(c, n).gender, g, n);
+    assert.notEqual(first('english', 'Brown').commonness, 'common', 'a surname');
     assert.deepEqual(first('nativeAmerican', 'Big Elk').era, ['victorian']);
     assert.deepEqual(first('nativeAmerican', 'Winona').era, ['contemporary']);
     // The meaning-based classes tag real names by what they mean, not by how they sound.
