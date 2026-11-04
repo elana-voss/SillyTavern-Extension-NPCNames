@@ -19,15 +19,15 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 |---|---|---|---|---|---|---|---|
 | 1 | Test bed and the unpublished fixes | R1 | Done | | 5M | 0 | 3.0M, 0; code review Fable 5.1 medium |
 | 2 | Gods, handles and non-names | R1, R2, R7 | Done | | 4M | 0.3M | 1.7M, 0; code review Fable 5.1 medium |
-| 3 | Surnames: gender and non-surnames | R1, R7 | In progress | Must | 3M | 0.2M | |
-| 4 | Cultures: labels and misfiled names | R1, R5, R6 | To do | Must | 4M | 0.5M | |
+| 3 | Surnames: gender and non-surnames | R1, R7 | Done | | 3M | 0.2M | 4.4M, 0; code review Fable 5.1 medium |
+| 4 | Cultures: labels and misfiled names | R1, R5, R6 | In progress | Must | 4M | 0.5M | |
 | 5 | New names | R1, R2, R5 | To do | Must | 6M | 1.5M | |
 | 6 | Tags and spelling | R1, R7 | To do | Must | 3M | 0.2M | |
 | 7 | Code, documents and tests | R1, R7 | To do | Must | 2M | 0 | |
 | 8 | Live run and release | R1 | To do | Must | 1M | 0.1M | |
 | | Total | | | | 28M | 2.8M | |
 
-Each milestone ends with `node test.js` passing and the extension working on the test bed. Data milestones show the owner the list of changes before it goes in.
+Each milestone ends with `node test.js` passing and the extension working on the test bed.
 
 ### 1. Test bed and the unpublished fixes
 
@@ -44,13 +44,15 @@ Tests: `node test.js` 14 of 14; `node tools/testbed.mjs` 76 of 76. Next: milesto
 - Entries that name nothing (Unnamed, Trnsfer, Qkr, Korea, Feng Shui, Kalevala, Abominable Snowmen, Accuser, Palladium, Wild Hunt) are deleted, by a written list made from the same reading; how many is measured then.
 - `assets/advertisement.txt:6-8`, `index.js:112` and the README: `race: human` for every person; `mythical` only for a god, spirit or monster; a `mythology` filter goes with `race: mythical`, never `human`, because `mythology` is dropped before `race` (`picker.js:1`) and the pantheon would be lost; `cyberpunkHandle` named among the cultures.
 
-Tests: `node test.js` 16 of 16; `node tools/testbed.mjs` 76 of 76. Measured: mythical 491, handles moved 100, deleted 51 (49 first names, 2 surnames), disagreed 30 unchanged; first names 4290, surnames 1948. Waits for the owner's word on merging, after he has seen the change list.
+Tests: `node test.js` 16 of 16; `node tools/testbed.mjs` 76 of 76. Measured: mythical 491, handles moved 100, deleted 51 (49 first names, 2 surnames), disagreed 30 unchanged; first names 4290, surnames 1948. Next: milestone 3.
 
 ### 3. Surnames: gender and non-surnames
 
 - Surnames with a clearly gendered form, in every culture holding them (see Decisions), get a gender by ending, read over before going in; `picker.js:77` takes those of the character's gender and those without one. An ambiguous character takes any. "Piotr Kowalska" no longer occurs.
 - Surnames that are not surnames (words, months, places, two-letter fragments; about 178-195 names are in both lists) leave the list by a written list; a name in both lists stays where it is really a surname in that culture.
 - Mongolian gets no surname (41 of its 50 are also given names). The 17 Chinese names in both lists are read; surnames filed as first names leave the first names.
+
+Tests: `node test.js` 20 of 20; `node tools/testbed.mjs` 76 of 76. Measured: first names 4283, surnames 1794. Next: milestone 4.
 
 ### 4. Cultures: labels and misfiled names
 
@@ -62,7 +64,7 @@ Tests: `node test.js` 16 of 16; `node tools/testbed.mjs` 76 of 76. Measured: myt
 
 - First: a list of overused names per culture, made by asking models of several vendors to invent NPC names and keeping what keeps coming back. A new name on it does not enter.
 - Names come from public lists whose licence allows it (added to `THIRD_PARTY_LICENSES.md`), never invented by a model; a model only checks them. Each batch is tagged and checked before it goes in.
-- Fills: new dragon names replacing the franchise characters (Smaug, Mushu, Maleficent; the owner: "replace"), which then leave; Vietnamese first names; male and female Native American names; Romanian, Ghanaian, Ethiopian, Baltic, Albanian, Azerbaijani, Hungarian, Fijian; what milestone 4 emptied (Yoruba, Swahili, Latin, Scandinavian, other Slavic); female names for Latin, German, Scandinavian, Swahili, Swedish, Yoruba; surnames for Latin and Scandinavian; `child`, ancient humans, `victorian`, `modern`; `steampunk`, `postApocalyptic`, `western`, `noirDetective`, `horror`; themes `lunar`, `rustic`. How many per class is written with the first batch; a class with no honest source stays thin and is named to the owner.
+- Fills: new dragon names replacing the franchise characters (Smaug, Mushu, Maleficent; the owner: "replace"), which then leave; Vietnamese first names; male and female Native American names; Romanian, Ghanaian, Ethiopian, Baltic, Albanian, Azerbaijani, Hungarian, Fijian; what milestone 4 emptied (Yoruba, Swahili, Latin, Scandinavian, other Slavic); female names for Latin, German, Scandinavian, Swahili, Swedish, Yoruba; surnames for Latin and Scandinavian; women's surnames for Irish (Ní, Nic) and Ukrainian, men's for Nepalese; `child`, ancient humans, `victorian`, `modern`; `steampunk`, `postApocalyptic`, `western`, `noirDetective`, `horror`; themes `lunar`, `rustic`. How many per class is written with the first batch; a class with no honest source stays thin and is named to the owner.
 
 ### 6. Tags and spelling
 
@@ -113,4 +115,5 @@ None open.
 
 ## Trials
 
-- Open: a milestone agent gets only its own section of the plan to read, not the plan whole, and is told to read CLAUDE.md once. Figure: context at an agent's end; before: 97,274 at milestone 1's hand-over; 94,485 at milestone 2's, no real change yet, open.
+- Closed, reverted: a milestone agent reads only its section of the plan. Figure, context at an agent's end: 97,274, then 94,485, 97,467, 94,038; the hand-over limit sets it, and the plan was still read six times.
+- Milestone 3 cost 4.4M against 3M: the gender work widened to five more cultures and one round of corrections to genders. The estimate is not raised; the audit after milestone 5 scales the open ones.
