@@ -318,16 +318,19 @@ test('an ambiguous character takes a surname of any gender', () => {
 
 test('database genders surnames by their endings and keeps no men with women\'s surnames', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    const cultures = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese'];
-    const FEMALE = /(sk|ck)a$|dóttir$|dottir$|dotter$|ová$|ienė$|(ов|ев|ск)а$|(ов|ев)ая$|(ov|yev)a$/u;
+    const cultures = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese', 'irishGaelic'];
+    const FEMALE = /(sk|ck)a$|dóttir$|dottir$|dotter$|ová$|ienė$|(ов|ев|ск)а$|(ов|ев)ая$|(ov|yev)a$|(idou|opoulou)$/u;
     // Not -шин: the Ukrainian -ишин stays the same for a woman.
-    const MALE = /(sk|ck)i$|ński$|son$|(ов|ев|ий)$|[^ш]ин$|(ov|ev|yov)$|ņš$|(opoulos|idis|ides)$/u;
+    const MALE = /(sk|ck)i$|ński$|(ов|ев|ий)$|[^ш]ин$|(ov|ev|yov)$|ņš$|(opoulos|idis|ides)$|^(Ó|Mac) /u;
     const wrong = data.last_names.filter(e => cultures.includes(e.language_ethnicity)).filter(e =>
-        (FEMALE.test(e.name) && e.gender !== 'female') || (MALE.test(e.name) && e.gender !== 'male'));
+        (FEMALE.test(e.name) && e.gender !== 'female') || (MALE.test(e.name) && e.gender !== 'male')
+        // -son follows the person's sex in Icelandic; in Swedish it is a family name of both sexes.
+        || (/son$/.test(e.name) && e.gender !== (e.language_ethnicity === 'icelandic' ? 'male' : undefined)));
     assert.deepEqual(wrong.map(e => e.name), []);
     assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity)).map(e => e.name), []);
     const genderOf = (culture, name) => data.last_names.find(e => e.language_ethnicity === culture && e.name === name).gender;
     assert.equal(genderOf('greek', 'Nikolaou'), undefined, 'Greek -ou is used by both sexes');
+    assert.equal(genderOf('irishGaelic', "O'Byrne"), undefined, 'women bear anglicised forms too');
     for (const name of ['Papadaki', 'Tassi', 'Zika']) assert.equal(genderOf('greek', name), 'female', name);
     for (const name of ['Mundis', 'Rubis']) assert.equal(genderOf('greek', name), 'male', name);
     assert.equal(genderOf('nepalese', 'Devi'), 'female');

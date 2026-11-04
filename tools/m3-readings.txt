@@ -4,7 +4,7 @@
 # first | chinese | name | Claude | second reader: read as a Chinese first name. Removed only where
 # both say surname. Names read: all in both lists but Mongolian, Claude's candidates, some at random.
 # gender | culture | name | male, female or none: Claude's reading of every surname of the cultures
-# in the tool's GENDERED list. Greek -ou is used by both sexes: none, -idou and -opoulou too.
+# in the tool's GENDERED list. Greek -ou is used by both sexes: none, but -idou and -opoulou are female.
 last | arabic | Djamel | given | given
 last | arabic | Jbeli | surname | surname
 last | arabic | Mhamad | given | given
@@ -606,55 +606,55 @@ gender | turkish | Yılmaz | none
 gender | turkish | Zeynalova | female
 gender | turkish | Şimşek | none
 gender | turkish | Əliyev | male
-gender | swedish | Abramsson | male
-gender | swedish | Adolvsson | male
-gender | swedish | Albinsson | male
-gender | swedish | Albrechtsson | male
-gender | swedish | Albrecktsson | male
-gender | swedish | Albrektson | male
-gender | swedish | Albrektsson | male
-gender | swedish | Alexanderson | male
-gender | swedish | Alfsson | male
+gender | swedish | Abramsson | none
+gender | swedish | Adolvsson | none
+gender | swedish | Albinsson | none
+gender | swedish | Albrechtsson | none
+gender | swedish | Albrecktsson | none
+gender | swedish | Albrektson | none
+gender | swedish | Albrektsson | none
+gender | swedish | Alexanderson | none
+gender | swedish | Alfsson | none
 gender | swedish | Almstedt | none
-gender | swedish | Alvarsson | male
-gender | swedish | Andréasson | male
-gender | swedish | Arthursson | male
+gender | swedish | Alvarsson | none
+gender | swedish | Andréasson | none
+gender | swedish | Arthursson | none
 gender | swedish | Bengtsdotter | female
-gender | swedish | Bernhardsson | male
-gender | swedish | Berntsson | male
-gender | swedish | Björnsson | male
+gender | swedish | Bernhardsson | none
+gender | swedish | Berntsson | none
+gender | swedish | Björnsson | none
 gender | swedish | Byquist | none
 gender | swedish | Byqvist | none
-gender | swedish | Gerhardsson | male
-gender | swedish | Haraldsson | male
-gender | swedish | Herbertsson | male
-gender | swedish | Holgersson | male
-gender | swedish | Ingesson | male
-gender | swedish | Ivarsson | male
-gender | swedish | Kjellsson | male
-gender | swedish | Klasson | male
-gender | swedish | Leifsson | male
-gender | swedish | Lennartsson | male
-gender | swedish | Leonardsson | male
+gender | swedish | Gerhardsson | none
+gender | swedish | Haraldsson | none
+gender | swedish | Herbertsson | none
+gender | swedish | Holgersson | none
+gender | swedish | Ingesson | none
+gender | swedish | Ivarsson | none
+gender | swedish | Kjellsson | none
+gender | swedish | Klasson | none
+gender | swedish | Leifsson | none
+gender | swedish | Lennartsson | none
+gender | swedish | Leonardsson | none
 gender | swedish | Ljungstrand | none
-gender | swedish | Markusson | male
-gender | swedish | Matsson | male
-gender | swedish | Mikaelsson | male
+gender | swedish | Markusson | none
+gender | swedish | Matsson | none
+gender | swedish | Mikaelsson | none
 gender | swedish | Mårdh | none
-gender | swedish | Niklasson | male
-gender | swedish | Oliversson | male
+gender | swedish | Niklasson | none
+gender | swedish | Oliversson | none
 gender | swedish | Olofsdotter | female
-gender | swedish | Patriksson | male
+gender | swedish | Patriksson | none
 gender | swedish | Pilkvist | none
-gender | swedish | Ragnvaldsson | male
+gender | swedish | Ragnvaldsson | none
 gender | swedish | Rundström | none
-gender | swedish | Sigurdsson | male
-gender | swedish | Stefansson | male
-gender | swedish | Stigsson | male
-gender | swedish | Sörensson | male
-gender | swedish | Ulfsson | male
-gender | swedish | Victorsson | male
-gender | swedish | Waltersson | male
+gender | swedish | Sigurdsson | none
+gender | swedish | Stefansson | none
+gender | swedish | Stigsson | none
+gender | swedish | Sörensson | none
+gender | swedish | Ulfsson | none
+gender | swedish | Victorsson | none
+gender | swedish | Waltersson | none
 gender | swedish | Wuopio | none
 gender | greek | Argyros | male
 gender | greek | Argyrou | none
@@ -674,7 +674,7 @@ gender | greek | Hadjigeorgiou | none
 gender | greek | Karahalios | male
 gender | greek | Kokes | none
 gender | greek | Konstantinidis | male
-gender | greek | Konstantinidou | none
+gender | greek | Konstantinidou | female
 gender | greek | Konstantinou | none
 gender | greek | Lambrou | none
 gender | greek | Lazaridis | male
@@ -688,7 +688,7 @@ gender | greek | Nikolaou | none
 gender | greek | Nikolopoulos | male
 gender | greek | Oikonomou | none
 gender | greek | Papadaki | female
-gender | greek | Papadopoulou | none
+gender | greek | Papadopoulou | female
 gender | greek | Papakonstantinou | none
 gender | greek | Paraskeva | none
 gender | greek | Rubis | male
@@ -747,3 +747,53 @@ gender | nepalese | Timsin | none
 gender | nepalese | Tuladhar | none
 gender | nepalese | Yadab | none
 gender | nepalese | Yadavani | female
+gender | irishGaelic | Conchobhair | none
+gender | irishGaelic | Mac Anna | male
+gender | irishGaelic | Mac Carrghamhna | male
+gender | irishGaelic | Mac Cearbhaill | male
+gender | irishGaelic | Mac Conmidhe | male
+gender | irishGaelic | Mac Cuille | male
+gender | irishGaelic | Mac Eochaidh | male
+gender | irishGaelic | Mac Gairbhín | male
+gender | irishGaelic | Mac Giolla Rua | male
+gender | irishGaelic | Mac Maghnais | male
+gender | irishGaelic | Mac an Airchinnigh | male
+gender | irishGaelic | Maoilchiaráin | none
+gender | irishGaelic | O'Byrne | none
+gender | irishGaelic | Ó Cadhla | male
+gender | irishGaelic | Ó Caollaidhe | male
+gender | irishGaelic | Ó Clochasaigh | male
+gender | irishGaelic | Ó Clúmháin | male
+gender | irishGaelic | Ó Cobhthaigh | male
+gender | irishGaelic | Ó Conbhuidhe | male
+gender | irishGaelic | Ó Creacháin | male
+gender | irishGaelic | Ó Cruadhlaoich | male
+gender | irishGaelic | Ó Cuill | male
+gender | irishGaelic | Ó Céirín | male
+gender | irishGaelic | Ó Daighnáin | male
+gender | irishGaelic | Ó Dubhda | male
+gender | irishGaelic | Ó Duibhdabhoireann | male
+gender | irishGaelic | Ó Fiachna | male
+gender | irishGaelic | Ó Fidhne | male
+gender | irishGaelic | Ó Gadhra | male
+gender | irishGaelic | Ó Leannain | male
+gender | irishGaelic | Ó Lonagáin | male
+gender | irishGaelic | Ó Mainnín | male
+gender | irishGaelic | Ó Maolchathail | male
+gender | irishGaelic | Ó Maonaigh | male
+gender | irishGaelic | Ó Muireachaidh | male
+gender | irishGaelic | Ó Murnain | male
+gender | irishGaelic | Ó Nuallain | male
+gender | irishGaelic | Ó Riaghain | male
+gender | irishGaelic | Ó Sluaghain | male
+gender | irishGaelic | Ó Spealáin | male
+gender | irishGaelic | Ó Tarpaigh | male
+gender | irishGaelic | Ó hAnrachtaigh | male
+gender | irishGaelic | Ó hAodha | male
+gender | irishGaelic | Ó hArtagáin | male
+gender | irishGaelic | Ó hEidedín | male
+gender | irishGaelic | Ó hEidhin | male
+gender | irishGaelic | Ó hUaithnigh | male
+gender | irishGaelic | Ó hUallacháin | male
+gender | irishGaelic | Ó hÉidin | male
+gender | irishGaelic | Ó hÍr | male

@@ -20,7 +20,7 @@ assert.equal(db.first_names.length, 4290, 'first names');
 assert.equal(db.last_names.length, 1948, 'surnames');
 assert.ok(db.last_names.every(e => !('gender' in e)), 'a surname already has a gender');
 
-const GENDERED = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese'];
+const GENDERED = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese', 'irishGaelic'];
 const REMOVERS = new Set(['given', 'word', 'place', 'fragment']);
 const LAST_VERDICTS = new Set([...REMOVERS, 'surname', 'unsure']);
 const FIRST_VERDICTS = new Set(['given', 'surname', 'unsure']);
