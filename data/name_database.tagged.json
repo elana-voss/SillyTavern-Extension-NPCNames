@@ -8376,7 +8376,8 @@
       "commonness": "rare",
       "genre": [],
       "themes": [
-        "solar"
+        "solar",
+        "lunar"
       ]
     },
     {
@@ -8399,7 +8400,8 @@
       "commonness": "uncommon",
       "genre": [],
       "themes": [
-        "floral"
+        "floral",
+        "lunar"
       ]
     },
     {
@@ -8549,7 +8551,9 @@
       "allure": "pretty",
       "commonness": "uncommon",
       "genre": [],
-      "themes": []
+      "themes": [
+        "lunar"
+      ]
     },
     {
       "name": "Ayşe",
@@ -8846,7 +8850,8 @@
       "commonness": "rare",
       "genre": [],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -9492,7 +9497,8 @@
       "commonness": "uncommon",
       "genre": [],
       "themes": [
-        "floral"
+        "floral",
+        "rustic"
       ]
     },
     {
@@ -19359,7 +19365,9 @@
       "intelligence": "thoughtful",
       "allure": "striking",
       "commonness": "uncommon",
-      "genre": [],
+      "genre": [
+        "horror"
+      ],
       "themes": [
         "literary"
       ]
@@ -20603,7 +20611,8 @@
       "allure": "unremarkable",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "horror"
       ],
       "themes": []
     },
@@ -20626,7 +20635,8 @@
       "allure": "unremarkable",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "horror"
       ],
       "themes": []
     },
@@ -20649,7 +20659,8 @@
       "allure": "unremarkable",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "horror"
       ],
       "themes": []
     },
@@ -41587,7 +41598,9 @@
       "intelligence": "average",
       "allure": "pleasant",
       "commonness": "rare",
-      "genre": [],
+      "genre": [
+        "horror"
+      ],
       "themes": []
     },
     {
@@ -44006,7 +44019,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "horror"
       ],
       "themes": []
     },
@@ -48662,7 +48676,9 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "lunar"
+      ]
     },
     {
       "name": "Mahmut",
@@ -57370,7 +57386,9 @@
       "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [],
-      "themes": []
+      "themes": [
+        "rustic"
+      ]
     },
     {
       "name": "Obaapa",
@@ -66382,7 +66400,9 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [],
-      "themes": []
+      "themes": [
+        "lunar"
+      ]
     },
     {
       "name": "Sarangoo",
@@ -66424,7 +66444,9 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [],
-      "themes": []
+      "themes": [
+        "lunar"
+      ]
     },
     {
       "name": "Sari-Helena",
@@ -78519,7 +78541,9 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "lunar"
+      ]
     },
     {
       "name": "Xacin",
@@ -80500,7 +80524,9 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "lunar"
+      ]
     },
     {
       "name": "Yuichi",
@@ -91922,7 +91948,9 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [],
-      "themes": []
+      "themes": [
+        "lunar"
+      ]
     },
     {
       "name": "بسم الله",
@@ -105120,7 +105148,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -119224,7 +119253,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -119341,7 +119371,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -119506,7 +119537,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -119531,7 +119563,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -120009,7 +120042,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -120250,7 +120284,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "watery"
+        "watery",
+        "lunar"
       ]
     },
     {
@@ -121361,7 +121396,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -122755,7 +122791,9 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "rustic"
+      ]
     },
     {
       "name": "Camelia",
@@ -131994,9 +132032,9 @@
       ]
     },
     {
-      "name": "Ngozi",
-      "gender": "female",
-      "language_ethnicity": "yoruba",
+      "name": "Ifeanyi",
+      "gender": "male",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132017,9 +132055,55 @@
       "themes": []
     },
     {
+      "name": "Ngozi",
+      "gender": "female",
+      "language_ethnicity": "nigerian",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "adult"
+      ],
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Chinedu",
+      "gender": "male",
+      "language_ethnicity": "nigerian",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "adult"
+      ],
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "thoughtful",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
       "name": "Amaka",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132042,7 +132126,7 @@
     {
       "name": "Ifeoma",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132065,7 +132149,7 @@
     {
       "name": "Ijeoma",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132111,9 +132195,32 @@
       ]
     },
     {
+      "name": "Obinna",
+      "gender": "male",
+      "language_ethnicity": "nigerian",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "adult"
+      ],
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
       "name": "Chinenye",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132136,7 +132243,7 @@
     {
       "name": "Amarachi",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132149,6 +132256,29 @@
         "neutral"
       ],
       "intelligence": "average",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Chidi",
+      "gender": "male",
+      "language_ethnicity": "nigerian",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "adult"
+      ],
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "thoughtful",
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
@@ -132180,31 +132310,6 @@
       "themes": []
     },
     {
-      "name": "Chinwe",
-      "gender": "female",
-      "language_ethnicity": "yoruba",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "thoughtful",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
       "name": "Oluwakemi",
       "gender": "female",
       "language_ethnicity": "yoruba",
@@ -132232,7 +132337,7 @@
     {
       "name": "Nneka",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132443,7 +132548,7 @@
     {
       "name": "Uju",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132466,7 +132571,7 @@
     {
       "name": "Nnenna",
       "gender": "female",
-      "language_ethnicity": "yoruba",
+      "language_ethnicity": "nigerian",
       "mythology": null,
       "race": "human",
       "age": [
@@ -132579,6 +132684,75 @@
       "themes": [
         "religious"
       ]
+    },
+    {
+      "name": "Nkiru",
+      "gender": "female",
+      "language_ethnicity": "nigerian",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "adult"
+      ],
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Bukky",
+      "gender": "female",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "adult"
+      ],
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Jumoke",
+      "gender": "female",
+      "language_ethnicity": "yoruba",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "adult"
+      ],
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "striking",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
     },
     {
       "name": "Juma",
@@ -135685,7 +135859,8 @@
         "sliceOfLife"
       ],
       "themes": [
-        "celestial"
+        "celestial",
+        "lunar"
       ]
     },
     {
@@ -149145,7 +149320,8 @@
       ],
       "themes": [
         "earthy",
-        "regal"
+        "regal",
+        "rustic"
       ]
     },
     {
@@ -150592,7 +150768,9 @@
         "steampunk",
         "western"
       ],
-      "themes": []
+      "themes": [
+        "rustic"
+      ]
     },
     {
       "name": "Eula",
@@ -150949,7 +151127,8 @@
         "noirDetective"
       ],
       "themes": [
-        "literary"
+        "literary",
+        "rustic"
       ]
     },
     {
@@ -194682,6 +194861,342 @@
       "themes": []
     },
     {
+      "name": "Shrestha",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Thapa",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Gurung",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Yadav",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Singh",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Rana",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "striking",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "regal",
+        "military"
+      ]
+    },
+    {
+      "name": "Rai",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Shah",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "striking",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "regal"
+      ]
+    },
+    {
+      "name": "Chaudhary",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Sharma",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "scholarly",
+        "religious"
+      ]
+    },
+    {
+      "name": "Tamang",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Lama",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "mentor"
+      ],
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "religious",
+        "mystical"
+      ]
+    },
+    {
+      "name": "Pokhrel",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Magar",
+      "gender": "male",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Chhetri",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Pokharel",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Tharu",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Sah",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
       "name": "Fehér",
       "language_ethnicity": "hungarian",
       "mythology": null,
@@ -201087,6 +201602,722 @@
       ],
       "themes": [
         "regal"
+      ]
+    },
+    {
+      "name": "Chowdhury",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Chetry",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Malla",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "striking",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "regal"
+      ]
+    },
+    {
+      "name": "Sherpa",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "hero"
+      ],
+      "allure": "striking",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "earthy",
+        "mystical"
+      ]
+    },
+    {
+      "name": "Acharya",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "mentor"
+      ],
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "scholarly",
+        "religious"
+      ]
+    },
+    {
+      "name": "Adhikari",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Basnet",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Karki",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Joshi",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "scholarly",
+        "religious"
+      ]
+    },
+    {
+      "name": "Pandey",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "scholarly",
+        "religious"
+      ]
+    },
+    {
+      "name": "Ghimire",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Koirala",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Pradhan",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Bista",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Khadka",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Kunwar",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Regmi",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Bhattarai",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "religious",
+        "scholarly"
+      ]
+    },
+    {
+      "name": "Subedi",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Gautam",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "religious"
+      ]
+    },
+    {
+      "name": "Bhandari",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Mahato",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "earthy"
+      ]
+    },
+    {
+      "name": "Khanal",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Paudel",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Dhakal",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Jha",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "scholarly"
+      ]
+    },
+    {
+      "name": "Limbu",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Rijal",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Pun",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Pant",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Kharel",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Mishra",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "scholarly"
+      ]
+    },
+    {
+      "name": "Chaudhari",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "earthy"
+      ]
+    },
+    {
+      "name": "Lamichhane",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Teli",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "earthy"
+      ]
+    },
+    {
+      "name": "Budhathoki",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Poudel",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Shakya",
+      "language_ethnicity": "nepalese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": [
+        "mystical",
+        "religious"
       ]
     },
     {
@@ -208102,28 +209333,6 @@
       ],
       "themes": [
         "floral",
-        "earthy"
-      ]
-    },
-    {
-      "name": "Magar",
-      "gender": "male",
-      "language_ethnicity": "nepalese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "military",
         "earthy"
       ]
     }

@@ -465,5 +465,28 @@ test('franchise dragons have left; the dragons that replace them are there', () 
     assert.ok(dragons.length >= 30, `${dragons.length} dragons`);
 });
 
+test('Igbo names are filed as Nigerian, not Yoruba', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const cultureOf = data.first_names.filter(e => e.name === 'Ijeoma').map(e => e.language_ethnicity);
+    assert.deepEqual(cultureOf, ['nigerian']);
+});
+
+test('a Nepalese man can draw the ordinary surnames of his country', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const forMen = data.last_names.filter(e => e.language_ethnicity === 'nepalese' && e.gender !== 'female').map(e => e.name);
+    const ordinary = ['Magar', 'Yadav', 'Thapa', 'Gurung', 'Shrestha', 'Rai', 'Tamang', 'Karki', 'Adhikari', 'Bhandari'];
+    assert.deepEqual(ordinary.filter(n => !forMen.includes(n)), []);
+});
+
+test('the meaning-based classes tag real names by what they mean, not by how they sound', () => {
+    const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
+    const tagged = (culture, name, field, value) => data.first_names.find(e => e.language_ethnicity === culture && e.name === name)[field].includes(value);
+    assert.ok(tagged('hawaiian', 'Mahina', 'themes', 'lunar'), 'Mahina means moon');
+    assert.ok(tagged('english', 'Georgia', 'themes', 'rustic'), 'Georgia means farmer');
+    assert.ok(tagged('greek', 'Desdemona', 'genre', 'horror'), 'Desdemona means ill-fated');
+    assert.ok(!tagged('mongolian', 'Sarnai', 'themes', 'lunar'), 'Sarnai means rose');
+    assert.ok(!tagged('yoruba', 'Babatunde', 'genre', 'horror'), 'Babatunde means the father has returned');
+});
+
 console.log(`\n${passed} passed, ${failed} failed`);
 process.exit(failed > 0 ? 1 : 0);

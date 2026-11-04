@@ -219,14 +219,32 @@ first | slavicOther | Stojan | male | name-dataset HR; name-dataset SI; Wikidata
 last | slavicOther | Kolář | - | name-dataset CZ; name-dataset HR; name-dataset SI | contemporary | neutral | pleasant | common | sliceOfLife | -
 last | slavicOther | Kovač | - | name-dataset HR; name-dataset SI; popular-names SK | contemporary | neutral | pleasant | common | sliceOfLife | -
 first | hungarian | Kinga | female | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | regal
+last | nepalese | Shrestha | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Thapa | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
 first | hungarian | Illés | male | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | uncommon | sliceOfLife | religious
+last | nepalese | Gurung | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
 first | hungarian | Gyöngyi | female | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | gemstone
+last | nepalese | Yadav | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Singh | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
 first | hungarian | Tihamér | male | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | rare | sliceOfLife | -
+last | nepalese | Rana | - | popular-names NP; Wikidata | contemporary | neutral | striking | common | sliceOfLife | regal,military
+last | nepalese | Rai | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
 first | hungarian | Tivadar | male | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | uncommon | sliceOfLife | -
+last | nepalese | Shah | - | popular-names NP; Wikidata | contemporary | neutral | striking | common | sliceOfLife | regal
 first | hungarian | Gyöngyvér | female | Wikidata; name-dataset HU | adult | contemporary | neutral | thoughtful | striking | uncommon | sliceOfLife | gemstone
+last | nepalese | Chaudhary | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
 first | hungarian | Sára | female | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | religious
+last | nepalese | Sharma | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | scholarly,religious
 first | hungarian | Zsolt | male | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+last | nepalese | Tamang | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Lama | - | popular-names NP; Wikidata | contemporary | mentor | pleasant | common | sliceOfLife | religious,mystical
+last | nepalese | Pokhrel | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Magar | male | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Chhetri | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
 first | hungarian | Aladár | male | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | uncommon | sliceOfLife | -
+last | nepalese | Pokharel | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Tharu | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Sah | - | popular-names NP; Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
 first | hungarian | Ödön | male | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | uncommon | sliceOfLife | -
 first | hungarian | Zsombor | male | Wikidata; name-dataset HU | adult | contemporary | neutral | average | pleasant | uncommon | sliceOfLife | earthy
 first | hungarian | Csongor | male | Wikidata; name-dataset HU | adult | contemporary | neutral | thoughtful | pleasant | uncommon | sliceOfLife | literary
@@ -1309,6 +1327,44 @@ first | swedish | Siw | female | name-dataset SE; Wikidata | adult | contemporar
 first | swedish | Liv | female | name-dataset SE; Wikidata | adult | contemporary | neutral | average | pleasant | uncommon | sliceOfLife | -
 first | swedish | Hedvig | female | name-dataset SE; Wikidata | adult | contemporary | neutral | bookish | unremarkable | uncommon | sliceOfLife | regal
 first | swedish | Marit | female | name-dataset SE; Wikidata | adult | contemporary | neutral | average | pleasant | uncommon | sliceOfLife | -
+last | nepalese | Chowdhury | - | popular-names NP | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Chetry | - | popular-names NP | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Malla | - | Wikidata | contemporary | neutral | striking | uncommon | sliceOfLife | regal
+last | nepalese | Sherpa | - | Wikidata | contemporary | hero | striking | common | sliceOfLife | earthy,mystical
+last | nepalese | Acharya | - | Wikidata | contemporary | mentor | pleasant | common | sliceOfLife | scholarly,religious
+last | nepalese | Adhikari | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Basnet | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Karki | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Joshi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | scholarly,religious
+last | nepalese | Pandey | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | scholarly,religious
+last | nepalese | Ghimire | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Koirala | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Pradhan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Bista | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Khadka | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Kunwar | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Regmi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Bhattarai | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | religious,scholarly
+last | nepalese | Subedi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Gautam | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | religious
+last | nepalese | Bhandari | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Mahato | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | earthy
+last | nepalese | Khanal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Paudel | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Dhakal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Jha | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | scholarly
+last | nepalese | Limbu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Rijal | - | Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
+last | nepalese | Pun | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Pant | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Kharel | - | Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
+last | nepalese | Mishra | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | scholarly
+last | nepalese | Chaudhari | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | earthy
+last | nepalese | Lamichhane | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Teli | - | Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | earthy
+last | nepalese | Budhathoki | - | Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
+last | nepalese | Poudel | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Shakya | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | mystical,religious
 first | albanian | Arben | male | name-dataset AL | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
 first | albanian | Kristi | female | name-dataset AL | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | religious
 first | albanian | Anila | female | name-dataset AL | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
@@ -2036,17 +2092,20 @@ first | yoruba | Babatoundé | male | Wikidata | adult | contemporary | neutral 
 first | yoruba | Mofoyeke | female | Wikidata | adult | contemporary | neutral | average | pleasant | rare | sliceOfLife | -
 first | yoruba | Fiyinfoluwa | male | Wikidata | adult | contemporary | neutral | thoughtful | pleasant | uncommon | sliceOfLife | mystical,religious
 first | yoruba | Oreoluwa | female | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | celestial
-first | yoruba | Ngozi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Amaka | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Ifeoma | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Ijeoma | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Ifeanyi | male | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Ngozi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Chinedu | male | name-dataset NG | adult | contemporary | neutral | thoughtful | pleasant | common | sliceOfLife | -
+first | nigerian | Amaka | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Ifeoma | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Ijeoma | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Amina | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | religious
-first | yoruba | Chinenye | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Amarachi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Obinna | male | name-dataset NG | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | nigerian | Chinenye | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Amarachi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Chidi | male | name-dataset NG | adult | contemporary | neutral | thoughtful | pleasant | common | sliceOfLife | -
 first | yoruba | Adenike | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Chinwe | female | name-dataset NG | adult | contemporary | neutral | thoughtful | pleasant | common | sliceOfLife | religious
 first | yoruba | Oluwakemi | female | name-dataset NG | adult | contemporary | neutral | thoughtful | pleasant | common | sliceOfLife | religious
-first | yoruba | Nneka | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Nneka | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Titilayo | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Olabisi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Funmi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
@@ -2055,12 +2114,15 @@ first | yoruba | Modupe | female | name-dataset NG | adult | contemporary | neut
 first | yoruba | Funke | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Folashade | female | name-dataset NG | adult | contemporary | neutral | thoughtful | striking | common | sliceOfLife | -
 first | yoruba | Bunmi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Uju | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
-first | yoruba | Nnenna | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Uju | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | nigerian | Nnenna | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Omolola | female | name-dataset NG | adult | contemporary | neutral | average | pretty | common | sliceOfLife | -
 first | yoruba | Bose | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Omowunmi | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | yoruba | Rukayat | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | religious
+first | nigerian | Nkiru | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | yoruba | Bukky | female | name-dataset NG | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | yoruba | Jumoke | female | name-dataset NG | adult | contemporary | neutral | average | striking | common | sliceOfLife | -
 first | swahili | Juma | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
 first | swahili | Amani | male | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
 first | swahili | Salum | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | religious
@@ -2774,7 +2836,6 @@ last | ukrainian | Bessonova | female | Wikidata | contemporary | neutral | stri
 last | ukrainian | Shekhovtsova | female | Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | ukrainian | Kolchynska | female | Wikidata | contemporary | neutral | unremarkable | uncommon | sliceOfLife | -
 last | ukrainian | Yablonska | female | Wikidata | contemporary | neutral | pleasant | uncommon | sliceOfLife | floral,earthy
-last | nepalese | Magar | male | popular-names NP | contemporary | neutral | unremarkable | common | sliceOfLife | military,earthy
 first | greek | Theaetetus | male | Wikidata | adult | ancient | neutral | bookish | unremarkable | rare | - | scholarly
 first | greek | Diodorus | male | Wikidata | adult | ancient | neutral | average | unremarkable | common | - | -
 first | greek | Dioxippus | male | Wikidata | adult | ancient | hero | average | pleasant | rare | - | -
@@ -3755,3 +3816,37 @@ tag | slavicOther | Amálie | era | modern
 tag | slavicOther | Amálie | age | child
 tag | slavicOther | Lukáš | era | modern
 tag | slavicOther | Lukáš | age | child
+tag | turkish | Aygun | themes | lunar
+tag | turkish | Aygül | themes | lunar
+tag | turkish | Ayça | themes | lunar
+tag | arabic | Badriya | themes | lunar
+tag | turkish | Başak | themes | rustic
+tag | greek | Desdemona | genre | horror
+tag | irishGaelic | Dubhchobhlaigh | genre | horror
+tag | irishGaelic | Dubhghall | genre | horror
+tag | irishGaelic | Dubhóg | genre | horror
+tag | japanese | Kuro | genre | horror
+tag | hawaiian | Kaʻanāʻanā | genre | horror
+tag | hawaiian | Mahina | themes | lunar
+tag | english | Oakley | themes | rustic
+tag | mongolian | Sarangerel | themes | lunar
+tag | mongolian | Sarantuya | themes | lunar
+tag | indonesian | Wulan | themes | lunar
+tag | chinese | Yuemei | themes | lunar
+tag | arabic | بدر | themes | lunar
+tag | azerbaijani | Aygun | themes | lunar
+tag | azerbaijani | Aysel | themes | lunar
+tag | azerbaijani | Aynur | themes | lunar
+tag | azerbaijani | Aydin | themes | lunar
+tag | azerbaijani | Ayten | themes | lunar
+tag | azerbaijani | Nuray | themes | lunar
+tag | azerbaijani | Aysu | themes | lunar
+tag | azerbaijani | Aytən | themes | lunar
+tag | romanian | Silvia | themes | rustic
+tag | vietnamese | Hằng | themes | lunar
+tag | vietnamese | Nguyệt | themes | lunar
+tag | latin | Silvanus | themes | rustic
+tag | latin | Silvius | themes | rustic
+tag | english | Georgia | themes | rustic
+tag | english | Grover | themes | rustic
+tag | english | Sylvia | themes | rustic
