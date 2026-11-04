@@ -33,4 +33,7 @@ xaviere
 ysolde
 zephyr
 # Listed by hand: named by the owner or of that kind, though the counts do not reach them.
+lyra
 seraphina
+thorn
+thorne

@@ -70,7 +70,7 @@ for (const [k, s] of stats) {
 }
 writeFileSync(tablePath, table.sort().join('\n') + '\n');
 
-const HAND = ['elara', 'kael', 'lyra', 'seraphina', 'thorn', 'thorne'].filter(f => !listed.has(f) && !whyCommon(f));
+const HAND = ['elara', 'kael', 'lyra', 'seraphina', 'thorn', 'thorne'].filter(f => !listed.has(f));
 const text = [
     '# Names models of several vendors keep inventing and few real people bear. A new name on this list does not enter, in any culture.',
     `# Counted from stored answers of five vendors by tools/m5-make-overused.mjs: ${VENDORS} vendors under generic fantasy and style prompts;`,
