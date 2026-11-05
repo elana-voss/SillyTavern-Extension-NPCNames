@@ -2,7 +2,7 @@
 // misfiled names moved by tools/m4-readings.txt where two readers gave the same answer (the third
 // reader settles what the first two disagreed on); a surname's gender moves with it, gods are not
 // read. Also deletes Fiji, a country, and corrects Rosi Ni to Rosi. Writes the change list and the table
-// per changed culture to <tmp>/SillyTavern-Extension-NPCNames/4-changes.txt.
+// per changed culture to logs/work/4-changes.txt.
 //
 // Run on the database as it stood before the milestone (main's): node tools/m4-apply-cultures.mjs
 // Its count asserts refuse a database already changed.

@@ -1,7 +1,7 @@
 // Milestone 3's one data change: a gender on the surnames of GENDERED, non-surnames out
 // of the surnames by tools/m3-readings.txt, Mongolian surnames gone, surnames out of the
 // Chinese first names. Writes the change list to
-// <tmp>/SillyTavern-Extension-NPCNames/3-changes.txt.
+// logs/work/3-changes.txt.
 //
 // Run on the database as it stood before the milestone (main's): node tools/m3-apply-surnames.mjs
 // Its count asserts refuse a database already changed.

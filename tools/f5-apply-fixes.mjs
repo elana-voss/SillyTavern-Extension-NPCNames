@@ -1,7 +1,7 @@
 // The one data change of the fix of milestone 5's names: names go where three readers of different
 // vendors, or the review after them, placed them. Nothing is deleted: two entries of one name
 // become one, and the name stands. See the plan's section "5 fix".
-// Writes the change list to <tmp>/SillyTavern-Extension-NPCNames/f5-changes.txt.
+// Writes the change list to logs/work/f5-changes.txt.
 //
 // Run on the database as it stood before the fix (main's): node tools/f5-apply-fixes.mjs
 // Its count asserts refuse a database already changed.

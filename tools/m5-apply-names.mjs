@@ -1,7 +1,7 @@
 // Milestone 5's one data change: the new names of tools/m5-names.txt, the style tags on names
 // new and present, the franchise dragons out. Nothing here invents a name: each line of the list
 // names its public source and went through two readers before it was stored there.
-// Writes the change list to <tmp>/SillyTavern-Extension-NPCNames/5-changes.txt.
+// Writes the change list to logs/work/5-changes.txt.
 //
 // Run on the database as it stood before the milestone (main's): node tools/m5-apply-names.mjs
 // Its count asserts refuse a database already changed.

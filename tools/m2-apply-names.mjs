@@ -2,7 +2,7 @@
 // `cyberpunkHandle`, entries that name nothing deleted. Reads tools/m2-readings.txt
 // (one line per name read by Claude and a second reader; a reading changes a name only
 // where both agree) and writes the change list to
-// <tmp>/SillyTavern-Extension-NPCNames/2-changes.txt.
+// logs/work/2-changes.txt.
 //
 // Run once on the database as it stood before the milestone: node tools/m2-apply-names.mjs
 // Its count asserts refuse a database already changed.

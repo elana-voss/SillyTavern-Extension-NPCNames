@@ -1,7 +1,7 @@
 // Milestone 6's one data change: the genders, spellings, near-duplicates and tags of
 // tools/m6-tags.txt, the names that leave, and the leaked `sentinel_fields` key out everywhere.
 // Each line went through the readers named in PLAN.md; nothing here invents a name.
-// Writes the change list to <tmp>/SillyTavern-Extension-NPCNames/6-changes.txt.
+// Writes the change list to logs/work/6-changes.txt.
 //
 // Run on the database as it stood before the milestone (main's): node tools/m6-apply-tags.mjs
 // Its count asserts refuse a database already changed.
