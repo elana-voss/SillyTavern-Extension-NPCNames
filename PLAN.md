@@ -25,7 +25,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 6 | Tags and spelling | R1, R7 | Done | | 3M | 0.2M | 4.2M, 0.14M; code review Fable 5.1 medium |
 | 7 | Code, documents and tests | R1, R7 | Done | | 2M | 0 | 2.4M, 0; code review none (not due) |
 | 5 fix | Errors in the new names | R1, R2 | Done | | 3M | 0.3M | 6.5M from the calibration rerun on (the first trial's agent not counted), 0.24M, Grok $1.96; over estimate: 88 % is cache reads at 60-70k context per turn; reviews by Fable 5.1 medium |
-| 8 | Live run and release | R1 | In progress | Must | 1M | 0.1M | live run 1.6M, 0.06M; release waits for the owner |
+| 8 | Live run and release | R1 | Done | | 1M | 0.1M | live runs 1.6M and second, 0.06M and 0.05M; released as 0.2.0, the owner's number |
 | | Total | | | | 28M | 2.8M | |
 
 Each milestone ends with `node test.js` passing and the extension working on the test bed.
