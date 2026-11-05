@@ -10,6 +10,7 @@
 //   move     | list | culture | name | new list | new culture
 //   sex      | list | culture | name | gender (where the name stands by then)
 //   mythical | first | culture | name (where the name stands by then)
+//   human    | first | culture | name (undoes mythical on a name with no mythology)
 // The lines hold in their order.
 import assert from 'node:assert/strict';
 import { loadDb, readLines, saveWithChanges } from './db.mjs';
@@ -77,6 +78,13 @@ function setMythical(culture, name) {
     return true;
 }
 
+function setHuman(culture, name) {
+    const entry = find(db.first_names, culture, name);
+    assert.equal(entry.race, 'mythical', `${culture}/${name}`);
+    assert.ok(!entry.mythology, `${culture}/${name} has a mythology`);
+    entry.race = 'human';
+}
+
 /** Returns the name as it stands after the move: a joined entry keeps its own spelling. */
 function move(list, culture, name, toList, toCulture) {
     const from = lists[list];
@@ -92,7 +100,7 @@ function move(list, culture, name, toList, toCulture) {
     return name;
 }
 
-const count = { sex: 0, mythical: 0, move: 0, joined: 0 };
+const count = { sex: 0, mythical: 0, human: 0, move: 0, joined: 0 };
 const changes = [];
 const spelled = new Map(); // a name joined under another spelling is found under that one by the lines after it
 const current = (list, culture, name) => spelled.get(`${list}|${culture}|${name}`) ?? name;
@@ -110,6 +118,12 @@ for (const [kind, ...f] of readLines('f5-fixes.txt')) {
             changes.push(`mythical | ${culture} | ${name}`);
             count.mythical++;
         }
+    } else if (kind === 'human') {
+        const [list, culture, name] = f;
+        assert.equal(list, 'first', `${name}: human undoes mythical on first names`);
+        setHuman(culture, current(list, culture, name));
+        changes.push(`human | ${culture} | ${name}`);
+        count.human++;
     } else if (kind === 'move') {
         const [list, culture, name, toList, toCulture] = f;
         const before = lists[toList].length;

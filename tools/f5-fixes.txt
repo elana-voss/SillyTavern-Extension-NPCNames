@@ -53,3 +53,53 @@ sex | last | slavicOther | Vojta | male
 sex | first | english | Sam | ambiguous
 sex | first | nativeAmerican | Running Eagle | female
 sex | first | vietnamese | Phương | ambiguous
+sex | first | english | Angel | ambiguous
+sex | first | english | Jordan | ambiguous
+sex | first | english | Leslie | female
+sex | first | english | Marion | ambiguous
+sex | first | english | Morgan | ambiguous
+sex | first | english | Quinn | ambiguous
+sex | first | english | Rowan | ambiguous
+sex | first | english | Taylor | ambiguous
+sex | first | english | Terry | ambiguous
+sex | first | ghanaian | Atta | ambiguous
+sex | first | swahili | Bahati | ambiguous
+sex | first | vietnamese | Doan | ambiguous
+sex | first | vietnamese | Giang | ambiguous
+sex | first | vietnamese | Hà | ambiguous
+sex | first | vietnamese | Thái | ambiguous
+sex | first | yoruba | Abidemi | ambiguous
+sex | first | yoruba | Abimbola | ambiguous
+sex | first | yoruba | Abiodun | ambiguous
+sex | first | yoruba | Abiola | ambiguous
+sex | first | yoruba | Adeola | ambiguous
+sex | first | yoruba | Ayo | ambiguous
+sex | first | yoruba | Ayobami | ambiguous
+sex | first | yoruba | Ayodeji | ambiguous
+sex | first | yoruba | Ayodele | ambiguous
+sex | first | yoruba | Bola | ambiguous
+sex | first | yoruba | Bolaji | ambiguous
+sex | first | yoruba | Bunmi | ambiguous
+sex | first | yoruba | Eniola | ambiguous
+sex | first | yoruba | Fisayo | ambiguous
+sex | first | yoruba | Folorunsho | ambiguous
+sex | first | yoruba | Folusho | ambiguous
+sex | first | yoruba | Funsho | ambiguous
+sex | first | yoruba | Iretioluwa | ambiguous
+sex | first | yoruba | Kehinde | ambiguous
+sex | first | yoruba | Ola | ambiguous
+sex | first | yoruba | Olaitan | ambiguous
+sex | first | yoruba | Olamide | ambiguous
+sex | first | yoruba | Olayinka | ambiguous
+sex | first | yoruba | Oluremi | ambiguous
+sex | first | yoruba | Oluseun | ambiguous
+sex | first | yoruba | Oluwatobi | ambiguous
+sex | first | yoruba | Taiwo | ambiguous
+sex | first | yoruba | Tayo | ambiguous
+sex | first | yoruba | Temitope | ambiguous
+sex | first | yoruba | Yinka | ambiguous
+sex | first | yoruba | Yomi | ambiguous
+human | first | greek | Draco
+human | first | latin | Flora
+human | first | persian | Abrocomas
+human | first | persian | Teispes
