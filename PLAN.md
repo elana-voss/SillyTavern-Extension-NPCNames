@@ -136,6 +136,15 @@ One live model through nano-gpt on the test bed with the finished work: an ordin
 - No Elara, Thorn or other overused name as a character in any reply. The model named places itself: Thornfield, Hartmoor Cross.
 - Tests: one new, the AI is told how to ask for an elf, a dwarf or a dragon, seen failing first. Measured: `node test.js` 25 of 25, `node tools/testbed.mjs` 90 of 90.
 - Input tokens: 60,816 of the 100,000 allowed, read from the usage figure before and after (19,562,009 to 19,622,825), the six scenario runs included.
+- Second live run, on the corrected names: same model and source, five chats once each, no stored answers; the test bed's name data matched the repo's by hash (`90a6e245…`). The instructions reached every request once.
+- Second run, ordinary NPC: `race: human`, `language_ethnicity: english`, `gender: female`, returned Bess Rackstraw, used as returned.
+- Second run, Thai NPC: `race: human`, `language_ethnicity: thai`, `gender: male`, returned วิโรจน์ ศรีเพ็ญเศรษฐบุตร in Thai script. The reply wrote Wirot Srichalothorn: the first name carried over, the surname replaced by the model.
+- Second run, elf: `race: elf`, `gender: female`, returned Kythaela Vanvathar, used as returned.
+- Second run, dragon: `race: dragon`, `gender: ambiguous`, returned Zmei Gorynich, a dragon of Slavic myth, used as returned with no surname.
+- Second run, long chat: 120 old messages, the oldest cut, 8,522 tokens sent. The tool was offered and the instructions present, as in the first run's long chat, but the model did not call it (`finish: stop`) and invented the messenger's name, Aldous Merric, which is not in the data. Nothing in the request differed but one message fewer; the cause is the model's choice, seen once, not repeated.
+- Second run, names: every returned name is in the data, none on the overused list, no surname given as a first name, each of the right culture. No Elara or Thorn in any reply. The model's own prose had slips unrelated to the names ("TU short", a stray Chinese word).
+- Second run, screen: nothing broken in the final screenshot, the panel's status line read "Tool calling supported. Extension active." in all five; the panel itself stayed closed, so it is not in the picture.
+- Second run, tokens: 43,983 input, read from the usage figure (19,875,875 to 19,919,858) and equal to the requests' sum; 48,723 with output, of the 100,000 allowed. The key is in no file of the test bed's data afterwards.
 
 ## Questions for the owner
 
