@@ -1,24 +1,5 @@
-sex | last | baltic | Kazlauskas | -
-sex | last | baltic | Jankauskas | -
-sex | last | baltic | Urbonas | -
-sex | last | baltic | Paulauskas | -
-sex | last | baltic | Butkus | -
-sex | last | baltic | Stankevičius | -
-sex | last | baltic | Žukauskas | -
 sex | last | nepalese | Magar | -
 sex | first | hungarian | Ferike | male
-sex | last | baltic | Rimkus | -
-sex | last | baltic | Navickas | -
-sex | last | baltic | Mikalauskas | -
-sex | last | baltic | Adomaitis | -
-sex | last | baltic | Baranauskas | -
-sex | last | baltic | Savickas | -
-sex | last | baltic | Vaitkus | -
-sex | last | baltic | Dambrauskas | -
-sex | last | baltic | Kaminskas | -
-sex | last | baltic | Ivanauskas | -
-sex | last | baltic | Šimkus | -
-sex | last | baltic | Bagdonas | -
 sex | last | slavicOther | Kos | male
 sex | first | albanian | Kristi | male
 sex | first | ethiopian | Meskele | male
@@ -39,46 +20,6 @@ sex | last | latin | Nobilior | male
 sex | last | latin | Clepsina | -
 sex | last | latin | Hostilius | male
 sex | last | slavicOther | Novotná | female
-sex | last | irishGaelic | Ní Dhomhnaill | -
-sex | last | irishGaelic | Nic Pháidín | -
-sex | last | irishGaelic | Ní Chonaola | -
-sex | last | irishGaelic | Ní Riain | -
-sex | last | irishGaelic | Ní Ghearbhuigh | -
-sex | last | irishGaelic | Ní Neachtain | -
-sex | last | irishGaelic | Ní Challarain | -
-sex | last | irishGaelic | Nic Aodha | -
-sex | last | irishGaelic | Ní Chuilleanáin | -
-sex | last | irishGaelic | Nic Amhlaoibh | -
-sex | last | irishGaelic | Ní Bhriain | -
-sex | last | irishGaelic | Ní Thuairisg | -
-sex | last | irishGaelic | Ní Fhearraigh | -
-sex | last | irishGaelic | Ní Shúilleabháin | -
-sex | last | irishGaelic | Ní Loideáin | -
-sex | last | irishGaelic | Ní Mhaolchatha | -
-sex | last | irishGaelic | Ní Mhaonaigh | -
-sex | last | irishGaelic | Nic Gearailt | -
-sex | last | irishGaelic | Ní Choileáin | -
-sex | last | irishGaelic | Ní Ghallchóir | -
-sex | last | irishGaelic | Ní Chathasaigh | -
-sex | last | irishGaelic | Ní Riada | -
-sex | last | irishGaelic | Ní Chatháin | -
-sex | last | irishGaelic | Ní Cheallaigh | -
-sex | last | irishGaelic | Ní Bheacháin | -
-sex | last | irishGaelic | Ní Bhaoill | -
-sex | last | irishGaelic | Ní Chéileachair | -
-sex | last | irishGaelic | Ní Cheannabháin | -
-sex | last | irishGaelic | Ní É | -
-sex | last | irishGaelic | Ní Chonaill | -
-sex | last | irishGaelic | Ní Chathail | -
-sex | last | irishGaelic | Ní Dheá | -
-sex | last | irishGaelic | Ní Scolaí | -
-sex | last | irishGaelic | Ní Rodaigh | -
-sex | last | irishGaelic | Ní Chróinín | -
-sex | last | irishGaelic | Nic Gairbheith | -
-sex | last | irishGaelic | Ní Chonchúir | -
-sex | last | irishGaelic | Nic Chonaonaigh | -
-sex | last | irishGaelic | Ní Dhubháin | -
-sex | last | irishGaelic | Ní Ghadhra | -
 mythical | first | greek | Bellerophon
 mythical | first | greek | Polyphemos
 mythical | first | greek | Draco
@@ -100,3 +41,12 @@ move | first | vietnamese | Trần | last | vietnamese
 sex | last | vietnamese | Trần | -
 move | first | vietnamese | Triệu | last | vietnamese
 sex | last | vietnamese | Triệu | -
+mythical | first | latin | Libertas
+sex | last | slavicOther | Dvořák | male
+sex | last | slavicOther | Novák | male
+sex | last | slavicOther | Kolář | male
+sex | last | slavicOther | Němec | male
+sex | last | slavicOther | Polák | male
+sex | last | slavicOther | Novotný | male
+sex | last | slavicOther | Svoboda | male
+sex | last | slavicOther | Vojta | male

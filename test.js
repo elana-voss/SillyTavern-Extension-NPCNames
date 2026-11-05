@@ -311,6 +311,7 @@ function checkSurnameGenders(data) {
     for (const [culture, name, gender] of [['greek', 'Nikolaou'], ['irishGaelic', "O'Byrne"], ['greek', 'Papadaki', 'female'],
         ['greek', 'Tassi', 'female'], ['greek', 'Zika', 'female'], ['greek', 'Mundis', 'male'], ['greek', 'Rubis', 'male'],
         ['hindi', 'Devi', 'female'], ['latin', 'Messalina', 'female'], ['baltic', 'Andrejeva', 'female'],
+        ['baltic', 'Paulauskas', 'male'], ['irishGaelic', 'Ní Bhriain', 'female'], ['slavicOther', 'Dvořák', 'male'],
         // A surname's gender moves with it.
         ['baltic', 'Žukauskienė', 'female'], ['azerbaijani', 'Ahmadov', 'male'], ['slavicOther', 'Hristova', 'female'], ['greek', 'Makarezos', 'male']]) {
         const entry = inCulture(data.last_names, culture).find(e => e.name === name);
