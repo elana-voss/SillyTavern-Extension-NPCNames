@@ -102131,7 +102131,7 @@
     },
     {
       "name": "Ferike",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "hungarian",
       "mythology": null,
       "race": "human",
@@ -116750,7 +116750,7 @@
     },
     {
       "name": "Kristi",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "albanian",
       "mythology": null,
       "race": "human",
@@ -126269,7 +126269,7 @@
     },
     {
       "name": "Meskele",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
@@ -126620,7 +126620,7 @@
     },
     {
       "name": "Demeku",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
@@ -126836,7 +126836,7 @@
     },
     {
       "name": "Meazi",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "ethiopian",
       "mythology": null,
       "race": "human",
@@ -130080,7 +130080,7 @@
     },
     {
       "name": "Folorunsho",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "yoruba",
       "mythology": null,
       "race": "human",
@@ -130105,7 +130105,7 @@
     },
     {
       "name": "Folorunso",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "yoruba",
       "mythology": null,
       "race": "human",
@@ -133623,29 +133623,6 @@
       "themes": []
     },
     {
-      "name": "Huỳnh",
-      "gender": "male",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Nga",
       "gender": "female",
       "language_ethnicity": "vietnamese",
@@ -134117,29 +134094,6 @@
       "themes": []
     },
     {
-      "name": "Trần",
-      "gender": "female",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Thuyết",
       "gender": "male",
       "language_ethnicity": "vietnamese",
@@ -134163,29 +134117,6 @@
       "themes": [
         "scholarly"
       ]
-    },
-    {
-      "name": "Chu",
-      "gender": "male",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
     },
     {
       "name": "Khoát",
@@ -134925,29 +134856,6 @@
       ]
     },
     {
-      "name": "Phan",
-      "gender": "male",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Phi",
       "gender": "male",
       "language_ethnicity": "vietnamese",
@@ -135683,31 +135591,8 @@
       ]
     },
     {
-      "name": "Triệu",
-      "gender": "female",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Hiến",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -136346,31 +136231,8 @@
       "themes": []
     },
     {
-      "name": "Niê",
-      "gender": "female",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Tịch",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -137336,7 +137198,7 @@
     },
     {
       "name": "Running Eagle",
-      "gender": "female",
+      "gender": "male",
       "language_ethnicity": "nativeAmerican",
       "mythology": null,
       "race": "human",
@@ -137531,7 +137393,7 @@
     },
     {
       "name": "Elsatsoosu",
-      "gender": "male",
+      "gender": "female",
       "language_ethnicity": "nativeAmerican",
       "mythology": null,
       "race": "human",
@@ -139154,7 +139016,7 @@
       "gender": "female",
       "language_ethnicity": "latin",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -139573,7 +139435,7 @@
       "gender": "male",
       "language_ethnicity": "latin",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -139687,7 +139549,7 @@
       "gender": "male",
       "language_ethnicity": "latin",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -140804,7 +140666,7 @@
       "gender": "female",
       "language_ethnicity": "latin",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -140846,7 +140708,7 @@
       "gender": "female",
       "language_ethnicity": "latin",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -142187,7 +142049,7 @@
       "gender": "male",
       "language_ethnicity": "greek",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -142510,7 +142372,7 @@
       "gender": "male",
       "language_ethnicity": "greek",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -142902,7 +142764,7 @@
       "gender": "male",
       "language_ethnicity": "greek",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -142946,7 +142808,7 @@
       "gender": "male",
       "language_ethnicity": "greek",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -143253,7 +143115,7 @@
       "gender": "male",
       "language_ethnicity": "greek",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -144533,7 +144395,7 @@
       "gender": "male",
       "language_ethnicity": "persian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -144623,7 +144485,7 @@
       "gender": "male",
       "language_ethnicity": "persian",
       "mythology": null,
-      "race": "human",
+      "race": "mythical",
       "age": [
         "adult"
       ],
@@ -148573,7 +148435,7 @@
     },
     {
       "name": "Ollie",
-      "gender": "female",
+      "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
       "race": "human",
@@ -169366,7 +169228,8 @@
         "contemporary"
       ],
       "role": [
-        "bystander"
+        "bystander",
+        "neutral"
       ],
       "allure": "unremarkable",
       "commonness": "common",
@@ -192932,7 +192795,6 @@
     },
     {
       "name": "Kazlauskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -192970,7 +192832,6 @@
     },
     {
       "name": "Jankauskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -192989,7 +192850,6 @@
     },
     {
       "name": "Urbonas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -193008,7 +192868,6 @@
     },
     {
       "name": "Paulauskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -193027,7 +192886,6 @@
     },
     {
       "name": "Butkus",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -193084,7 +192942,6 @@
     },
     {
       "name": "Stankevičius",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -193103,7 +192960,6 @@
     },
     {
       "name": "Žukauskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -193773,7 +193629,6 @@
     },
     {
       "name": "Magar",
-      "gender": "male",
       "language_ethnicity": "nepalese",
       "mythology": null,
       "race": "human",
@@ -196167,7 +196022,6 @@
     },
     {
       "name": "Rimkus",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196205,7 +196059,6 @@
     },
     {
       "name": "Navickas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196224,7 +196077,6 @@
     },
     {
       "name": "Mikalauskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196262,7 +196114,6 @@
     },
     {
       "name": "Adomaitis",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196281,7 +196132,6 @@
     },
     {
       "name": "Baranauskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196300,7 +196150,6 @@
     },
     {
       "name": "Savickas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196319,7 +196168,6 @@
     },
     {
       "name": "Vaitkus",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196338,7 +196186,6 @@
     },
     {
       "name": "Dambrauskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196357,7 +196204,6 @@
     },
     {
       "name": "Kaminskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196376,7 +196222,6 @@
     },
     {
       "name": "Ivanauskas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196414,7 +196259,6 @@
     },
     {
       "name": "Šimkus",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -196471,7 +196315,6 @@
     },
     {
       "name": "Bagdonas",
-      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
@@ -200180,6 +200023,7 @@
     },
     {
       "name": "Kos",
+      "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -204481,6 +204325,7 @@
     },
     {
       "name": "Nobilior",
+      "gender": "male",
       "language_ethnicity": "latin",
       "mythology": null,
       "race": "human",
@@ -204499,7 +204344,6 @@
     },
     {
       "name": "Clepsina",
-      "gender": "female",
       "language_ethnicity": "latin",
       "mythology": null,
       "race": "human",
@@ -204617,6 +204461,7 @@
     },
     {
       "name": "Hostilius",
+      "gender": "male",
       "language_ethnicity": "latin",
       "mythology": null,
       "race": "human",
@@ -205056,6 +204901,7 @@
     },
     {
       "name": "Lepida",
+      "gender": "female",
       "language_ethnicity": "latin",
       "mythology": null,
       "race": "human",
@@ -205225,6 +205071,7 @@
     },
     {
       "name": "Novotná",
+      "gender": "female",
       "language_ethnicity": "slavicOther",
       "mythology": null,
       "race": "human",
@@ -205766,7 +205613,6 @@
     },
     {
       "name": "Ní Dhomhnaill",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205785,7 +205631,6 @@
     },
     {
       "name": "Nic Pháidín",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205804,7 +205649,6 @@
     },
     {
       "name": "Ní Chonaola",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205823,7 +205667,6 @@
     },
     {
       "name": "Ní Riain",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205842,7 +205685,6 @@
     },
     {
       "name": "Ní Ghearbhuigh",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205861,7 +205703,6 @@
     },
     {
       "name": "Ní Neachtain",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205880,7 +205721,6 @@
     },
     {
       "name": "Ní Challarain",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205918,7 +205758,6 @@
     },
     {
       "name": "Nic Aodha",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205937,7 +205776,6 @@
     },
     {
       "name": "Ní Chuilleanáin",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205958,7 +205796,6 @@
     },
     {
       "name": "Nic Amhlaoibh",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205977,7 +205814,6 @@
     },
     {
       "name": "Ní Bhriain",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -205996,7 +205832,6 @@
     },
     {
       "name": "Ní Thuairisg",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206015,7 +205850,6 @@
     },
     {
       "name": "Ní Fhearraigh",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206034,7 +205868,6 @@
     },
     {
       "name": "Ní Shúilleabháin",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206053,7 +205886,6 @@
     },
     {
       "name": "Ní Loideáin",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206148,7 +205980,6 @@
     },
     {
       "name": "Ní Mhaolchatha",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206167,7 +205998,6 @@
     },
     {
       "name": "Ní Mhaonaigh",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206186,7 +206016,6 @@
     },
     {
       "name": "Nic Gearailt",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206224,7 +206053,6 @@
     },
     {
       "name": "Ní Choileáin",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206262,7 +206090,6 @@
     },
     {
       "name": "Ní Ghallchóir",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206300,7 +206127,6 @@
     },
     {
       "name": "Ní Chathasaigh",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206338,7 +206164,6 @@
     },
     {
       "name": "Ní Riada",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206376,7 +206201,6 @@
     },
     {
       "name": "Ní Chatháin",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206395,7 +206219,6 @@
     },
     {
       "name": "Ní Cheallaigh",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206414,7 +206237,6 @@
     },
     {
       "name": "Ní Bheacháin",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206452,7 +206274,6 @@
     },
     {
       "name": "Ní Bhaoill",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206490,7 +206311,6 @@
     },
     {
       "name": "Ní Chéileachair",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206509,7 +206329,6 @@
     },
     {
       "name": "Ní Cheannabháin",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206528,7 +206347,6 @@
     },
     {
       "name": "Ní É",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206547,7 +206365,6 @@
     },
     {
       "name": "Ní Chonaill",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206604,7 +206421,6 @@
     },
     {
       "name": "Ní Chathail",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206623,7 +206439,6 @@
     },
     {
       "name": "Ní Dheá",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206642,7 +206457,6 @@
     },
     {
       "name": "Ní Scolaí",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206661,7 +206475,6 @@
     },
     {
       "name": "Ní Rodaigh",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206680,7 +206493,6 @@
     },
     {
       "name": "Ní Chróinín",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206718,7 +206530,6 @@
     },
     {
       "name": "Nic Gairbheith",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206756,7 +206567,6 @@
     },
     {
       "name": "Ní Chonchúir",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206794,7 +206604,6 @@
     },
     {
       "name": "Nic Chonaonaigh",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206851,7 +206660,6 @@
     },
     {
       "name": "Ní Dhubháin",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -206889,7 +206697,6 @@
     },
     {
       "name": "Ní Ghadhra",
-      "gender": "female",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -207964,6 +207771,60 @@
         "floral",
         "earthy"
       ]
+    },
+    {
+      "name": "Chu",
+      "language_ethnicity": "vietnamese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Niê",
+      "language_ethnicity": "vietnamese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "rare",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Phan",
+      "language_ethnicity": "vietnamese",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "rare",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
     }
   ]
 }

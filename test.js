@@ -434,9 +434,20 @@ function checkPinnedNames(data) {
     assert.ok(!first('yoruba', 'Babatunde').genre.includes('horror'), 'Babatunde means the father has returned');
 }
 
+// The fix of milestone 5's names places them and deletes none: each stands somewhere, accents aside.
+function checkNoNameLost(data) {
+    const read = file => readFileSync(new URL(`./tools/${file}`, import.meta.url), 'utf8').split(/\r?\n/).map(l => l.split(' | '));
+    const into = new Map(read('m6-tags.txt').filter(l => l[0] === 'merge' || l[0] === 'rename').map(l => [`${l[2]}|${l[3]}`, l[4]]));
+    const names = new Set([...data.first_names, ...data.last_names].map(e => foldName(e.name)));
+    const added = read('m5-names.txt').filter(l => l[0] === 'first' || l[0] === 'last');
+    assert.equal(added.length, 3504);
+    assert.deepEqual(added.map(([, c, n]) => into.get(`${c}|${n}`) ?? n).filter(n => !names.has(foldName(n))), []);
+    assert.deepEqual([inCulture(data.first_names, 'vietnamese').some(e => e.name === 'Trần'), inCulture(data.last_names, 'vietnamese').some(e => e.name === 'Trần')], [false, true], 'Trần is a surname');
+}
+
 test('database invariants', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames, checkSurnamesReachable, checkDocuments]) check(data);
+    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames, checkSurnamesReachable, checkDocuments, checkNoNameLost]) check(data);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);
