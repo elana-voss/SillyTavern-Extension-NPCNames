@@ -50,3 +50,6 @@ sex | last | slavicOther | Polák | male
 sex | last | slavicOther | Novotný | male
 sex | last | slavicOther | Svoboda | male
 sex | last | slavicOther | Vojta | male
+sex | first | english | Sam | ambiguous
+sex | first | nativeAmerican | Running Eagle | female
+sex | first | vietnamese | Phương | ambiguous

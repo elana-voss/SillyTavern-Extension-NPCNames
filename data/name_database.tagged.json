@@ -133909,7 +133909,7 @@
     },
     {
       "name": "Phương",
-      "gender": "female",
+      "gender": "ambiguous",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -137198,7 +137198,7 @@
     },
     {
       "name": "Running Eagle",
-      "gender": "male",
+      "gender": "female",
       "language_ethnicity": "nativeAmerican",
       "mythology": null,
       "race": "human",
@@ -147692,7 +147692,7 @@
     },
     {
       "name": "Sam",
-      "gender": "male",
+      "gender": "ambiguous",
       "language_ethnicity": "english",
       "mythology": null,
       "race": "human",
