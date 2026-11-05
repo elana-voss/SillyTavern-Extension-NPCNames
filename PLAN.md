@@ -24,6 +24,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 5 | New names | R1, R2, R5 | Done | | 6M | 1.5M | 9.9M, 0.37M at the last count; code review Fable 5.1 medium |
 | 6 | Tags and spelling | R1, R7 | Done | | 3M | 0.2M | 4.2M, 0.14M; code review Fable 5.1 medium |
 | 7 | Code, documents and tests | R1, R7 | Done | | 2M | 0 | 2.4M, 0; code review none (not due) |
+| 5 fix | Errors in the new names | R1, R2 | In progress | Must | 3M | 0.3M | |
 | 8 | Live run and release | R1 | In progress | Must | 1M | 0.1M | live run 1.6M, 0.06M; release waits for the owner |
 | | Total | | | | 28M | 2.8M | |
 
@@ -81,6 +82,15 @@ Per culture, human first names male/female; surnames (male/female where gendered
 Per style, first names (human among them); surnames: steampunk 213 (213); 0. western 217 (217); 2. noirDetective 222 (222); 1. victorian 330 (330); 0. modern 390 (377); 0. child 310 (310). ancient 735 (275); 60. horror 19 (6); 0. lunar 23 (22); 3. rustic 28 (27); 112. postApocalyptic 1 (1, Scythe); 0.
 
 What stays thin, for the owner: postApocalyptic 1 (both readers found no name), horror 19, lunar 23, rustic 28; Swahili 32 men and 30 women; ancient women greek 13 and persian 10; Native American 42 men and 38 women, no surnames; Ethiopian women 47, Fijian women 62. German men 19 and Swedish men 48 were not a fill.
+
+### 5 fix. Errors in the new names
+
+The owner, on the reliability of the new names: "this is not a proper solution... your work is not reliable"; "you will use three models from nano-gpt"; "have Fable review this fix plan". Cause: `Trần`-type errors came from splitting people's full names by position where no first-name list existed, and from readers asked whether a name is in real use, which a surname is.
+
+- Three models of three vendors not used as readers before read every name milestone 5 added (3,493 today, plus the 11 merged in milestone 6, mapped through `tools/m6-tags.txt`), blind. One question per name: given name, surname, both, middle name or particle, deity or legend, not a name; used as this kind in this culture, yes or no; which culture if not; male, female or either.
+- Calibration first: Trần surname only; Hà, Radu, Kofi, Osei, Adebayo given or both; Dawit as Ethiopian surname and Hassan as Swahili name kept; Văn a particle; Spes and Polyphemos deity or legend; a place no name. If it fails, stop and tell the owner.
+- Remove or move only on two of three saying "not used as this kind" or "not used in this culture" and agreeing on the target; origin alone moves nothing. A surname given a sex by the source when it has none loses it. A deity or legend filed human becomes `race: mythical` or leaves. The rest goes to the leftover list, which Fable reads.
+- A tool in `tools/` on `tools/db.mjs`, reproducible from main's data, with a change list. Then Fable reads a fresh random sample of about 300 and counts errors; those are fixed and their cause looked for. The figure goes to the owner before any decision to publish. What is left per class is reported; no name is invented to refill one.
 
 ### 6. Tags and spelling
 
