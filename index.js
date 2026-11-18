@@ -3,18 +3,19 @@ import {
     renderExtensionTemplateAsync,
     saveMetadataDebounced,
 } from '../../../extensions.js';
-import { chat_metadata, name1, saveSettingsDebounced } from '../../../../script.js';
+import { chat, chat_metadata, name1, saveSettingsDebounced } from '../../../../script.js';
 import { eventSource, event_types } from '../../../events.js';
 import { selected_group } from '../../../group-chats.js';
 import { ToolManager } from '../../../tool-calling.js';
 import { pickName, deriveEnumValues, readUsed } from './picker.js';
 import { injectBeforeLatest, isInstalledIn } from './advertisement.js';
+import { markToolCallLines } from './tool-calls.js';
 
 const MODULE = 'npcNames';
 const EXT_DIR = 'third-party/SillyTavern-Extension-NPCNames';
 const TOOL_NAME = 'suggest_npc_name';
 const LOG_TAG = '[NPCNames]';
-const DEFAULT_SETTINGS = { enabled: true, debugLog: false };
+const DEFAULT_SETTINGS = { enabled: true, debugLog: false, showToolCalls: false };
 // Matches ST's own noToolCallTypes in tool-calling.js: generation types
 // where tool calls are blocked, so injecting the advertisement on these
 // would just be wasted context.
@@ -166,6 +167,24 @@ function bindSettingCheckbox(selector, key, sideEffect) {
         });
 }
 
+function applyToolCallVisibility() {
+    markToolCallLines(
+        document.querySelectorAll('#chat .mes.toolCall'),
+        chat,
+        TOOL_NAME,
+        extension_settings[MODULE].showToolCalls,
+    );
+}
+
+// ST draws chat lines from several places, not all followed by an event, and
+// a redrawn line loses our class. Removals are skipped: while lines are being
+// deleted their ids may not match the chat yet.
+function watchChatLines() {
+    new MutationObserver(records => {
+        if (records.some(record => record.addedNodes.length > 0)) applyToolCallVisibility();
+    }).observe(document.getElementById('chat'), { childList: true });
+}
+
 function updateStatusBadge() {
     const el = document.getElementById('npc_names_status');
     if (!el) return;
@@ -185,6 +204,9 @@ function updateStatusBadge() {
 
 jQuery(async () => {
     loadSettings();
+    // First, so old lines stay hidden while the data loads and if it cannot.
+    watchChatLines();
+    applyToolCallVisibility();
     if (!isInstalledIn(import.meta.url, EXT_DIR)) {
         const text = `Installed in the wrong folder. Rename its folder to ${EXT_DIR.split('/').pop()} and reload.`;
         console.error(LOG_TAG, text);
@@ -212,6 +234,7 @@ jQuery(async () => {
         applyEnabled(extension_settings[MODULE].enabled),
     );
     bindSettingCheckbox('#npc_names_debug', 'debugLog');
+    bindSettingCheckbox('#npc_names_show_tool_calls', 'showToolCalls', applyToolCallVisibility);
 
     // Source / model change events don't fire when the user toggles the
     // standalone `Enable function calling` checkbox or loads an OAI preset

@@ -22,7 +22,7 @@ const REPO = dirname(dirname(fileURLToPath(import.meta.url)));
 const EXT_NAME = 'SillyTavern-Extension-NPCNames';
 const ST_PORT = 8123;
 const ST_URL = `http://127.0.0.1:${ST_PORT}`;
-const EXT_FILES = ['manifest.json', 'index.js', 'picker.js', 'advertisement.js', 'style.css', 'settings.html', 'assets', 'data'];
+const EXT_FILES = ['manifest.json', 'index.js', 'picker.js', 'advertisement.js', 'tool-calls.js', 'style.css', 'settings.html', 'assets', 'data'];
 const AD_START = 'Use the `suggest_npc_name` tool';
 const AD_END = 'anyone already named in the chat.';
 const OLDEST = 'OLDEST-MESSAGE-OF-THE-LONG-CHAT';
@@ -194,6 +194,33 @@ function badge(page) {
     });
 }
 
+// How each tool-call line in the chat is displayed.
+function toolLineDisplays(page) {
+    return page.$$eval('#chat .mes.toolCall', lines => lines.map(line => getComputedStyle(line).display));
+}
+
+// Adds a tool-call line the way SillyTavern's tool manager does.
+function addToolLine(page, tool) {
+    return page.evaluate(async tool => {
+        const { chat, addOneMessage } = await import('/script.js');
+        const message = {
+            name: 'System',
+            is_system: true,
+            is_user: false,
+            mes: `Tool calls: ${tool}`,
+            send_date: new Date().toISOString(),
+            extra: { isSmallSys: true, tool_invocations: [{ id: tool, displayName: tool, name: tool, parameters: '{}', result: 'ok' }] },
+        };
+        chat.push(message);
+        addOneMessage(message);
+        await new Promise(done => setTimeout(done, 100));
+    }, tool);
+}
+
+function checkToolLines(displays, hidden, what) {
+    check(what, displays.length > 0 && displays.every(d => (d === 'none') === hidden), JSON.stringify(displays));
+}
+
 // The first request of a turn: the instructions in full, once, macros replaced.
 function checkAd(serialized, label) {
     const count = serialized.split(AD_START).length - 1;
@@ -348,7 +375,7 @@ const SCENARIOS = {
         await newChat(page);
         await page.evaluate(async () => {
             const { chat_metadata } = await import('/script.js');
-            chat_metadata.npcNames = { usedFirst: ['Noah', 'Gone-From-The-Data'], usedLast: ['Smith'] };
+            chat_metadata.npcNames = { usedFirst: ['Noah', 'Gone-From-The-Data'], usedLast: ['Berg'] };
         });
         const requests = await send(page, fake);
         const chat = await chatState(page);
@@ -387,11 +414,68 @@ const SCENARIOS = {
             const chat = await chatState(page);
             check('group: the tool ran', chat.flatMap(m => m.tools ?? []).some(t => t.name === TOOL), chat.length);
             check('group: the instructions are not stored in the chat', !chat.some(m => m.mes.includes(AD_START)));
+            checkToolLines(await toolLineDisplays(page), true, 'group: the tool line is hidden');
         } finally {
             await page.evaluate(async id => {
                 const { getRequestHeaders } = await import('/script.js');
                 await fetch('/api/groups/delete', { method: 'POST', headers: getRequestHeaders(), body: JSON.stringify({ id }) });
             }, id);
+        }
+    },
+    async toolLine({ page, fake }) {
+        await configure(page, fake.port, {});
+        await newChat(page);
+        const requests = await send(page, fake);
+        checkToolTurn(requests, await chatState(page), 'tool line');
+        const setShown = on => page.evaluate(v => $('#npc_names_show_tool_calls').prop('checked', v).trigger('change'), on);
+        checkToolLines(await toolLineDisplays(page), true, 'tool line: hidden by default');
+        await setShown(true);
+        checkToolLines(await toolLineDisplays(page), false, 'tool line: shown when turned on');
+        await setShown(false);
+        checkToolLines(await toolLineDisplays(page), true, 'tool line: hidden when turned off');
+        await page.evaluate(async () => (await import('/script.js')).reloadCurrentChat());
+        checkToolLines(await toolLineDisplays(page), true, 'tool line: still hidden after the chat is reloaded');
+
+        const checkLines = async (expected, what) => {
+            const displays = await toolLineDisplays(page);
+            check(what, JSON.stringify(displays) === JSON.stringify(expected), JSON.stringify(displays));
+        };
+        await addToolLine(page, 'another_tool');
+        await checkLines(['none', 'flex'], 'tool line: another tool\'s line stays visible');
+        // Moves the AI's reply below the other tool's line, through the message's own edit buttons.
+        await page.evaluate(async () => {
+            const { chat } = await import('/script.js');
+            const reply = chat.findLastIndex(m => !m.is_user && !m.is_system);
+            $(`.mes[mesid="${reply}"] .mes_edit`).trigger('click');
+            await new Promise(done => setTimeout(done, 300));
+            $(`.mes[mesid="${reply}"] .mes_edit_down`).trigger('click');
+            await new Promise(done => setTimeout(done, 300));
+            $('.mes_edit_cancel').trigger('click');
+        });
+        await addToolLine(page, 'another_tool');
+        await checkLines(['none', 'flex', 'flex'], 'tool line: right lines hidden after a message is moved');
+        await page.evaluate(async () => {
+            const { chat, deleteMessage } = await import('/script.js');
+            await deleteMessage(chat.findIndex(m => m.is_user));
+        });
+        await addToolLine(page, 'another_tool');
+        await checkLines(['none', 'flex', 'flex', 'flex'], 'tool line: right lines hidden after a message is deleted');
+    },
+    // The name data cannot load: the tool is off, but its old lines stay hidden.
+    async toolLineNoData({ page }) {
+        const second = await page.context().browser().newPage();
+        try {
+            await second.route('**/name_database.tagged.json*', route => route.abort());
+            await second.goto(ST_URL);
+            await second.waitForFunction(async () => (await import('/script.js')).characters.length > 0, null, { timeout: 60000 });
+            await addToolLine(second, TOOL);
+            const hidden = await second.waitForFunction(
+                () => [...document.querySelectorAll('#chat .mes.toolCall')].some(l => getComputedStyle(l).display === 'none'),
+                null, { timeout: 15000 },
+            ).then(() => true).catch(() => false);
+            check('tool line: hidden even when the name data cannot load', hidden, await toolLineDisplays(second).then(JSON.stringify));
+        } finally {
+            await second.close();
         }
     },
     // Last: the second copy takes over the page's interceptor.

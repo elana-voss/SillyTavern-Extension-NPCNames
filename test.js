@@ -2,6 +2,7 @@
 
 import { deriveEnumValues, pickName, readUsed } from './picker.js';
 import { injectBeforeLatest, isInstalledIn } from './advertisement.js';
+import { HIDDEN_TOOL_CALL_CLASS, markToolCallLines } from './tool-calls.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { foldName, loadOverused } from './tools/overused.mjs';
@@ -200,6 +201,29 @@ test('in a group chat the advertisement bears the user\'s name, which SillyTaver
     assert.equal(chat[0].name, 'Me');
     injectBeforeLatest(chat, 'ad');
     assert.equal(chat[1].name, 'NPC Name Suggester');
+});
+
+test('only lines holding nothing but our tool are hidden, and only while showing is off', () => {
+    const chat = [
+        { extra: { tool_invocations: [{ name: 'ours' }, { name: 'ours' }] } },
+        { extra: { tool_invocations: [{ name: 'ours' }, { name: 'theirs' }] } },
+        { extra: { tool_invocations: [{ name: 'theirs' }] } },
+        { extra: { tool_invocations: [] } },
+        { extra: {} },
+    ];
+    const lines = chat.map((_, id) => {
+        const classes = new Set();
+        return {
+            classes,
+            getAttribute: () => String(id),
+            classList: { toggle: (name, on) => (on ? classes.add(name) : classes.delete(name)) },
+        };
+    });
+    const hidden = () => lines.map(line => line.classes.has(HIDDEN_TOOL_CALL_CLASS));
+    markToolCallLines(lines, chat, 'ours', false);
+    assert.deepEqual(hidden(), [true, false, false, false, false]);
+    markToolCallLines(lines, chat, 'ours', true);
+    assert.deepEqual(hidden(), [false, false, false, false, false]);
 });
 
 test('the install folder is told from the module\'s address', () => {

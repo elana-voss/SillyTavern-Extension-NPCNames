@@ -12,6 +12,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 - R6 Names under the wrong culture move "only if you are sure".
 - R7 "then write a plan to fix all of this", meaning every finding below; `race: human` is the tag for ordinary human names.
 - R8 About the project that shows how nano-gpt is reached: "do NOT reference that project from here, just look how it access nano-gpt."
+- R9 "Can we offer a toggle in the UI that hides the tool calls on default and shows them when toggled on?"; "only ours"; "we do that to our own tool calls only, when we can isolate them in the UI."
 
 ## Milestones
 
@@ -220,6 +221,7 @@ None open.
 - Milestone 8, the dragon: the instructions and the tool now name `race: elf`, `race: dwarf` and `race: dragon`, and say that with no race any race can come back. One run before and one after; that is what shows the change helped.
 - Milestone 8, Thai names stay in Thai script as the requirement says; the model wrote them in Latin letters by itself.
 - Milestone 8, code review: not due, under 20 lines of product code changed.
+- R9: our line is hidden with a class of our own beside SillyTavern's `toolCall`, as its manual describes; a line that also holds another tool stays visible. A watch on the chat's lines sets the class, because SillyTavern redraws lines in places that emit no event. It starts before the name data loads, so old lines stay hidden when the data is late or fails.
 
 ## Trials
 
