@@ -223,6 +223,7 @@ None open.
 - Milestone 8, code review: not due, under 20 lines of product code changed.
 - R9: our line is hidden with a class of our own beside SillyTavern's `toolCall`, as its manual describes; a line that also holds another tool stays visible. A watch on the chat's lines sets the class, because SillyTavern redraws lines in places that emit no event. It starts before the name data loads, so old lines stay hidden when the data is late or fails.
 - R9, the owner's yes (2026-11-18): after a stopped or failed reply our line stays hidden though the AI still receives it, and SillyTavern's context marker may sit unseen on a hidden line; both stay as they are.
+- `auto_update: true` in the manifest, in 0.2.0, the owner's word (2026-11-18: "add it to the current release 0.2.0"); the tag `v0.2.0` moved onto that commit. SillyTavern then updates the extension when SillyTavern itself gets a new version, and includes it in its update notice.
 
 ## Trials
 
