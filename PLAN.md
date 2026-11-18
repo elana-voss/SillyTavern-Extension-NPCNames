@@ -222,6 +222,7 @@ None open.
 - Milestone 8, Thai names stay in Thai script as the requirement says; the model wrote them in Latin letters by itself.
 - Milestone 8, code review: not due, under 20 lines of product code changed.
 - R9: our line is hidden with a class of our own beside SillyTavern's `toolCall`, as its manual describes; a line that also holds another tool stays visible. A watch on the chat's lines sets the class, because SillyTavern redraws lines in places that emit no event. It starts before the name data loads, so old lines stay hidden when the data is late or fails.
+- R9, the owner's yes (2026-11-18): after a stopped or failed reply our line stays hidden though the AI still receives it, and SillyTavern's context marker may sit unseen on a hidden line; both stay as they are.
 
 ## Trials
 
