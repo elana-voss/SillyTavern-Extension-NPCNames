@@ -33,8 +33,9 @@ ${names.map((n, i) => `${i + 1} ${n}`).join('\n')}`;
 };
 
 // A reader may echo the name after its number, in one word or several: the last three fields are read. A used
-// name's line may leave out its place ('11 ABCDE c', MiniMax on 42 of 100).
-const TAG_LINE = /^(\d+)[.:)]?\s+(?:.*?\s+)?([A-F]+|-)(?:\s+(\S+))?\s+([cur])\s*$/;
+// name's line may leave out its place ('11 ABCDE c', MiniMax on 42 of 100). The echo is tried last, so
+// '1 CDE - c' reads periods CDE, not an echoed 'CDE' with periods '-'.
+const TAG_LINE = /^(\d+)[.:)]?\s+(?:.*?\s+)??([A-F]+|-)(?:\s+(\S+))?\s+([cur])\s*$/;
 
 /** Answer text to a map number -> {periods ('' for none), place (null for '-'), common}; other lines are left out. */
 export function parseTagAnswers(text) {

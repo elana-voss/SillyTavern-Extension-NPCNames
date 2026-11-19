@@ -770,6 +770,7 @@ function checkCommonNames(data) {
 test('10c: a reader\'s tag line is read past an echoed name, and two of three readers decide each tag', () => {
     const a = parseTagAnswers('1 CDE - c\n2 Mary Anne BCD - u\n3 - fantasy r\n4 - Yilvoxe - nowhere r\n5 ABCDE c\nnoise');
     assert.deepEqual([...a.keys()], [1, 2, 3, 4, 5]);
+    assert.deepEqual(a.get(1), { periods: 'CDE', place: null, common: 'c' }, 'the plain form before an echo');
     assert.deepEqual(a.get(2), { periods: 'BCD', place: null, common: 'u' });
     assert.deepEqual(a.get(4).place, '?');
     assert.deepEqual(a.get(5), { periods: 'ABCDE', place: null, common: 'c' }, 'a used name\'s place left out');
