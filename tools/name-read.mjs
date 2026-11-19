@@ -143,7 +143,7 @@ const agreed = (values, k = 2) => {
  * Three readers' answers to names in rank order. An entry joins the first name above it whose first
  * entry two readers put in one group with it, never by way of a third entry (Саша is not Сергей because
  * one reader joins Sergey with Сергей and another Sergey with Саша); a string is a name of `culture`
- * where two readers call it that kind among that people. Returns the names in rank order:
+ * where two readers call it that kind among that people (a surname: and no reader calls it x). Returns the names in rank order:
  * {form (index), rank (the group's first entry), members, present, keys, sex, tags}, where `present(key)`
  * says whether the culture holds a spelling key already. A surname's group splits by the sex two readers
  * give each entry (Ivanov, Ivanova) where `gendered` says the culture's surnames have a man's and a woman's form,
@@ -157,7 +157,10 @@ export function decide(names, readers, culture, present, kind = 'first', { gende
         return g;
     });
     const together = (i, j) => own.filter(g => g.find(i) === g.find(j)).length >= 2;
-    const isName = i => readers.filter(a => a.get(i)?.kind === KIND_WANTED[kind] && a.get(i).peoples.has(culture)).length >= 2;
+    // A surname list holds what people typed as a family name (الحياه, life; النرجس, narcissus): one reader's x
+    // rejects it. Real surnames that are words (الخطيب, Haddad) were read s by all three.
+    const isName = i => readers.filter(a => a.get(i)?.kind === KIND_WANTED[kind] && a.get(i).peoples.has(culture)).length >= 2
+        && (kind === 'first' || !readers.some(a => a.get(i)?.kind === 'x'));
     const byRoot = new Map();
     for (let i = 1; i <= n; i++) {
         const r = [...byRoot.keys()].find(r => together(i, r));

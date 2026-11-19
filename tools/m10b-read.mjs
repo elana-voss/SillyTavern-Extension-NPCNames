@@ -7,7 +7,7 @@
 // Run: node tools/m10b-read.mjs [--cultures a,b] [--window 200] [--budget 400000] [--write]
 // Key: env NANOGPT_API_KEY. Answers are stored under logs/work/m10b/answers, so a rerun costs nothing;
 // no new request starts once the stored answers' input tokens pass the budget (stored ones are still read).
-// Writes logs/work/m10b/summary.txt (per culture) and rejected.txt; prints a short summary.
+// Writes logs/work/m10b/summary.txt (per culture), rejected.txt and entered.txt (the readers' answers); prints a short summary.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { client } from './nanogpt.mjs';
 import { countriesOf, loadLists, norm, rankedEntries, COUNTRIES } from './name-lists.mjs';
@@ -63,7 +63,8 @@ for (const j of jobs) {
         if (f.keys.some(k => overused.has(k)) || overused.has(foldName(e.name))) { slop++; continue; }
         const gender = f.sex;
         counts[gender ?? 'none']++;
-        lines.push({ culture, name: e.name, gender, source: `name-dataset ${e.country}`, tags: lastNameTags(f) });
+        lines.push({ culture, name: e.name, gender, source: `name-dataset ${e.country}`, tags: lastNameTags(f),
+            said: `${e.rank}\t${readersSaid(answers, f.form)}` });
     }
     const groupsHeld = [...top].filter(r => forms.filter(f => f.rank === r).every(f => f.keys.some(k => known.has(k)))).length;
     summary.push([culture, entries.length, answers.map(a => a.size).join('/'), top.size, groupsHeld,
@@ -72,6 +73,8 @@ for (const j of jobs) {
 
 writeFileSync(new URL('summary.txt', OUT), summary.join('\n') + '\n');
 writeFileSync(new URL('rejected.txt', OUT), 'culture\trank\tentry\treaders peoples:kind\n' + rejected.join('\n') + '\n');
+writeFileSync(new URL('entered.txt', OUT), 'culture\tentry\trank\treaders peoples:kind\n'
+    + lines.map(m => `${m.culture}\t${m.name}\t${m.said}`).join('\n') + '\n');
 const list = s => (s.length ? s.join(',') : '-');
 const text = lines.map(m => ['last', m.culture, m.name, m.gender ?? '-', m.source, list(m.tags.era), list(m.tags.role),
     m.tags.allure, m.tags.commonness, list(m.tags.genre), list(m.tags.themes)].join(' | '));
@@ -86,4 +89,4 @@ const spent = llm.spent();
 console.log(`jobs ${jobs.length}, unread ${unread}, stopped by budget ${llm.stats.stopped}; answer lines missing ${missingLines}`);
 console.log(`input tokens: stored ${spent} (this run ${spent - base}); calls ${llm.stats.calls}, cached ${llm.stats.cached}, failed tries ${llm.stats.fail}`);
 console.log(`new surname forms ${lines.length} (male ${lines.filter(m => m.gender === 'male').length}, female ${lines.filter(m => m.gender === 'female').length}); entries rejected ${rejected.length}`);
-console.log(`tables: logs/work/m10b/summary.txt, rejected.txt${argv.includes('--write') ? '; list tools/m10b-names.txt' : ''}`);
+console.log(`tables: logs/work/m10b/summary.txt, rejected.txt, entered.txt${argv.includes('--write') ? '; list tools/m10b-names.txt' : ''}`);

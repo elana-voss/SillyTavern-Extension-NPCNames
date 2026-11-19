@@ -399,6 +399,12 @@ test('a surname splits by sex only in a culture whose surnames are gendered', ()
     assert.deepEqual(names.map(g => [list[g.form - 1], g.members, g.sex]), [['الزعبي', [1, 2], null]]);
 });
 
+test('a string any reader calls not a name is no surname, though two call it one (الحياه, life)', () => {
+    const list = ['الحياه', 'الخطيب'];
+    const answers = ['x', 's', 's'].map(k => parseAnswers(`1 arabic ${k} - - - l -\n2 arabic s - Alkhatib - l -`, 'last'));
+    assert.deepEqual(decide(list, answers, 'arabic', () => false, 'last').map(g => list[g.form - 1]), ['الخطيب']);
+});
+
 async function testAsync(name, fn) {
     try { await fn(); passed++; console.log(`  ✓ ${name}`); } catch (e) { failed++; console.error(`  ✗ ${name}`); console.error(`    ${e.message}`); }
 }
