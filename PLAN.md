@@ -31,9 +31,9 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 5 fix | Errors in the new names | R1, R2 | Done | | 3M | 0.3M | 6.5M from the calibration rerun on (the first trial's agent not counted), 0.24M, Grok $1.96; over estimate: 88 % is cache reads at 60-70k context per turn; reviews by Fable 5.1 medium |
 | 8 | Live run and release | R1 | Done | | 1M | 0.1M | live runs 1.6M and second, 0.06M and 0.05M; released as 0.2.0, the owner's number |
 | 9 | A name appears when it is learned | R10, R12 | Done | | 3M | 0.6M | Claude 3.6M, nano-gpt 0.40M |
-| 10a | Common first names | R2, R3, R11, R12 | Planned | High | 12M | 0.45M | |
-| 10b | Common surnames | R2, R3, R11, R12 | Planned | High | 14M | 0.50M | |
-| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Planned | High | 12M | 0.44M | |
+| 10a | Common first names | R2, R3, R11, R12 | Done | | 12M | 0.45M | nano-gpt 0.33M; code review Fable 5.2 medium |
+| 10b | Common surnames | R2, R3, R11, R12 | Planned | High | 14M | 0.40M | |
+| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Planned | High | 12M | 0.36M | |
 | 10c | True tags and placement | R4, R11, R12 | Planned | High | 9.5M | 0.62M | |
 | 10d | The pick leans to common names, if Fable so decides after 10c | R4, R11, R12 | Planned | High | 3M | 0.05M | |
 | | Total | | | | 84.5M | 5.76M | |
@@ -204,6 +204,11 @@ Cultures with no name-dataset list (13): Hawaiian, Latin, Maori, Mayan, Mongolia
 
 Estimate: milestones 5 and 5 fix cost 16.4M and 0.61M nano-gpt for 3,504 names, 4.7M and 0.17M per 1,000. That unit includes agents that added no name and 5 fix's extra rounds, so the first batch corrects it, probably downward.
 
+Done: 70 lists (35 cultures, both sexes) read by Muse Spark 1.3 at low effort, DeepSeek V4.1 Flash and MiniMax M3; 2,404 first names added (`tools/m10a-read.mjs`, `tools/m10a-apply-first-names.mjs`), none ambiguous, none stripped. Every list reaches 50 names after folding (11 read to 240 entries). nano-gpt: weekly input 400,419 to 730,329, 0.33M; corrected unit 0.33M / 2,404 = 0.137M per 1,000 names, so 10b (2,880) 0.40M and 10b2 (2,600) 0.36M.
+`tools/name-reach.mjs` after: first names 9,262 (human 8,602), surnames 2,621; median of the top 100 held: first 87 (before 23), surnames 15; of the top 50 a sex: men 46, women 48. Reach, median and cultures under 10: adult today 167, 0; young today 87, 0; child today 49, 1; elder today 73, 2; midcentury adult 73, 2; fantasy adult 15, 12; noir adult 80, 0; common 101, 1. Tags on human first names: adult 91%, youngAdult 38%, child 25%, elder 27%; contemporary 85%, midcentury 31%; common 51%.
+Code review (Fable 5.2 medium), five findings, all real and fixed; reapplied, the change is Michal, Adi, Eli, Rumen, Shahram, Григорий out, Hamed, Саша, Стас in; answer lines lost to the parser 98 to 0.
+Tests: `node test.js` 34 of 34. New tests, failing then passing: "✗ a reader's line whose tag fields stray keeps its people, kind, same and latin" (actual []), then ✓; "✗ an entry joins a name only where two readers put it with that name's first entry", then ✓; "✗ a latin spelling is a key where two readers give it or no reader gives another", then ✓; "✗ a romanised entry is held when the other sex's list reads a held native entry as it (R3)", then ✓; "✗ a stored answer is read past the budget, a new call is not, and an empty answer's input counts as spent" (10 !== 20), then ✓. Earlier: the reader rule tests 28 of 28, then 29 of 29.
+
 #### 10b. Common surnames
 
 The same for surnames, with the same blind question, folding and single read: the top 100 after folding, up to 2,880 missing, with the gendered forms of the cultures that have them (milestone 3's rules). Same unit.
@@ -236,7 +241,7 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 10a.
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 10b.
 
 ## Decisions
 
@@ -311,6 +316,10 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 - R9: our line is hidden with a class of our own beside SillyTavern's `toolCall`, as its manual describes; a line that also holds another tool stays visible. A watch on the chat's lines sets the class, because SillyTavern redraws lines in places that emit no event. It starts before the name data loads, so old lines stay hidden when the data is late or fails.
 - R9, the owner's yes (2026-11-18): after a stopped or failed reply our line stays hidden though the AI still receives it, and SillyTavern's context marker may sit unseen on a hidden line; both stay as they are.
 - `auto_update: true` in the manifest, in 0.2.0, the owner's word (2026-11-18: "add it to the current release 0.2.0"); the tag `v0.2.0` moved onto that commit. SillyTavern then updates the extension when SillyTavern itself gets a new version, and includes it in its update notice.
+- Milestone 10a, readers: Muse Spark 1.3 (reasoning effort low: at its default it reasons past any token limit on a list of 80), DeepSeek V4.1 Flash, MiniMax M3; a string is a name on two of three.
+- Milestone 10a, tags from the readers' periods by a fixed map (`tools/name-read.mjs` firstNameTags); a name is present when any first-name entry of the culture holds one of its spellings, in either sex; a name new in both sexes' lists would enter once as ambiguous (none did).
+- Milestone 10a, lists: window 80 entries, 240 on 11 lists whose first 80 gave fewer than 50 names; Hindi stands for Indian peoples as a whole; scandinavian is read as Danish; Irish Gaelic waits for 10b2, as Ireland's list is English-speaking.
+- Milestone 10a, spellings: an entry joins the name whose first entry two readers group it with, never by way of a third entry; a reader's latin is a key only for an entry in another script, where two readers give it or one gives it and no reader another (מיכל: Michal; דוד: David against Moshe gives none); a held native entry's spellings from either sex's list hold its romanised form. A romanised entry whose native form is held but outside both lists' windows still enters (no reading of it exists). A reader that echoes the entry, or whose tag fields stray, is still read.
 
 ## Trials
 
