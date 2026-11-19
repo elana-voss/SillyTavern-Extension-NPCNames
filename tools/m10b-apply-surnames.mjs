@@ -8,35 +8,12 @@
 // Lines of the list, fields separated by " | ", lists by ",", an empty list or no gender "-":
 //   last | culture | name | gender | source | eras | roles | allure | commonness | genres | themes
 import assert from 'node:assert/strict';
-import { loadDb, readLines, saveWithChanges } from './db.mjs';
-import { norm } from './name-lists.mjs';
-import { foldName, loadOverused } from './overused.mjs';
+import { addNames, loadDb, readLines, saveWithChanges } from './db.mjs';
+import { loadOverused } from './overused.mjs';
 
 const db = loadDb();
 assert.equal(db.first_names.length, 9263, 'first names');
 assert.equal(db.last_names.length, 2621, 'surnames');
 
-const overused = loadOverused();
-const list = s => (s === '-' ? [] : s.split(','));
-const held = new Set(db.last_names.map(e => `${e.language_ethnicity}|${norm(e.name)}`));
-const cultures = new Set(db.first_names.map(e => e.language_ethnicity));
-const changes = [];
-
-for (const f of readLines('m10b-names.txt')) {
-    assert.equal(f.length, 11, `fields: ${f.join(' | ')}`);
-    const [kind, culture, name, gender, source, eras, roles, allure, commonness, genres, themes] = f;
-    assert.equal(kind, 'last');
-    assert.ok(cultures.has(culture), `no culture ${culture}`);
-    assert.ok(['male', 'female', '-'].includes(gender), `gender of ${name}`);
-    assert.ok(!overused.has(foldName(name)), `overused ${name}`);
-    const key = `${culture}|${norm(name)}`;
-    assert.ok(!held.has(key), `already held: ${culture}/${name}`);
-    held.add(key);
-    db.last_names.push({
-        name, ...(gender === '-' ? {} : { gender }), language_ethnicity: culture, mythology: null, race: 'human',
-        era: list(eras), role: list(roles), allure, commonness, genre: list(genres), themes: list(themes),
-    });
-    changes.push(`add last ${culture} ${name} ${gender === '-' ? 'no gender' : gender} (${source})`);
-}
-
+const changes = addNames(db, readLines('m10b-names.txt'), loadOverused());
 saveWithChanges(db, '10b', changes);
