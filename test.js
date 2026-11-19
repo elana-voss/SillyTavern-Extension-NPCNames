@@ -11,7 +11,7 @@ import { pathToFileURL } from 'node:url';
 import { foldName, loadOverused } from './tools/overused.mjs';
 import { parseLines } from './tools/db.mjs';
 import { client } from './tools/nanogpt.mjs';
-import { decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, parseAnswers } from './tools/name-read.mjs';
+import { decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, parseAnswers, readJobs } from './tools/name-read.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -412,9 +412,32 @@ test('where surnames are fathers\' names, a given name of that people in the sur
     assert.deepEqual(decide(list, answers, 'arabic', () => false, 'last'), []);
 });
 
+test('two new names that share a spelling are one, in the form ranked higher (R3: الحربي read as Alharbi, and Alharbi)', () => {
+    const list = ['الحربي', 'Alharbi'];
+    const answers = [0, 1, 2].map(() => parseAnswers('1 arabic s - Alharbi - l -\n2 arabic s - - - l -', 'last'));
+    assert.deepEqual(decide(list, answers, 'arabic', () => false, 'last').map(g => [list[g.form - 1], g.members]), [['الحربي', [1, 2]]]);
+});
+
+test('in a gendered culture a form no two readers give a sex takes the sex its group lacks (Juška beside Juškienė)', () => {
+    const list = ['Juška', 'Juškienė', 'Kazlauskas'];
+    const answers = [0, 1, 2].map(() => parseAnswers('1 baltic s - - - l -\n2 baltic s 1 - f l -\n3 baltic s - - - l -', 'last'));
+    assert.deepEqual(decide(list, answers, 'baltic', () => false, 'last', { gendered: true }).map(g => [list[g.form - 1], g.sex]),
+        [['Juška', 'male'], ['Juškienė', 'female'], ['Kazlauskas', null]]);
+});
+
 async function testAsync(name, fn) {
     try { await fn(); passed++; console.log(`  ✓ ${name}`); } catch (e) { failed++; console.error(`  ✗ ${name}`); console.error(`    ${e.message}`); }
 }
+
+await testAsync('a budget of 0 sends no request, though nothing is stored', async () => {
+    const dir = pathToFileURL(mkdtempSync(join(tmpdir(), 'npcnames-llm-')) + '/');
+    try {
+        let fetched = 0;
+        const fetchFn = async () => { fetched++; return { ok: true, status: 200, json: async () => ({ choices: [{ message: { content: '' } }], usage: { prompt_tokens: 10, completion_tokens: 1 } }) }; };
+        await readJobs(client(dir, { fetchFn, wait: async () => {} }), [{ tag: 't', entries: [{ name: 'Smith' }] }], 'last', 0);
+        assert.equal(fetched, 0);
+    } finally { rmSync(dir, { recursive: true, force: true }); }
+});
 
 await testAsync('a stored answer is read past the budget, a new call is not, and an empty answer\'s input counts as spent', async () => {
     const dir = pathToFileURL(mkdtempSync(join(tmpdir(), 'npcnames-llm-')) + '/');

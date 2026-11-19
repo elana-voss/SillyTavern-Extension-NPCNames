@@ -280937,24 +280937,6 @@
       "themes": []
     },
     {
-      "name": "Alomari",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Rifi",
       "language_ethnicity": "arabic",
       "mythology": null,
@@ -281101,24 +281083,6 @@
       "themes": []
     },
     {
-      "name": "Almomani",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "عسيري",
       "language_ethnicity": "arabic",
       "mythology": null,
@@ -281174,24 +281138,6 @@
     },
     {
       "name": "الخلايله",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Alharbi",
       "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
@@ -281375,24 +281321,6 @@
       "themes": []
     },
     {
-      "name": "المصرى",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "الفتلاوي",
       "language_ethnicity": "arabic",
       "mythology": null,
@@ -281520,6 +281448,78 @@
     },
     {
       "name": "Jaradat",
+      "language_ethnicity": "arabic",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "العسيري",
+      "language_ethnicity": "arabic",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "القرني",
+      "language_ethnicity": "arabic",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "الخزعلي",
+      "language_ethnicity": "arabic",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "الحوراني",
       "language_ethnicity": "arabic",
       "mythology": null,
       "race": "human",
@@ -299188,24 +299188,6 @@
       "themes": []
     },
     {
-      "name": "Hadad",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Levin",
       "language_ethnicity": "hebrew",
       "mythology": null,
@@ -299409,24 +299391,6 @@
     },
     {
       "name": "יפרח",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Maman",
       "language_ethnicity": "hebrew",
       "mythology": null,
       "race": "human",
@@ -299732,24 +299696,6 @@
       "themes": []
     },
     {
-      "name": "לביא",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "ששון",
       "language_ethnicity": "hebrew",
       "mythology": null,
@@ -299833,24 +299779,6 @@
         "neutral"
       ],
       "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Kadosh",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
@@ -300508,6 +300436,78 @@
       "themes": [
         "floral"
       ]
+    },
+    {
+      "name": "Erez",
+      "language_ethnicity": "hebrew",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Goren",
+      "language_ethnicity": "hebrew",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "חמו",
+      "language_ethnicity": "hebrew",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
+    },
+    {
+      "name": "אברגל",
+      "language_ethnicity": "hebrew",
+      "mythology": null,
+      "race": "human",
+      "era": [
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife"
+      ],
+      "themes": []
     },
     {
       "name": "Kumar",
@@ -312650,6 +312650,7 @@
     },
     {
       "name": "Juška",
+      "gender": "male",
       "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",

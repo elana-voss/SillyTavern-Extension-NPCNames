@@ -116,7 +116,7 @@ export async function readJobs(llm, jobs, kind, budget) {
     const base = llm.spent();
     const calls = jobs.flatMap(j => READERS.map(model => ({ j, model })));
     const texts = await pool(calls, 6, ({ j, model }) => llm.ask(model, promptFor(j.entries.map(e => e.name), kind),
-        { tag: j.tag, extra: EXTRA[model], allow: () => base + llm.stats.input <= budget }));
+        { tag: j.tag, extra: EXTRA[model], allow: () => base + llm.stats.input < budget }));
     for (const [ji, j] of jobs.entries()) j.answers = READERS.map((_, r) => parseAnswers(texts[ji * READERS.length + r], kind));
 }
 
@@ -171,7 +171,16 @@ export function decide(names, readers, culture, present, kind = 'first', { gende
         if (r) byRoot.get(r).push(i); else byRoot.set(i, [i]);
     }
     const SEX = { m: 'male', f: 'female' };
-    const sexOf = i => (kind === 'last' && gendered ? SEX[agreed(readers.map(a => a.get(i)?.sex))] ?? null : null);
+    const readSex = i => (kind === 'last' && gendered ? SEX[agreed(readers.map(a => a.get(i)?.sex))] ?? null : null);
+    // A member no two readers give a sex takes the sex its group lacks where the others hold one only (Juška beside Juškienė).
+    const OTHER = { male: 'female', female: 'male' };
+    const groupOf = new Map([...byRoot.values()].flatMap(g => g.map(i => [i, g])));
+    const sexOf = i => {
+        const own = readSex(i);
+        if (own || !gendered || kind !== 'last') return own;
+        const others = new Set(groupOf.get(i).filter(j => j !== i).map(readSex));
+        return others.size === 1 ? OTHER[[...others][0]] ?? null : null;
+    };
     const out = [];
     for (const group of byRoot.values()) for (const sex of [...new Set(group.map(sexOf))]) {
         const members = group.filter(i => sexOf(i) === sex);
@@ -193,7 +202,17 @@ export function decide(names, readers, culture, present, kind = 'first', { gende
             theme: agreed(answers.map(x => x.theme)),
         });
     }
-    return out.sort((a, b) => a.rank - b.rank);
+    // Two names of one sex that share a spelling are one (R3: الحربي read as Alharbi, and the entry Alharbi):
+    // the later joins the earlier, which keeps its form.
+    const merged = [];
+    for (const f of out.sort((a, b) => a.rank - b.rank)) {
+        const g = merged.find(g => g.sex === f.sex && f.keys.some(k => g.keys.includes(k)));
+        if (!g) { merged.push(f); continue; }
+        g.members.push(...f.members);
+        g.keys = [...new Set([...g.keys, ...f.keys])];
+        g.present ||= f.present;
+    }
+    return merged;
 }
 
 /** A surname's tags: a family name of living people; 10c reads its periods. */
