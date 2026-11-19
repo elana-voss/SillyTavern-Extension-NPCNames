@@ -44,7 +44,7 @@ export function parseTagAnswers(text) {
         const m = l.trim().replace(/[`*]/g, '').match(TAG_LINE);
         if (!m) continue;
         const place = !m[3] || m[3] === '-' ? null : m[3];
-        out.set(Number(m[1]), { periods: m[2] === '-' ? '' : m[2], place: place === '?' || place in PLACES || place in CULTURES ? place : '?', common: m[4] });
+        out.set(Number(m[1]), { periods: m[2] === '-' ? '' : m[2], place: place === null || place === '?' || place in PLACES || place in CULTURES ? place : '?', common: m[4] });
     }
     return out;
 }
@@ -58,7 +58,7 @@ const agreed = (values, k = 2) => {
 /**
  * Three readers' answers on one name to {used, periods, place, common}. used: true or false where two say so, null
  * where no two do (nothing changes); periods: the letters two give; place: of an unused name, where two put it, else
- * null; common: what two say, the middle (u) where all three differ, else null.
+ * null; common: what two say, else null (the entry keeps its own).
  */
 export function decideTags(answers) {
     const got = answers.filter(Boolean);
@@ -66,7 +66,7 @@ export function decideTags(answers) {
     const used = yes >= 2 ? true : no >= 2 ? false : null;
     const periods = Object.keys(PERIODS).filter(p => got.filter(a => a.periods.includes(p)).length >= 2).join('');
     const place = used === false ? agreed(got.filter(a => !a.periods).map(a => a.place).filter(p => p && p !== '?')) : null;
-    const common = agreed(got.map(a => a.common)) ?? (new Set(got.map(a => a.common)).size === 3 ? 'u' : null);
+    const common = agreed(got.map(a => a.common));
     return { used, periods: used ? periods : '', place, common };
 }
 

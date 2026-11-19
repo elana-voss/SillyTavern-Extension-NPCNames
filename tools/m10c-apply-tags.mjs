@@ -18,7 +18,7 @@ const nd = loadLists();
 const decisions = new Map(readLines('m10c-tags.txt').map(([kind, culture, name, used, periods, place, common]) =>
     [`${kind}|${culture}|${name}`, { used: used === '-' ? null : used === 'y', periods: periods === '-' ? '' : periods,
         place: place === '-' ? null : place, common: common === '-' ? null : common }]));
-assert.equal(decisions.size, 8819, 'every human name held before milestone 10, once');
+assert.equal(decisions.size, 8719, 'every human name held before milestone 10, once (6,198 first, 2,521 surnames)');
 
 const changes = [], classes = new Map();
 const count = (kind, culture, what) => {

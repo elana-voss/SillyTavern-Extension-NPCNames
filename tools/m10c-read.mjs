@@ -1,5 +1,5 @@
 // Milestone 10c's read: every human first name and surname the data held before milestone 10 (those not in
-// tools/m10a-names.txt, m10b-names.txt or m10b2-names.txt; 6,198 and 2,621) is read per culture by 10a's three
+// tools/m10a-names.txt, m10b-names.txt or m10b2-names.txt; 6,198 and 2,521; the 8,819 of the plan counted 100 non-human surnames) is read per culture by 10a's three
 // readers with 10c's question (tools/name-tags.mjs): the periods it was given in there, where a name with no sign
 // of real use there belongs, and how common it is today. Two of three decide (decideTags); the decisions are
 // written to tools/m10c-tags.txt for tools/m10c-apply-tags.mjs.
