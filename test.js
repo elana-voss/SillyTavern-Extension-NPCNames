@@ -12,6 +12,7 @@ import { foldName, loadOverused } from './tools/overused.mjs';
 import { addNames, parseLines } from './tools/db.mjs';
 import { labelLines, nameOfLabel, nameQueries, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
 import { client } from './tools/nanogpt.mjs';
+import { commonnessFor, decideTags, listRanks, parseTagAnswers, tagsFor } from './tools/name-tags.mjs';
 import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, newFirstNames, newSurnames, parseAnswers, readJobs } from './tools/name-read.mjs';
 
 let passed = 0;
@@ -765,6 +766,41 @@ function checkCommonNames(data) {
         assert.deepEqual(lines.map(l => l.slice(0, 4).join('/')).filter(k => !held.has(k)), [], file);
     }
 }
+
+test('10c: a reader\'s tag line is read past an echoed name, and two of three readers decide each tag', () => {
+    const a = parseTagAnswers('1 CDE - c\n2 Mary Anne BCD - u\n3 - fantasy r\n4 - Yilvoxe - nowhere r\n5 ABCDE c\nnoise');
+    assert.deepEqual([...a.keys()], [1, 2, 3, 4, 5]);
+    assert.deepEqual(a.get(2), { periods: 'BCD', place: null, common: 'u' });
+    assert.deepEqual(a.get(4).place, '?');
+    assert.deepEqual(a.get(5), { periods: 'ABCDE', place: null, common: 'c' }, 'a used name\'s place left out');
+    const r = (periods, place, common) => ({ periods, place, common });
+    assert.deepEqual(decideTags([r('CDE', null, 'c'), r('DE', null, 'u'), r('', 'fantasy', 'r')]), { used: true, periods: 'DE', place: null, common: null });
+    assert.deepEqual(decideTags([r('', 'fantasy', 'r'), r('', 'fantasy', 'r'), r('D', null, 'u')]), { used: false, periods: '', place: 'fantasy', common: 'r' });
+    assert.deepEqual(decideTags([r('', 'german', 'c'), r('', 'fantasy', 'u'), undefined]), { used: false, periods: '', place: null, common: null });
+    assert.deepEqual(decideTags([r('D', null, 'c'), undefined, r('', '?', 'r')]).used, null, 'one each: no change');
+});
+
+test('10c: a used name takes its periods\' tags in place of the old ones; an unused one loses them and takes its place\'s', () => {
+    const e = { name: 'X', age: ['adult', 'elder'], era: ['contemporary', 'ancient'], genre: ['sliceOfLife', 'horror'] };
+    assert.deepEqual(tagsFor(e, { used: true, periods: 'BC', place: null }),
+        { age: ['adult', 'elder'], era: ['contemporary', 'ancient', 'nineteenTwenties', 'midcentury'], genre: ['sliceOfLife', 'horror', 'noirDetective'] });
+    assert.deepEqual(tagsFor(e, { used: true, periods: 'A', place: null }), { age: ['adult'], era: ['ancient', 'victorian'], genre: ['horror'] });
+    assert.deepEqual(tagsFor({ ...e, era: ['contemporary'] }, { used: false, periods: '', place: 'fantasy' }), { era: ['timeless'], genre: ['horror', 'fantasy'] });
+    assert.deepEqual(tagsFor({ name: 'S', era: ['contemporary'], genre: ['sliceOfLife'] }, { used: true, periods: 'EF', place: null }),
+        { era: ['contemporary', 'modern'], genre: ['sliceOfLife'] }, 'a surname has no age');
+    assert.deepEqual(tagsFor(e, { used: null, periods: '', place: null }), {});
+});
+
+test('10c: commonness follows rank in a list of the name\'s script; absent from it, never common; else the readers\'', () => {
+    const nd = { first: { IT: [[1, 'Giuseppe', 1, 0], [400, 'Gualtiero', 1, 0]], RU: [[1, 'Сергей', 1, 0], [2, 'Иван', 1, 0], [3, 'Ivan', 1, 0]] } };
+    const ranks = listRanks(nd, 'first', ['italian', 'slavicRussian', 'latin']);
+    const c = (culture, name, commonness, read) => commonnessFor({ name, language_ethnicity: culture, commonness }, ranks, read);
+    assert.deepEqual([c('italian', 'Giuseppe', 'rare', 'r'), c('italian', 'Gualtiero', 'common', 'c'), c('italian', 'Ugolino', 'common', 'c'),
+        c('italian', 'Ugolino', 'common', 'r'), c('slavicRussian', 'Иван', 'rare', null), c('latin', 'Gaius', 'rare', 'c'), c('latin', 'Gaius', 'rare', null)],
+        ['common', 'uncommon', 'uncommon', 'rare', 'common', 'common', 'rare']);
+    const thai = listRanks({ first: { TH: [[1, 'Somchai', 1, 0]] } }, 'first', ['thai']);
+    assert.equal(commonnessFor({ name: 'สมชาย', language_ethnicity: 'thai', commonness: 'uncommon' }, thai, 'c'), 'common', 'another script: the readers');
+});
 
 test('database invariants', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));

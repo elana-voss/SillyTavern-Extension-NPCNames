@@ -115,14 +115,16 @@ export function parseAnswers(text, kind = 'first') {
 /**
  * Each job's entries ({tag, entries: [{name}]}) read by the three readers through `llm` (a tools/nanogpt.mjs
  * client), six requests at a time; no new request once this run's input passes `budget` over what `llm` had
- * stored. Sets job.answers, one parsed map per reader.
+ * stored. Sets job.answers, one parsed map per reader. `ask` and `parse` replace the question and its parser
+ * (10c's tag question, tools/name-tags.mjs); `ask` takes the job.
  */
-export async function readJobs(llm, jobs, kind, budget) {
+export async function readJobs(llm, jobs, kind, budget,
+    { ask = j => promptFor(j.entries.map(e => e.name), kind), parse = text => parseAnswers(text, kind) } = {}) {
     const base = llm.spent();
     const calls = jobs.flatMap(j => READERS.map(model => ({ j, model })));
-    const texts = await pool(calls, 6, ({ j, model }) => llm.ask(model, promptFor(j.entries.map(e => e.name), kind),
+    const texts = await pool(calls, 6, ({ j, model }) => llm.ask(model, ask(j),
         { tag: j.tag, extra: EXTRA[model], allow: () => base + llm.stats.input < budget }));
-    for (const [ji, j] of jobs.entries()) j.answers = READERS.map((_, r) => parseAnswers(texts[ji * READERS.length + r], kind));
+    for (const [ji, j] of jobs.entries()) j.answers = READERS.map((_, r) => parse(texts[ji * READERS.length + r]));
 }
 
 /** What each reader said of entry i, "peoples:kind" or none, for the rejected-entry tables. */
