@@ -576,7 +576,8 @@ function checkPinnedNames(data) {
         'portuguese/Ferreira', 'albanian/Hoxhaj',
         'korean/남궁', 'hebrew/דוד', // real surnames in both lists stay
     ]), []);
-    assert.deepEqual(present(lasts, ['spanish/Flores', 'arabic/يناير', 'arabic/مارس', 'slavicPolish/Sz', 'hebrew/Sh', 'yoruba/Gh', 'chinese/Mawar', 'korean/남자', 'azerbaijani/Memmedova', 'azerbaijani/Aliyeva',
+    // spanish/Flores is a surname since 10b (Mexico's 10th, three readers): the move rule above keeps english/Flores a first name.
+    assert.deepEqual(present(lasts, ['arabic/يناير', 'arabic/مارس', 'slavicPolish/Sz', 'hebrew/Sh', 'yoruba/Gh', 'chinese/Mawar', 'korean/남자', 'azerbaijani/Memmedova', 'azerbaijani/Aliyeva',
         'latin/Gothicus', // a title
         // A woman's given name is no Yoruba surname.
         ...['Abosede', 'Ajoke', 'Atinuke', 'Aderonke', 'Adebimpe', 'Adejoke'].map(n => `yoruba/${n}`),
