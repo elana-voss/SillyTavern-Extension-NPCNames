@@ -30,7 +30,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 7 | Code, documents and tests | R1, R7 | Done | | 2M | 0 | 2.4M, 0; code review none (not due) |
 | 5 fix | Errors in the new names | R1, R2 | Done | | 3M | 0.3M | 6.5M from the calibration rerun on (the first trial's agent not counted), 0.24M, Grok $1.96; over estimate: 88 % is cache reads at 60-70k context per turn; reviews by Fable 5.1 medium |
 | 8 | Live run and release | R1 | Done | | 1M | 0.1M | live runs 1.6M and second, 0.06M and 0.05M; released as 0.2.0, the owner's number |
-| 9 | A name appears when it is learned | R10, R12 | Blocked | High | 3M | 0.6M | nano-gpt 0.40M |
+| 9 | A name appears when it is learned | R10, R12 | Done | | 3M | 0.6M | Claude 3.6M, nano-gpt 0.40M |
 | 10a | Common first names | R2, R3, R11, R12 | Planned | High | 12M | 0.45M | |
 | 10b | Common surnames | R2, R3, R11, R12 | Planned | High | 14M | 0.50M | |
 | 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Planned | High | 12M | 0.44M | |
@@ -173,11 +173,14 @@ Estimate: the minimum for a build agent, 3M.
 
 - Built: the instructions open with the starting text; the tool's description, `assets/advertisement.txt:18` (filters that fit the established character; the tags colour only what is not yet established) and `:28` (once per character, before the reply in which the name first appears) follow it; the README says the same. The description and parameters moved from `index.js` to `advertisement.js`, so the check sends exactly what the extension registers. No new setting.
 - Test: one new, "the AI calls the tool when a name is learned, not when a character arrives". Failing first: "✗ ... instructions open with the timing"; then `node test.js` 27 passed, 0 failed.
-- Check: `tools/m9-name-timing.mjs`, a script that builds the requests as SillyTavern does (card as system prompt, the instructions as a system message right before the latest message, the tool offered, a call answered by `picker.js` and the model asked again), cheaper than reinstalling the removed test bed. `{{user}}` in the instructions is sent as written; whether SillyTavern replaces it in an injected message was not checked. Answers and excerpts in `logs/work/m9/`. Old wording: commit 8e11ce9.
+- Check: `tools/m9-name-timing.mjs`, a script that builds the requests as SillyTavern does (card as system prompt, the instructions as a system message right before the latest message, the tool offered, a call answered by `picker.js` and the model asked again), cheaper than reinstalling the removed test bed. `{{user}}` in the instructions is sent as written (SillyTavern replaces it; see the test bed line below). Answers and excerpts in `logs/work/m9/`. Old wording: commit 8e11ce9.
 - Models: `z-ai/glm-5.3-flash`, `deepseek/deepseek-v4.1-flash`, `mistralai/mistral-small-4-119b-2603`. Scenes: a fantasy tavern (English), a night train Madrid to Lisbon (Spanish), a mining station after twenty earlier messages (English); turn 1 a stranger appears and {{user}} speaks to no one, turn 2 {{user}} asks the name. 36 chats, none failed.
 - Input tokens: 400,419 of the 600,000 allowed, read from the usage figure (0 to 400,419), equal to the script's sum.
 - Early names (turn 1, the narration names the stranger with no source in the story; a name said aloud, on a ticket, badge, name tape or manifest counts as learned), read by hand from the excerpts, old to new: GLM 1 to 1, DeepSeek 2 to 0, Mistral 4 to 0; total 7 to 1. GLM's two are doubtful alike: "Nora Høiberg, if you've heard right" (old) and a first name added to a surname shouted across the room (new). Tool called in turn 1, old to new: 18 to 12 of 18; under the new wording Mistral called it in 2 of 6 chats in turn 1 and GLM in 4, the rest at the reveal.
 - Invented names (a person's name the tool did not return): old 0, new 1. Mistral, station, new wording, run 2: the tool returned Hjørdis Vestergaard, she said it in turn 1, and at the reveal she said "Name's Mara". Mistral is worse on invented names at the reveal, so the check does not pass by its own rule; the work stopped here for the owner's word, wording not tuned per model.
+- The owner, 2026-11-19, asked whether to keep the new wording despite Mistral's one invented name: "yes". Kept; milestone 9 is done.
+- Test bed rebuilt (its temporary folder had been cleared), Playwright pointed at the browsers already installed: `node tools/testbed.mjs` 104 of 104. It shows SillyTavern replaces `{{user}}` in the injected instructions with the user's name.
+- Tokens: Claude 3.6M (build agent, Opus 5.5 medium), nano-gpt 0.40M input. Code review: none (not due).
 
 ### 10. Common names, in every culture and kind of story
 
@@ -233,8 +236,7 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 9.
-- Milestone 9's check: the new wording removed early names (7 to 1) but Mistral invented one name at the reveal where the old wording invented none (section 9). Keep the new wording, or what next? Milestone 10a waits for this answer.
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 10a.
 
 ## Decisions
 
@@ -245,7 +247,7 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 - The test bed stays although Fable judged it too costly for the product's size: how SillyTavern treats the instructions is the largest thing unverified, and it spares the owner the checks.
 - Gods without a pantheon get none: no requirement asks for more pantheons, and `race: mythical` reaches them.
 - Reviews by Fable medium: the second reader on reading lists, milestones over about 300 changed lines, the audit after milestone 5.
-- Scripts that call nano-gpt live outside the repo, with stored answers so a rerun costs nothing; its limits are read before the first call.
+- Scripts that call nano-gpt may be tracked in `tools/` when they hold no key and no machine path; their answers are stored outside the repo so a rerun costs nothing; its limits are read before the first call.
 - A data change is one script per milestone, kept in `tools/`.
 - The test bed reaches the fake AI through SillyTavern's own proxy settings for Claude and Gemini.
 - The extension is copied into the test bed, not linked, so removing the bed cannot touch the repo; Playwright lives in the temporary folder too.
