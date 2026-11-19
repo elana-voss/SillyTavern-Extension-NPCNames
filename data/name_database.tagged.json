@@ -185918,65 +185918,7 @@
       "themes": []
     },
     {
-      "name": "Adi",
-      "gender": "male",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
       "name": "Amit",
-      "gender": "male",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Michal",
       "gender": "male",
       "language_ethnicity": "hebrew",
       "mythology": null,
@@ -186446,35 +186388,6 @@
     },
     {
       "name": "Maya",
-      "gender": "female",
-      "language_ethnicity": "hebrew",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Eli",
       "gender": "female",
       "language_ethnicity": "hebrew",
       "mythology": null,
@@ -187798,6 +187711,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -187811,7 +187725,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -187826,6 +187740,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -187839,7 +187754,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -187854,6 +187769,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -187867,7 +187783,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -187882,6 +187798,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -187895,7 +187812,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -187910,6 +187827,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -187938,6 +187856,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -187951,7 +187870,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -187966,6 +187885,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -187979,7 +187899,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -187994,6 +187914,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188007,7 +187928,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188022,6 +187943,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188035,7 +187957,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188050,6 +187972,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188063,7 +187986,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188107,6 +188030,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188135,6 +188059,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188148,7 +188073,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188192,6 +188117,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188205,7 +188131,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188220,6 +188146,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188233,7 +188160,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188277,6 +188204,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188290,7 +188218,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188305,6 +188233,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188365,6 +188294,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188378,7 +188308,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188545,6 +188475,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188604,6 +188535,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188661,6 +188593,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188689,6 +188622,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188748,6 +188682,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188761,7 +188696,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -188863,6 +188798,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188891,6 +188827,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -188904,7 +188841,7 @@
         "neutral"
       ],
       "intelligence": "average",
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -208633,6 +208570,36 @@
       "themes": []
     },
     {
+      "name": "Hamed",
+      "gender": "male",
+      "language_ethnicity": "persian",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "child",
+        "youngAdult",
+        "adult",
+        "elder"
+      ],
+      "era": [
+        "nineteenTwenties",
+        "midcentury",
+        "modern",
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
+      "themes": []
+    },
+    {
       "name": "Majid",
       "gender": "male",
       "language_ethnicity": "persian",
@@ -209523,35 +209490,6 @@
       "themes": [
         "religious"
       ]
-    },
-    {
-      "name": "Shahram",
-      "gender": "male",
-      "language_ethnicity": "persian",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
     },
     {
       "name": "Zahra",
@@ -220463,6 +220401,35 @@
       "themes": []
     },
     {
+      "name": "Саша",
+      "gender": "male",
+      "language_ethnicity": "slavicRussian",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "child",
+        "youngAdult",
+        "adult",
+        "elder"
+      ],
+      "era": [
+        "midcentury",
+        "modern",
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
+      "themes": []
+    },
+    {
       "name": "Вадим",
       "gender": "male",
       "language_ethnicity": "slavicRussian",
@@ -220819,7 +220786,7 @@
       "themes": []
     },
     {
-      "name": "Григорий",
+      "name": "Стас",
       "gender": "male",
       "language_ethnicity": "slavicRussian",
       "mythology": null,
@@ -220831,8 +220798,6 @@
         "elder"
       ],
       "era": [
-        "victorian",
-        "nineteenTwenties",
         "midcentury",
         "modern",
         "contemporary"
@@ -222434,34 +222399,6 @@
     },
     {
       "name": "Boštjan",
-      "gender": "male",
-      "language_ethnicity": "slavicOther",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Rumen",
       "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,

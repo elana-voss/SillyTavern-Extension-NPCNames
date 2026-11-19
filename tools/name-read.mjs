@@ -115,9 +115,12 @@ export function decide(names, readers, culture, present, kind = 'first') {
         const form = members.find(isName);
         if (!form) continue;
         // "latin" is asked only of other scripts; on a Latin-letter entry readers put a related name there (Andy: Andrew).
-        // A spelling is a key only where two readers give it.
-        const latins = members.filter(i => !/\p{Script=Latin}/u.test(names[i - 1]))
-            .map(i => agreed(readers.map(a => a.get(i)?.latin).filter(Boolean).map(norm).filter(Boolean)));
+        // A spelling is a key where two readers give it, or one gives it and no reader another (מיכל: Michal,
+        // two blanks); readers who differ give none (דוד: David, Moshe from a reader one line off).
+        const latins = members.filter(i => !/\p{Script=Latin}/u.test(names[i - 1])).map(i => {
+            const given = readers.map(a => a.get(i)?.latin).filter(Boolean).map(norm).filter(Boolean);
+            return agreed(given) ?? (new Set(given).size === 1 ? given[0] : null);
+        });
         const keys = [...new Set([...members.map(i => norm(names[i - 1])), ...latins])].filter(Boolean);
         const answers = readers.map(a => a.get(form)).filter(Boolean);
         const periods = Object.keys(PERIODS).filter(p => answers.filter(x => x.periods.includes(p)).length >= 2);

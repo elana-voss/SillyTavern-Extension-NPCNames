@@ -362,9 +362,11 @@ test('an entry joins a name only where two readers put it with that name\'s firs
     assert.deepEqual(russian.map(g => g.members), [[1], [2, 4], [3, 5]]);
 });
 
-test('a latin spelling is a key only where two readers give it', () => {
-    assert.deepEqual(russian.find(g => g.form === 1).keys, ['александр']);
-    assert.deepEqual(russian.find(g => g.form === 3)?.keys.includes('alexander'), false);
+test('a latin spelling is a key where two readers give it or no reader gives another', () => {
+    const list = ['דוד', 'אורי', 'מיכל'];
+    const reader = latins => parseAnswers(latins.map((l, i) => `${i + 1} hebrew g - ${l} DE l -`).join('\n'));
+    const names = decide(list, [reader(['David', 'Uri', 'Michal']), reader(['-', 'Ori', '-']), reader(['Moshe', 'Eli', '-'])], 'hebrew', () => false);
+    assert.deepEqual(names.map(g => g.keys), [['דוד'], ['אורי'], ['מיכל', 'michal']]);
 });
 
 test('a romanised entry is held when the other sex\'s list reads a held native entry as it (R3)', () => {
