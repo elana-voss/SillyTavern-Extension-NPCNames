@@ -9,9 +9,10 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { foldName, loadOverused } from './tools/overused.mjs';
-import { parseLines } from './tools/db.mjs';
+import { addNames, parseLines } from './tools/db.mjs';
+import { nameOfLabel, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
 import { client } from './tools/nanogpt.mjs';
-import { decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, parseAnswers, readJobs } from './tools/name-read.mjs';
+import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, parseAnswers, readJobs } from './tools/name-read.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -425,6 +426,15 @@ test('in a gendered culture a form no two readers give a sex takes the sex its g
         [['Juška', 'male'], ['Juškienė', 'female'], ['Kazlauskas', null]]);
 });
 
+test('a form its source finds borne by both sexes takes no sex where a reader says so, though two give one (Бойко, Попов)', () => {
+    const list = ['Бойко', 'Попов'];
+    const answers = ['m', '-', 'm'].map(s => parseAnswers(`1 ukrainian s - Boiko ${s} u -\n2 ukrainian s - Popov m u -`, 'last'));
+    assert.deepEqual(decide(list, answers, 'ukrainian', () => false, 'last', { gendered: true, sexless: () => true })
+        .map(g => [list[g.form - 1], g.sex]), [['Бойко', null], ['Попов', 'male']]);
+    assert.deepEqual([{ male: 40, female: 12 }, { male: 40, female: 1 }, { male: 2, female: 1 }, {}].map(bothSexes),
+        [true, false, false, false]);
+});
+
 async function testAsync(name, fn) {
     try { await fn(); passed++; console.log(`  ✓ ${name}`); } catch (e) { failed++; console.error(`  ✗ ${name}`); console.error(`    ${e.message}`); }
 }
@@ -455,6 +465,51 @@ await testAsync('a stored answer is read past the budget, a new call is not, and
         assert.equal(await llm.ask('m', 'b', { allow: () => false }), null);
         assert.deepEqual([fetched, llm.stats.stopped], [2, 1]);
     } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('Wikidata\'s CSV: a quoted field keeps its comma and doubled quote', () => {
+    assert.deepEqual(parseCsv('f,c,ln\r\nhttp://x/Q1,3,"Ion, ""Ionel"""\r\n'), [{ f: 'http://x/Q1', c: '3', ln: 'Ion, "Ionel"' }]);
+});
+
+test('a Wikidata label is a name without its bracketed note, and none where it holds two or a malformed one', () => {
+    assert.deepEqual(['Thích (họ người)', 'Ganbold (Ганболд)', 'ปกรณ์/ภากร', "ffrench-O'Carroll", 'Богданa', 'Ó Néill']
+        .map(nameOfLabel), ['Thích', 'Ganbold', null, null, null, 'Ó Néill']);
+});
+
+test('a Wikidata rank list adds an item\'s counts over sources, keeps the items borne more by the sex asked (men where equal) and a spelling once', () => {
+    const sex = q => `http://www.wikidata.org/entity/${q}`;
+    const rows = [
+        { f: 'A', g: sex('Q6581097'), c: '5', ln: 'Ion', lm: '', le: 'Ion' }, { f: 'A', g: sex('Q6581072'), c: '1', ln: 'Ion' },
+        { f: 'B', g: sex('Q6581072'), c: '4', ln: '', lm: '', le: 'Maria' }, { f: 'B', g: sex('Q6581072'), c: '4', le: 'Maria' },
+        { f: 'C', g: sex('Q6581097'), c: '2', ln: 'Alex' }, { f: 'C', g: sex('Q6581072'), c: '2', ln: 'Alex' },
+        { f: 'D', g: sex('Q6581097'), c: '3', ln: 'Íon' }, { f: 'E', c: '9', ln: '' }, { f: 'F', g: sex('Q6581097'), c: '7', ln: 'J' },
+    ];
+    assert.deepEqual(rankRows(rows, 'male').map(e => [e.name, e.rank, e.country]), [['Ion', 1, 'Wikidata'], ['Alex', 2, 'Wikidata']]);
+    assert.deepEqual(rankRows(rows, 'female').map(e => e.name), ['Maria']);
+    assert.deepEqual(rankRows(rows).map(e => [e.name, e.male, e.female]), [['Maria', 0, 8], ['Ion', 5, 1], ['Alex', 2, 2]]);
+});
+
+await testAsync('Wikidata\'s 429 waits its Retry-After, and a stored answer asks nothing', async () => {
+    const dir = pathToFileURL(mkdtempSync(join(tmpdir(), 'npcnames-wd-')) + '/wd/');
+    try {
+        const waits = [];
+        const replies = [[429, '', '7'], [200, 'f,c\nQ1,2\n']];
+        const fetchFn = async () => { const [status, body, after] = replies.shift(); return { status, text: async () => body, headers: { get: () => after } }; };
+        const wd = wikidata(dir, { fetchFn, wait: async ms => { waits.push(ms); } });
+        assert.deepEqual(await wd.query('SELECT 1'), [{ f: 'Q1', c: '2' }]);
+        assert.deepEqual(await wd.query('SELECT 1'), [{ f: 'Q1', c: '2' }]);
+        assert.deepEqual([waits.includes(7000), wd.stats], [true, { asked: 1, cached: 1, fail: 0, limited: 1 }]);
+    } finally { rmSync(new URL('..', dir), { recursive: true, force: true }); }
+});
+
+test('new names enter by kind with their fields, and a name held in its culture or overused is refused', () => {
+    const db = { first_names: [{ name: 'Ion', language_ethnicity: 'romanian' }], last_names: [] };
+    const first = ['first', 'romanian', 'Mihai', 'male', 'Wikidata', 'adult', 'contemporary', 'neutral', 'average', 'pleasant', 'common', 'sliceOfLife', '-'];
+    const last = ['last', 'romanian', 'Popescu', '-', 'Wikidata', 'contemporary', 'neutral', 'pleasant', 'common', 'sliceOfLife', '-'];
+    assert.deepEqual(addNames(db, [first, last], new Set()), ['add first romanian Mihai male (Wikidata)', 'add last romanian Popescu no gender (Wikidata)']);
+    assert.deepEqual([db.first_names[1].age, db.first_names[1].themes, 'gender' in db.last_names[0]], [['adult'], [], false]);
+    assert.throws(() => addNames(db, [['first', 'romanian', 'Íon', ...first.slice(3)]], new Set()), /already held/);
+    assert.throws(() => addNames(db, [['last', 'romanian', 'Elara', ...last.slice(3)]], new Set(['elara'])), /overused/);
 });
 
 // What must stay true of the data. An apply tool's asserts check its input, once, on the database as
@@ -489,8 +544,8 @@ function checkNamesAndHandles(data) {
 function checkSurnameGenders(data) {
     const cultures = ['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish', 'greek', 'nepalese', 'irishGaelic', 'baltic', 'azerbaijani'];
     const FEMALE = /(sk|ck)a$|dóttir$|dottir$|dotter$|ová$|ienė$|(ов|ев|ск)а$|(ов|ев)ая$|(ov|yev)a$|(idou|opoulou)$/u;
-    // Not -шин: the Ukrainian -ишин stays the same for a woman.
-    const MALE = /(sk|ck)i$|ński$|(ов|ев|ий)$|[^ш]ин$|(ov|ev|yov)$|ņš$|(opoulos|idis|ides)$|^(Ó|Mac) /u;
+    // Not -шин: the Ukrainian -ишин stays the same for a woman; nor the noun Литвин (Lytvyn).
+    const MALE = /(sk|ck)i$|ński$|(ов|ев|ий)$|(?<!^Лит)[^ш]ин$|(ov|ev|yov)$|ņš$|(opoulos|idis|ides)$|^(Ó|Mac) /u;
     const wrong = data.last_names.filter(e => cultures.includes(e.language_ethnicity)).filter(e =>
         (FEMALE.test(e.name) && e.gender !== 'female') || (MALE.test(e.name) && e.gender !== 'male')
         // -son follows the person's sex in Icelandic; in Swedish it is a family name of both sexes.
@@ -638,13 +693,13 @@ function checkNoNameLost(data) {
     assert.deepEqual([inCulture(data.first_names, 'vietnamese').some(e => e.name === 'Trần'), inCulture(data.last_names, 'vietnamese').some(e => e.name === 'Trần')], [false, true], 'Trần is a surname');
 }
 
-// Milestones 10a and 10b: each common name of tools/m10a-names.txt and m10b-names.txt stands in its
-// culture with its sex (a surname's "-" is none).
+// Milestones 10a, 10b and 10b2: each common name of tools/m10a-names.txt, m10b-names.txt and
+// m10b2-names.txt stands in its culture with its kind and sex (a surname's "-" is none).
 function checkCommonNames(data) {
-    for (const [file, field] of [['m10a-names.txt', 'first_names'], ['m10b-names.txt', 'last_names']]) {
+    const held = new Set(['first', 'last'].flatMap(kind => data[`${kind}_names`].map(e => `${kind}/${e.language_ethnicity}/${e.name}/${e.gender ?? '-'}`)));
+    for (const file of ['m10a-names.txt', 'm10b-names.txt', 'm10b2-names.txt']) {
         const lines = parseLines(readFileSync(new URL(`./tools/${file}`, import.meta.url), 'utf8'));
-        const held = new Set(data[field].map(e => `${e.language_ethnicity}/${e.name}/${e.gender ?? '-'}`));
-        assert.deepEqual(lines.map(([, c, n, g]) => `${c}/${n}/${g}`).filter(k => !held.has(k)), [], file);
+        assert.deepEqual(lines.map(l => l.slice(0, 4).join('/')).filter(k => !held.has(k)), [], file);
     }
 }
 

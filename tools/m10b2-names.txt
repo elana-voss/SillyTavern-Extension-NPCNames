@@ -1,0 +1,1293 @@
+# Milestone 10b2: the 50 most common first names of each sex and 100 most common surnames per culture
+# that the database lacked, for the cultures name-dataset has no list for and Irish Gaelic, ranked by how
+# many people of the culture bear them on Wikidata, each read by three readers of different vendors; made
+# by tools/m10b2-read.mjs. Fields: first | culture | name | gender | source | ages | eras | roles |
+# intelligence | allure | commonness | genres | themes; last | culture | name | gender (- none) | source |
+# eras | roles | allure | commonness | genres | themes
+first | hawaiian | Kawika | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | hawaiian | Nalani | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | floral
+first | latin | Theodorus | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Flavius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | regal
+first | latin | Julian | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Gaudentius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Dionysius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | religious
+first | latin | Paulus | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Maximus | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | regal
+first | latin | Vincentius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Gregorius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Clemens | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Castor | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Primo | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Felicianus | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Anastasius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | religious
+first | latin | Cassian | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | scholarly
+first | latin | Evagrius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Paulinus | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Amelius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | scholarly
+first | latin | Primus | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | latin | Januarius | male | Wikidata | adult | victorian,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | maori | Hohepa | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | maori | Hōne | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | maori | Te Piere | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | maori | Rawiri | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Pāora | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | maori | Rāpata | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Ngarimu | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Ōriwa | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | maori | Rewi | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Hirini | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Henare | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Morehu | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Ruawhitu | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Riki | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Manu | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Kepa | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Hana | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | maori | Aroha | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Hariata | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Taika | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | maori | Ngaio | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | maori | Elisapeta | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | maori | Reremoana | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Hinemoa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Hinerangi | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Te Aroha | female | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | maori | Ngahuia | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Hiria | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Maiki | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Niria | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Mere | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Arihia | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Raukura | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Matire | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Wairata | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | watery
+first | maori | Marewa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Ngarongoa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | maori | Naumai | female | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | maori | Rokahurihia | female | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | maori | Rahera | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Damdinsüren | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Ganbold | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Natsagdorj | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Temüüjin | male | Wikidata | child,adult | victorian,modern,contemporary | neutral | average | pleasant | common | sliceOfLife | regal
+first | mongolian | Batmönkh | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Enkhbat | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Chuluunbat | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Munkhbayar | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | celestial
+first | mongolian | Erdenebayar | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Tulga | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Dorjpalam | male | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Tamir | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Gantulga | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Khaltar | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Atschbadrach | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Galsan | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Bat-Ochir | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Nergüi | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Enkhpurev | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Timur | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | regal
+first | mongolian | Batu | male | Wikidata | child,youngAdult,adult | victorian,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Batbayar | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Dorje | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | religious
+first | mongolian | Argun | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Šinelama | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Usukhbayar | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Enkhtuvshin | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Bayarsaikhan | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Battushig | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Sainbuyan | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Gerelsukh | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Batdavaa | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Batkhurel | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Belgütei | male | Wikidata | child,youngAdult,adult | victorian,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Boldgiv | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Bayartogtokh | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Terbish | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Gerel-Erdene | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | celestial
+first | mongolian | Jadamba | male | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Zolzaya | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | celestial
+first | mongolian | Shagdar | male | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Ganzorig | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | mongolian | Byambasüren | female | Wikidata | adult,elder | midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Oyun | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Misheel | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Yesugen | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Ariuntungalag | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Selenge | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | watery
+first | mongolian | Nomin-Erdene | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Munkhnaran | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Khulangoo | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Dulamsuren | female | Wikidata | adult,elder | midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Chinbat | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | military
+first | mongolian | Enkhnasan | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Suvdtsetseg | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Namsrayn | female | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Bayarmaa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Mendjargal | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Ganchuluun | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Munkhchimeg | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | celestial
+first | mongolian | Erdenesuvd | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | gemstone
+first | mongolian | Dagva | female | Wikidata | adult,elder | midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Dolgorsuren | female | Wikidata | adult,elder | midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | mongolian | Gerelmaa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | celestial
+first | mongolian | Tuvshinjargal | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Oyuntuguldur | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | mongolian | Banzragch | female | Wikidata | adult,elder | midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Ram | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Krishna | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Chandra | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | celestial
+first | nepalese | Prakash | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | nepalese | Narayan | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Prem | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Hari | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Deepak | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | fiery
+first | nepalese | Narendra | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | nepalese | Raju | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | nepalese | Anil | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | nepalese | Lal | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | nepalese | Sunil | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | celestial
+first | nepalese | Shiva | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Gopal | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Bahadur | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | military
+first | nepalese | Indra | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | nepalese | Amar | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Prasad | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Uday | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Ramesh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Bishal | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Raj | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | nepalese | Kedar | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | nepalese | Kamal | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | nepalese | Sanjeev | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Sitaram | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Shankar | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Mahendra | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | nepalese | Mahesh | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Karna | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Bijay | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Kishor | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Upendra | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Arun | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Arjun | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Govinda | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Rajesh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | nepalese | Binod | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Nanda | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Keshav | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Pradip | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | fiery
+first | nepalese | Pushpa | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | nepalese | Suresh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Baburam | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Kiran | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Bharat | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | nepalese | Ganesh | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Basanta | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Sita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Lila | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Sarita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Asha | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Anita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Rita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Shanti | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Devi | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Lakshmi | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Sunita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Gita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Indira | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | nepalese | Rekha | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Manita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Sabita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Anu | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Amrita | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Punam | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Radha | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Reema | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Rupa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Maya | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | mystical
+first | nepalese | Anju | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Pooja | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Nisha | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Mina | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Mira | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Sujata | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Sahana | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Nirmala | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Sabina | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Gauri | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Sushama | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Aditi | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Bimala | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Suhana | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Jhuma | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Rabina | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Nilima | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Shree | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Muskan | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Ronali | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Annapurna | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Sarada | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Sadichha | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Malvika | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Kanta | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Sara | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | nepalese | Dharma | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | nepalese | Sujana | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | George | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Paul | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | romanian | Manuel | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Anton | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Victor | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Emil | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Marc | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Eduard | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Sebastian | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Marcel | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Pavel | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Theodor | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Felix | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Florian | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | romanian | Leonard | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Emanuel | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | romanian | Edmond | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Conrad | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Nicola | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Filip | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Augustin | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Stan | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Damian | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | romanian | Ludovic | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | romanian | Ștefan | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Vladimir | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Virgil | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | literary
+first | romanian | Angela | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | celestial
+first | romanian | Victoria | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | romanian | Vera | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Sofia | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | scholarly
+first | romanian | Kristina | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | romanian | Denise | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Renate | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Lina | female | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Manuela | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Emilia | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Bianca | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Lara | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Valeria | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Elvira | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Gina | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Aurora | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | celestial
+first | romanian | Daria | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | romanian | Flavia | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Delia | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Felicia | female | Wikidata | youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Alba | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Lia | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Aurelia | female | Wikidata | youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Alexa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Livia | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | romanian | Annamaria | female | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | swahili | Eliud | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | religious
+first | swahili | Cosmas | male | Wikidata | youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | religious
+first | swahili | Khamis | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | swahili | Abdi | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | religious
+first | swahili | Rajab | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | religious
+first | swahili | Marwa | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | floral
+first | swahili | Seif | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | regal
+first | swahili | Sospeter | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | religious
+first | swahili | Zebedayo | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | religious
+first | swahili | Ramadhan | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | religious
+first | swahili | Stephano | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | swahili | Gervas | male | Wikidata | youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | religious
+first | swahili | Nia | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pretty | common | sliceOfLife | -
+first | swahili | Khadija | female | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | swahili | Fatma | female | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | swahili | Nyota | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | celestial
+first | swahili | Njoki | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | swahili | Teresia | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | swahili | Linet | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | swahili | Salma | female | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | swahili | Tatu | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | swahili | Happiness | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | swahili | Wangari | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | swahili | Wanjiku | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | swahili | Muthoni | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | swahili | Achieng | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | swahili | Minja | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | swahili | Rahma | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | swahili | Najma | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | celestial
+first | swahili | Miza | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | swahili | Hamida | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | swahili | Munde | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | swahili | Lathifah | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | swahili | Zuleikha | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Anucha | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Tanongsak | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Chakrit | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | ชวลิต | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Santi | male | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Adisak | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | พีรพัฒน์ | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Chaiwat | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | วินัย | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Tanawat | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Niti | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Seksan | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Suwat | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | ณวัฒน์ | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | ธนภัทร | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Nattawat | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Danai | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Toon | male | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Saranyu | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Poompat | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Pongsakorn | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Somsak | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | นพปฎล | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Nakarin | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Anat | male | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Tana | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Natthapat | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Thanawat | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Mongkol | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Nattawut | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Pinit | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Sirawit | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Siripong | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Narong | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Kittisak | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Songphon | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Adisorn | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Watchara | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Pichai | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Saran | male | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Worapoj | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Pramot | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Krit | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Tanakorn | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Supachai | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | สมชัย | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Apichasit | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Takdanai | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Napat | male | Wikidata | adult | contemporary | neutral | average | unremarkable | common | sliceOfLife | -
+first | thai | Sunisa | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Nicha | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Porntip | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | แอนนา | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | ชญานิษฐ์ | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | อะแมนดา | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Benyapa | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | มีมี่ | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Peeraya | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Yanisa | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Sukanya | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Soraya | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Sutatta | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Supatra | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Warattaya | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Yanin | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Ladawan | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Wanna | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Jenjira | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Kanyawee | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Puttita | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Sumol | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Natcha | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Jutatip | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Chanida | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Chananchida | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Suchanya | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Sasithorn | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Ajjima | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Saranporn | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Chinda | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Janyaporn | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | Pimchanok | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Chanya | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Kanyanat | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Nichakarn | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | แคทเธอริน | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | ศศพินทุ์ | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Yanika | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | คิม เบอรี่ | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Ungsumalynn | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Thidapa | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Tapaphaipun | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Tanarattha | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Tanyares | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Taksaorn | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Suthita | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Supassra | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | thai | Prapawadee | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | thai | ณิชชาอร | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | ukrainian | Микола | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Олег | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | ukrainian | Анатолій | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | ukrainian | Євгеній | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Роман | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | ukrainian | Валерій | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Борис | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Павло | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Ярослав | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Максим | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | ukrainian | Руслан | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Тарас | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Валентин | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Петро | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | ukrainian | Вадим | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Степан | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Богдан | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | ukrainian | Леонід | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Станіслав | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Антон | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Денис | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Георгій | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Артур | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | ukrainian | Ростислав | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Орест | male | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Кирило | male | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Оксана | female | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Наталія | female | Wikidata | child,youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Mariia | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | ukrainian | Діана | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | lunar
+first | ukrainian | Дарія | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Софія | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | scholarly
+first | ukrainian | Lesia | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Вероніка | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Олеся | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Валерія | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Ярослава | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Мар'яна | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | ukrainian | Ярина | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Minh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Miên | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | vietnamese | Hoàng | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | vietnamese | Quang | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Quân | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | military
+first | vietnamese | Giuse | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | vietnamese | Hải | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | watery
+first | vietnamese | Thịnh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Vinh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Bảo | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | gemstone
+first | vietnamese | Nguyên | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | scholarly
+first | vietnamese | Duy | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | scholarly
+first | vietnamese | Hiếu | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | scholarly
+first | vietnamese | Cường | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | military
+first | vietnamese | Quốc | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | scholarly
+first | vietnamese | Châu | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | gemstone
+first | vietnamese | Nam | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | vietnamese | Khoa | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | scholarly
+first | vietnamese | Tài | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | vietnamese | Phêrô | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | vietnamese | Tâm | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Lâm | ambiguous | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
+first | vietnamese | Phước | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | vietnamese | Phaolô | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | vietnamese | Lộc | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Công | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | scholarly
+first | vietnamese | Thị | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Huyền | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Thảo | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | vietnamese | Thủy | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | watery
+first | vietnamese | Kim | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | gemstone
+first | vietnamese | Thu | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Hồng | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | vietnamese | Huệ | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | vietnamese | Trinh | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Hoài | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | vietnamese | Đào | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | floral
+first | vietnamese | Nhân | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | scholarly
+first | vietnamese | Cát | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Tosin | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Ọláwálé | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Lanre | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Bimbo | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Jimoh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Bim | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Oluwaseyi | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Biodun | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Adebisi | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Asimiyu | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Boluwaji | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Kolade | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Iyabo | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Ọpẹ́yẹmí | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Idowu | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Motunrayo | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Moji | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Dupe | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Arinola | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Lola | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Ẹ̀bùnolúwa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | yoruba | Yewande | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Olawunmi | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Oyinkansola | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Olaide | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | yoruba | Omolade | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | yoruba | Temiloluwa | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | yoruba | Adérónkẹ́ | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | regal
+first | yoruba | Màríà | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | irishGaelic | Jack | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Kevin | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Ryan | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Neil | male | Wikidata | adult,elder | midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Sean | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Tomás | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Liam | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Finn | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Rory | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Niall | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Kerry | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Conor | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Ronan | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Declan | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Dermot | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Eoin | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Donal | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Seamus | male | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Pádraig | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Cathal | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Cormac | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Ciarán | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Darragh | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Shay | male | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Cian | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Kieron | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Neale | male | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Peadar | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Mícheál | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Torin | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Gearóid | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Cillian | male | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Máirtín | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Oran | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Jarlath | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Aran | male | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Donnchadh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Seosamh | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Ragnall | male | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Finnian | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Tarlach | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Daire | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Oisín | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Caoimhín | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Ultán | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Aodhán | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Conleth | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Dáithí | male | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Bridget | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | irishGaelic | Erin | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Deirdre | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | literary
+first | irishGaelic | Ciara | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Maeve | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Noreen | female | Wikidata | youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Cassidy | female | Wikidata | youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Aoife | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Aisling | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Siobhán | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Máire | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Moya | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Eimear | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Mairéad | female | Wikidata | child,youngAdult,adult,elder | victorian,nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Eilish | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Saoirse | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Máirín | female | Wikidata | youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Delma | female | Wikidata | adult,elder | nineteenTwenties,midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Ailbhe | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Grania | female | Wikidata | adult,elder | victorian,nineteenTwenties,midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | literary
+first | irishGaelic | Fidelma | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Nollaig | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Caitlín | female | Wikidata | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Bryna | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Róis | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Scota | female | Wikidata | adult | contemporary | neutral | average | pleasant | common | sliceOfLife | -
+first | irishGaelic | Concepta | female | Wikidata | youngAdult,adult,elder | nineteenTwenties,midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | religious
+first | irishGaelic | Acushla | female | Wikidata | youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Nóinín | female | Wikidata | adult,elder | midcentury,contemporary | neutral | average | pleasant | common | sliceOfLife,noirDetective | -
+first | irishGaelic | Riona | female | Wikidata | child,youngAdult,adult | modern,contemporary | neutral | average | pleasant | common | sliceOfLife | -
+last | hawaiian | Aiona | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | hawaiian | Cazimero | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | hawaiian | Cravalho | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | hawaiian | Kahaloa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | hawaiian | Kailimai | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | hawaiian | Pukui | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Parata | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Ngata | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Watene | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Harawira | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Waititi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Te Wiata | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Ruwhiu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kihirini | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Pānoho | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Tauroa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Paikea | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Mikaere | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Durie | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | maori | Hepi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Muru | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Heuheu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Moeahu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Rameka | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kingi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Hikaka | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Reweti | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Ngārimu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Maihi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kanawa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Matamua | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kawharu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Huata | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | maori | Hopa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Tiatoa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Te Aho | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Wiri | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Whata | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Raumati | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Katae | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kaipo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Aranui | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Poananga | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Makoare | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Tikao | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Warahi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Te Morenga | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Pokaia | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Ioane | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kake | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kātene | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kereama | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Kamo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Unahi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Koea | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Turei | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Matenga | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Pou | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Pihama | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Taurua | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Taiaroa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Rewi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | maori | Mutu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | mayan | Pech | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Bajracharya | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Bogati | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Shahi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | regal
+last | nepalese | Subba | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Kandel | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Amatya | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Lamsal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Sapkota | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Basnyat | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Neupane | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Tiwari | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | scholarly
+last | nepalese | Gyawali | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Das | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Rayamajhi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Bahadur | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | regal
+last | nepalese | Devkota | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Kumari | female | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | nepalese | Dulal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Devi | female | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | religious
+last | nepalese | Thapaliya | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Uprety | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Kafle | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Gharti | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Baksi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Dahal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Bhatta | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | scholarly
+last | nepalese | Rimal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Chand | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Bhagat | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | religious
+last | nepalese | Thakur | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Tamrakar | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Agrahari | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Baral | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Pal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Rawal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Wagle | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Rajbhandari | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | regal
+last | nepalese | Chapagain | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Lohani | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Anand | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | nepalese | Roka | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Budha | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Silwal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Raut | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Gopal | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | religious
+last | nepalese | Sitaula | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Maskey | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Nepal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Mahat | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | nepalese | Dhami | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Roman | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | regal
+last | romanian | Tudor | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | romanian | Dumitrescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Constantinescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Antal | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Georgescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Rădulescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Stan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Petrescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Marinescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | watery
+last | romanian | Rus | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Lupu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Demeter | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Gaspar | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | romanian | Nicolau | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Marc | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Teodorescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Lazăr | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Florea | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | floral
+last | romanian | Stănescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Nagy | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Bucur | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Pena | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Stanciu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Anghel | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Coman | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Iordache | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Ștefănescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Suciu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Olteanu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Dane | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Neagu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | German | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Enache | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Voicu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Kovács | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Moldovan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Florescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | floral
+last | romanian | Szabó | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Vasilescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | regal
+last | romanian | Cosma | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Stancu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Manea | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Apostol | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | religious
+last | romanian | Ioniță | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Balaban | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Crișan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Manu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Drăgan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Gabor | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Mihăilescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Nicolescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Șerban | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Man | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Pascu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Bratu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Stoian | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Barbu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Mureșan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Niță | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Alexandrescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Păun | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Nica | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Bodnar | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Dobrescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Sârbu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Năstase | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Soare | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | solar
+last | romanian | Niculescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Enescu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Roșu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Bali | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | romanian | Dumitriu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Odhiambo | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Cheruiyot | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kosgei | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kirui | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Rotich | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Korir | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kariuki | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Koech | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Maina | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kimani | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Otieno | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Ochieng | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kiprop | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Owino | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Tanui | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Onyango | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Rono | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Mollel | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kiptoo | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Nderitu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kemboi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Mbugua | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kipketer | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Ruto | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Makokha | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kipruto | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kiptum | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kiplagat | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kamau | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Mutai | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Njoroge | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Okoth | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kimutai | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Odinga | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Langat | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Karanja | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Okumu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Biwott | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kipsang | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Ouma | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kiprotich | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Yego | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kimaiyo | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kipyego | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Gikonyo | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Marwa | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Chege | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Komen | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Wainaina | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Ngugi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Omondi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Limo | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Mutua | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Were | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Gitau | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Wanyama | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Bett | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Obama | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Sang | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Odera | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Gitonga | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Nyamai | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Murungi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Njenga | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kenyatta | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Msuya | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Mabula | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Komba | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Airo | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Lema | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Cheyo | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Muriuki | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Wako | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Chepkwony | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kioko | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Makuto | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Oduor | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Wahome | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Awori | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Mwaura | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Obiero | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Soi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Kigen | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | swahili | Waweru | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | ชินวัตร | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | ภิรมย์ภักดี | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Pattabongse | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | เจนเซน | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Teeraratsakul | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | ปิ่นทอง | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | บุนนาค | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | คำสิงห์ | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chidchob | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | ฉัตรบริรักษ์ | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Promsarin | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Bū̀athǭ́ng | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Jindapol | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Jongjit | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | ไชยมณี | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Thongsari | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Ngernsrisuk | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Kanchanaraphi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Thanathiratham | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chochuwong | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Aimsaard | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Vitidsarn | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Vejjajiva | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Ampansuwan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Wattanasin | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | รังสิตพล | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | รัตนะรัต | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Ponsana | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Weerasethakul | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Kaosamaang | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Sothon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Apisuk | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Thongnuam | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | จุฑานุกาล | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Srinavakul | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | ตระกูลไกรฤกษ์ | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Puavaranukroh | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Thongkham | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Siri | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Meechai | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Teekhatrakul | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Makkasasithorn | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chatupornkarnchana | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Laisuan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Kunakorn | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chaiman | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Loaharanu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Dansoonthornwong | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Tepnarong | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Piyawatcharavijit | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Laohathaimongkol | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chamnaktan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Thienthong | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chitcharoen | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Krajangjit | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Amatayakul | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Sukjai | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Dumrongthamavoot | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Iamratanamaetheekul | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Kleebyeesoon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Deearom | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Singkaew | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Aiamvareesrisakul | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Roongpiboonsopit | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Utsanon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Uakoolwarawat | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Jatupanaporn | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Bhakdi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Sarasin | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Sibunruang | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Plungwech | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Radarong | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Viseskul | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Sirapatsakmetha | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Jirapreechanon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Suwannapura | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chaisri | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Ramnarong | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Udomchavee | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Paksukcharern | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chanachaisuwan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Udomsilp | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Thanachat | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Meelarp | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Janngeon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Jaroenrattanatarakoon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Jarujitranon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Khai | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Teerawiwatana | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Sansaniyakulvilai | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Homniam | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chalardchaleam | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | La-ongmanee | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | thai | Leearamwat | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Haorangsi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chakrabongse | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Chaianan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Watcharatrakul | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Punsri | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | thai | Buranaprasertsuk | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Бойко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Бондаренко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Попов | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Пономаренко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Іванов | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Ткаченко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Петров | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Сердюк | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Павлов | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Кравченко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Павленко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Назаренко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Коваль | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Клименко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Москаленко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Василенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Головко | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Терещенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Ткачук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Іщенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Мельник | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Сидоренко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Луценко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Костюк | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Білик | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Гуменюк | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Чумак | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Савчук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Карпенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Іващенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Кушнір | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Кириченко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Юрченко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Пархоменко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Пасічник | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Сорока | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | ukrainian | Дорошенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Пінчук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Тищенко | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Буряк | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Литвин | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Козак | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Пилипчук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Гончарук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Денисенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Кравчук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Максименко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Мельничук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Третяк | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Герасимчук | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Мовчан | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Колесник | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Харченко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Остапенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Бабенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Мазур | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Дзюба | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Костенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Дерев'янко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Величко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Попович | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Костюченко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Ковальов | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Соколовський | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Деркач | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Паламарчук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Самойленко | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Кравець | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Тимченко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Чайка | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | ukrainian | Кононенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Яковенко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Мірошниченко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Бойчук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Чернявський | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Дорош | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Семененко | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Черняк | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Федоренко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Яремчук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Даценко | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Гавриш | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Поліщук | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Романенко | male | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | ukrainian | Руснак | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Lê | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Hoàng | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Võ | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Cao | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Đinh | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Mai | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Thich | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | religious
+last | vietnamese | Châu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Tôn Thất | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Lã | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Diệp | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Lư | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Khổng | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Khương | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Lại | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Nghiêm | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Văn | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Kiều | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Đồng | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Tôn Nữ | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Ninh | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Hong | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Ngụy | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Tăng | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Nông | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Thẩm | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Vi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Công | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Cù | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Âu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Chung | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Tôn | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Giang | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Kim | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | gemstone
+last | vietnamese | Mã | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Nguyễn Phúc | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Tào | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Le Viêt | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Chương | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Cầm | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Hàn | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Hàng | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Dư | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Van Nghi | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Quyền | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Hứa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Do | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Lục | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Ứng | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Cầu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Lieu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | vietnamese | Đậu | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Doan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Cung | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Dinh | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Banh | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Nham | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Chan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | vietnamese | Giáp | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Olatunji | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Olaniyan | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Gbadamosi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Àpáta | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | earthy
+last | yoruba | Oladokun | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Onifade | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Oyeleye | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | yoruba | Olowofoyeku | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ibitoye | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Olatoye | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Oladejo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Olaitan | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Odùkọ̀yà | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ojulárì | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ogunkoya | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Obafemi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | yoruba | Adefuye | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | yoruba | Adetiba | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Tinubu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Elemide | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Awójọbí | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Openiyi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Alákijà | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Falana | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Owolewa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Oladosu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ògúndèjì | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Olaiya | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ọnánúgà | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ladipo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ayanbadejo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Tejuosho | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Aládésanmí | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | yoruba | Oyelowo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | yoruba | Bamigboye | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Oyeleke | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | yoruba | Adégbénró | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | yoruba | Majekodunmi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ogunlesi | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Soyinka | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Kidjo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Arotile | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Olajuwon | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Abudu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Agbo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Kollington | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Onakoya | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Owoh | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Oyebanjo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Akala | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Adékọ̀gbẹ́ | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | regal
+last | yoruba | Awósùsì | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Àgbẹ́bí | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Aníkúlápó | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Alausa | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Odejoke | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Ogunsheye | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Odusoga | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Lagunju | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Okebukola | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Bello | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Otedola | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Oni | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Osinowo | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Lawani | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Dosunmu | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Sàlàkọ́ | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Atta | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Salami | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Fashola | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Kuti | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Oriola | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Koya | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | yoruba | Adìsá | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Campbell | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Gordon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Murphy | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | O'Brien | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ryan | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Reynolds | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ferguson | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | McCarthy | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Lane | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Burns | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Lynch | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | O'Connor | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | O'Connell | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Conaill | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Doyle | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Dillon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Gallagher | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Brennan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Foley | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Owens | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Moran | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | McMahon | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Duffy | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | McDowell | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Fagan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Shannon | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | McAllister | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Maher | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | O'Malley | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Dempsey | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Dolan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Fallon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Phelan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Gleason | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Hagan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Cooney | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Donahue | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | O'Hanlon | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | O'Shaughnessy | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Riordan | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | O'Flaherty | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Flaithearta | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | McCafferty | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Bannon | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Magan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Keough | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Deasy | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Conboy | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Morrogh | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | MacGowan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Gahan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | O'Beirne | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Breathnach | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Boyne | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ó Súilleabháin | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Hennigan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Meara | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ó Néill | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | O'Quin | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Gogarty | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ó Catháin | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Tuama | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Raghallaigh | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Mateer | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Mac Lochlainn | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Laoghaire | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Mac Mathúna | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó hÉigeartaigh | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Donnchadha | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | O'Haire | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Corish | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | O'Neale | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Hourihane | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ó Cuív | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Ceallacháin | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Sé | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Linnehan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ó Criomhthain | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Mac Domhnaill | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Comáin | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Commane | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ó Faoláin | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Donnabháin | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Condrin | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | O'Scannlain | female | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Scanaill | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Laoire | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Drisceoil | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Nic Liam | female | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | O’Flinn | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ní Ghrálaigh | female | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | O'Lear | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | O'Hallahan | - | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Ó Fiaich | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | MacTiernan | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ní Mhuirí | female | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Dossen | - | Wikidata | contemporary | neutral | unremarkable | common | sliceOfLife | -
+last | irishGaelic | Ó Liatháin | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
+last | irishGaelic | Mac Eachmharcaigh | male | Wikidata | contemporary | neutral | pleasant | common | sliceOfLife | -
