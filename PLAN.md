@@ -31,7 +31,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 5 fix | Errors in the new names | R1, R2 | Done | | 3M | 0.3M | 6.5M from the calibration rerun on (the first trial's agent not counted), 0.24M, Grok $1.96; over estimate: 88 % is cache reads at 60-70k context per turn; reviews by Fable 5.1 medium |
 | 8 | Live run and release | R1 | Done | | 1M | 0.1M | live runs 1.6M and second, 0.06M and 0.05M; released as 0.2.0, the owner's number |
 | 9 | A name appears when it is learned | R10, R12 | Done | | 3M | 0.6M | Claude 3.6M, nano-gpt 0.40M |
-| 10a | Common first names | R2, R3, R11, R12 | Done | | 12M | 0.45M | nano-gpt 0.33M; code review Fable 5.2 medium |
+| 10a | Common first names | R2, R3, R11, R12 | Done | | 12M | 0.45M | Claude 11.3M (three agents 3.94M, 4.1M, 2.65M; review 0.56M), nano-gpt 0.33M; code review Fable 5.2 medium |
 | 10b | Common surnames | R2, R3, R11, R12 | Planned | High | 14M | 0.40M | |
 | 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Planned | High | 12M | 0.36M | |
 | 10c | True tags and placement | R4, R11, R12 | Planned | High | 9.5M | 0.62M | |
