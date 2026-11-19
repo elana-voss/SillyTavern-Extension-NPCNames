@@ -7,7 +7,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { foldName, loadOverused } from './tools/overused.mjs';
 import { parseLines } from './tools/db.mjs';
-import { decide, firstNameTags, parseAnswers } from './tools/name-read.mjs';
+import { decide, firstNameTags, mergeSexes, parseAnswers } from './tools/name-read.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -323,6 +323,20 @@ test('list entries become names on two of three readers: spellings fold, abbrevi
         [['child', 'youngAdult', 'adult', 'elder'], ['midcentury', 'modern', 'contemporary'], ['sliceOfLife', 'noirDetective'], ['religious']]);
 });
 
+test('a Latin-letter entry\'s "latin" answer is no key, and only a name new in both sexes becomes ambiguous', () => {
+    const list = ['Andrew', 'Andy', 'Ivan', 'Иван'];
+    const row = (i, latin) => `${i} english g - ${latin} DE l -`;
+    const answers = [0, 1, 2].map(() => parseAnswers([row(1, '-'), row(2, 'Andrew'), row(3, '-'), row(4, '?')].join('\n')));
+    const names = decide(list, answers, 'english', () => false);
+    assert.deepEqual(names.map(g => g.keys), [['andrew'], ['andy'], ['ivan'], ['иван']]);
+    const echoed = parseAnswers('1 Nathalie french g - - ABCDEF l -\n2 french g 1 - CD l -');
+    assert.deepEqual([...echoed].map(([i, x]) => [i, [...x.peoples], x.kind, x.same]), [[1, ['french'], 'g', null], [2, ['french'], 'g', 1]]);
+    const line = (sex, name, keys) => ({ culture: 'english', sex, name, keys: new Set(keys) });
+    assert.deepEqual(mergeSexes([line('male', 'Andrew', ['andrew']), line('male', 'Andy', ['andy', 'andrew']),
+        line('female', 'Andrea', ['andrea']), line('female', 'Andrew', ['andrew'])]).map(m => `${m.name} ${m.gender}`),
+    ['Andrew ambiguous', 'Andy male', 'Andrea female']);
+});
+
 // What must stay true of the data. An apply tool's asserts check its input, once, on the database as
 // it stood before: none of them looks at the database as it is now, so each pinned name stays here.
 const inCulture = (list, culture) => list.filter(e => e.language_ethnicity === culture);
@@ -503,9 +517,17 @@ function checkNoNameLost(data) {
     assert.deepEqual([inCulture(data.first_names, 'vietnamese').some(e => e.name === 'Trần'), inCulture(data.last_names, 'vietnamese').some(e => e.name === 'Trần')], [false, true], 'Trần is a surname');
 }
 
+// Milestone 10a: each common first name of tools/m10a-names.txt stands in its culture with its sex.
+function checkCommonFirstNames(data) {
+    const lines = readFileSync(new URL('./tools/m10a-names.txt', import.meta.url), 'utf8').split(/\r?\n/)
+        .filter(l => l && !l.startsWith('#')).map(l => l.split(' | '));
+    const held = new Set(data.first_names.map(e => `${e.language_ethnicity}/${e.name}/${e.gender}`));
+    assert.deepEqual(lines.map(([, c, n, g]) => `${c}/${n}/${g}`).filter(k => !held.has(k)), []);
+}
+
 test('database invariants', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames, checkSurnamesReachable, checkDocuments, checkNoNameLost]) check(data);
+    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames, checkSurnamesReachable, checkDocuments, checkNoNameLost, checkCommonFirstNames]) check(data);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

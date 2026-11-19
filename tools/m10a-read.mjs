@@ -3,13 +3,14 @@
 // and the names the database lacks written to tools/m10a-names.txt for tools/m10a-apply-first-names.mjs.
 //
 // Run: node tools/m10a-read.mjs [--cultures a,b] [--window 80] [--budget 450000] [--write]
+// The window is 80 entries, 240 on the lists in WIDE; Irish Gaelic waits for 10b2.
 // Key: env NANOGPT_API_KEY. Answers are stored under logs/work/m10a/answers, so a rerun costs nothing;
 // no new request starts once the stored answers' input tokens pass the budget.
 // Writes logs/work/m10a/summary.txt (per culture and sex) and rejected.txt; prints a short summary.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { client, pool } from './nanogpt.mjs';
 import { countriesOf, loadLists, norm, rankedEntries, COUNTRIES } from './name-lists.mjs';
-import { decide, firstNameTags, parseAnswers, promptFor } from './name-read.mjs';
+import { decide, firstNameTags, mergeSexes, parseAnswers, promptFor } from './name-read.mjs';
 import { foldName, loadOverused } from './overused.mjs';
 
 const READERS = ['meta/muse-spark-1.3-contributor', 'deepseek/deepseek-v4.1-flash', 'minimax/minimax-m3'];
@@ -23,7 +24,10 @@ const arg = (k, d) => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i
 const WINDOW = Number(arg('window', 80));
 const BUDGET = Number(arg('budget', 450000));
 const nd = loadLists();
-const CULTURES = arg('cultures', '') ? arg('cultures').split(',') : Object.keys(COUNTRIES).filter(c => countriesOf(nd, c).length);
+// Ireland's list is English-speaking Ireland's (John, Mary, Paul): Irish Gaelic is filled in 10b2 (PLAN.md).
+const LATER = ['irishGaelic'];
+const CULTURES = arg('cultures', '') ? arg('cultures').split(',')
+    : Object.keys(COUNTRIES).filter(c => countriesOf(nd, c).length && !LATER.includes(c));
 
 const db = JSON.parse(readFileSync(new URL('../data/name_database.tagged.json', import.meta.url), 'utf8'));
 const overused = loadOverused();
@@ -31,7 +35,10 @@ const llm = client(new URL('answers/', OUT));
 const base = llm.spent();
 
 const jobs = CULTURES.flatMap(culture => ['male', 'female'].map(sex => ({ culture, sex })));
-for (const j of jobs) j.entries = rankedEntries(nd, j.culture, 'first', j.sex).slice(0, WINDOW);
+// Lists whose first 80 entries gave fewer than 50 names (mostly other peoples' names) are read to 240.
+const WIDE = new Set(['chinese-male', 'chinese-female', 'dutch-female', 'ghanaian-male', 'ghanaian-female', 'nigerian-male',
+    'nigerian-female', 'persian-male', 'persian-female', 'slavicRussian-male', 'slavicRussian-female']);
+for (const j of jobs) j.entries = rankedEntries(nd, j.culture, 'first', j.sex).slice(0, WIDE.has(`${j.culture}-${j.sex}`) ? 240 : WINDOW);
 
 let stopped = 0;
 const calls = jobs.flatMap(j => READERS.map(model => ({ j, model })));
@@ -66,13 +73,7 @@ for (const [ji, j] of jobs.entries()) {
     summary.push([j.culture, j.sex, j.entries.length, answers.map(a => a.size).join('/'), names.length, top.filter(g => g.present).length, added, slop].join('\t'));
 }
 
-// One culture's name new in both sexes' lists enters once, as either sex.
-const merged = [];
-for (const l of lines) {
-    const twin = merged.find(m => m.culture === l.culture && [...l.keys].some(k => m.keys.has(k)));
-    if (twin) { twin.gender = 'ambiguous'; continue; }
-    merged.push({ ...l, gender: l.sex });
-}
+const merged = mergeSexes(lines);
 writeFileSync(new URL('summary.txt', OUT), summary.join('\n') + '\n');
 writeFileSync(new URL('rejected.txt', OUT), 'culture\tsex\trank\tentry\treaders peoples:kind\n' + rejected.join('\n') + '\n');
 const list = s => (s.length ? s.join(',') : '-');

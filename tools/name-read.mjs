@@ -1,5 +1,6 @@
 // Milestone 10's reading of list entries: the readers' blind open question, their answers parsed,
-// and the rule that turns three readers' answers into names. A list entry is a string, not yet a
+// the rule that turns three readers' answers into names, and the merge of a name new in both sexes'
+// lists into one ambiguous entry. A list entry is a string, not yet a
 // name (Md, Mohd, Abdul and four spellings of Muhammad stand in Saudi Arabia's top 20): readers say
 // which peoples give it, what kind of string it is, and which entry above it is the same name.
 // The reader is never told the list's country, the culture asked for or what another reader said.
@@ -54,7 +55,8 @@ export function parseAnswers(text) {
     if (!text) return out;
     for (const l of text.replace(/<think>[\s\S]*?<\/think>/g, '').split(/\r?\n/)) {
         const m = l.trim().replace(/[`*]/g, '')
-            .match(/^(\d+)[.:]?\s+(\S+)\s+([gspax])\s+(\d+|-)\s+(.+?)\s+([A-F]+|-)\s+([pslhu])\s+(\S+)\s*$/i);
+            // A reader may echo the entry after its number (MiniMax on a list of 240): one token is skipped.
+            .match(/^(\d+)[.:]?\s+(?:\S+\s+)?(\S+)\s+([gspax])\s+(\d+|-)\s+(.+?)\s+([A-F]+|-)\s+([pslhu])\s+(\S+)\s*$/i);
         if (!m) continue;
         const peoples = new Set(m[2].split(',').filter(p => p in CULTURES));
         const same = m[4] === '-' ? null : Number(m[4]);
@@ -111,8 +113,10 @@ export function decide(names, readers, culture, present, kind = 'first') {
     for (const members of byRoot.values()) {
         const form = members.find(isName);
         if (!form) continue;
-        const latins = members.flatMap(i => readers.map(a => a.get(i)?.latin).filter(Boolean));
-        const keys = [...members.map(i => norm(names[i - 1])), ...latins.map(norm)];
+        // "latin" is asked only of other scripts; on a Latin-letter entry readers put a related name there (Andy: Andrew).
+        const latins = members.filter(i => !/\p{Script=Latin}/u.test(names[i - 1]))
+            .flatMap(i => readers.map(a => a.get(i)?.latin).filter(Boolean));
+        const keys = [...new Set([...members.map(i => norm(names[i - 1])), ...latins.map(norm)])].filter(Boolean);
         const answers = readers.map(a => a.get(form)).filter(Boolean);
         const periods = Object.keys(PERIODS).filter(p => answers.filter(x => x.periods.includes(p)).length >= 2);
         out.push({
@@ -132,4 +136,15 @@ export function firstNameTags({ periods, allure, theme }) {
         (has('E') || has('F')) && 'modern', 'contemporary'].filter(Boolean);
     const genre = ['sliceOfLife', (has('B') || has('C')) && 'noirDetective'].filter(Boolean);
     return { age, era, role: ['neutral'], intelligence: 'average', allure, commonness: 'common', genre, themes: theme ? [theme] : [] };
+}
+
+/** Lines of new names {culture, sex, keys}: a culture's name new in both sexes' lists enters once, as ambiguous. */
+export function mergeSexes(lines) {
+    const merged = [];
+    for (const l of lines) {
+        const twin = merged.find(m => m.culture === l.culture && m.sex !== l.sex && [...l.keys].some(k => m.keys.has(k)));
+        if (twin) { twin.gender = 'ambiguous'; continue; }
+        merged.push({ ...l, gender: l.sex });
+    }
+    return merged;
 }
