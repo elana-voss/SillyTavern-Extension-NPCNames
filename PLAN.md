@@ -13,6 +13,9 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 - R7 "then write a plan to fix all of this", meaning every finding below; `race: human` is the tag for ordinary human names.
 - R8 About the project that shows how nano-gpt is reached: "do NOT reference that project from here, just look how it access nano-gpt."
 - R9 "Can we offer a toggle in the UI that hides the tool calls on default and shows them when toggled on?"; "only ours"; "we do that to our own tool calls only, when we can isolate them in the UI."
+- R10 A user's report, passed on by the owner, in Claude's summary: a model gives a new character's name at once, like a label over their head, and the tool makes that unavoidable. The owner: "What could be changed is the wording of the prompt that announces this tool to the LLM. But every concrete LLM will interpret these instructions slightly differently: a changed prompt may fix a behavior for one LLM but introduce new issues for a different LLM."
+- R11 The same report, in Claude's summary: the names are mostly far-fetched, and ordinary first names and surnames do not come. The owner: "I am surprised that the names are so bad, as we have so many, many names in the extension."
+- R12 "this is NOT only an English name issue, and NOT only highschool-scenario issue. This is aiming at a GENERAL solution."
 
 ## Milestones
 
@@ -27,7 +30,13 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 7 | Code, documents and tests | R1, R7 | Done | | 2M | 0 | 2.4M, 0; code review none (not due) |
 | 5 fix | Errors in the new names | R1, R2 | Done | | 3M | 0.3M | 6.5M from the calibration rerun on (the first trial's agent not counted), 0.24M, Grok $1.96; over estimate: 88 % is cache reads at 60-70k context per turn; reviews by Fable 5.1 medium |
 | 8 | Live run and release | R1 | Done | | 1M | 0.1M | live runs 1.6M and second, 0.06M and 0.05M; released as 0.2.0, the owner's number |
-| | Total | | | | 28M | 2.8M | |
+| 9 | A name appears when it is learned | R10, R12 | Planned | High | 3M | 0.6M | |
+| 10a | Common first names | R2, R3, R11, R12 | Planned | High | 12M | 0.45M | |
+| 10b | Common surnames | R2, R3, R11, R12 | Planned | High | 14M | 0.50M | |
+| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Planned | High | 12M | 0.44M | |
+| 10c | True tags and placement | R4, R11, R12 | Planned | High | 9.5M | 0.62M | |
+| 10d | The pick leans to common names, if Fable so decides after 10c | R4, R11, R12 | Planned | High | 3M | 0.05M | |
+| | Total | | | | 84.5M | 5.76M | |
 
 Each milestone ends with `node test.js` passing and the extension working on the test bed.
 
@@ -147,9 +156,76 @@ One live model through nano-gpt on the test bed with the finished work: an ordin
 - Second run, screen: nothing broken in the final screenshot, the panel's status line read "Tool calling supported. Extension active." in all five; the panel itself stayed closed, so it is not in the picture.
 - Second run, tokens: 43,983 input, read from the usage figure (19,875,875 to 19,919,858) and equal to the requests' sum; 48,723 with output, of the 100,000 allowed. The key is in no file of the test bed's data afterwards.
 
+### 9. A name appears when it is learned
+
+Cause: the tool's description (`index.js:114`, "Use for every new NPC you introduce") and `assets/advertisement.txt:1,18,28` tie the call to a character's arrival, and `advertisement.js:10` repeats this right before the latest message on every generation.
+
+- The tool is called before writing a reply in which a new character's name first appears, not when the character arrives; a tool call cannot happen in the middle of a reply. Starting text for the instructions, the tool's description following it:
+
+  > Before writing a reply in which a new character's name first appears, call suggest_npc_name, with filters that fit the character as already established. Until then, describe them ("the woman at the counter"). A name appears only when {{user}} would learn it: someone says it, it is written somewhere visible, or {{user}} already knows this person. Give the name as people of that culture and setting would give it. If the card or the user's instructions say how names are revealed, follow those. Never invent a name yourself.
+
+- A late call meets a character who already exists: `assets/advertisement.txt:18` (the returned tags colour the character) changes to passing filters that fit the established character, and `assets/advertisement.txt:28` ("once per new NPC") and `index.js:114` get the same timing. No test pins these sentences today; one new test in `test.js` does.
+- No new setting: a story's own rule (staff are known by name, for example) comes from its card or the user's instructions, which the text defers to.
+- Check, last step, through nano-gpt on the test bed (the owner, 2026-11-19: "yes" to 0.6M): three models of different vendors, old and new wording, three scenes of different kinds, none a school and one not in English, one of them a long chat; each chat gets a second user turn asking the name; two runs per cell. Counted per chat: a name given before {{user}} could learn it; a name that appears without the tool (seen once, Aldous Merric, milestone 8).
+- Passes with no more early names on any model, fewer in total, and no more invented names at the reveal. If one model gets worse, the work stops and the owner is told; no wording per model.
+
+Estimate: the minimum for a build agent, 3M.
+
+### 10. Common names, in every culture and kind of story
+
+The database holds 6,198 human first names and 2,621 surnames, over 53 cultures, so most cultures have about 100-150 first names and 50 surnames. Measured on 2026-11-19, against name-dataset's lists for 36 cultures, matching by spelling with accents removed (native-script and Gaelic forms therefore count as missing):
+
+- A culture's median holds 23 of its country's 100 most common first names and 15 of its surnames. French 4 and 0, Italian 5 and 0, Spanish 10 and 6, German 23 and 2, Dutch 4 and 18, English 50 and 0. English has 863 human first names and 25 surnames. The cultures milestone 5 filled from rank lists score far higher (Azerbaijani 70 and 47, Ethiopian 76 and 57); the older ones were never filled from one.
+- Tags on human first names: age adult 87%, youngAdult 14%, child 5%, elder 1%; era contemporary 80%, midcentury 7%; commonness common 32%.
+- Names a request reaches per culture, median and cultures under 10, of 36: adult today 92, 0; young today 11, 17; child today 1, 32; elder today 0, 36; midcentury adult 0, 33; fantasy adult 15, 12; noir adult 16, 12; common 20, 15.
+- Names with no sign of real use stand under ordinary tags: of 89 English first names tagged `contemporary`, 47 had no US birth before 2000 under that spelling (Yilvoxe, Zyneste, but also South African Lerato, Zinhle, and Mary Anne, which is a real name).
+- `picker.js:60` picks evenly among matches, and surnames follow culture and gender only (`picker.js:87-90`). None of the 33 entries on `tools/overused-names.txt` is among the top 100 first names of 16 countries sampled, so that list blocks no common name.
+
+Holds for all parts: names come from public lists, never from a model; a model only checks them (R2). New sources go in `THIRD_PARTY_LICENSES.md`. `data/name_database.tagged.json` is not recopied from cardwave. No name is stripped; `DROP_ORDER` does not change. Nothing is pushed before the owner's word. One script per part in `tools/`, on `tools/db.mjs`. `tools/name-reach.mjs`, written in 10a, prints the coverage and reach tables above; each part writes its figures from it.
+
+#### 10a. Common first names
+
+Each culture gets its real 50 most common first names of each sex, by the M and F columns of name-dataset's lists, so sex needs no reader. A plain top 100 is mostly men (women in it: Ethiopia 3, Saudi Arabia 3, India 7, Turkey 19, US 34). At most 2,632 are missing (measured), fewer once native-script spellings are matched.
+
+List entries are strings, not yet names: Saudi Arabia's top 20 holds Md, Mohd, Abdul and Muhammad in four Latin spellings. Three readers of different vendors get a blind open question: which people, whether it is a given name, surname, particle or abbreviation, and which entry it is the same name as. Variants are folded, the target counts distinct names after folding, and a new name enters in the form its list ranks highest (Hindi first names stand in Latin script today, Russian mostly in Cyrillic). A romanised entry whose native form is present is no new name (R3). The same read gives a new name's tags, so 10c does not read it again.
+
+Cultures with no name-dataset list (13): Hawaiian, Latin, Maori, Mayan, Mongolian, Native American, Nepalese, Romanian, Swahili, Thai, Ukrainian, Vietnamese, Yoruba. popular-names holds little for them (first names and surnames: Romanian 20 and 12, Thai 5 and 0, Ukrainian 19 and 20, Vietnamese 0 and 44, Nepalese 20 and 24, Mongolian 10 and 0, Tanzania and Kenya 0 and 0), and its first names are newborn lists. Irish Gaelic has a list, but Ireland's holds John, Mary, Paul. They are filled in 10b2.
+
+Estimate: milestones 5 and 5 fix cost 16.4M and 0.61M nano-gpt for 3,504 names, 4.7M and 0.17M per 1,000. That unit includes agents that added no name and 5 fix's extra rounds, so the first batch corrects it, probably downward.
+
+#### 10b. Common surnames
+
+The same for surnames, with the same blind question, folding and single read: the top 100 after folding, up to 2,880 missing, with the gendered forms of the cultures that have them (milestone 3's rules). Same unit.
+
+#### 10b2. Cultures with no list
+
+The 13 cultures above and Irish Gaelic get their common first names and surnames from Wikidata, as milestone 5 did (the owner, 2026-11-19: "yes"), with 10a's blind question, folding and single read. Native American and Mongolian take no surnames. A class with no honest source stays thin and is named to the owner.
+
+Estimate: at most about 2,600 names at 10a's unit, 12M and 0.44M.
+
+#### 10c. True tags and placement
+
+- Three readers of different vendors read every human first name and surname already in the data, 8,819, per culture: in which periods it was given, and where a name with no sign of real use belongs (the owner, 2026-11-19: "yes" to this smaller design). A tag goes on when two of the three give it, with no further judge, and only where the name really fits; this is no widening of a filter (the owner: "I'd prefer to have names that actually fit the categories."). The US yearly births, a free download, check the readers on the one culture that has them.
+- `commonness` follows real rank where a list has the name. A name absent from its culture's top 1500 is never `common`, set by script (outside it: Italian 88 of 101 names, Hindi 86 of 105, Greek 150 of 183, French 61 of 91). A name written in another script than its list goes to the readers, as do cultures with no list. The lists hold living adults or newborns, so `common` means common today; nothing sources Victorian or midcentury commonness outside the US.
+- Names with no sign of real use are placed where they belong (the owner: "the idea is not to strip names but to place/tag/categorize them correctly"). No new culture without the owner's word.
+- The eight requests measured above are reported from `tools/name-reach.mjs`, with no target. A class with no honest source stays thin and is named to the owner.
+
+Estimate: one read of all names as in milestone 5 fix, 6.5M; 8,819 names at its 23.5 input tokens per name and reader, three readers, 0.62M. The question is longer than that one, so the first small batch corrects this figure. The review of milestone 10 as a whole, 2.5M as the audit after milestone 5 and its fixes, comes after whichever part is last and is counted here.
+
+#### 10d. The pick leans to common names
+
+- After 10c, Fable 5.2 medium decides from the `tools/name-reach.mjs` figures whether this part is built (the owner, 2026-11-19: "have Fable decide that after 10c"); first names only.
+- Among the names matching a request, a common name is likelier than an uncommon one and that than a rare one, by three class weights on `commonness` in `pickAndMarkUsed`. No name is excluded, so this is no filter (R4). A `commonness` the AI passes decides as before. The weights are set here and the share each class gets is written down.
+- With a `genre` filter, `preferTagged` (`picker.js:100-107`) serves tagged names first, so the weights act only inside that subset.
+- Without weights, 10a alone gives an even pick for one sex a median 54% (men) and 53% (women) of names from that sex's top 50 (measured over 36 cultures, new names taken as present); English stays at 12% and 11% because of its 402 and 467 names. Surnames from the top 100 reach 62-97%.
+- The used list fades any lean in a long chat: a simulated pool of 10 common, 15 uncommon and 5 rare at 4:2:1 gives 52% common in the first 5 picks, 43% over 20 and 33% at 30.
+- Last step: one live run on the test bed through nano-gpt, 0.05M as milestone 8's second run, across several cultures and kinds of story.
+
+Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits in 10c.
+
 ## Questions for the owner
 
-None open.
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 9.
 
 ## Decisions
 
