@@ -233,19 +233,19 @@ test('the install folder is told from the module\'s address', () => {
 });
 
 test('the AI is told how to ask for an elf, a dwarf or a dragon', () => {
-    const text = ['./assets/advertisement.txt', './index.js'].map(file => readFileSync(new URL(file, import.meta.url), 'utf8'));
+    const text = ['./assets/advertisement.txt', './advertisement.js'].map(file => readFileSync(new URL(file, import.meta.url), 'utf8'));
     for (const race of ['elf', 'dwarf', 'dragon']) assert.ok(text.every(t => t.includes(`race: ${race}`)), race);
 });
 
 test('the AI calls the tool when a name is learned, not when a character arrives', () => {
-    const [ad, code] = ['./assets/advertisement.txt', './index.js']
+    const [ad, code] = ['./assets/advertisement.txt', './advertisement.js']
         .map(file => readFileSync(new URL(file, import.meta.url), 'utf8').replaceAll('\\\'', '\''));
     const timing = 'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name';
     assert.ok(ad.startsWith(timing), 'instructions open with the timing');
     assert.ok(ad.includes('A name appears only when {{user}} would learn it'), 'when a name is learned');
     assert.ok(ad.includes('fit the character as already established'), 'filters for a late call');
     assert.ok(code.includes(timing), 'tool description');
-    for (const [label, text] of [['advertisement', ad], ['index.js', code]]) {
+    for (const [label, text] of [['advertisement', ad], ['advertisement.js', code]]) {
         assert.ok(!/new NPC you introduce|about to introduce|once per new NPC/.test(text), `${label}: arrival timing left`);
     }
 });

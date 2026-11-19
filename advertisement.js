@@ -1,3 +1,52 @@
+// What the AI is told about the tool: its description and parameters, and the
+// instructions placed in the chat.
+
+export const TOOL_DESCRIPTION =
+    'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name, with filters that fit the character as already established; until then, describe them. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human.';
+
+// The tool's parameters, each an enum of the values the name database holds.
+export function buildToolParameters(enumValues) {
+    const enumField = (values, description) => ({
+        type: 'string',
+        enum: values,
+        description,
+    });
+    return {
+        $schema: 'http://json-schema.org/draft-04/schema#',
+        type: 'object',
+        properties: {
+            gender: enumField(enumValues.gender, 'Gender of the new NPC.'),
+            language_ethnicity: enumField(
+                enumValues.language_ethnicity,
+                'Cultural root. Real-world for humans; fantasyElvish, fantasyDwarven, fantasyDragon for non-human races; cyberpunkHandle for online handles.',
+            ),
+            mythology: enumField(enumValues.mythology, 'Pantheon of a god, spirit or monster; pass with race: mythical, never human.'),
+            race: enumField(enumValues.race, 'human for every person; mythical only for a god, spirit or monster; elf, dwarf or dragon for those.'),
+            age: enumField(enumValues.age, 'Lifestage the name fits.'),
+            era: enumField(enumValues.era, 'Period the name evokes.'),
+            role: enumField(enumValues.role, 'Narrative function (hero, villain, mentor, ...).'),
+            intelligence: enumField(
+                enumValues.intelligence,
+                'How cerebral the name sounds: blunt / plain / average / thoughtful / bookish.',
+            ),
+            allure: enumField(
+                enumValues.allure,
+                'How attractive the name sounds: harsh / unremarkable / pleasant / pretty / striking.',
+            ),
+            commonness: enumField(
+                enumValues.commonness,
+                'How recognizable the name should be.',
+            ),
+            genre: enumField(enumValues.genre, "The story's flavour."),
+            themes: {
+                type: 'array',
+                items: { type: 'string', enum: enumValues.themes },
+                description: 'Zero or more decorative tags (overlap match).',
+            },
+        },
+    };
+}
+
 // ST fills the prompt from the newest message backwards until the context
 // budget runs out, so a message at the start of the chat is the first to be
 // cut from a long chat. Right before the latest message it always survives.
