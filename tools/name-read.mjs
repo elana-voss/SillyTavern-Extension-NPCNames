@@ -154,8 +154,11 @@ const agreed = (values, k = 2) => {
  * Where `patronymic` says a culture's surnames are fathers' given names, a given name counts as a surname.
  * Where `sexless(i)` says the source finds entry i borne by both sexes and a reader says so, its form takes no sex (Бойко);
  * where every reader gives it a sex, the women the source counts bear it as a man's form (Попов, Ó Comáin).
+ * Where `oneForm(i)` says entry i's form is the same for both sexes (DECLINING), it takes no sex whatever readers say.
+ * `also` names a people whose names count as the culture's (hindi for Nepal's given names).
  */
-export function decide(names, readers, culture, present, kind = 'first', { gendered = false, patronymic = false, sexless = () => false } = {}) {
+export function decide(names, readers, culture, present, kind = 'first',
+    { gendered = false, patronymic = false, sexless = () => false, oneForm = () => false, also = null } = {}) {
     const n = names.length;
     const own = readers.map(a => {
         const g = groups(n);
@@ -167,7 +170,8 @@ export function decide(names, readers, culture, present, kind = 'first', { gende
     // rejects it. Real surnames that are words (الخطيب, Haddad) were read s by all three.
     // Where `patronymic` says surnames are fathers' given names (Ethiopian, Hausa: Musa), a given name is one too.
     const wanted = k => k === KIND_WANTED[kind] || (kind === 'last' && patronymic && k === 'g');
-    const isName = i => readers.filter(a => wanted(a.get(i)?.kind) && a.get(i).peoples.has(culture)).length >= 2
+    const ofCulture = x => x.peoples.has(culture) || (also !== null && x.peoples.has(also));
+    const isName = i => readers.filter(a => wanted(a.get(i)?.kind) && ofCulture(a.get(i))).length >= 2
         && (kind === 'first' || !readers.some(a => a.get(i)?.kind === 'x'));
     const byRoot = new Map();
     for (let i = 1; i <= n; i++) {
@@ -175,7 +179,7 @@ export function decide(names, readers, culture, present, kind = 'first', { gende
         if (r) byRoot.get(r).push(i); else byRoot.set(i, [i]);
     }
     const SEX = { m: 'male', f: 'female' };
-    const both = i => sexless(i) && readers.some(a => a.get(i) && !a.get(i).sex);
+    const both = i => oneForm(i) || (sexless(i) && readers.some(a => a.get(i) && !a.get(i).sex));
     const readSex = i => (kind === 'last' && gendered && !both(i) ? SEX[agreed(readers.map(a => a.get(i)?.sex))] ?? null : null);
     // A member no two readers give a sex takes the sex its group lacks where the others hold one only (Juška beside Juškienė).
     const OTHER = { male: 'female', female: 'male' };
@@ -253,15 +257,21 @@ export function mergeSexes(lines) {
     return merged;
 }
 
-/** Cultures whose surnames have a man's and a woman's form (PLAN.md Decisions, milestones 3 and 5). */
 /** Whether a source's counts of a surname's bearers (Wikidata's) hold each sex twice and at a twentieth or more: a form
  * of both. On Ukraine's top 200 surnames (10b2) a twentieth put, judged by their endings, 25 forms of both sexes
  * as one sex's and 7 of one sex's as both; a tenth, 30 and 4. Two readers had put all 85 entered as men's.
  * One woman is not enough: Ó Comáin has 2 men and 1 woman on Wikidata. */
 export const bothSexes = ({ male = 0, female = 0 }) => Math.min(male, female) >= Math.max(2, 0.05 * (male + female));
 
+/** Cultures whose surnames have a man's and a woman's form (PLAN.md Decisions, milestones 3 and 5). */
 export const GENDERED = new Set(['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish',
     'greek', 'nepalese', 'irishGaelic', 'baltic', 'azerbaijani', 'latin']);
+/**
+ * Where a gendered culture's surname has a woman's form only if it declines: Ukrainian -ов/-ова, -ін/-іна, -ський/-ська,
+ * -ий; -енко, -ко, -ук, -ич, -ак and Чайка are one form for both sexes (10b2 review: readers put 10 such as men's).
+ */
+export const DECLINING = { ukrainian: /(ов|ев|єв|ін|їн|ин|ий|ова|ева|єва|іна|їна|ина|ська|цька|зька|ня)$|(ov|ev|yev|in|yn|yi|ova|eva|yeva|ina|yna|ska|cka)$/u };
+
 /** Cultures whose surnames are mostly fathers' given names (Ethiopian; Hausa in Nigeria's list: Musa, Ibrahim). */
 export const PATRONYMIC = new Set(['ethiopian', 'nigerian']);
 
@@ -271,15 +281,18 @@ const isOverused = (keys, name, overused) => keys.some(k => overused.has(k)) || 
 /**
  * Read first-name lists ({culture, sex, entries, answers}, entries in rank order) to the new names among each
  * list's `top` names, `heldOf(culture)` giving the spelling keys held. A name new in both sexes' lists enters
- * once, as ambiguous. Returns {lines, summary, rejected, missingLines, unread}; summary and rejected are rows of
- * tab-separated text, lines {culture, name, gender, source, tags}.
+ * once, as ambiguous; `also[culture]` names a people whose names count as the culture's (decide). Returns {lines,
+ * summary, rejected, missingLines, unread}; summary and rejected are rows of tab-separated text, lines
+ * {culture, name, gender, source, tags}.
  */
-export function newFirstNames(jobs, heldOf, overused, top = 50) {
+export function newFirstNames(jobs, heldOf, overused, top = 50, { also = {} } = {}) {
     const summary = ['culture\tsex\tread\tanswered(per reader)\tnames\ttop present\tnew\toverused'];
     const rejected = [], lines = [];
     let missingLines = 0, unread = 0;
     for (const j of jobs) {
-        if (j.answers.every(a => a.size)) j.names = decide(j.entries.map(e => e.name), j.answers, j.culture, k => heldOf(j.culture).has(k));
+        if (j.answers.every(a => a.size)) {
+            j.names = decide(j.entries.map(e => e.name), j.answers, j.culture, k => heldOf(j.culture).has(k), 'first', { also: also[j.culture] ?? null });
+        }
     }
     // R3 across both sexes' lists: a held native entry's reading in one list holds its romanisation in the other.
     const cultures = [...new Set(jobs.map(j => j.culture))];
@@ -321,7 +334,7 @@ export function newSurnames(jobs, heldOf, overused, top = 100) {
         missingLines += answers.reduce((n, a) => n + entries.length - a.size, 0);
         const held = heldOf(culture);
         const forms = decide(entries.map(e => e.name), answers, culture, k => held.has(k), 'last', { gendered: GENDERED.has(culture),
-            sexless: i => bothSexes(entries[i - 1]),
+            sexless: i => bothSexes(entries[i - 1]), oneForm: i => culture in DECLINING && !DECLINING[culture].test(entries[i - 1].name),
             patronymic: PATRONYMIC.has(culture) });
         // R3: a held native form read as a Latin spelling holds that spelling.
         const known = knownKeys([forms], held);

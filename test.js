@@ -10,9 +10,9 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { foldName, loadOverused } from './tools/overused.mjs';
 import { addNames, parseLines } from './tools/db.mjs';
-import { nameOfLabel, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
+import { labelLines, nameOfLabel, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
 import { client } from './tools/nanogpt.mjs';
-import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, parseAnswers, readJobs } from './tools/name-read.mjs';
+import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, newFirstNames, newSurnames, parseAnswers, readJobs } from './tools/name-read.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -435,6 +435,22 @@ test('a form its source finds borne by both sexes takes no sex where a reader sa
         [true, false, false, false]);
 });
 
+test('a Ukrainian surname that does not decline (-енко, -ко, -ук, -ич, -ак, Чайка) takes no sex, though every reader gives one', () => {
+    const entries = ['Головко', 'Попович', 'Чайка', 'Попов', 'Соколовська'].map((name, i) => ({ name, rank: i + 1, source: 'Wikidata' }));
+    const text = entries.map((e, i) => `${i + 1} ukrainian s - - ${i === 4 ? 'f' : 'm'} u -`).join('\n');
+    const job = { culture: 'ukrainian', entries, answers: [0, 1, 2].map(() => parseAnswers(text, 'last')) };
+    assert.deepEqual(newSurnames([job], () => new Set(), new Set()).lines.map(l => [l.name, l.gender]),
+        [['Головко', null], ['Попович', null], ['Чайка', null], ['Попов', 'male'], ['Соколовська', 'female']]);
+});
+
+test('a people named as counting for a culture makes a name of it, and the rejected table keeps what readers said (Ram: hindi for nepalese)', () => {
+    const job = () => ({ culture: 'nepalese', sex: 'male', entries: [{ name: 'Ram', rank: 1 }, { name: 'John', rank: 2 }],
+        answers: [0, 1, 2].map(() => parseAnswers('1 hindi g - - D l -\n2 english g - - D l -', 'first')) });
+    const read = newFirstNames([job()], () => new Set(), new Set(), 50, { also: { nepalese: 'hindi' } });
+    assert.deepEqual([read.lines.map(l => l.name), read.rejected], [['Ram'], ['nepalese\tmale\t2\tJohn\tenglish:g english:g english:g']]);
+    assert.deepEqual(newFirstNames([job()], () => new Set(), new Set()).lines, []);
+});
+
 async function testAsync(name, fn) {
     try { await fn(); passed++; console.log(`  ✓ ${name}`); } catch (e) { failed++; console.error(`  ✗ ${name}`); console.error(`    ${e.message}`); }
 }
@@ -483,10 +499,30 @@ test('a Wikidata rank list adds an item\'s counts over sources, keeps the items 
         { f: 'B', g: sex('Q6581072'), c: '4', ln: '', lm: '', le: 'Maria' }, { f: 'B', g: sex('Q6581072'), c: '4', le: 'Maria' },
         { f: 'C', g: sex('Q6581097'), c: '2', ln: 'Alex' }, { f: 'C', g: sex('Q6581072'), c: '2', ln: 'Alex' },
         { f: 'D', g: sex('Q6581097'), c: '3', ln: 'Íon' }, { f: 'E', c: '9', ln: '' }, { f: 'F', g: sex('Q6581097'), c: '7', ln: 'J' },
+        { f: 'G', g: sex('Q6581097'), c: '1', ln: '', le: 'Alex' },
     ];
     assert.deepEqual(rankRows(rows, 'male').map(e => [e.name, e.rank, e.country]), [['Ion', 1, 'Wikidata'], ['Alex', 2, 'Wikidata']]);
     assert.deepEqual(rankRows(rows, 'female').map(e => e.name), ['Maria']);
-    assert.deepEqual(rankRows(rows).map(e => [e.name, e.male, e.female]), [['Maria', 0, 8], ['Ion', 5, 1], ['Alex', 2, 2]]);
+    // A spelling's bearers by sex add up over its items (Ion: A and D; Alex: C and G); `native` says the name is the culture's own label.
+    assert.deepEqual(rankRows(rows).map(e => [e.name, e.male, e.female, e.native]), [['Maria', 0, 8, false], ['Ion', 8, 1, true], ['Alex', 3, 2, true]]);
+});
+
+test('Wikidata labels become names once: none where no name, refused, held after cleaning, overused or given before; both sexes make it ambiguous', () => {
+    const lines = [['Thích (họ người)', 'male'], ['Kim (họ)', 'male'], ['Ana/Ani', 'female'], ['Elara', 'female'], ['Murphy', 'male'],
+        ['Kim', 'female'], ['Ana (tên)', 'female']].map(([name, gender]) => ({ culture: 'vietnamese', name, gender }));
+    const read = labelLines(lines, 'first', () => new Set(['thich']), new Set(['elara']), x => x.name !== 'Murphy');
+    assert.deepEqual(read.lines.map(l => [l.name, l.gender]), [['Kim', 'ambiguous'], ['Ana', 'female']]);
+    assert.deepEqual(read.dropped.map(d => d.split('\t').slice(2).join(' ')), ['Thích (họ người) Thích held', 'Kim (họ) Kim cleaned',
+        'Ana/Ani - no name', 'Elara Elara overused', 'Murphy Murphy refused', 'Kim Kim twice', 'Ana (tên) Ana cleaned']);
+});
+
+await testAsync('a Wikidata query given up stops the run, naming it, before a list is read thinner than its source', async () => {
+    const dir = pathToFileURL(mkdtempSync(join(tmpdir(), 'npcnames-wd-')) + '/wd/');
+    try {
+        const fetchFn = async () => ({ status: 500, text: async () => 'down', headers: { get: () => null } });
+        const wd = wikidata(dir, { fetchFn, wait: async () => {} });
+        await assert.rejects(wd.queryAll(['SELECT 2'], 'thai-first'), /gave up thai-first-0/);
+    } finally { rmSync(new URL('..', dir), { recursive: true, force: true }); }
 });
 
 await testAsync('Wikidata\'s 429 waits its Retry-After, and a stored answer asks nothing', async () => {
@@ -510,6 +546,10 @@ test('new names enter by kind with their fields, and a name held in its culture 
     assert.deepEqual([db.first_names[1].age, db.first_names[1].themes, 'gender' in db.last_names[0]], [['adult'], [], false]);
     assert.throws(() => addNames(db, [['first', 'romanian', 'Íon', ...first.slice(3)]], new Set()), /already held/);
     assert.throws(() => addNames(db, [['last', 'romanian', 'Elara', ...last.slice(3)]], new Set(['elara'])), /overused/);
+    assert.throws(() => addNames(db, [['last', 'romanian', 'Ionescu', ...last.slice(3)]], new Set(), ['first']), /kind/);
+    // Đ is a letter of its own, but Do beside Đỗ is one name twice.
+    assert.throws(() => addNames({ first_names: [{ name: 'An', language_ethnicity: 'vietnamese' }], last_names: [{ name: 'Đỗ', language_ethnicity: 'vietnamese' }] },
+        [['last', 'vietnamese', 'Do', ...last.slice(3)]], new Set()), /already held/);
 });
 
 // What must stay true of the data. An apply tool's asserts check its input, once, on the database as
@@ -535,8 +575,8 @@ function checkNamesAndHandles(data) {
         'Lord Shiva', 'Great Woman', 'Harsh joy', 'بسم الله', 'ابو علي', 'ابو محمد', 'ام محمد', 'Gioavanni', 'Mohmmad'];
     assert.deepEqual(gone.filter(n => names.has(n)), []);
     for (const list of [data.first_names, data.last_names]) {
-        const keys = list.map(e => `${e.language_ethnicity}/${foldName(e.name)}`);
-        assert.deepEqual(keys.filter((k, i) => keys.indexOf(k) !== i && k !== 'vietnamese/ngo'), [], 'no name twice in a culture, accents aside'); // Ngô, Ngọ are two names
+        const keys = list.map(e => `${e.language_ethnicity}/${foldName(e.name).replace(/đ/g, 'd')}`);
+        assert.deepEqual(keys.filter((k, i) => keys.indexOf(k) !== i && !['vietnamese/ngo', 'vietnamese/duc'].includes(k)), [], 'no name twice in a culture, accents aside'); // Ngô, Ngọ and Đức, Dục are two names each
         assert.deepEqual(list.filter(e => 'sentinel_fields' in e).map(e => e.name), []);
     }
 }
@@ -551,6 +591,9 @@ function checkSurnameGenders(data) {
         // -son follows the person's sex in Icelandic; in Swedish it is a family name of both sexes.
         || (/son$/.test(e.name) && e.gender !== (e.language_ethnicity === 'icelandic' ? 'male' : undefined)));
     assert.deepEqual(wrong.map(e => e.name), []);
+    // A Ukrainian form that does not decline is a woman's as well (Головко, Попович, Чайка).
+    assert.deepEqual(inCulture(data.last_names, 'ukrainian').filter(e => e.gender
+        && /((?<![сцз]ь)ка|ко|ук|юк|ич|ак|як|ач|ko|uk|yuk|ych|ak|yak|ach)$/u.test(e.name)).map(e => e.name), []);
     // Devi and Yadavani are women's surnames wherever they are filed; Hindi's others have no gender. Latin has its feminine forms.
     assert.deepEqual(data.last_names.filter(e => e.gender && !cultures.includes(e.language_ethnicity) && e.language_ethnicity !== 'latin').map(e => e.name).sort(), ['Devi', 'Yadavani']);
     // A missing name fails here. Greek -ou is used by both sexes; Irish women bear anglicised forms too.

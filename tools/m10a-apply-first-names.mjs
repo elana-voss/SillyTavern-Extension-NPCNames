@@ -15,5 +15,5 @@ const db = loadDb();
 assert.equal(db.first_names.length, 6858, 'first names');
 assert.equal(db.last_names.length, 2621, 'surnames');
 
-const changes = addNames(db, readLines('m10a-names.txt'), loadOverused());
+const changes = addNames(db, readLines('m10a-names.txt'), loadOverused(), ['first']);
 saveWithChanges(db, '10a', changes);

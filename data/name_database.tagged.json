@@ -241884,32 +241884,6 @@
       "themes": []
     },
     {
-      "name": "คิม เบอรี่",
-      "gender": "female",
-      "language_ethnicity": "thai",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult"
-      ],
-      "era": [
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ungsumalynn",
       "gender": "female",
       "language_ethnicity": "thai",
@@ -244144,35 +244118,6 @@
       ]
     },
     {
-      "name": "Thị",
-      "gender": "female",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
       "name": "Huyền",
       "gender": "female",
       "language_ethnicity": "vietnamese",
@@ -245386,35 +245331,6 @@
       ]
     },
     {
-      "name": "Jack",
-      "gender": "male",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
       "name": "Kevin",
       "gender": "male",
       "language_ethnicity": "irishGaelic",
@@ -246001,32 +245917,6 @@
       "themes": []
     },
     {
-      "name": "Darragh",
-      "gender": "male",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult"
-      ],
-      "era": [
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Shay",
       "gender": "male",
       "language_ethnicity": "irishGaelic",
@@ -246353,29 +246243,6 @@
       "themes": []
     },
     {
-      "name": "Aran",
-      "gender": "male",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Donnchadh",
       "gender": "male",
       "language_ethnicity": "irishGaelic",
@@ -246453,93 +246320,6 @@
       "commonness": "common",
       "genre": [
         "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Finnian",
-      "gender": "male",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Tarlach",
-      "gender": "male",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Daire",
-      "gender": "male",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
       ],
       "themes": []
     },
@@ -246632,35 +246412,6 @@
     },
     {
       "name": "Aodhán",
-      "gender": "male",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Conleth",
       "gender": "male",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
@@ -246868,35 +246619,6 @@
       "themes": []
     },
     {
-      "name": "Noreen",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "nineteenTwenties",
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
       "name": "Cassidy",
       "gender": "female",
       "language_ethnicity": "irishGaelic",
@@ -247034,60 +246756,6 @@
       "themes": []
     },
     {
-      "name": "Moya",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Eimear",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult"
-      ],
-      "era": [
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Mairéad",
       "gender": "female",
       "language_ethnicity": "irishGaelic",
@@ -247102,35 +246770,6 @@
       "era": [
         "victorian",
         "nineteenTwenties",
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Eilish",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
         "midcentury",
         "modern",
         "contemporary"
@@ -247203,33 +246842,6 @@
       "themes": []
     },
     {
-      "name": "Delma",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "nineteenTwenties",
-        "midcentury",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ailbhe",
       "gender": "female",
       "language_ethnicity": "irishGaelic",
@@ -247256,92 +246868,6 @@
       "themes": []
     },
     {
-      "name": "Grania",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "victorian",
-        "nineteenTwenties",
-        "midcentury",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": [
-        "literary"
-      ]
-    },
-    {
-      "name": "Fidelma",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Nollaig",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
       "name": "Caitlín",
       "gender": "female",
       "language_ethnicity": "irishGaelic",
@@ -247349,34 +246875,6 @@
       "race": "human",
       "age": [
         "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Bryna",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
         "youngAdult",
         "adult",
         "elder"
@@ -247446,65 +246944,6 @@
       "commonness": "common",
       "genre": [
         "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Concepta",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "nineteenTwenties",
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
-      "name": "Acushla",
-      "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
       ],
       "themes": []
     },
@@ -357634,7 +357073,6 @@
     },
     {
       "name": "Головко",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358031,7 +357469,6 @@
     },
     {
       "name": "Тищенко",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358212,7 +357649,6 @@
     },
     {
       "name": "Третяк",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358231,7 +357667,6 @@
     },
     {
       "name": "Герасимчук",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358430,7 +357865,6 @@
     },
     {
       "name": "Попович",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358505,7 +357939,6 @@
     },
     {
       "name": "Деркач",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358542,7 +357975,6 @@
     },
     {
       "name": "Самойленко",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358597,7 +358029,6 @@
     },
     {
       "name": "Чайка",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358725,7 +358156,6 @@
     },
     {
       "name": "Семененко",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358852,7 +358282,6 @@
     },
     {
       "name": "Романенко",
-      "gender": "male",
       "language_ethnicity": "ukrainian",
       "mythology": null,
       "race": "human",
@@ -358916,7 +358345,7 @@
       "role": [
         "neutral"
       ],
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
@@ -358978,44 +358407,6 @@
       "themes": []
     },
     {
-      "name": "Mai",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Thich",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "religious"
-      ]
-    },
-    {
       "name": "Châu",
       "language_ethnicity": "vietnamese",
       "mythology": null,
@@ -359049,7 +358440,9 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "regal"
+      ]
     },
     {
       "name": "Lã",
@@ -359121,7 +358514,9 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "scholarly"
+      ]
     },
     {
       "name": "Khương",
@@ -359161,24 +358556,6 @@
     },
     {
       "name": "Nghiêm",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Văn",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -359242,12 +358619,14 @@
       "role": [
         "neutral"
       ],
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "regal"
+      ]
     },
     {
       "name": "Ninh",
@@ -359337,28 +358716,12 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "earthy"
+      ]
     },
     {
       "name": "Thẩm",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Vi",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -359404,7 +358767,7 @@
       "role": [
         "neutral"
       ],
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
@@ -359413,24 +358776,6 @@
     },
     {
       "name": "Âu",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Chung",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -359466,44 +358811,6 @@
       "themes": []
     },
     {
-      "name": "Giang",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Kim",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "gemstone"
-      ]
-    },
-    {
       "name": "Mã",
       "language_ethnicity": "vietnamese",
       "mythology": null,
@@ -359537,64 +358844,12 @@
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "regal"
+      ]
     },
     {
       "name": "Tào",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Le Viêt",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Chương",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Cầm",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -359666,61 +358921,7 @@
       "themes": []
     },
     {
-      "name": "Van Nghi",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Quyền",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Hứa",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Do",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -359774,7 +358975,7 @@
       "themes": []
     },
     {
-      "name": "Cầu",
+      "name": "Ksor",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -359802,7 +359003,7 @@
       "role": [
         "neutral"
       ],
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
@@ -359828,43 +359029,7 @@
       "themes": []
     },
     {
-      "name": "Doan",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Cung",
-      "language_ethnicity": "vietnamese",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Dinh",
       "language_ethnicity": "vietnamese",
       "mythology": null,
       "race": "human",
@@ -359946,12 +359111,14 @@
       "role": [
         "neutral"
       ],
-      "allure": "pleasant",
+      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
       ],
-      "themes": []
+      "themes": [
+        "military"
+      ]
     },
     {
       "name": "Olatunji",
@@ -361358,24 +360525,6 @@
       "themes": []
     },
     {
-      "name": "O'Brien",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ryan",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
@@ -361720,24 +360869,6 @@
     },
     {
       "name": "McDowell",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Fagan",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -362352,42 +361483,6 @@
       "themes": []
     },
     {
-      "name": "O'Quin",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Gogarty",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ó Catháin",
       "gender": "male",
       "language_ethnicity": "irishGaelic",
@@ -362551,42 +361646,6 @@
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "O'Haire",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Corish",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
@@ -362762,24 +361821,6 @@
       "themes": []
     },
     {
-      "name": "Commane",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ó Faoláin",
       "gender": "male",
       "language_ethnicity": "irishGaelic",
@@ -362811,24 +361852,6 @@
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Condrin",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife"
@@ -362931,44 +361954,8 @@
       "themes": []
     },
     {
-      "name": "O’Flinn",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Ní Ghrálaigh",
       "gender": "female",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "O'Lear",
       "language_ethnicity": "irishGaelic",
       "mythology": null,
       "race": "human",
@@ -363053,24 +362040,6 @@
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Dossen",
-      "language_ethnicity": "irishGaelic",
-      "mythology": null,
-      "race": "human",
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "allure": "unremarkable",
       "commonness": "common",
       "genre": [
         "sliceOfLife"

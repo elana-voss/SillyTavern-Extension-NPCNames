@@ -48,13 +48,13 @@ const csv = s => (s === '-' ? [] : s.split(','));
  * name-read.mjs) pushed onto `db`, each asserted to be of a known culture, not overused (`overused` holds
  * folded names) and not yet held in its culture by spelling key. Returns the change lines; nothing leaves.
  */
-export function addNames(db, lines, overused) {
+export function addNames(db, lines, overused, kinds = ['first', 'last']) {
     const cultures = new Set(db.first_names.map(e => e.language_ethnicity));
     const held = { first: new Set(db.first_names.map(e => `${e.language_ethnicity}|${norm(e.name)}`)),
         last: new Set(db.last_names.map(e => `${e.language_ethnicity}|${norm(e.name)}`)) };
     return lines.map(f => {
         const kind = f[0];
-        assert.ok(kind === 'first' || kind === 'last', `kind: ${f.join(' | ')}`);
+        assert.ok(kinds.includes(kind), `kind: ${f.join(' | ')}`);
         assert.equal(f.length, kind === 'first' ? 13 : 11, `fields: ${f.join(' | ')}`);
         const [, culture, name, gender, source] = f;
         assert.ok(cultures.has(culture), `no culture ${culture}`);

@@ -8,6 +8,7 @@
 import { createHash } from 'node:crypto';
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { norm } from './name-lists.mjs';
+import { foldName } from './overused.mjs';
 
 const ENDPOINT = 'https://query.wikidata.org/sparql';
 // A generic client name, no personal details.
@@ -73,7 +74,18 @@ export function wikidata(dir, { fetchFn = fetch, wait = ms => new Promise(r => s
         note(`GAVEUP ${tag}`);
         return null;
     }
-    return { query, stats };
+
+    /** The rows of all queries (tags `tag`-0, -1, ...); one given up throws, so no list is read thinner than its source. */
+    async function queryAll(queries, tag) {
+        const rows = [];
+        for (const [i, q] of queries.entries()) {
+            const got = await query(q, `${tag}-${i}`);
+            if (!got) throw new Error(`Wikidata gave up ${tag}-${i}; see wikidata.log`);
+            rows.push(...got);
+        }
+        return rows;
+    }
+    return { query, queryAll, stats };
 }
 
 const SEX = { Q6581097: 'male', Q6581072: 'female' };
@@ -92,18 +104,18 @@ export function nameOfLabel(label) {
 /**
  * Rows {f, g?, c, ln, lm, le} (a name item, its bearers' sex, how many bear it, its labels in the culture's
  * language, in "mul" and in English) to entries in rank order, as name-lists.mjs rankedEntries gives them:
- * [{name, rank, country: 'Wikidata', source: 'Wikidata', key, male, female}] (source: the names file's source field;
- * male, female: the item's bearers of each sex). Counts of one item add up over rows (several sources of one
- * culture); `sex` keeps the items borne more by that sex (men where equal); the rank is the count of the
- * kept sex, else the whole. A spelling key keeps its best rank; an item with no label or a key under two
- * letters is left out.
+ * [{name, rank, country: 'Wikidata', source: 'Wikidata', key, native, male, female}] (source: the names file's source
+ * field; native: the name is the label in the culture's language, not "mul" or English; male, female: the bearers of
+ * each sex). Counts of one item add up over rows (several sources of one culture); `sex` keeps the items borne more
+ * by that sex (men where equal); the rank is the count of the kept sex, else the whole. A spelling key keeps its
+ * best rank and adds up its items' bearers by sex; an item with no label or a key under two letters is left out.
  */
 export function rankRows(rows, sex = null) {
     const items = new Map();
     for (const r of rows) {
         const name = r.ln || r.lm || r.le;
         if (!name) continue;
-        const it = items.get(r.f) ?? { name, male: 0, female: 0, all: 0 };
+        const it = items.get(r.f) ?? { name, native: Boolean(r.ln), male: 0, female: 0, all: 0 };
         const c = Number(r.c) || 0;
         it.all += c;
         const s = SEX[id(r.g ?? '')];
@@ -116,8 +128,30 @@ export function rankRows(rows, sex = null) {
     const best = new Map();
     for (const it of kept.sort((a, b) => count(b) - count(a))) {
         const key = norm(it.name);
-        if (key.length < 2 || best.has(key)) continue;
-        best.set(key, { name: it.name, rank: best.size + 1, country: 'Wikidata', source: 'Wikidata', key, male: it.male, female: it.female });
+        if (key.length < 2) continue;
+        const had = best.get(key);
+        if (had) { had.male += it.male; had.female += it.female; continue; }
+        best.set(key, { name: it.name, rank: best.size + 1, country: 'Wikidata', source: 'Wikidata', key, native: it.native,
+            male: it.male, female: it.female });
     }
     return [...best.values()];
+}
+
+/**
+ * Lines read from Wikidata labels ({culture, name, gender}) as names (nameOfLabel). A line is left out where its label
+ * is no name, `keep(line)` refuses it, the culture holds its cleaned name (`held(culture)`: spelling keys), it is
+ * overused, or a line before gives the culture that name; a first name given for both sexes stays once, as ambiguous.
+ * Returns {lines, dropped}; dropped: tab-separated kind, culture, label, name (- none) and why (cleaned where it entered).
+ */
+export function labelLines(lines, kind, held, overused, keep = () => true) {
+    const kept = new Map(), dropped = [];
+    for (const x of lines) {
+        const name = nameOfLabel(x.name), key = `${x.culture}/${norm(name ?? '')}`;
+        const why = !name ? 'no name' : !keep(x) ? 'refused' : name !== x.name && held(x.culture).has(norm(name)) ? 'held'
+            : overused.has(foldName(name)) ? 'overused' : kept.has(key) ? 'twice' : '';
+        if (why || name !== x.name) dropped.push([kind, x.culture, x.name, name ?? '-', why || 'cleaned'].join('\t'));
+        if (why === 'twice' && kind === 'first' && kept.get(key).gender !== x.gender) kept.get(key).gender = 'ambiguous';
+        if (!why) kept.set(key, { ...x, name });
+    }
+    return { lines: [...kept.values()], dropped };
 }

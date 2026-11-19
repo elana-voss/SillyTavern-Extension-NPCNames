@@ -17,8 +17,8 @@ export const COUNTRIES = {
     yoruba: [], maori: [], hawaiian: [], mayan: [], mongolian: ['MN'], nativeAmerican: [], latin: [],
 };
 
-/** Comparison key of a spelling: lower case, accents and non-letters removed; scripts stay apart. */
-export const norm = s => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/[^\p{L}]/gu, '');
+/** Comparison key of a spelling: lower case, accents and non-letters removed, đ as d (Đỗ, Do); scripts stay apart. */
+export const norm = s => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/đ/g, 'd').replace(/[^\p{L}]/gu, '');
 
 export const SEXES = { male: r => r[2] >= r[3], female: r => r[3] > r[2] };
 
