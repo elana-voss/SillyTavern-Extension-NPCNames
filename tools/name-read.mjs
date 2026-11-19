@@ -7,6 +7,7 @@
 // Surnames (10b): any reader's x rejects one; gendered cultures split a surname by sex, patronymic ones take given names.
 import { norm } from './name-lists.mjs';
 import { pool } from './nanogpt.mjs';
+import { foldName } from './overused.mjs';
 
 export const CULTURES = {
     albanian: 'Albanian', arabic: 'Arabic', azerbaijani: 'Azerbaijani', baltic: 'Baltic (Lithuanian, Latvian)', chinese: 'Chinese',
@@ -246,4 +247,102 @@ export function mergeSexes(lines) {
         merged.push({ ...l, gender: l.sex });
     }
     return merged;
+}
+
+/** Cultures whose surnames have a man's and a woman's form (PLAN.md Decisions, milestones 3 and 5). */
+export const GENDERED = new Set(['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish',
+    'greek', 'nepalese', 'irishGaelic', 'baltic', 'azerbaijani', 'latin']);
+/** Cultures whose surnames are mostly fathers' given names (Ethiopian; Hausa in Nigeria's list: Musa, Ibrahim). */
+export const PATRONYMIC = new Set(['ethiopian', 'nigerian']);
+
+const sourceOf = e => e.source ?? `name-dataset ${e.country}`;
+const isOverused = (keys, name, overused) => keys.some(k => overused.has(k)) || overused.has(foldName(name));
+
+/**
+ * Read first-name lists ({culture, sex, entries, answers}, entries in rank order) to the new names among each
+ * list's `top` names, `heldOf(culture)` giving the spelling keys held. A name new in both sexes' lists enters
+ * once, as ambiguous. Returns {lines, summary, rejected, missingLines, unread}; summary and rejected are rows of
+ * tab-separated text, lines {culture, name, gender, source, tags}.
+ */
+export function newFirstNames(jobs, heldOf, overused, top = 50) {
+    const summary = ['culture\tsex\tread\tanswered(per reader)\tnames\ttop present\tnew\toverused'];
+    const rejected = [], lines = [];
+    let missingLines = 0, unread = 0;
+    for (const j of jobs) {
+        if (j.answers.every(a => a.size)) j.names = decide(j.entries.map(e => e.name), j.answers, j.culture, k => heldOf(j.culture).has(k));
+    }
+    // R3 across both sexes' lists: a held native entry's reading in one list holds its romanisation in the other.
+    const cultures = [...new Set(jobs.map(j => j.culture))];
+    const known = new Map(cultures.map(c => [c, knownKeys(jobs.filter(j => j.culture === c && j.names).map(j => j.names), heldOf(c))]));
+    for (const j of jobs) {
+        if (!j.names) { unread++; continue; }
+        missingLines += j.answers.reduce((n, a) => n + j.entries.length - a.size, 0);
+        for (const g of j.names) g.present = g.keys.some(k => known.get(j.culture).has(k));
+        const named = new Set(j.names.flatMap(g => g.members));
+        for (const [i, e] of j.entries.entries()) {
+            if (!named.has(i + 1)) rejected.push(`${j.culture}\t${j.sex}\t${e.rank}\t${e.name}\t${readersSaid(j.answers, i + 1)}`);
+        }
+        let added = 0, slop = 0;
+        for (const g of j.names.slice(0, top)) {
+            if (g.present) continue;
+            const e = j.entries[g.form - 1];
+            if (isOverused(g.keys, e.name, overused)) { slop++; continue; }
+            lines.push({ culture: j.culture, sex: j.sex, name: e.name, keys: new Set(g.keys), source: sourceOf(e), rank: e.rank, tags: firstNameTags(g) });
+            added++;
+        }
+        summary.push([j.culture, j.sex, j.entries.length, j.answers.map(a => a.size).join('/'), j.names.length,
+            j.names.slice(0, top).filter(g => g.present).length, added, slop].join('\t'));
+    }
+    return { lines: mergeSexes(lines), summary, rejected, missingLines, unread };
+}
+
+/**
+ * Read surname lists ({culture, entries, answers}) to the new surname forms among each list's `top` surnames
+ * after folding, `heldOf(culture)` giving the spelling keys held; a gendered culture's forms carry the sex two
+ * readers give them (GENDERED), a patronymic one takes given names (PATRONYMIC). Returns {lines, summary,
+ * rejected, entered, missingLines, unread}; lines {culture, name, gender, source, tags}.
+ */
+export function newSurnames(jobs, heldOf, overused, top = 100) {
+    const summary = ['culture\tread\tanswered(per reader)\tsurnames\ttop held\tnew forms\tmale/female/none\toverused'];
+    const rejected = [], lines = [], entered = [];
+    let missingLines = 0, unread = 0;
+    for (const { answers, culture, entries } of jobs) {
+        if (!answers.every(a => a.size)) { unread++; continue; }
+        missingLines += answers.reduce((n, a) => n + entries.length - a.size, 0);
+        const held = heldOf(culture);
+        const forms = decide(entries.map(e => e.name), answers, culture, k => held.has(k), 'last', { gendered: GENDERED.has(culture),
+            patronymic: PATRONYMIC.has(culture) });
+        // R3: a held native form read as a Latin spelling holds that spelling.
+        const known = knownKeys([forms], held);
+        const ranks = new Set([...new Set(forms.map(f => f.rank))].slice(0, top));
+        const named = new Set(forms.flatMap(f => f.members));
+        for (const [i, e] of entries.entries()) {
+            if (!named.has(i + 1)) rejected.push(`${culture}\t${e.rank}\t${e.name}\t${readersSaid(answers, i + 1)}`);
+        }
+        const counts = { male: 0, female: 0, none: 0 };
+        let slop = 0;
+        for (const f of forms.filter(f => ranks.has(f.rank))) {
+            if (f.keys.some(k => known.has(k))) continue;
+            const e = entries[f.form - 1];
+            if (isOverused(f.keys, e.name, overused)) { slop++; continue; }
+            counts[f.sex ?? 'none']++;
+            lines.push({ culture, name: e.name, gender: f.sex, source: sourceOf(e), tags: lastNameTags(f) });
+            entered.push(`${culture}\t${e.name}\t${e.rank}\t${readersSaid(answers, f.form)}`);
+        }
+        const groupsHeld = [...ranks].filter(r => forms.filter(f => f.rank === r).every(f => f.keys.some(k => known.has(k)))).length;
+        summary.push([culture, entries.length, answers.map(a => a.size).join('/'), ranks.size, groupsHeld,
+            Object.values(counts).reduce((a, b) => a + b, 0), Object.values(counts).join('/'), slop].join('\t'));
+    }
+    return { lines, summary, rejected, entered, missingLines, unread };
+}
+
+/** New names as lines of a names file (tools/db.mjs readLines), after `header` comment lines. */
+export function namesFileText(header, lines, kind) {
+    const list = s => (s.length ? s.join(',') : '-');
+    const text = lines.map(m => (kind === 'first'
+        ? ['first', m.culture, m.name, m.gender, m.source, list(m.tags.age), list(m.tags.era), list(m.tags.role), m.tags.intelligence,
+            m.tags.allure, m.tags.commonness, list(m.tags.genre), list(m.tags.themes)]
+        : ['last', m.culture, m.name, m.gender ?? '-', m.source, list(m.tags.era), list(m.tags.role),
+            m.tags.allure, m.tags.commonness, list(m.tags.genre), list(m.tags.themes)]).join(' | '));
+    return [...header.map(h => '# ' + h), ...text].join('\n') + '\n';
 }

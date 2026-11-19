@@ -11,8 +11,8 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { client } from './nanogpt.mjs';
 import { countriesOf, loadLists, norm, rankedEntries, COUNTRIES } from './name-lists.mjs';
-import { decide, firstNameTags, knownKeys, mergeSexes, readersSaid, readJobs } from './name-read.mjs';
-import { foldName, loadOverused } from './overused.mjs';
+import { namesFileText, newFirstNames, readJobs } from './name-read.mjs';
+import { loadOverused } from './overused.mjs';
 
 const TOP = 50;
 const OUT = new URL('../logs/work/m10a/', import.meta.url);
@@ -40,51 +40,16 @@ for (const j of jobs) j.entries = rankedEntries(nd, j.culture, 'first', j.sex).s
 const base = llm.spent();
 await readJobs(llm, jobs, 'first', BUDGET);
 
-const summary = ['culture\tsex\tread\tanswered(per reader)\tnames\ttop50 present\tnew\toverused'];
-const rejected = [];
-const lines = [];
-let missingLines = 0, unread = 0;
 const held = new Map(CULTURES.map(c => [c, new Set(db.first_names.filter(e => e.language_ethnicity === c).map(e => norm(e.name)))]));
-for (const j of jobs) {
-    if (j.answers.every(a => a.size)) j.names = decide(j.entries.map(e => e.name), j.answers, j.culture, k => held.get(j.culture).has(k));
-}
-// R3 across both sexes' lists: a held native entry's reading in one list holds its romanisation in the other.
-const known = new Map(CULTURES.map(c => [c, knownKeys(jobs.filter(j => j.culture === c && j.names).map(j => j.names), held.get(c))]));
-for (const j of jobs) {
-    const answers = j.answers;
-    if (!j.names) { unread++; continue; }
-    missingLines += answers.reduce((n, a) => n + j.entries.length - a.size, 0);
-    const names = j.names;
-    for (const g of names) g.present = g.keys.some(k => known.get(j.culture).has(k));
-    const top = names.slice(0, TOP);
-    const named = new Set(names.flatMap(g => g.members));
-    for (const [i, e] of j.entries.entries()) {
-        if (!named.has(i + 1)) rejected.push(`${j.culture}\t${j.sex}\t${e.rank}\t${e.name}\t${readersSaid(answers, i + 1)}`);
-    }
-    let added = 0, slop = 0;
-    for (const g of top) {
-        if (g.present) continue;
-        if (g.keys.some(k => overused.has(k)) || overused.has(foldName(j.entries[g.form - 1].name))) { slop++; continue; }
-        const e = j.entries[g.form - 1];
-        lines.push({ culture: j.culture, sex: j.sex, name: e.name, keys: new Set(g.keys), source: `name-dataset ${e.country}`, rank: e.rank, tags: firstNameTags(g) });
-        added++;
-    }
-    summary.push([j.culture, j.sex, j.entries.length, answers.map(a => a.size).join('/'), names.length, top.filter(g => g.present).length, added, slop].join('\t'));
-}
-
-const merged = mergeSexes(lines);
+const { lines: merged, summary, rejected, missingLines, unread } = newFirstNames(jobs, c => held.get(c), overused, TOP);
 writeFileSync(new URL('summary.txt', OUT), summary.join('\n') + '\n');
 writeFileSync(new URL('rejected.txt', OUT), 'culture\tsex\trank\tentry\treaders peoples:kind\n' + rejected.join('\n') + '\n');
-const list = s => (s.length ? s.join(',') : '-');
-const text = merged.map(m => [
-    'first', m.culture, m.name, m.gender, m.source, list(m.tags.age), list(m.tags.era), list(m.tags.role), m.tags.intelligence,
-    m.tags.allure, m.tags.commonness, list(m.tags.genre), list(m.tags.themes)].join(' | '));
 if (argv.includes('--write')) {
-    writeFileSync(new URL('m10a-names.txt', import.meta.url), [
-        '# Milestone 10a: the 50 most common first names of each sex per culture that the database lacked,',
-        '# from name-dataset (rank lists by country), each read by three readers of different vendors; made by',
-        '# tools/m10a-read.mjs. Fields: first | culture | name | gender | source | ages | eras | roles |',
-        '# intelligence | allure | commonness | genres | themes', ...text].join('\n') + '\n');
+    writeFileSync(new URL('m10a-names.txt', import.meta.url), namesFileText([
+        'Milestone 10a: the 50 most common first names of each sex per culture that the database lacked,',
+        'from name-dataset (rank lists by country), each read by three readers of different vendors; made by',
+        'tools/m10a-read.mjs. Fields: first | culture | name | gender | source | ages | eras | roles |',
+        'intelligence | allure | commonness | genres | themes'], merged, 'first'));
 }
 const spent = llm.spent();
 console.log(`jobs ${jobs.length}, unread ${unread}, stopped by budget ${llm.stats.stopped}; answer lines missing ${missingLines}`);

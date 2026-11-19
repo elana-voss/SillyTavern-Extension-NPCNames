@@ -13,17 +13,11 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { client } from './nanogpt.mjs';
 import { countriesOf, loadLists, norm, rankedEntries, COUNTRIES } from './name-lists.mjs';
-import { decide, knownKeys, lastNameTags, readersSaid, readJobs } from './name-read.mjs';
-import { foldName, loadOverused } from './overused.mjs';
+import { namesFileText, newSurnames, readJobs } from './name-read.mjs';
+import { loadOverused } from './overused.mjs';
 
 const TOP = 100;
 const OUT = new URL('../logs/work/m10b/', import.meta.url);
-// Cultures whose surnames have a man's and a woman's form (PLAN.md Decisions, milestones 3 and 5).
-const GENDERED = new Set(['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish',
-    'greek', 'nepalese', 'irishGaelic', 'baltic', 'azerbaijani', 'latin']);
-// Cultures whose surnames are mostly fathers' given names (Ethiopian; Hausa in Nigeria's list: Musa, Ibrahim).
-const PATRONYMIC = new Set(['ethiopian', 'nigerian']);
-
 const argv = process.argv.slice(2);
 const arg = (k, d) => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1] : d; };
 const WINDOW = Number(arg('window', 200));
@@ -45,53 +39,17 @@ const jobs = CULTURES.map(culture => ({ culture, tag: culture,
     entries: rankedEntries(nd, culture, 'last').slice(0, WIDE.has(culture) ? 400 : WINDOW) }));
 await readJobs(llm, jobs, 'last', BUDGET);
 
-const summary = ['culture\tread\tanswered(per reader)\tsurnames\ttop100 held\tnew forms\tmale/female/none\toverused'];
-const rejected = [];
-const lines = [];
-let missingLines = 0, unread = 0;
-for (const j of jobs) {
-    const { answers, culture, entries } = j;
-    if (!answers.every(a => a.size)) { unread++; continue; }
-    missingLines += answers.reduce((n, a) => n + entries.length - a.size, 0);
-    const held = new Set(db.last_names.filter(e => e.language_ethnicity === culture).map(e => norm(e.name)));
-    const forms = decide(entries.map(e => e.name), answers, culture, k => held.has(k), 'last', { gendered: GENDERED.has(culture),
-        patronymic: PATRONYMIC.has(culture) });
-    // R3: a held native form read as a Latin spelling holds that spelling.
-    const known = knownKeys([forms], held);
-    const top = new Set([...new Set(forms.map(f => f.rank))].slice(0, TOP));
-    const named = new Set(forms.flatMap(f => f.members));
-    for (const [i, e] of entries.entries()) {
-        if (!named.has(i + 1)) rejected.push(`${culture}\t${e.rank}\t${e.name}\t${readersSaid(answers, i + 1)}`);
-    }
-    const counts = { male: 0, female: 0, none: 0 };
-    let slop = 0;
-    for (const f of forms.filter(f => top.has(f.rank))) {
-        if (f.keys.some(k => known.has(k))) continue;
-        const e = entries[f.form - 1];
-        if (f.keys.some(k => overused.has(k)) || overused.has(foldName(e.name))) { slop++; continue; }
-        const gender = f.sex;
-        counts[gender ?? 'none']++;
-        lines.push({ culture, name: e.name, gender, source: `name-dataset ${e.country}`, tags: lastNameTags(f),
-            said: `${e.rank}\t${readersSaid(answers, f.form)}` });
-    }
-    const groupsHeld = [...top].filter(r => forms.filter(f => f.rank === r).every(f => f.keys.some(k => known.has(k)))).length;
-    summary.push([culture, entries.length, answers.map(a => a.size).join('/'), top.size, groupsHeld,
-        Object.values(counts).reduce((a, b) => a + b, 0), Object.values(counts).join('/'), slop].join('\t'));
-}
-
+const heldOf = c => new Set(db.last_names.filter(e => e.language_ethnicity === c).map(e => norm(e.name)));
+const { lines, summary, rejected, entered, missingLines, unread } = newSurnames(jobs, heldOf, overused, TOP);
 writeFileSync(new URL('summary.txt', OUT), summary.join('\n') + '\n');
 writeFileSync(new URL('rejected.txt', OUT), 'culture\trank\tentry\treaders peoples:kind\n' + rejected.join('\n') + '\n');
-writeFileSync(new URL('entered.txt', OUT), 'culture\tentry\trank\treaders peoples:kind\n'
-    + lines.map(m => `${m.culture}\t${m.name}\t${m.said}`).join('\n') + '\n');
-const list = s => (s.length ? s.join(',') : '-');
-const text = lines.map(m => ['last', m.culture, m.name, m.gender ?? '-', m.source, list(m.tags.era), list(m.tags.role),
-    m.tags.allure, m.tags.commonness, list(m.tags.genre), list(m.tags.themes)].join(' | '));
+writeFileSync(new URL('entered.txt', OUT), 'culture\tentry\trank\treaders peoples:kind\n' + entered.join('\n') + '\n');
 if (argv.includes('--write')) {
-    writeFileSync(new URL('m10b-names.txt', import.meta.url), [
-        '# Milestone 10b: the 100 most common surnames per culture, after folding, that the database lacked,',
-        '# from name-dataset (rank lists by country), each read by three readers of different vendors; made by',
-        '# tools/m10b-read.mjs. Fields: last | culture | name | gender (- none) | source | eras | roles |',
-        '# allure | commonness | genres | themes', ...text].join('\n') + '\n');
+    writeFileSync(new URL('m10b-names.txt', import.meta.url), namesFileText([
+        'Milestone 10b: the 100 most common surnames per culture, after folding, that the database lacked,',
+        'from name-dataset (rank lists by country), each read by three readers of different vendors; made by',
+        'tools/m10b-read.mjs. Fields: last | culture | name | gender (- none) | source | eras | roles |',
+        'allure | commonness | genres | themes'], lines, 'last'));
 }
 const spent = llm.spent();
 console.log(`jobs ${jobs.length}, unread ${unread}, stopped by budget ${llm.stats.stopped}; answer lines missing ${missingLines}`);
