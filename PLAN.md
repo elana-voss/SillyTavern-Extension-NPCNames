@@ -32,8 +32,8 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 8 | Live run and release | R1 | Done | | 1M | 0.1M | live runs 1.6M and second, 0.06M and 0.05M; released as 0.2.0, the owner's number |
 | 9 | A name appears when it is learned | R10, R12 | Done | | 3M | 0.6M | Claude 3.6M, nano-gpt 0.40M |
 | 10a | Common first names | R2, R3, R11, R12 | Done | | 12M | 0.45M | Claude 11.3M (three agents 3.94M, 4.1M, 2.65M; review 0.56M), nano-gpt 0.33M; code review Fable 5.2 medium |
-| 10b | Common surnames | R2, R3, R11, R12 | Planned | High | 14M | 0.40M | |
-| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Planned | High | 12M | 0.36M | |
+| 10b | Common surnames | R2, R3, R11, R12 | Done | | 14M | 0.40M | nano-gpt 0.24M; code review Fable 5.2 medium |
+| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Planned | High | 12M | 0.28M | |
 | 10c | True tags and placement | R4, R11, R12 | Planned | High | 9.5M | 0.62M | |
 | 10d | The pick leans to common names, if Fable so decides after 10c | R4, R11, R12 | Planned | High | 3M | 0.05M | |
 | | Total | | | | 84.5M | 5.76M | |
@@ -213,11 +213,17 @@ Tests: `node test.js` 34 of 34. New tests, failing then passing: "✗ a reader's
 
 The same for surnames, with the same blind question, folding and single read: the top 100 after folding, up to 2,880 missing, with the gendered forms of the cultures that have them (milestone 3's rules). Same unit.
 
+Done: 35 surname lists read by 10a's three readers with the surname question (`tools/m10b-read.mjs`, `tools/m10b-apply-surnames.mjs`); 2,989 surname forms added (male 406, female 200, none 2,383), none stripped. Every list reaches 100 surnames after folding except Korean, 60 (`tools/m10b-window.mjs`: read to 200 it gave 76; read to 400 none is lost, 14 groups join 34 of them as spellings of one surname, Kwon Gwon Kweon Kwen, Rhee Rhie).
+nano-gpt: weekly input 730,329 to 967,203, 0.24M (stored answers 225,888 in 123 calls; 6 transient fetch errors retried); unit 0.24M / 2,989 = 0.079M per 1,000 surname forms, so 10b2 (about 2,600 names, half first names at 10a's 0.137M) 0.28M.
+`tools/name-reach.mjs` after: first names 9,262 (human 8,602), surnames 5,610 (before 2,621); median of the top 100 held: first 87, surnames 87 (before 15); of the top 50 a sex: men 46, women 48. Reach, median and cultures under 10: adult today 167, 0; young today 87, 0; child today 49, 1; elder today 73, 2; midcentury adult 73, 2; fantasy adult 15, 12; noir adult 80, 0; common 101, 1.
+Code review (Fable 5.2 medium), three findings, all real and fixed; reapplied from f41d9eb, the change is 8 doubles out (Alharbi, Alomari, Almomani, المصرى, Hadad, Maman, לביא, Kadosh), 8 surnames in (العسيري, القرني, الخزعلي, الحوراني, Erez, Goren, חמו, אברגל), Juška male. The same join in 10a's read would take زهراء out and bring Reem and Rumen in; not applied, as no name is stripped (a question below).
+Tests: `node test.js` 41 of 41. New tests, failing then passing: "✗ a surname splits by sex only in a culture whose surnames are gendered / Expected values to be strictly deep-equal", then 36 of 36; "✗ a string any reader calls not a name is no surname, though two call it one (الحياه, life)" (Arabic 87 to 78: الحنين البحر الشام النرجس الورد الملك الاحزان البيضاء الحياه out; الخطيب, السيد, Haddad, read s by all three, kept), then 37 of 37; "✗ where surnames are fathers' names, a given name of that people in the surname list is a surname", then ✓ (Ethiopian 0 to 100, Nigerian 56 to 100); "✗ database invariants" (+ [ 'albanian/Shehu/-', ...), then 38 of 38 after the apply; "✗ two new names that share a spelling are one, in the form ranked higher (R3: الحربي read as Alharbi, and Alharbi)", then ✓; "✗ in a gendered culture a form no two readers give a sex takes the sex its group lacks (Juška beside Juškienė)", then ✓; "✗ a budget of 0 sends no request, though nothing is stored" (15 !== 0), then ✓.
+
 #### 10b2. Cultures with no list
 
 The 13 cultures above and Irish Gaelic get their common first names and surnames from Wikidata, as milestone 5 did (the owner, 2026-11-19: "yes"), with 10a's blind question, folding and single read. Native American and Mongolian take no surnames. A class with no honest source stays thin and is named to the owner.
 
-Estimate: at most about 2,600 names at 10a's unit, 12M and 0.44M.
+Estimate: at most about 2,600 names, 12M and 0.28M nano-gpt (rescaled after 10b: half first names at 0.137M, half surnames at 0.079M per 1,000).
 
 #### 10c. True tags and placement
 
@@ -241,7 +247,8 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 10b.
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 10b2.
+- Milestone 10b's review fix (two new names that share a spelling are one) would change 10a's names too: زهراء out, Reem and Rumen in. Left as they are, since no name is stripped; apply it to 10a?
 
 ## Decisions
 
@@ -320,6 +327,11 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 - Milestone 10a, tags from the readers' periods by a fixed map (`tools/name-read.mjs` firstNameTags); a name is present when any first-name entry of the culture holds one of its spellings, in either sex; a name new in both sexes' lists would enter once as ambiguous (none did).
 - Milestone 10a, lists: window 80 entries, 240 on 11 lists whose first 80 gave fewer than 50 names; Hindi stands for Indian peoples as a whole; scandinavian is read as Danish; Irish Gaelic waits for 10b2, as Ireland's list is English-speaking.
 - Milestone 10a, spellings: an entry joins the name whose first entry two readers group it with, never by way of a third entry; a reader's latin is a key only for an entry in another script, where two readers give it or one gives it and no reader another (מיכל: Michal; דוד: David against Moshe gives none); a held native entry's spellings from either sex's list hold its romanised form. A romanised entry whose native form is held but outside both lists' windows still enters (no reading of it exists). A reader that echoes the entry, or whose tag fields stray, is still read.
+- Milestone 10b, sex: a surname splits by the sex two readers give only in the cultures whose surnames are gendered (milestone 3's list); elsewhere sex is not read. A form no two readers give a sex takes the sex its group lacks where the others hold one only (Juška beside Juškienė).
+- Milestone 10b, kind: one reader's x rejects a surname, as surname lists hold words people typed (الحياه, life); real surnames that are words were read s by all three.
+- Milestone 10b, fathers' names: in Ethiopian and Nigerian (Hausa: Musa) lists a given name of that people counts as a surname.
+- Milestone 10b, lists: window 200 entries, 400 on Arabic, English, Hebrew, Korean, Nigerian and slavicOther, whose first 200 gave fewer than 100. Korean stands at 60 after folding: reading 400 loses none of the 76 read at 200, it joins spellings of one surname; Korea has few surnames in real use, so no shortfall to fill.
+- Milestone 10b, R3: two new names of one sex that share a spelling (a reader's latin or the entry itself) are one, in the form ranked higher. spanish/Flores, Mexico's 10th surname read s by all three, is a surname; english/Flores stays a first name.
 
 ## Trials
 
