@@ -33,7 +33,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 9 | A name appears when it is learned | R10, R12 | Done | | 3M | 0.6M | Claude 3.6M, nano-gpt 0.40M |
 | 10a | Common first names | R2, R3, R11, R12 | Done | | 12M | 0.45M | Claude 11.3M (three agents 3.94M, 4.1M, 2.65M; review 0.56M), nano-gpt 0.33M; code review Fable 5.2 medium |
 | 10b | Common surnames | R2, R3, R11, R12 | Done | | 14M | 0.40M | Claude 12.7M (three agents 4.0M, 3.96M, 4.18M; review 0.52M), nano-gpt 0.24M; code review Fable 5.2 medium |
-| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Planned | High | 12M | 0.28M | |
+| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Done | | 12M | 0.28M | nano-gpt 0.18M |
 | 10c | True tags and placement | R4, R11, R12 | Planned | High | 9.5M | 0.62M | |
 | 10d | The pick leans to common names, if Fable so decides after 10c | R4, R11, R12 | Planned | High | 3M | 0.05M | |
 | | Total | | | | 84.5M | 5.76M | |
@@ -225,6 +225,13 @@ The 13 cultures above and Irish Gaelic get their common first names and surnames
 
 Estimate: at most about 2,600 names, 12M and 0.28M nano-gpt (rescaled after 10b: half first names at 0.137M, half surnames at 0.079M per 1,000).
 
+Done: 40 Wikidata lists (`tools/wikidata.mjs`: given names and family names of each culture's people, ranked by bearers) read by 10a's three readers (`tools/m10b2-read.mjs`, `tools/m10b2-apply-names.mjs`); 579 first names and 662 surname forms added, none stripped. First names / surnames per culture: Thai 98/100, Nepalese 99/50, Irish Gaelic 60/88, Mongolian 67/-, Romanian 53/73, Ukrainian 39/85, Vietnamese 38/44, Maori 40/57, Swahili 34/84, Yoruba 29/74, Latin 20/0, Hawaiian 2/6, Mayan 0/1, Native American 0/-.
+nano-gpt: weekly input 967,203 to 1,149,871, 0.18M (stored answers 172,947 in 120 calls); unit 0.18M / 1,241 = 0.147M per 1,000 names.
+`tools/name-reach.mjs` after: first names 9,842 (human 9,182), surnames 6,272; median of the top 100 held: first 87, surnames 87; of the top 50 a sex: men 46, women 48 (the 36 list cultures, unchanged). Reach, median and cultures under 10: adult today 167, 0; young today 87, 0; child today 49, 0; elder today 73, 1; midcentury adult 73, 1; fantasy adult 15, 12; noir adult 80, 0; common 101, 0.
+Thin, as no honest source holds more: Mayan and Native American first names, Hawaiian, Latin women's first names and Latin surnames (Questions).
+Code review (Fable 5.2 medium), 14 findings: 12 real and fixed (Ukrainian forms that do not decline took a man's sex; Irish Gaelic and Latin took English labels; a given-up query read a list thin; hindi readings were written into stored answers; labels were made names after the duplicate and overused checks; counts per spelling; addNames' kinds; a doc comment), 2 real and left (decisions below); found beside them: Đỗ and Do twice in Vietnamese. Reapplied from 6c53367: first names 599 to 579, surnames 688 to 662.
+Tests: `node test.js` 51 of 51. New tests, failing then passing: "✗ Wikidata's CSV: a quoted field keeps its comma and doubled quote", "✗ a Wikidata label is a name without its bracketed note, and none where it holds two or a malformed one", "✗ Wikidata's 429 waits its Retry-After, and a stored answer asks nothing", "✗ a form its source finds borne by both sexes takes no sex where a reader says so, though two give one (Бойко, Попов)", "✗ database invariants: ENOENT … tools/m10b2-names.txt", then 47 of 47; after the review "SyntaxError: The requested module './tools/wikidata.mjs' does not provide an export named 'labelLines'", "✗ a Wikidata rank list adds an item's counts over sources, keeps the items borne more by the sex asked (men where equal) and a spelling once", "✗ database invariants / no name twice in a culture, accents aside" (Do, Doan, Dinh), then 51 of 51.
+
 #### 10c. True tags and placement
 
 - Three readers of different vendors read every human first name and surname already in the data, 8,819, per culture: in which periods it was given, and where a name with no sign of real use belongs (the owner, 2026-11-19: "yes" to this smaller design). A tag goes on when two of the three give it, with no further judge, and only where the name really fits; this is no widening of a filter (the owner: "I'd prefer to have names that actually fit the categories."). The US yearly births, a free download, check the readers on the one culture that has them.
@@ -247,7 +254,11 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 10b2.
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 10c.
+- Thin after 10b2, no honest source for more: Mayan first names (0) and surnames (1), tried Wikidata given and family names of people of Maya ethnic groups and names in Mayan languages.
+- Thin after 10b2: Native American first names (0), tried Wikidata given names of people of Native American ethnic groups.
+- Thin after 10b2: Hawaiian first names (2) and surnames (6), tried Wikidata names of Native Hawaiians and names in Hawaiian.
+- Thin after 10b2: Latin women's first names (0) and surnames (0), tried Wikidata names of citizens of Ancient Rome, the Roman Republic and Empire, in their Latin forms.
 
 ## Decisions
 
@@ -332,6 +343,11 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 - Milestone 10b, lists: window 200 entries, 400 on Arabic, English, Hebrew, Korean, Nigerian and slavicOther, whose first 200 gave fewer than 100. Korean stands at 60 after folding: reading 400 loses none of the 76 read at 200, it joins spellings of one surname; Korea has few surnames in real use, so no shortfall to fill.
 - Milestone 10b, R3: two new names of one sex that share a spelling (a reader's latin or the entry itself) are one, in the form ranked higher. spanish/Flores, Mexico's 10th surname read s by all three, is a surname; english/Flores stays a first name.
 - Milestone 10b, 10a's names: the same R3 join reapplied to 10a from 71b0001 (no name before milestone 10 is stripped; 10a's are this milestone's unpushed work): زهراء out, Reem and Rumen in; first names 9,262 to 9,263.
+- Milestone 10b2, lists: Wikidata given and family names of each culture's people, ranked by bearers (counts of one item add up over its sources); window 100 first-name entries a sex (300 on Swahili), 200 surname entries; top 50 and 100.
+- Milestone 10b2, readers: on Nepal's first names a reading of hindi counts as nepalese; a surname borne by both sexes in its source takes no sex where a reader says so; a Ukrainian form that does not decline (-енко, -ко, -ук, -ич) takes none at all.
+- Milestone 10b2, forms: Irish Gaelic and Latin take a name only in their own language (a label in it, or a fada, Ó, Ní, Mac; Latin -us, -a, -is), as their English labels are Murphy, Jack, Julian; Thai keeps the Latin form its list ranks highest, as Korean and Arabic do; labels become names after the read, once per culture.
+- Milestone 10b2, review left: an item counted under two patterns of one culture counts twice, and a unisex given name stays in the sex list it leads; fixing either changes the lists and needs a new read past the cap, as in milestone 5.
+- Milestone 10b2, spelling: đ folds to d (Đỗ and Do are one name); Đức and Dục stay two.
 
 ## Trials
 
