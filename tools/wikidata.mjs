@@ -102,12 +102,43 @@ export function nameOfLabel(label) {
 }
 
 /**
- * Rows {f, g?, c, ln, lm, le} (a name item, its bearers' sex, how many bear it, its labels in the culture's
- * language, in "mul" and in English) to entries in rank order, as name-lists.mjs rankedEntries gives them:
+ * The queries for a culture's names of one kind (prop: P735 given name, P734 family name), one per source: people
+ * patterns (`?p wdt:P27 wd:Q218`), then name languages (items with P407). Each leaves out the bearers of a name an
+ * earlier one counts, so a person two sources find counts once when rankRows adds the rows up (one UNION timed out on
+ * Romania). `sexed` counts the bearers by sex; `strict` adds the item's native label (P1705) in `lang`, as `nl`.
+ */
+export function nameQueries({ people = [], names = [], lang, strict = false }, prop, sexed) {
+    const sex = sexed ? ' ?g' : '';
+    const bearer = `wdt:${prop} ?f${sexed ? '; wdt:P21 ?g' : ''}`;
+    const sources = [...people.map(p => ({ where: `?p ${p}; wdt:P31 wd:Q5; ${bearer}.`, counted: `?p ${p}` })),
+        ...names.map(q => ({ where: `?f wdt:P407 wd:${q}. ?p wdt:P31 wd:Q5; ${bearer}.`, counted: `?f wdt:P407 wd:${q}` }))];
+    return sources.map((src, i) => query(src.where + sources.slice(0, i).map(e => ` FILTER NOT EXISTS { ${e.counted} }`).join('')));
+    function query(where) {
+        const labels = `OPTIONAL { ?f rdfs:label ?ln FILTER(LANG(?ln)="${lang}") }
+  OPTIONAL { ?f rdfs:label ?lm FILTER(LANG(?lm)="mul") }
+  OPTIONAL { ?f rdfs:label ?le FILTER(LANG(?le)="en") }`;
+        const inner = `{ SELECT ?f${sex} (COUNT(DISTINCT ?p) AS ?c) WHERE { ${where} } GROUP BY ?f${sex} ORDER BY DESC(?c) LIMIT 3000 }`;
+        return strict
+            ? `SELECT ?f${sex} ?c ?ln ?lm ?le (SAMPLE(?nx) AS ?nl) WHERE {
+  ${inner}
+  ${labels}
+  OPTIONAL { ?f wdt:P1705 ?nx FILTER(LANG(?nx)="${lang}") }
+} GROUP BY ?f${sex} ?c ?ln ?lm ?le`
+            : `SELECT ?f${sex} ?c ?ln ?lm ?le WHERE {
+  ${inner}
+  ${labels}
+}`;
+    }
+}
+
+/**
+ * Rows {f, g?, c, ln, lm, le, nl?} (a name item, its bearers' sex, how many bear it, its labels in the culture's
+ * language, in "mul" and in English, its native label in that language) to entries in rank order, as name-lists.mjs rankedEntries gives them:
  * [{name, rank, country: 'Wikidata', source: 'Wikidata', key, native, male, female}] (source: the names file's source
- * field; native: the name is the label in the culture's language, not "mul" or English; male, female: the bearers of
- * each sex). Counts of one item add up over rows (several sources of one culture); `sex` keeps the items borne more
- * by that sex (men where equal); the rank is the count of the kept sex, else the whole. A spelling key keeps its
+ * field; native: the name is the label or native label in the culture's language, not "mul" or English alone; male,
+ * female: the bearers of each sex). Counts of one item add up over rows; `sex` keeps the items that sex bears at
+ * least a quarter of (both lists hold Alex; newFirstNames makes it ambiguous); the rank is the count of the kept sex,
+ * else the whole. A spelling key keeps its
  * best rank and adds up its items' bearers by sex; an item with no label or a key under two letters is left out.
  */
 export function rankRows(rows, sex = null) {
@@ -115,15 +146,14 @@ export function rankRows(rows, sex = null) {
     for (const r of rows) {
         const name = r.ln || r.lm || r.le;
         if (!name) continue;
-        const it = items.get(r.f) ?? { name, native: Boolean(r.ln), male: 0, female: 0, all: 0 };
+        const it = items.get(r.f) ?? { name, native: Boolean(r.ln) || r.nl === name, male: 0, female: 0, all: 0 };
         const c = Number(r.c) || 0;
         it.all += c;
         const s = SEX[id(r.g ?? '')];
         if (s) it[s] += c;
         items.set(r.f, it);
     }
-    const kept = [...items.values()].filter(it => !sex || (sex === 'male' ? it.male >= it.female && it.male > 0
-        : it.female > it.male));
+    const kept = [...items.values()].filter(it => !sex || (it[sex] > 0 && it[sex] * 4 >= it.male + it.female));
     const count = it => (sex ? it[sex] : it.all);
     const best = new Map();
     for (const it of kept.sort((a, b) => count(b) - count(a))) {

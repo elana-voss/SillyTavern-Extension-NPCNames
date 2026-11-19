@@ -4,7 +4,8 @@
 // 10b's blind questions, folding and single read (tools/name-read.mjs); the names the database lacks
 // are written to tools/m10b2-names.txt for tools/m10b2-apply-names.mjs. Where a surname's form has a sex, Wikidata's
 // count of its bearers by sex says which forms both sexes bear (Бойко); on Nepal's given names hindi reads as nepalese.
-// Irish Gaelic and Latin take a name only in their own language's label (Ó Murchú, not Murphy).
+// Irish Gaelic and Latin take a name only where its label or native label is in their language (Ó Murchú, not
+// Murphy). A person two of a culture's sources find counts once (wikidata.mjs nameQueries).
 //
 // Run: node tools/m10b2-read.mjs [--cultures a,b] [--lists] [--budget 280000] [--write]
 // --lists fetches and ranks the lists only (no reader is asked) and writes logs/work/m10b2/lists.txt.
@@ -16,7 +17,7 @@ import { norm } from './name-lists.mjs';
 import { client } from './nanogpt.mjs';
 import { GENDERED, namesFileText, newFirstNames, newSurnames, readJobs } from './name-read.mjs';
 import { loadOverused } from './overused.mjs';
-import { labelLines, rankRows, wikidata } from './wikidata.mjs';
+import { labelLines, nameQueries, rankRows, wikidata } from './wikidata.mjs';
 
 const OUT = new URL('../logs/work/m10b2/', import.meta.url);
 
@@ -24,12 +25,11 @@ const OUT = new URL('../logs/work/m10b2/', import.meta.url);
 // P172) and names whose language (P407) is the culture's; `lang` is the label language, the script the
 // culture holds today (Thai in Thai, Ukrainian in Cyrillic, Mongolian and Nepalese in Latin letters).
 // Native American and Mongolian take no surnames (PLAN.md, milestone 3 and 10b2). `strict`: a name enters only where
-// its item has a label in `lang` or its other label has the language's own form (the regex); the "mul" or English one
-// is else Ireland's English form (Murphy, Jack; 10b2 is for the Gaelic ones, as Ireland's list holds John, Mary, Paul)
-// or Latin's English one (Julian, Cassian), while Oisín, Ó Comáin and Primus are the language's own.
+// its item's label or native label (P1705) in `lang` is that name; the "mul" or English one alone is Ireland's English
+// form (Murphy, Jack; 10b2 is for the Gaelic ones, as Ireland's list holds John, Mary, Paul) or Latin's (Julian).
 const SOURCES = {
     hawaiian: { people: ['wdt:P172 wd:Q1283606'], names: ['Q33569'], lang: 'haw' },
-    latin: { people: ['wdt:P27 wd:Q1747689', 'wdt:P27 wd:Q17167', 'wdt:P27 wd:Q2277'], lang: 'la', strict: /(us|a|ae|is)$/u },
+    latin: { people: ['wdt:P27 wd:Q1747689', 'wdt:P27 wd:Q17167', 'wdt:P27 wd:Q2277'], lang: 'la', strict: true },
     maori: { people: ['wdt:P172 wd:Q6122670'], names: ['Q36451'], lang: 'mi' },
     mayan: { people: ['wdt:P172 wd:Q45914', 'wdt:P172 wd:Q46998231'], names: ['Q13354'], lang: 'en' },
     mongolian: { people: ['wdt:P27 wd:Q711'], lang: 'en', surnames: false },
@@ -41,31 +41,14 @@ const SOURCES = {
     ukrainian: { people: ['wdt:P27 wd:Q212'], lang: 'uk' },
     vietnamese: { people: ['wdt:P27 wd:Q881'], lang: 'vi' },
     yoruba: { people: ['wdt:P172 wd:Q190168'], names: ['Q34311'], lang: 'yo' },
-    irishGaelic: { names: ['Q9142'], lang: 'ga', strict: /[áéíóú]|^(Ó|Ní|Nic|Mac|Ua) /u },
+    irishGaelic: { names: ['Q9142'], lang: 'ga', strict: true },
 };
 
 const PROP = { first: 'P735', last: 'P734' };
+const query = (src, kind, sexed) => nameQueries(src, PROP[kind], sexed);
 // Labels the readers passed that are no name of the culture: Thị is the middle name of Vietnamese women; คิม เบอรี่ is
 // a stage name in two words; Van Nghi and Le Viêt are a middle and a given name in Latin letters (10b2 review).
 const NOT_NAMES = new Set(['vietnamese/Thị', 'thai/คิม เบอรี่', 'vietnamese/Van Nghi', 'vietnamese/Le Viêt']);
-
-/**
- * The queries for one culture and kind: one per people pattern and one per name language. `sexed` counts the bearers
- * by sex: first names, and a second count of surnames where a form's sex is read (bothSexes: Бойко is borne by both).
- */
-function queriesFor({ people = [], names = [], lang }, kind, sexed) {
-    const sex = sexed ? ' ?g' : '';
-    const bearer = `wdt:${PROP[kind]} ?f${sexed ? '; wdt:P21 ?g' : ''}`;
-    const labels = `OPTIONAL { ?f rdfs:label ?ln FILTER(LANG(?ln)="${lang}") }
-  OPTIONAL { ?f rdfs:label ?lm FILTER(LANG(?lm)="mul") }
-  OPTIONAL { ?f rdfs:label ?le FILTER(LANG(?le)="en") }`;
-    const wrap = where => `SELECT ?f${sex} ?c ?ln ?lm ?le WHERE {
-  { SELECT ?f${sex} (COUNT(DISTINCT ?p) AS ?c) WHERE { ${where} } GROUP BY ?f${sex} ORDER BY DESC(?c) LIMIT 3000 }
-  ${labels}
-}`;
-    return [...people.map(p => wrap(`?p ${p}; wdt:P31 wd:Q5; ${bearer}.`)),
-        ...names.map(q => wrap(`?f wdt:P407 wd:${q}. ?p wdt:P31 wd:Q5; ${bearer}.`))];
-}
 
 const argv = process.argv.slice(2);
 const arg = (k, d) => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1] : d; };
@@ -84,12 +67,12 @@ const BUDGET = Number(arg('budget', 280000));
     for (const culture of CULTURES) {
         const src = SOURCES[culture];
         for (const kind of src.surnames === false ? ['first'] : ['first', 'last']) {
-            const rows = await wd.queryAll(queriesFor(src, kind, kind === 'first'), `${culture}-${kind}`);
+            const rows = await wd.queryAll(query(src, kind, kind === 'first'), `${culture}-${kind}`);
             // A surname whose form's sex is read takes its bearers by sex from a second count; its rank stays the first's,
             // as persons with no sex on Wikidata drop out of the second.
             const bySex = new Map();
             if (kind === 'last' && GENDERED.has(culture)) {
-                for (const e of rankRows(await wd.queryAll(queriesFor(src, kind, true), `${culture}-sexes`))) bySex.set(e.key, e);
+                for (const e of rankRows(await wd.queryAll(query(src, kind, true), `${culture}-sexes`))) bySex.set(e.key, e);
             }
             for (const sex of kind === 'first' ? ['male', 'female'] : [null]) {
                 lists.push({ culture, kind, sex, entries: rankRows(rows, sex)
@@ -123,7 +106,7 @@ const BUDGET = Number(arg('budget', 280000));
     const l = newSurnames(last, heldOf('last_names'), overused, TOP.last);
     // Labels are made names after the read, so the stored answers still match the lists asked (logs/work/m10b2/labels.txt).
     const native = new Map(lists.flatMap(l => l.entries.map(e => [`${l.culture}/${e.name}`, e.native])));
-    const own = x => !SOURCES[x.culture].strict || native.get(`${x.culture}/${x.name}`) || SOURCES[x.culture].strict.test(x.name);
+    const own = x => !SOURCES[x.culture].strict || native.get(`${x.culture}/${x.name}`);
     const keep = x => own(x) && !NOT_NAMES.has(`${x.culture}/${x.name}`);
     const fl = labelLines(f.lines, 'first', heldOf('first_names'), overused, keep);
     const ll = labelLines(l.lines, 'last', heldOf('last_names'), overused, keep);

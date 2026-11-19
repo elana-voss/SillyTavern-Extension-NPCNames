@@ -10,7 +10,7 @@ import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { foldName, loadOverused } from './tools/overused.mjs';
 import { addNames, parseLines } from './tools/db.mjs';
-import { labelLines, nameOfLabel, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
+import { labelLines, nameOfLabel, nameQueries, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
 import { client } from './tools/nanogpt.mjs';
 import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, newFirstNames, newSurnames, parseAnswers, readJobs } from './tools/name-read.mjs';
 
@@ -492,7 +492,7 @@ test('a Wikidata label is a name without its bracketed note, and none where it h
         .map(nameOfLabel), ['Thích', 'Ganbold', null, null, null, 'Ó Néill']);
 });
 
-test('a Wikidata rank list adds an item\'s counts over sources, keeps the items borne more by the sex asked (men where equal) and a spelling once', () => {
+test('a Wikidata rank list adds an item\'s counts over rows, keeps in a sex\'s list the items that sex bears a quarter of, and a spelling once', () => {
     const sex = q => `http://www.wikidata.org/entity/${q}`;
     const rows = [
         { f: 'A', g: sex('Q6581097'), c: '5', ln: 'Ion', lm: '', le: 'Ion' }, { f: 'A', g: sex('Q6581072'), c: '1', ln: 'Ion' },
@@ -502,9 +502,23 @@ test('a Wikidata rank list adds an item\'s counts over sources, keeps the items 
         { f: 'G', g: sex('Q6581097'), c: '1', ln: '', le: 'Alex' },
     ];
     assert.deepEqual(rankRows(rows, 'male').map(e => [e.name, e.rank, e.country]), [['Ion', 1, 'Wikidata'], ['Alex', 2, 'Wikidata']]);
-    assert.deepEqual(rankRows(rows, 'female').map(e => e.name), ['Maria']);
+    // Alex, borne by two men and two women, is in both lists; Ion, one woman in six, only in the men's.
+    assert.deepEqual(rankRows(rows, 'female').map(e => e.name), ['Maria', 'Alex']);
     // A spelling's bearers by sex add up over its items (Ion: A and D; Alex: C and G); `native` says the name is the culture's own label.
     assert.deepEqual(rankRows(rows).map(e => [e.name, e.male, e.female, e.native]), [['Maria', 0, 8, false], ['Ion', 8, 1, true], ['Alex', 3, 2, true]]);
+});
+
+test('a Wikidata label is the culture\'s own where it is the item\'s label or native label in its language (Oisín), not an English one alone (Primus)', () => {
+    const rows = [{ f: 'A', c: '3', ln: 'Ó Murchú' }, { f: 'B', c: '2', lm: 'Oisín', nl: 'Oisín' }, { f: 'C', c: '1', le: 'Primus' },
+        { f: 'D', c: '1', lm: 'Daire', nl: 'Dáire' }];
+    assert.deepEqual(rankRows(rows).map(e => [e.name, e.native]), [['Ó Murchú', true], ['Oisín', true], ['Primus', false], ['Daire', false]]);
+});
+
+test('a culture\'s Wikidata queries leave out the bearers an earlier source counts, so a person two sources find counts once', () => {
+    const [a, b] = nameQueries({ people: ['wdt:P27 wd:Q218'], names: ['Q7913'], lang: 'ro' }, 'P735', true);
+    assert.doesNotMatch(a, /NOT EXISTS|P1705/u);
+    assert.match(b, /\?f wdt:P407 wd:Q7913\. \?p wdt:P31 wd:Q5; wdt:P735 \?f; wdt:P21 \?g\. FILTER NOT EXISTS \{ \?p wdt:P27 wd:Q218 \} \}/u);
+    assert.match(nameQueries({ names: ['Q9142'], lang: 'ga', strict: true }, 'P734', false)[0], /P1705 \?nx FILTER\(LANG\(\?nx\)="ga"\)/u);
 });
 
 test('Wikidata labels become names once: none where no name, refused, held after cleaning, overused or given before; both sexes make it ambiguous', () => {

@@ -33,7 +33,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 9 | A name appears when it is learned | R10, R12 | Done | | 3M | 0.6M | Claude 3.6M, nano-gpt 0.40M |
 | 10a | Common first names | R2, R3, R11, R12 | Done | | 12M | 0.45M | Claude 11.3M (three agents 3.94M, 4.1M, 2.65M; review 0.56M), nano-gpt 0.33M; code review Fable 5.2 medium |
 | 10b | Common surnames | R2, R3, R11, R12 | Done | | 14M | 0.40M | Claude 12.7M (three agents 4.0M, 3.96M, 4.18M; review 0.52M), nano-gpt 0.24M; code review Fable 5.2 medium |
-| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Done | | 12M | 0.28M | nano-gpt 0.18M |
+| 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | In progress | High | 12M | 0.28M | nano-gpt 0.19M |
 | 10c | True tags and placement | R4, R11, R12 | Planned | High | 9.5M | 0.62M | |
 | 10d | The pick leans to common names, if Fable so decides after 10c | R4, R11, R12 | Planned | High | 3M | 0.05M | |
 | | Total | | | | 84.5M | 5.76M | |
@@ -254,7 +254,7 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens, nano-gpt 2.66M input tokens (the owner, 2026-11-19: "yes, and work through it without stops"). Next: milestone 10c.
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: milestone 10c.
 - Thin after 10b2, no honest source for more: Mayan first names (0) and surnames (1), tried Wikidata given and family names of people of Maya ethnic groups and names in Mayan languages.
 - Thin after 10b2: Native American first names (0), tried Wikidata given names of people of Native American ethnic groups.
 - Thin after 10b2: Hawaiian first names (2) and surnames (6), tried Wikidata names of Native Hawaiians and names in Hawaiian.
