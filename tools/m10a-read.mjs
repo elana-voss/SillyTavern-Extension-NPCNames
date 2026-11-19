@@ -11,12 +11,9 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { client, pool } from './nanogpt.mjs';
 import { countriesOf, loadLists, norm, rankedEntries, COUNTRIES } from './name-lists.mjs';
-import { decide, firstNameTags, knownKeys, mergeSexes, parseAnswers, promptFor } from './name-read.mjs';
+import { decide, EXTRA, firstNameTags, knownKeys, mergeSexes, parseAnswers, promptFor, READERS } from './name-read.mjs';
 import { foldName, loadOverused } from './overused.mjs';
 
-const READERS = ['meta/muse-spark-1.3-contributor', 'deepseek/deepseek-v4.1-flash', 'minimax/minimax-m3'];
-// Muse Spark at its default effort reasons past any token limit on a list of 80 (7,091 reasoning tokens on 3 names).
-const EXTRA = { 'meta/muse-spark-1.3-contributor': { reasoning_effort: 'low', max_tokens: 16000 } };
 const TOP = 50;
 const OUT = new URL('../logs/work/m10a/', import.meta.url);
 

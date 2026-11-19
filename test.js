@@ -11,7 +11,7 @@ import { pathToFileURL } from 'node:url';
 import { foldName, loadOverused } from './tools/overused.mjs';
 import { parseLines } from './tools/db.mjs';
 import { client } from './tools/nanogpt.mjs';
-import { decide, firstNameTags, knownKeys, mergeSexes, parseAnswers } from './tools/name-read.mjs';
+import { decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, parseAnswers } from './tools/name-read.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -375,6 +375,21 @@ test('a romanised entry is held when the other sex\'s list reads a held native e
     const male = decide(['Michal', 'Eitan'], readers(['1 hebrew g - - DE l -', '2 hebrew g - - DE l -']), 'hebrew', () => false);
     const known = knownKeys([female, male], new Set(['מיכל']));
     assert.deepEqual(male.map(g => g.keys.some(k => known.has(k))), [true, false]);
+});
+
+test('a surname\'s gendered forms fold into one surname, and each form enters with the sex two readers give it', () => {
+    const list = ['Иванова', 'Иванов', 'Ivanov', 'Petrov', 'Smith', 'Sokolova'];
+    const rows = last => ['1 slavicRussian s - Ivanova f l -', '2 slavicRussian s 1 Ivanov m l -', '3 slavicRussian s 1 - m l -',
+        '4 slavicRussian s - - m l -', '5 english s - - - u -', `6 slavicRussian s - - ${last} l -`].join('\n');
+    const answers = ['f', 'f', '-'].map(last => parseAnswers(rows(last), 'last'));
+    const names = decide(list, answers, 'slavicRussian', k => k === 'ivanov', 'last');
+    assert.deepEqual(names.map(g => [list[g.form - 1], list[g.rank - 1], g.sex, g.present, g.keys]), [
+        ['Иванова', 'Иванова', 'female', false, ['иванова', 'ivanova']],
+        ['Иванов', 'Иванова', 'male', true, ['иванов', 'ivanov']],
+        ['Petrov', 'Petrov', 'male', false, ['petrov']],
+        ['Sokolova', 'Sokolova', 'female', false, ['sokolova']]]);
+    assert.deepEqual(lastNameTags(names[0]), { era: ['contemporary'], role: ['neutral'], allure: 'pleasant', commonness: 'common', genre: ['sliceOfLife'], themes: [] });
+    assert.equal(parseAnswers('4 slavicRussian s - - F l -').get(4).periods, 'F', 'a first name\'s line still reads periods');
 });
 
 async function testAsync(name, fn) {
