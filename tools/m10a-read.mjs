@@ -13,6 +13,8 @@ import { decide, firstNameTags, parseAnswers, promptFor } from './name-read.mjs'
 import { foldName, loadOverused } from './overused.mjs';
 
 const READERS = ['meta/muse-spark-1.3-contributor', 'deepseek/deepseek-v4.1-flash', 'minimax/minimax-m3'];
+// Muse Spark at its default effort reasons past any token limit on a list of 80 (7,091 reasoning tokens on 3 names).
+const EXTRA = { 'meta/muse-spark-1.3-contributor': { reasoning_effort: 'low', max_tokens: 16000 } };
 const TOP = 50;
 const OUT = new URL('../logs/work/m10a/', import.meta.url);
 
@@ -35,7 +37,7 @@ let stopped = 0;
 const calls = jobs.flatMap(j => READERS.map(model => ({ j, model })));
 const texts = await pool(calls, 6, async ({ j, model }) => {
     if (base + llm.stats.input > BUDGET) { stopped++; return null; }
-    return llm.ask(model, promptFor(j.entries.map(e => e.name)), { tag: `${j.culture}-${j.sex}` });
+    return llm.ask(model, promptFor(j.entries.map(e => e.name)), { tag: `${j.culture}-${j.sex}`, extra: EXTRA[model] });
 });
 
 const summary = ['culture\tsex\tread\tanswered(per reader)\tnames\ttop50 present\tnew\toverused'];

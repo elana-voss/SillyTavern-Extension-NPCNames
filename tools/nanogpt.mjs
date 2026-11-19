@@ -23,8 +23,8 @@ export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => set
     const note = line => appendFileSync(log, `${new Date().toISOString()} ${line}\n`);
 
     /** The model's text, or null after five failed tries. */
-    async function ask(model, prompt, { max_tokens = 8000, temperature = 0, tag = '' } = {}) {
-        const body = { model, messages: [{ role: 'user', content: prompt }], max_tokens, temperature };
+    async function ask(model, prompt, { max_tokens = 8000, temperature = 0, tag = '', extra = {} } = {}) {
+        const body = { model, messages: [{ role: 'user', content: prompt }], max_tokens, temperature, ...extra };
         const file = new URL(createHash('sha256').update(JSON.stringify(body)).digest('hex') + '.json', dir);
         if (existsSync(file)) { stats.cached++; return JSON.parse(readFileSync(file, 'utf8')).text; }
         for (let i = 0; i < 5; i++) {
@@ -42,7 +42,12 @@ export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => set
                 }
                 const j = await r.json();
                 const text = j.choices?.[0]?.message?.content ?? '';
-                if (!text.trim()) { note(`EMPTY ${model} ${tag}`); stats.fail++; continue; }
+                if (!text.trim()) {
+                    // A reader that spends its tokens on reasoning answers nothing; the input is paid all the same.
+                    stats.input += j.usage?.prompt_tokens ?? 0;
+                    note(`EMPTY ${model} ${tag} finish=${j.choices?.[0]?.finish_reason} in=${j.usage?.prompt_tokens} out=${j.usage?.completion_tokens}`);
+                    stats.fail++; continue;
+                }
                 stats.calls++; stats.input += j.usage?.prompt_tokens ?? 0; stats.output += j.usage?.completion_tokens ?? 0;
                 writeFileSync(file, JSON.stringify({ model, tag, usage: j.usage, text }));
                 note(`OK ${model} ${tag} in=${j.usage?.prompt_tokens}`);

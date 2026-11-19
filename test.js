@@ -7,6 +7,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { foldName, loadOverused } from './tools/overused.mjs';
 import { parseLines } from './tools/db.mjs';
+import { decide, firstNameTags, parseAnswers } from './tools/name-read.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -301,6 +302,25 @@ test('a real name marked not slop stays off the overused list, and the making to
 
 test('a data tool\'s list reads the same with either line end', () => {
     assert.deepEqual(parseLines('# note\r\na | b\r\n\r\nc | d\n'), [['a', 'b'], ['c', 'd']]);
+});
+
+test('list entries become names on two of three readers: spellings fold, abbreviations and other peoples\' names do not enter', () => {
+    const list = ['محمد', 'Md', 'Muhammad', 'Abdul', 'Ahmed', 'Jose', 'Khalid'];
+    const reader = rows => parseAnswers(rows.join('\n'));
+    const answers = [
+        reader(['1 arabic g - Muhammad BCDEF l religious', '2 ? a 1 - - u -', '3 arabic g 1 - CDEF l religious', '4 arabic p - - - u -',
+            '5 arabic g - - CDE l -', '6 spanish g - - CDE l -', '7 arabic g - - CD s -']),
+        reader(['1 arabic g - Muhammad CDEF l -', '2 ? a 1 - - u -', '3 arabic g 1 - CDE l religious', '4 ? p - - - u -',
+            '5 arabic,persian g - - DE l -', '6 spanish,portuguese g - - DE l -', 'Khalid: a name']),
+        reader(['1 arabic g - Mohammed DEF l religious', '2 arabic a - - - u -', '3 arabic g - - DE l religious', '4 arabic g - - - u -',
+            '5 ? g - - DE l -', '6 arabic g - - DE l -', '7 arabic g - - CD s -']),
+    ];
+    const names = decide(list, answers, 'arabic', k => k === 'mohammed');
+    assert.deepEqual(names.map(g => [list[g.form - 1], g.members.map(i => list[i - 1]), g.present]),
+        [['محمد', ['محمد', 'Md', 'Muhammad'], true], ['Ahmed', ['Ahmed'], false], ['Khalid', ['Khalid'], false]]);
+    const tags = firstNameTags(names[0]);
+    assert.deepEqual([tags.age, tags.era, tags.genre, tags.themes],
+        [['child', 'youngAdult', 'adult', 'elder'], ['midcentury', 'modern', 'contemporary'], ['sliceOfLife', 'noirDetective'], ['religious']]);
 });
 
 // What must stay true of the data. An apply tool's asserts check its input, once, on the database as
