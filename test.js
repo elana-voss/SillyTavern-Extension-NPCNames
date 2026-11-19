@@ -405,6 +405,13 @@ test('a string any reader calls not a name is no surname, though two call it one
     assert.deepEqual(decide(list, answers, 'arabic', () => false, 'last').map(g => list[g.form - 1]), ['الخطيب']);
 });
 
+test('where surnames are fathers\' names, a given name of that people in the surname list is a surname', () => {
+    const list = ['Musa', 'John'];
+    const answers = [0, 1, 2].map(r => parseAnswers(`1 nigerian,arabic g - - - l -\n2 ${r ? 'english' : 'nigerian'} g - - - l -`, 'last'));
+    assert.deepEqual(decide(list, answers, 'nigerian', () => false, 'last', { patronymic: true }).map(g => list[g.form - 1]), ['Musa']);
+    assert.deepEqual(decide(list, answers, 'arabic', () => false, 'last'), []);
+});
+
 async function testAsync(name, fn) {
     try { await fn(); passed++; console.log(`  ✓ ${name}`); } catch (e) { failed++; console.error(`  ✗ ${name}`); console.error(`    ${e.message}`); }
 }
@@ -607,17 +614,19 @@ function checkNoNameLost(data) {
     assert.deepEqual([inCulture(data.first_names, 'vietnamese').some(e => e.name === 'Trần'), inCulture(data.last_names, 'vietnamese').some(e => e.name === 'Trần')], [false, true], 'Trần is a surname');
 }
 
-// Milestone 10a: each common first name of tools/m10a-names.txt stands in its culture with its sex.
-function checkCommonFirstNames(data) {
-    const lines = readFileSync(new URL('./tools/m10a-names.txt', import.meta.url), 'utf8').split(/\r?\n/)
-        .filter(l => l && !l.startsWith('#')).map(l => l.split(' | '));
-    const held = new Set(data.first_names.map(e => `${e.language_ethnicity}/${e.name}/${e.gender}`));
-    assert.deepEqual(lines.map(([, c, n, g]) => `${c}/${n}/${g}`).filter(k => !held.has(k)), []);
+// Milestones 10a and 10b: each common name of tools/m10a-names.txt and m10b-names.txt stands in its
+// culture with its sex (a surname's "-" is none).
+function checkCommonNames(data) {
+    for (const [file, field] of [['m10a-names.txt', 'first_names'], ['m10b-names.txt', 'last_names']]) {
+        const lines = parseLines(readFileSync(new URL(`./tools/${file}`, import.meta.url), 'utf8'));
+        const held = new Set(data[field].map(e => `${e.language_ethnicity}/${e.name}/${e.gender ?? '-'}`));
+        assert.deepEqual(lines.map(([, c, n, g]) => `${c}/${n}/${g}`).filter(k => !held.has(k)), [], file);
+    }
 }
 
 test('database invariants', () => {
     const data = JSON.parse(readFileSync(new URL('./data/name_database.tagged.json', import.meta.url), 'utf8'));
-    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames, checkSurnamesReachable, checkDocuments, checkNoNameLost, checkCommonFirstNames]) check(data);
+    for (const check of [checkNamesAndHandles, checkSurnameGenders, checkCultures, checkPinnedNames, checkSurnamesReachable, checkDocuments, checkNoNameLost, checkCommonNames]) check(data);
 });
 
 console.log(`\n${passed} passed, ${failed} failed`);

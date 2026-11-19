@@ -5,6 +5,7 @@
 // two readers give it, in the cultures whose surnames are gendered (milestone 3's rules); elsewhere none.
 //
 // Run: node tools/m10b-read.mjs [--cultures a,b] [--window 200] [--budget 400000] [--write]
+// The window is 200 entries, 400 on the lists in WIDE.
 // Key: env NANOGPT_API_KEY. Answers are stored under logs/work/m10b/answers, so a rerun costs nothing;
 // no new request starts once the stored answers' input tokens pass the budget (stored ones are still read).
 // Writes logs/work/m10b/summary.txt (per culture), rejected.txt and entered.txt (the readers' answers); prints a short summary.
@@ -19,6 +20,8 @@ const OUT = new URL('../logs/work/m10b/', import.meta.url);
 // Cultures whose surnames have a man's and a woman's form (PLAN.md Decisions, milestones 3 and 5).
 const GENDERED = new Set(['slavicPolish', 'slavicRussian', 'slavicOther', 'icelandic', 'ukrainian', 'turkish', 'swedish',
     'greek', 'nepalese', 'irishGaelic', 'baltic', 'azerbaijani', 'latin']);
+// Cultures whose surnames are mostly fathers' given names (Ethiopian; Hausa in Nigeria's list: Musa, Ibrahim).
+const PATRONYMIC = new Set(['ethiopian', 'nigerian']);
 
 const argv = process.argv.slice(2);
 const arg = (k, d) => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1] : d; };
@@ -35,7 +38,10 @@ const overused = loadOverused();
 const llm = client(new URL('answers/', OUT));
 const base = llm.spent();
 
-const jobs = CULTURES.map(culture => ({ culture, tag: culture, entries: rankedEntries(nd, culture, 'last').slice(0, WINDOW) }));
+// Lists whose first 200 entries gave fewer than 100 surnames (mostly other peoples' names) are read to 400.
+const WIDE = new Set(['arabic', 'english', 'hebrew', 'korean', 'nigerian', 'slavicOther']);
+const jobs = CULTURES.map(culture => ({ culture, tag: culture,
+    entries: rankedEntries(nd, culture, 'last').slice(0, WIDE.has(culture) ? 400 : WINDOW) }));
 await readJobs(llm, jobs, 'last', BUDGET);
 
 const summary = ['culture\tread\tanswered(per reader)\tsurnames\ttop100 held\tnew forms\tmale/female/none\toverused'];
@@ -47,7 +53,8 @@ for (const j of jobs) {
     if (!answers.every(a => a.size)) { unread++; continue; }
     missingLines += answers.reduce((n, a) => n + entries.length - a.size, 0);
     const held = new Set(db.last_names.filter(e => e.language_ethnicity === culture).map(e => norm(e.name)));
-    const forms = decide(entries.map(e => e.name), answers, culture, k => held.has(k), 'last', { gendered: GENDERED.has(culture) });
+    const forms = decide(entries.map(e => e.name), answers, culture, k => held.has(k), 'last', { gendered: GENDERED.has(culture),
+        patronymic: PATRONYMIC.has(culture) });
     // R3: a held native form read as a Latin spelling holds that spelling.
     const known = knownKeys([forms], held);
     const top = new Set([...new Set(forms.map(f => f.rank))].slice(0, TOP));

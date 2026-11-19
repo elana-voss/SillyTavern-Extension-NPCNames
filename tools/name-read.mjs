@@ -148,8 +148,9 @@ const agreed = (values, k = 2) => {
  * says whether the culture holds a spelling key already. A surname's group splits by the sex two readers
  * give each entry (Ivanov, Ivanova) where `gendered` says the culture's surnames have a man's and a woman's form,
  * and each form is a name of its own, so both enter; sex null is neither. Elsewhere sex is never read.
+ * Where `patronymic` says a culture's surnames are fathers' given names, a given name counts as a surname.
  */
-export function decide(names, readers, culture, present, kind = 'first', { gendered = false } = {}) {
+export function decide(names, readers, culture, present, kind = 'first', { gendered = false, patronymic = false } = {}) {
     const n = names.length;
     const own = readers.map(a => {
         const g = groups(n);
@@ -159,7 +160,9 @@ export function decide(names, readers, culture, present, kind = 'first', { gende
     const together = (i, j) => own.filter(g => g.find(i) === g.find(j)).length >= 2;
     // A surname list holds what people typed as a family name (الحياه, life; النرجس, narcissus): one reader's x
     // rejects it. Real surnames that are words (الخطيب, Haddad) were read s by all three.
-    const isName = i => readers.filter(a => a.get(i)?.kind === KIND_WANTED[kind] && a.get(i).peoples.has(culture)).length >= 2
+    // Where `patronymic` says surnames are fathers' given names (Ethiopian, Hausa: Musa), a given name is one too.
+    const wanted = k => k === KIND_WANTED[kind] || (kind === 'last' && patronymic && k === 'g');
+    const isName = i => readers.filter(a => wanted(a.get(i)?.kind) && a.get(i).peoples.has(culture)).length >= 2
         && (kind === 'first' || !readers.some(a => a.get(i)?.kind === 'x'));
     const byRoot = new Map();
     for (let i = 1; i <= n; i++) {

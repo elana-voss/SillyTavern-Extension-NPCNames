@@ -60,7 +60,7 @@ export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => set
                 writeFileSync(file, JSON.stringify({ model, tag, usage: j.usage, text }));
                 note(`OK ${model} ${tag} in=${j.usage?.prompt_tokens}`);
                 return text;
-            } catch (e) { note(`FAIL ${e.name} ${model} ${tag}`); stats.fail++; await wait(5000); }
+            } catch (e) { note(`FAIL ${e.name} ${model} ${tag} ${e.cause?.code ?? ''} ${e.message}`); stats.fail++; await wait(5000); }
         }
         note(`GAVEUP ${model} ${tag}`);
         return null;
