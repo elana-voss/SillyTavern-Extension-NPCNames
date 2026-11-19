@@ -97,7 +97,8 @@ const id = uri => uri.split('/').pop();
  */
 export function nameOfLabel(label) {
     const name = label.replace(/\s*\([^)]*\)$/u, '').trim();
-    return /[/()]/.test(name) || /^\p{Ll}/u.test(name) || (/[A-Za-z]/.test(name) && /\p{Script=Cyrillic}/u.test(name))
+    return /[/()]/.test(name) || /^\p{Ll}/u.test(name) || /\s(?!(?:de|del|la|no|in|an)\s|h\p{Lu})\p{Ll}/u.test(name) // as the database's invariant
+        || (/[A-Za-z]/.test(name) && /\p{Script=Cyrillic}/u.test(name))
         ? null : name;
 }
 

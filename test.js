@@ -349,6 +349,12 @@ test('a reader\'s line whose tag fields stray keeps its people, kind, same and l
         [[9, ['arabic'], 'g', null, 'zahra', '', null], [13, ['hindi'], 'g', 2, null, 'DEF', 'u']]);
 });
 
+test('a reader\'s line that gives a name two kinds (s,g) reads as the kind the question asks for', () => {
+    const line = '19 vietnamese,vietnamese s,g - - - u regal\n121 irishGaelic g,s - - m l celestial';
+    assert.deepEqual([...parseAnswers(line, 'last')].map(([i, x]) => [i, x.kind, x.sex]), [[19, 's', null], [121, 's', 'm']]);
+    assert.equal(parseAnswers('7 vietnamese s,g - - DE l -').get(7).kind, 'g');
+});
+
 const russian = (() => {
     const list = ['Александр', 'Сергей', 'Саша', 'Sergey', 'Саня'];
     const reader = rows => parseAnswers(rows.map((r, i) => `${i + 1} slavicRussian g ${r} DE l -`).join('\n'));
@@ -521,13 +527,13 @@ test('a culture\'s Wikidata queries leave out the bearers an earlier source coun
     assert.match(nameQueries({ names: ['Q9142'], lang: 'ga', strict: true }, 'P734', false)[0], /P1705 \?nx FILTER\(LANG\(\?nx\)="ga"\)/u);
 });
 
-test('Wikidata labels become names once: none where no name, refused, held after cleaning, overused or given before; both sexes make it ambiguous', () => {
-    const lines = [['Thích (họ người)', 'male'], ['Kim (họ)', 'male'], ['Ana/Ani', 'female'], ['Elara', 'female'], ['Murphy', 'male'],
+test('Wikidata labels become names once: none where no name (a later word uncapitalised), refused, held after cleaning, overused or given before; both sexes make it ambiguous', () => {
+    const lines = [['Thích (họ người)', 'male'], ['Kim (họ)', 'male'], ['Ana/Ani', 'female'], ['Ó Ceallaig h', 'male'], ['Elara', 'female'], ['Murphy', 'male'],
         ['Kim', 'female'], ['Ana (tên)', 'female']].map(([name, gender]) => ({ culture: 'vietnamese', name, gender }));
     const read = labelLines(lines, 'first', () => new Set(['thich']), new Set(['elara']), x => x.name !== 'Murphy');
     assert.deepEqual(read.lines.map(l => [l.name, l.gender]), [['Kim', 'ambiguous'], ['Ana', 'female']]);
     assert.deepEqual(read.dropped.map(d => d.split('\t').slice(2).join(' ')), ['Thích (họ người) Thích held', 'Kim (họ) Kim cleaned',
-        'Ana/Ani - no name', 'Elara Elara overused', 'Murphy Murphy refused', 'Kim Kim twice', 'Ana (tên) Ana cleaned']);
+        'Ana/Ani - no name', 'Ó Ceallaig h - no name', 'Elara Elara overused', 'Murphy Murphy refused', 'Kim Kim twice', 'Ana (tên) Ana cleaned']);
 });
 
 await testAsync('a Wikidata query given up stops the run, naming it, before a list is read thinner than its source', async () => {

@@ -80,10 +80,13 @@ ${names.map((n, i) => `${i + 1} ${n}`).join('\n')}`;
 
 // A reader may echo the entry after its number (MiniMax on a list of 240): one token is skipped.
 const LINE = Object.fromEntries(Object.entries(SIXTH).map(([kind, sixth]) =>
-    [kind, new RegExp(String.raw`^(\d+)[.:]?\s+(?:\S+\s+)?(\S+)\s+([gspax])\s+(\d+|-)\s+(.+?)\s+${sixth}\s+([pslhu])\s+(\S+)\s*$`, 'i')]));
+    [kind, new RegExp(String.raw`^(\d+)[.:]?\s+(?:\S+\s+)?(\S+)\s+([gspax](?:,[gspax])*)\s+(\d+|-)\s+(.+?)\s+${sixth}\s+([pslhu])\s+(\S+)\s*$`, 'i')]));
 // A line whose tag fields stray ('9 arabic g - zahra - - - -') still holds people, kind, same and latin;
 // its periods, allure and theme are kept only where they have their form.
-const LOOSE = /^(\d+)[.:]?\s+(?:\S+\s+)?(\S+)\s+([gspax])\s+(\d+|-)\s+(\S+)(?:\s+(\S+))?(?:\s+(\S+))?(?:\s+(\S+))?/i;
+const LOOSE = /^(\d+)[.:]?\s+(?:\S+\s+)?(\S+)\s+([gspax](?:,[gspax])*)\s+(\d+|-)\s+(\S+)(?:\s+(\S+))?(?:\s+(\S+))?(?:\s+(\S+))?/i;
+
+// A reader that gives two kinds ('s,g') gives the one the question asks for where it is among them.
+const kindOf = (k, kind) => k.split(',').find(x => x === (kind === 'last' ? 's' : 'g')) ?? k[0];
 
 /**
  * Answer text to a map number -> {peoples, kind, same, latin, periods, sex, allure, theme}; a line that does
@@ -99,7 +102,7 @@ export function parseAnswers(text, kind = 'first') {
         const peoples = new Set(m[2].split(',').filter(p => p in CULTURES));
         const same = m[4] === '-' ? null : Number(m[4]);
         out.set(Number(m[1]), {
-            peoples, kind: m[3].toLowerCase(), same: same && same < Number(m[1]) ? same : null,
+            peoples, kind: kindOf(m[3].toLowerCase(), kind), same: same && same < Number(m[1]) ? same : null,
             latin: m[5] === '-' ? null : m[5],
             periods: kind === 'first' && /^[A-F]+$/i.test(m[6] ?? '') ? m[6].toUpperCase() : '',
             sex: kind === 'last' && /^[mf]$/i.test(m[6] ?? '') ? m[6].toLowerCase() : null,
