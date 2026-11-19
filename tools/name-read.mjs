@@ -146,9 +146,10 @@ const agreed = (values, k = 2) => {
  * where two readers call it that kind among that people. Returns the names in rank order:
  * {form (index), rank (the group's first entry), members, present, keys, sex, tags}, where `present(key)`
  * says whether the culture holds a spelling key already. A surname's group splits by the sex two readers
- * give each entry (Ivanov, Ivanova), and each form is a name of its own, so both enter; sex null is neither.
+ * give each entry (Ivanov, Ivanova) where `gendered` says the culture's surnames have a man's and a woman's form,
+ * and each form is a name of its own, so both enter; sex null is neither. Elsewhere sex is never read.
  */
-export function decide(names, readers, culture, present, kind = 'first') {
+export function decide(names, readers, culture, present, kind = 'first', { gendered = false } = {}) {
     const n = names.length;
     const own = readers.map(a => {
         const g = groups(n);
@@ -163,7 +164,7 @@ export function decide(names, readers, culture, present, kind = 'first') {
         if (r) byRoot.get(r).push(i); else byRoot.set(i, [i]);
     }
     const SEX = { m: 'male', f: 'female' };
-    const sexOf = i => (kind === 'last' ? SEX[agreed(readers.map(a => a.get(i)?.sex))] ?? null : null);
+    const sexOf = i => (kind === 'last' && gendered ? SEX[agreed(readers.map(a => a.get(i)?.sex))] ?? null : null);
     const out = [];
     for (const group of byRoot.values()) for (const sex of [...new Set(group.map(sexOf))]) {
         const members = group.filter(i => sexOf(i) === sex);

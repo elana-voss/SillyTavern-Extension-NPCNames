@@ -47,7 +47,7 @@ for (const j of jobs) {
     if (!answers.every(a => a.size)) { unread++; continue; }
     missingLines += answers.reduce((n, a) => n + entries.length - a.size, 0);
     const held = new Set(db.last_names.filter(e => e.language_ethnicity === culture).map(e => norm(e.name)));
-    const forms = decide(entries.map(e => e.name), answers, culture, k => held.has(k), 'last');
+    const forms = decide(entries.map(e => e.name), answers, culture, k => held.has(k), 'last', { gendered: GENDERED.has(culture) });
     // R3: a held native form read as a Latin spelling holds that spelling.
     const known = knownKeys([forms], held);
     const top = new Set([...new Set(forms.map(f => f.rank))].slice(0, TOP));
@@ -61,9 +61,9 @@ for (const j of jobs) {
         if (f.keys.some(k => known.has(k))) continue;
         const e = entries[f.form - 1];
         if (f.keys.some(k => overused.has(k)) || overused.has(foldName(e.name))) { slop++; continue; }
-        const gender = GENDERED.has(culture) && f.sex ? f.sex : null;
+        const gender = f.sex;
         counts[gender ?? 'none']++;
-        lines.push({ culture, name: e.name, gender, source: `name-dataset ${e.country}`, tags: lastNameTags(f), sexRead: f.sex });
+        lines.push({ culture, name: e.name, gender, source: `name-dataset ${e.country}`, tags: lastNameTags(f) });
     }
     const groupsHeld = [...top].filter(r => forms.filter(f => f.rank === r).every(f => f.keys.some(k => known.has(k)))).length;
     summary.push([culture, entries.length, answers.map(a => a.size).join('/'), top.size, groupsHeld,
@@ -83,9 +83,7 @@ if (argv.includes('--write')) {
         '# allure | commonness | genres | themes', ...text].join('\n') + '\n');
 }
 const spent = llm.spent();
-const outside = lines.filter(m => !m.gender && m.sexRead);
 console.log(`jobs ${jobs.length}, unread ${unread}, stopped by budget ${llm.stats.stopped}; answer lines missing ${missingLines}`);
 console.log(`input tokens: stored ${spent} (this run ${spent - base}); calls ${llm.stats.calls}, cached ${llm.stats.cached}, failed tries ${llm.stats.fail}`);
 console.log(`new surname forms ${lines.length} (male ${lines.filter(m => m.gender === 'male').length}, female ${lines.filter(m => m.gender === 'female').length}); entries rejected ${rejected.length}`);
-console.log(`read as one sex outside the gendered cultures, entered without one: ${outside.length} ${outside.slice(0, 8).map(m => `${m.culture}/${m.name}:${m.sexRead}`).join(' ')}`);
 console.log(`tables: logs/work/m10b/summary.txt, rejected.txt${argv.includes('--write') ? '; list tools/m10b-names.txt' : ''}`);

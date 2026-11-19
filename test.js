@@ -382,7 +382,7 @@ test('a surname\'s gendered forms fold into one surname, and each form enters wi
     const rows = last => ['1 slavicRussian s - Ivanova f l -', '2 slavicRussian s 1 Ivanov m l -', '3 slavicRussian s 1 - m l -',
         '4 slavicRussian s - - m l -', '5 english s - - - u -', `6 slavicRussian s - - ${last} l -`].join('\n');
     const answers = ['f', 'f', '-'].map(last => parseAnswers(rows(last), 'last'));
-    const names = decide(list, answers, 'slavicRussian', k => k === 'ivanov', 'last');
+    const names = decide(list, answers, 'slavicRussian', k => k === 'ivanov', 'last', { gendered: true });
     assert.deepEqual(names.map(g => [list[g.form - 1], list[g.rank - 1], g.sex, g.present, g.keys]), [
         ['Иванова', 'Иванова', 'female', false, ['иванова', 'ivanova']],
         ['Иванов', 'Иванова', 'male', true, ['иванов', 'ivanov']],
@@ -390,6 +390,13 @@ test('a surname\'s gendered forms fold into one surname, and each form enters wi
         ['Sokolova', 'Sokolova', 'female', false, ['sokolova']]]);
     assert.deepEqual(lastNameTags(names[0]), { era: ['contemporary'], role: ['neutral'], allure: 'pleasant', commonness: 'common', genre: ['sliceOfLife'], themes: [] });
     assert.equal(parseAnswers('4 slavicRussian s - - F l -').get(4).periods, 'F', 'a first name\'s line still reads periods');
+});
+
+test('a surname splits by sex only in a culture whose surnames are gendered', () => {
+    const list = ['الزعبي', 'Alzoubi'];
+    const answers = [0, 1, 2].map(() => parseAnswers(['1 arabic s - Alzoubi - l -', '2 arabic s 1 - m l -'].join('\n'), 'last'));
+    const names = decide(list, answers, 'arabic', () => false, 'last');
+    assert.deepEqual(names.map(g => [list[g.form - 1], g.members, g.sex]), [['الزعبي', [1, 2], null]]);
 });
 
 async function testAsync(name, fn) {
