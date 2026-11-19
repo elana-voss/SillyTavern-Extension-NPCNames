@@ -3,6 +3,7 @@
 // forms the database lacks are written to tools/m10b-names.txt for tools/m10b-apply-surnames.mjs.
 // A surname's gendered forms (Ivanov, Ivanova) fold into one surname and each form enters with the sex
 // two readers give it, in the cultures whose surnames are gendered (milestone 3's rules); elsewhere none.
+// Where surnames are fathers' given names (PATRONYMIC), a string read as a given name counts as a surname.
 //
 // Run: node tools/m10b-read.mjs [--cultures a,b] [--window 200] [--budget 400000] [--write]
 // The window is 200 entries, 400 on the lists in WIDE.

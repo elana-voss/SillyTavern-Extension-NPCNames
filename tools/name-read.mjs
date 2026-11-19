@@ -4,6 +4,7 @@
 // name (Md, Mohd, Abdul and four spellings of Muhammad stand in Saudi Arabia's top 20): readers say
 // which peoples give it, what kind of string it is, and which entry above it is the same name.
 // The reader is never told the list's country, the culture asked for or what another reader said.
+// Surnames (10b): any reader's x rejects one; gendered cultures split a surname by sex, patronymic ones take given names.
 import { norm } from './name-lists.mjs';
 import { pool } from './nanogpt.mjs';
 
