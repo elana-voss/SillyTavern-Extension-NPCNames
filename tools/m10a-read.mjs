@@ -5,12 +5,13 @@
 // Run: node tools/m10a-read.mjs [--cultures a,b] [--window 80] [--budget 450000] [--write]
 // The window is 80 entries, 240 on the lists in WIDE; Irish Gaelic waits for 10b2.
 // Key: env NANOGPT_API_KEY. Answers are stored under logs/work/m10a/answers, so a rerun costs nothing;
-// no new request starts once the stored answers' input tokens pass the budget.
+// no new request starts once the stored answers' input tokens pass the budget (stored ones are still read).
+// A romanised entry is held when either sex's list reads a held native entry as it (name-read.mjs knownKeys).
 // Writes logs/work/m10a/summary.txt (per culture and sex) and rejected.txt; prints a short summary.
 import { readFileSync, writeFileSync } from 'node:fs';
 import { client, pool } from './nanogpt.mjs';
 import { countriesOf, loadLists, norm, rankedEntries, COUNTRIES } from './name-lists.mjs';
-import { decide, firstNameTags, mergeSexes, parseAnswers, promptFor } from './name-read.mjs';
+import { decide, firstNameTags, knownKeys, mergeSexes, parseAnswers, promptFor } from './name-read.mjs';
 import { foldName, loadOverused } from './overused.mjs';
 
 const READERS = ['meta/muse-spark-1.3-contributor', 'deepseek/deepseek-v4.1-flash', 'minimax/minimax-m3'];
@@ -40,23 +41,27 @@ const WIDE = new Set(['chinese-male', 'chinese-female', 'dutch-female', 'ghanaia
     'nigerian-female', 'persian-male', 'persian-female', 'slavicRussian-male', 'slavicRussian-female']);
 for (const j of jobs) j.entries = rankedEntries(nd, j.culture, 'first', j.sex).slice(0, WIDE.has(`${j.culture}-${j.sex}`) ? 240 : WINDOW);
 
-let stopped = 0;
 const calls = jobs.flatMap(j => READERS.map(model => ({ j, model })));
-const texts = await pool(calls, 6, async ({ j, model }) => {
-    if (base + llm.stats.input > BUDGET) { stopped++; return null; }
-    return llm.ask(model, promptFor(j.entries.map(e => e.name)), { tag: `${j.culture}-${j.sex}`, extra: EXTRA[model] });
-});
+const texts = await pool(calls, 6, ({ j, model }) => llm.ask(model, promptFor(j.entries.map(e => e.name)),
+    { tag: `${j.culture}-${j.sex}`, extra: EXTRA[model], allow: () => base + llm.stats.input <= BUDGET }));
 
 const summary = ['culture\tsex\tread\tanswered(per reader)\tnames\ttop50 present\tnew\toverused'];
 const rejected = [];
 const lines = [];
 let missingLines = 0, unread = 0;
+const held = new Map(CULTURES.map(c => [c, new Set(db.first_names.filter(e => e.language_ethnicity === c).map(e => norm(e.name)))]));
 for (const [ji, j] of jobs.entries()) {
-    const answers = READERS.map((_, r) => parseAnswers(texts[ji * READERS.length + r]));
-    if (answers.some(a => a.size === 0)) { unread++; continue; }
+    j.answers = READERS.map((_, r) => parseAnswers(texts[ji * READERS.length + r]));
+    if (j.answers.every(a => a.size)) j.names = decide(j.entries.map(e => e.name), j.answers, j.culture, k => held.get(j.culture).has(k));
+}
+// R3 across both sexes' lists: a held native entry's reading in one list holds its romanisation in the other.
+const known = new Map(CULTURES.map(c => [c, knownKeys(jobs.filter(j => j.culture === c && j.names).map(j => j.names), held.get(c))]));
+for (const j of jobs) {
+    const answers = j.answers;
+    if (!j.names) { unread++; continue; }
     missingLines += answers.reduce((n, a) => n + j.entries.length - a.size, 0);
-    const held = new Set(db.first_names.filter(e => e.language_ethnicity === j.culture).map(e => norm(e.name)));
-    const names = decide(j.entries.map(e => e.name), answers, j.culture, k => held.has(k));
+    const names = j.names;
+    for (const g of names) g.present = g.keys.some(k => known.get(j.culture).has(k));
     const top = names.slice(0, TOP);
     const named = new Set(names.flatMap(g => g.members));
     for (const [i, e] of j.entries.entries()) {
@@ -88,7 +93,7 @@ if (argv.includes('--write')) {
         '# intelligence | allure | commonness | genres | themes', ...text].join('\n') + '\n');
 }
 const spent = llm.spent();
-console.log(`jobs ${jobs.length}, unread ${unread}, stopped by budget ${stopped}; answer lines missing ${missingLines}`);
+console.log(`jobs ${jobs.length}, unread ${unread}, stopped by budget ${llm.stats.stopped}; answer lines missing ${missingLines}`);
 console.log(`input tokens: stored ${spent} (this run ${spent - base}); calls ${llm.stats.calls}, cached ${llm.stats.cached}, failed tries ${llm.stats.fail}`);
 console.log(`new names ${merged.length} (ambiguous ${merged.filter(m => m.gender === 'ambiguous').length}); entries rejected ${rejected.length}`);
 console.log(`tables: logs/work/m10a/summary.txt, rejected.txt${argv.includes('--write') ? '; list tools/m10a-names.txt' : ''}`);

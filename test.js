@@ -4,10 +4,14 @@ import { deriveEnumValues, pickName, readUsed } from './picker.js';
 import { injectBeforeLatest, isInstalledIn } from './advertisement.js';
 import { HIDDEN_TOOL_CALL_CLASS, markToolCallLines } from './tool-calls.js';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { foldName, loadOverused } from './tools/overused.mjs';
 import { parseLines } from './tools/db.mjs';
-import { decide, firstNameTags, mergeSexes, parseAnswers } from './tools/name-read.mjs';
+import { client } from './tools/nanogpt.mjs';
+import { decide, firstNameTags, knownKeys, mergeSexes, parseAnswers } from './tools/name-read.mjs';
 
 let passed = 0;
 let failed = 0;
@@ -315,7 +319,8 @@ test('list entries become names on two of three readers: spellings fold, abbrevi
         reader(['1 arabic g - Mohammed DEF l religious', '2 arabic a - - - u -', '3 arabic g - - DE l religious', '4 arabic g - - - u -',
             '5 ? g - - DE l -', '6 arabic g - - DE l -', '7 arabic g - - CD s -']),
     ];
-    const names = decide(list, answers, 'arabic', k => k === 'mohammed');
+    // Two readers give محمد as Muhammad; the third's Mohammed is no key.
+    const names = decide(list, answers, 'arabic', k => k === 'muhammad');
     assert.deepEqual(names.map(g => [list[g.form - 1], g.members.map(i => list[i - 1]), g.present]),
         [['محمد', ['محمد', 'Md', 'Muhammad'], true], ['Ahmed', ['Ahmed'], false], ['Khalid', ['Khalid'], false]]);
     const tags = firstNameTags(names[0]);
@@ -335,6 +340,61 @@ test('a Latin-letter entry\'s "latin" answer is no key, and only a name new in b
     assert.deepEqual(mergeSexes([line('male', 'Andrew', ['andrew']), line('male', 'Andy', ['andy', 'andrew']),
         line('female', 'Andrea', ['andrea']), line('female', 'Andrew', ['andrew'])]).map(m => `${m.name} ${m.gender}`),
     ['Andrew ambiguous', 'Andy male', 'Andrea female']);
+});
+
+test('a reader\'s line whose tag fields stray keeps its people, kind, same and latin', () => {
+    const a = parseAnswers('9 arabic g - zahra - - - -\n13 hindi g 2 - DEF u l -');
+    assert.deepEqual([...a].map(([i, x]) => [i, [...x.peoples], x.kind, x.same, x.latin, x.periods, x.allure]),
+        [[9, ['arabic'], 'g', null, 'zahra', '', null], [13, ['hindi'], 'g', 2, null, 'DEF', 'u']]);
+});
+
+const russian = (() => {
+    const list = ['Александр', 'Сергей', 'Саша', 'Sergey', 'Саня'];
+    const reader = rows => parseAnswers(rows.map((r, i) => `${i + 1} slavicRussian g ${r} DE l -`).join('\n'));
+    return decide(list, [
+        reader(['- -', '- Sergey', '2 Sasha', '2 -', '3 Sanya']),
+        reader(['- -', '- -', '1 Alexander', '1 -', '1 Alexander']),
+        reader(['- Aleksandr', '- Sergey', '- Sasha', '2 -', '- Sanya']),
+    ], 'slavicRussian', () => false);
+})();
+
+test('an entry joins a name only where two readers put it with that name\'s first entry', () => {
+    assert.deepEqual(russian.map(g => g.members), [[1], [2, 4], [3, 5]]);
+});
+
+test('a latin spelling is a key only where two readers give it', () => {
+    assert.deepEqual(russian.find(g => g.form === 1).keys, ['александр']);
+    assert.deepEqual(russian.find(g => g.form === 3)?.keys.includes('alexander'), false);
+});
+
+test('a romanised entry is held when the other sex\'s list reads a held native entry as it (R3)', () => {
+    const readers = rows => [0, 1, 2].map(() => parseAnswers(rows.join('\n')));
+    const female = decide(['מיכל'], readers(['1 hebrew g - Michal DE l -']), 'hebrew', k => k === 'מיכל');
+    const male = decide(['Michal', 'Eitan'], readers(['1 hebrew g - - DE l -', '2 hebrew g - - DE l -']), 'hebrew', () => false);
+    const known = knownKeys([female, male], new Set(['מיכל']));
+    assert.deepEqual(male.map(g => g.keys.some(k => known.has(k))), [true, false]);
+});
+
+async function testAsync(name, fn) {
+    try { await fn(); passed++; console.log(`  ✓ ${name}`); } catch (e) { failed++; console.error(`  ✗ ${name}`); console.error(`    ${e.message}`); }
+}
+
+await testAsync('a stored answer is read past the budget, a new call is not, and an empty answer\'s input counts as spent', async () => {
+    const dir = pathToFileURL(mkdtempSync(join(tmpdir(), 'npcnames-llm-')) + '/');
+    try {
+        const replies = [{ content: '' }, { content: '1 x' }];
+        let fetched = 0;
+        const fetchFn = async () => {
+            const r = replies[fetched++];
+            return { ok: true, status: 200, json: async () => ({ choices: [{ message: { content: r.content } }], usage: { prompt_tokens: 10, completion_tokens: 1 } }) };
+        };
+        const llm = client(dir, { fetchFn, wait: async () => {} });
+        assert.equal(await llm.ask('m', 'a'), '1 x');
+        assert.equal(llm.spent(), 20);
+        assert.equal(await llm.ask('m', 'a', { allow: () => false }), '1 x');
+        assert.equal(await llm.ask('m', 'b', { allow: () => false }), null);
+        assert.deepEqual([fetched, llm.stats.stopped], [2, 1]);
+    } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 
 // What must stay true of the data. An apply tool's asserts check its input, once, on the database as

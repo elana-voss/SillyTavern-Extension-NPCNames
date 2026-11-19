@@ -1,6 +1,6 @@
 // Milestone 10's reading of list entries: the readers' blind open question, their answers parsed,
-// the rule that turns three readers' answers into names, and the merge of a name new in both sexes'
-// lists into one ambiguous entry. A list entry is a string, not yet a
+// the rule that turns three readers' answers into names, the spellings a culture holds across both
+// sexes' lists, and the merge of a name new in both sexes' lists into one ambiguous entry. A list entry is a string, not yet a
 // name (Md, Mohd, Abdul and four spellings of Muhammad stand in Saudi Arabia's top 20): readers say
 // which peoples give it, what kind of string it is, and which entry above it is the same name.
 // The reader is never told the list's country, the culture asked for or what another reader said.
@@ -49,27 +49,32 @@ Example answer lines:
 No other text. The strings:
 ${names.map((n, i) => `${i + 1} ${n}`).join('\n')}`;
 
+// A reader may echo the entry after its number (MiniMax on a list of 240): one token is skipped.
+const LINE = /^(\d+)[.:]?\s+(?:\S+\s+)?(\S+)\s+([gspax])\s+(\d+|-)\s+(.+?)\s+([A-F]+|-)\s+([pslhu])\s+(\S+)\s*$/i;
+// A line whose tag fields stray ('9 arabic g - zahra - - - -') still holds people, kind, same and latin;
+// its periods, allure and theme are kept only where they have their form.
+const LOOSE = /^(\d+)[.:]?\s+(?:\S+\s+)?(\S+)\s+([gspax])\s+(\d+|-)\s+(\S+)(?:\s+(\S+))?(?:\s+(\S+))?(?:\s+(\S+))?/i;
+
 /** Answer text to a map number -> {peoples, kind, same, latin, periods, allure, theme}; a line that does not fit is left out. */
 export function parseAnswers(text) {
     const out = new Map();
     if (!text) return out;
     for (const l of text.replace(/<think>[\s\S]*?<\/think>/g, '').split(/\r?\n/)) {
-        const m = l.trim().replace(/[`*]/g, '')
-            // A reader may echo the entry after its number (MiniMax on a list of 240): one token is skipped.
-            .match(/^(\d+)[.:]?\s+(?:\S+\s+)?(\S+)\s+([gspax])\s+(\d+|-)\s+(.+?)\s+([A-F]+|-)\s+([pslhu])\s+(\S+)\s*$/i);
+        const t = l.trim().replace(/[`*]/g, '');
+        const m = t.match(LINE) ?? t.match(LOOSE);
         if (!m) continue;
         const peoples = new Set(m[2].split(',').filter(p => p in CULTURES));
         const same = m[4] === '-' ? null : Number(m[4]);
         out.set(Number(m[1]), {
             peoples, kind: m[3].toLowerCase(), same: same && same < Number(m[1]) ? same : null,
-            latin: m[5] === '-' ? null : m[5], periods: m[6] === '-' ? '' : m[6].toUpperCase(),
-            allure: m[7].toLowerCase(), theme: THEMES.includes(m[8]) ? m[8] : null,
+            latin: m[5] === '-' ? null : m[5], periods: /^[A-F]+$/i.test(m[6] ?? '') ? m[6].toUpperCase() : '',
+            allure: /^[pslhu]$/i.test(m[7] ?? '') ? m[7].toLowerCase() : null, theme: THEMES.includes(m[8]) ? m[8] : null,
         });
     }
     return out;
 }
 
-/** Union-find over 1..n. */
+/** Union-find over 1..n: one reader's groups, closed over its own "same" answers. */
 function groups(n) {
     const up = Array.from({ length: n + 1 }, (_, i) => i);
     const find = i => (up[i] === i ? i : (up[i] = find(up[i])));
@@ -84,10 +89,12 @@ const agreed = (values, k = 2) => {
 };
 
 /**
- * Three readers' answers to names in rank order. Two strings are one name where two readers put
- * them in one group; a string is a name of `culture` where two readers call it that kind among that
- * people. Returns the names in rank order: {form (index), members, present, latins, tags}, where
- * `present(key)` says whether the culture holds a spelling key already.
+ * Three readers' answers to names in rank order. An entry joins the first name above it whose first
+ * entry two readers put in one group with it, never by way of a third entry (Саша is not Сергей because
+ * one reader joins Sergey with Сергей and another Sergey with Саша); a string is a name of `culture`
+ * where two readers call it that kind among that people. Returns the names in rank order:
+ * {form (index), members, present, keys, tags}, where `present(key)` says whether the culture holds a
+ * spelling key already.
  */
 export function decide(names, readers, culture, present, kind = 'first') {
     const n = names.length;
@@ -96,27 +103,22 @@ export function decide(names, readers, culture, present, kind = 'first') {
         for (const [i, x] of a) if (x.same && i <= n) g.join(i, x.same);
         return g;
     });
-    const all = groups(n);
-    for (let i = 1; i <= n; i++) {
-        for (let j = 1; j < i; j++) {
-            if (own.filter(g => g.find(i) === g.find(j)).length >= 2) all.join(i, j);
-        }
-    }
+    const together = (i, j) => own.filter(g => g.find(i) === g.find(j)).length >= 2;
     const isName = i => readers.filter(a => a.get(i)?.kind === KIND_WANTED[kind] && a.get(i).peoples.has(culture)).length >= 2;
     const byRoot = new Map();
     for (let i = 1; i <= n; i++) {
-        const r = all.find(i);
-        if (!byRoot.has(r)) byRoot.set(r, []);
-        byRoot.get(r).push(i);
+        const r = [...byRoot.keys()].find(r => together(i, r));
+        if (r) byRoot.get(r).push(i); else byRoot.set(i, [i]);
     }
     const out = [];
     for (const members of byRoot.values()) {
         const form = members.find(isName);
         if (!form) continue;
         // "latin" is asked only of other scripts; on a Latin-letter entry readers put a related name there (Andy: Andrew).
+        // A spelling is a key only where two readers give it.
         const latins = members.filter(i => !/\p{Script=Latin}/u.test(names[i - 1]))
-            .flatMap(i => readers.map(a => a.get(i)?.latin).filter(Boolean));
-        const keys = [...new Set([...members.map(i => norm(names[i - 1])), ...latins.map(norm)])].filter(Boolean);
+            .map(i => agreed(readers.map(a => a.get(i)?.latin).filter(Boolean).map(norm).filter(Boolean)));
+        const keys = [...new Set([...members.map(i => norm(names[i - 1])), ...latins])].filter(Boolean);
         const answers = readers.map(a => a.get(form)).filter(Boolean);
         const periods = Object.keys(PERIODS).filter(p => answers.filter(x => x.periods.includes(p)).length >= 2);
         out.push({
@@ -136,6 +138,14 @@ export function firstNameTags({ periods, allure, theme }) {
         (has('E') || has('F')) && 'modern', 'contemporary'].filter(Boolean);
     const genre = ['sliceOfLife', (has('B') || has('C')) && 'noirDetective'].filter(Boolean);
     return { age, era, role: ['neutral'], intelligence: 'average', allure, commonness: 'common', genre, themes: theme ? [theme] : [] };
+}
+
+/** Spelling keys a culture holds: the held ones and every key of a group in either sex's list that holds one. */
+// R3: held מיכל, read as Michal in the women's list, makes the men's list's Michal held.
+export function knownKeys(groupLists, held) {
+    const known = new Set(held);
+    for (const g of groupLists.flat()) if (g.keys.some(k => held.has(k))) for (const k of g.keys) known.add(k);
+    return known;
 }
 
 /** Lines of new names {culture, sex, keys}: a culture's name new in both sexes' lists enters once, as ambiguous. */

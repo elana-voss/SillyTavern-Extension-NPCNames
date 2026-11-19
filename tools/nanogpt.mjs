@@ -1,5 +1,6 @@
 // The nano-gpt client of milestone 10's readers: every answer is stored under the caller's folder,
-// keyed by the request, so a rerun costs nothing. One request a second; a 429 waits 65 s.
+// keyed by the request, so a rerun costs nothing; an empty answer's usage is stored beside them, so
+// spent() holds every paid input. One request a second; a 429 waits 65 s.
 // Key: env NANOGPT_API_KEY, never written anywhere. A refusal is logged with its status and text.
 import { createHash } from 'node:crypto';
 import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
@@ -13,7 +14,7 @@ const TIMEOUT_MS = 300000;
 export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => setTimeout(r, ms)) } = {}) {
     mkdirSync(dir, { recursive: true });
     const log = new URL('../llm.log', dir);
-    const stats = { calls: 0, cached: 0, fail: 0, input: 0, output: 0 };
+    const stats = { calls: 0, cached: 0, fail: 0, stopped: 0, input: 0, output: 0 };
     let last = 0, slot = Promise.resolve();
     const throttle = () => (slot = slot.then(async () => {
         const w = last + GAP_MS - Date.now();
@@ -22,11 +23,16 @@ export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => set
     }));
     const note = line => appendFileSync(log, `${new Date().toISOString()} ${line}\n`);
 
-    /** The model's text, or null after five failed tries. */
-    async function ask(model, prompt, { max_tokens = 8000, temperature = 0, tag = '', extra = {} } = {}) {
+    /**
+     * The model's text, or null after five failed tries. A stored answer is read whatever `allow` says;
+     * a new request starts only while `allow()` holds (the caller's budget), else null.
+     */
+    async function ask(model, prompt, { max_tokens = 8000, temperature = 0, tag = '', extra = {}, allow = () => true } = {}) {
         const body = { model, messages: [{ role: 'user', content: prompt }], max_tokens, temperature, ...extra };
-        const file = new URL(createHash('sha256').update(JSON.stringify(body)).digest('hex') + '.json', dir);
+        const hash = createHash('sha256').update(JSON.stringify(body)).digest('hex');
+        const file = new URL(hash + '.json', dir);
         if (existsSync(file)) { stats.cached++; return JSON.parse(readFileSync(file, 'utf8')).text; }
+        if (!allow()) { stats.stopped++; return null; }
         for (let i = 0; i < 5; i++) {
             await throttle();
             try {
@@ -43,10 +49,12 @@ export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => set
                 const j = await r.json();
                 const text = j.choices?.[0]?.message?.content ?? '';
                 if (!text.trim()) {
-                    // A reader that spends its tokens on reasoning answers nothing; the input is paid all the same.
+                    // A reader that spends its tokens on reasoning answers nothing; the input is paid all the same,
+                    // so its usage is stored too (spent() counts it) under a name the cache never reads.
                     stats.input += j.usage?.prompt_tokens ?? 0;
+                    writeFileSync(new URL(`empty-${hash}-${Date.now()}.json`, dir), JSON.stringify({ model, tag, usage: j.usage }));
                     note(`EMPTY ${model} ${tag} finish=${j.choices?.[0]?.finish_reason} in=${j.usage?.prompt_tokens} out=${j.usage?.completion_tokens}`);
-                    stats.fail++; continue;
+                    stats.fail++; await wait(5000); continue;
                 }
                 stats.calls++; stats.input += j.usage?.prompt_tokens ?? 0; stats.output += j.usage?.completion_tokens ?? 0;
                 writeFileSync(file, JSON.stringify({ model, tag, usage: j.usage, text }));
