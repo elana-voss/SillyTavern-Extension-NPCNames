@@ -111,7 +111,7 @@ function registerTool() {
         name: TOOL_NAME,
         displayName: 'Suggest NPC Name',
         description:
-            'Use for every new NPC you introduce. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human.',
+            'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name, with filters that fit the character as already established; until then, describe them. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human.',
         parameters: buildToolParameters(),
         shouldRegister: async () =>
             extension_settings[MODULE].enabled

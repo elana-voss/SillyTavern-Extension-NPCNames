@@ -67,7 +67,7 @@ The extension also adds a chunk of text just before the latest chat message, exp
 
 ## How it works
 
-The AI calls the tool whenever it introduces a new character. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; gods, dragons, cyberpunk handles, Native American and Mongolian figures get a single name: gods take no surname and the database has none for the others. A name already used in the chat will not come back from the same culture until every name fitting the request has been used.
+The AI calls the tool before the reply in which a new character's name first appears, which is when your character would learn it; until then it describes them. A card or your own instructions can say how names are revealed. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; gods, dragons, cyberpunk handles, Native American and Mongolian figures get a single name: gods take no surname and the database has none for the others. A name already used in the chat will not come back from the same culture until every name fitting the request has been used.
 
 Pseudo-signature of `suggest_npc_name` (every argument is optional, pass any subset):
 ```

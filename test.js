@@ -237,6 +237,19 @@ test('the AI is told how to ask for an elf, a dwarf or a dragon', () => {
     for (const race of ['elf', 'dwarf', 'dragon']) assert.ok(text.every(t => t.includes(`race: ${race}`)), race);
 });
 
+test('the AI calls the tool when a name is learned, not when a character arrives', () => {
+    const [ad, code] = ['./assets/advertisement.txt', './index.js']
+        .map(file => readFileSync(new URL(file, import.meta.url), 'utf8').replaceAll('\\\'', '\''));
+    const timing = 'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name';
+    assert.ok(ad.startsWith(timing), 'instructions open with the timing');
+    assert.ok(ad.includes('A name appears only when {{user}} would learn it'), 'when a name is learned');
+    assert.ok(ad.includes('fit the character as already established'), 'filters for a late call');
+    assert.ok(code.includes(timing), 'tool description');
+    for (const [label, text] of [['advertisement', ad], ['index.js', code]]) {
+        assert.ok(!/new NPC you introduce|about to introduce|once per new NPC/.test(text), `${label}: arrival timing left`);
+    }
+});
+
 test('advertisement goes right before the latest message, so long chats keep it', () => {
     const chat = [{ mes: 'old' }, { mes: 'latest' }];
     injectBeforeLatest(chat, 'ad');
