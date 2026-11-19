@@ -5,6 +5,7 @@
 // which peoples give it, what kind of string it is, and which entry above it is the same name.
 // The reader is never told the list's country, the culture asked for or what another reader said.
 import { norm } from './name-lists.mjs';
+import { pool } from './nanogpt.mjs';
 
 export const CULTURES = {
     albanian: 'Albanian', arabic: 'Arabic', azerbaijani: 'Azerbaijani', baltic: 'Baltic (Lithuanian, Latvian)', chinese: 'Chinese',
@@ -104,6 +105,25 @@ export function parseAnswers(text, kind = 'first') {
     }
     return out;
 }
+
+/**
+ * Each job's entries ({tag, entries: [{name}]}) read by the three readers through `llm` (a tools/nanogpt.mjs
+ * client), six requests at a time; no new request once this run's input passes `budget` over what `llm` had
+ * stored. Sets job.answers, one parsed map per reader.
+ */
+export async function readJobs(llm, jobs, kind, budget) {
+    const base = llm.spent();
+    const calls = jobs.flatMap(j => READERS.map(model => ({ j, model })));
+    const texts = await pool(calls, 6, ({ j, model }) => llm.ask(model, promptFor(j.entries.map(e => e.name), kind),
+        { tag: j.tag, extra: EXTRA[model], allow: () => base + llm.stats.input <= budget }));
+    for (const [ji, j] of jobs.entries()) j.answers = READERS.map((_, r) => parseAnswers(texts[ji * READERS.length + r], kind));
+}
+
+/** What each reader said of entry i, "peoples:kind" or none, for the rejected-entry tables. */
+export const readersSaid = (answers, i) => answers.map(a => {
+    const x = a.get(i);
+    return x ? `${[...x.peoples].join(',') || '?'}:${x.kind}` : 'none';
+}).join(' ');
 
 /** Union-find over 1..n: one reader's groups, closed over its own "same" answers. */
 function groups(n) {

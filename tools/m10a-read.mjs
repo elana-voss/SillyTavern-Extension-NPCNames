@@ -9,9 +9,9 @@
 // A romanised entry is held when either sex's list reads a held native entry as it (name-read.mjs knownKeys).
 // Writes logs/work/m10a/summary.txt (per culture and sex) and rejected.txt; prints a short summary.
 import { readFileSync, writeFileSync } from 'node:fs';
-import { client, pool } from './nanogpt.mjs';
+import { client } from './nanogpt.mjs';
 import { countriesOf, loadLists, norm, rankedEntries, COUNTRIES } from './name-lists.mjs';
-import { decide, EXTRA, firstNameTags, knownKeys, mergeSexes, parseAnswers, promptFor, READERS } from './name-read.mjs';
+import { decide, firstNameTags, knownKeys, mergeSexes, readersSaid, readJobs } from './name-read.mjs';
 import { foldName, loadOverused } from './overused.mjs';
 
 const TOP = 50;
@@ -30,25 +30,22 @@ const CULTURES = arg('cultures', '') ? arg('cultures').split(',')
 const db = JSON.parse(readFileSync(new URL('../data/name_database.tagged.json', import.meta.url), 'utf8'));
 const overused = loadOverused();
 const llm = client(new URL('answers/', OUT));
-const base = llm.spent();
 
-const jobs = CULTURES.flatMap(culture => ['male', 'female'].map(sex => ({ culture, sex })));
+const jobs = CULTURES.flatMap(culture => ['male', 'female'].map(sex => ({ culture, sex, tag: `${culture}-${sex}` })));
 // Lists whose first 80 entries gave fewer than 50 names (mostly other peoples' names) are read to 240.
 const WIDE = new Set(['chinese-male', 'chinese-female', 'dutch-female', 'ghanaian-male', 'ghanaian-female', 'nigerian-male',
     'nigerian-female', 'persian-male', 'persian-female', 'slavicRussian-male', 'slavicRussian-female']);
 for (const j of jobs) j.entries = rankedEntries(nd, j.culture, 'first', j.sex).slice(0, WIDE.has(`${j.culture}-${j.sex}`) ? 240 : WINDOW);
 
-const calls = jobs.flatMap(j => READERS.map(model => ({ j, model })));
-const texts = await pool(calls, 6, ({ j, model }) => llm.ask(model, promptFor(j.entries.map(e => e.name)),
-    { tag: `${j.culture}-${j.sex}`, extra: EXTRA[model], allow: () => base + llm.stats.input <= BUDGET }));
+const base = llm.spent();
+await readJobs(llm, jobs, 'first', BUDGET);
 
 const summary = ['culture\tsex\tread\tanswered(per reader)\tnames\ttop50 present\tnew\toverused'];
 const rejected = [];
 const lines = [];
 let missingLines = 0, unread = 0;
 const held = new Map(CULTURES.map(c => [c, new Set(db.first_names.filter(e => e.language_ethnicity === c).map(e => norm(e.name)))]));
-for (const [ji, j] of jobs.entries()) {
-    j.answers = READERS.map((_, r) => parseAnswers(texts[ji * READERS.length + r]));
+for (const j of jobs) {
     if (j.answers.every(a => a.size)) j.names = decide(j.entries.map(e => e.name), j.answers, j.culture, k => held.get(j.culture).has(k));
 }
 // R3 across both sexes' lists: a held native entry's reading in one list holds its romanisation in the other.
@@ -62,7 +59,7 @@ for (const j of jobs) {
     const top = names.slice(0, TOP);
     const named = new Set(names.flatMap(g => g.members));
     for (const [i, e] of j.entries.entries()) {
-        if (!named.has(i + 1)) rejected.push(`${j.culture}\t${j.sex}\t${e.rank}\t${e.name}\t${answers.map(a => { const x = a.get(i + 1); return x ? `${[...x.peoples].join(',') || '?'}:${x.kind}` : 'none'; }).join(' ')}`);
+        if (!named.has(i + 1)) rejected.push(`${j.culture}\t${j.sex}\t${e.rank}\t${e.name}\t${readersSaid(answers, i + 1)}`);
     }
     let added = 0, slop = 0;
     for (const g of top) {
