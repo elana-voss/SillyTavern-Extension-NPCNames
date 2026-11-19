@@ -13,7 +13,7 @@ import { norm } from './name-lists.mjs';
 import { foldName, loadOverused } from './overused.mjs';
 
 const db = loadDb();
-assert.equal(db.first_names.length, 9262, 'first names');
+assert.equal(db.first_names.length, 9263, 'first names');
 assert.equal(db.last_names.length, 2621, 'surnames');
 
 const overused = loadOverused();

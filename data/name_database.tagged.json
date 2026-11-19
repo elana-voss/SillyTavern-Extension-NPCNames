@@ -163165,35 +163165,6 @@
       "themes": []
     },
     {
-      "name": "زهراء",
-      "gender": "female",
-      "language_ethnicity": "arabic",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "child",
-        "youngAdult",
-        "adult",
-        "elder"
-      ],
-      "era": [
-        "midcentury",
-        "modern",
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pretty",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife",
-        "noirDetective"
-      ],
-      "themes": []
-    },
-    {
       "name": "زينب",
       "gender": "female",
       "language_ethnicity": "arabic",
@@ -163978,6 +163949,35 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Reem",
+      "gender": "female",
+      "language_ethnicity": "arabic",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "child",
+        "youngAdult",
+        "adult",
+        "elder"
+      ],
+      "era": [
+        "midcentury",
+        "modern",
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "pretty",
       "commonness": "common",
       "genre": [
         "sliceOfLife",
@@ -222399,6 +222399,34 @@
     },
     {
       "name": "Boštjan",
+      "gender": "male",
+      "language_ethnicity": "slavicOther",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "youngAdult",
+        "adult",
+        "elder"
+      ],
+      "era": [
+        "midcentury",
+        "modern",
+        "contemporary"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "unremarkable",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Rumen",
       "gender": "male",
       "language_ethnicity": "slavicOther",
       "mythology": null,
