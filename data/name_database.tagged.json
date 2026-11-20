@@ -2939,7 +2939,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -4021,7 +4021,7 @@
       ],
       "intelligence": "bookish",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -7043,10 +7043,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -7056,7 +7058,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -10198,7 +10201,7 @@
       ],
       "intelligence": "plain",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -11759,7 +11762,7 @@
       ],
       "intelligence": "plain",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "religious"
@@ -12462,7 +12465,7 @@
       ],
       "intelligence": "plain",
       "allure": "pretty",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -17111,10 +17114,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -17124,7 +17129,8 @@
       "allure": "pretty",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "floral"
@@ -17349,10 +17355,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury"
       ],
       "role": [
         "neutral"
@@ -17361,7 +17369,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -25019,10 +25028,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -25072,10 +25083,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -26635,10 +26648,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -26648,7 +26663,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -30032,10 +30048,13 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -30044,7 +30063,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -32119,10 +32139,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury"
       ],
       "role": [
         "neutral"
@@ -32131,7 +32153,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -32628,10 +32651,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -32641,7 +32666,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -32654,10 +32680,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -32667,7 +32695,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -32755,18 +32784,25 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "youngAdult",
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "intelligence": "plain",
       "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -34600,10 +34636,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -34613,7 +34651,8 @@
       "allure": "pretty",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -35846,10 +35885,14 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "youngAdult",
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -35858,7 +35901,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -41789,10 +41833,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury"
       ],
       "role": [
         "loveInterest"
@@ -41801,7 +41847,8 @@
       "allure": "pretty",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -42373,10 +42420,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -42445,10 +42494,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury"
       ],
       "role": [
         "neutral"
@@ -42457,7 +42508,8 @@
       "allure": "unremarkable",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -45368,10 +45420,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -45379,7 +45433,9 @@
       "intelligence": "average",
       "allure": "unremarkable",
       "commonness": "rare",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -45480,10 +45536,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury"
       ],
       "role": [
         "neutral"
@@ -45491,7 +45549,10 @@
       "intelligence": "plain",
       "allure": "unremarkable",
       "commonness": "rare",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -45526,10 +45587,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "youngAdult"
+        "youngAdult",
+        "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "loveInterest"
@@ -45537,7 +45600,9 @@
       "intelligence": "thoughtful",
       "allure": "pleasant",
       "commonness": "rare",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -45702,10 +45767,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -45713,9 +45780,10 @@
       ],
       "intelligence": "average",
       "allure": "pretty",
-      "commonness": "rare",
+      "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -45900,10 +45968,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -45911,7 +45981,9 @@
       "intelligence": "plain",
       "allure": "unremarkable",
       "commonness": "rare",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -45975,18 +46047,22 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "hero"
       ],
       "intelligence": "bookish",
       "allure": "striking",
-      "commonness": "uncommon",
-      "genre": [],
+      "commonness": "rare",
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": [
         "religious",
         "regal"
@@ -46385,10 +46461,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -46398,7 +46476,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -46432,10 +46511,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -46443,9 +46524,10 @@
       ],
       "intelligence": "average",
       "allure": "pretty",
-      "commonness": "rare",
+      "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -46456,10 +46538,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "youngAdult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury"
       ],
       "role": [
         "loveInterest"
@@ -46467,7 +46551,10 @@
       "intelligence": "average",
       "allure": "pretty",
       "commonness": "uncommon",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": [
         "watery"
       ]
@@ -46602,7 +46689,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -46641,10 +46728,13 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "hero"
@@ -46652,7 +46742,9 @@
       "intelligence": "average",
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": [
         "fiery"
       ]
@@ -46664,10 +46756,14 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury"
       ],
       "role": [
         "neutral"
@@ -46675,7 +46771,10 @@
       "intelligence": "plain",
       "allure": "unremarkable",
       "commonness": "uncommon",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -46708,10 +46807,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -46721,7 +46822,8 @@
       "allure": "pretty",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -46833,18 +46935,23 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "youngAdult"
+        "child",
+        "youngAdult",
+        "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "loveInterest"
       ],
       "intelligence": "average",
       "allure": "pretty",
-      "commonness": "rare",
-      "genre": [],
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -47198,18 +47305,23 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "hero"
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "rare",
-      "genre": [],
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -49053,7 +49165,7 @@
       ],
       "intelligence": "average",
       "allure": "pretty",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -49249,10 +49361,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury"
       ],
       "role": [
         "neutral"
@@ -49261,7 +49375,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -49351,10 +49466,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -49434,10 +49551,13 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -49461,10 +49581,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -49474,7 +49596,8 @@
       "allure": "pretty",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "exotic"
@@ -52819,10 +52942,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -52830,7 +52955,9 @@
       "intelligence": "average",
       "allure": "unremarkable",
       "commonness": "rare",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -54137,6 +54264,8 @@
       ],
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -54356,18 +54485,22 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "intelligence": "plain",
       "allure": "unremarkable",
-      "commonness": "rare",
-      "genre": [],
+      "commonness": "uncommon",
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -62353,10 +62486,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "midcentury"
+        "modern",
+        "contemporary"
       ],
       "role": [
         "neutral"
@@ -62364,7 +62499,9 @@
       "intelligence": "plain",
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -68124,10 +68261,12 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury"
       ],
       "role": [
         "neutral"
@@ -68136,7 +68275,8 @@
       "allure": "pretty",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "celestial"
@@ -75209,10 +75349,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -75222,7 +75364,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -86728,10 +86871,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -86742,7 +86887,8 @@
       "allure": "pretty",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -87875,10 +88021,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -87888,7 +88036,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -118202,10 +118351,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118215,7 +118366,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "earthy"
@@ -118259,10 +118411,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118272,7 +118426,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -118285,10 +118440,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118298,7 +118455,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -118369,10 +118527,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118382,7 +118542,8 @@
       "allure": "pretty",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "celestial",
@@ -118427,10 +118588,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118440,7 +118603,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -118545,10 +118709,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118558,7 +118724,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "floral"
@@ -118606,10 +118773,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118619,7 +118788,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -118630,10 +118800,12 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -118655,10 +118827,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118668,7 +118842,8 @@
       "allure": "pretty",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -118712,10 +118887,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -118725,7 +118902,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -118772,6 +118950,7 @@
       ],
       "era": [
         "contemporary",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -133583,11 +133762,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -133597,7 +133779,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -133638,11 +133821,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -133652,7 +133838,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -133663,11 +133850,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -133677,7 +133867,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -133714,11 +133905,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -133728,7 +133922,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -133769,11 +133964,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -133783,7 +133981,8 @@
       "allure": "striking",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -133794,6 +133993,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -133848,11 +134048,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -133862,7 +134065,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -133874,10 +134078,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -133887,7 +134093,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -133898,11 +134105,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -133912,7 +134122,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -133923,6 +134134,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -133953,6 +134165,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -133981,12 +134194,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult",
         "elder"
       ],
       "era": [
         "contemporary",
-        "midcentury"
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -134009,11 +134224,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134023,7 +134241,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134034,6 +134253,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -134065,10 +134285,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134078,7 +134300,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134089,11 +134312,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134103,7 +134329,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134115,10 +134342,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134128,7 +134357,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134165,11 +134395,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134179,7 +134412,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134190,6 +134424,7 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "child",
         "youngAdult",
         "adult",
         "elder"
@@ -134218,12 +134453,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult",
         "elder"
       ],
       "era": [
         "contemporary",
-        "midcentury"
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -134245,10 +134482,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134258,7 +134497,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134270,10 +134510,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134283,7 +134525,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134325,10 +134568,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134338,7 +134583,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134350,10 +134596,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134363,7 +134611,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "watery"
@@ -134371,6 +134620,35 @@
     },
     {
       "name": "Donika",
+      "gender": "female",
+      "language_ethnicity": "albanian",
+      "mythology": null,
+      "race": "human",
+      "age": [
+        "youngAdult",
+        "adult",
+        "elder"
+      ],
+      "era": [
+        "contemporary",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
+      ],
+      "role": [
+        "neutral"
+      ],
+      "intelligence": "average",
+      "allure": "pleasant",
+      "commonness": "common",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
+      "themes": []
+    },
+    {
+      "name": "Migena",
       "gender": "female",
       "language_ethnicity": "albanian",
       "mythology": null,
@@ -134398,31 +134676,6 @@
       "themes": []
     },
     {
-      "name": "Migena",
-      "gender": "female",
-      "language_ethnicity": "albanian",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "youngAdult",
-        "adult"
-      ],
-      "era": [
-        "contemporary",
-        "modern"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": []
-    },
-    {
       "name": "Etleva",
       "gender": "female",
       "language_ethnicity": "albanian",
@@ -134430,10 +134683,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134443,7 +134698,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134484,12 +134740,14 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult",
         "elder"
       ],
       "era": [
         "contemporary",
-        "midcentury"
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -134565,10 +134823,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134578,7 +134838,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134616,10 +134877,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134629,7 +134892,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134641,10 +134905,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134654,7 +134920,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134666,10 +134933,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134679,7 +134948,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -134693,10 +134963,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134706,7 +134978,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134774,10 +135047,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134787,7 +135062,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134827,10 +135103,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134840,7 +135118,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134852,10 +135131,12 @@
       "race": "human",
       "age": [
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134865,7 +135146,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134906,10 +135188,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134919,7 +135203,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134932,10 +135217,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134945,7 +135232,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "celestial"
@@ -134960,10 +135248,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134973,7 +135263,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -134986,10 +135277,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -134999,7 +135292,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "watery"
@@ -135043,10 +135337,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -135056,7 +135352,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -135128,10 +135425,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -135141,7 +135440,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -135876,10 +136176,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -135889,7 +136191,8 @@
       "allure": "striking",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -135902,10 +136205,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -135915,7 +136220,8 @@
       "allure": "striking",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -135960,10 +136266,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -135973,7 +136281,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -135986,10 +136295,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -135999,7 +136310,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -136012,10 +136324,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -136025,7 +136339,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -136128,10 +136443,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -136141,7 +136458,8 @@
       "allure": "striking",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -136249,10 +136567,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -136262,7 +136582,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "celestial",
@@ -136278,10 +136599,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -136291,7 +136614,8 @@
       "allure": "striking",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "military"
@@ -136304,13 +136628,15 @@
       "mythology": null,
       "race": "human",
       "age": [
+        "youngAdult",
         "adult",
         "elder"
       ],
       "era": [
         "contemporary",
         "nineteenTwenties",
-        "midcentury"
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -136333,10 +136659,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -136346,7 +136674,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -136390,10 +136719,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -136403,7 +136734,8 @@
       "allure": "pretty",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -136416,10 +136748,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -136429,7 +136763,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "mystical",
@@ -136505,10 +136840,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -136518,7 +136855,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "watery",
@@ -146133,7 +146471,7 @@
     {
       "name": "Krishneel",
       "gender": "male",
-      "language_ethnicity": "fijian",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -146147,7 +146485,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -146305,29 +146643,6 @@
       "genre": [
         "sliceOfLife",
         "noirDetective"
-      ],
-      "themes": []
-    },
-    {
-      "name": "Ashneel",
-      "gender": "male",
-      "language_ethnicity": "fijian",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "unremarkable",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
       ],
       "themes": []
     },
@@ -146710,7 +147025,7 @@
     {
       "name": "Rajneel",
       "gender": "male",
-      "language_ethnicity": "fijian",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -146724,7 +147039,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -146768,7 +147083,7 @@
     {
       "name": "Ravneel",
       "gender": "male",
-      "language_ethnicity": "fijian",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -146782,32 +147097,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "common",
-      "genre": [
-        "sliceOfLife"
-      ],
-      "themes": [
-        "exotic"
-      ]
-    },
-    {
-      "name": "Avneel",
-      "gender": "male",
-      "language_ethnicity": "fijian",
-      "mythology": null,
-      "race": "human",
-      "age": [
-        "adult"
-      ],
-      "era": [
-        "contemporary"
-      ],
-      "role": [
-        "neutral"
-      ],
-      "intelligence": "average",
-      "allure": "pleasant",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -147359,7 +147649,7 @@
     {
       "name": "Roneel",
       "gender": "male",
-      "language_ethnicity": "fijian",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -147373,7 +147663,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -147384,7 +147674,7 @@
     {
       "name": "Ravinesh",
       "gender": "male",
-      "language_ethnicity": "fijian",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -147398,7 +147688,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -147820,7 +148110,7 @@
     {
       "name": "Shivneel",
       "gender": "male",
-      "language_ethnicity": "fijian",
+      "language_ethnicity": "hindi",
       "mythology": null,
       "race": "human",
       "age": [
@@ -147834,7 +148124,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife"
       ],
@@ -148643,10 +148933,14 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "youngAdult",
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -148655,7 +148949,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -148871,10 +149166,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -148884,7 +149181,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -148902,6 +149200,7 @@
       ],
       "era": [
         "contemporary",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -148957,10 +149256,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -148970,7 +149271,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149031,7 +149333,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife",
         "noirDetective"
@@ -149052,6 +149354,7 @@
       ],
       "era": [
         "contemporary",
+        "victorian",
         "nineteenTwenties",
         "midcentury",
         "modern"
@@ -149141,10 +149444,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149154,7 +149459,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149167,10 +149473,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149180,7 +149488,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149208,7 +149517,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife",
         "noirDetective"
@@ -149248,10 +149557,15 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "child",
+        "youngAdult",
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -149260,7 +149574,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -149275,10 +149590,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149288,7 +149605,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149330,10 +149648,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149343,7 +149663,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -149358,10 +149679,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149371,7 +149694,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149384,10 +149708,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149397,7 +149723,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149503,10 +149830,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149516,7 +149845,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149593,10 +149923,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149606,7 +149938,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149705,10 +150038,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149718,7 +150053,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149765,6 +150101,7 @@
       ],
       "era": [
         "contemporary",
+        "victorian",
         "nineteenTwenties",
         "midcentury",
         "modern"
@@ -149790,19 +150127,27 @@
       "mythology": null,
       "race": "human",
       "age": [
-        "adult"
+        "child",
+        "youngAdult",
+        "adult",
+        "elder"
       ],
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -149822,6 +150167,7 @@
       ],
       "era": [
         "contemporary",
+        "victorian",
         "nineteenTwenties",
         "midcentury",
         "modern"
@@ -149852,6 +150198,7 @@
       ],
       "era": [
         "contemporary",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -149909,10 +150256,14 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149922,7 +150273,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -149935,10 +150287,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -149948,7 +150302,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -149994,6 +150349,7 @@
       ],
       "era": [
         "contemporary",
+        "victorian",
         "nineteenTwenties",
         "midcentury",
         "modern"
@@ -150003,7 +150359,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife",
         "noirDetective"
@@ -150053,6 +150409,7 @@
       ],
       "era": [
         "contemporary",
+        "victorian",
         "nineteenTwenties",
         "midcentury",
         "modern"
@@ -150104,10 +150461,14 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -150117,7 +150478,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -150130,10 +150492,12 @@
       "age": [
         "child",
         "youngAdult",
-        "adult"
+        "adult",
+        "elder"
       ],
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -150143,7 +150507,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -150163,6 +150528,7 @@
       ],
       "era": [
         "contemporary",
+        "victorian",
         "nineteenTwenties",
         "midcentury",
         "modern"
@@ -150193,6 +150559,7 @@
       ],
       "era": [
         "contemporary",
+        "victorian",
         "nineteenTwenties",
         "midcentury",
         "modern"
@@ -157756,7 +158123,7 @@
     {
       "name": "Jimalee",
       "gender": "female",
-      "language_ethnicity": "nativeAmerican",
+      "language_ethnicity": "english",
       "mythology": null,
       "race": "human",
       "age": [
@@ -157872,7 +158239,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -157925,7 +158292,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -157994,7 +158361,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158020,7 +158387,7 @@
       ],
       "intelligence": "thoughtful",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158033,7 +158400,7 @@
     {
       "name": "Manuelito",
       "gender": "male",
-      "language_ethnicity": "nativeAmerican",
+      "language_ethnicity": "spanish",
       "mythology": null,
       "race": "human",
       "age": [
@@ -158073,7 +158440,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158098,7 +158465,7 @@
       ],
       "intelligence": "thoughtful",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158124,7 +158491,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158150,7 +158517,7 @@
       ],
       "intelligence": "average",
       "allure": "harsh",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158176,7 +158543,7 @@
       ],
       "intelligence": "thoughtful",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158202,7 +158569,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158227,7 +158594,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158250,7 +158617,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158273,7 +158640,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158322,7 +158689,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158347,7 +158714,7 @@
       ],
       "intelligence": "thoughtful",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158372,7 +158739,7 @@
       ],
       "intelligence": "thoughtful",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158397,7 +158764,7 @@
       ],
       "intelligence": "thoughtful",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158446,7 +158813,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158494,7 +158861,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158536,7 +158903,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "neutral"
@@ -158544,9 +158911,7 @@
       "intelligence": "thoughtful",
       "allure": "striking",
       "commonness": "uncommon",
-      "genre": [
-        "sliceOfLife"
-      ],
+      "genre": [],
       "themes": [
         "mystical",
         "religious"
@@ -158692,7 +159057,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158740,7 +159105,7 @@
       ],
       "intelligence": "average",
       "allure": "harsh",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158791,7 +159156,7 @@
       ],
       "intelligence": "average",
       "allure": "harsh",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158841,7 +159206,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "common",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158866,7 +159231,7 @@
       ],
       "intelligence": "average",
       "allure": "harsh",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158891,7 +159256,7 @@
       ],
       "intelligence": "average",
       "allure": "harsh",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -158916,7 +159281,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -159633,7 +159998,7 @@
         "adult"
       ],
       "era": [
-        "contemporary"
+        "victorian"
       ],
       "role": [
         "hero"
@@ -159641,9 +160006,7 @@
       "intelligence": "thoughtful",
       "allure": "striking",
       "commonness": "rare",
-      "genre": [
-        "sliceOfLife"
-      ],
+      "genre": [],
       "themes": [
         "military",
         "fiery",
@@ -159713,7 +160076,7 @@
       ],
       "intelligence": "average",
       "allure": "striking",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -164492,7 +164855,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -164513,7 +164876,7 @@
       ],
       "intelligence": "thoughtful",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "literary"
@@ -164559,7 +164922,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "military"
@@ -164626,7 +164989,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -164670,7 +165033,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -164712,7 +165075,7 @@
       ],
       "intelligence": "bookish",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "scholarly"
@@ -164735,7 +165098,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -164756,7 +165119,7 @@
       ],
       "intelligence": "thoughtful",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -164798,7 +165161,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -164819,7 +165182,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "religious"
@@ -164842,7 +165205,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -164926,7 +165289,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -164947,7 +165310,7 @@
       ],
       "intelligence": "average",
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -165054,7 +165417,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "military"
@@ -165077,7 +165440,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "mystical",
@@ -165101,7 +165464,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "military"
@@ -165168,7 +165531,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": [
         "military"
@@ -165191,7 +165554,7 @@
       ],
       "intelligence": "average",
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -270815,7 +271178,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -270823,7 +271188,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -271944,7 +272310,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -271952,7 +272322,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -275887,7 +276258,7 @@
         "bystander"
       ],
       "allure": "unremarkable",
-      "commonness": "rare",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife",
         "noirDetective"
@@ -276689,14 +277060,19 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -277418,14 +277794,21 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -278143,7 +278526,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -278151,7 +278536,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -280865,7 +281251,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -280873,7 +281261,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -281263,7 +281652,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -281271,7 +281664,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -282852,7 +283246,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -282860,7 +283258,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -284581,7 +284980,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -284589,7 +284992,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -287244,7 +287648,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -287252,7 +287658,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -287428,7 +287835,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -287436,7 +287845,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -288032,7 +288442,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -288040,7 +288454,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -288091,7 +288506,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -288099,7 +288516,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -288526,7 +288944,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -288534,7 +288954,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -288861,7 +289282,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -288869,7 +289292,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -288879,7 +289303,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -288887,7 +289313,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -289931,7 +290358,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "hero"
@@ -289939,7 +290370,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "military"
@@ -290072,7 +290504,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -290080,7 +290514,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -290754,7 +291189,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -290762,7 +291199,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -291242,7 +291680,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -291250,7 +291692,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -292353,7 +292796,8 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -292499,7 +292943,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -292507,7 +292953,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -293035,7 +293482,8 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -293150,7 +293598,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -293158,7 +293608,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -293447,7 +293898,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "loveInterest"
@@ -293455,7 +293910,8 @@
       "allure": "pretty",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "floral"
@@ -293697,7 +294153,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -293705,7 +294165,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -293911,7 +294372,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -293919,7 +294382,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -294101,14 +294565,19 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
       "commonness": "rare",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": [
         "religious"
       ]
@@ -294204,7 +294673,8 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "loveInterest"
@@ -294439,14 +294909,21 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "hero"
       ],
       "allure": "striking",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": [
         "military"
       ]
@@ -294937,14 +295414,21 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": [
         "rustic"
       ]
@@ -295104,7 +295588,7 @@
     },
     {
       "name": "Stankevic",
-      "language_ethnicity": "slavicOther",
+      "language_ethnicity": "baltic",
       "mythology": null,
       "race": "human",
       "era": [
@@ -295114,7 +295598,7 @@
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "rare",
+      "commonness": "common",
       "genre": [],
       "themes": []
     },
@@ -295451,14 +295935,17 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pretty",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": [
         "floral"
       ]
@@ -295469,14 +295956,17 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": [
         "floral"
       ]
@@ -295487,14 +295977,17 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": [
         "floral"
       ]
@@ -295603,14 +296096,17 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -296516,7 +297012,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -296524,7 +297024,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -296843,7 +297344,10 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -296851,7 +297355,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -297034,7 +297539,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -297042,7 +297549,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -298373,14 +298881,21 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "unremarkable",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -298390,14 +298905,21 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "unremarkable",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -298407,14 +298929,21 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "unremarkable",
       "commonness": "uncommon",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -299076,14 +299605,17 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "unremarkable",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife"
+      ],
       "themes": []
     },
     {
@@ -299924,14 +300456,19 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
       ],
       "allure": "pleasant",
       "commonness": "common",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -300284,14 +300821,21 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
       ],
       "allure": "pleasant",
       "commonness": "uncommon",
-      "genre": [],
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -302906,7 +303450,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -302914,7 +303462,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "rustic"
@@ -302927,7 +303476,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -302935,7 +303488,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "rustic"
@@ -304173,15 +304727,20 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -304596,15 +305155,20 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -305161,15 +305725,20 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -305180,15 +305749,20 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -305385,15 +305959,20 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -306291,7 +306870,7 @@
         "bystander"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -306818,15 +307397,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -306934,7 +307516,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "loveInterest"
@@ -306942,7 +307526,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -306952,15 +307537,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -306972,15 +307560,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -306990,15 +307581,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -307010,7 +307604,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307018,7 +307614,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307054,15 +307651,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -307074,7 +307674,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "hero"
@@ -307082,7 +307684,9 @@
       "allure": "striking",
       "commonness": "uncommon",
       "genre": [
-        "fantasy"
+        "fantasy",
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -307094,7 +307698,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307102,7 +307708,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307112,7 +307719,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307120,7 +307729,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307130,15 +307740,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "loveInterest"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307148,15 +307761,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -307214,7 +307830,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
@@ -307222,7 +307840,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -307284,15 +307903,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307325,15 +307947,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -307345,15 +307970,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "scholarly"
@@ -307365,7 +307993,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307373,7 +308003,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307383,15 +308014,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307401,7 +308035,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "loveInterest"
@@ -307409,7 +308045,8 @@
       "allure": "pretty",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307419,15 +308056,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -307899,7 +308539,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307907,7 +308549,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307917,7 +308560,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307925,7 +308570,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307935,7 +308581,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307943,7 +308591,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307953,7 +308602,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307961,7 +308612,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -307971,15 +308623,18 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "mentor"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -307991,7 +308646,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -307999,7 +308656,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "airy"
@@ -308011,7 +308669,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -308019,7 +308679,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -308029,7 +308690,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -308037,7 +308700,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -308047,7 +308711,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -308055,7 +308721,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -308065,7 +308732,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -308073,7 +308742,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -308083,7 +308753,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -308091,7 +308763,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -308119,7 +308792,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -308127,7 +308802,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -308137,7 +308813,9 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "bystander"
@@ -308145,7 +308823,8 @@
       "allure": "pleasant",
       "commonness": "rare",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -308161,7 +308840,7 @@
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -308171,14 +308850,19 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
+      "commonness": "rare",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -308187,14 +308871,19 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
+      "commonness": "rare",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": [
         "lunar"
       ]
@@ -308205,14 +308894,19 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
+      "commonness": "rare",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -308221,14 +308915,19 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
-      "genre": [],
+      "commonness": "rare",
+      "genre": [
+        "sliceOfLife",
+        "noirDetective"
+      ],
       "themes": []
     },
     {
@@ -313991,7 +314690,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -313999,7 +314702,8 @@
       "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "religious"
@@ -314012,7 +314716,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -314020,7 +314728,8 @@
       "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "earthy"
@@ -314057,7 +314766,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -314065,7 +314778,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -314124,7 +314838,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -314132,7 +314850,8 @@
       "allure": "pleasant",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -314215,7 +314934,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -314223,7 +314946,8 @@
       "allure": "striking",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -319061,6 +319785,7 @@
       "race": "human",
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -319069,7 +319794,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -319080,6 +319806,7 @@
       "race": "human",
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -319088,7 +319815,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -319122,6 +319850,7 @@
       "race": "human",
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -319130,7 +319859,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -319141,6 +319871,7 @@
       "race": "human",
       "era": [
         "contemporary",
+        "midcentury",
         "modern"
       ],
       "role": [
@@ -319149,7 +319880,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -319210,7 +319942,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -319218,7 +319954,8 @@
       "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -319228,7 +319965,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -319236,7 +319977,8 @@
       "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -319246,7 +319988,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -319254,7 +320000,8 @@
       "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -319603,7 +320350,7 @@
         "neutral"
       ],
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [
         "sliceOfLife"
       ],
@@ -320762,6 +321509,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320783,6 +321532,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320804,6 +321555,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320825,6 +321578,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320846,6 +321601,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320866,7 +321623,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -320874,7 +321635,8 @@
       "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -320885,6 +321647,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320906,6 +321670,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320927,6 +321693,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320948,6 +321716,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320969,6 +321739,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -320990,6 +321762,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321011,6 +321785,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321018,7 +321794,7 @@
         "neutral"
       ],
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "common",
       "genre": [
         "sliceOfLife",
         "noirDetective"
@@ -321032,6 +321808,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321052,7 +321830,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -321060,7 +321842,8 @@
       "allure": "unremarkable",
       "commonness": "uncommon",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -321071,6 +321854,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321092,6 +321877,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321113,6 +321900,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321134,6 +321923,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321155,6 +321946,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321176,6 +321969,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321197,6 +321992,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321218,6 +322015,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321239,6 +322038,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321260,6 +322061,8 @@
       "race": "human",
       "era": [
         "contemporary",
+        "victorian",
+        "nineteenTwenties",
         "midcentury",
         "modern"
       ],
@@ -321267,7 +322070,7 @@
         "neutral"
       ],
       "allure": "unremarkable",
-      "commonness": "common",
+      "commonness": "uncommon",
       "genre": [
         "sliceOfLife",
         "noirDetective"
@@ -322456,7 +323259,7 @@
         "neutral"
       ],
       "allure": "pleasant",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -322699,7 +323502,7 @@
         "neutral"
       ],
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -322814,7 +323617,7 @@
         "neutral"
       ],
       "allure": "unremarkable",
-      "commonness": "uncommon",
+      "commonness": "rare",
       "genre": [],
       "themes": []
     },
@@ -323042,7 +323845,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323050,7 +323857,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323061,7 +323869,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323069,7 +323881,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323080,7 +323893,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323088,7 +323905,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323099,7 +323917,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323107,7 +323929,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323118,7 +323941,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323126,7 +323953,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323137,7 +323965,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323145,7 +323977,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323156,7 +323989,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323164,7 +324001,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323175,7 +324013,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323183,7 +324025,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323194,7 +324037,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323202,7 +324049,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323213,7 +324061,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323221,7 +324073,8 @@
       "allure": "striking",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "regal"
@@ -323234,7 +324087,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323242,7 +324099,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323253,7 +324111,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323261,7 +324123,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323272,7 +324135,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323280,7 +324147,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323291,7 +324159,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323299,7 +324171,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323310,7 +324183,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323318,7 +324195,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "floral"
@@ -323331,7 +324209,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323339,7 +324221,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "floral"
@@ -323352,7 +324235,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323360,7 +324247,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323371,7 +324259,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323379,7 +324271,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323390,7 +324283,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323398,7 +324295,8 @@
       "allure": "pleasant",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "rustic"
@@ -323527,7 +324425,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323535,7 +324437,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323546,7 +324449,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323554,7 +324461,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": [
         "watery"
@@ -323567,7 +324475,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323575,7 +324487,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
@@ -323586,7 +324499,11 @@
       "mythology": null,
       "race": "human",
       "era": [
-        "contemporary"
+        "contemporary",
+        "victorian",
+        "nineteenTwenties",
+        "midcentury",
+        "modern"
       ],
       "role": [
         "neutral"
@@ -323594,7 +324511,8 @@
       "allure": "unremarkable",
       "commonness": "common",
       "genre": [
-        "sliceOfLife"
+        "sliceOfLife",
+        "noirDetective"
       ],
       "themes": []
     },
