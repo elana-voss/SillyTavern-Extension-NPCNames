@@ -17,7 +17,7 @@
 // Writes summary.txt, rejected.txt (and for surnames entered.txt) to logs/work/m10a/ or m10b/; prints a short summary.
 import { writeFileSync } from 'node:fs';
 import { arg, flag } from './cli.mjs';
-import { loadDb } from './db.mjs';
+import { keepEntered, loadDb, readLines } from './db.mjs';
 import { client } from './nanogpt.mjs';
 import { countriesOf, loadLists, norm, rankedEntries, COUNTRIES } from './name-lists.mjs';
 import { namesFileText, newFirstNames, newSurnames, readJobs } from './name-read.mjs';
@@ -68,7 +68,7 @@ if (flag('write')) {
         'from name-dataset (rank lists by country), each read by three readers of different vendors; made by',
         'tools/m10ab-read.mjs last. Fields: last | culture | name | gender (- none) | source | eras | roles |',
         'allure | commonness | genres | themes'];
-    writeFileSync(new URL(file, import.meta.url), namesFileText(head, r.lines, KIND));
+    writeFileSync(new URL(file, import.meta.url), keepEntered(namesFileText(head, r.lines, KIND), readLines(file)));
 }
 const spent = llm.spent();
 console.log(`jobs ${jobs.length}, unread ${r.unread}, stopped by budget ${llm.stats.stopped}; answer lines missing ${r.missingLines}`);

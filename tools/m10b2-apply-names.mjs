@@ -10,6 +10,6 @@ import { loadOverused } from './overused.mjs';
 
 const db = loadDb();
 assert.equal(db.first_names.length, 9263, 'first names');
-assert.equal(db.last_names.length, 5610, 'surnames');
+assert.equal(db.last_names.length, 5624, 'surnames');
 const changes = addNames(db, readLines('m10b2-names.txt'), loadOverused());
 saveWithChanges(db, '10b2', changes);

@@ -13,7 +13,7 @@ import { CULTURES } from './name-read.mjs';
 import { applyTags, listRanks } from './name-tags.mjs';
 
 const db = loadDb();
-assert.deepEqual([db.first_names.length, db.last_names.length], [9819, 6194], 'runs on the database milestone 10b2 left');
+assert.deepEqual([db.first_names.length, db.last_names.length], [9819, 6208], 'runs on the database milestone 10b2 left');
 const nd = loadLists();
 const decisions = new Map(readLines('m10c-tags.txt').map(([kind, culture, name, used, periods, place, common]) =>
     [`${kind}|${culture}|${name}`, { used: used === '-' ? null : used === 'y', periods: periods === '-' ? '' : periods,

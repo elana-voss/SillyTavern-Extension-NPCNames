@@ -9,7 +9,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { foldName, loadOverused } from './tools/overused.mjs';
-import { addNames, parseLines } from './tools/db.mjs';
+import { addNames, keepEntered, parseLines } from './tools/db.mjs';
 import { labelLines, nameOfLabel, nameQueries, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
 import { client } from './tools/nanogpt.mjs';
 import { ancientTags, applyTags, commonnessFor, decideTags, isBlanket, listRanks, parseTagAnswers, tagsFor } from './tools/name-tags.mjs';
@@ -311,6 +311,12 @@ test('a real name marked not slop stays off the overused list, and the making to
 
 test('a data tool\'s list reads the same with either line end', () => {
     assert.deepEqual(parseLines('# note\r\na | b\r\n\r\nc | d\n'), [['a', 'b'], ['c', 'd']]);
+});
+
+test('10-fix: a names file written again keeps every name it held, as the read gave it before, beside the names the read now gives', () => {
+    const text = keepEntered('# head\nlast | hebrew | Amir | - | x\nlast | turkish | Ay | - | celestial\n',
+        [['last', 'hebrew', 'Erez', '-', 'x'], ['last', 'turkish', 'Ay', '-', '-']]);
+    assert.equal(text, '# head\nlast | hebrew | Amir | - | x\nlast | turkish | Ay | - | celestial\nlast | hebrew | Erez | - | x\n');
 });
 
 test('list entries become names on two of three readers: spellings fold, abbreviations and other peoples\' names do not enter', () => {

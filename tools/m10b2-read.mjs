@@ -14,7 +14,7 @@
 // Writes logs/work/m10b2/summary.txt, rejected.txt and entered.txt; prints a short summary.
 import { writeFileSync } from 'node:fs';
 import { arg, flag } from './cli.mjs';
-import { loadDb } from './db.mjs';
+import { keepEntered, loadDb, readLines } from './db.mjs';
 import { norm } from './name-lists.mjs';
 import { client } from './nanogpt.mjs';
 import { GENDERED, namesFileText, newFirstNames, newSurnames, readJobs } from './name-read.mjs';
@@ -129,7 +129,7 @@ const BUDGET = Number(arg('budget', 280000));
             'intelligence | allure | commonness | genres | themes; last | culture | name | gender (- none) | source |',
             'eras | roles | allure | commonness | genres | themes'];
         writeFileSync(new URL('m10b2-names.txt', import.meta.url),
-            namesFileText(head, f.lines, 'first') + namesFileText([], l.lines, 'last'));
+            keepEntered(namesFileText(head, f.lines, 'first') + namesFileText([], l.lines, 'last'), readLines('m10b2-names.txt')));
     }
     const spent = llm.spent();
     console.log(`jobs ${first.length + last.length}, unread ${f.unread + l.unread}, stopped by budget ${llm.stats.stopped}; answer lines missing ${f.missingLines + l.missingLines}`);

@@ -29,6 +29,18 @@ export const parseLines = text => text
     .filter(l => l && !l.startsWith('#'))
     .map(l => l.split(' | '));
 
+/**
+ * A names file's new text with the lines of its old one (parseLines' fields) whose kind, culture and name the new
+ * text lacks, after it: a name once entered is never stripped by a later read (10-fix: today's parser reads 17 of
+ * 10b's Hebrew surnames otherwise).
+ */
+export function keepEntered(text, oldLines) {
+    const key = f => f.slice(0, 3).join(' | ');
+    const now = new Set(parseLines(text).map(key));
+    const kept = oldLines.filter(f => !now.has(key(f))).map(f => f.join(' | ') + '\n');
+    return text + kept.join('');
+}
+
 /** parseLines of a file in tools/. */
 export const readLines = file => parseLines(readFileSync(new URL(file, import.meta.url), 'utf8'));
 
