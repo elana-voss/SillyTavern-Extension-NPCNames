@@ -805,6 +805,15 @@ test('10c: commonness follows rank in a list of the name\'s script; absent from 
     assert.equal(commonnessFor({ name: 'สมชาย', language_ethnicity: 'thai', commonness: 'uncommon' }, thai, 'c'), 'common', 'another script: the readers');
 });
 
+test('10-fix: a first name\'s rank is its place among its sex\'s names, so a woman\'s top name is common though her list\'s overall rank is past 300', () => {
+    const rows = Array.from({ length: 400 }, (_, i) => [i + 1, `M${String.fromCharCode(97 + i % 26)}${String.fromCharCode(97 + Math.floor(i / 26))}`, 1, 0]);
+    const ranks = listRanks({ first: { SA: [...rows, [416, 'Nura', 0, 1], [417, 'Maab', 1, 0]] }, last: { SA: [[416, 'Nura', 0, 1]] } }, 'first', ['arabic']);
+    const c = name => commonnessFor({ name, language_ethnicity: 'arabic', commonness: 'rare' }, ranks, null);
+    assert.deepEqual([c('Nura'), c('Maab'), c('Maa')], ['common', 'uncommon', 'common']);
+    const last = listRanks({ last: { SA: [...rows, [416, 'Nura', 0, 1]] } }, 'last', ['arabic']);
+    assert.equal(commonnessFor({ name: 'Nura', language_ethnicity: 'arabic', commonness: 'rare' }, last, null), 'uncommon', 'a surname keeps its list rank');
+});
+
 test('10c: a five-field tag line reads its periods and the first place it names; a people\'s other name reads as its key', () => {
     const a = parseTagAnswers('1 ABC - slavicOther u\n2 - ancient - r\n3 Mary Anne ABC - swedish u\n4 A - - r\n5 - bulgarian r\n6 - russian r');
     assert.deepEqual([1, 2, 3, 4, 5, 6].map(i => a.get(i)), [{ periods: 'ABC', place: 'slavicOther', common: 'u' }, { periods: '', place: 'ancient', common: 'r' },

@@ -5,7 +5,7 @@
 // never common; a name in another script than its list, or of a culture with no list, takes the readers' answer.
 // Shared by tools/m10c-read.mjs (the read), tools/m10c-apply-tags.mjs (the change) and test.js.
 import { agreed, CULTURES, PERIODS, periodTags } from './name-read.mjs';
-import { countriesOf, norm } from './name-lists.mjs';
+import { countriesOf, norm, SEXES } from './name-lists.mjs';
 
 /** Where a name with no sign of real use among its people belongs, besides another people of CULTURES. */
 export const PLACES = { fantasy: 'invented or of a fantasy world', future: 'of science fiction', ancient: 'borne only in antiquity' };
@@ -120,7 +120,9 @@ export const scriptOf = s => {
 };
 
 /**
- * Per culture with a name-dataset list of this kind: {rank: key -> best rank over its countries, scripts: the scripts
+ * Per culture with a name-dataset list of this kind: {rank: key -> best rank over its countries (a first name's: its rank less the other sex's names ranked
+ * above it, its place among its sex's names as
+ * 10a's per-sex top 50 counts; a plain rank is mostly men's), scripts: the scripts
  * a tenth or more of its entries are written in}. A culture with no list is absent.
  */
 export function listRanks(nd, kind, cultures) {
@@ -129,10 +131,16 @@ export function listRanks(nd, kind, cultures) {
         const ccs = countriesOf(nd, c, kind);
         if (!ccs.length) continue;
         const rank = new Map(), n = new Map();
-        for (const cc of ccs) for (const [r, name] of nd[kind][cc]) {
-            const k = norm(name);
-            if (!rank.has(k) || rank.get(k) > r) rank.set(k, r);
-            n.set(scriptOf(name), (n.get(scriptOf(name)) ?? 0) + 1);
+        for (const cc of ccs) {
+            const before = new Map(Object.keys(SEXES).map(s => [s, 0]));
+            for (const row of [...nd[kind][cc]].sort((a, b) => a[0] - b[0])) {
+                const [r0, name] = row, k = norm(name);
+                const sex = Object.keys(SEXES).find(s => SEXES[s](row));
+                const r = kind === 'first' ? r0 - Object.keys(SEXES).filter(s => s !== sex).reduce((x, s) => x + before.get(s), 0) : r0;
+                before.set(sex, before.get(sex) + 1);
+                if (!rank.has(k) || rank.get(k) > r) rank.set(k, r);
+                n.set(scriptOf(name), (n.get(scriptOf(name)) ?? 0) + 1);
+            }
         }
         const total = [...n.values()].reduce((a, b) => a + b, 0);
         out.set(c, { rank, scripts: new Set([...n].filter(([, x]) => x >= total / 10).map(([s]) => s)) });
