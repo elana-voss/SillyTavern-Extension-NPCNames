@@ -4,12 +4,15 @@
 // git-ignored at logs/work/m5/nd.json: `first`/`last` per country code, rows [rank, name, M, F].
 import { readFileSync } from 'node:fs';
 
-/** Countries whose lists stand for a culture; an empty list, or countries with no list, gives none. */
+/**
+ * Countries whose lists stand for a culture; an empty list, or countries with no list, gives none. Ireland's list is
+ * English-speaking Ireland's (John, Mary, Paul): it stands for english, never for Irish Gaelic (10-fix).
+ */
 export const COUNTRIES = {
     albanian: ['AL'], arabic: ['SA', 'EG', 'MA', 'IQ', 'JO'], azerbaijani: ['AZ'], chinese: ['CN', 'TW', 'HK'],
     dutch: ['NL', 'BE'], english: ['US', 'GB', 'AU', 'CA', 'IE'], estonian: ['EE'], ethiopian: ['ET'], fijian: ['FJ'],
     finnish: ['FI'], french: ['FR'], german: ['DE', 'AT'], ghanaian: ['GH'], greek: ['GR'], hebrew: ['IL'], hindi: ['IN'],
-    hungarian: ['HU'], icelandic: ['IS'], indonesian: ['ID'], irishGaelic: ['IE'], italian: ['IT'], japanese: ['JP'],
+    hungarian: ['HU'], icelandic: ['IS'], indonesian: ['ID'], irishGaelic: [], italian: ['IT'], japanese: ['JP'],
     korean: ['KR'], baltic: ['LT', 'LV'], nepalese: ['NP'], nigerian: ['NG'], norwegian: ['NO'], persian: ['IR'],
     portuguese: ['PT', 'BR'], romanian: ['RO'], scandinavian: ['DK'], serbian: ['RS'], slavicPolish: ['PL'],
     slavicRussian: ['RU'], slavicOther: ['BG', 'CZ', 'SK', 'HR', 'SI', 'BA'], spanish: ['ES', 'MX', 'AR', 'CO'],

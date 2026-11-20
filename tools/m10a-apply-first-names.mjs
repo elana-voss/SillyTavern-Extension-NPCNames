@@ -1,5 +1,5 @@
 // Milestone 10a's one data change: the common first names of tools/m10a-names.txt enter, each from
-// name-dataset's rank lists and read by three readers (tools/m10a-read.mjs); nothing here invents a
+// name-dataset's rank lists and read by three readers (tools/m10ab-read.mjs first); nothing here invents a
 // name and no name leaves. Writes the change list to logs/work/10a-changes.txt.
 //
 // Run on the database as it stood before the milestone (main's): node tools/m10a-apply-first-names.mjs

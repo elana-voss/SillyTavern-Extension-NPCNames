@@ -5,12 +5,11 @@
 //
 // Run: node tools/m10b-window.mjs [--cultures korean] [--narrow 200] [--wide 400]
 import { writeFileSync } from 'node:fs';
+import { arg } from './cli.mjs';
 import { client } from './nanogpt.mjs';
 import { loadLists, rankedEntries } from './name-lists.mjs';
 import { decide, readJobs, readersSaid } from './name-read.mjs';
 
-const argv = process.argv.slice(2);
-const arg = (k, d) => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1] : d; };
 const OUT = new URL('../logs/work/m10b/', import.meta.url);
 const nd = loadLists();
 const llm = client(new URL('answers/', OUT));

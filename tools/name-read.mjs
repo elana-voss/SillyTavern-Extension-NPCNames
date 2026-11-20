@@ -140,7 +140,8 @@ function groups(n) {
     return { find, join: (a, b) => { const x = find(a), y = find(b); if (x !== y) up[Math.max(x, y)] = Math.min(x, y); } };
 }
 
-const agreed = (values, k = 2) => {
+/** The value at least k of the values give (null ones never count), else null. */
+export const agreed = (values, k = 2) => {
     const c = new Map();
     for (const v of values) if (v != null) c.set(v, (c.get(v) ?? 0) + 1);
     const best = [...c].filter(([, n]) => n >= k).sort((a, b) => b[1] - a[1])[0];
@@ -229,17 +230,34 @@ export function decide(names, readers, culture, present, kind = 'first',
     return merged;
 }
 
-/** A surname's tags: a family name of living people; 10c reads its periods. */
-export const lastNameTags = ({ allure, theme }) => ({ era: ['contemporary'], role: ['neutral'], allure, commonness: 'common',
-    genre: ['sliceOfLife'], themes: theme ? [theme] : [] });
-
-/** A first name's tags from its periods: it is a name of living people, so adult and contemporary always. */
-export function firstNameTags({ periods, allure, theme }) {
+/**
+ * The one rule from periods (letters of PERIODS) to tags, for names read in milestone 10: adult always, child F,
+ * youngAdult E, elder B or C (people alive today); victorian A, nineteenTwenties B, midcentury C, modern E or F,
+ * contemporary B to F; sliceOfLife with contemporary, noirDetective B or C. Returns {age, era, genre} in this order.
+ */
+export function periodTags(periods) {
     const has = p => periods.includes(p);
-    const age = [has('F') && 'child', has('E') && 'youngAdult', 'adult', (has('B') || has('C')) && 'elder'].filter(Boolean);
-    const era = [has('A') && 'victorian', has('B') && 'nineteenTwenties', has('C') && 'midcentury',
-        (has('E') || has('F')) && 'modern', 'contemporary'].filter(Boolean);
-    const genre = ['sliceOfLife', (has('B') || has('C')) && 'noirDetective'].filter(Boolean);
+    const living = /[B-F]/.test(periods);
+    return {
+        age: [has('F') && 'child', has('E') && 'youngAdult', 'adult', (has('B') || has('C')) && 'elder'].filter(Boolean),
+        era: [has('A') && 'victorian', has('B') && 'nineteenTwenties', has('C') && 'midcentury', (has('E') || has('F')) && 'modern',
+            living && 'contemporary'].filter(Boolean),
+        genre: [living && 'sliceOfLife', (has('B') || has('C')) && 'noirDetective'].filter(Boolean),
+    };
+}
+
+/**
+ * A surname's tags: a family name of living people (from today's lists), so periodTags with D always; `periods` is
+ * what 10-fix's read with 10c's question gave (none before it: contemporary only).
+ */
+export function lastNameTags({ allure, theme, periods = '' }) {
+    const { era, genre } = periodTags(periods + 'D');
+    return { era, role: ['neutral'], allure, commonness: 'common', genre, themes: theme ? [theme] : [] };
+}
+
+/** A first name's tags from its periods: from today's lists, a name of living people, so periodTags with D always. */
+export function firstNameTags({ periods, allure, theme }) {
+    const { age, era, genre } = periodTags(periods + 'D');
     return { age, era, role: ['neutral'], intelligence: 'average', allure, commonness: 'common', genre, themes: theme ? [theme] : [] };
 }
 

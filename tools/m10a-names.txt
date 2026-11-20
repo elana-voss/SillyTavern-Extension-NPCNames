@@ -1,6 +1,6 @@
 # Milestone 10a: the 50 most common first names of each sex per culture that the database lacked,
 # from name-dataset (rank lists by country), each read by three readers of different vendors; made by
-# tools/m10a-read.mjs. Fields: first | culture | name | gender | source | ages | eras | roles |
+# tools/m10ab-read.mjs first. Fields: first | culture | name | gender | source | ages | eras | roles |
 # intelligence | allure | commonness | genres | themes
 first | albanian | Andi | male | name-dataset AL | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -
 first | albanian | Altin | male | name-dataset AL | child,youngAdult,adult,elder | midcentury,modern,contemporary | neutral | average | unremarkable | common | sliceOfLife,noirDetective | -

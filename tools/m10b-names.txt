@@ -1,6 +1,6 @@
 # Milestone 10b: the 100 most common surnames per culture, after folding, that the database lacked,
 # from name-dataset (rank lists by country), each read by three readers of different vendors; made by
-# tools/m10b-read.mjs. Fields: last | culture | name | gender (- none) | source | eras | roles |
+# tools/m10ab-read.mjs last. Fields: last | culture | name | gender (- none) | source | eras | roles |
 # allure | commonness | genres | themes
 last | albanian | Shehu | - | name-dataset AL | contemporary | neutral | unremarkable | common | sliceOfLife | -
 last | albanian | Cela | - | name-dataset AL | contemporary | neutral | unremarkable | common | sliceOfLife | -

@@ -818,6 +818,15 @@ test('10c: a decision with no agreed period and no place changes no tag', () => 
         tagsFor(e, { used: true, periods: '', place: null })], [{}, {}, {}]);
 });
 
+test('10-fix: a new name of today\'s list takes the eras of its periods by 10c\'s rule, contemporary always', () => {
+    const blank = { age: [], era: [], genre: [] };
+    const first = firstNameTags({ periods: 'BC', allure: 'pleasant', theme: null });
+    const rule = tagsFor(blank, { used: true, periods: 'BCD', place: null });
+    assert.deepEqual([first.age, first.era, first.genre], [rule.age, rule.era, rule.genre]);
+    const last = lastNameTags({ periods: 'AC', allure: 'pleasant', theme: null });
+    assert.deepEqual([last.era, last.genre], [['victorian', 'midcentury', 'contemporary'], ['sliceOfLife', 'noirDetective']]);
+});
+
 test('10c: one line given for every name of a list is no reading', () => {
     const same = parseTagAnswers(Array.from({ length: 20 }, (_, i) => `${i + 1} - ancient - r`).join('\n'));
     const read = parseTagAnswers(Array.from({ length: 20 }, (_, i) => `${i + 1} ${i ? 'CDE - c' : '- ancient r'}`).join('\n'));

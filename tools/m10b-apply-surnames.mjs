@@ -1,5 +1,5 @@
 // Milestone 10b's one data change: the common surnames of tools/m10b-names.txt enter, each from
-// name-dataset's rank lists and read by three readers (tools/m10b-read.mjs); nothing here invents a
+// name-dataset's rank lists and read by three readers (tools/m10ab-read.mjs last); nothing here invents a
 // name and no name leaves. Writes the change list to logs/work/10b-changes.txt.
 //
 // Run on the database as it stood before the milestone (main's): node tools/m10b-apply-surnames.mjs

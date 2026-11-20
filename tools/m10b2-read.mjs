@@ -12,7 +12,9 @@
 // Key: env NANOGPT_API_KEY. Answers are stored under logs/work/m10b2/answers and Wikidata's under
 // logs/work/m10b2/wd, so a rerun costs nothing; no new request once the input stored there passes the budget.
 // Writes logs/work/m10b2/summary.txt, rejected.txt and entered.txt; prints a short summary.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { writeFileSync } from 'node:fs';
+import { arg, flag } from './cli.mjs';
+import { loadDb } from './db.mjs';
 import { norm } from './name-lists.mjs';
 import { client } from './nanogpt.mjs';
 import { GENDERED, namesFileText, newFirstNames, newSurnames, readJobs } from './name-read.mjs';
@@ -50,8 +52,6 @@ const query = (src, kind, sexed) => nameQueries(src, PROP[kind], sexed);
 // a stage name in two words; Van Nghi and Le Viêt are a middle and a given name in Latin letters (10b2 review).
 const NOT_NAMES = new Set(['vietnamese/Thị', 'thai/คิม เบอรี่', 'vietnamese/Van Nghi', 'vietnamese/Le Viêt']);
 
-const argv = process.argv.slice(2);
-const arg = (k, d) => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1] : d; };
 const CULTURES = arg('cultures', '') ? arg('cultures').split(',') : Object.keys(SOURCES);
 // How far down each list is read, and how many of the names read may enter (10a's and 10b's).
 const WINDOW = { first: 100, last: 200 };
@@ -80,14 +80,15 @@ const BUDGET = Number(arg('budget', 280000));
             }
         }
     }
-    if (argv.includes('--lists')) {
+    if (flag('lists')) {
         writeFileSync(new URL('lists.txt', OUT), lists.map(l => `${l.culture}\t${l.kind}\t${l.sex ?? '-'}\t${l.entries.length}\t`
             + l.entries.slice(0, 120).map(e => e.name).join(', ')).join('\n') + '\n');
         console.log(lists.map(l => `${l.culture}/${l.kind}${l.sex ? '/' + l.sex[0] : ''} ${l.entries.length}`).join('; '));
         console.log(`wikidata: asked ${wd.stats.asked}, cached ${wd.stats.cached}, failed tries ${wd.stats.fail}, 429 ${wd.stats.limited}; table logs/work/m10b2/lists.txt`);
         process.exit(0);
     }
-    const db = JSON.parse(readFileSync(new URL('../data/name_database.tagged.json', import.meta.url), 'utf8'));
+    // The data 10b2's read found (10a and 10b applied), so a rerun gives the same lists.
+    const db = loadDb('7c3cb98');
     const heldOf = field => { const sets = new Map(); return c => sets.get(c) ?? sets.set(c, new Set(db[field]
         .filter(e => e.language_ethnicity === c).map(e => norm(e.name)))).get(c); };
     const overused = loadOverused();
@@ -117,7 +118,7 @@ const BUDGET = Number(arg('budget', 280000));
     writeFileSync(new URL('rejected.txt', OUT), 'culture\tsex\trank\tentry\treaders peoples:kind\n'
         + [...f.rejected, ...l.rejected.map(r => r.replace('\t', '\t-\t'))].join('\n') + '\n');
     writeFileSync(new URL('entered.txt', OUT), 'culture\tentry\trank\treaders peoples:kind\n' + l.entered.join('\n') + '\n');
-    if (argv.includes('--write')) {
+    if (flag('write')) {
         const head = [
             'Milestone 10b2: the 50 most common first names of each sex and 100 most common surnames per culture',
             'that the database lacked, for the cultures name-dataset has no list for and Irish Gaelic, ranked by how',
@@ -132,5 +133,5 @@ const BUDGET = Number(arg('budget', 280000));
     console.log(`jobs ${first.length + last.length}, unread ${f.unread + l.unread}, stopped by budget ${llm.stats.stopped}; answer lines missing ${f.missingLines + l.missingLines}`);
     console.log(`input tokens: stored ${spent}; calls ${llm.stats.calls}, cached ${llm.stats.cached}, failed tries ${llm.stats.fail}`);
     console.log(`new first names ${f.lines.length} (ambiguous ${f.lines.filter(m => m.gender === 'ambiguous').length}), surname forms ${l.lines.length}; entries rejected ${f.rejected.length + l.rejected.length}`);
-    console.log(`tables: logs/work/m10b2/summary.txt, rejected.txt, entered.txt${argv.includes('--write') ? '; list tools/m10b2-names.txt' : ''}`);
+    console.log(`tables: logs/work/m10b2/summary.txt, rejected.txt, entered.txt${flag('write') ? '; list tools/m10b2-names.txt' : ''}`);
 }

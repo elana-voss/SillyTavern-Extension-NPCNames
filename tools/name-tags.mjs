@@ -4,7 +4,7 @@
 // name-dataset's list of the culture, in the name's script, holds the name; absent from its top 1500 a name is
 // never common; a name in another script than its list, or of a culture with no list, takes the readers' answer.
 // Shared by tools/m10c-read.mjs (the read), tools/m10c-apply-tags.mjs (the change) and test.js.
-import { CULTURES, PERIODS } from './name-read.mjs';
+import { agreed, CULTURES, PERIODS, periodTags } from './name-read.mjs';
 import { countriesOf, norm } from './name-lists.mjs';
 
 /** Where a name with no sign of real use among its people belongs, besides another people of CULTURES. */
@@ -62,12 +62,6 @@ export function parseTagAnswers(text) {
 /** Whether one reader gave the same line for each of a list's n names (10 or more): no reading, set aside. */
 export const isBlanket = (answer, n) => n >= 10 && answer.size === n && new Set([...answer.values()].map(a => JSON.stringify(a))).size === 1;
 
-const agreed = (values, k = 2) => {
-    const n = new Map();
-    for (const v of values) n.set(v, (n.get(v) ?? 0) + 1);
-    return [...n].find(([, c]) => c >= k)?.[0] ?? null;
-};
-
 /**
  * Three readers' answers on one name to {used, periods, place, common}. used: true or false where two say so, null
  * where no two do (nothing changes); periods: the letters two give; place: of an unused name, where two put it, else
@@ -86,31 +80,24 @@ export function decideTags(answers) {
 // The tags periods set, which 10c replaces; other eras (ancient, timeless, nearFuture) and genres stay.
 const PERIOD_ERAS = ['victorian', 'nineteenTwenties', 'midcentury', 'modern', 'contemporary'];
 const PERIOD_GENRES = ['sliceOfLife', 'noirDetective'];
-const AGES = ['child', 'youngAdult', 'adult', 'elder'];
 const PLACE_TAGS = { fantasy: { era: 'timeless', genre: 'fantasy' }, future: { era: 'nearFuture', genre: 'cyberpunk' }, ancient: { era: 'ancient' } };
-const ordered = (all, set) => all.filter(x => set.has(x));
 
 /**
  * An entry's age, era and genre from a decision (decideTags; place a PLACES key or null). A used name takes the
- * periods' tags in place of its old period tags: adult always, child F, youngAdult E, elder B or C (people alive
- * today), victorian A, nineteenTwenties B, midcentury C, modern E or F, contemporary B to F, sliceOfLife with
- * contemporary, noirDetective B or C. An unused one loses its period tags, keeps its age and takes its place's tags
+ * periods' tags (name-read.mjs periodTags) in place of its old period tags. An unused one loses its period tags, keeps its age and takes its place's tags
  * (fantasy, future, ancient). With no agreed period, or no such place, nothing changes: the name keeps its tags rather
  * than match no era. A surname has no age. Returns the changed fields only.
  */
 export function tagsFor(entry, { used, periods, place }) {
     if (used === null || (used ? !periods : !PLACE_TAGS[place])) return {};
-    const has = p => periods.includes(p);
     const era = new Set((entry.era ?? []).filter(x => !PERIOD_ERAS.includes(x)));
     const genre = new Set((entry.genre ?? []).filter(x => !PERIOD_GENRES.includes(x)));
     const out = {};
     if (used) {
-        const living = /[B-F]/.test(periods);
-        [has('A') && 'victorian', has('B') && 'nineteenTwenties', has('C') && 'midcentury', (has('E') || has('F')) && 'modern',
-            living && 'contemporary'].filter(Boolean).forEach(x => era.add(x));
-        if (living) genre.add('sliceOfLife');
-        if (has('B') || has('C')) genre.add('noirDetective');
-        if ('age' in entry) out.age = ordered(AGES, new Set([has('F') && 'child', has('E') && 'youngAdult', 'adult', (has('B') || has('C')) && 'elder'].filter(Boolean)));
+        const t = periodTags(periods);
+        t.era.forEach(x => era.add(x));
+        t.genre.forEach(x => genre.add(x));
+        if ('age' in entry) out.age = t.age;
     } else if (PLACE_TAGS[place]) {
         const t = PLACE_TAGS[place];
         if (t.era && (t.era !== 'timeless' || era.size === 0)) era.add(t.era);

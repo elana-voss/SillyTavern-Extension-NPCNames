@@ -1,5 +1,5 @@
 // Milestone 10c's read: every human first name and surname the data held before milestone 10 (those not in
-// tools/m10a-names.txt, m10b-names.txt or m10b2-names.txt; 6,198 and 2,521; the 8,819 of the plan counted 100 non-human surnames) is read per culture by 10a's three
+// milestone 10's names files; those held at 007a5b5, the data before milestone 10; 6,198 and 2,521; the 8,819 of the plan counted 100 non-human surnames) is read per culture by 10a's three
 // readers with 10c's question (tools/name-tags.mjs): the periods it was given in there, where a name with no sign
 // of real use there belongs, and how common it is today. A reader's one line for a whole list is set aside
 // (isBlanket) and asked again in lists of 25 (--retry N: only the first N such answers); a part answered with one
@@ -15,11 +15,10 @@ import { writeFileSync } from 'node:fs';
 import { client, pool, weeklyUsed } from './nanogpt.mjs';
 import { EXTRA, READERS, readJobs } from './name-read.mjs';
 import { decideTags, isBlanket, parseTagAnswers, tagPromptFor } from './name-tags.mjs';
-import { readLines } from './db.mjs';
+import { arg, flag } from './cli.mjs';
+import { loadDb } from './db.mjs';
 
 const OUT = new URL('../logs/work/m10c/', import.meta.url);
-const argv = process.argv.slice(2);
-const arg = (k, d) => { const i = argv.indexOf('--' + k); return i >= 0 ? argv[i + 1] : d; };
 const KINDS = arg('kinds', 'first,last').split(',');
 const ONLY = arg('cultures', '') ? new Set(arg('cultures').split(',')) : null;
 const BUDGET = Number(arg('budget', 1500000));
@@ -27,14 +26,14 @@ const SIZE = 100, PART = 25;
 
 /** The names to read: a culture's human names of a kind, once each, but milestone 10's. */
 function namesToRead(db) {
-    const added = new Set(['m10a-names.txt', 'm10b-names.txt', 'm10b2-names.txt']
-        .flatMap(f => readLines(f).map(l => `${l[0]}|${l[1]}|${l[2]}`)));
+    const before = loadDb('007a5b5');
+    const held = new Set(['first', 'last'].flatMap(k => before[`${k}_names`].map(e => `${k}|${e.language_ethnicity}|${e.name}`)));
     const out = [];
     for (const kind of ['first', 'last']) {
         const seen = new Set();
         for (const e of db[`${kind}_names`]) {
             const key = `${kind}|${e.language_ethnicity}|${e.name}`;
-            if (e.race !== 'human' || added.has(key) || seen.has(key)) continue;
+            if (e.race !== 'human' || !held.has(key) || seen.has(key)) continue;
             seen.add(key);
             out.push({ kind, culture: e.language_ethnicity, name: e.name });
         }
@@ -91,7 +90,7 @@ function namesToRead(db) {
         `nano-gpt weekly input ${before} to ${after}`];
     writeFileSync(new URL('summary.txt', OUT), summary.join('\n') + '\n');
     console.log(summary.join('\n'));
-    if (argv.includes('--write')) {
+    if (flag('write')) {
         writeFileSync(new URL('m10c-tags.txt', import.meta.url), ['# Milestone 10c: three readers\' decision on each human name the data held before milestone 10,',
             '# per culture, made by tools/m10c-read.mjs (two of three decide; tools/name-tags.mjs decideTags).',
             '# Fields: kind | culture | name | used (y, n, - undecided) | periods (A-F, - none) | place (of an unused name) | common (c, u, r, -)',

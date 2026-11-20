@@ -2,6 +2,7 @@
 // they add from them (addNames), the change list they leave. Each tool runs once on a database of known counts, so a failed run is run again
 // only if the database was not yet written.
 import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { norm } from './name-lists.mjs';
@@ -10,9 +11,13 @@ import { foldName } from './overused.mjs';
 const dbUrl = new URL('../data/name_database.tagged.json', import.meta.url);
 const serialise = db => JSON.stringify(db, null, 2).replace(/\n/g, '\r\n');
 
-/** The database, after proving that saving it unchanged would give back the same bytes. */
-export function loadDb() {
-    const raw = readFileSync(dbUrl, 'utf8');
+/**
+ * The database, after proving that saving it unchanged would give back the same bytes; with `at`, as it stood
+ * at that commit (with the work tree's line ends, so the same proof holds), for a read pinned to the data it found.
+ */
+export function loadDb(at = null) {
+    const raw = at ? execFileSync('git', ['cat-file', '--filters', `${at}:data/name_database.tagged.json`],
+        { encoding: 'utf8', maxBuffer: 1 << 28, cwd: fileURLToPath(new URL('..', import.meta.url)) }) : readFileSync(dbUrl, 'utf8');
     const db = JSON.parse(raw);
     assert.equal(serialise(db), raw, 'the database format would not survive a rewrite');
     return db;
