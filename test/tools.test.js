@@ -441,11 +441,23 @@ test('10c: a moved name takes its new people\'s commonness and surname gender; a
         [['Chia', 'chinese', 'common', '-'], ['Barlas', 'turkish', 'uncommon', '-'], ['Kaya', 'turkish', 'uncommon', '-'], ['Lee', 'english', 'uncommon', '-']]);
 });
 
+// The code files of the extension and its tools, and those among them holding `text`.
+const codeFiles = dir => readdirSync(new URL(dir, ROOT)).filter(f => /\.m?js$/.test(f)).map(f => dir + f);
+const naming = text => [...codeFiles('./'), ...codeFiles('./tools/')].filter(f => readFileSync(new URL(f, ROOT), 'utf8').includes(text));
+
 test('audit fix C4: the nano-gpt address is named only in the client, tools/nanogpt.mjs', () => {
-    const code = dir => readdirSync(new URL(dir, ROOT)).filter(f => /\.m?js$/.test(f)).map(f => dir + f);
-    const naming = [...code('./'), ...code('./tools/'), ...code('./test/')]
-        .filter(f => f !== './test/tools.test.js' && readFileSync(new URL(f, ROOT), 'utf8').includes('nano-gpt.com'));
-    assert.deepEqual(naming, ['./tools/nanogpt.mjs']);
+    assert.deepEqual(naming('nano-gpt.com'), ['./tools/nanogpt.mjs']);
+});
+
+test('audit fix C5: the name of the tool is written only in advertisement.js', () => {
+    assert.deepEqual(naming('suggest_npc_name'), ['./advertisement.js']);
+});
+
+test('audit fix, review: the test bed copies every module index.js imports', () => {
+    const copied = readFileSync(new URL('./tools/testbed.mjs', ROOT), 'utf8').match(/const EXT_FILES = (\[.*\]);/)[1];
+    const imported = [...readFileSync(new URL('./index.js', ROOT), 'utf8').matchAll(/from '\.\/([^']+)'/g)].map(m => m[1]);
+    assert.ok(imported.length >= 4, 'the imports are read');
+    assert.deepEqual(imported.filter(f => !JSON.parse(copied.replaceAll("'", '"')).includes(f)), []);
 });
 
 test('audit fix C7: heldBy gives the spelling keys of a culture, built once per culture', () => {

@@ -221,7 +221,7 @@ test('the AI calls the tool when a name is learned, not when a character arrives
     assert.ok(ad.includes('A name appears only when {{user}} would learn it'), 'when a name is learned');
     assert.ok(ad.includes('fit the character as already established'), 'filters for a late call');
     assert.ok(code.includes(timing), 'tool description');
-    for (const [label, text] of [['advertisement', ad], ['advertisement.js', code]]) {
+    for (const [label, text] of [['advertisement', ad], ['advertisement.js', code], ['field descriptions', JSON.stringify(buildToolParameters({}).properties)]]) {
         assert.ok(!/new NPC you introduce|about to introduce|once per new NPC/.test(text), `${label}: arrival timing left`);
     }
 });

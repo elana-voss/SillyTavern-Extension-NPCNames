@@ -38,9 +38,10 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 10-fix | Fixes after the milestone review of 10 (7 findings) | R2, R4, R11, R12 | Done | | 5M | | Claude 15.1M (five agents and the code review), nano-gpt 0.37M (the read of the new surname forms' periods; about 0.12M was estimated before the re-asks of one-line-for-all answers); tests `node test.js` 67 of 67; code review Opus 5.5 medium, no finding (one speed note, applied) |
 | 10d | The pick leans to common names, one target in every language | R4, R11, R12 | Done | | 3M | 0.05M | Claude 6.1M (build 4.3M Opus 5.5 medium; test-bed fix 1.8M Sonnet 5.5 medium, the live run had saved 4096 output tokens into the test bed's settings), nano-gpt 0.083M input (two live runs, the first cut at 300 output tokens); tests `node test.js` 70 of 70; no code review due (about 50 lines of product code) |
 | 10e | The AI asks for a commonness only when the story calls for it | R4, R11, R12 | Done | | 3M | 0.1M | Claude 1.3M (Opus 5.5 medium), nano-gpt 0.047M input (one live run); tests `node test.js` 71 of 71; test bed 104 of 104; no code review due (3 lines of product text). The owner, 2026-11-20: "yes, change the instructions." In all 5 live chats of 10d the AI passed `commonness: common`, so the lean to common names never acted. |
+| 10-audit-fix | Fixes after the audit after 6–10e (C2–C7) | R12 | Done | | 3M | 0 | Claude (filled by the main session); tests `npm test` 79 of 79; code review Opus 5.5 medium (two parts), 3 findings, all fixed with tests: the test bed did not copy install.js; the arrival-timing check skipped the field descriptions; the C5 test could not fail on a second copy of the tool's name |
 | | Total | | | | 84.5M | 5.76M | |
 
-Each milestone ends with `node test.js` passing and the extension working on the test bed.
+Each milestone ends with `npm test` passing and the extension working on the test bed.
 
 ## Questions for the owner
 
@@ -147,6 +148,12 @@ Each milestone ends with `node test.js` passing and the extension working on the
 - Milestone 10-fix, new surname forms' periods (`decideNew`): the periods two readers agree on, with D always as for living people; a reader's one line for a whole part is set aside as in 10c; their place and commonness stay as their lists set them.
 - Milestone 10-fix, reproducible reads: 10a, 10b and 10b2 take "held" from the data at a pinned commit (`loadDb('007a5b5')`, `loadDb('7c3cb98')`), as 10c does; `tools/name-reach.mjs` measures the 49 peoples, not the cyberpunk handles, '-' where no list.
 - Milestone 10e, wording: the instructions name when to pass a commonness (plain and everyday, or strikingly unusual) and say to leave it out otherwise, in all three places the AI reads (the field, the tool's description, the chat instructions); the chat instructions also say the tool leans to common names by itself, so leaving it out does not read as losing control.
+- Audit fix C3, one spelling key: `norm` kept, `foldName` gone; it differs in folding đ to d and dropping non-letters (the overused check now also matches E-lara, Ela ra). Measured: the 33 lines of overused-names.txt give the same keys; the database's duplicate keys are the same (Đức|Dục, Ngô|Ngọ).
+- Audit fix C3, one malformed-name rule: Wikidata's `nameOfLabel` now also refuses a label ending in a full stop (`J. R.` gave `J. R.`, now none), as the database's rule did.
+- Audit fix C4: milestone 9's live check runs on the shared nano-gpt client, so it takes its 1 s gap, five tries and 65 s wait on a 429 (was three tries, 5 s times the try). Its stored answers keep their key ({ body, run }, hash cut to 24); measured: none of the 116 matches today's requests, by the old code as by the new, since the data and texts changed after milestone 9.
+- Audit fix C5: the install check moved to `install.js`; the test bed and the fake AI take the tool's name from `advertisement.js`, and the test bed copies `install.js` (the review's finding: without it index.js did not load in the test bed).
+- Audit fix C6: the culture list of the chat instructions is the mark %CULTURES% in assets/advertisement.txt, filled from the data at load; measured by tools/ad-text-diff.mjs against 60ffc03: the instructions (5766 characters) and the description (619) are the same.
+- Audit fix C7: `heldBy` in name-read.mjs builds a culture's held spelling keys once, for m10ab-read and m10b2-read; lean-measure writes beside its own file.
 
 ## Trials
 
