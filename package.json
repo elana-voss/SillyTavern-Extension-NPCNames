@@ -1,0 +1,10 @@
+{
+  "name": "sillytavern-extension-npcnames",
+  "private": true,
+  "type": "module",
+  "description": "SillyTavern extension: suggests NPC names from a tagged database",
+  "license": "LGPL-2.1-or-later",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  }
+}
