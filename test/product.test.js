@@ -1,7 +1,8 @@
 // The extension's own modules: the pick, what the AI is told, the tool-call lines.
 import { test } from 'node:test';
 import { pickName, readUsed } from '../picker.js';
-import { TOOL_DESCRIPTION, buildToolParameters, injectBeforeLatest, isInstalledIn } from '../advertisement.js';
+import { TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters, injectBeforeLatest } from '../advertisement.js';
+import { isInstalledIn } from '../install.js';
 import { HIDDEN_TOOL_CALL_CLASS, markToolCallLines } from '../tool-calls.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -189,6 +190,11 @@ test('only lines holding nothing but our tool are hidden, and only while showing
     assert.deepEqual(hidden(), [false, false, false, false, false]);
 });
 
+test('C5: the tool is named once, and the description calls it by that name', () => {
+    assert.equal(TOOL_NAME, 'suggest_npc_name');
+    assert.ok(TOOL_DESCRIPTION.includes(`call ${TOOL_NAME}, with`));
+});
+
 test('the install folder is told from the module\'s address', () => {
     const at = folder => `http://host:1/scripts/extensions/third-party/${folder}/index.js?v=1`;
     assert.ok(isInstalledIn(at('Right'), 'third-party/Right'));
@@ -196,7 +202,7 @@ test('the install folder is told from the module\'s address', () => {
 });
 
 test('the AI is told how to ask for an elf, a dwarf or a dragon', () => {
-    const text = ['./assets/advertisement.txt', './advertisement.js'].map(file => readFileSync(new URL(file, ROOT), 'utf8'));
+    const text = [readFileSync(new URL('./assets/advertisement.txt', ROOT), 'utf8'), TOOL_DESCRIPTION];
     for (const race of ['elf', 'dwarf', 'dragon']) assert.ok(text.every(t => t.includes(`race: ${race}`)), race);
 });
 
@@ -209,8 +215,7 @@ test('10e: the AI passes a commonness only when the story calls for it', () => {
 });
 
 test('the AI calls the tool when a name is learned, not when a character arrives', () => {
-    const [ad, code] = ['./assets/advertisement.txt', './advertisement.js']
-        .map(file => readFileSync(new URL(file, ROOT), 'utf8').replaceAll('\\\'', '\''));
+    const [ad, code] = [readFileSync(new URL('./assets/advertisement.txt', ROOT), 'utf8'), TOOL_DESCRIPTION];
     const timing = 'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name';
     assert.ok(ad.startsWith(timing), 'instructions open with the timing');
     assert.ok(ad.includes('A name appears only when {{user}} would learn it'), 'when a name is learned');

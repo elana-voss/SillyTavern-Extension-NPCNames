@@ -1,8 +1,16 @@
-// What the AI is told about the tool: its description and parameters, and the
-// instructions placed in the chat.
+// What the AI is told about the tool: its name, description and parameters, and the
+// instructions placed in the chat, their culture list filled from the data.
+
+export const TOOL_NAME = 'suggest_npc_name';
 
 export const TOOL_DESCRIPTION =
-    'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name, with filters that fit the character as already established; until then, describe them. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human. Pass commonness only when the story calls for it; otherwise leave it out.';
+    `Before writing a reply in which a new character's name first appears, call ${TOOL_NAME}, with filters that fit the character as already established; until then, describe them. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human. Pass commonness only when the story calls for it; otherwise leave it out.`;
+
+// The instructions, with the cultures the data holds in place of CULTURES_MARK.
+export const CULTURES_MARK = '%CULTURES%';
+export function fillAdvertisement(template, enumValues) {
+    return template.replace(CULTURES_MARK, enumValues.language_ethnicity.join(', '));
+}
 
 // The tool's parameters, each an enum of the values the name database holds.
 export function buildToolParameters(enumValues) {
@@ -63,9 +71,4 @@ export function injectBeforeLatest(chat, text, groupUserName = null) {
         mes: text,
         extra: { type: 'narrator' },
     });
-}
-
-// True when the module at this address sits in the folder its templates are looked for in.
-export function isInstalledIn(moduleUrl, folder) {
-    return new URL(moduleUrl).pathname.endsWith(`/${folder}/index.js`);
 }

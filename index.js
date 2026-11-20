@@ -8,12 +8,12 @@ import { eventSource, event_types } from '../../../events.js';
 import { selected_group } from '../../../group-chats.js';
 import { ToolManager } from '../../../tool-calling.js';
 import { pickName, deriveEnumValues, readUsed } from './picker.js';
-import { TOOL_DESCRIPTION, buildToolParameters, injectBeforeLatest, isInstalledIn } from './advertisement.js';
+import { TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters, fillAdvertisement, injectBeforeLatest } from './advertisement.js';
+import { isInstalledIn } from './install.js';
 import { markToolCallLines } from './tool-calls.js';
 
 const MODULE = 'npcNames';
 const EXT_DIR = 'third-party/SillyTavern-Extension-NPCNames';
-const TOOL_NAME = 'suggest_npc_name';
 const LOG_TAG = '[NPCNames]';
 const DEFAULT_SETTINGS = { enabled: true, debugLog: false, showToolCalls: false };
 // Matches ST's own noToolCallTypes in tool-calling.js: generation types
@@ -48,7 +48,7 @@ async function loadAdvertisement() {
     const url = new URL('./assets/advertisement.txt', import.meta.url);
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    advertisement = await res.text();
+    advertisement = fillAdvertisement(await res.text(), enumValues);
 }
 
 function callPicker(args) {

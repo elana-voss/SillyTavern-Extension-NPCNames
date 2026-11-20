@@ -3,8 +3,7 @@
 // with a closing text once the tool's result comes back. Costs no provider tokens, unless a
 // live run gives it a provider to forward OpenAI requests to (startFakeLlm's `forward`).
 import { createServer } from 'node:http';
-
-export const TOOL = 'suggest_npc_name';
+import { TOOL_NAME as TOOL } from '../advertisement.js';
 export const FINAL_TEXT = 'FAKE-FINAL: the stranger gives a name.';
 const TOOL_ARGS = { gender: 'female', language_ethnicity: 'japanese' };
 

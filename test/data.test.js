@@ -1,5 +1,6 @@
 // The name database's invariants and the documents that describe it.
 import { test } from 'node:test';
+import { fillAdvertisement } from '../advertisement.js';
 import { deriveEnumValues, pickName } from '../picker.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -121,7 +122,7 @@ function checkDocuments(data) {
         const line = readme.match(new RegExp(`^- \\*\\*${field}\\*\\*:(.*)$`, 'm'))?.[1] ?? '';
         assert.deepEqual([...line.matchAll(/`([^`]+)`/g)].map(m => m[1]).sort(), values, `README ${field}`);
     }
-    const cultures = read('./assets/advertisement.txt').match(/the cultural root of the name, one of: ([^.]+)\./)?.[1] ?? '';
+    const cultures = fillAdvertisement(read('./assets/advertisement.txt'), enums).match(/the cultural root of the name, one of: ([^.]+)\./)?.[1] ?? '';
     assert.deepEqual(cultures.split(', ').sort(), enums.language_ethnicity, 'advertisement');
 }
 

@@ -1,17 +1,25 @@
-// The nano-gpt client of milestone 10's readers: every answer is stored under the caller's folder,
-// keyed by the request, so a rerun costs nothing; an empty answer's usage is stored beside them, so
-// spent() holds every paid input. One request a second; a 429 waits 65 s.
+// The nano-gpt client of the data tools and milestone 9's live check (its address is named only here):
+// every answer is stored under the caller's folder, keyed by the request, so a rerun costs nothing; an
+// empty answer's usage is stored beside them, so spent() holds every paid input. One request a second;
+// a 429 waits 65 s. `ask` sends one prompt and returns the text; `send` sends a whole request (a chat
+// with tools) and returns the response JSON.
 // Key: env NANOGPT_API_KEY, never written anywhere. A refusal is logged with its status and text.
 import { createHash } from 'node:crypto';
 import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 
-const API = 'https://nano-gpt.com/api/v1/chat/completions';
+export const API = 'https://nano-gpt.com/api/v1/chat/completions';
 const USAGE = 'https://nano-gpt.com/api/subscription/v1/usage';
 const GAP_MS = 1000;
 const TIMEOUT_MS = 300000;
 
-/** A client storing answers in `dir` (a URL ending in /) and logging to `dir`/../llm.log. */
-export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => setTimeout(r, ms)) } = {}) {
+const sha = x => createHash('sha256').update(JSON.stringify(x)).digest('hex');
+const textOf = j => j.choices?.[0]?.message?.content ?? '';
+
+/**
+ * A client storing answers in `dir` (a URL ending in /) and logging to `dir`/../llm.log. A stored answer's file is
+ * named by `name` of its key's hash.
+ */
+export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => setTimeout(r, ms)), name = hash => hash } = {}) {
     mkdirSync(dir, { recursive: true });
     const log = new URL('../llm.log', dir);
     const stats = { calls: 0, cached: 0, fail: 0, stopped: 0, input: 0, output: 0 };
@@ -23,16 +31,9 @@ export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => set
     }));
     const note = line => appendFileSync(log, `${new Date().toISOString()} ${line}\n`);
 
-    /**
-     * The model's text, or null after five failed tries. A stored answer is read whatever `allow` says;
-     * a new request starts only while `allow()` holds (the caller's budget), else null.
-     */
-    async function ask(model, prompt, { max_tokens = 8000, temperature = 0, tag = '', extra = {}, allow = () => true } = {}) {
-        const body = { model, messages: [{ role: 'user', content: prompt }], max_tokens, temperature, ...extra };
-        const hash = createHash('sha256').update(JSON.stringify(body)).digest('hex');
-        const file = new URL(hash + '.json', dir);
-        if (existsSync(file)) { stats.cached++; return JSON.parse(readFileSync(file, 'utf8')).text; }
-        if (!allow()) { stats.stopped++; return null; }
+    // The response JSON once `answered` holds for it, or null after five failed tries.
+    async function request(body, hash, tag, answered) {
+        const { model } = body;
         for (let i = 0; i < 5; i++) {
             await throttle();
             try {
@@ -47,8 +48,7 @@ export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => set
                     stats.fail++; await wait(5000); continue;
                 }
                 const j = await r.json();
-                const text = j.choices?.[0]?.message?.content ?? '';
-                if (!text.trim()) {
+                if (!answered(j)) {
                     // A reader that spends its tokens on reasoning answers nothing; the input is paid all the same,
                     // so its usage is stored too (spent() counts it) under a name the cache never reads.
                     stats.input += j.usage?.prompt_tokens ?? 0;
@@ -57,20 +57,48 @@ export function client(dir, { fetchFn = fetch, wait = ms => new Promise(r => set
                     stats.fail++; await wait(5000); continue;
                 }
                 stats.calls++; stats.input += j.usage?.prompt_tokens ?? 0; stats.output += j.usage?.completion_tokens ?? 0;
-                writeFileSync(file, JSON.stringify({ model, tag, usage: j.usage, text }));
                 note(`OK ${model} ${tag} in=${j.usage?.prompt_tokens}`);
-                return text;
+                return j;
             } catch (e) { note(`FAIL ${e.name} ${model} ${tag} ${e.cause?.code ?? ''} ${e.message}`); stats.fail++; await wait(5000); }
         }
         note(`GAVEUP ${model} ${tag}`);
         return null;
     }
 
+    // The stored answer under `key`, else a new one from `fetchNew(hash)` while `allow()` holds (the caller's
+    // budget), stored by `keep`; null when none.
+    async function answer(key, allow, read, fetchNew, keep) {
+        const hash = name(sha(key));
+        const file = new URL(hash + '.json', dir);
+        if (existsSync(file)) { stats.cached++; return read(JSON.parse(readFileSync(file, 'utf8'))); }
+        if (!allow()) { stats.stopped++; return null; }
+        const j = await fetchNew(hash);
+        if (!j) return null;
+        const stored = keep(j);
+        writeFileSync(file, JSON.stringify(stored));
+        return read(stored);
+    }
+
+    /** The model's text, or null after five failed tries or when `allow()` fails before a new request. */
+    function ask(model, prompt, { max_tokens = 8000, temperature = 0, tag = '', extra = {}, allow = () => true } = {}) {
+        const body = { model, messages: [{ role: 'user', content: prompt }], max_tokens, temperature, ...extra };
+        return answer(body, allow, stored => stored.text, hash => request(body, hash, tag, j => textOf(j).trim() !== ''),
+            j => ({ model, tag, usage: j.usage, text: textOf(j) }));
+    }
+
+    /**
+     * The response JSON of a whole request body (a chat with tools), stored whole under `key`'s hash; a message
+     * with tool calls and no text is an answer. Null as for `ask`.
+     */
+    function send(body, { key = body, tag = '', allow = () => true } = {}) {
+        return answer(key, allow, j => j, hash => request(body, hash, tag, j => Boolean(j.choices?.[0]?.message)), j => j);
+    }
+
     /** Input tokens of every stored answer, the spend so far. */
     const spent = () => readdirSync(dir).reduce((n, f) =>
         n + (JSON.parse(readFileSync(new URL(f, dir), 'utf8')).usage?.prompt_tokens ?? 0), 0);
 
-    return { ask, spent, stats };
+    return { ask, send, spent, stats };
 }
 
 /** Runs fn over items with n workers; results in item order. */

@@ -1,7 +1,7 @@
 // The data tools: lists, readers' answers, Wikidata, the provider client, tags.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { mkdtempSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
@@ -230,6 +230,22 @@ test('a stored answer is read past the budget, a new call is not, and an empty a
         assert.equal(await llm.ask('m', 'a', { allow: () => false }), '1 x');
         assert.equal(await llm.ask('m', 'b', { allow: () => false }), null);
         assert.deepEqual([fetched, llm.stats.stopped], [2, 1]);
+    } finally { rmSync(dir, { recursive: true, force: true }); }
+});
+
+test('C4: a whole request (a chat with tools) is sent by the same client: a tool call with no text is an answer, stored whole under its key and its name', async () => {
+    const dir = pathToFileURL(mkdtempSync(join(tmpdir(), 'npcnames-llm-')) + '/');
+    try {
+        let fetched = 0;
+        const reply = { choices: [{ message: { content: null, tool_calls: [{ id: 'c1' }] } }], usage: { prompt_tokens: 7, completion_tokens: 2 } };
+        const fetchFn = async () => { fetched++; return { ok: true, status: 200, json: async () => reply }; };
+        const llm = client(dir, { fetchFn, wait: async () => {}, name: hash => hash.slice(0, 24) });
+        const body = { model: 'm', messages: [], tools: [] };
+        assert.deepEqual(await llm.send(body, { key: { body, run: 1 } }), reply);
+        assert.deepEqual(await llm.send(body, { key: { body, run: 1 }, allow: () => false }), reply);
+        assert.equal(await llm.send(body, { key: { body, run: 2 }, allow: () => false }), null);
+        assert.deepEqual([fetched, llm.stats.input, llm.spent()], [1, 7, 7]);
+        assert.deepEqual(readdirSync(dir).map(f => f.length), [29]);
     } finally { rmSync(dir, { recursive: true, force: true }); }
 });
 

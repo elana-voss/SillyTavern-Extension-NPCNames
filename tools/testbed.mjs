@@ -17,7 +17,8 @@ import { createRequire } from 'node:module';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { FINAL_TEXT, TOOL, startFakeLlm } from './fake-llm.mjs';
+import { TOOL_NAME as TOOL } from '../advertisement.js';
+import { FINAL_TEXT, startFakeLlm } from './fake-llm.mjs';
 
 const ROOT = process.env.NPCNAMES_TESTBED ?? join(tmpdir(), 'SillyTavern-Extension-NPCNames');
 const REPO = dirname(dirname(fileURLToPath(import.meta.url)));
