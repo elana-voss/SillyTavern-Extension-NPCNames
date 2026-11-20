@@ -36,7 +36,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Done | | 12M | 0.28M | Claude 26.8M (one agent 26.3M, 362 turns; review 0.50M), nano-gpt 0.29M; code review Fable 5.2 medium |
 | 10c | True tags and placement | R4, R11, R12 | Done | | 9.5M | 0.62M | Claude 14.3M (four agents, three handed over; review and the re-ask of 46 answers included), nano-gpt 0.57M; code review Fable 5.2 medium |
 | 10-fix | Fixes after the milestone review of 10 (7 findings) | R2, R4, R11, R12 | Done | | 5M | 15.1M | Claude five agents and the code review, nano-gpt 0.37M (the read of the new surname forms' periods; about 0.12M was estimated before the re-asks of one-line-for-all answers); tests `node test.js` 67 of 67; code review Opus 5.5 medium, no finding (one speed note, applied) |
-| 10d | The pick leans to common names, one target in every language | R4, R11, R12 | Planned | High | 3M | 0.05M | |
+| 10d | The pick leans to common names, one target in every language | R4, R11, R12 | Done | | 3M | 0.05M | nano-gpt 0.083M input (two live runs, the first cut at 300 output tokens); Claude: the main session's figure; tests `node test.js` 70 of 70; no code review due (about 50 lines of product code) |
 | | Total | | | | 84.5M | 5.76M | |
 
 Each milestone ends with `node test.js` passing and the extension working on the test bed.
@@ -263,9 +263,16 @@ Tests: `node test.js 10c` 11 of 11, database invariants pass (the full run is th
 
 Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits in 10c.
 
+- Built: `picker.js` `leanPick`, for first names only; a name with no class weighs as a rare one. With `commonness` passed, the pick stays even among the names it allows.
+- Figures (`node tools/lean-measure.mjs`, "adult today", table in `logs/work/lean-measure.txt`): 97 lists, median 76% common at the first pick; 29 at 70%, 62 above (mostly common lists, an even pick), below: Hawaiian women 62%, Latin men, Mayan and Native American 0% (no common names). English men and women 70%, Thai men 70%, Nigerian women 73%.
+- Over a chat's picks (300 chats, cumulative): Hawaiian women 49% over 1-10, 20% over 1-30, 18% over 1-100 (few common names, soon used); Thai men 70%, 70%, 49%; English women 70%, 69%, 70%.
+- Live run (`node tools/testbed.mjs live`, `z-ai/glm-5.3-flash` through nano-gpt; the fake forwards, so the key stays out of SillyTavern): five chats, London barista, Bangkok detective, Oahu board rental, Madrid office, Lagos taxi. The tool was called in all five: Jennie Fredricksen, ชลธี เทพธี (uncommon: the AI's filters were relaxed), Nalani Keliʻi, Santiago Blanco, Chidimma Udo. The Thai name was written in Latin letters in the reply, as in milestone 8. 10 of 11 checks. The model passed `commonness: common` in all five, so the lean acts only where the AI passes no commonness or it is relaxed.
+- Input tokens: 45,768 (second run) and about 27,000 (first run, replies cut by SillyTavern's 300 output tokens; the live run now sets 4096), 0.083M against 0.05M.
+- Tests, failing then passing: "✗ 10d: common names come 7 picks in 10 in any list, …", "✗ 10d: the lean is set from the unused names, …", 5 passed, 2 failed (the commonness test passed already, it pins the existing even pick); then 70 of 70.
+
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: 10d (Fable: build).
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: milestone 10 is done; the next milestone is the owner's.
 - Thin after 10b2, no honest source for more: Mayan first names (0) and surnames (1), tried Wikidata given and family names of people of Maya ethnic groups and names in Mayan languages.
 - Thin after 10b2: Native American first names (0), tried Wikidata given names of people of Native American ethnic groups.
 - Thin after 10b2: Hawaiian first names (3) and surnames (8), tried Wikidata names of Native Hawaiians and names in Hawaiian.
