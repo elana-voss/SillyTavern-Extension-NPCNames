@@ -98,6 +98,7 @@ function configure(page, port, settings) {
             stream_openai: false,
             squash_system_messages: false,
             openai_max_context: 16384,
+            openai_max_tokens: 300,
             custom_url: `http://127.0.0.1:${port}/v1`,
             custom_model: 'fake-model',
             reverse_proxy: '',
