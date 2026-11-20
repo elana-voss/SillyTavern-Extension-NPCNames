@@ -273,7 +273,8 @@ async function sendLive(page, text) {
 
 const SCENARIOS = {
     async live({ page, fake }) {
-        await configure(page, fake.port, { custom_model: LIVE_MODEL });
+        // SillyTavern's default of 300 output tokens ends a thinking model's reply before its text.
+        await configure(page, fake.port, { custom_model: LIVE_MODEL, openai_max_tokens: 4096 });
         recorded.live = [];
         for (const ask of LIVE_ASKS) {
             const before = fake.requests.length;
@@ -288,6 +289,7 @@ const SCENARIOS = {
                 ask, args: invoked.map(t => t.parameters), result, reply,
                 input: requests.reduce((n, r) => n + (r.response?.usage?.prompt_tokens ?? 0), 0),
                 output: requests.reduce((n, r) => n + (r.response?.usage?.completion_tokens ?? 0), 0),
+                finish: requests.map(r => r.response?.choices?.[0]?.finish_reason ?? String(r.response).slice(0, 100)),
             });
             check(`live: the tool was called for "${ask.slice(0, 40)}"`, invoked.length > 0, reply.slice(0, 200));
             const first = result[0]?.first_name;
