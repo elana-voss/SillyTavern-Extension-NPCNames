@@ -254,6 +254,7 @@ const LIVE_ASKS = [
     '(OOC: the story moves to a surf town on Oahu today, slice of life.) The Hawaiian woman who runs the board rental introduces herself.',
     '(OOC: the story moves to an office in present-day Madrid, a workplace drama.) My new Spanish colleague, a man in his twenties, shakes my hand and gives his name.',
     '(OOC: the story moves to present-day Lagos, a thriller.) The Nigerian taxi driver, a woman, tells me her name when I get in.',
+    '(OOC: the story moves to an old manor in present-day England, a horror story.) The English housekeeper, a woman in her fifties, opens the door and gives her name.',
 ];
 
 // Sends a text through the page's send button and waits until the AI's reply settles.
