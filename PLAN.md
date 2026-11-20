@@ -40,8 +40,8 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 10e | The AI asks for a commonness only when the story calls for it | R4, R11, R12 | Done | | 3M | 0.1M | Claude 1.3M (Opus 5.5 medium), nano-gpt 0.047M input (one live run); tests `node test.js` 71 of 71; test bed 104 of 104; no code review due (3 lines of product text). The owner, 2026-11-20: "yes, change the instructions." In all 5 live chats of 10d the AI passed `commonness: common`, so the lean to common names never acted. |
 | 10-audit-fix | Fixes after the audit after 6–10e (C2–C7) | R12 | Done | | 3M | 0 | Claude 7.1M (two agents 3.6M and 1.8M, the first handed over; review 1.7M), Opus 5.5 medium; tests `npm test` 79 of 79; code review Opus 5.5 medium (two parts), 3 findings, all fixed with tests: the test bed did not copy install.js; the arrival-timing check skipped the field descriptions; the C5 test could not fail on a second copy of the tool's name |
 | C1-fix | Genre makes fitting names likelier, never leaves names out | R4, R11, R12 | Done | | 2.2M | 0.05M | Claude 3.9M (agent 3.56M, review 0.38M), Opus 5.5 medium, nano-gpt 0.056M input (live run, 6 asks; the horror ask passed genre horror and got Pauline Cox, an ordinary name, said as "Mrs Cox", so the check that the first name reaches the reply failed, 12 of 13); tests `npm test` 83 of 83; code review Opus 5.5 medium, 1 finding, fixed with a test: lean-measure's sweep fed the new genre chance and the pick from one value |
-| 11a | Genre tags from the eras the names already carry | R11, R12 | To do | High | 3M | 0 | |
-| 11b | Genre tags for fantasy: a read of which names were borne in the middle ages | R11, R12 | To do | High | 12M | 0.6M | |
+| 11a | Genre tags from the eras the names already carry | R11, R12 | To do | Low | 3M | 0 | Optional, later (the owner, 2026-11-20: "mark this parts as optional/maybe later. we will not implement those now.") |
+| 11b | Genre tags for fantasy: a read of which names were borne in the middle ages | R11, R12 | To do | Low | 12M | 0.6M | Optional, later (as 11a) |
 | | Total | | | | 99.5M | 6.36M | |
 
 Each milestone ends with `npm test` passing and the extension working on the test bed.
@@ -54,13 +54,13 @@ Each milestone ends with `npm test` passing and the extension working on the tes
 - Thin after 10b2: Hawaiian first names (3) and surnames (8), tried Wikidata names of Native Hawaiians and names in Hawaiian.
 - Thin after 10b2: Latin women's first names (0) and surnames (0), tried Wikidata names of citizens of Ancient Rome, the Roman Republic and Empire, in their Latin forms.
 - Thin genres, measured after C1 by tools/name-reach.mjs (adult names carrying the genre, median per culture, cultures under 10 of 49): fantasy 0, 46; steampunk 0, 48; western 0, 48; cyberpunk 0, 49; horror 0, 49; postApocalyptic 0, 49. Genre no longer leaves names out, so a thin genre now only makes fitting names rarer; tried the three readers' placement of names with no sign of real use (85 placed fantasy); no public list holds fantasy names per culture.
-- Genre tags (the owner, 2026-11-20: "yes, add the genre tags to the plan"): which names fit which genre is his. Claude's proposal: steampunk and western take the names in use in the Victorian era (data has it: 44 of 98 adult first-name lists would hold 20 or more, median 16); horror the Victorian and 1920s names; cyberpunk and postApocalyptic today's names, which they already get, so nothing changes; fantasy needs 11b, a new read by the readers of names borne in the middle ages (ancient today: median 0, 5 of 98 lists hold 20 or more). Estimates are Claude's, from C1-fix (11a) and 10c (11b).
 - Thin after 10-fix: Thai children's names, 4 reach "child today" (198 Thai first names), tried Wikidata given names of Thai people, whose periods the readers read; no public list of Thai newborn names was found.
 - Thin after 10-fix: Latin names today, as Latin is a people of antiquity: adult today 2, young, child, elder, midcentury and common 0; of its 138 human first names 135 are tagged ancient and 137 rare, as 10c read the older ones; tried Wikidata names of citizens of Ancient Rome.
 - Thin after 10b2: Swahili surnames (0), tried Wikidata family names of people of Tanzania and Kenya and names in Swahili; the readers place them in Kenyan peoples (Odhiambo, Mwangi), not Swahili.
 
 ## Decisions
 
+- Genre tags, 11a and 11b (the owner, 2026-11-20: "I agree."): steampunk and western take the Victorian names; horror the Victorian and 1920s names; cyberpunk and postApocalyptic today's names (no change); fantasy the names borne in the middle ages, from a new read by the readers (11b). Estimates are Claude's, from C1-fix (11a) and 10c (11b).
 - The names from name-dataset, built from the Facebook leak, stay; the licence file says where it comes from. The owner: "keep, it is just general names, there is no conflict in using them".
 - Nothing is pushed before milestone 8's word from the owner: extension users update from the repo's main branch.
 - No new filter: `race: human` does it, with one new value. Filters stay the remote LLM's; if it passes none, a god can still come back.
