@@ -1,5 +1,5 @@
 // Milestone 10's reading of list entries: the readers' blind open question, their answers parsed,
-// the rule that turns three readers' answers into names, the spellings a culture holds across both
+// the rule that turns three readers' answers into names, the spelling keys a culture's list holds (heldBy) and across both
 // sexes' lists, and the merge of a name new in both sexes' lists into one ambiguous entry. A list entry is a string, not yet a
 // name (Md, Mohd, Abdul and four spellings of Muhammad stand in Saudi Arabia's top 20): readers say
 // which peoples give it, what kind of string it is, and which entry above it is the same name.
