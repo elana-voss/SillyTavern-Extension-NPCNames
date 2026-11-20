@@ -35,7 +35,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 10b | Common surnames | R2, R3, R11, R12 | Done | | 14M | 0.40M | Claude 12.7M (three agents 4.0M, 3.96M, 4.18M; review 0.52M), nano-gpt 0.24M; code review Fable 5.2 medium |
 | 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Done | | 12M | 0.28M | Claude 26.8M (one agent 26.3M, 362 turns; review 0.50M), nano-gpt 0.29M; code review Fable 5.2 medium |
 | 10c | True tags and placement | R4, R11, R12 | Done | | 9.5M | 0.62M | Claude 14.3M (four agents, three handed over; review and the re-ask of 46 answers included), nano-gpt 0.57M; code review Fable 5.2 medium |
-| 10-fix | Fixes after the milestone review of 10 (7 findings) | R2, R4, R11, R12 | In progress | High | 5M | 0 | |
+| 10-fix | Fixes after the milestone review of 10 (7 findings) | R2, R4, R11, R12 | Done | | 5M | 0 | Claude (five agents; the main session adds the total), nano-gpt 0.37M (the read of the new surname forms' periods; about 0.12M was estimated before the re-asks of one-line-for-all answers); tests `node test.js` 67 of 67; code review Opus 5.5 medium, no finding (one speed note, applied) |
 | 10d | The pick leans to common names, if Fable so decides after 10c | R4, R11, R12 | Planned | High | 3M | 0.05M | |
 | | Total | | | | 84.5M | 5.76M | |
 
@@ -265,7 +265,7 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: the fixes after the review of milestone 10, then 10d (Fable: build).
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: 10d (Fable: build).
 - Thin after 10b2, no honest source for more: Mayan first names (0) and surnames (1), tried Wikidata given and family names of people of Maya ethnic groups and names in Mayan languages.
 - Thin after 10b2: Native American first names (0), tried Wikidata given names of people of Native American ethnic groups.
 - Thin after 10b2: Hawaiian first names (3) and surnames (8), tried Wikidata names of Native Hawaiians and names in Hawaiian.

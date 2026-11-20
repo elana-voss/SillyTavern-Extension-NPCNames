@@ -52,7 +52,8 @@ for (const j of jobs) j.entries = rankedEntries(nd, j.culture, KIND, j.sex ?? nu
 const base = llm.spent();
 await readJobs(llm, jobs, KIND, BUDGET);
 
-const heldOf = c => new Set(db[`${KIND}_names`].filter(e => e.language_ethnicity === c).map(e => norm(e.name)));
+const heldSets = new Map(); // one set per culture, built once: decide asks per key
+const heldOf = c => heldSets.get(c) ?? heldSets.set(c, new Set(db[`${KIND}_names`].filter(e => e.language_ethnicity === c).map(e => norm(e.name)))).get(c);
 const r = KIND === 'first' ? newFirstNames(jobs, heldOf, overused, TOP) : newSurnames(jobs, heldOf, overused, TOP);
 writeFileSync(new URL('summary.txt', OUT), r.summary.join('\n') + '\n');
 writeFileSync(new URL('rejected.txt', OUT), `culture\t${KIND === 'first' ? 'sex\t' : ''}rank\tentry\treaders peoples:kind\n` + r.rejected.join('\n') + '\n');
