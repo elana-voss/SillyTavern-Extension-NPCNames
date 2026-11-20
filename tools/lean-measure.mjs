@@ -4,7 +4,8 @@
 // Run: node tools/lean-measure.mjs
 // Writes the per-list table to logs/work/lean-measure.txt; prints a summary of about ten lines.
 // Picks go through picker.js `pickName` itself. The first-pick share is an even sweep of the random
-// draw (exact up to rounding); the chat shares are the mean of CHATS random chats, each keeping its used list.
+// draws (exact up to rounding): the genre's chance, drawn first, takes GENRE_STEPS even values, and
+// each meets an even sweep of the pick's draw; the chat shares are the mean of CHATS random chats, each keeping its used list.
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { pickName } from '../picker.js';
 import { loadDb } from './db.mjs';
@@ -13,6 +14,7 @@ const ADULT_TODAY = { race: 'human', age: 'adult', era: ['modern', 'contemporary
 const CHAT_LISTS = [['hawaiian', 'female'], ['thai', 'male'], ['english', 'female']];
 const WINDOWS = [10, 30, 100];
 const SWEEP = 2000;
+const GENRE_STEPS = 20; // the picker's GENRE_FULL: a chance T/20 is met exactly
 const CHATS = 300;
 
 const db = loadDb();
@@ -25,8 +27,10 @@ function firstPickShare(culture, gender) {
     const names = namesOf(culture);
     let common = 0;
     for (let k = 0; k < SWEEP; k++) {
-        const pick = pickName(names, surname, filtersOf(culture, gender), new Set(), new Set(), max => Math.floor(k / SWEEP * max));
-        if (pick.relaxed_filters?.some(f => f !== 'genre')) return null; // no name matches every filter
+        let call = 0;
+        const rng = max => Math.floor((call++ === 0 ? (k % GENRE_STEPS + 0.5) / GENRE_STEPS : k / SWEEP) * max);
+        const pick = pickName(names, surname, filtersOf(culture, gender), new Set(), new Set(), rng);
+        if (pick.relaxed_filters) return null; // no name matches every filter
         if (pick.commonness === 'common') common++;
     }
     return common / SWEEP;

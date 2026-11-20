@@ -121,6 +121,12 @@ test('C1: T unused names carrying the genre take a pick with chance T/20, at 20 
     assert.equal(left.first_name, 'P0', 'one unused horror name: chance 0.05');
 });
 
+test('C1: with a genre the first draw is always its chance, so a sweep can feed it apart (tools/lean-measure.mjs)', () => {
+    const plain = Array.from({ length: 5 }, (_, i) => makeEntry({ name: `P${i}`, genre: ['sliceOfLife'] }));
+    const pick = pickName(plain, [makeSurname()], { genre: 'horror' }, new Set(), new Set(), scripted(0.999, 0));
+    assert.equal(pick.first_name, 'P0');
+});
+
 test('relaxing keeps every filter that was not part of the conflict', () => {
     const firsts = [
         makeEntry({ name: 'Hana', gender: 'female', language_ethnicity: 'japanese', commonness: 'rare' }),

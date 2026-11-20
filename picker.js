@@ -27,7 +27,8 @@ export function filterFirstNames(pool, f) {
     return pool.filter(e => DROP_ORDER.every(field => !f[field] || matches(e[field], f[field])));
 }
 
-// T unused names carrying the genre take a pick with chance min(1, T / GENRE_FULL).
+// T unused names carrying the genre take a pick with chance min(1, T / GENRE_FULL). The chance is
+// drawn first, even when T is 0, so a sweep can feed it apart from the pick (tools/lean-measure.mjs).
 const GENRE_FULL = 20;
 
 // The same name in two cultures counts as two names.
@@ -62,10 +63,9 @@ export function pickAndMarkUsed(candidates, usedSet, rng = secureRandom, lean = 
         unused = candidates;
     }
     if (genre) {
+        const chance = rng(2 ** 32) / 2 ** 32;
         const fitting = unused.filter(e => matches(e.genre, genre));
-        if (fitting.length > 0 && rng(2 ** 32) / 2 ** 32 < fitting.length / GENRE_FULL) {
-            unused = fitting;
-        }
+        if (chance < fitting.length / GENRE_FULL) unused = fitting;
     }
     const pick = lean ? leanPick(unused, rng) : unused[rng(unused.length)];
     usedSet.add(usedKey(pick));
