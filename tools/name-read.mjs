@@ -300,6 +300,12 @@ export const PATRONYMIC = new Set(['ethiopian', 'nigerian']);
 const sourceOf = e => e.source ?? `name-dataset ${e.country}`;
 const isOverused = (keys, name, overused) => keys.some(k => overused.has(k)) || overused.has(norm(name));
 
+/** The `heldOf` of newFirstNames and newSurnames over `entries` (one sex's database list): a culture's spelling keys, built once per culture. */
+export function heldBy(entries) {
+    const sets = new Map();
+    return c => sets.get(c) ?? sets.set(c, new Set(entries.filter(e => e.language_ethnicity === c).map(e => norm(e.name)))).get(c);
+}
+
 /**
  * Read first-name lists ({culture, sex, entries, answers}, entries in rank order) to the new names among each
  * list's `top` names, `heldOf(culture)` giving the spelling keys held. A name new in both sexes' lists enters

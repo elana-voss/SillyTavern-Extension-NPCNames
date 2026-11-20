@@ -12,7 +12,7 @@ import { addNames, keepEntered, parseLines } from '../tools/db.mjs';
 import { labelLines, nameOfLabel, nameQueries, parseCsv, rankRows, wikidata } from '../tools/wikidata.mjs';
 import { client } from '../tools/nanogpt.mjs';
 import { ancientTags, applyTags, commonnessFor, decideNew, decideTags, isBlanket, listRanks, parseTagAnswers, tagsFor } from '../tools/name-tags.mjs';
-import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, newFirstNames, newSurnames, parseAnswers, readJobs } from '../tools/name-read.mjs';
+import { bothSexes, decide, firstNameTags, heldBy, knownKeys, lastNameTags, mergeSexes, newFirstNames, newSurnames, parseAnswers, readJobs } from '../tools/name-read.mjs';
 import { ROOT } from './helpers.js';
 
 test('overused check folds case and accents, and no name of the new batch is on the list', () => {
@@ -446,4 +446,12 @@ test('audit fix C4: the nano-gpt address is named only in the client, tools/nano
     const naming = [...code('./'), ...code('./tools/'), ...code('./test/')]
         .filter(f => f !== './test/tools.test.js' && readFileSync(new URL(f, ROOT), 'utf8').includes('nano-gpt.com'));
     assert.deepEqual(naming, ['./tools/nanogpt.mjs']);
+});
+
+test('audit fix C7: heldBy gives the spelling keys of a culture, built once per culture', () => {
+    const entries = [{ name: 'Élise', language_ethnicity: 'french' }, { name: 'Anna', language_ethnicity: 'german' }];
+    const heldOf = heldBy(entries);
+    assert.deepEqual([...heldOf('french')], [norm('Elise')]);
+    assert.equal(heldOf('french'), heldOf('french'));
+    assert.equal(heldOf('welsh').size, 0);
 });

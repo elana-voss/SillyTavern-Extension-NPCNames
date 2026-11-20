@@ -54,8 +54,9 @@ for (const culture of cultures) for (const gender of ['male', 'female']) rows.pu
 const held = rows.filter(r => r.share !== null);
 const lines = held.map(r => `${r.culture.padEnd(16)} ${r.gender.padEnd(6)} ${pct(r.share).padStart(4)}`);
 const chats = CHAT_LISTS.map(([c, g]) => `${c} ${g}: common names over picks 1-${WINDOWS.join(', 1-')}: ${chatShares(c, g).map(pct).join(', ')}`);
-mkdirSync('logs/work', { recursive: true });
-writeFileSync('logs/work/lean-measure.txt', ['culture sex share of common names at the first pick ("adult today")', ...lines, '', ...chats, ''].join('\n'));
+const WORK = new URL('../logs/work/', import.meta.url);
+mkdirSync(WORK, { recursive: true });
+writeFileSync(new URL('lean-measure.txt', WORK), ['culture sex share of common names at the first pick ("adult today")', ...lines, '', ...chats, ''].join('\n'));
 
 const sorted = held.map(r => r.share).sort((a, b) => a - b);
 const near = held.filter(r => Math.abs(r.share - 0.7) <= 0.015);

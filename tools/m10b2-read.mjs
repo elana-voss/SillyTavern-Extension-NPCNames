@@ -15,9 +15,8 @@
 import { writeFileSync } from 'node:fs';
 import { arg, flag } from './cli.mjs';
 import { keepEntered, loadDb, readLines } from './db.mjs';
-import { norm } from './name-lists.mjs';
 import { client } from './nanogpt.mjs';
-import { GENDERED, namesFileText, newFirstNames, newSurnames, readJobs } from './name-read.mjs';
+import { GENDERED, heldBy, namesFileText, newFirstNames, newSurnames, readJobs } from './name-read.mjs';
 import { ancientTags } from './name-tags.mjs';
 import { loadOverused } from './overused.mjs';
 import { labelLines, nameQueries, rankRows, wikidata } from './wikidata.mjs';
@@ -90,8 +89,7 @@ const BUDGET = Number(arg('budget', 280000));
     }
     // The data 10b2's read found (10a and 10b applied), so a rerun gives the same lists.
     const db = loadDb('7c3cb98');
-    const heldOf = field => { const sets = new Map(); return c => sets.get(c) ?? sets.set(c, new Set(db[field]
-        .filter(e => e.language_ethnicity === c).map(e => norm(e.name)))).get(c); };
+    const heldOf = field => heldBy(db[field]);
     const overused = loadOverused();
     const llm = client(new URL('answers/', OUT));
     const jobs = kind => lists.filter(l => l.kind === kind && l.entries.length)
