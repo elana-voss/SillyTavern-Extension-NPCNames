@@ -4,12 +4,14 @@
 // Run: node tools/name-reach.mjs
 // Writes the per-culture table to logs/work/name-reach.txt; prints a summary of about ten lines.
 // Matching is by spelling with accents removed (tools/name-lists.mjs `norm`), so a name held in
-// another script than its list counts as missing.
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+// another script than its list counts as missing. Every people (COUNTRIES; not the cyberpunk handles) is measured; one with no
+// list has '-' in the list columns and is left out of their medians.
+import { mkdirSync, writeFileSync } from 'node:fs';
 import { filterFirstNames } from '../picker.js';
 import { COUNTRIES, countriesOf, loadLists, norm, rankedEntries } from './name-lists.mjs';
+import { loadDb } from './db.mjs';
 
-const db = JSON.parse(readFileSync(new URL('../data/name_database.tagged.json', import.meta.url), 'utf8'));
+const db = loadDb();
 const nd = loadLists();
 const F = db.first_names, L = db.last_names;
 const human = F.filter(e => e.race === 'human');
@@ -31,19 +33,19 @@ const keys = list => new Set(list.map(e => norm(e.name)));
 
 const rows = [];
 for (const c of Object.keys(COUNTRIES)) {
-    if (!countriesOf(nd, c).length) continue;
     const fh = human.filter(e => e.language_ethnicity === c), ls = L.filter(e => e.language_ethnicity === c);
-    const row = { c, countries: countriesOf(nd, c).join('+'), first: fh.length, last: ls.length };
-    row.f100 = hits(rankedEntries(nd, c, 'first'), keys(fh), 100);
-    row.l100 = hits(rankedEntries(nd, c, 'last'), keys(ls), 100);
-    row.m50 = hits(rankedEntries(nd, c, 'first', 'male'), keys(fh.filter(e => e.gender !== 'female')), 50);
-    row.w50 = hits(rankedEntries(nd, c, 'first', 'female'), keys(fh.filter(e => e.gender !== 'male')), 50);
+    const row = { c, countries: countriesOf(nd, c).join('+') || '-', first: fh.length, last: ls.length };
+    rows.push(row);
     for (const [t, f] of Object.entries(REQUESTS)) {
         const filters = { race: ['human'], language_ethnicity: [c] };
         for (const [k, v] of Object.entries(f)) filters[k] = [].concat(v);
         row[t] = filterFirstNames(F, filters).length;
     }
-    rows.push(row);
+    if (row.countries === '-') { Object.assign(row, { f100: '-', l100: '-', m50: '-', w50: '-' }); continue; }
+    row.f100 = hits(rankedEntries(nd, c, 'first'), keys(fh), 100);
+    row.l100 = hits(rankedEntries(nd, c, 'last'), keys(ls), 100);
+    row.m50 = hits(rankedEntries(nd, c, 'first', 'male'), keys(fh.filter(e => e.gender !== 'female')), 50);
+    row.w50 = hits(rankedEntries(nd, c, 'first', 'female'), keys(fh.filter(e => e.gender !== 'male')), 50);
 }
 
 const cols = ['c', 'countries', 'first', 'last', 'f100', 'l100', 'm50', 'w50', ...Object.keys(REQUESTS)];
@@ -53,8 +55,8 @@ mkdirSync(new URL('.', out), { recursive: true });
 writeFileSync(out, '# f100/l100: of the top 100 first names/surnames held; m50/w50: of the top 50 a sex held\n' + table);
 
 const share = (k, v) => `${v} ${Math.round(100 * human.filter(e => [].concat(e[k]).includes(v)).length / human.length)}%`;
-const pick = k => rows.map(r => r[k]);
-console.log(`first names ${F.length} (human ${human.length}), surnames ${L.length}; cultures with a list ${rows.length}`);
+const pick = k => rows.map(r => r[k]).filter(v => v !== '-');
+console.log(`first names ${F.length} (human ${human.length}), surnames ${L.length}; cultures ${rows.length}, with a list ${pick('f100').length}`);
 console.log(`median of the top 100 held: first ${med(pick('f100'))}, surnames ${med(pick('l100'))}; of the top 50 a sex: men ${med(pick('m50'))}, women ${med(pick('w50'))}`);
 console.log('reach per culture, median and cultures under 10: ' + Object.keys(REQUESTS)
     .map(t => `${t} ${med(pick(t))}, ${pick(t).filter(x => x < 10).length}`).join('; '));
