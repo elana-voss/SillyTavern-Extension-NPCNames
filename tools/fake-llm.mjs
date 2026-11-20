@@ -1,6 +1,7 @@
 // A fake AI for the test bed: speaks the OpenAI, Claude and Gemini wire formats,
 // records every request and answers with a call to the extension's tool, then
-// with a closing text once the tool's result comes back. Costs no provider tokens.
+// with a closing text once the tool's result comes back. Costs no provider tokens, unless a
+// live run gives it a provider to forward OpenAI requests to (startFakeLlm's `forward`).
 import { createServer } from 'node:http';
 
 export const TOOL = 'suggest_npc_name';
@@ -97,7 +98,35 @@ function readBody(req) {
 }
 
 // Starts the server. `requests` holds every POST received, newest last.
-export async function startFakeLlm(port = 0) {
+// A live run: the request goes to the provider, its model set; the key is added here, so it never
+// reaches SillyTavern's files. The answer is recorded beside the request; a refusal is logged.
+async function forwardOpenAi(body, res, forward, entry) {
+    let r;
+    try {
+        r = await fetch(forward.url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${forward.key}` },
+            body: JSON.stringify({ ...body, model: forward.model, stream: false }),
+        });
+    } catch (e) {
+        console.error(`live: the provider is unreachable, ${e.message}`);
+        entry.response = e.message;
+        res.writeHead(502);
+        return res.end(e.message);
+    }
+    const text = await r.text();
+    if (!r.ok) console.error(`live: the provider refused, ${r.status} ${text.slice(0, 300)}`);
+    try {
+        entry.response = JSON.parse(text);
+    } catch {
+        entry.response = text;
+    }
+    res.writeHead(r.status, { 'Content-Type': 'application/json' });
+    res.end(text);
+}
+
+/** `forward` ({ url, key, model }) sends OpenAI requests to a real provider instead of faking them. */
+export async function startFakeLlm(port = 0, forward = null) {
     const requests = [];
     const server = createServer(async (req, res) => {
         const path = req.url.split('?')[0];
@@ -109,8 +138,9 @@ export async function startFakeLlm(port = 0) {
             return res.end();
         }
         const body = JSON.parse(await readBody(req));
-        requests.push({ path, body });
-        if (path.endsWith('/chat/completions')) return openAi(body, res);
+        const entry = { path, body };
+        requests.push(entry);
+        if (path.endsWith('/chat/completions')) return forward ? forwardOpenAi(body, res, forward, entry) : openAi(body, res);
         if (path.endsWith('/messages')) return claude(body, res);
         if (path.endsWith(':generateContent')) return gemini(body, res);
         res.writeHead(404);

@@ -8,6 +8,8 @@
 //   (in browser) npm i playwright; PLAYWRIGHT_BROWSERS_PATH=ms npx playwright install chromium-headless-shell
 //
 // Run: node tools/testbed.mjs [scenario ...]
+// Live run (a provider is called, only when named): NANOGPT_API_KEY=... node tools/testbed.mjs live
+// sends LIVE_ASKS to LIVE_MODEL through nano-gpt; the fake forwards, so the key stays out of SillyTavern.
 // Writes every check and each recorded request to <root>/results.json and prints a summary.
 import { spawn } from 'node:child_process';
 import { cpSync, existsSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
@@ -241,7 +243,57 @@ function checkToolTurn(requests, chat, label) {
         !chat.some(m => m.mes.includes(AD_START) || m.name === 'NPC Name Suggester'));
 }
 
+const LIVE_MODEL = 'z-ai/glm-5.3-flash';
+const LIVE_URL = 'https://nano-gpt.com/api/v1/chat/completions';
+// Several cultures and kinds of story, each a new chat with the test bed's card.
+const LIVE_ASKS = [
+    '(OOC: the story moves to a café in present-day London, a quiet romance.) The English barista, a woman in her thirties, tells me her name as she hands me my coffee.',
+    '(OOC: the story moves to present-day Bangkok, a crime story.) The Thai police detective, a man of forty, shows his badge and says his name.',
+    '(OOC: the story moves to a surf town on Oahu today, slice of life.) The Hawaiian woman who runs the board rental introduces herself.',
+    '(OOC: the story moves to an office in present-day Madrid, a workplace drama.) My new Spanish colleague, a man in his twenties, shakes my hand and gives his name.',
+    '(OOC: the story moves to present-day Lagos, a thriller.) The Nigerian taxi driver, a woman, tells me her name when I get in.',
+];
+
+// Sends a text through the page's send button and waits until the AI's reply settles.
+async function sendLive(page, text) {
+    await page.fill('#send_textarea', text);
+    await page.click('#send_but', { timeout: 10000 });
+    await page.waitForTimeout(2000);
+    for (let i = 0; i < 180; i++) {
+        const settled = await page.evaluate(async () => {
+            const { chat } = await import('/script.js');
+            const last = chat.at(-1);
+            return !document.getElementById('send_but')?.classList.contains('displayNone')
+                && !last?.is_user && !last?.extra?.tool_invocations;
+        });
+        if (settled) break;
+        await page.waitForTimeout(1000);
+    }
+}
+
 const SCENARIOS = {
+    async live({ page, fake }) {
+        await configure(page, fake.port, { custom_model: LIVE_MODEL });
+        recorded.live = [];
+        for (const ask of LIVE_ASKS) {
+            const before = fake.requests.length;
+            await newChat(page);
+            await sendLive(page, ask);
+            const chat = await chatState(page);
+            const invoked = chat.flatMap(m => m.tools ?? []).filter(t => t.name === TOOL);
+            const result = invoked.map(t => { try { return JSON.parse(t.result); } catch { return t.result; } });
+            const requests = fake.requests.slice(before);
+            const reply = chat.at(-1)?.mes ?? '';
+            recorded.live.push({
+                ask, args: invoked.map(t => t.parameters), result, reply,
+                input: requests.reduce((n, r) => n + (r.response?.usage?.prompt_tokens ?? 0), 0),
+                output: requests.reduce((n, r) => n + (r.response?.usage?.completion_tokens ?? 0), 0),
+            });
+            check(`live: the tool was called for "${ask.slice(0, 40)}"`, invoked.length > 0, reply.slice(0, 200));
+            const first = result[0]?.first_name;
+            check(`live: the returned name reached the reply for "${ask.slice(0, 40)}"`, first && reply.includes(first), `${first} | ${reply.slice(0, 200)}`);
+        }
+    },
     async openai({ page, fake }) {
         await configure(page, fake.port, {});
         await newChat(page);
@@ -503,9 +555,11 @@ const SCENARIOS = {
 
 async function main() {
     if (!existsSync(join(ROOT, 'st', 'server.js'))) throw new Error(`No SillyTavern under ${ROOT}: see this file's head`);
-    const names = process.argv.slice(2).length > 0 ? process.argv.slice(2) : Object.keys(SCENARIOS);
+    const names = process.argv.slice(2).length > 0 ? process.argv.slice(2) : Object.keys(SCENARIOS).filter(n => n !== 'live');
+    if (names.includes('live') && !process.env.NANOGPT_API_KEY) throw new Error('The live run needs NANOGPT_API_KEY');
     installExtension();
-    const fake = await startFakeLlm();
+    const fake = await startFakeLlm(0, names.includes('live')
+        ? { url: LIVE_URL, key: process.env.NANOGPT_API_KEY, model: LIVE_MODEL } : null);
     const st = await startSillyTavern();
     const browser = await chromium.launch({ headless: true });
     const { page, errors } = await openPage(browser);
