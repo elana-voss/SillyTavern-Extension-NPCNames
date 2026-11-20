@@ -37,7 +37,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 10c | True tags and placement | R4, R11, R12 | Done | | 9.5M | 0.62M | Claude 14.3M (four agents, three handed over; review and the re-ask of 46 answers included), nano-gpt 0.57M; code review Fable 5.2 medium |
 | 10-fix | Fixes after the milestone review of 10 (7 findings) | R2, R4, R11, R12 | Done | | 5M | 15.1M | Claude five agents and the code review, nano-gpt 0.37M (the read of the new surname forms' periods; about 0.12M was estimated before the re-asks of one-line-for-all answers); tests `node test.js` 67 of 67; code review Opus 5.5 medium, no finding (one speed note, applied) |
 | 10d | The pick leans to common names, one target in every language | R4, R11, R12 | Done | | 3M | 0.05M | Claude 6.1M (build 4.3M Opus 5.5 medium; test-bed fix 1.8M Sonnet 5.5 medium, the live run had saved 4096 output tokens into the test bed's settings), nano-gpt 0.083M input (two live runs, the first cut at 300 output tokens); tests `node test.js` 70 of 70; no code review due (about 50 lines of product code) |
-| 10e | The AI asks for a commonness only when the story calls for it | R4, R11, R12 | Planned | High | 3M | 0.1M | The owner, 2026-11-20: "yes, change the instructions." In all 5 live chats of 10d the AI passed `commonness: common`, so the lean to common names never acted. |
+| 10e | The AI asks for a commonness only when the story calls for it | R4, R11, R12 | Done | | 3M | 0.1M | nano-gpt 0.047M input (one live run); tests `node test.js` 71 of 71; test bed 104 of 104; no code review due (3 lines of product text). The owner, 2026-11-20: "yes, change the instructions." In all 5 live chats of 10d the AI passed `commonness: common`, so the lean to common names never acted. |
 | | Total | | | | 84.5M | 5.76M | |
 
 Each milestone ends with `node test.js` passing and the extension working on the test bed.
@@ -271,6 +271,13 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 - Input tokens: 45,768 (second run) and about 27,000 (first run, replies cut by SillyTavern's 300 output tokens; the live run now sets 4096), 0.083M against 0.05M.
 - Tests, failing then passing: "✗ 10d: common names come 7 picks in 10 in any list, …", "✗ 10d: the lean is set from the unused names, …", 5 passed, 2 failed (the commonness test passed already, it pins the existing even pick); then 70 of 70.
 
+#### 10e. The AI asks for a commonness only when the story calls for it
+
+- Built: the `commonness` field, the tool's description and the chat instructions (`assets/advertisement.txt`) say to pass a commonness only when the story calls for it (a name that must sound plain and everyday, or strikingly unusual), otherwise to leave it out; the instructions add that the tool leans to common names by itself. Nothing else the product does changed.
+- Live run (`node tools/testbed.mjs live`, `z-ai/glm-5.3-flash` through nano-gpt, the same five chats as 10d): the tool was called in all five, 11 of 11 checks; the AI passed a commonness in 0 of 5 chats (in 10d: `common` in 5 of 5). Names: Katelynn Harris (uncommon), ชลธี Udomchavee (uncommon), Nāmaka Kāne (rare), Danilo Alejandro Mosquera (uncommon), Dupe Soyinka (common). The AI passed `genre` in all five, so `preferTagged` served tagged names first and the lean acted only inside that subset (10d's note); 1 common name of 5 is one run, not a share.
+- nano-gpt: 46,547 input and 11,376 output tokens by the run's counters; weekly input 2,293,612 to 2,340,159, 0.047M against 0.1M.
+- Test, failing then passing: "✗ 10e: the AI passes a commonness only when the story calls for it", 70 passed, 1 failed; then 71 of 71.
+
 ## Questions for the owner
 
 - Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: milestone 10 is done; the next milestone is the owner's.
@@ -375,6 +382,7 @@ Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits i
 - Milestone 10-fix, Latin: 10b2's Latin first names take 10c's tags for a name borne only in antiquity (`ancientTags`: ancient, adult, rare), not today's.
 - Milestone 10-fix, new surname forms' periods (`decideNew`): the periods two readers agree on, with D always as for living people; a reader's one line for a whole part is set aside as in 10c; their place and commonness stay as their lists set them.
 - Milestone 10-fix, reproducible reads: 10a, 10b and 10b2 take "held" from the data at a pinned commit (`loadDb('007a5b5')`, `loadDb('7c3cb98')`), as 10c does; `tools/name-reach.mjs` measures the 49 peoples, not the cyberpunk handles, '-' where no list.
+- Milestone 10e, wording: the instructions name when to pass a commonness (plain and everyday, or strikingly unusual) and say to leave it out otherwise, in all three places the AI reads (the field, the tool's description, the chat instructions); the chat instructions also say the tool leans to common names by itself, so leaving it out does not read as losing control.
 
 ## Trials
 
