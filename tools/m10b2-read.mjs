@@ -18,6 +18,7 @@ import { loadDb } from './db.mjs';
 import { norm } from './name-lists.mjs';
 import { client } from './nanogpt.mjs';
 import { GENDERED, namesFileText, newFirstNames, newSurnames, readJobs } from './name-read.mjs';
+import { ancientTags } from './name-tags.mjs';
 import { loadOverused } from './overused.mjs';
 import { labelLines, nameQueries, rankRows, wikidata } from './wikidata.mjs';
 
@@ -111,7 +112,8 @@ const BUDGET = Number(arg('budget', 280000));
     const keep = x => own(x) && !NOT_NAMES.has(`${x.culture}/${x.name}`);
     const fl = labelLines(f.lines, 'first', heldOf('first_names'), overused, keep);
     const ll = labelLines(l.lines, 'last', heldOf('last_names'), overused, keep);
-    f.lines = fl.lines;
+    // Latin is a people of antiquity alone: its names take 10c's tags for a name borne only then (ancientTags), not today's.
+    f.lines = fl.lines.map(m => (m.culture === 'latin' ? { ...m, tags: ancientTags(m.tags) } : m));
     l.lines = ll.lines;
     writeFileSync(new URL('labels.txt', OUT), 'kind\tculture\tlabel\tname\twhy\n' + [...fl.dropped, ...ll.dropped].join('\n') + '\n');
     writeFileSync(new URL('summary.txt', OUT), [...f.summary, '', ...l.summary].join('\n') + '\n');

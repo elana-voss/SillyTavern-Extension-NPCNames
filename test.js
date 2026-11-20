@@ -12,7 +12,7 @@ import { foldName, loadOverused } from './tools/overused.mjs';
 import { addNames, parseLines } from './tools/db.mjs';
 import { labelLines, nameOfLabel, nameQueries, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
 import { client } from './tools/nanogpt.mjs';
-import { applyTags, commonnessFor, decideTags, isBlanket, listRanks, parseTagAnswers, tagsFor } from './tools/name-tags.mjs';
+import { ancientTags, applyTags, commonnessFor, decideTags, isBlanket, listRanks, parseTagAnswers, tagsFor } from './tools/name-tags.mjs';
 import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, newFirstNames, newSurnames, parseAnswers, readJobs } from './tools/name-read.mjs';
 
 let passed = 0;
@@ -834,6 +834,11 @@ test('10-fix: a new name of today\'s list takes the eras of its periods by 10c\'
     assert.deepEqual([first.age, first.era, first.genre], [rule.age, rule.era, rule.genre]);
     const last = lastNameTags({ periods: 'AC', allure: 'pleasant', theme: null });
     assert.deepEqual([last.era, last.genre], [['victorian', 'midcentury', 'contemporary'], ['sliceOfLife', 'noirDetective']]);
+});
+
+test('10-fix: a Latin name from today\'s lists is tagged as 10c tags Latin names, borne only in antiquity: adult, ancient, rare', () => {
+    const t = ancientTags(firstNameTags({ periods: 'BC', allure: 'pleasant', theme: 'regal' }));
+    assert.deepEqual([t.age, t.era, t.genre, t.commonness, t.themes], [['adult'], ['ancient'], [], 'rare', ['regal']]);
 });
 
 test('10c: one line given for every name of a list is no reading', () => {

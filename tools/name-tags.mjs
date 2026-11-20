@@ -108,6 +108,12 @@ export function tagsFor(entry, { used, periods, place }) {
     return out;
 }
 
+/**
+ * A new name's tags (firstNameTags) where its people is one of antiquity alone (Latin): as 10c tags a name borne only
+ * in antiquity (tagsFor, place ancient), adult and rare, as 10c's readers left the older Latin names.
+ */
+export const ancientTags = tags => ({ ...tags, ...tagsFor(tags, { used: false, periods: '', place: 'ancient' }), age: ['adult'], commonness: 'rare' });
+
 /** Rank at or under which a list's name is common; the lists hold 1,500 names a country. */
 export const COMMON_RANK = 300;
 const SCRIPTS = ['Latin', 'Cyrillic', 'Greek', 'Arabic', 'Hebrew', 'Han', 'Hangul', 'Hiragana', 'Katakana', 'Thai', 'Devanagari', 'Ethiopic',
