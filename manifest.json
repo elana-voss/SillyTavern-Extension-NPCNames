@@ -7,7 +7,7 @@
     "css": "style.css",
     "generate_interceptor": "NPCNamesInjectAdvertisement",
     "author": "Elana Voss",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "auto_update": true,
     "homePage": "https://github.com/elana-voss/SillyTavern-Extension-NPCNames"
 }
