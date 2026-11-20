@@ -9,27 +9,26 @@
 // Old wording: the instructions and tool description at commit 8e11ce9.
 //
 // Run: node tools/m9-name-timing.mjs [--models a,b] [--scenes a,b] [--wordings old,new] [--runs 2] [--spend 600000]
-// Key: env NANOGPT_API_KEY. Every answer is stored under logs/work/m9/cache, so a rerun costs nothing.
+// Key: env NANOGPT_API_KEY. Requests go through the data tools' client (nanogpt.mjs): every answer is stored
+// under logs/work/m9/cache, so a rerun costs nothing; its log is logs/work/m9/llm.log.
 // Writes logs/work/m9/results.json and excerpts.txt; prints a summary.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { TOOL_DESCRIPTION, buildToolParameters } from '../advertisement.js';
+import { readFileSync, writeFileSync } from 'node:fs';
+import { TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters } from '../advertisement.js';
 import { deriveEnumValues, pickName } from '../picker.js';
+import { arg } from './cli.mjs';
+import { client } from './nanogpt.mjs';
 
 const REPO = new URL('..', import.meta.url);
 const OUT = new URL('logs/work/m9/', REPO);
 const CACHE = new URL('cache/', OUT);
-const API = 'https://nano-gpt.com/api/v1/chat/completions';
 const OLD_COMMIT = '8e11ce9';
-const TOOL_NAME = 'suggest_npc_name';
 
-const args = Object.fromEntries(process.argv.slice(2).join(' ').split('--').filter(Boolean)
-    .map(a => a.trim().split(/\s+/)));
-const MODELS = (args.models ?? 'z-ai/glm-5.3-flash,deepseek/deepseek-v4.1-flash,mistralai/mistral-small-4-119b-2603').split(',');
-const WORDINGS = (args.wordings ?? 'old,new').split(',');
-const RUNS = Number(args.runs ?? 2);
-const SPEND = Number(args.spend ?? 600000);
+const MODELS = arg('models', 'z-ai/glm-5.3-flash,deepseek/deepseek-v4.1-flash,mistralai/mistral-small-4-119b-2603').split(',');
+const WORDINGS = arg('wordings', 'old,new').split(',');
+const RUNS = Number(arg('runs', 2));
+const SPEND = Number(arg('spend', 600000));
 
 const git = path => execFileSync('git', ['show', `${OLD_COMMIT}:${path}`], { cwd: REPO, encoding: 'utf8' });
 const oldDescription = git('index.js').match(/description:\s*'((?:[^'\\]|\\.)*)'/)[1].replaceAll('\\\'', '\'');
@@ -75,7 +74,7 @@ const SCENES = {
         turn2: 'I step forward and offer a hand. "Welcome aboard. I\'m Rhee. What do we call you?"',
     },
 };
-const SCENE_NAMES = (args.scenes ?? Object.keys(SCENES).join(',')).split(',');
+const SCENE_NAMES = arg('scenes', Object.keys(SCENES).join(',')).split(',');
 
 // mulberry32: the picks repeat on a rerun, so the stored answers are found again.
 function seeded(text) {
@@ -88,29 +87,12 @@ function seeded(text) {
     };
 }
 
-let spent = 0;
+// The stored answers keep their names: the key is { body, run }, its hash cut to 24 characters.
+const llm = client(CACHE, { name: h => h.slice(0, 24) });
 async function complete(body, run) {
-    const key = createHash('sha256').update(JSON.stringify({ body, run })).digest('hex').slice(0, 24);
-    const file = new URL(`${key}.json`, CACHE);
-    if (existsSync(file)) return JSON.parse(readFileSync(file, 'utf8'));
-    if (spent > SPEND) throw new Error(`spend limit ${SPEND} reached`);
-    for (let attempt = 1; ; attempt++) {
-        const res = await fetch(API, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.NANOGPT_API_KEY}` },
-            body: JSON.stringify(body),
-        });
-        const text = await res.text();
-        if (res.ok) {
-            const json = JSON.parse(text);
-            spent += json.usage?.prompt_tokens ?? 0;
-            writeFileSync(file, JSON.stringify(json));
-            return json;
-        }
-        console.error(`${body.model}: HTTP ${res.status} ${text.slice(0, 200)}`);
-        if (attempt >= 3 || res.status < 500 && res.status !== 429) throw new Error(`HTTP ${res.status}`);
-        await new Promise(r => setTimeout(r, 5000 * attempt));
-    }
+    const json = await llm.send(body, { key: { body, run }, tag: `run ${run}`, allow: () => llm.stats.input <= SPEND });
+    if (!json) throw new Error(llm.stats.input > SPEND ? `spend limit ${SPEND} reached` : 'no answer after five tries');
+    return json;
 }
 
 // One user turn as SillyTavern runs it: instructions before the latest message, tool calls answered
@@ -194,7 +176,6 @@ async function runChat(model, scene, words, run) {
     };
 }
 
-mkdirSync(CACHE, { recursive: true });
 const results = [];
 // One model's chats run in sequence; the models run side by side, three requests at a time.
 await Promise.all(MODELS.map(async model => {
@@ -215,7 +196,7 @@ const excerpts = results.filter(r => !r.error).map(r => [
 writeFileSync(new URL('excerpts.txt', OUT), excerpts.join('\n'));
 
 const errors = results.filter(r => r.error).length;
-console.log(`chats ${results.length}, failed ${errors}, input tokens this run ${spent}, all chats ${results.reduce((s, r) => s + (r.input ?? 0), 0)}`);
+console.log(`chats ${results.length}, failed ${errors}, input tokens this run ${llm.stats.input}, all chats ${results.reduce((s, r) => s + (r.input ?? 0), 0)}`);
 for (const model of MODELS) for (const words of WORDINGS) {
     const rows = results.filter(r => r.model === model && r.words === words && !r.error);
     const count = f => rows.filter(f).length;

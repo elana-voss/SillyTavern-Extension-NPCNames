@@ -440,3 +440,10 @@ test('10c: a moved name takes its new people\'s commonness and surname gender; a
     assert.deepEqual(kept.map(e => [e.name, e.language_ethnicity, e.commonness, e.gender ?? '-']),
         [['Chia', 'chinese', 'common', '-'], ['Barlas', 'turkish', 'uncommon', '-'], ['Kaya', 'turkish', 'uncommon', '-'], ['Lee', 'english', 'uncommon', '-']]);
 });
+
+test('audit fix C4: the nano-gpt address is named only in the client, tools/nanogpt.mjs', () => {
+    const code = dir => readdirSync(new URL(dir, ROOT)).filter(f => /\.m?js$/.test(f)).map(f => dir + f);
+    const naming = [...code('./'), ...code('./tools/'), ...code('./test/')]
+        .filter(f => f !== './test/tools.test.js' && readFileSync(new URL(f, ROOT), 'utf8').includes('nano-gpt.com'));
+    assert.deepEqual(naming, ['./tools/nanogpt.mjs']);
+});

@@ -19,6 +19,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { TOOL_NAME as TOOL } from '../advertisement.js';
 import { FINAL_TEXT, startFakeLlm } from './fake-llm.mjs';
+import { API } from './nanogpt.mjs';
 
 const ROOT = process.env.NPCNAMES_TESTBED ?? join(tmpdir(), 'SillyTavern-Extension-NPCNames');
 const REPO = dirname(dirname(fileURLToPath(import.meta.url)));
@@ -246,7 +247,6 @@ function checkToolTurn(requests, chat, label) {
 }
 
 const LIVE_MODEL = 'z-ai/glm-5.3-flash';
-const LIVE_URL = 'https://nano-gpt.com/api/v1/chat/completions';
 // Several cultures and kinds of story, each a new chat with the test bed's card.
 const LIVE_ASKS = [
     '(OOC: the story moves to a café in present-day London, a quiet romance.) The English barista, a woman in her thirties, tells me her name as she hands me my coffee.',
@@ -563,7 +563,7 @@ async function main() {
     if (names.includes('live') && !process.env.NANOGPT_API_KEY) throw new Error('The live run needs NANOGPT_API_KEY');
     installExtension();
     const fake = await startFakeLlm(0, names.includes('live')
-        ? { url: LIVE_URL, key: process.env.NANOGPT_API_KEY, model: LIVE_MODEL } : null);
+        ? { url: API, key: process.env.NANOGPT_API_KEY, model: LIVE_MODEL } : null);
     const st = await startSillyTavern();
     const browser = await chromium.launch({ headless: true });
     const { page, errors } = await openPage(browser);
