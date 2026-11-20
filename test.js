@@ -820,6 +820,12 @@ test('10-fix: a first name\'s rank is its place among its sex\'s names, so a wom
     assert.equal(commonnessFor({ name: 'Nura', language_ethnicity: 'arabic', commonness: 'rare' }, last, null), 'uncommon', 'a surname keeps its list rank');
 });
 
+test('10-fix: Irish Gaelic is not ranked by Ireland\'s list (English-speaking), so a Gaelic form it lacks keeps the readers\' commonness', () => {
+    const ie = listRanks({ first: { IE: [[1, 'John', 1, 0]] } }, 'first', ['irishGaelic', 'english']);
+    assert.deepEqual([ie.has('irishGaelic'), ie.has('english')], [false, true]);
+    assert.equal(commonnessFor({ name: 'Seán', language_ethnicity: 'irishGaelic', commonness: 'uncommon' }, ie, 'c'), 'common');
+});
+
 test('10c: a five-field tag line reads its periods and the first place it names; a people\'s other name reads as its key', () => {
     const a = parseTagAnswers('1 ABC - slavicOther u\n2 - ancient - r\n3 Mary Anne ABC - swedish u\n4 A - - r\n5 - bulgarian r\n6 - russian r');
     assert.deepEqual([1, 2, 3, 4, 5, 6].map(i => a.get(i)), [{ periods: 'ABC', place: 'slavicOther', common: 'u' }, { periods: '', place: 'ancient', common: 'r' },
