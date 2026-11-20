@@ -22,7 +22,7 @@ The response is a flat JSON object with snake_case keys. Weave `first_name` and 
 - `commonness` says whether the name is everyday (`common`), somewhat known (`uncommon`), or distinctive (`rare`).
 - `genre` and `themes` are zero-or-more arrays. Empty is normal when none of the values fits.
 - `mythology` is present only for names tagged to a pantheon.
-- `relaxed_filters` is present when the tool dropped some constraints because no name matched the full combination. The returned name still fits the remaining filters but not the relaxed ones; `genre` is also listed when the name carries no genre tag because no unused name carrying that genre was left. Mention the relaxation only if it changes how you describe the character.
+- `relaxed_filters` is present when the tool dropped some constraints because no name matched the full combination. The returned name still fits the remaining filters but not the relaxed ones. Mention the relaxation only if it changes how you describe the character.
 - The `last_name_*` keys, present whenever `last_name` is (`last_name_role`, `last_name_allure`, `last_name_commonness`, `last_name_genre`, `last_name_themes`) describe the surname separately. Surnames carry their own role coding (Blackwood reads villain) and allure (Featherstonehaugh reads sophisticated). They do not carry intelligence, age, or gender.
 
 A name will not come back from the same culture in this chat until every name fitting the request has been used. Call the tool once per character, before the reply in which their name first appears, not when they first appear. Do not call it for the player character, your own character, or anyone already named in the chat.
