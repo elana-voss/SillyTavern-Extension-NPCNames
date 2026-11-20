@@ -1,3 +1,5 @@
+// The name pick: filters (dropped in DROP_ORDER when nothing matches), the used list per chat, a
+// first name leaning to common names (leanPick), and a surname of the first name's culture.
 export const DROP_ORDER = [
     'themes',
     'allure',
