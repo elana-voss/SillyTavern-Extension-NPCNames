@@ -48,7 +48,8 @@ export function readUsed(stored, pool) {
     return used;
 }
 
-export function pickAndMarkUsed(candidates, usedSet, rng = secureRandom) {
+// With `lean`, the pick leans to common names (leanPick); without, every unused match is as likely.
+export function pickAndMarkUsed(candidates, usedSet, rng = secureRandom, lean = false) {
     // Empty used-set is the common first-pick case — skip the filter+copy.
     let unused = usedSet.size === 0
         ? candidates
@@ -57,9 +58,45 @@ export function pickAndMarkUsed(candidates, usedSet, rng = secureRandom) {
         for (const e of candidates) usedSet.delete(usedKey(e));
         unused = candidates;
     }
-    const pick = unused[rng(unused.length)];
+    const pick = lean ? leanPick(unused, rng) : unused[rng(unused.length)];
     usedSet.add(usedKey(pick));
     return pick;
+}
+
+// Common names come COMMON_TARGET of the picks in every language, whatever its list's sizes:
+// a common name weighs x*x, an uncommon one x, a rare one 1, with x set at each pick from the
+// unused matches. x is never under 1 (a less usual name is never likelier; a list already
+// mostly common stays an even pick) nor over MAX_LEAN. No name is left out, so this is no filter.
+const COMMON_TARGET = 0.7;
+const MAX_LEAN = 4;
+const CLASSES = ['common', 'uncommon', 'rare'];
+// A name with no class weighs as a rare one.
+function classOf(e) {
+    const i = CLASSES.indexOf(e.commonness);
+    return i === -1 ? 2 : i;
+}
+
+// The x at which common names make COMMON_TARGET of the weight: c*x*x / (c*x*x + u*x + r) = T.
+function leanFor([c, u, r]) {
+    if (c === 0) return MAX_LEAN;
+    if (u + r === 0) return 1;
+    const a = (1 - COMMON_TARGET) * c;
+    const x = (COMMON_TARGET * u + Math.sqrt((COMMON_TARGET * u) ** 2 + 4 * a * COMMON_TARGET * r)) / (2 * a);
+    return Math.min(MAX_LEAN, Math.max(1, x));
+}
+
+function leanPick(unused, rng) {
+    const sizes = [0, 0, 0];
+    for (const e of unused) sizes[classOf(e)]++;
+    const x = leanFor(sizes);
+    if (x === 1) return unused[rng(unused.length)];
+    const weight = [x * x, x, 1];
+    let ticket = rng(2 ** 32) / 2 ** 32 * (sizes[0] * weight[0] + sizes[1] * weight[1] + sizes[2]);
+    for (const e of unused) {
+        ticket -= weight[classOf(e)];
+        if (ticket < 0) return e;
+    }
+    return unused[unused.length - 1]; // rounding left the ticket at the very end
 }
 
 function secureRandom(max) {
@@ -78,7 +115,8 @@ export function pickName(firstNames, lastNames, filters, usedFirst, usedLast, rn
         throw new Error('No first-name candidates after full degradation');
     }
     if (current.genre) firstCandidates = preferTagged(firstCandidates, current.genre, usedFirst);
-    const firstPick = pickAndMarkUsed(firstCandidates, usedFirst, rng);
+    // A commonness the AI asked for decides alone: among the names it allows the pick stays even.
+    const firstPick = pickAndMarkUsed(firstCandidates, usedFirst, rng, !current.commonness);
     if (current.genre && !matches(firstPick.genre, current.genre)) relaxed.push('genre');
 
     // A god gets no surname. Nor does a culture without surnames (dragons, handles,

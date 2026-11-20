@@ -582,6 +582,36 @@ test('new names enter by kind with their fields, and a name held in its culture 
         [['last', 'vietnamese', 'Do', ...last.slice(3)]], new Set()), /already held/);
 });
 
+// 10d: first names of `common`, `uncommon` and `rare` sizes; the share of each class over evenly spread draws, each on a fresh used set unless one is given.
+const classList = sizes => Object.entries(sizes).flatMap(([commonness, n]) =>
+    Array.from({ length: n }, (_, i) => makeEntry({ name: `${commonness}${i}`, commonness })));
+function classShares(firsts, filters = {}, used = () => new Set(), draws = 2000) {
+    const count = { common: 0, uncommon: 0, rare: 0 };
+    for (let k = 0; k < draws; k++) {
+        const pick = pickName(firsts, [makeSurname()], filters, used(), new Set(), max => Math.floor(k / draws * max));
+        count[pick.commonness]++;
+    }
+    return Object.fromEntries(Object.entries(count).map(([c, n]) => [c, Math.round(100 * n / draws)]));
+}
+
+test('10d: common names come 7 picks in 10 in any list, a less usual name never likelier, a common one at most 4x an uncommon, 16x a rare one', () => {
+    assert.equal(classShares(classList({ common: 10, uncommon: 10, rare: 10 })).common, 70);
+    assert.equal(classShares(classList({ common: 10, uncommon: 5, rare: 20 })).common, 70);
+    assert.equal(classShares(classList({ common: 8, uncommon: 1, rare: 1 })).common, 80);
+    assert.equal(classShares(classList({ common: 1, rare: 20 })).common, Math.round(100 * 16 / 36));
+    assert.equal(classShares(classList({ common: 1, uncommon: 20 })).common, Math.round(100 * 4 / 24));
+});
+
+test('10d: the lean is set from the unused names, an uncommon one 4x a rare one once the common names are used', () => {
+    const firsts = classList({ common: 10, uncommon: 10, rare: 10 });
+    const commonUsed = () => new Set(firsts.filter(e => e.commonness === 'common').map(e => `english/${e.name}`));
+    assert.deepEqual(classShares(firsts, {}, commonUsed), { common: 0, uncommon: 80, rare: 20 });
+});
+
+test('10d: a commonness the AI passes keeps an even pick among the names it allows', () => {
+    assert.equal(classShares(classList({ common: 1, rare: 19 }), { commonness: ['common', 'rare'] }).common, 5);
+});
+
 // What must stay true of the data. An apply tool's asserts check its input, once, on the database as
 // it stood before: none of them looks at the database as it is now, so each pinned name stays here.
 const inCulture = (list, culture) => list.filter(e => e.language_ethnicity === culture);
