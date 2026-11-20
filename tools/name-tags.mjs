@@ -77,6 +77,16 @@ export function decideTags(answers) {
     return { used, periods: used ? periods : '', place, common };
 }
 
+/**
+ * The decision on a name milestone 10 added from today's lists (10-fix): used, as the list shows; the periods two
+ * readers agree on (decideTags) with D always, as firstNameTags and lastNameTags give a name of living people; its
+ * place and commonness stay as its list set them.
+ */
+export function decideNew(answers) {
+    const { periods } = decideTags(answers);
+    return { used: true, periods: Object.keys(PERIODS).filter(p => periods.includes(p) || p === 'D').join(''), place: null, common: null };
+}
+
 // The tags periods set, which 10c replaces; other eras (ancient, timeless, nearFuture) and genres stay.
 const PERIOD_ERAS = ['victorian', 'nineteenTwenties', 'midcentury', 'modern', 'contemporary'];
 const PERIOD_GENRES = ['sliceOfLife', 'noirDetective'];

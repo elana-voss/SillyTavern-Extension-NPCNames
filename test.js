@@ -12,7 +12,7 @@ import { foldName, loadOverused } from './tools/overused.mjs';
 import { addNames, keepEntered, parseLines } from './tools/db.mjs';
 import { labelLines, nameOfLabel, nameQueries, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
 import { client } from './tools/nanogpt.mjs';
-import { ancientTags, applyTags, commonnessFor, decideTags, isBlanket, listRanks, parseTagAnswers, tagsFor } from './tools/name-tags.mjs';
+import { ancientTags, applyTags, commonnessFor, decideNew, decideTags, isBlanket, listRanks, parseTagAnswers, tagsFor } from './tools/name-tags.mjs';
 import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, newFirstNames, newSurnames, parseAnswers, readJobs } from './tools/name-read.mjs';
 
 let passed = 0;
@@ -840,6 +840,15 @@ test('10-fix: a new name of today\'s list takes the eras of its periods by 10c\'
     assert.deepEqual([first.age, first.era, first.genre], [rule.age, rule.era, rule.genre]);
     const last = lastNameTags({ periods: 'AC', allure: 'pleasant', theme: null });
     assert.deepEqual([last.era, last.genre], [['victorian', 'midcentury', 'contemporary'], ['sliceOfLife', 'noirDetective']]);
+});
+
+test('10-fix: a surname milestone 10 added takes the periods 10c\'s readers agree on, by the same rule, used always and D always', () => {
+    const a = p => ({ periods: p, place: null, common: 'r' });
+    const read = decideNew([a('AC'), a('A'), a('C')]), none = decideNew([a(''), a(''), a('C')]);
+    assert.deepEqual([read, none], [{ used: true, periods: 'ACD', place: null, common: null }, { used: true, periods: 'D', place: null, common: null }]);
+    const held = lastNameTags({ allure: 'pleasant', theme: null });
+    const t = tagsFor(held, read);
+    assert.deepEqual([[...t.era].sort(), t.genre], [lastNameTags({ periods: 'AC', allure: 'pleasant', theme: null }).era.sort(), ['sliceOfLife', 'noirDetective']]);
 });
 
 test('10-fix: a Latin name from today\'s lists is tagged as 10c tags Latin names, borne only in antiquity: adult, ancient, rare', () => {
