@@ -255,10 +255,10 @@ Tests: `node test.js 10c` 11 of 11, database invariants pass (the full run is th
 
 - After 10c, Fable 5.2 medium decides from the `tools/name-reach.mjs` figures whether this part is built (the owner, 2026-11-19: "have Fable decide that after 10c"); first names only.
 - Fable 5.2 medium, 2026-11-20 (milestone review of 10): "build 10d". Its reason: an even "adult today" pick gives a median 67% common names, but English 40% (men) and 32% (women), 13% and 10% from the sex's top 50; weights 4:2:1 give English 59% and 52%, the median 84%, no name excluded. Built after the review's findings 1 and 2 are fixed.
-- Among the names matching a request, a common name is likelier than an uncommon one and that than a rare one, by three class weights on `commonness` in `pickAndMarkUsed`. No name is excluded, so this is no filter (R4). A `commonness` the AI passes decides as before. The weights are set here and the share each class gets is written down.
+- The same odds in every language (the owner, 2026-11-20: "yes, same odds in every language"): the pick first draws the class, common, uncommon or rare, by three fixed shares set here, then a name evenly among that class's unused matches. A class with no unused match passes to the next (common, uncommon, rare, then back up), so a used name is not repeated while another class has one; only when every match is used does the list start over, as today. No name is excluded, so this is no filter (R4). A `commonness` the AI passes decides as before.
 - With a `genre` filter, `preferTagged` (`picker.js:100-107`) serves tagged names first, so the weights act only inside that subset.
 - Without weights, 10a alone gives an even pick for one sex a median 54% (men) and 53% (women) of names from that sex's top 50 (measured over 36 cultures, new names taken as present); English stays at 12% and 11% because of its 402 and 467 names. Surnames from the top 100 reach 62-97%.
-- The used list fades any lean in a long chat: a simulated pool of 10 common, 15 uncommon and 5 rare at 4:2:1 gives 52% common in the first 5 picks, 43% over 20 and 33% at 30.
+- The used list uses up the common class first in a long chat; the share each class gets over 5, 20 and 30 picks of a small pool is written down when built.
 - Last step: one live run on the test bed through nano-gpt, 0.05M as milestone 8's second run, across several cultures and kinds of story.
 
 Estimate: Fable's, about 3M with its live run; the review of milestone 10 sits in 10c.
