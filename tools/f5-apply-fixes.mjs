@@ -14,7 +14,7 @@
 // The lines hold in their order.
 import assert from 'node:assert/strict';
 import { loadDb, readLines, saveWithChanges } from './db.mjs';
-import { foldName } from './overused.mjs';
+import { norm } from './name-lists.mjs';
 
 const db = loadDb();
 assert.equal(db.first_names.length, 6864, 'first names');
@@ -25,7 +25,7 @@ const ARRAY_FIELDS = ['era', 'role', 'genre', 'themes'];
 const GENDERS = ['male', 'female', 'ambiguous'];
 // Vietnamese tones tell names apart, as Ngô from Ngọ; elsewhere two spellings differing by accents are one name.
 const same = (e, culture, name) => e.language_ethnicity === culture
-    && (e.name === name || (culture !== 'vietnamese' && foldName(e.name) === foldName(name)));
+    && (e.name === name || (culture !== 'vietnamese' && norm(e.name) === norm(name)));
 
 function find(list, culture, name) {
     const entry = list.find(e => e.language_ethnicity === culture && e.name === name);

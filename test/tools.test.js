@@ -5,7 +5,9 @@ import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { foldName, loadOverused } from '../tools/overused.mjs';
+import { loadOverused } from '../tools/overused.mjs';
+import { norm } from '../tools/name-lists.mjs';
+import * as overusedModule from '../tools/overused.mjs';
 import { addNames, keepEntered, parseLines } from '../tools/db.mjs';
 import { labelLines, nameOfLabel, nameQueries, parseCsv, rankRows, wikidata } from '../tools/wikidata.mjs';
 import { client } from '../tools/nanogpt.mjs';
@@ -14,9 +16,9 @@ import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, 
 import { ROOT } from './helpers.js';
 
 test('overused check folds case and accents, and no name of the new batch is on the list', () => {
-    assert.equal(foldName('Élára'), foldName('elara'));
+    assert.equal(norm('Élára'), norm('elara'));
     const overused = loadOverused();
-    const on = names => names.filter(n => overused.has(foldName(n)));
+    const on = names => names.filter(n => overused.has(norm(n)));
     const slop = ['Elara', 'Kael', 'Lyra', 'Seraphina', 'Thorn'];
     assert.deepEqual(on(slop), slop, 'the list holds names models keep inventing that are rare among real people');
     assert.deepEqual(on(['Maria', 'Anna', 'Thomas', 'Smith', 'Murphy', 'Ivan', 'Elena', 'Mihai', 'Popescu', 'Chen', 'Kim', 'Nguyen', 'Tanaka', 'Kofi']), [],
@@ -25,7 +27,16 @@ test('overused check folds case and accents, and no name of the new batch is on 
         .filter(l => l.startsWith('first | ') || l.startsWith('last | '))
         .map(l => l.split(' | ')[2]);
     assert.ok(batch.length > 1000, 'the batch is read');
-    assert.deepEqual(batch.filter(n => overused.has(foldName(n))), []);
+    assert.deepEqual(batch.filter(n => overused.has(norm(n))), []);
+});
+
+test('C3: one spelling key; each overused line is its own key, and a hyphen, a space or đ hides no name from the list', () => {
+    const lines = readFileSync(new URL('./tools/overused-names.txt', ROOT), 'utf8').split(/\r?\n/).filter(l => l && !l.startsWith('#'));
+    assert.deepEqual(lines.filter(l => norm(l) !== l), [], 'the list reads the same under the one key');
+    const overused = loadOverused();
+    assert.deepEqual(['E-lara', 'Ela ra'].filter(n => !overused.has(norm(n))), []);
+    assert.equal(norm('Đỗ'), norm('Do'));
+    assert.deepEqual(Object.keys(overusedModule), ['loadOverused'], 'no second spelling key');
 });
 
 test('a real name marked not slop stays off the overused list, and the making tool keeps the mark', () => {
@@ -229,6 +240,10 @@ test('Wikidata\'s CSV: a quoted field keeps its comma and doubled quote', () => 
 test('a Wikidata label is a name without its bracketed note, and none where it holds two or a malformed one', () => {
     assert.deepEqual(['Thích (họ người)', 'Ganbold (Ганболд)', 'ปกรณ์/ภากร', "ffrench-O'Carroll", 'Богданa', 'Ó Néill']
         .map(nameOfLabel), ['Thích', 'Ganbold', null, null, null, 'Ó Néill']);
+});
+
+test('C3: a Wikidata label is no name by the one malformed-name rule of the database, initials too (J. R.)', () => {
+    assert.deepEqual(['J. R.', 'Ana Maria'].map(nameOfLabel), [null, 'Ana Maria']);
 });
 
 test('a Wikidata rank list adds an item\'s counts over rows, keeps in a sex\'s list the items that sex bears a quarter of, and a spelling once', () => {

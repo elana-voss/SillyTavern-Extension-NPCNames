@@ -8,7 +8,6 @@
 // a form its source counts borne by both sexes takes none where a reader says so (10b2: Бойко).
 import { norm } from './name-lists.mjs';
 import { pool } from './nanogpt.mjs';
-import { foldName } from './overused.mjs';
 
 export const CULTURES = {
     albanian: 'Albanian', arabic: 'Arabic', azerbaijani: 'Azerbaijani', baltic: 'Baltic (Lithuanian, Latvian)', chinese: 'Chinese',
@@ -299,7 +298,7 @@ export const DECLINING = { ukrainian: /(ов|ев|єв|ін|їн|ин|ий|ов�
 export const PATRONYMIC = new Set(['ethiopian', 'nigerian']);
 
 const sourceOf = e => e.source ?? `name-dataset ${e.country}`;
-const isOverused = (keys, name, overused) => keys.some(k => overused.has(k)) || overused.has(foldName(name));
+const isOverused = (keys, name, overused) => keys.some(k => overused.has(k)) || overused.has(norm(name));
 
 /**
  * Read first-name lists ({culture, sex, entries, answers}, entries in rank order) to the new names among each

@@ -6,7 +6,7 @@
 // raw: [{m, k, tag, first, last}], k starts with * for a style prompt, else it is a culture.
 // nd: {first|last: {CC: [[rank, name, ...]]}}. sig: {forenames|surnames: {CC: [[y, g, localized, romanized]]}}.
 import { readFileSync, writeFileSync } from 'node:fs';
-import { foldName } from './overused.mjs';
+import { norm } from './name-lists.mjs';
 
 const VENDORS = 3; // of five, under the generic prompts
 const RANK = 1500; // on any country's list of first or last names (the data's top 1500): real people bear it
@@ -18,7 +18,7 @@ const raw = json(rawPath), nd = json(ndPath), sig = json(sigPath), ssa = json(ss
 const target = new URL('overused-names.txt', import.meta.url);
 
 /** Plain variants of a spelling share a key: Lyra/Lira, Thorn/Thorne, Seraphina/Serafina, Elara/Ellara. */
-const variantKey = name => foldName(name).replace(/[^\p{L}]/gu, '').replace(/ph/g, 'f').replace(/y/g, 'i')
+const variantKey = name => norm(name).replace(/[^\p{L}]/gu, '').replace(/ph/g, 'f').replace(/y/g, 'i')
     .replace(/(.)\1+/g, '$1').replace(/(.)e$/, '$1');
 
 const stats = new Map(); // variant key -> {spellings, generic: vendors, own: vendors, cultures}
@@ -40,7 +40,7 @@ const best = new Map(); // folded name -> best rank in any country, first or las
 for (const kind of ['first', 'last']) {
     for (const rows of Object.values(nd[kind])) {
         for (const [rank, name] of rows) {
-            const f = foldName(name);
+            const f = norm(name);
             if (!(best.get(f) <= rank)) best.set(f, rank);
         }
     }
@@ -48,7 +48,7 @@ for (const kind of ['first', 'last']) {
 const popular = new Set();
 for (const kind of ['forenames', 'surnames']) {
     for (const rows of Object.values(sig[kind])) {
-        for (const row of rows) for (const n of row.slice(2)) if (n) popular.add(foldName(n.trim()));
+        for (const row of rows) for (const n of row.slice(2)) if (n) popular.add(norm(n.trim()));
     }
 }
 const whyCommon = f => {
@@ -65,7 +65,7 @@ const listed = new Set(), table = [];
 for (const [k, s] of stats) {
     // A culture's own prompts show nothing: they repeat real names of cultures without a source (Iryna, Nataliia).
     if (s.generic.size < VENDORS) continue;
-    const rows = [...new Set([...s.spellings].map(foldName))].map(f => ({ f, why: whyCommon(f) }));
+    const rows = [...new Set([...s.spellings].map(norm))].map(f => ({ f, why: whyCommon(f) }));
     for (const { f, why } of rows) {
         table.push(`${f}\t${why || 'LISTED'}\tgeneric ${s.generic.size} own ${s.own.size} cultures ${s.cultures.size}`);
         if (!why && !notSlop.includes(f)) listed.add(f);

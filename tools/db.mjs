@@ -6,7 +6,6 @@ import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { norm } from './name-lists.mjs';
-import { foldName } from './overused.mjs';
 
 const dbUrl = new URL('../data/name_database.tagged.json', import.meta.url);
 const serialise = db => JSON.stringify(db, null, 2).replace(/\n/g, '\r\n');
@@ -76,7 +75,7 @@ export function addNames(db, lines, overused, kinds = ['first', 'last']) {
         const [, culture, name, gender, source] = f;
         assert.ok(cultures.has(culture), `no culture ${culture}`);
         assert.ok((kind === 'first' ? ['male', 'female', 'ambiguous'] : ['male', 'female', '-']).includes(gender), `gender of ${name}`);
-        assert.ok(!overused.has(foldName(name)), `overused ${name}`);
+        assert.ok(!overused.has(norm(name)), `overused ${name}`);
         const key = `${culture}|${norm(name)}`;
         assert.ok(!held[kind].has(key), `already held: ${culture}/${name}`);
         held[kind].add(key);

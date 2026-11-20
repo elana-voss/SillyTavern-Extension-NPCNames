@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import { deriveEnumValues, pickName } from '../picker.js';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { foldName } from '../tools/overused.mjs';
+import { isMalformedName, norm } from '../tools/name-lists.mjs';
 import { parseLines } from '../tools/db.mjs';
 import { makeEntry, ROOT } from './helpers.js';
 
@@ -14,11 +14,7 @@ const present = (keys, unwanted) => unwanted.filter(k => keys.has(k));
 
 function checkNamesAndHandles(data) {
     const all = [...data.first_names, ...data.last_names];
-    assert.deepEqual(all.map(e => e.name).filter(n =>
-        /^\p{Ll}/u.test(n)                                  // uncapitalised
-        || /[/()]|\.$/.test(n)                              // "A/B", "Anu (2)", initials
-        || /\s(?!(?:de|del|la|no|in|an)\s|h\p{Lu})\p{Ll}/u.test(n)   // a later word uncapitalised, but for particles
-        || (/[A-Za-z]/.test(n) && /\p{Script=Cyrillic}/u.test(n))), []); // look-alike letters
+    assert.deepEqual(all.map(e => e.name).filter(isMalformedName), []);
     const handles = data.first_names.filter(e => e.genre.includes('cyberpunk'));
     assert.equal(handles.length, 100);
     assert.deepEqual(handles.filter(e => e.language_ethnicity !== 'cyberpunkHandle').map(e => e.name), []);
@@ -28,7 +24,7 @@ function checkNamesAndHandles(data) {
         'Lord Shiva', 'Great Woman', 'Harsh joy', 'بسم الله', 'ابو علي', 'ابو محمد', 'ام محمد', 'Gioavanni', 'Mohmmad'];
     assert.deepEqual(gone.filter(n => names.has(n)), []);
     for (const list of [data.first_names, data.last_names]) {
-        const keys = list.map(e => `${e.language_ethnicity}/${foldName(e.name).replace(/đ/g, 'd')}`);
+        const keys = list.map(e => `${e.language_ethnicity}/${norm(e.name)}`);
         assert.deepEqual(keys.filter((k, i) => keys.indexOf(k) !== i && !['vietnamese/ngo', 'vietnamese/duc'].includes(k)), [], 'no name twice in a culture, accents aside'); // Ngô, Ngọ and Đức, Dục are two names each
         assert.deepEqual(list.filter(e => 'sentinel_fields' in e).map(e => e.name), []);
     }
@@ -181,10 +177,10 @@ function checkPinnedNames(data) {
 function checkNoNameLost(data) {
     const read = file => readFileSync(new URL(`./tools/${file}`, ROOT), 'utf8').split(/\r?\n/).map(l => l.split(' | '));
     const into = new Map(read('m6-tags.txt').filter(l => l[0] === 'merge' || l[0] === 'rename').map(l => [`${l[2]}|${l[3]}`, l[4]]));
-    const names = new Set([...data.first_names, ...data.last_names].map(e => foldName(e.name)));
+    const names = new Set([...data.first_names, ...data.last_names].map(e => norm(e.name)));
     const added = read('m5-names.txt').filter(l => l[0] === 'first' || l[0] === 'last');
     assert.equal(added.length, 3504);
-    assert.deepEqual(added.map(([, c, n]) => into.get(`${c}|${n}`) ?? n).filter(n => !names.has(foldName(n))), []);
+    assert.deepEqual(added.map(([, c, n]) => into.get(`${c}|${n}`) ?? n).filter(n => !names.has(norm(n))), []);
     assert.deepEqual([inCulture(data.first_names, 'vietnamese').some(e => e.name === 'Trần'), inCulture(data.last_names, 'vietnamese').some(e => e.name === 'Trần')], [false, true], 'Trần is a surname');
 }
 

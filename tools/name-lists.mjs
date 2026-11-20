@@ -1,6 +1,7 @@
 // name-dataset's lists of common names per country, read per culture of the database: which
-// countries stand for a culture, and a culture's entries per sex in rank order. Shared by
-// tools/name-reach.mjs and milestone 10's tools. The list file is milestone 5's download,
+// countries stand for a culture, and a culture's entries per sex in rank order; and the one
+// spelling key (`norm`) and malformed-name rule (`isMalformedName`) of every data tool and test.
+// Shared by tools/name-reach.mjs and milestone 10's tools. The list file is milestone 5's download,
 // git-ignored at logs/work/m5/nd.json: `first`/`last` per country code, rows [rank, name, M, F].
 import { readFileSync } from 'node:fs';
 
@@ -22,6 +23,16 @@ export const COUNTRIES = {
 
 /** Comparison key of a spelling: lower case, accents and non-letters removed, đ as d (Đỗ, Do); scripts stay apart. */
 export const norm = s => s.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().replace(/đ/g, 'd').replace(/[^\p{L}]/gu, '');
+
+/**
+ * A malformed name, which the database never holds: an uncapitalised start (ffrench-O'Carroll), two names in one
+ * (ปกรณ์/ภากร), a bracket (Anu (2)), a closing full stop (initials), a later word uncapitalised but for particles,
+ * or Latin letters among Cyrillic ones (Богданa).
+ */
+export const isMalformedName = name => /^\p{Ll}/u.test(name)
+    || /[/()]|\.$/.test(name)
+    || /\s(?!(?:de|del|la|no|in|an)\s|h\p{Lu})\p{Ll}/u.test(name)
+    || (/[A-Za-z]/.test(name) && /\p{Script=Cyrillic}/u.test(name));
 
 export const SEXES = { male: r => r[2] >= r[3], female: r => r[3] > r[2] };
 

@@ -7,8 +7,7 @@
 // So queries run one at a time, 2 s apart; a 429 waits its Retry-After; three failures give up the query.
 import { createHash } from 'node:crypto';
 import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { norm } from './name-lists.mjs';
-import { foldName } from './overused.mjs';
+import { isMalformedName, norm } from './name-lists.mjs';
 
 const ENDPOINT = 'https://query.wikidata.org/sparql';
 // A generic client name, no personal details.
@@ -91,15 +90,10 @@ export function wikidata(dir, { fetchFn = fetch, wait = ms => new Promise(r => s
 const SEX = { Q6581097: 'male', Q6581072: 'female' };
 const id = uri => uri.split('/').pop();
 
-/**
- * A label as a name: a bracketed note left off (Thích (họ người), Ganbold (Ганболд)); null for two names in one
- * (ปกรณ์/ภากร), a lowercase start (ffrench-O'Carroll) or Latin letters among Cyrillic ones (Богданa).
- */
+/** A label as a name: a bracketed note left off (Thích (họ người), Ganbold (Ганболд)); null where malformed (isMalformedName). */
 export function nameOfLabel(label) {
     const name = label.replace(/\s*\([^)]*\)$/u, '').trim();
-    return /[/()]/.test(name) || /^\p{Ll}/u.test(name) || /\s(?!(?:de|del|la|no|in|an)\s|h\p{Lu})\p{Ll}/u.test(name) // as the database's invariant
-        || (/[A-Za-z]/.test(name) && /\p{Script=Cyrillic}/u.test(name))
-        ? null : name;
+    return isMalformedName(name) ? null : name;
 }
 
 /**
@@ -179,7 +173,7 @@ export function labelLines(lines, kind, held, overused, keep = () => true) {
     for (const x of lines) {
         const name = nameOfLabel(x.name), key = `${x.culture}/${norm(name ?? '')}`;
         const why = !name ? 'no name' : !keep(x) ? 'refused' : name !== x.name && held(x.culture).has(norm(name)) ? 'held'
-            : overused.has(foldName(name)) ? 'overused' : kept.has(key) ? 'twice' : '';
+            : overused.has(norm(name)) ? 'overused' : kept.has(key) ? 'twice' : '';
         if (why || name !== x.name) dropped.push([kind, x.culture, x.name, name ?? '-', why || 'cleaned'].join('\t'));
         if (why === 'twice' && kind === 'first' && kept.get(key).gender !== x.gender) kept.get(key).gender = 'ambiguous';
         if (!why) kept.set(key, { ...x, name });

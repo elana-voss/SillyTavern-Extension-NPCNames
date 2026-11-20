@@ -13,7 +13,8 @@
 //   remove | culture | name | why
 import assert from 'node:assert/strict';
 import { loadDb, readLines, saveWithChanges } from './db.mjs';
-import { foldName, loadOverused } from './overused.mjs';
+import { norm } from './name-lists.mjs';
+import { loadOverused } from './overused.mjs';
 
 const db = loadDb();
 assert.equal(db.first_names.length, 4266, 'first names');
@@ -23,7 +24,7 @@ const overused = loadOverused();
 const RACE = { fantasyDragon: 'dragon' };
 const TAG_FIELDS = new Set(['age', 'era', 'genre', 'themes']);
 const list = s => (s === '-' ? [] : s.split(','));
-const key = (culture, name) => `${culture}|${foldName(name)}`;
+const key = (culture, name) => `${culture}|${norm(name)}`;
 
 const lines = readLines('m5-names.txt');
 
@@ -47,7 +48,7 @@ const count = (kind, culture, gender) => {
 
 for (const [kind, culture, name, gender, , ...f] of lines) {
     if (kind !== 'first' && kind !== 'last') continue;
-    assert.ok(!overused.has(foldName(name)), `on the overused list: ${name}`);
+    assert.ok(!overused.has(norm(name)), `on the overused list: ${name}`);
     const folded = kind === 'first' ? foldedFirst : foldedLast;
     assert.ok(!folded.has(key(culture, name)), `twice in ${culture}: ${name}`);
     folded.add(key(culture, name));
@@ -79,7 +80,7 @@ for (const [kind, culture, name, field, value] of lines) {
     tagged[value] = (tagged[value] ?? 0) + 1;
 }
 
-const onList = list_ => list_.filter(e => overused.has(foldName(e.name))).length;
+const onList = list_ => list_.filter(e => overused.has(norm(e.name))).length;
 const out = saveWithChanges(db, 5, lines.map(l => l.join(' | ')));
 
 const firstAdded = [...added.first.values()].reduce((n, m) => n + Object.values(m).reduce((a, b) => a + b, 0), 0);
