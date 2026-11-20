@@ -36,7 +36,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | 10b2 | Cultures with no list | R2, R3, R5, R11, R12 | Done | | 12M | 0.28M | Claude 26.8M (one agent 26.3M, 362 turns; review 0.50M), nano-gpt 0.29M; code review Fable 5.2 medium |
 | 10c | True tags and placement | R4, R11, R12 | Done | | 9.5M | 0.62M | Claude 14.3M (four agents, three handed over; review and the re-ask of 46 answers included), nano-gpt 0.57M; code review Fable 5.2 medium |
 | 10-fix | Fixes after the milestone review of 10 (7 findings) | R2, R4, R11, R12 | Done | | 5M | 15.1M | Claude five agents and the code review, nano-gpt 0.37M (the read of the new surname forms' periods; about 0.12M was estimated before the re-asks of one-line-for-all answers); tests `node test.js` 67 of 67; code review Opus 5.5 medium, no finding (one speed note, applied) |
-| 10d | The pick leans to common names, one target in every language | R4, R11, R12 | Done | | 3M | 0.05M | Claude 3.2M (Opus 5.5 medium), nano-gpt 0.083M input (two live runs, the first cut at 300 output tokens); tests `node test.js` 70 of 70; no code review due (about 50 lines of product code) |
+| 10d | The pick leans to common names, one target in every language | R4, R11, R12 | Done | | 3M | 0.05M | Claude 6.1M (build 4.3M Opus 5.5 medium; test-bed fix 1.8M Sonnet 5.5 medium, the live run had saved 4096 output tokens into the test bed's settings), nano-gpt 0.083M input (two live runs, the first cut at 300 output tokens); tests `node test.js` 70 of 70; no code review due (about 50 lines of product code) |
 | | Total | | | | 84.5M | 5.76M | |
 
 Each milestone ends with `node test.js` passing and the extension working on the test bed.
