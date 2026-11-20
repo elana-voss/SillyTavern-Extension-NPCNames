@@ -2,7 +2,7 @@
 // instructions placed in the chat.
 
 export const TOOL_DESCRIPTION =
-    'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name, with filters that fit the character as already established; until then, describe them. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human.';
+    'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name, with filters that fit the character as already established; until then, describe them. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human. Pass commonness only when the story calls for it; otherwise leave it out.';
 
 // The tool's parameters, each an enum of the values the name database holds.
 export function buildToolParameters(enumValues) {
@@ -35,7 +35,7 @@ export function buildToolParameters(enumValues) {
             ),
             commonness: enumField(
                 enumValues.commonness,
-                'How recognizable the name should be.',
+                'Pass only when the story calls for it (a name that must sound plain and everyday, or strikingly unusual); otherwise leave it out.',
             ),
             genre: enumField(enumValues.genre, "The story's flavour."),
             themes: {

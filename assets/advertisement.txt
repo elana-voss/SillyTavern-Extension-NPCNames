@@ -11,7 +11,7 @@ Pass the filters that matter for this character. Every filter is optional. You m
 - `role`: narrative function: hero, villain, mentor, sidekick, comicRelief, loveInterest, antihero, neutral, bystander.
 - `intelligence`: how cerebral the name sounds: blunt, plain, average, thoughtful, bookish.
 - `allure`: how attractive the name sounds: harsh, unremarkable, pleasant, pretty, striking.
-- `commonness`: common, uncommon, rare.
+- `commonness`: common, uncommon, rare. Pass it only when the story calls for it (a name that must sound plain and everyday, or strikingly unusual); otherwise leave it out, and the tool leans to common names by itself.
 - `genre`: the story's flavour: fantasy, cyberpunk, steampunk, western, noirDetective, horror, sliceOfLife, postApocalyptic.
 - `themes`: zero or more decorative tags: airy, brutish, celestial, earthy, exotic, fiery, floral, gemstone, icy, literary, lunar, military, mystical, regal, religious, rustic, scholarly, solar, watery.
 

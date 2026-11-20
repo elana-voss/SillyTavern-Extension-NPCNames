@@ -1,7 +1,7 @@
 // Run via: node test.js
 
 import { deriveEnumValues, pickName, readUsed } from './picker.js';
-import { injectBeforeLatest, isInstalledIn } from './advertisement.js';
+import { TOOL_DESCRIPTION, buildToolParameters, injectBeforeLatest, isInstalledIn } from './advertisement.js';
 import { HIDDEN_TOOL_CALL_CLASS, markToolCallLines } from './tool-calls.js';
 import assert from 'node:assert/strict';
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
@@ -245,6 +245,14 @@ test('the install folder is told from the module\'s address', () => {
 test('the AI is told how to ask for an elf, a dwarf or a dragon', () => {
     const text = ['./assets/advertisement.txt', './advertisement.js'].map(file => readFileSync(new URL(file, import.meta.url), 'utf8'));
     for (const race of ['elf', 'dwarf', 'dragon']) assert.ok(text.every(t => t.includes(`race: ${race}`)), race);
+});
+
+test('10e: the AI passes a commonness only when the story calls for it', () => {
+    const ad = readFileSync(new URL('./assets/advertisement.txt', import.meta.url), 'utf8');
+    const only = 'only when the story calls for it';
+    assert.ok(/`commonness`: common, uncommon, rare\. Pass it only when the story calls for it/.test(ad), 'instructions');
+    assert.ok(TOOL_DESCRIPTION.includes(`Pass commonness ${only}`), 'tool description');
+    assert.ok(buildToolParameters({}).properties.commonness.description.includes(only), 'commonness field');
 });
 
 test('the AI calls the tool when a name is learned, not when a character arrives', () => {
