@@ -6,8 +6,10 @@
 // Matching is by spelling with accents removed (tools/name-lists.mjs `norm`), so a name held in
 // another script than its list counts as missing. Every people (COUNTRIES; not the cyberpunk handles) is measured; one with no
 // list has '-' in the list columns and is left out of their medians.
+// A genre is no filter (picker.js): a request with one counts the names carrying it, those the pick prefers.
+// Every genre the data holds has a row '<genre> adult'.
 import { mkdirSync, writeFileSync } from 'node:fs';
-import { filterFirstNames } from '../picker.js';
+import { deriveEnumValues, filterFirstNames } from '../picker.js';
 import { COUNTRIES, countriesOf, loadLists, norm, rankedEntries } from './name-lists.mjs';
 import { loadDb } from './db.mjs';
 
@@ -22,10 +24,9 @@ const REQUESTS = {
     'child today': { age: 'child', era: ['modern', 'contemporary'] },
     'elder today': { age: 'elder', era: ['modern', 'contemporary'] },
     'midcentury adult': { age: 'adult', era: 'midcentury' },
-    'fantasy adult': { age: 'adult', genre: 'fantasy' },
-    'noir adult': { age: 'adult', genre: 'noirDetective' },
     common: { commonness: 'common' },
 };
+for (const g of deriveEnumValues(F).genre) REQUESTS[`${g} adult`] = { age: 'adult', genre: g };
 
 const med = a => [...a].sort((x, y) => x - y)[Math.floor(a.length / 2)];
 const hits = (entries, have, n) => entries.slice(0, n).filter(x => have.has(x.key)).length;
@@ -39,7 +40,7 @@ for (const c of Object.keys(COUNTRIES)) {
     for (const [t, f] of Object.entries(REQUESTS)) {
         const filters = { race: ['human'], language_ethnicity: [c] };
         for (const [k, v] of Object.entries(f)) filters[k] = [].concat(v);
-        row[t] = filterFirstNames(F, filters).length;
+        row[t] = filterFirstNames(F, filters).filter(e => !filters.genre || filters.genre.some(g => e.genre.includes(g))).length;
     }
     if (row.countries === '-') { Object.assign(row, { f100: '-', l100: '-', m50: '-', w50: '-' }); continue; }
     row.f100 = hits(rankedEntries(nd, c, 'first'), keys(fh), 100);

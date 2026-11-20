@@ -45,7 +45,7 @@ export function buildToolParameters(enumValues) {
                 enumValues.commonness,
                 'Pass only when the story calls for it (a name that must sound plain and everyday, or strikingly unusual); otherwise leave it out.',
             ),
-            genre: enumField(enumValues.genre, "The story's flavour."),
+            genre: enumField(enumValues.genre, "The story's flavour; names fitting it become likelier, none is left out."),
             themes: {
                 type: 'array',
                 items: { type: 'string', enum: enumValues.themes },

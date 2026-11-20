@@ -95,7 +95,7 @@ The values currently in the database:
 
 `race: human` is for every person; `mythical` only for a god, spirit or monster. A `mythology` filter goes with `race: mythical`, never `human`: when nothing matches, `mythology` is dropped before `race` and the pantheon is lost. `cyberpunkHandle` holds online handles (GhostRunner, Nova404), not names.
 
-A filter sent as a list matches any of its values. Unknown values are tolerated: the picker drops only the filters that stop a name from matching and reports them. A `genre` filter picks names tagged with that genre first, then untagged names, which it reports as relaxed; some genres hold very few tagged names (`postApocalyptic` one, `horror` 26).
+A filter sent as a list matches any of its values. Unknown values are tolerated: the picker drops only the filters that stop a name from matching and reports them. A `genre` never leaves a name out and is never reported as relaxed: with T unused matching names tagged with it, a pick comes from those T with chance T/20 (always from 20 on), else from all matching names. Some genres hold very few tagged names, so their picks are mostly ordinary names.
 
 ## Data Source
 

@@ -87,7 +87,7 @@ test('surname never repeats the first name', () => {
     assert.equal(pick.last_name, 'Wijaya');
 });
 
-test('genre filter prefers tagged names, then reports an untagged one as relaxed', () => {
+test('a genre prefers names carrying it, and an untagged one after them is no relaxed filter', () => {
     const firsts = [makeEntry({ name: 'Plain', genre: [] }), makeEntry({ name: 'Watt', genre: ['steampunk'] })];
     const lasts = [makeSurname()];
     const usedFirst = new Set();
@@ -96,7 +96,29 @@ test('genre filter prefers tagged names, then reports an untagged one as relaxed
     assert.equal(one.relaxed_filters, undefined);
     const two = pickName(firsts, lasts, { genre: 'steampunk' }, usedFirst, new Set(), fixedRng);
     assert.equal(two.first_name, 'Plain');
-    assert.deepEqual(two.relaxed_filters, ['genre']);
+    assert.equal(two.relaxed_filters, undefined);
+});
+
+test('C1: a genre never leaves a name out, nor makes another filter drop', () => {
+    const firsts = [makeEntry({ name: 'Ann', age: ['child'], genre: ['horror'] }), makeEntry({ name: 'Bea', genre: ['sliceOfLife'] })];
+    const pick = pickFresh(firsts, [makeSurname()], { age: 'adult', genre: 'horror' });
+    assert.equal(pick.first_name, 'Bea');
+    assert.equal(pick.relaxed_filters, undefined);
+});
+
+// rng calls in order: the genre's chance, then leanPick's ticket (0 = the first unused name).
+const scripted = (...shares) => { let i = 0; return max => Math.floor((shares[i++] ?? 0) * max); };
+
+test('C1: T unused names carrying the genre take a pick with chance T/20, at 20 always', () => {
+    const plain = Array.from({ length: 5 }, (_, i) => makeEntry({ name: `P${i}`, genre: ['sliceOfLife'] }));
+    const tagged = n => Array.from({ length: n }, (_, i) => makeEntry({ name: `H${i}`, genre: ['horror'] }));
+    const at = (firsts, chance) => pickName(firsts, [makeSurname()], { genre: 'horror' }, new Set(), new Set(), scripted(chance, 0)).first_name;
+    assert.equal(at([...plain, ...tagged(3)], 0.14), 'H0', '3 of 20 = 0.15');
+    assert.equal(at([...plain, ...tagged(3)], 0.16), 'P0');
+    assert.equal(at([...plain, ...tagged(20)], 0.999), 'H0');
+    const used = new Set(['english/H0', 'english/H1']);
+    const left = pickName([...plain, ...tagged(3)], [makeSurname()], { genre: 'horror' }, used, new Set(), scripted(0.06, 0));
+    assert.equal(left.first_name, 'P0', 'one unused horror name: chance 0.05');
 });
 
 test('relaxing keeps every filter that was not part of the conflict', () => {
@@ -212,6 +234,10 @@ test('10e: the AI passes a commonness only when the story calls for it', () => {
     assert.ok(/`commonness`: common, uncommon, rare\. Pass it only when the story calls for it/.test(ad), 'instructions');
     assert.ok(TOOL_DESCRIPTION.includes(`Pass commonness ${only}`), 'tool description');
     assert.ok(buildToolParameters({}).properties.commonness.description.includes(only), 'commonness field');
+});
+
+test('C1: the AI is told a genre makes names likelier and leaves none out', () => {
+    assert.equal(buildToolParameters({}).properties.genre.description, "The story's flavour; names fitting it become likelier, none is left out.");
 });
 
 test('the AI calls the tool when a name is learned, not when a character arrives', () => {

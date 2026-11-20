@@ -1,11 +1,11 @@
 // What the AI is sent, then and now: the instructions (assets/advertisement.txt filled from the data, as
-// index.js does at load) and the tool's description, against a commit's. Line ends are read as LF on both sides.
+// index.js does at load), the tool's description and its fields' descriptions, against a commit's. Line ends are read as LF on both sides.
 //
 // Run: node tools/ad-text-diff.mjs [--rev 60ffc03]
 // Writes logs/work/ad-text-diff.txt (each differing part, then and now); prints one line per part.
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { TOOL_DESCRIPTION, fillAdvertisement } from '../advertisement.js';
+import { TOOL_DESCRIPTION, buildToolParameters, fillAdvertisement } from '../advertisement.js';
 import { deriveEnumValues } from '../picker.js';
 import { arg } from './cli.mjs';
 
@@ -24,10 +24,19 @@ function oldDescription() {
     return m[2].replaceAll("\\'", "'").replaceAll('${TOOL_NAME}', name);
 }
 
+// Each field's description, one line each.
+const fieldText = params => Object.entries(params.properties).map(([k, v]) => `${k}: ${v.description}`).join('\n');
+// A commit's, from its advertisement.js, which imports nothing, loaded as a module.
+async function fieldDescriptions() {
+    const old = await import(`data:text/javascript,${encodeURIComponent(git('advertisement.js'))}`);
+    return fieldText(old.buildToolParameters(enumValues));
+}
+
 const enumValues = deriveEnumValues(JSON.parse(read('data/name_database.tagged.json')).first_names);
 const parts = [
     ['instructions', fillAdvertisement(git('assets/advertisement.txt'), enumValues), fillAdvertisement(read('assets/advertisement.txt'), enumValues)],
     ['tool description', oldDescription(), TOOL_DESCRIPTION],
+    ['field descriptions', await fieldDescriptions(), fieldText(buildToolParameters(enumValues))],
 ];
 mkdirSync(new URL('.', OUT), { recursive: true });
 writeFileSync(OUT, parts.filter(([, a, b]) => a !== b).map(([what, a, b]) => `== ${what}, ${REV}:\n${a}\n== now:\n${b}\n`).join('\n'));

@@ -1,5 +1,6 @@
 // The name pick: filters (dropped in DROP_ORDER when nothing matches), the used list per chat, a
-// first name leaning to common names (leanPick), and a surname of the first name's culture.
+// first name leaning to names of the story's genre (never a filter) and to common names (leanPick),
+// and a surname of the first name's culture.
 export const DROP_ORDER = [
     'themes',
     'allure',
@@ -7,7 +8,6 @@ export const DROP_ORDER = [
     'commonness',
     'role',
     'age',
-    'genre',
     'era',
     'mythology',
     'race',
@@ -22,13 +22,13 @@ function matches(entryValue, wanted) {
         : wanted.includes(entryValue);
 }
 
+// A genre is no filter: it is ignored here and only makes fitting names likelier (pickAndMarkUsed).
 export function filterFirstNames(pool, f) {
-    return pool.filter(e => DROP_ORDER.every(field => {
-        if (!f[field] || matches(e[field], f[field])) return true;
-        // Empty entry-genre = compatible with any genre filter (escape hatch).
-        return field === 'genre' && e.genre.length === 0;
-    }));
+    return pool.filter(e => DROP_ORDER.every(field => !f[field] || matches(e[field], f[field])));
 }
+
+// T unused names carrying the genre take a pick with chance min(1, T / GENRE_FULL).
+const GENRE_FULL = 20;
 
 // The same name in two cultures counts as two names.
 const usedKey = e => `${e.language_ethnicity}/${e.name}`;
@@ -51,7 +51,8 @@ export function readUsed(stored, pool) {
 }
 
 // With `lean`, the pick leans to common names (leanPick); without, every unused match is as likely.
-export function pickAndMarkUsed(candidates, usedSet, rng = secureRandom, lean = false) {
+// With `genre` (a list), names carrying it are preferred first, as GENRE_FULL says.
+export function pickAndMarkUsed(candidates, usedSet, rng = secureRandom, lean = false, genre = null) {
     // Empty used-set is the common first-pick case — skip the filter+copy.
     let unused = usedSet.size === 0
         ? candidates
@@ -59,6 +60,12 @@ export function pickAndMarkUsed(candidates, usedSet, rng = secureRandom, lean = 
     if (unused.length === 0) {
         for (const e of candidates) usedSet.delete(usedKey(e));
         unused = candidates;
+    }
+    if (genre) {
+        const fitting = unused.filter(e => matches(e.genre, genre));
+        if (fitting.length > 0 && rng(2 ** 32) / 2 ** 32 < fitting.length / GENRE_FULL) {
+            unused = fitting;
+        }
     }
     const pick = lean ? leanPick(unused, rng) : unused[rng(unused.length)];
     usedSet.add(usedKey(pick));
@@ -112,14 +119,12 @@ export function pickName(firstNames, lastNames, filters, usedFirst, usedLast, rn
         throw new Error('Name database is empty');
     }
     const { current, relaxed } = relaxFilters(firstNames, normalizeFilters(filters));
-    let firstCandidates = filterFirstNames(firstNames, current);
+    const firstCandidates = filterFirstNames(firstNames, current);
     if (firstCandidates.length === 0) {
         throw new Error('No first-name candidates after full degradation');
     }
-    if (current.genre) firstCandidates = preferTagged(firstCandidates, current.genre, usedFirst);
     // A commonness the AI asked for decides alone: among the names it allows the pick stays even.
-    const firstPick = pickAndMarkUsed(firstCandidates, usedFirst, rng, !current.commonness);
-    if (current.genre && !matches(firstPick.genre, current.genre)) relaxed.push('genre');
+    const firstPick = pickAndMarkUsed(firstCandidates, usedFirst, rng, !current.commonness, current.genre);
 
     // A god gets no surname. Nor does a culture without surnames (dragons, handles,
     // Native American figures, Mongolian) rather than one from an unrelated culture.
@@ -133,17 +138,6 @@ export function pickName(firstNames, lastNames, filters, usedFirst, usedLast, rn
         : null;
 
     return buildResponse(firstPick, lastPick, relaxed);
-}
-
-// Untagged names only stand in once no unused name carries the genre. When every
-// candidate is used, the reset falls on them all and the tagged ones go first.
-function preferTagged(candidates, genre, usedSet) {
-    const tagged = candidates.filter(e => matches(e.genre, genre));
-    if (tagged.length === 0) return candidates;
-    if (tagged.some(e => !usedSet.has(usedKey(e)))) return tagged;
-    if (candidates.some(e => !usedSet.has(usedKey(e)))) return candidates;
-    for (const e of candidates) usedSet.delete(usedKey(e));
-    return tagged;
 }
 
 // Every filter becomes a list of its wanted values; an empty value or list is no filter.
