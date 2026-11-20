@@ -1,7 +1,8 @@
 // Milestone 10c's read: every human first name and surname the data held before milestone 10 (those not in
 // tools/m10a-names.txt, m10b-names.txt or m10b2-names.txt; 6,198 and 2,521; the 8,819 of the plan counted 100 non-human surnames) is read per culture by 10a's three
 // readers with 10c's question (tools/name-tags.mjs): the periods it was given in there, where a name with no sign
-// of real use there belongs, and how common it is today. Two of three decide (decideTags); the decisions are
+// of real use there belongs, and how common it is today. A reader's one line for a whole list is set aside
+// (isBlanket). Two of three decide (decideTags); the decisions are
 // written to tools/m10c-tags.txt for tools/m10c-apply-tags.mjs.
 //
 // Run: node tools/m10c-read.mjs [--kinds first,last] [--cultures a,b] [--jobs N] [--budget 1500000] [--write]
@@ -11,7 +12,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { client, weeklyUsed } from './nanogpt.mjs';
 import { readJobs } from './name-read.mjs';
-import { decideTags, parseTagAnswers, tagPromptFor } from './name-tags.mjs';
+import { decideTags, isBlanket, parseTagAnswers, tagPromptFor } from './name-tags.mjs';
 import { readLines } from './db.mjs';
 
 const OUT = new URL('../logs/work/m10c/', import.meta.url);
@@ -57,9 +58,10 @@ function namesToRead(db) {
             { ask: j => tagPromptFor(j.entries.map(e => e.name), j.culture, kind), parse: parseTagAnswers });
     }
     const after = await weeklyUsed();
-    const lines = [], counts = { used: 0, unused: 0, undecided: 0, missing: 0, placed: {} };
+    const lines = [], counts = { used: 0, unused: 0, undecided: 0, missing: 0, blanket: [], placed: {} };
+    for (const j of run) j.reads = j.answers.map((a, r) => isBlanket(a, j.entries.length) ? (counts.blanket.push(`${j.tag}:${r}`), new Map()) : a);
     for (const j of run) for (const [i, e] of j.entries.entries()) {
-        const answers = j.answers.map(a => a.get(i + 1));
+        const answers = j.reads.map(a => a.get(i + 1));
         counts.missing += answers.filter(a => !a).length;
         const d = decideTags(answers);
         counts[d.used === true ? 'used' : d.used === false ? 'unused' : 'undecided']++;
@@ -68,6 +70,7 @@ function namesToRead(db) {
     }
     const summary = [`lists ${run.length} of ${jobs.length}, names ${lines.length} of ${all.length}`,
         `used ${counts.used}, unused ${counts.unused}, undecided ${counts.undecided}; answer lines missing ${counts.missing}`,
+        `answers set aside as one line for all (list:reader) ${counts.blanket.length}: ${counts.blanket.join(' ')}`,
         `placed ${JSON.stringify(counts.placed)}`,
         `calls ${llm.stats.calls}, stored ${llm.stats.cached}, failed ${llm.stats.fail}, stopped by budget ${llm.stats.stopped}; input this run ${llm.stats.input}, output ${llm.stats.output}`,
         `nano-gpt weekly input ${before} to ${after}`];

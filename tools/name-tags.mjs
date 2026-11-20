@@ -32,10 +32,16 @@ No other text. The names:
 ${names.map((n, i) => `${i + 1} ${n}`).join('\n')}`;
 };
 
-// A reader may echo the name after its number, in one word or several: the last three fields are read. A used
-// name's line may leave out its place ('11 ABCDE c', MiniMax on 42 of 100). The echo is tried last, so
-// '1 CDE - c' reads periods CDE, not an echoed 'CDE' with periods '-'.
-const TAG_LINE = /^(\d+)[.:)]?\s+(?:.*?\s+)??([A-F]+|-)(?:\s+(\S+))?\s+([cur])\s*$/;
+// A line is number, periods, one or two place fields, common. A used name's line may leave out its place
+// ('11 ABCDE c', MiniMax on 42 of 100); a reader may write two place fields ('1 ABC - slavicOther u', '1 - ancient - r'),
+// of which the first that is not '-' is read. A reader may echo the name after its number, in one word or several;
+// the plain form is tried first, then the shortest echo, so '1 CDE - c' reads periods CDE, not an echoed 'CDE'.
+const TAG_LINE = /^(\d+)[.:)]?\s+(.+?)\s+([cur])\s*$/;
+const PERIOD_FIELD = /^([A-F]+|-)$/;
+/** A people's name readers wrote in place of its key (10c's answers), to the key. */
+const PLACE_ALIASES = { bulgarian: 'slavicOther', croatian: 'slavicOther', slovak: 'slavicOther', slovene: 'slavicOther',
+    slovenian: 'slavicOther', czech: 'slavicOther', bosnian: 'slavicOther', russian: 'slavicRussian', polish: 'slavicPolish', danish: 'scandinavian' };
+const placeOf = p => p === '?' || p in PLACES || p in CULTURES ? p : PLACE_ALIASES[p] ?? '?';
 
 /** Answer text to a map number -> {periods ('' for none), place (null for '-'), common}; other lines are left out. */
 export function parseTagAnswers(text) {
@@ -44,11 +50,17 @@ export function parseTagAnswers(text) {
     for (const l of text.replace(/<think>[\s\S]*?<\/think>/g, '').split(/\r?\n/)) {
         const m = l.trim().replace(/[`*]/g, '').match(TAG_LINE);
         if (!m) continue;
-        const place = !m[3] || m[3] === '-' ? null : m[3];
-        out.set(Number(m[1]), { periods: m[2] === '-' ? '' : m[2], place: place === null || place === '?' || place in PLACES || place in CULTURES ? place : '?', common: m[4] });
+        const f = m[2].split(/\s+/);
+        const skip = f.findIndex((x, i) => f.length - i <= 3 && PERIOD_FIELD.test(x));
+        if (skip < 0) continue;
+        const place = f.slice(skip + 1).find(x => x !== '-') ?? null;
+        out.set(Number(m[1]), { periods: f[skip] === '-' ? '' : f[skip], place: place && placeOf(place), common: m[3] });
     }
     return out;
 }
+
+/** Whether one reader gave the same line for each of a list's n names (10 or more): no reading, set aside. */
+export const isBlanket = (answer, n) => n >= 10 && answer.size === n && new Set([...answer.values()].map(a => JSON.stringify(a))).size === 1;
 
 const agreed = (values, k = 2) => {
     const n = new Map();
@@ -82,11 +94,12 @@ const ordered = (all, set) => all.filter(x => set.has(x));
  * An entry's age, era and genre from a decision (decideTags; place a PLACES key or null). A used name takes the
  * periods' tags in place of its old period tags: adult always, child F, youngAdult E, elder B or C (people alive
  * today), victorian A, nineteenTwenties B, midcentury C, modern E or F, contemporary B to F, sliceOfLife with
- * contemporary, noirDetective B or C. An unused one loses its period tags, keeps its age and takes its place's tags.
- * A surname has no age. Returns the changed fields only.
+ * contemporary, noirDetective B or C. An unused one loses its period tags, keeps its age and takes its place's tags
+ * (fantasy, future, ancient). With no agreed period, or no such place, nothing changes: the name keeps its tags rather
+ * than match no era. A surname has no age. Returns the changed fields only.
  */
 export function tagsFor(entry, { used, periods, place }) {
-    if (used === null) return {};
+    if (used === null || (used ? !periods : !PLACE_TAGS[place])) return {};
     const has = p => periods.includes(p);
     const era = new Set((entry.era ?? []).filter(x => !PERIOD_ERAS.includes(x)));
     const genre = new Set((entry.genre ?? []).filter(x => !PERIOD_GENRES.includes(x)));
@@ -155,4 +168,57 @@ export function commonnessFor(entry, ranks, common) {
         return common === 'r' ? 'rare' : common === 'u' ? 'uncommon' : entry.commonness === 'rare' ? 'rare' : 'uncommon';
     }
     return COMMON[common] ?? entry.commonness;
+}
+
+/**
+ * Applies the decisions (kind|culture|name -> decideTags' result) to one kind's entries, changing them in place. An
+ * unused human name two readers put with another people moves there, takes commonness from that people's list (not
+ * the readers', who read it for the old one) and, a surname, loses its gender where that people's surnames carry
+ * none; or, the same name held there already, joins it and leaves. Any other decided name takes tagsFor's tags. Every
+ * human name's commonness follows commonnessFor. Returns the entries kept and the changes, {culture, what: tags,
+ * common, out or in, line}.
+ */
+export function applyTags(list, kind, decisions, ranks) {
+    const key = (culture, name) => `${culture}|${norm(name)}`;
+    const held = new Map();
+    for (const e of list) held.set(key(e.language_ethnicity, e.name), (held.get(key(e.language_ethnicity, e.name)) ?? 0) + 1);
+    const gendered = new Set(list.filter(e => e.gender).map(e => e.language_ethnicity));
+    const gone = new Set(), events = [];
+    const note = (culture, what, name, text) => events.push({ culture, what, line: `${kind} | ${culture} | ${name} | ${text}` });
+    for (const e of list) {
+        if (e.race !== 'human') continue;
+        const was = e.language_ethnicity;
+        const d = decisions.get(`${kind}|${was}|${e.name}`);
+        let common = d?.common ?? null;
+        if (d && d.used === false && d.place in CULTURES && d.place !== was) {
+            held.set(key(was, e.name), held.get(key(was, e.name)) - 1);
+            if (held.get(key(d.place, e.name))) {
+                gone.add(e);
+                note(was, 'out', e.name, `joins ${d.place}`);
+                continue;
+            }
+            held.set(key(d.place, e.name), 1);
+            e.language_ethnicity = d.place;
+            note(was, 'out', e.name, `moves to ${d.place}`);
+            note(d.place, 'in', e.name, `came from ${was}`);
+            if (kind === 'last' && e.gender && !gendered.has(d.place)) {
+                note(d.place, 'tags', e.name, `gender ${e.gender} -> -`);
+                delete e.gender;
+            }
+            common = null;
+        } else if (d) {
+            const t = tagsFor(e, d);
+            const diff = Object.entries(t).filter(([k, v]) => JSON.stringify(e[k] ?? []) !== JSON.stringify(v));
+            for (const [k, v] of diff) {
+                note(was, 'tags', e.name, `${k} ${(e[k] ?? []).join(',') || '-'} -> ${v.join(',') || '-'}`);
+                e[k] = v;
+            }
+        }
+        const c = commonnessFor(e, ranks, common);
+        if (c !== e.commonness) {
+            note(e.language_ethnicity, 'common', e.name, `commonness ${e.commonness} -> ${c}`);
+            e.commonness = c;
+        }
+    }
+    return { list: list.filter(e => !gone.has(e)), events };
 }

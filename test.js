@@ -12,13 +12,16 @@ import { foldName, loadOverused } from './tools/overused.mjs';
 import { addNames, parseLines } from './tools/db.mjs';
 import { labelLines, nameOfLabel, nameQueries, parseCsv, rankRows, wikidata } from './tools/wikidata.mjs';
 import { client } from './tools/nanogpt.mjs';
-import { commonnessFor, decideTags, listRanks, parseTagAnswers, tagsFor } from './tools/name-tags.mjs';
+import { applyTags, commonnessFor, decideTags, isBlanket, listRanks, parseTagAnswers, tagsFor } from './tools/name-tags.mjs';
 import { bothSexes, decide, firstNameTags, knownKeys, lastNameTags, mergeSexes, newFirstNames, newSurnames, parseAnswers, readJobs } from './tools/name-read.mjs';
 
 let passed = 0;
 let failed = 0;
 
+// node test.js <part of a name> runs only the tests whose name holds it.
+const ONLY = process.argv[2];
 function test(name, fn) {
+    if (ONLY && !name.includes(ONLY)) return;
     try {
         fn();
         passed++;
@@ -705,11 +708,10 @@ function checkPinnedNames(data) {
         'romanian/Alexandru', 'romanian/Luminita', 'latin/Agripa', 'latin/Cicero', // Romanians out of Latin; two readers can bring a name in
         'scandinavian/Søren', 'fijian/Viliame', // Danes stay under scandinavian; the third reader settles a disagreement
         'maori/Shafraz', // a third answer equal to neither reader moves nothing
-        'english/Flores', // one reader alone makes no first name a surname
         'hungarian/András', 'azerbaijani/Yusif', 'chinese/Hao', 'maori/Rosi',
         'nigerian/Yakubu', 'nigerian/Bilkisu', 'nigerian/Amina', // Hausa, not Yoruba
     ]), []);
-    assert.deepEqual(present(firsts, ['maori/Viliame', 'spanish/Flores', 'finnish/Hristova', 'french/Ferreira', 'chinese/Zhang',
+    assert.deepEqual(present(firsts, ['maori/Viliame', 'finnish/Hristova', 'french/Ferreira', 'chinese/Zhang',
         'yoruba/Yakubu', 'yoruba/Bilkisu', 'yoruba/Amina', 'persian/Pixodarus', // Pixodarus is a Carian
         // One man's fame stays out.
         ...['Sitting Bull', 'Crazy Horse', 'Rain-in-the-Face', 'Black Elk', 'Cornplanter', 'Poundmaker', 'Cornstalk'].map(n => `nativeAmerican/${n}`),
@@ -718,7 +720,7 @@ function checkPinnedNames(data) {
         'portuguese/Ferreira', 'albanian/Hoxhaj',
         'korean/남궁', 'hebrew/דוד', // real surnames in both lists stay
     ]), []);
-    // spanish/Flores is a surname since 10b (Mexico's 10th, three readers): the move rule above keeps english/Flores a first name.
+    // spanish/Flores is a surname since 10b (Mexico's 10th, three readers); 10c's readers (two of three) moved the first name english/Flores to spanish.
     assert.deepEqual(present(lasts, ['arabic/يناير', 'arabic/مارس', 'slavicPolish/Sz', 'hebrew/Sh', 'yoruba/Gh', 'chinese/Mawar', 'korean/남자', 'azerbaijani/Memmedova', 'azerbaijani/Aliyeva',
         'latin/Gothicus', // a title
         // A woman's given name is no Yoruba surname.
@@ -741,7 +743,7 @@ function checkPinnedNames(data) {
     // The meaning-based classes tag real names by what they mean, not by how they sound.
     assert.ok(first('hawaiian', 'Mahina').themes.includes('lunar'), 'Mahina means moon');
     assert.ok(first('english', 'Georgia').themes.includes('rustic'), 'Georgia means farmer');
-    for (const [c, n] of [['greek', 'Desdemona'], ['english', 'Carrie'], ['romanian', 'Vlad']]) assert.ok(first(c, n).genre.includes('horror'), n);
+    for (const [c, n] of [['english', 'Desdemona'], ['english', 'Carrie'], ['romanian', 'Vlad']]) assert.ok(first(c, n).genre.includes('horror'), n);
     assert.ok(!first('mongolian', 'Sarnai').themes.includes('lunar'), 'Sarnai means rose');
     assert.ok(!first('yoruba', 'Babatunde').genre.includes('horror'), 'Babatunde means the father has returned');
 }
@@ -801,6 +803,37 @@ test('10c: commonness follows rank in a list of the name\'s script; absent from 
         ['common', 'uncommon', 'uncommon', 'rare', 'common', 'common', 'rare']);
     const thai = listRanks({ first: { TH: [[1, 'Somchai', 1, 0]] } }, 'first', ['thai']);
     assert.equal(commonnessFor({ name: 'สมชาย', language_ethnicity: 'thai', commonness: 'uncommon' }, thai, 'c'), 'common', 'another script: the readers');
+});
+
+test('10c: a five-field tag line reads its periods and the first place it names; a people\'s other name reads as its key', () => {
+    const a = parseTagAnswers('1 ABC - slavicOther u\n2 - ancient - r\n3 Mary Anne ABC - swedish u\n4 A - - r\n5 - bulgarian r\n6 - russian r');
+    assert.deepEqual([1, 2, 3, 4, 5, 6].map(i => a.get(i)), [{ periods: 'ABC', place: 'slavicOther', common: 'u' }, { periods: '', place: 'ancient', common: 'r' },
+        { periods: 'ABC', place: 'swedish', common: 'u' }, { periods: 'A', place: null, common: 'r' }, { periods: '', place: 'slavicOther', common: 'r' },
+        { periods: '', place: 'slavicRussian', common: 'r' }]);
+});
+
+test('10c: a decision with no agreed period and no place changes no tag', () => {
+    const e = { name: 'X', age: ['adult', 'elder'], era: ['contemporary'], genre: ['sliceOfLife'] };
+    assert.deepEqual([tagsFor(e, { used: false, periods: '', place: null }), tagsFor(e, { used: false, periods: '', place: 'thai' }),
+        tagsFor(e, { used: true, periods: '', place: null })], [{}, {}, {}]);
+});
+
+test('10c: one line given for every name of a list is no reading', () => {
+    const same = parseTagAnswers(Array.from({ length: 20 }, (_, i) => `${i + 1} - ancient - r`).join('\n'));
+    const read = parseTagAnswers(Array.from({ length: 20 }, (_, i) => `${i + 1} ${i ? 'CDE - c' : '- ancient r'}`).join('\n'));
+    assert.deepEqual([isBlanket(same, 20), isBlanket(read, 20), isBlanket(parseTagAnswers('1 CDE - c\n2 CDE - c'), 2)], [true, false, false]);
+});
+
+test('10c: a moved name takes its new people\'s commonness and surname gender; a swap loses no name', () => {
+    const ranks = listRanks({ last: { CN: [[120, 'Chia', 1, 0]] } }, 'last', ['chinese']);
+    const h = (name, culture, more = {}) => ({ name, language_ethnicity: culture, race: 'human', commonness: 'uncommon', ...more });
+    const list = [h('Chia', 'korean'), h('Barlas', 'greek', { gender: 'male' }), h('Kaya', 'turkish'), h('Lee', 'english'), h('Lee', 'korean')];
+    const n = { used: false, periods: '', common: null };
+    const decisions = new Map([['last|korean|Chia', { ...n, place: 'chinese' }], ['last|greek|Barlas', { ...n, place: 'turkish' }],
+        ['last|english|Lee', { ...n, place: 'korean' }], ['last|korean|Lee', { ...n, place: 'english' }]]);
+    const { list: kept } = applyTags(list, 'last', decisions, ranks);
+    assert.deepEqual(kept.map(e => [e.name, e.language_ethnicity, e.commonness, e.gender ?? '-']),
+        [['Chia', 'chinese', 'common', '-'], ['Barlas', 'turkish', 'uncommon', '-'], ['Kaya', 'turkish', 'uncommon', '-'], ['Lee', 'english', 'uncommon', '-']]);
 });
 
 test('database invariants', () => {
