@@ -7,7 +7,8 @@
 //   (in st)      npm ci --omit=dev
 //   (in browser) npm i playwright; PLAYWRIGHT_BROWSERS_PATH=ms npx playwright install chromium-headless-shell
 //
-// Run: node tools/testbed.mjs [scenario ...]
+// Run: node tools/testbed.mjs [scenario ...] (SillyTavern on port $NPCNAMES_TESTBED_PORT, default 8123,
+// which must be free)
 // Live run (a provider is called, only when named): NANOGPT_API_KEY=... node tools/testbed.mjs live
 // sends LIVE_ASKS to LIVE_MODEL through nano-gpt; the fake forwards, so the key stays out of SillyTavern.
 // Writes every check and each recorded request to <root>/results.json and prints a summary.
@@ -24,7 +25,7 @@ import { API } from './nanogpt.mjs';
 const ROOT = process.env.NPCNAMES_TESTBED ?? join(tmpdir(), 'SillyTavern-Extension-NPCNames');
 const REPO = dirname(dirname(fileURLToPath(import.meta.url)));
 const EXT_NAME = 'SillyTavern-Extension-NPCNames';
-const ST_PORT = 8123;
+const ST_PORT = Number(process.env.NPCNAMES_TESTBED_PORT ?? 8123);
 const ST_URL = `http://127.0.0.1:${ST_PORT}`;
 const EXT_FILES = ['manifest.json', 'index.js', 'picker.js', 'advertisement.js', 'install.js', 'tool-calls.js', 'style.css', 'settings.html', 'assets', 'data'];
 const AD_START = 'Before writing a reply in which a new character';
@@ -51,6 +52,10 @@ function installExtension(folder = EXT_NAME) {
 }
 
 async function startSillyTavern() {
+    // Another server on the port would be tested in place of ours, every check failing for its sake.
+    if (await fetch(ST_URL).then(() => true, () => false)) {
+        throw new Error(`${ST_URL} already answers (another SillyTavern?); stop it or set NPCNAMES_TESTBED_PORT`);
+    }
     const log = [];
     const proc = spawn(process.execPath, [
         'server.js', '--port', String(ST_PORT), '--dataRoot', join(ROOT, 'data'),
