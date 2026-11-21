@@ -5,17 +5,19 @@
 // greeting and history, the instructions as a system message right before the latest message
 // (advertisement.js), the tool offered with its description and parameters. A tool call is answered
 // by the extension's own picker and the model is asked again, as SillyTavern does. Each chat has two
-// user turns: a stranger appears, then the user's character asks the stranger's name.
-// Old wording: the instructions and tool description at commit 8e11ce9.
+// user turns: a stranger appears (in the classroom, the user's character watches one), then the user's character
+// asks the stranger's name. As in SillyTavern, {{user}} is the scene's user name and the culture list is filled.
+// Old wording: the instructions, tool description and tool answer at commit 7c1f440 (milestone 12's start; milestone 9
+// compared 8e11ce9).
 //
-// Run: node tools/m9-name-timing.mjs [--models a,b] [--scenes a,b] [--wordings old,new] [--runs 2] [--spend 600000]
+// Run: node tools/m9-name-timing.mjs [--models a,b] [--scenes a,b] [--wordings old,new] [--runs 2] [--spend 600000] [--tag t]
 // Key: env NANOGPT_API_KEY. Requests go through the data tools' client (nanogpt.mjs): every answer is stored
 // under logs/work/m9/cache, so a rerun costs nothing; its log is logs/work/m9/llm.log.
-// Writes logs/work/m9/results.json and excerpts.txt; prints a summary.
+// Writes logs/work/m9/results.json and excerpts.txt (results-<tag>.json, excerpts-<tag>.txt with --tag); prints a summary.
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { readFileSync, writeFileSync } from 'node:fs';
-import { TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters } from '../advertisement.js';
+import { TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters, fillAdvertisement, toolAnswer } from '../advertisement.js';
 import { deriveEnumValues, pickName } from '../picker.js';
 import { arg } from './cli.mjs';
 import { client } from './nanogpt.mjs';
@@ -23,21 +25,23 @@ import { client } from './nanogpt.mjs';
 const REPO = new URL('..', import.meta.url);
 const OUT = new URL('logs/work/m9/', REPO);
 const CACHE = new URL('cache/', OUT);
-const OLD_COMMIT = '8e11ce9';
+const OLD_COMMIT = '7c1f440';
 
-const MODELS = arg('models', 'z-ai/glm-5.3-flash,deepseek/deepseek-v4.1-flash,mistralai/mistral-small-4-119b-2603').split(',');
+const MODELS = arg('models', 'z-ai/glm-5.3-flash,deepseek/deepseek-v4.1-flash,mistralai/mistral-small-4-119b-2603,google/gemma-4-31b-it').split(',');
 const WORDINGS = arg('wordings', 'old,new').split(',');
 const RUNS = Number(arg('runs', 2));
 const SPEND = Number(arg('spend', 600000));
+const TAG = arg('tag', '') ? `-${arg('tag', '')}` : '';
 
 const git = path => execFileSync('git', ['show', `${OLD_COMMIT}:${path}`], { cwd: REPO, encoding: 'utf8' });
-const oldDescription = git('index.js').match(/description:\s*'((?:[^'\\]|\\.)*)'/)[1].replaceAll('\\\'', '\'');
-const wording = {
-    old: { ad: git('assets/advertisement.txt'), description: oldDescription },
-    new: { ad: readFileSync(new URL('assets/advertisement.txt', REPO), 'utf8'), description: TOOL_DESCRIPTION },
-};
+const oldDescription = git('advertisement.js').match(/TOOL_DESCRIPTION =\s*`([^`]*)`/)[1].replaceAll('${TOOL_NAME}', TOOL_NAME);
 const db = JSON.parse(readFileSync(new URL('data/name_database.tagged.json', REPO), 'utf8'));
-const parameters = buildToolParameters(deriveEnumValues(db.first_names));
+const enumValues = deriveEnumValues(db.first_names);
+const parameters = buildToolParameters(enumValues);
+const wording = {
+    old: { ad: git('assets/advertisement.txt'), description: oldDescription, answer: pick => JSON.stringify(pick) },
+    new: { ad: readFileSync(new URL('assets/advertisement.txt', REPO), 'utf8'), description: TOOL_DESCRIPTION, answer: toolAnswer },
+};
 
 // A long chat: twenty earlier messages of routine station life among the crew already named.
 const chores = ['the coolant loop in bay three', 'a cracked seal on the ore hopper', 'the hydroponics timers',
@@ -49,7 +53,18 @@ const longHistory = chores.flatMap((chore, i) => [
 ]);
 
 const SCENES = {
+    // The user's report of milestone 12: the narrator describes a few classmates, then the user's character watches one.
+    classroom: {
+        user: 'Sam',
+        known: ['Sam', 'Hale', 'Westbrook', 'High', 'Hey', 'Nice'],
+        system: 'You are the narrator of an interactive story set at Westbrook High, an ordinary high school in a small American town today. You describe the world and play every character except Sam, the user\'s character, a bored seventeen-year-old student. Write in second person, two or three short paragraphs per reply.',
+        greeting: 'Third period, history. Mr Hale drones on about trade routes while the clock above the door crawls toward noon. You slump in your seat and look around. A boy in a varsity jacket sleeps with his cheek on his textbook. Two girls by the window pass a folded note back and forth. Near the back sits someone you have never seen before: a girl with purple hair, headphones around her neck, sketching in the margin of her notebook.',
+        history: [],
+        turn1: 'I stare at the girl with purple hair. I\'ve never seen her before. What is she doing?',
+        turn2: 'The bell rings. I walk over to her desk. "Hey, I\'m Sam. Nice drawing. What\'s your name?"',
+    },
     tavern: {
+        user: 'Corin',
         known: ['Corin', 'Varnholt', 'Hilde', 'Drowned', 'Lantern'],
         system: 'You are the narrator of an interactive story set in Varnholt, a rain-soaked river town in a low-fantasy kingdom. You describe the world and play every character except Corin, the user\'s character, a travelling sellsword. Write in second person, two or three short paragraphs per reply.',
         greeting: 'Rain hammers the shutters of the Drowned Lantern. Hilde, the innkeeper, slides a mug of dark ale across the bar to you without being asked. The common room is half empty: a few bargemen at dice, a dog asleep by the fire.',
@@ -58,6 +73,7 @@ const SCENES = {
         turn2: 'I catch the newcomer\'s eye and raise my mug. "Join me? I\'m Corin. And you are?"',
     },
     train: {
+        user: 'Lucía',
         known: ['Lucía', 'Madrid', 'Lisboa', 'Lusitania', 'Ramón'],
         system: 'Eres el narrador de una historia interactiva en la España de hoy. Describes el mundo e interpretas a todos los personajes excepto a Lucía, el personaje del usuario, una arquitecta de treinta años. Escribe en segunda persona y en español, dos o tres párrafos breves por respuesta.',
         greeting: 'El tren nocturno Lusitania sale de Madrid hacia Lisboa con diez minutos de retraso. Ramón, el revisor, te ha marcado el billete y se ha ido por el pasillo. Tienes el compartimento para ti sola, de momento.',
@@ -66,6 +82,7 @@ const SCENES = {
         turn2: 'Le ofrezco una galleta. —Soy Lucía. ¿Y usted cómo se llama?',
     },
     station: {
+        user: 'Rhee',
         known: ['Rhee', 'Ines', 'Varga', 'Tomas', 'Okafor', 'Pell', 'Kestrel', 'Captain'],
         system: 'You are the narrator of an interactive story aboard Kestrel Station, an ore-mining outpost in the asteroid belt. You describe the world and play every character except Rhee, the user\'s character, a maintenance tech. Write in second person, two or three short paragraphs per reply.',
         greeting: 'Kestrel Station wakes for the morning shift. Captain Ines Varga is already on the command deck; Dr. Tomas Okafor runs the infirmary; Pell keeps the engines alive.',
@@ -104,7 +121,8 @@ async function userTurn(chat, messages, text) {
         // A tool call and its answer are one chat item in SillyTavern, so the instructions go before both.
         let at = messages.length - 1;
         while (messages[at].role === 'tool') at--;
-        const sent = [...messages.slice(0, at), { role: 'system', content: chat.words.ad }, ...messages.slice(at)];
+        const ad = fillAdvertisement(chat.words.ad, enumValues).replaceAll('{{user}}', chat.scene.user);
+        const sent = [...messages.slice(0, at), { role: 'system', content: ad }, ...messages.slice(at)];
         const body = {
             model: chat.model, messages: [{ role: 'system', content: chat.scene.system }, ...sent],
             tools: [{ type: 'function', function: { name: TOOL_NAME, description: chat.words.description, parameters } }],
@@ -121,7 +139,7 @@ async function userTurn(chat, messages, text) {
             try { filters = JSON.parse(call.function.arguments || '{}'); } catch { /* a malformed call gets no filters, as SillyTavern passes it on */ }
             const pick = pickName(db.first_names, db.last_names, filters, chat.usedFirst, chat.usedLast, chat.rng);
             turn.calls.push({ filters, first: pick.first_name, last: pick.last_name ?? '' });
-            messages.push({ role: 'tool', tool_call_id: call.id, content: JSON.stringify(pick) });
+            messages.push({ role: 'tool', tool_call_id: call.id, content: chat.words.answer(pick) });
         }
     }
     messages.push({ role: 'assistant', content: turn.text.trim() });
@@ -187,13 +205,13 @@ await Promise.all(MODELS.map(async model => {
     }
 }));
 
-writeFileSync(new URL('results.json', OUT), JSON.stringify(results, null, 1));
+writeFileSync(new URL(`results${TAG}.json`, OUT), JSON.stringify(results, null, 1));
 const excerpts = results.filter(r => !r.error).map(r => [
     `== ${r.model} ${r.scene} ${r.words} run ${r.run}; tool: ${r.calls1.map(c => `${c.first} ${c.last}`).join(', ') || '-'} | ${r.calls2.map(c => `${c.first} ${c.last}`).join(', ') || '-'}`,
     ...r.early.map(w => `  turn 1 ${r.unsaid.includes(w) ? 'UNSAID' : 'said'} ${w}: ...${sentenceWith(r.text1, w)}...`),
     ...r.invented.filter(w => !r.early.includes(w)).map(w => `  turn 2 invented ${w}: ...${sentenceWith(r.text2, w)}...`),
 ].join('\n'));
-writeFileSync(new URL('excerpts.txt', OUT), excerpts.join('\n'));
+writeFileSync(new URL(`excerpts${TAG}.txt`, OUT), excerpts.join('\n'));
 
 const errors = results.filter(r => r.error).length;
 console.log(`chats ${results.length}, failed ${errors}, input tokens this run ${llm.stats.input}, all chats ${results.reduce((s, r) => s + (r.input ?? 0), 0)}`);

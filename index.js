@@ -1,3 +1,5 @@
+// The extension inside SillyTavern: loads the names and the instructions, registers the tool,
+// puts the instructions before the latest message, and the switch: tickbox, wand menu entry, /npcnames.
 import {
     extension_settings,
     renderExtensionTemplateAsync,
@@ -7,8 +9,11 @@ import { chat, chat_metadata, name1, saveSettingsDebounced } from '../../../../s
 import { eventSource, event_types } from '../../../events.js';
 import { selected_group } from '../../../group-chats.js';
 import { ToolManager } from '../../../tool-calling.js';
+import { SlashCommand } from '../../../slash-commands/SlashCommand.js';
+import { SlashCommandArgument } from '../../../slash-commands/SlashCommandArgument.js';
+import { SlashCommandParser } from '../../../slash-commands/SlashCommandParser.js';
 import { pickName, deriveEnumValues, readUsed } from './picker.js';
-import { TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters, fillAdvertisement, injectBeforeLatest } from './advertisement.js';
+import { TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters, fillAdvertisement, injectBeforeLatest, toolAnswer } from './advertisement.js';
 import { isInstalledIn } from './install.js';
 import { markToolCallLines } from './tool-calls.js';
 
@@ -82,7 +87,7 @@ function registerTool() {
                 if (extension_settings[MODULE].debugLog) {
                     console.log(LOG_TAG, 'pick:', pick);
                 }
-                return JSON.stringify(pick);
+                return toolAnswer(pick);
             } catch (e) {
                 console.error(LOG_TAG, 'action error:', e);
                 return JSON.stringify({ error: e.message });
@@ -101,6 +106,49 @@ function applyEnabled(active) {
     if (active) registerTool();
     else unregisterTool();
     updateStatusBadge();
+    $('#npc_names_menu_state').text(active ? 'on' : 'off');
+}
+
+// The one way the extension is turned on or off: the tickbox, the wand menu entry and the slash command.
+function setEnabled(active) {
+    extension_settings[MODULE].enabled = active;
+    saveSettingsDebounced();
+    $('#npc_names_enabled').prop('checked', active);
+    applyEnabled(active);
+}
+
+// An entry in SillyTavern's extensions (wand) menu beside the chat input, as its bundled extensions add theirs.
+function addMenuEntry() {
+    $('#extensionsMenu').append(`
+        <div id="npc_names_menu" class="list-group-item flex-container flexGap5" title="Turn the NPC Name Suggester on or off">
+            <div class="fa-solid fa-signature extensionsMenuExtensionButton"></div>
+            <span>NPC names: <span id="npc_names_menu_state"></span></span>
+        </div>`);
+    $('#npc_names_menu').on('click', () => setEnabled(!extension_settings[MODULE].enabled));
+}
+
+const SWITCH_WORDS = ['on', 'off', 'toggle'];
+
+// /npcnames on|off|toggle, for a Quick Reply button or a script; returns the state after it.
+function registerSlashCommand() {
+    SlashCommandParser.addCommandObject(SlashCommand.fromProps({
+        name: 'npcnames',
+        callback: (_args, value) => {
+            const word = String(value ?? '').trim().toLowerCase() || 'toggle';
+            if (!SWITCH_WORDS.includes(word)) {
+                toastr.warning(`/npcnames takes on, off or toggle, not "${word}".`, 'NPC Name Suggester');
+                return '';
+            }
+            setEnabled(word === 'toggle' ? !extension_settings[MODULE].enabled : word === 'on');
+            return extension_settings[MODULE].enabled ? 'on' : 'off';
+        },
+        returns: 'on or off, the state after the command',
+        unnamedArgumentList: [SlashCommandArgument.fromProps({
+            description: 'on, off or toggle (the default)',
+            enumList: SWITCH_WORDS,
+        })],
+        helpString: 'Turns the NPC Name Suggester on or off, like the tickbox in its settings.',
+    }));
 }
 
 // ST's documented generate_interceptor hook. Runs just before each
@@ -187,9 +235,11 @@ jQuery(async () => {
     const html = await renderExtensionTemplateAsync(EXT_DIR, 'settings');
     $('#extensions_settings2').append(html);
 
-    bindSettingCheckbox('#npc_names_enabled', 'enabled', () =>
-        applyEnabled(extension_settings[MODULE].enabled),
-    );
+    $('#npc_names_enabled').prop('checked', extension_settings[MODULE].enabled).on('change', function () {
+        setEnabled(!!$(this).prop('checked'));
+    });
+    addMenuEntry();
+    registerSlashCommand();
     bindSettingCheckbox('#npc_names_debug', 'debugLog');
     bindSettingCheckbox('#npc_names_show_tool_calls', 'showToolCalls', applyToolCallVisibility);
 

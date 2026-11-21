@@ -1,10 +1,20 @@
-// What the AI is told about the tool: its name, description and parameters, and the
-// instructions placed in the chat, their culture list filled from the data.
+// What the AI is told about the tool: its name, description and parameters, the
+// instructions placed in the chat (their culture list filled from the data), and the
+// tool's answer with its note on when the name may be revealed.
 
 export const TOOL_NAME = 'suggest_npc_name';
 
 export const TOOL_DESCRIPTION =
-    `Before writing a reply in which a new character's name first appears, call ${TOOL_NAME}, with filters that fit the character as already established; until then, describe them. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human. Pass commonness only when the story calls for it; otherwise leave it out.`;
+    `Settle a new character's name: call ${TOOL_NAME}, with filters that fit the character as already established, at the latest before the reply in which their name first appears. An earlier call is fine if you keep the name back: it is the narrator's until the user's character hears or reads it (someone says it, it is written somewhere visible); until then, describe them. Returns a curated first name, with a last name where the culture has surnames, and classification tags (era, role, intelligence, allure, etc). Do NOT invent names yourself. Pass race: human for every person; race: mythical only for a god, spirit or monster; race: elf, race: dwarf or race: dragon for those; a mythology filter goes with race: mythical, never human. Pass commonness only when the story calls for it; otherwise leave it out.`;
+
+// Sent with every name: the last thing the AI reads before it writes on.
+export const REVEAL_NOTE =
+    "The narrator's knowledge: write this name only once the user's character hears or reads it (someone says it, it is written somewhere visible), unless the card or the user's instructions say how names are revealed; until then, describe this person.";
+
+// The tool's answer: the pick and the note.
+export function toolAnswer(pick) {
+    return JSON.stringify({ ...pick, reveal: REVEAL_NOTE });
+}
 
 // The instructions, with the cultures the data holds in place of CULTURES_MARK.
 export const CULTURES_MARK = '%CULTURES%';

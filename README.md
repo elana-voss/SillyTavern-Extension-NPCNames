@@ -59,7 +59,7 @@ Only works with AI backends that support tool calling. Most modern Chat Completi
 
 Three checkboxes:
 
-- **Enable suggest_npc_name tool**: on by default.
+- **Enable suggest_npc_name tool**: on by default. Two quicker ways do the same and keep this tickbox in step: the entry **NPC names: on/off** in the extensions (wand) menu beside the chat input, and the slash command `/npcnames on`, `/npcnames off` or `/npcnames toggle` (plain `/npcnames` toggles), which fits a Quick Reply button.
 - **Log tool calls to console (debug)**: off by default.
 - **Show Suggest NPC Name tool calls in chat**: off by default. While off, the "Tool calls: Suggest NPC Name" lines are hidden; the AI still receives the name. A line that also holds another extension's tool stays visible.
 
@@ -67,7 +67,7 @@ The extension also adds a chunk of text just before the latest chat message, exp
 
 ## How it works
 
-The AI calls the tool before the reply in which a new character's name first appears, which is when your character would learn it; until then it describes them. A card or your own instructions can say how names are revealed. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; gods, dragons, cyberpunk handles, Native American and Mongolian figures get a single name: gods take no surname and the database has none for the others. A name already used in the chat will not come back from the same culture until every name fitting the request has been used.
+The AI calls the tool at the latest before the reply in which a new character's name first appears; it may call earlier and keep the name to itself, as the narrator's knowledge, until your character hears or reads it. Until then it describes them. Each answer carries a `reveal` note that says so. A card or your own instructions can say how names are revealed. It can pass filters like gender, culture, era, vibe. It gets back a first and last name plus a few tags to colour the narration; gods, dragons, cyberpunk handles, Native American and Mongolian figures get a single name: gods take no surname and the database has none for the others. A name already used in the chat will not come back from the same culture until every name fitting the request has been used.
 
 Pseudo-signature of `suggest_npc_name` (every argument is optional, pass any subset):
 ```

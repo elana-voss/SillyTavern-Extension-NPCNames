@@ -28,7 +28,7 @@ const EXT_NAME = 'SillyTavern-Extension-NPCNames';
 const ST_PORT = Number(process.env.NPCNAMES_TESTBED_PORT ?? 8123);
 const ST_URL = `http://127.0.0.1:${ST_PORT}`;
 const EXT_FILES = ['manifest.json', 'index.js', 'picker.js', 'advertisement.js', 'install.js', 'tool-calls.js', 'style.css', 'settings.html', 'assets', 'data'];
-const AD_START = 'Before writing a reply in which a new character';
+const AD_START = 'Settle a new character\'s name: call';
 const AD_END = 'anyone already named in the chat.';
 const OLDEST = 'OLDEST-MESSAGE-OF-THE-LONG-CHAT';
 const USER_TEXT = 'A stranger walks in. Who is it?';
@@ -140,6 +140,8 @@ function newChat(page, oldMessages = 0) {
     return page.evaluate(async ({ oldMessages, OLDEST }) => {
         const script = await import('/script.js');
         if (script.this_chid === undefined) {
+            // A fresh SillyTavern asks once whether to import the card's lorebook, a popup that blocks the send button.
+            (await import('/scripts/power-user.js')).power_user.world_import_dialog = false;
             const id = script.characters.findIndex(c => c);
             await script.selectCharacterById(id);
         }
@@ -246,6 +248,8 @@ function checkToolTurn(requests, chat, label) {
     const invoked = chat.flatMap(m => m.tools ?? []);
     check(`${label}: the tool ran`, invoked.some(t => t.name === TOOL && t.result.includes('first_name')),
         JSON.stringify(invoked).slice(0, 300));
+    check(`${label}: the tool's answer says when the name may be revealed`,
+        invoked.some(t => t.name === TOOL && t.result.includes('"reveal":"The narrator\'s knowledge')), JSON.stringify(invoked).slice(0, 300));
     check(`${label}: the closing text reached the chat`, chat.at(-1)?.mes.includes(FINAL_TEXT), chat.at(-1)?.mes);
     check(`${label}: the instructions are not stored in the chat`,
         !chat.some(m => m.mes.includes(AD_START) || m.name === 'NPC Name Suggester'));
@@ -431,6 +435,45 @@ const SCENARIOS = {
         check('badge: another kind of backend says inactive', b.text.includes('does not support'), JSON.stringify(b));
         await page.evaluate(() => $('#main_api').val('openai').trigger('change'));
         await page.waitForTimeout(300);
+    },
+    // R13: the wand menu entry and /npcnames turn the extension on and off, in step with the tickbox and badge.
+    async quickSwitch({ page, fake }) {
+        await configure(page, fake.port, {});
+        await page.evaluate(() => $('#openai_function_calling').prop('checked', true).trigger('input'));
+        const state = () => page.evaluate(() => ({
+            menu: document.querySelector('#extensionsMenu #npc_names_menu')?.textContent.replace(/\s+/g, ' ').trim(),
+            box: $('#npc_names_enabled').prop('checked'),
+            badge: document.getElementById('npc_names_status').textContent,
+        }));
+        let s = await state();
+        check('switch: the wand menu holds the entry, on', s.menu === 'NPC names: on' && s.box, JSON.stringify(s));
+        await page.evaluate(() => $('#npc_names_menu').trigger('click'));
+        await page.waitForTimeout(300);
+        s = await state();
+        check('switch: the menu entry turns it off, tickbox and badge follow', s.menu === 'NPC names: off' && !s.box && s.badge.includes('turned off'), JSON.stringify(s));
+        await newChat(page);
+        let requests = await send(page, fake);
+        check('switch: off from the menu sends no tool', !JSON.stringify(requests[0]?.body ?? '').includes(TOOL), requests.length);
+        const slash = text => page.evaluate(async text => {
+            const { executeSlashCommandsWithOptions } = await import('/scripts/slash-commands.js');
+            return (await executeSlashCommandsWithOptions(text, { handleExecutionErrors: true }))?.pipe;
+        }, text);
+        let out = await slash('/npcnames on');
+        s = await state();
+        check('switch: /npcnames on turns it on, tickbox, menu and badge follow', out === 'on' && s.box && s.menu === 'NPC names: on' && s.badge.includes('Extension active'), `${out} ${JSON.stringify(s)}`);
+        await newChat(page);
+        requests = await send(page, fake);
+        check('switch: on from the command offers the tool', requests[0]?.body?.tools?.some(t => t.function?.name === TOOL), requests.length);
+        out = await slash('/npcnames toggle');
+        s = await state();
+        check('switch: /npcnames toggle turns it off', out === 'off' && !s.box && s.menu === 'NPC names: off', `${out} ${JSON.stringify(s)}`);
+        out = await slash('/npcnames maybe');
+        s = await state();
+        check('switch: /npcnames with another word changes nothing', out === '' && !s.box, `${out} ${JSON.stringify(s)}`);
+        await page.evaluate(() => $('#npc_names_enabled').prop('checked', true).trigger('change'));
+        await page.waitForTimeout(300);
+        s = await state();
+        check('switch: the tickbox turns the menu entry on', s.menu === 'NPC names: on', JSON.stringify(s));
     },
     async oldUsedList({ page, fake }) {
         await configure(page, fake.port, {});

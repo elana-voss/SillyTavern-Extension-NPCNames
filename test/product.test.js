@@ -1,7 +1,7 @@
 // The extension's own modules: the pick, what the AI is told, the tool-call lines.
 import { test } from 'node:test';
 import { pickName, readUsed } from '../picker.js';
-import { TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters, injectBeforeLatest } from '../advertisement.js';
+import { REVEAL_NOTE, TOOL_DESCRIPTION, TOOL_NAME, buildToolParameters, injectBeforeLatest, toolAnswer } from '../advertisement.js';
 import { isInstalledIn } from '../install.js';
 import { HIDDEN_TOOL_CALL_CLASS, markToolCallLines } from '../tool-calls.js';
 import assert from 'node:assert/strict';
@@ -248,14 +248,31 @@ test('C1: the AI is told a genre makes names likelier and leaves none out', () =
 
 test('the AI calls the tool when a name is learned, not when a character arrives', () => {
     const [ad, code] = [readFileSync(new URL('./assets/advertisement.txt', ROOT), 'utf8'), TOOL_DESCRIPTION];
-    const timing = 'Before writing a reply in which a new character\'s name first appears, call suggest_npc_name';
-    assert.ok(ad.startsWith(timing), 'instructions open with the timing');
+    const timing = 'call suggest_npc_name, with filters that fit the character as already established, at the latest before the reply in which';
+    assert.ok(ad.startsWith(`Settle a new character's name: ${timing}`), 'instructions open with the timing');
     assert.ok(ad.includes('A name appears only when {{user}} would learn it'), 'when a name is learned');
     assert.ok(ad.includes('fit the character as already established'), 'filters for a late call');
     assert.ok(code.includes(timing), 'tool description');
     for (const [label, text] of [['advertisement', ad], ['advertisement.js', code], ['field descriptions', JSON.stringify(buildToolParameters({}).properties)]]) {
         assert.ok(!/new NPC you introduce|about to introduce|once per new NPC/.test(text), `${label}: arrival timing left`);
     }
+});
+
+test('R13: the tool\'s answer keeps the name the narrator\'s until the user\'s character hears or reads it', () => {
+    const pick = { first_name: 'Ana', last_name: 'Lima', age: ['adult'] };
+    assert.deepEqual(JSON.parse(toolAnswer(pick)), { ...pick, reveal: REVEAL_NOTE });
+    assert.ok(/narrator's knowledge.*only once the user's character hears or reads it.*card or the user's instructions/.test(REVEAL_NOTE), REVEAL_NOTE);
+    const ad = readFileSync(new URL('./assets/advertisement.txt', ROOT), 'utf8');
+    assert.ok(ad.includes('`reveal`'), 'the instructions name the field');
+});
+
+test('R13: a name may be settled early and kept back until it is revealed', () => {
+    const ad = readFileSync(new URL('./assets/advertisement.txt', ROOT), 'utf8');
+    for (const [label, text] of [['advertisement', ad], ['advertisement.js', TOOL_DESCRIPTION]]) {
+        assert.ok(text.includes('An earlier call is fine if you keep the name back'), `${label}: early call`);
+    }
+    assert.ok(TOOL_DESCRIPTION.includes('the user\'s character hears or reads it'), 'tool description: reveal condition');
+    assert.ok(!ad.includes('into your narration naturally'), 'the old weave line is gone');
 });
 
 test('advertisement goes right before the latest message, so long chats keep it', () => {
