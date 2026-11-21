@@ -43,14 +43,14 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | C1-fix | Genre makes fitting names likelier, never leaves names out | R4, R11, R12 | Done | | 2.2M | 0.05M | Claude 3.9M (agent 3.56M, review 0.38M), Opus 5.5 medium, nano-gpt 0.056M input (live run, 6 asks; the horror ask passed genre horror and got Pauline Cox, an ordinary name, said as "Mrs Cox", so the check that the first name reaches the reply failed, 12 of 13); tests `npm test` 83 of 83; code review Opus 5.5 medium, 1 finding, fixed with a test: lean-measure's sweep fed the new genre chance and the pick from one value |
 | 11a | Genre tags from the eras the names already carry | R11, R12 | To do | Low | 3M | 0 | Optional, later (the owner, 2026-11-20: "mark this parts as optional/maybe later. we will not implement those now.") |
 | 11b | Genre tags for fantasy: a read of which names were borne in the middle ages | R11, R12 | To do | Low | 12M | 0.6M | Optional, later (as 11a) |
-| 12 | A name is kept back until the story reveals it, and a quick on/off switch | R10, R12, R13 | In progress | High | 5M | 0.2M | |
+| 12 | A name is kept back until the story reveals it, and a quick on/off switch | R10, R12, R13 | Done | | 5M | 0.2M | Claude 7.2M (Opus 5.5 medium, 95 turns), nano-gpt 0.29M input (live run, 20 chats); tests `npm test` 85 of 85; test bed 28 of 28 (quickSwitch, openai, statusBadge); no code review due (about 80 lines of product code) |
 | | Total | | | | 104.5M | 6.56M | |
 
 Each milestone ends with `npm test` passing and the extension working on the test bed.
 
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: milestone 12.
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: milestone 12 is done; the next milestone is the owner's.
 - Thin after 10b2, no honest source for more: Mayan first names (0) and surnames (1), tried Wikidata given and family names of people of Maya ethnic groups and names in Mayan languages.
 - Thin after 10b2: Native American first names (0), tried Wikidata given names of people of Native American ethnic groups.
 - Thin after 10b2: Hawaiian first names (3) and surnames (8), tried Wikidata names of Native Hawaiians and names in Hawaiian.
@@ -166,6 +166,10 @@ Each milestone ends with `npm test` passing and the extension working on the tes
 - Audit fix C1, tests that pinned the old filter: 'genre filter prefers tagged names, then reports an untagged one as relaxed' now expects no relaxed filter for the untagged name. 'A reset of the used names leaves tagged names first' and 'a filter sent as a list' pass unchanged.
 - Audit fix C1, measures: name-reach.mjs counts, for a request with a genre, the names carrying it, with a row '<genre> adult' for every genre in the data (replacing 'fantasy adult' and 'noir adult'); medians per culture: sliceOfLife 167, noirDetective 138, the other six 0. ad-text-diff.mjs also compares the field descriptions: only genre differs. README's genre line follows the rule.
 - Audit fix C1, live run: the test bed's live asks gained a sixth, a horror story in present-day England, so the run shows a genre passed.
+- Milestone 12: every tool answer carries `reveal`, a note that the name is the narrator's until the user's character hears or reads it, unless the card or the user's instructions say otherwise; the tool's text says "the user's character", as SillyTavern fills no macro there. The instructions allow an earlier call whose name is kept back.
+- Milestone 12: one `setEnabled` in index.js serves the settings tickbox, the wand menu entry "NPC names: on/off" and `/npcnames on|off|toggle` (plain `/npcnames` toggles).
+- Milestone 12, live run (tools/m9-name-timing.mjs, old wording 7c1f440): all four models are in nano-gpt's subscription, Gemma 4 as google/gemma-4-31b-it. Classroom scene, 8 chats per wording: a name in turn 1 in 3 chats with the old wording (DeepSeek 2, GLM 1), none with the new. Tavern, train and station, new wording, 12 chats: one real leak (Mistral, station: "Her name—if you ever learn it—will be Majbritt Kjær"), two names another character calls out in turn 1, two flagged words not names; milestone 9 measured the old wording there at a name in turn 1 in 14 of 18 chats.
+- The test bed's SillyTavern was cloned again on 2026-11-21 (a temp cleanup had emptied it); a fresh SillyTavern opens a lorebook import dialog that blocked sending, so the test bed turns `world_import_dialog` off in a new chat.
 
 ## Trials
 
