@@ -16,6 +16,7 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 - R10 A user's report, passed on by the owner, in Claude's summary: a model gives a new character's name at once, like a label over their head, and the tool makes that unavoidable. The owner: "What could be changed is the wording of the prompt that announces this tool to the LLM. But every concrete LLM will interpret these instructions slightly differently: a changed prompt may fix a behavior for one LLM but introduce new issues for a different LLM."
 - R11 The same report, in Claude's summary: the names are mostly far-fetched, and ordinary first names and surnames do not come. The owner: "I am surprised that the names are so bad, as we have so many, many names in the extension."
 - R12 "this is NOT only an English name issue, and NOT only highschool-scenario issue. This is aiming at a GENERAL solution."
+- R13 A user's report, passed on by the owner, in Claude's summary: when {{user}} pays attention to a stranger (a girl with purple hair in a classroom), the tool is called at once and her name appears though {{user}} has no way to know it; and the wish for an easy-to-reach switch in SillyTavern's interface, matching the settings tickbox, to turn the name suggester on and off. The owner, 2026-11-21: "yes, do the recommended ones" (Fable's options: the tool's answer reminds the AI that the name is the narrator's until {{user}} hears or reads it; the instructions reworded so a name may be settled early and kept back, checked with one live run; an entry in SillyTavern's extensions menu and a slash command, both kept in step with the tickbox); tested on "a couple of current subscription nano-gpt models" (GLM 5.3 Flash, DeepSeek V4.1 Flash, Mistral Small 4, and Gemma 4 if nano-gpt's subscription has it: Claude's pick, the owner's "yes, go ahead").
 
 ## Milestones
 
@@ -42,13 +43,14 @@ Run by the skill software-project. Every token figure is Claude's estimate (inpu
 | C1-fix | Genre makes fitting names likelier, never leaves names out | R4, R11, R12 | Done | | 2.2M | 0.05M | Claude 3.9M (agent 3.56M, review 0.38M), Opus 5.5 medium, nano-gpt 0.056M input (live run, 6 asks; the horror ask passed genre horror and got Pauline Cox, an ordinary name, said as "Mrs Cox", so the check that the first name reaches the reply failed, 12 of 13); tests `npm test` 83 of 83; code review Opus 5.5 medium, 1 finding, fixed with a test: lean-measure's sweep fed the new genre chance and the pick from one value |
 | 11a | Genre tags from the eras the names already carry | R11, R12 | To do | Low | 3M | 0 | Optional, later (the owner, 2026-11-20: "mark this parts as optional/maybe later. we will not implement those now.") |
 | 11b | Genre tags for fantasy: a read of which names were borne in the middle ages | R11, R12 | To do | Low | 12M | 0.6M | Optional, later (as 11a) |
-| | Total | | | | 99.5M | 6.36M | |
+| 12 | A name is kept back until the story reveals it, and a quick on/off switch | R10, R12, R13 | In progress | High | 5M | 0.2M | |
+| | Total | | | | 104.5M | 6.56M | |
 
 Each milestone ends with `npm test` passing and the extension working on the test bed.
 
 ## Questions for the owner
 
-- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: milestone 10 is done; the next milestone is the owner's.
+- Milestones 9 and 10a to 10d: Claude 53.5M tokens (the owner, 2026-11-19: "yes, and work through it without stops"), then until done (the owner, 2026-11-19: "go on until you are done, stop bugging me because of tokens. do not stop all the time."); nano-gpt up to 15M (the owner, 2026-11-19: "you can use more nano-gpt tokens if you like, it is near unlimited for this work, 15 million easily"). Next: milestone 12.
 - Thin after 10b2, no honest source for more: Mayan first names (0) and surnames (1), tried Wikidata given and family names of people of Maya ethnic groups and names in Mayan languages.
 - Thin after 10b2: Native American first names (0), tried Wikidata given names of people of Native American ethnic groups.
 - Thin after 10b2: Hawaiian first names (3) and surnames (8), tried Wikidata names of Native Hawaiians and names in Hawaiian.
